@@ -1,6 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { ConfettiEffect } from './ConfettiEffect';
-import { BadgeIcon, TrophyIcon, SparkleIcon } from './icons';
+import { BadgeIcon, TrophyIcon, SparkleIcon } from './icons'; // Add: Import SparkleIcon
 import type { Language, Achievement } from '../types';
 import { commonLabels, achievementLabels } from '../services/labels';
 

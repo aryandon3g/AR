@@ -1,906 +1,5707 @@
 import type { QuizQuestion } from '../../../types';
 
 const historyRwaQuestions: QuizQuestion[] = [
-  {
-    "question_en": "Who is called the Father of History?",
-    "question_hi": "इतिहास का जनक (Father of History) किसे कहा जाता है?",
-    "options_en": ["Kautilya", "Herodotus", "Ali Ahmad", "Megasthenes"],
-    "options_hi": ["कौटिल्य", "हेरोडोटस", "अली अहमद", "मेगस्थनीज"],
-    "correct_option_index": 1,
-    "explanation_en": "Herodotus, a Greek historian, is widely regarded as the 'Father of History' for his work 'The Histories'.",
-    "explanation_hi": "यूनानी इतिहासकार हेरोडोटस को उनके कार्य 'द हिस्ट्रीज' (The Histories) के लिए व्यापक रूप से 'इतिहास का जनक' माना जाता है।",
-  },
-  {
-    "question_en": "What is the time period of medieval history, which is considered up to the death of Aurangzeb?",
-    "question_hi": "मध्यकालीन इतिहास की समयावधि क्या है, जो औरंगजेब की मृत्यु तक मानी जाती है?",
-    "options_en": ["Unknown to 712 AD", "712 AD to 1707 AD", "1707 AD to 1947 AD", "1206 AD to 1526 AD"],
-    "options_hi": ["अज्ञात से 712 ई.", "712 ई. से 1707 ई.", "1707 ई. से 1947 ई.", "1206 ई. से 1526 ई."],
-    "correct_option_index": 1,
-    "explanation_en": "Medieval Indian history is generally considered to start with the advent of Islam in 712 AD and ends with the death of the last major Mughal emperor, Aurangzeb, in 1707 AD.",
-    "explanation_hi": "भारतीय मध्यकालीन इतिहास को आम तौर पर 712 ई. में इस्लाम के आगमन के साथ शुरू माना जाता है और यह अंतिम प्रमुख मुगल सम्राट, औरंगजेब की मृत्यु (1707 ई.) के साथ समाप्त होता है।",
-  },
-  {
-    "question_en": "What is the oldest known religion in the world?",
-    "question_hi": "विश्व का सबसे प्राचीन ज्ञात धर्म कौन सा है?",
-    "options_en": ["Christianity", "Islam", "Hindu/Sanatana Dharma", "Buddhism"],
-    "options_hi": ["ईसाई धर्म", "इस्लाम धर्म", "हिन्दू/सनातन धर्म", "बौद्ध धर्म"],
-    "correct_option_index": 2,
-    "explanation_en": "Hinduism, also known as Sanatana Dharma, is considered the oldest known religion in the world, with roots dating back to the Indus Valley Civilization.",
-    "explanation_hi": "हिन्दू धर्म, जिसे सनातन धर्म के नाम से भी जाना जाता है, को विश्व का सबसे प्राचीन ज्ञात धर्म माना जाता है, जिसकी जड़ें सिंधु घाटी सभ्यता तक जाती हैं।",
-  },
-  {
-    "question_en": "In which year was Prophet Muhammad born?",
-    "question_hi": "पैगंबर मोहम्मद का जन्म किस वर्ष हुआ था?",
-    "options_en": ["632 AD", "570 AD", "712 AD", "622 AD"],
-    "options_hi": ["632 AD", "570 AD", "712 AD", "622 AD"],
-    "correct_option_index": 1,
-    "explanation_en": "Prophet Muhammad, the founder of Islam, was born in Mecca in 570 AD.",
-    "explanation_hi": "इस्लाम के संस्थापक पैगंबर मोहम्मद का जन्म 570 ई. में मक्का में हुआ था।",
-  },
-  {
-    "question_en": "In which year was the Umayyad dynasty ended by the Abbasids?",
-    "question_hi": "उमय्यद वंश का अंत अब्बासियों द्वारा किस वर्ष किया गया?",
-    "options_en": ["661 AD", "750 AD", "656 AD", "712 AD"],
-    "options_hi": ["661 AD", "750 AD", "656 AD", "712 AD"],
-    "correct_option_index": 1,
-    "explanation_en": "The Umayyad Caliphate was overthrown by the Abbasid Revolution in 750 AD, leading to the establishment of the Abbasid Caliphate.",
-    "explanation_hi": "उमय्यद खिलाफत को 750 ई. में अब्बासी क्रांति द्वारा उखाड़ फेंका गया, जिससे अब्बासी खिलाफत की स्थापना हुई।",
-  },
-  {
-    "question_en": "What is the literal meaning of the word 'Jihad'?",
-    "question_hi": "'जिहाद' (Jihad) शब्द का शाब्दिक अर्थ क्या है?",
-    "options_en": ["Looting wealth", "Preaching Islam", "Against non-believers of Islam", "To struggle (Internal/External)"],
-    "options_hi": ["धन लूटना", "इस्लाम का प्रचार", "इस्लाम न मानने वालों के खिलाफ", "संघर्ष करना (आंतरिक/बाह्य)"],
-    "correct_option_index": 3,
-    "explanation_en": "Literally, 'Jihad' means 'to struggle' or 'to strive,' which can be internal (struggle against one's own vices) or external (struggle against oppression).",
-    "explanation_hi": "शाब्दिक रूप से, 'जिहाद' का अर्थ 'संघर्ष करना' या 'प्रयास करना' है, जो आंतरिक (अपने स्वयं के दोषों के खिलाफ संघर्ष) या बाह्य (उत्पीड़न के खिलाफ संघर्ष) हो सकता है।",
-  },
-  {
-    "question_en": "In which year was the first mosque in India, Cheraman Juma Mosque (Kerala), established?",
-    "question_hi": "भारत में पहली मस्जिद चेरामन जुमा मस्जिद (केरल) की स्थापना किस वर्ष हुई?",
-    "options_en": ["712 AD", "628 AD", "632 AD", "644 AD"],
-    "options_hi": ["712 AD", "628 AD", "632 AD", "644 AD"],
-    "correct_option_index": 1,
-    "explanation_en": "Cheraman Juma Mosque in Kerala is believed to have been built in 629 AD (often cited as 628 AD/Hijri 7), making it the first mosque in India.",
-    "explanation_hi": "केरल में चेरामन जुमा मस्जिद को 629 ई. (अक्सर 628 ई./हिजरी 7 बताया जाता है) में बनाया गया माना जाता है, जो इसे भारत की पहली मस्जिद बनाती है।",
-  },
-  {
-    "question_en": "Who was the first successful Muslim Arab invader of India?",
-    "question_hi": "भारत पर पहला सफल मुस्लिम अरब आक्रमणकारी कौन था?",
-    "options_en": ["Umar", "Abdullah", "Muhammad bin Qasim", "Mahmud Ghaznavi"],
-    "options_hi": ["उमर", "अब्दुल्लाह", "मोहम्मद बिन कासिम", "महमूद गजनवी"],
-    "correct_option_index": 2,
-    "explanation_en": "Muhammad bin Qasim was the first successful Muslim Arab invader who conquered Sindh in 712 AD.",
-    "explanation_hi": "मोहम्मद बिन कासिम पहला सफल मुस्लिम अरब आक्रमणकारी था जिसने 712 ई. में सिंध पर विजय प्राप्त की।",
-  },
-  {
-    "question_en": "In which battle did Muhammad bin Qasim defeat Raja Dahir, the ruler of Sindh?",
-    "question_hi": "मोहम्मद बिन कासिम ने सिंध के शासक राजा दाहिर को किस युद्ध में हराया था?",
-    "options_en": ["Battle of Debal", "Battle of Multan", "Battle of Rawar", "Battle of Aror"],
-    "options_hi": ["देवल का युद्ध", "मुल्तान का युद्ध", "रावर का युद्ध", "अरोर का युद्ध"],
-    "correct_option_index": 2,
-    "explanation_en": "Raja Dahir was defeated and killed by Muhammad bin Qasim in the Battle of Rawar (712 AD).",
-    "explanation_hi": "राजा दाहिर 712 ई. में रावर के युद्ध में मोहम्मद बिन कासिम द्वारा पराजित हुए और मारे गए थे।",
-  },
-  {
-    "question_en": "Who is the author of the book 'Chachnama', which provides information about the Arab invasion?",
-    "question_hi": "अरब आक्रमण की जानकारी देने वाली पुस्तक 'चचनामा' (Chachnama) के लेखक कौन हैं?",
-    "options_en": ["Utbi", "Alberuni", "Firdausi", "Ali Ahmad (Translator)"],
-    "options_hi": ["उतबी", "अलबरूनी", "फिरदौसी", "अली अहमद (अनुवादक)"],
-    "correct_option_index": 3,
-    "explanation_en": "The original author of 'Chachnama' is unknown; it was translated into Persian by Ali Ahmad (often credited as the one who compiled/preserved the account).",
-    "explanation_hi": "'चचनामा' के मूल लेखक अज्ञात हैं; इसका फारसी में अनुवाद अली अहमद ने किया था (जिन्हें अक्सर वृत्तांत को संकलित/संरक्षित करने का श्रेय दिया जाता है)।",
-  },
-  {
-    "question_en": "What were the coins issued by Muhammad bin Qasim after the conquest of Sindh called?",
-    "question_hi": "मोहम्मद बिन कासिम द्वारा सिंध विजय के बाद जारी किए गए सिक्के क्या कहलाते थे?",
-    "options_en": ["Dinar", "Dirham", "Tanka", "Jital"],
-    "options_hi": ["दीनार", "दिरहम", "टंका", "जीतल"],
-    "correct_option_index": 1,
-    "explanation_en": "Muhammad bin Qasim issued coins called 'Dirham' after conquering Sindh.",
-    "explanation_hi": "सिंध पर विजय प्राप्त करने के बाद मोहम्मद बिन कासिम ने 'दिरहम' नामक सिक्के जारी किए थे।",
-  },
-  {
-    "question_en": "In which year did Subuktigin, the father of Mahmud Ghaznavi, launch his first attack on India?",
-    "question_hi": "महमूद गजनवी के पिता सुबुक्तगीन ने भारत पर पहला आक्रमण किस वर्ष किया था?",
-    "options_en": ["986 AD", "977 AD", "998 AD", "1001 AD"],
-    "options_hi": ["986 AD", "977 AD", "998 AD", "1001 AD"],
-    "correct_option_index": 0,
-    "explanation_en": "Subuktigin, the founder of the Ghaznavid dynasty, launched his first attack against the Hindu Shahi ruler Jaipal in 986 AD.",
-    "explanation_hi": "गज़नवी वंश के संस्थापक सुबुक्तगीन ने 986 ई. में हिंदू शाही शासक जयपाल के विरुद्ध अपना पहला आक्रमण किया था।",
-  },
-  {
-    "question_en": "Against which ruler did Mahmud Ghaznavi launch his first successful attack in 1001 AD?",
-    "question_hi": "महमूद गजनवी ने 1001 AD में अपना पहला सफल आक्रमण किस शासक के विरुद्ध किया था?",
-    "options_en": ["Dawood", "Sukhpal", "Jaipal", "Bhim I"],
-    "options_hi": ["दाऊद", "सुखपाल", "जयपाल", "भीम I"],
-    "correct_option_index": 2,
-    "explanation_en": "Mahmud Ghaznavi's first successful raid in 1001 AD was against Jaipal, the ruler of the Hindu Shahi dynasty.",
-    "explanation_hi": "महमूद गजनवी का 1001 ई. में पहला सफल आक्रमण हिंदू शाही वंश के शासक जयपाल के विरुद्ध था।",
-  },
-  {
-    "question_en": "What title was given to Mahmud Ghaznavi for being an 'Iconoclast' (idol-breaker)?",
-    "question_hi": "'मूर्ति तोड़ने वाला' (Iconoclast) होने के कारण महमूद गजनवी को कौन सी उपाधि दी गई थी?",
-    "options_en": ["Yamin-ud-Daula", "Yamin-ul-Millat", "Butshikan", "Ghazi"],
-    "options_hi": ["यामीन-उद-दौला", "यामीन-उल-मिल्लत", "बुतशिकन", "गाजी"],
-    "correct_option_index": 2,
-    "explanation_en": "Mahmud Ghaznavi was given the title 'Butshikan' (Idol Breaker) due to his repeated destruction of Hindu temples.",
-    "explanation_hi": "हिंदू मंदिरों के बार-बार विनाश के कारण महमूद गजनवी को 'बुतशिकन' (मूर्ति तोड़ने वाला) की उपाधि दी गई थी।",
-  },
-  {
-    "question_en": "When did Mahmud Ghaznavi attack the Somnath Temple (16th invasion)?",
-    "question_hi": "महमूद गजनवी ने सोमनाथ मंदिर पर (16वाँ आक्रमण) कब किया था?",
-    "options_en": ["1008 AD", "1018 AD", "1025 AD", "1027 AD"],
-    "options_hi": ["1008 AD", "1018 AD", "1025 AD", "1027 AD"],
-    "correct_option_index": 2,
-    "explanation_en": "Mahmud Ghaznavi's most famous and 16th raid was on the Somnath Temple in Gujarat in 1025 AD.",
-    "explanation_hi": "महमूद गजनवी का सबसे प्रसिद्ध और 16वां आक्रमण 1025 ई. में गुजरात में सोमनाथ मंदिर पर हुआ था।",
-  },
-  {
-    "question_en": "Who was the ruler of Gujarat at the time of the attack on the Somnath Temple?",
-    "question_hi": "सोमनाथ मंदिर पर आक्रमण के समय गुजरात का शासक कौन था?",
-    "options_en": ["Jaipal", "Bhim I (Chalukya)", "Dawood", "Bhim II"],
-    "options_hi": ["जयपाल", "भीम I (चालुक्य)", "दाऊद", "भीम II"],
-    "correct_option_index": 1,
-    "explanation_en": "At the time of Mahmud Ghaznavi's attack on the Somnath Temple in 1025 AD, the ruler of Gujarat was Bhim I of the Chaulukya dynasty.",
-    "explanation_hi": "1025 ई. में सोमनाथ मंदिर पर महमूद गजनवी के आक्रमण के समय गुजरात का शासक चालुक्य वंश का भीम प्रथम था।",
-  },
-  {
-    "question_en": "Against whom was Mahmud Ghaznavi's last attack in 1027 AD?",
-    "question_hi": "महमूद गजनवी का अंतिम आक्रमण 1027 AD में किसके विरुद्ध था?",
-    "options_en": ["Hindu Shahi", "Multan", "Jats", "Khokhars"],
-    "options_hi": ["हिंदू शाही", "मुल्तान", "जाटों", "खोखरों"],
-    "correct_option_index": 2,
-    "explanation_en": "Mahmud Ghaznavi's last raid in 1027 AD was against the Jats near Multan, who had harassed him on his return from Somnath.",
-    "explanation_hi": "महमूद गजनवी का अंतिम आक्रमण 1027 ई. में मुल्तान के पास जाटों के विरुद्ध था, जिन्होंने सोमनाथ से लौटते समय उसे परेशान किया था।",
-  },
-  {
-    "question_en": "Who is the author of the book 'Shahnameh', which is called the Epic of Iran?",
-    "question_hi": "'शाहनामा' (Shahnameh) पुस्तक, जिसे ईरान का महाकाव्य कहा जाता है, के लेखक कौन हैं?",
-    "options_en": ["Utbi", "Alberuni", "Firdausi", "Baihaqi"],
-    "options_hi": ["उतबी", "अलबरूनी", "फिरदौसी", "बैहाकी"],
-    "correct_option_index": 2,
-    "explanation_en": "'Shahnameh' (Book of Kings), the national epic of Greater Iran, was written by the Persian poet Firdausi.",
-    "explanation_hi": "'शाहनामा' (राजाओं की पुस्तक), ग्रेटर ईरान का राष्ट्रीय महाकाव्य, फारसी कवि फिरदौसी द्वारा लिखा गया था।",
-  },
-  {
-    "question_en": "In which language was 'Kitab-ul-Hind' (Tahqiq-e-Hind) written?",
-    "question_hi": "'किताब-उल-हिन्द' (Tahqiq-e-Hind) किस भाषा में लिखी गई थी?",
-    "options_en": ["Persian", "Turkish", "Arabic", "Sanskrit"],
-    "options_hi": ["फारसी", "तुर्की", "अरबी", "संस्कृत"],
-    "correct_option_index": 2,
-    "explanation_en": "'Kitab-ul-Hind' (Inquiry into India), a detailed account of India, was written by Alberuni in Arabic.",
-    "explanation_hi": "'किताब-उल-हिन्द' (भारत की जाँच), भारत का एक विस्तृत वृत्तांत, अलबरूनी द्वारा अरबी भाषा में लिखा गया था।",
-  },
-  {
-    "question_en": "Where did Muhammad Ghori's first successful attack on India take place in 1175 AD?",
-    "question_hi": "मुहम्मद गोरी का भारत पर पहला सफल आक्रमण 1175 AD में कहाँ हुआ था?",
-    "options_en": ["Multan", "Gujarat", "Peshawar", "Sindh"],
-    "options_hi": ["मुल्तान", "गुजरात", "पेशावर", "सिंध"],
-    "correct_option_index": 0,
-    "explanation_en": "Muhammad Ghori's first successful invasion of India was in 1175 AD, when he captured Multan and Uch.",
-    "explanation_hi": "मुहम्मद गोरी का भारत पर पहला सफल आक्रमण 1175 ई. में हुआ था, जब उसने मुल्तान और उच पर कब्जा कर लिया था।",
-  },
-  {
-    "question_en": "During Ghori's attack on Patan (Gujarat) in 1178 AD, who led the forces of ruler Bhim II?",
-    "question_hi": "1178 AD में पाटन (गुजरात) पर गोरी के आक्रमण के दौरान, शासक भीम II का नेतृत्व किसने किया था?",
-    "options_en": ["Jayachandra", "Someshwara Singh", "Naiki Devi", "Prithviraj Chauhan"],
-    "options_hi": ["जयचंद", "सोमेश्वर सिंह", "नायिका देवी", "पृथ्वीराज चौहान"],
-    "correct_option_index": 2,
-    "explanation_en": "In the Battle of Kasahrada (1178 AD), Muhammad Ghori was defeated by the Chaulukya forces led by the Queen Mother Naiki Devi, the mother of Bhim II.",
-    "explanation_hi": "कासहरदा के युद्ध (1178 ई.) में, मुहम्मद गोरी को शासक भीम द्वितीय की माता, रानी नायिका देवी के नेतृत्व में चालुक्य सेनाओं द्वारा पराजित किया गया था।",
-  },
-  {
-    "question_en": "Who defeated Muhammad Ghori in the First Battle of Tarain (1191)?",
-    "question_hi": "तराइन के प्रथम युद्ध (1191) में मुहम्मद गोरी को किसने हराया था?",
-    "options_en": ["Jayachandra", "Prithviraj Chauhan", "Bhim II", "Rana Sanga"],
-    "options_hi": ["जयचंद", "पृथ्वीराज चौहान", "भीम II", "राणा साँगा"],
-    "correct_option_index": 1,
-    "explanation_en": "Muhammad Ghori was defeated by Prithviraj Chauhan in the First Battle of Tarain in 1191 AD.",
-    "explanation_hi": "तराइन के प्रथम युद्ध (1191 ई.) में मुहम्मद गोरी को पृथ्वीराज चौहान ने हराया था।",
-  },
-  {
-    "question_en": "Who was the friend and author of Prithviraj Chauhan, who composed 'Prithviraj Raso'?",
-    "question_hi": "पृथ्वीराज चौहान के मित्र और लेखक कौन थे, जिन्होंने 'पृथ्वीराज रासो' की रचना की?",
-    "options_en": ["Hariraj", "Chand Bardai", "Someshwara Singh", "Jayanka"],
-    "options_hi": ["हरिराज", "चंदरबरदाई", "सोमेश्वर सिंह", "जयानक"],
-    "correct_option_index": 1,
-    "explanation_en": "Chand Bardai, a court poet and close friend of Prithviraj Chauhan, is credited with composing the epic poem 'Prithviraj Raso'.",
-    "explanation_hi": "चंदरबरदाई, जो पृथ्वीराज चौहान के दरबारी कवि और घनिष्ठ मित्र थे, को महाकाव्य 'पृथ्वीराज रासो' की रचना का श्रेय दिया जाता है।",
-  },
-  {
-    "question_en": "The Battle of Chandawar (1194) was fought between Muhammad Ghori and whom?",
-    "question_hi": "चंदावर का युद्ध (1194) मुहम्मद गोरी और किसके बीच लड़ा गया था?",
-    "options_en": ["Prithviraj Chauhan", "Someshwara Singh", "Jayachandra", "Bhim II"],
-    "options_hi": ["पृथ्वीराज चौहान", "सोमेश्वर सिंह", "जयचंद", "भीम II"],
-    "correct_option_index": 2,
-    "explanation_en": "The Battle of Chandawar in 1194 AD was fought between Muhammad Ghori and Raja Jayachandra of Kannauj, in which Jayachandra was defeated and killed.",
-    "explanation_hi": "1194 ई. में चंदावर का युद्ध मुहम्मद गोरी और कन्नौज के राजा जयचंद के बीच लड़ा गया था, जिसमें जयचंद पराजित हुए और मारे गए।",
-  },
-  {
-    "question_en": "Muhammad Ghori issued coins with the image of which goddess in India?",
-    "question_hi": "मुहम्मद गोरी ने भारत में किस देवी की आकृति वाले सिक्के चलाए थे?",
-    "options_en": ["Saraswati", "Kali", "Lakshmi", "Durga"],
-    "options_hi": ["सरस्वती", "काली", "लक्ष्मी", "दुर्गा"],
-    "correct_option_index": 2,
-    "explanation_en": "Muhammad Ghori issued coins in India that featured the image of Goddess Lakshmi.",
-    "explanation_hi": "मुहम्मद गोरी ने भारत में ऐसे सिक्के जारी किए थे जिन पर देवी लक्ष्मी की आकृति अंकित थी।",
-  },
-  {
-    "question_en": "Who started the Iqta System in North India?",
-    "question_hi": "उत्तर भारत में इक्ता प्रणाली (Iqta System) की शुरुआत किसके द्वारा की गई थी?",
-    "options_en": ["Mahmud Ghaznavi", "Qutb-ud-din Aibak", "Muhammad Ghori", "Iltutmish"],
-    "options_hi": ["महमूद गजनवी", "कुतुबुद्दीन ऐबक", "मुहम्मद गोरी", "इल्तुतमिश"],
-    "correct_option_index": 2,
-    "explanation_en": "Muhammad Ghori is considered to have initiated the Iqta system in North India by granting territories to his commanders like Qutb-ud-din Aibak, which was later formalized by Iltutmish.",
-    "explanation_hi": "मुहम्मद गोरी को उत्तर भारत में अपने सेनापतियों (जैसे कुतुबुद्दीन ऐबक) को क्षेत्र प्रदान करके इक्ता प्रणाली शुरू करने वाला माना जाता है, जिसे बाद में इल्तुतमिश द्वारा औपचारिक रूप दिया गया था।",
-  },
-  {
-    "question_en": "Against whom was Muhammad Ghori's last military campaign in 1206 AD?",
-    "question_hi": "मुहम्मद गोरी का अंतिम सैन्य अभियान 1206 AD में किसके विरुद्ध था?",
-    "options_en": ["Khokhar tribe", "Rajputs", "Jats", "Mongols"],
-    "options_hi": ["खोखरों जाति", "राजपूत", "जाट", "मंगोल"],
-    "correct_option_index": 0,
-    "explanation_en": "Muhammad Ghori's last campaign in 1206 AD was against the Khokhar tribe in the Punjab region, after which he was assassinated.",
-    "explanation_hi": "मुहम्मद गोरी का अंतिम अभियान 1206 ई. में पंजाब क्षेत्र में खोखरों जाति के विरुद्ध था, जिसके बाद उनकी हत्या कर दी गई थी।",
-  },
-  {
-    "question_en": "Which university is NOT among those destroyed by Bakhtiyar Khilji?",
-    "question_hi": "बख्तियार खिलजी ने जिन विश्वविद्यालयों को नष्ट किया था, उनमें कौन सा शामिल नहीं है?",
-    "options_en": ["Nalanda", "Vikramshila", "Odantapuri", "Taxila"],
-    "options_hi": ["नालंदा", "विक्रमशिला", "ओदंतपुरी", "तक्षशिला"],
-    "correct_option_index": 3,
-    "explanation_en": "Bakhtiyar Khilji is credited with destroying the universities of Nalanda, Vikramshila, and Odantapuri. Taxila (Takshashila) was destroyed much earlier.",
-    "explanation_hi": "बख्तियार खिलजी को नालंदा, विक्रमशिला और ओदंतपुरी विश्वविद्यालयों को नष्ट करने का श्रेय दिया जाता है। तक्षशिला (Taxila) बहुत पहले नष्ट हो गया था।",
-  },
-  {
-    "question_en": "How many dynasties ruled in the Delhi Sultanate (1206-1526 AD)?",
-    "question_hi": "दिल्ली सल्तनत (1206-1526 AD) में कुल कितने राजवंशों ने शासन किया?",
-    "options_en": ["4", "5", "6", "3"],
-    "options_hi": ["4", "5", "6", "3"],
-    "correct_option_index": 1,
-    "explanation_en": "Five dynasties ruled the Delhi Sultanate: Mamluk/Slave (1206-1290), Khilji (1290-1320), Tughlaq (1320-1414), Sayyid (1414-1451), and Lodi (1451-1526).",
-    "explanation_hi": "दिल्ली सल्तनत पर पाँच राजवंशों ने शासन किया: मामलुक/गुलाम (1206-1290), खिलजी (1290-1320), तुगलक (1320-1414), सैय्यद (1414-1451), और लोदी (1451-1526)।",
-  },
-  {
-    "question_en": "Which dynasty had the longest tenure in the Delhi Sultanate?",
-    "question_hi": "दिल्ली सल्तनत में सबसे लम्बा कार्यकाल किस वंश का रहा?",
-    "options_en": ["Slave Dynasty (84 years)", "Khilji Dynasty (30 years)", "Tughlaq Dynasty (94 years)", "Lodi Dynasty (75 years)"],
-    "options_hi": ["गुलाम वंश (84 वर्ष)", "खिलजी वंश (30 वर्ष)", "तुगलक वंश (94 वर्ष)", "लोदी वंश (75 वर्ष)"],
-    "correct_option_index": 2,
-    "explanation_en": "The Tughlaq Dynasty (1320-1414 AD) ruled for the longest period, approximately 94 years, in the Delhi Sultanate.",
-    "explanation_hi": "दिल्ली सल्तनत में तुगलक वंश (1320-1414 ई.) ने सबसे लंबी अवधि, लगभग 94 वर्षों तक शासन किया।",
-  },
-  {
-    "question_en": "The Lodi dynasty (First Afghan Dynasty) belonged to which tribe?",
-    "question_hi": "लोदी वंश (प्रथम अफगान वंश) किस जाति (Tribe) से संबंधित था?",
-    "options_en": ["Khokhar", "Ghilzai", "Qarmati", "Suri"],
-    "options_hi": ["ख़ोखर", "गिलजाई", "कारमाती", "सूरी"],
-    "correct_option_index": 1,
-    "explanation_en": "The Lodi dynasty, the first Afghan dynasty to rule the Delhi Sultanate, belonged to the Ghilzai tribe of Afghans.",
-    "explanation_hi": "लोदी वंश, दिल्ली सल्तनत पर शासन करने वाला पहला अफगान राजवंश, अफगानों की गिलजाई जनजाति से संबंधित था।",
-  },
-  {
-    "question_en": "Who was the founder of the Lodi dynasty?",
-    "question_hi": "लोदी वंश का संस्थापक कौन था?",
-    "options_en": ["Sikandar Lodi", "Ibrahim Lodi", "Bahlol Lodi", "Daulat Khan Lodi"],
-    "options_hi": ["सिकंदर लोदी", "इब्राहिम लोदी", "बहलोल लोदी", "दौलत खान लोदी"],
-    "correct_option_index": 2,
-    "explanation_en": "Bahlol Lodi was the founder of the Lodi dynasty, which he established in 1451 AD.",
-    "explanation_hi": "बहलोल लोदी लोदी वंश का संस्थापक था, जिसकी स्थापना उसने 1451 ई. में की थी।",
-  },
-  {
-    "question_en": "After the death of Bahlol Lodi, his son Nizam Khan ascended the throne with what name?",
-    "question_hi": "बहलोल लोदी की मृत्यु के बाद, उसका पुत्र निज़ाम खाँ किस नाम से गद्दी पर बैठा?",
-    "options_en": ["Ibrahim Lodi", "Sikandar Lodi", "Barbak Shah", "Bahlol Shah"],
-    "options_hi": ["इब्राहिम लोदी", "सिकंदर लोदी", "बारबक शाह", "बहलोल शाह"],
-    "correct_option_index": 1,
-    "explanation_en": "After Bahlol Lodi's death, his son Nizam Khan ascended the throne as Sikandar Lodi (1489-1517 AD).",
-    "explanation_hi": "बहलोल लोदी की मृत्यु के बाद, उसका पुत्र निज़ाम खाँ सिकंदर लोदी के नाम से गद्दी पर बैठा (1489-1517 ई.)।",
-  },
-  {
-    "question_en": "In which year did Sikandar Lodi establish the city of Agra?",
-    "question_hi": "सिकंदर लोदी ने आगरा शहर की स्थापना किस वर्ष की?",
-    "options_en": ["1502", "1504", "1506", "1517"],
-    "options_hi": ["1502", "1504", "1506", "1517"],
-    "correct_option_index": 1,
-    "explanation_en": "Sikandar Lodi founded the city of Agra in 1504 AD and later made it his capital.",
-    "explanation_hi": "सिकंदर लोदी ने 1504 ई. में आगरा शहर की स्थापना की और बाद में इसे अपनी राजधानी बनाया।",
-  },
-  {
-    "question_en": "Under what pen name did Sikandar Lodi write poems?",
-    "question_hi": "सिकंदर लोदी किस उपनाम (Pen Name) से कविताएं लिखता था?",
-    "options_en": ["Gulbadan", "Gulrukhi", "Shah-e-Bekhabar", "Zafar"],
-    "options_hi": ["गुलबदन", "गुलरुखी", "शाह-ए-बेखबर", "जफर"],
-    "correct_option_index": 1,
-    "explanation_en": "Sikandar Lodi composed Persian verses under the pen name 'Gulrukhi'.",
-    "explanation_hi": "सिकंदर लोदी 'गुलरुखी' उपनाम से फारसी कविताएं लिखता था।",
-  },
-  {
-    "question_en": "The First Battle of Panipat (April 21, 1526) was fought between Ibrahim Lodi and whom?",
-    "question_hi": "पानीपत का प्रथम युद्ध (21 अप्रैल 1526) इब्राहिम लोदी और किसके बीच लड़ा गया था?",
-    "options_en": ["Sher Shah Suri", "Rana Sanga", "Babur", "Humayun"],
-    "options_hi": ["शेर शाह सूरी", "राणा साँगा", "बाबर", "हुमायूँ"],
-    "correct_option_index": 2,
-    "explanation_en": "The First Battle of Panipat (1526) was fought between Ibrahim Lodi and Babur, marking the end of the Delhi Sultanate.",
-    "explanation_hi": "पानीपत का प्रथम युद्ध (1526) इब्राहिम लोदी और बाबर के बीच लड़ा गया था, जिसने दिल्ली सल्तनत का अंत किया।",
-  },
-  {
-    "question_en": "Who was the only ruler of the Delhi Sultanate to be killed on the battlefield?",
-    "question_hi": "युद्ध भूमि में मारा जाने वाला दिल्ली सल्तनत का एकमात्र शासक कौन था?",
-    "options_en": ["Bahlol Lodi", "Sikandar Lodi", "Ibrahim Lodi", "Alauddin Khilji"],
-    "options_hi": ["बहलोल लोदी", "सिकंदर लोदी", "इब्राहिम लोदी", "अलाउद्दीन खिलजी"],
-    "correct_option_index": 2,
-    "explanation_en": "Ibrahim Lodi was the only Sultan of Delhi to be killed on the battlefield in the First Battle of Panipat (1526).",
-    "explanation_hi": "इब्राहिम लोदी दिल्ली का एकमात्र सुल्तान था जो पानीपत के प्रथम युद्ध (1526) में युद्ध के मैदान में मारा गया।",
-  },
-  {
-    "question_en": "Babur, from his father's side, was the 5th descendant of which ruler?",
-    "question_hi": "बाबर, अपने पिता की ओर से किस शासक का 5वाँ वंशज था?",
-    "options_en": ["Timur Lang", "Genghis Khan", "Mirza Haidar", "Usman"],
-    "options_hi": ["तैमूरलंग", "चंगेज खान", "मिर्ज़ा हैदर", "उस्मान"],
-    "correct_option_index": 0,
-    "explanation_en": "Babur was the fifth descendant of Timur Lang (Tamerlane) on his father's side, and descended from Genghis Khan on his mother's side.",
-    "explanation_hi": "बाबर अपने पिता की ओर से तैमूरलंग (Tamerlane) का पाँचवाँ वंशज था, और अपनी माता की ओर से चंगेज खान का वंशज था।",
-  },
-  {
-    "question_en": "In 1507, Babur relinquished the title of 'Mirza' and adopted which title?",
-    "question_hi": "1507 में बाबर ने 'मिर्ज़ा' की उपाधि त्यागकर कौन सी उपाधि धारण की थी?",
-    "options_en": ["Mirza", "Sultan", "Padshah", "Qalander"],
-    "options_hi": ["मिर्ज़ा", "सुल्तान", "पादशाह", "कलंदर"],
-    "correct_option_index": 2,
-    "explanation_en": "In 1507, Babur adopted the title of 'Padshah' (Emperor), replacing the title 'Mirza' which his ancestors had held.",
-    "explanation_hi": "1507 में, बाबर ने 'पादशाह' (सम्राट) की उपाधि धारण की, अपने पूर्वजों द्वारा धारित 'मिर्ज़ा' की उपाधि का त्याग किया।",
-  },
-  {
-    "question_en": "Which method did Babur use to arrange cannons in the First Battle of Panipat (1526)?",
-    "question_hi": "पानीपत के प्रथम युद्ध (1526) में बाबर ने तोपों को सजाने के लिए किस विधि का प्रयोग किया था?",
-    "options_en": ["Mansabdari", "Dahsala", "Tughluma Policy", "Usmani/Rumi Method"],
-    "options_hi": ["मनसबदारी", "दहशाला", "तुगलमा नीति", "उस्मानी/रूमी विधि"],
-    "correct_option_index": 3,
-    "explanation_en": "Babur used the 'Usmani' or 'Rumi' method (Ottoman method) to arrange his cannons in the Battle of Panipat.",
-    "explanation_hi": "बाबर ने पानीपत के युद्ध में अपनी तोपों को सजाने के लिए 'उस्मानी' या 'रूमी' विधि (ओटोमन विधि) का प्रयोग किया था।",
-  },
-  {
-    "question_en": "After which battle did Babur assume the title of 'Ghazi' and raise the slogan of Jihad?",
-    "question_hi": "किस युद्ध के बाद बाबर ने 'गाजी' की उपाधि धारण की और जिहाद का नारा दिया था?",
-    "options_en": ["First Battle of Panipat", "Battle of Khanwa", "Battle of Chanderi", "Battle of Ghaghra"],
-    "options_hi": ["पानीपत का प्रथम युद्ध", "खानवा का युद्ध", "चंदेरी का युद्ध", "घाघरा का युद्ध"],
-    "correct_option_index": 1,
-    "explanation_en": "Babur assumed the title 'Ghazi' and raised the slogan of Jihad after his victory in the Battle of Khanwa (1527) against Rana Sanga.",
-    "explanation_hi": "बाबर ने राणा साँगा के विरुद्ध खानवा के युद्ध (1527) में अपनी जीत के बाद 'गाजी' की उपाधि धारण की और जिहाद का नारा दिया था।",
-  },
-  {
-    "question_en": "Why was the Battle of Ghaghra (1529) fought by Babur unique?",
-    "question_hi": "बाबर द्वारा लड़ा गया घाघरा का युद्ध (1529) क्यों अनूठा था?",
-    "options_en": ["It was a Jihad", "It was fought on both land and water", "Cannons were used in it", "It was fought at night"],
-    "options_hi": ["यह जिहाद था", "यह जल और थल दोनों पर लड़ा गया", "इसमें तोपों का प्रयोग हुआ", "यह रात में लड़ा गया"],
-    "correct_option_index": 1,
-    "explanation_en": "The Battle of Ghaghra (1529), fought against the Afghans, was unique as it was fought on both land and water (Ghaghra river).",
-    "explanation_hi": "घाघरा का युद्ध (1529), जो अफगानों के विरुद्ध लड़ा गया था, अद्वितीय था क्योंकि यह जल और थल दोनों पर लड़ा गया था (घाघरा नदी)।",
-  },
-  {
-    "question_en": "In 'Tuzuk-e-Baburi', which ruler of South India did Babur describe as the most powerful?",
-    "question_hi": "बाबर ने 'तुजुक-ए-बाबरी' में दक्षिण भारत के किस शासक को सबसे शक्तिशाली बताया था?",
-    "options_en": ["Ramraya", "Sadashiva Raya", "Krishnadevaraya", "Ibrahim Lodi"],
-    "options_hi": ["रामराय", "सदाशिव राय", "कृष्णदेवराय", "इब्राहिम लोदी"],
-    "correct_option_index": 2,
-    "explanation_en": "In his autobiography 'Tuzuk-e-Baburi' (Baburnama), Babur described Krishnadevaraya of the Vijayanagara Empire as the most powerful ruler in South India.",
-    "explanation_hi": "बाबर ने अपनी आत्मकथा 'तुजुक-ए-बाबरी' (बाबरनामा) में विजयनगर साम्राज्य के कृष्णदेवराय को दक्षिण भारत का सबसे शक्तिशाली शासक बताया था।",
-  },
-  {
-    "question_en": "Where was Humayun's coronation held in 1530 AD?",
-    "question_hi": "हुमायूँ का राज्याभिषेक 1530 AD में कहाँ हुआ था?",
-    "options_en": ["Kabul", "Kandahar", "Agra", "Delhi"],
-    "options_hi": ["काबुल", "कंधार", "आगरा", "दिल्ली"],
-    "correct_option_index": 2,
-    "explanation_en": "Humayun was crowned at Agra in 1530 AD after the death of his father, Babur.",
-    "explanation_hi": "अपने पिता बाबर की मृत्यु के बाद हुमायूँ का राज्याभिषेक 1530 ई. में आगरा में हुआ था।",
-  },
-  {
-    "question_en": "After losing the Battle of Chausa in 1539, which coins did Nizam Bhishti, who saved Humayun's life, issue?",
-    "question_hi": "1539 में चौसा का युद्ध हारने के बाद, हुमायूँ की जान बचाने वाले निजाम भिष्टी ने कौन से सिक्के जारी किए थे?",
-    "options_en": ["Gold", "Leather", "Silver", "Copper"],
-    "options_hi": ["सोने के", "चमड़े के", "चांदी के", "तांबे के"],
-    "correct_option_index": 1,
-    "explanation_en": "Nizam Bhishti, who saved Humayun from drowning after the Battle of Chausa (1539), was rewarded and issued leather coins for a brief period.",
-    "explanation_hi": "चौसा के युद्ध (1539) के बाद हुमायूँ को डूबने से बचाने वाले निज़ाम भिष्टी को पुरस्कृत किया गया और उन्होंने थोड़े समय के लिए चमड़े के सिक्के जारी किए थे।",
-  },
-  {
-    "question_en": "After losing the Battle of Kannauj (Bilgram) in 1540, where did Humayun seek refuge?",
-    "question_hi": "1540 में कन्नौज (बिलग्राम) का युद्ध हारने के बाद हुमायूँ ने कहाँ शरण ली?",
-    "options_en": ["Punjab", "Sindh to Iran", "Malwa", "Gujarat"],
-    "options_hi": ["पंजाब", "सिंध से ईरान", "मालवा", "गुजरात"],
-    "correct_option_index": 1,
-    "explanation_en": "After his defeat in the Battle of Kannauj (Bilgram) in 1540, Humayun was forced to flee and sought refuge in Sindh and later in Persia (Iran).",
-    "explanation_hi": "1540 में कन्नौज (बिलग्राम) के युद्ध में अपनी हार के बाद, हुमायूँ को भागने के लिए मजबूर होना पड़ा और उन्होंने सिंध और बाद में फारस (ईरान) में शरण ली।",
-  },
-  {
-    "question_en": "By defeating whom in the Battle of Sirhind in 1555 did Humayun regain the Mughal throne?",
-    "question_hi": "हुमायूँ ने सरहिंद का युद्ध 1555 में किसे हराकर पुनः मुगल गद्दी प्राप्त की थी?",
-    "options_en": ["Daulat Khan Lodi", "Mahmud Lodi", "Sikandar Shah Suri", "Adil Shah Suri"],
-    "options_hi": ["दौलत खान लोदी", "महमूद लोदी", "सिकंदर शाह सूरी", "आदिल शाह सूरी"],
-    "correct_option_index": 2,
-    "explanation_en": "Humayun defeated Sikandar Shah Suri in the Battle of Sirhind (1555 AD) to reclaim the throne of Delhi.",
-    "explanation_hi": "हुमायूँ ने 1555 ई. में सरहिंद के युद्ध में सिकंदर शाह सूरी को हराकर दिल्ली का सिंहासन पुनः प्राप्त किया।",
-  },
-  {
-    "question_en": "Who was the architect of Humayun's Tomb (Delhi)?",
-    "question_hi": "हुमायूँ के मकबरे (दिल्ली) का वास्तुकार कौन था?",
-    "options_en": ["Ustad Ahmad Lahauri", "Mirak Mirza Ghiyas", "Ustad Isa", "Shah Jahan"],
-    "options_hi": ["उस्ताद अहमद लाहौरी", "मिर्ज़ा गियास", "उस्ताद ईसा", "शाहजहां"],
-    "correct_option_index": 1,
-    "explanation_en": "The chief architect of Humayun's Tomb was Mirak Mirza Ghiyas, a Persian architect.",
-    "explanation_hi": "हुमायूँ के मकबरे का मुख्य वास्तुकार एक फ़ारसी वास्तुकार मिर्ज़ा गियास था।",
-  },
-  {
-    "question_en": "Who was the founder of the Sur Empire (Second Afghan Dynasty)?",
-    "question_hi": "सूर साम्राज्य (द्वितीय अफगान वंश) का संस्थापक कौन था?",
-    "options_en": ["Islam Shah", "Adil Shah", "Sher Shah Suri", "Bahlol Lodi"],
-    "options_hi": ["इस्लाम शाह", "आदिल शाह", "शेर शाह सूरी", "बहलोल लोदी"],
-    "correct_option_index": 2,
-    "explanation_en": "Sher Shah Suri (Farid Khan) was the founder of the Sur Empire, the Second Afghan Dynasty, after defeating Humayun.",
-    "explanation_hi": "शेर शाह सूरी (फरीद खान) हुमायूँ को हराकर सूर साम्राज्य (द्वितीय अफगान वंश) का संस्थापक था।",
-  },
-  {
-    "question_en": "Who gave the title 'Sher Khan' to Sher Shah Suri (Farid)?",
-    "question_hi": "शेर शाह सूरी (फरीद) को 'शेर खान' की उपाधि किसने दी थी?",
-    "options_en": ["Babur", "Humayun", "Bahar Khan Lohani", "Ibrahim Lodi"],
-    "options_hi": ["बाबर", "हुमायूँ", "बहार खान लोहानी", "इब्राहिम लोदी"],
-    "correct_option_index": 2,
-    "explanation_en": "Bahar Khan Lohani, the Mughal governor of Bihar, gave Farid the title 'Sher Khan' after he single-handedly killed a tiger (Sher).",
-    "explanation_hi": "बिहार के मुगल गवर्नर बहार खान लोहानी ने फरीद को 'शेर खान' की उपाधि दी थी, जब उसने अकेले ही एक बाघ (शेर) को मार डाला था।",
-  },
-  {
-    "question_en": "Into how many 'Sarkars' (districts) did Sher Shah Suri divide his entire empire?",
-    "question_hi": "शेर शाह सूरी ने अपने पूरे साम्राज्य को कितने 'सरकारों' (जिलों) में बाँटा था?",
-    "options_en": ["19", "23", "47", "66"],
-    "options_hi": ["19", "23", "47", "66"],
-    "correct_option_index": 2,
-    "explanation_en": "Sher Shah Suri divided his empire into 47 'Sarkars' (districts), and each Sarkar was further divided into 'Parganas'.",
-    "explanation_hi": "शेर शाह सूरी ने अपने साम्राज्य को 47 'सरकारों' (जिलों) में विभाजित किया था, और प्रत्येक सरकार को आगे 'परगना' में विभाजित किया गया था।",
-  },
-  {
-    "question_en": "During which military campaign did Sher Shah die in 1545?",
-    "question_hi": "शेर शाह की मृत्यु 1545 में किस सैन्य अभियान के दौरान हुई थी?",
-    "options_en": ["Malwa Victory", "Mewar Campaign", "Raisen Victory", "Kalinjar Campaign"],
-    "options_hi": ["मालवा विजय", "मेवाड़ अभियान", "रायसीन विजय", "कलिंजर अभियान"],
-    "correct_option_index": 3,
-    "explanation_en": "Sher Shah Suri died in 1545 AD during the siege of Kalinjar fort, due to an accidental explosion of a cannon.",
-    "explanation_hi": "शेर शाह सूरी की मृत्यु 1545 ई. में कालिंजर किले की घेराबंदी के दौरान तोप के आकस्मिक विस्फोट के कारण हुई थी।",
-  },
-  {
-    "question_en": "Where is the tomb of Sher Shah Suri located?",
-    "question_hi": "शेर शाह सूरी का मकबरा कहाँ स्थित है?",
-    "options_en": ["Delhi", "Agra", "Sasaram (Bihar)", "Kabul"],
-    "options_hi": ["दिल्ली", "आगरा", "ससराम (बिहार)", "काबुल"],
-    "correct_option_index": 2,
-    "explanation_en": "Sher Shah Suri's tomb is located in Sasaram, Bihar, built in the Indo-Islamic style.",
-    "explanation_hi": "शेर शाह सूरी का मकबरा सासाराम, बिहार में स्थित है, जो इंडो-इस्लामिक शैली में बना है।",
-  },
-  {
-    "question_en": "Who is considered the father of Sher Shah's land revenue system (later adopted by Akbar)?",
-    "question_hi": "शेर शाह की भू-राजस्व व्यवस्था (बाद में अकबर द्वारा अपनाई गई) का जनक किसे माना जाता है?",
-    "options_en": ["Man Singh", "Todar Mal", "Miyan Bhuiyan", "Birbal"],
-    "options_hi": ["मान सिंह", "टोडरमल", "मियां भुइयां", "बीरबल"],
-    "correct_option_index": 1,
-    "explanation_en": "Raja Todar Mal, who served in Sher Shah Suri's court before joining Akbar's, is credited with the land revenue reforms.",
-    "explanation_hi": "राजा टोडरमल, जिन्होंने अकबर के दरबार में शामिल होने से पहले शेर शाह सूरी के दरबार में सेवा की थी, को भू-राजस्व सुधारों का श्रेय दिया जाता है।",
-  },
-  {
-    "question_en": "What was the letter of consent given by farmers called in Sher Shah's 'Patta' system?",
-    "question_hi": "शेर शाह की 'पट्टा' प्रणाली में किसानों द्वारा दी जाने वाली सहमति-पत्र को क्या कहते थे?",
-    "options_en": ["Gaj-e-Sikandari", "Dahsala", "Qabuliyat", "Jagir"],
-    "options_hi": ["गज-ए-सिकंदरी", "दहशाला", "कबूलियत", "जागीर"],
-    "correct_option_index": 2,
-    "explanation_en": "In Sher Shah's land revenue system, 'Patta' was the title deed, and 'Qabuliyat' was the agreement or acceptance letter signed by the farmer.",
-    "explanation_hi": "शेर शाह की भू-राजस्व प्रणाली में, 'पट्टा' एक टाइटल डीड था, और 'कबूलियत' किसान द्वारा हस्ताक्षरित सहमति या स्वीकृति पत्र था।",
-  },
-  {
-    "question_en": "Who named the 'Sarak-e-Azam' built by Sher Shah as 'Grand Trunk Road' (GT Road)?",
-    "question_hi": "शेर शाह द्वारा निर्मित 'सड़क-ए-आजम' का नाम 'ग्रांड ट्रंक रोड' (GT Road) किसने रखा?",
-    "options_en": ["Colonel Tod", "Lord Auckland", "Akbar", "Lord Dalhousie"],
-    "options_hi": ["कर्नल टॉड", "लॉर्ड ऑकलैंड", "अकबर", "लॉर्ड डलहौजी"],
-    "correct_option_index": 1,
-    "explanation_en": "The 'Sarak-e-Azam' (the great road) built by Sher Shah was renamed 'Grand Trunk Road' by Lord Auckland during the British rule.",
-    "explanation_hi": "शेर शाह द्वारा निर्मित 'सड़क-ए-आजम' का नाम ब्रिटिश शासन के दौरान लॉर्ड ऑकलैंड द्वारा 'ग्रांड ट्रंक रोड' रखा गया था।",
-  },
-  {
-    "question_en": "Who was the last Hindu Emperor to sit on the throne of Delhi (Commander-in-Chief of Adil Shah Suri)?",
-    "question_hi": "दिल्ली की गद्दी पर बैठने वाला अंतिम हिंदू सम्राट (आदिलशाह सूरी का सेनापति) कौन था?",
-    "options_en": ["Vikramaditya", "Maharana Pratap", "Hemu", "Prithviraj Chauhan"],
-    "options_hi": ["विक्रमादित्य", "महाराणा प्रताप", "हेमू", "पृथ्वीराज चौहान"],
-    "correct_option_index": 2,
-    "explanation_en": "Hemu (Hem Chandra Vikramaditya), the general of Adil Shah Suri, briefly occupied the throne of Delhi after his victory over Akbar's forces, becoming the last Hindu to hold that title.",
-    "explanation_hi": "आदिल शाह सूरी के सेनापति हेमू (हेम चंद्र विक्रमादित्य) ने अकबर की सेनाओं पर अपनी जीत के बाद थोड़े समय के लिए दिल्ली के सिंहासन पर कब्जा कर लिया था, जिससे वह यह उपाधि धारण करने वाले अंतिम हिंदू बन गए।",
-  },
-  {
-    "question_en": "Who was Akbar's regent, who led him in the Battle of Sirhind (1555)?",
-    "question_hi": "अकबर का संरक्षक (Regent) कौन था, जिसने सरहिंद युद्ध (1555) में उसका नेतृत्व किया?",
-    "options_en": ["Abdul Latif Shirazi", "Bairam Khan", "Maham Anga", "Munim Khan"],
-    "options_hi": ["अब्दुल लतीफ शिराज़ी", "बैरम खान", "महाम अंगा", "मुनीम खान"],
-    "correct_option_index": 1,
-    "explanation_en": "Bairam Khan was Akbar's regent and a trusted general, who commanded the army in the Battle of Sirhind and later the Second Battle of Panipat.",
-    "explanation_hi": "बैरम खान अकबर का संरक्षक और एक विश्वसनीय सेनापति था, जिसने सरहिंद के युद्ध और बाद में पानीपत के दूसरे युद्ध में सेना का नेतृत्व किया।",
-  },
-  {
-    "question_en": "The Second Battle of Panipat (November 5, 1556) was fought between Akbar and whom?",
-    "question_hi": "पानीपत का दूसरा युद्ध (5 नवंबर 1556) अकबर और किसके बीच लड़ा गया?",
-    "options_en": ["Sikandar Shah Suri", "Rana Pratap", "Adil Shah Suri", "Hemu (Vikramaditya)"],
-    "options_hi": ["सिकंदर शाह सूरी", "राणा प्रताप", "आदिल शाह सूरी", "हेमू (विक्रमादित्य)"],
-    "correct_option_index": 3,
-    "explanation_en": "The Second Battle of Panipat (1556) was fought between Akbar (led by Bairam Khan) and Hemu, in which Hemu was defeated.",
-    "explanation_hi": "पानीपत का दूसरा युद्ध (1556) अकबर (बैरम खान के नेतृत्व में) और हेमू के बीच लड़ा गया था, जिसमें हेमू पराजित हुआ।",
-  },
-  {
-    "question_en": "Under whose protection did Akbar remain from 1556 to 1560 AD?",
-    "question_hi": "अकबर 1556 से 1560 AD तक किसके संरक्षण में रहा?",
-    "options_en": ["Maham Anga", "Jalal Khan", "Bairam Khan", "Abdul Latif"],
-    "options_hi": ["महाम अंगा", "जलाल खान", "बैरम खान", "अब्दुल लतीफ"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar remained under the regency and protection of Bairam Khan from 1556 to 1560 AD.",
-    "explanation_hi": "अकबर 1556 से 1560 ई. तक बैरम खान के संरक्षण और अधीनता में रहा।",
-  },
-  {
-    "question_en": "Why is the period of 1560-62 AD during Akbar's reign called 'Petticoat/Purdah Rule'?",
-    "question_hi": "अकबर के शासनकाल में 1560-62 AD का समय 'पेटीकोट/पर्दा शासन' क्यों कहलाता है?",
-    "options_en": ["Downfall of Bairam Khan", "Influence of Rajputs", "Influence of Maham Anga", "High frequency of wars"],
-    "options_hi": ["बैरम खान का पतन", "राजपूतों का प्रभाव", "महाम अंगा का प्रभाव", "युद्धों की अधिकता"],
-    "correct_option_index": 2,
-    "explanation_en": "The period of 1560-62 AD is called the 'Petticoat/Purdah Rule' due to the strong influence of Maham Anga, Akbar's foster mother, and her relatives on the administration.",
-    "explanation_hi": "1560-62 ई. की अवधि को 'पेटीकोट/पर्दा शासन' कहा जाता है क्योंकि अकबर की पालक माँ, महाम अंगा और उनके रिश्तेदारों का प्रशासन पर गहरा प्रभाव था।",
-  },
-  {
-    "question_en": "In which year did Akbar impose a ban on the practice of Slavery?",
-    "question_hi": "अकबर ने दास प्रथा (Slavery) पर पाबंदी किस वर्ष लगाई?",
-    "options_en": ["1562 AD", "1563 AD", "1564 AD", "1575 AD"],
-    "options_hi": ["1562 AD", "1563 AD", "1564 AD", "1575 AD"],
-    "correct_option_index": 0,
-    "explanation_en": "Akbar prohibited the practice of enslaving war captives in 1562 AD.",
-    "explanation_hi": "अकबर ने युद्ध बंदियों को दास बनाने की प्रथा को 1562 ई. में प्रतिबंधित कर दिया।",
-  },
-  {
-    "question_en": "In which year did Akbar abolish the Jaziya tax?",
-    "question_hi": "अकबर ने जजिया कर (Jaziya tax) को किस वर्ष समाप्त कर दिया?",
-    "options_en": ["1562 AD", "1563 AD", "1564 AD", "1575 AD"],
-    "options_hi": ["1562 AD", "1563 AD", "1564 AD", "1575 AD"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar abolished the Jaziya (poll tax on non-Muslims) in 1564 AD as part of his policy of religious tolerance.",
-    "explanation_hi": "अकबर ने धार्मिक सहिष्णुता की अपनी नीति के तहत 1564 ई. में जजिया (गैर-मुसलमानों पर लगने वाला कर) को समाप्त कर दिया।",
-  },
-  {
-    "question_en": "When did Akbar construct the Ibadat Khana (House of Worship) in Fatehpur Sikri?",
-    "question_hi": "अकबर ने फतेहपुर सीकरी में इबादतखाना (House of Worship) का निर्माण कब करवाया था?",
-    "options_en": ["1564 AD", "1571 AD", "1575 AD", "1582 AD"],
-    "options_hi": ["1564 AD", "1571 AD", "1575 AD", "1582 AD"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar built the Ibadat Khana (House of Worship) in Fatehpur Sikri in 1575 AD for religious discussions.",
-    "explanation_hi": "अकबर ने धार्मिक चर्चाओं के लिए 1575 ई. में फतेहपुर सीकरी में इबादतखाना (पूजा घर) का निर्माण करवाया था।",
-  },
-  {
-    "question_en": "In which year did Akbar establish 'Din-i Ilahi' (Tauhid-i-Ilahi)?",
-    "question_hi": "अकबर ने 'दीन-ए-इलाही' (Tauhid-i-Ilahi) की स्थापना किस वर्ष की थी?",
-    "options_en": ["1575 AD", "1579 AD", "1582 AD", "1571 AD"],
-    "options_hi": ["1575 AD", "1579 AD", "1582 AD", "1571 AD"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar established the syncretic religion 'Din-i Ilahi' (Divine Faith) in 1582 AD.",
-    "explanation_hi": "अकबर ने 1582 ई. में समन्वयात्मक धर्म 'दीन-ए-इलाही' (दैवीय आस्था) की स्थापना की थी।",
-  },
-  {
-    "question_en": "Who was the only Hindu courtier to adopt Din-i Ilahi?",
-    "question_hi": "दीन-ए-इलाही को अपनाने वाला एकमात्र हिंदू दरबारी कौन था?",
-    "options_en": ["Todar Mal", "Birbal", "Man Singh", "Bhagwan Das"],
-    "options_hi": ["टोडरमल", "बीरबल", "मानसिंह", "भगवान दास"],
-    "correct_option_index": 1,
-    "explanation_en": "Birbal (Mahesh Das) was the only Hindu courtier to adopt Din-i Ilahi.",
-    "explanation_hi": "बीरबल (महेश दास) दीन-ए-इलाही को अपनाने वाला एकमात्र हिंदू दरबारी था।",
-  },
-  {
-    "question_en": "Who started Akbar's 'Dahsala system' (land revenue)?",
-    "question_hi": "अकबर की 'दहशाला प्रणाली' (भू-राजस्व) की शुरुआत किसने की?",
-    "options_en": ["Abdur Rahim Khan-i-Khana", "Mullah Do Piyaza", "Raja Man Singh", "Raja Todar Mal"],
-    "options_hi": ["अब्दुर्रहीम खानखाना", "मुल्ला दो प्याज़ा", "राजा मानसिंह", "राजा टोडरमल"],
-    "correct_option_index": 3,
-    "explanation_en": "The Dahsala or Zabti system, a land revenue system, was introduced by Raja Todar Mal, Akbar's finance minister, in 1580 AD.",
-    "explanation_hi": "दहशाला या ज़ब्ती प्रणाली, एक भू-राजस्व प्रणाली, अकबर के वित्त मंत्री राजा टोडरमल द्वारा 1580 ई. में शुरू की गई थी।",
-  },
-  {
-    "question_en": "In which year did Akbar start the Mansabdari system (military/civil rank)?",
-    "question_hi": "अकबर ने मनसबदारी प्रणाली (सैन्य/नागरिक पद) किस वर्ष शुरू की?",
-    "options_en": ["1564 AD", "1575 AD", "1582 AD", "1562 AD"],
-    "options_hi": ["1564 AD", "1575 AD", "1582 AD", "1562 AD"],
-    "correct_option_index": 1,
-    "explanation_en": "Akbar introduced the Mansabdari system, a grading system for military and civil officers, around 1575 AD.",
-    "explanation_hi": "अकबर ने लगभग 1575 ई. में मनसबदारी प्रणाली, सैन्य और नागरिक अधिकारियों के लिए एक ग्रेडिंग प्रणाली, की शुरुआत की।",
-  },
-  {
-    "question_en": "To commemorate which victory did Akbar build the Buland Darwaza in Fatehpur Sikri?",
-    "question_hi": "अकबर ने किस विजय के उपलक्ष्य में फतेहपुर सीकरी में बुलंद दरवाजा बनवाया था?",
-    "options_en": ["Malwa Victory", "Chittor Victory", "Kashmir Victory", "Gujarat Victory"],
-    "options_hi": ["मालवा विजय", "चित्तौड़ विजय", "कश्मीर विजय", "गुजरात विजय"],
-    "correct_option_index": 3,
-    "explanation_en": "The Buland Darwaza at Fatehpur Sikri was built by Akbar in 1601 to commemorate his victory over Gujarat.",
-    "explanation_hi": "फतेहपुर सीकरी में बुलंद दरवाजा अकबर ने 1601 में गुजरात पर अपनी विजय के उपलक्ष्य में बनवाया था।",
-  },
-  {
-    "question_en": "Where was the Translation Department (Maktabkhana) established during Akbar's time?",
-    "question_hi": "अकबर के समय अनुवाद विभाग (Maktabkhana) की स्थापना कहाँ की गई थी?",
-    "options_en": ["Agra", "Delhi", "Fatehpur Sikri", "Lahore"],
-    "options_hi": ["आगरा", "दिल्ली", "फतेहपुर सीकरी", "लाहौर"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar established the 'Maktabkhana' (Translation Bureau) at Fatehpur Sikri, where major Sanskrit works were translated into Persian.",
-    "explanation_hi": "अकबर ने 'मक्तबखाना' (अनुवाद ब्यूरो) की स्थापना फतेहपुर सीकरी में की थी, जहाँ प्रमुख संस्कृत कृतियों का फारसी में अनुवाद किया गया था।",
-  },
-  {
-    "question_en": "The 'Chain of Justice' is associated with which Mughal ruler?",
-    "question_hi": "'न्याय की जंजीर' (Chain of Justice) किस मुगल शासक से संबंधित है?",
-    "options_en": ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
-    "options_hi": ["अकबर", "जहाँगीर", "शाहजहाँ", "औरंगजेब"],
-    "correct_option_index": 1,
-    "explanation_en": "The 'Chain of Justice' (Zanjir-i-Adl) was installed by Emperor Jahangir outside his palace at Agra Fort for redressal of public grievances.",
-    "explanation_hi": "'न्याय की जंजीर' (जंजीर-ए-अदल) को सम्राट जहाँगीर ने आगरा किले में अपने महल के बाहर जनता की शिकायतों के निवारण के लिए स्थापित करवाया था।",
-  },
-  {
-    "question_en": "Where was Akbar's coronation held in 1556 AD (after Humayun's death)?",
-    "question_hi": "1556 AD में (हुमायूँ की मृत्यु के बाद) अकबर का राज्याभिषेक कहाँ हुआ था?",
-    "options_en": ["Red Fort, Delhi", "Agra Fort", "Kalanour Village (Punjab)", "Fatehpur Sikri"],
-    "options_hi": ["दिल्ली का लाल किला", "आगरा का किला", "कलानौर गाँव (पंजाब)", "फतेहपुर सीकरी"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar was crowned in a garden in Kalanour, Punjab, in 1556 AD.",
-    "explanation_hi": "अकबर का राज्याभिषेक 1556 ई. में कलानौर, पंजाब के एक बगीचे में हुआ था।",
-  },
-  {
-    "question_en": "What title was given to Bairam Khan by Akbar?",
-    "question_hi": "बैरम खान को अकबर द्वारा कौन सी उपाधि दी गई थी?",
-    "options_en": ["Amir-ul-Umra", "Khan-i-Khana", "Vakil-e-Mutlaq", "Khan-e-Jahan"],
-    "options_hi": ["अमीर-उल-उमरा", "खान-ए-खाना", "वकील-ए-मुतलक", "खान-ए-जहाँ"],
-    "correct_option_index": 1,
-    "explanation_en": "Akbar conferred the title 'Khan-i-Khana' (Lord of Lords) on Bairam Khan.",
-    "explanation_hi": "अकबर ने बैरम खान को 'खान-ए-खाना' (लॉर्ड ऑफ लॉर्ड्स) की उपाधि प्रदान की थी।",
-  },
-  {
-    "question_en": "Which British ambassadors (of King James I) visited India during Jahangir's reign?",
-    "question_hi": "जहाँगीर के शासनकाल में कौन सा ब्रिटिश राजदूत (किंग जेम्स I का) भारत आया था?",
-    "options_en": ["William Hawkins", "Sir Thomas Roe", "John Mildenhall", "Both (A) and (B)"],
-    "options_hi": ["विलियम हॉकिन्स", "सर थॉमस रो", "जॉन मिल्डेनहॉल", "(A) और (B) दोनों"],
-    "correct_option_index": 3,
-    "explanation_en": "Both Captain William Hawkins (1608) and Sir Thomas Roe (1615) visited the court of Jahangir as ambassadors of King James I of England.",
-    "explanation_hi": "कैप्टन विलियम हॉकिन्स (1608) और सर थॉमस रो (1615) दोनों इंग्लैंड के राजा जेम्स प्रथम के राजदूत के रूप में जहाँगीर के दरबार में आए थे।",
-  },
-  {
-    "question_en": "Who is credited with completing 'Tuzuk-e-Jahangiri' (Jahangir's autobiography)?",
-    "question_hi": "'तुजुक-ए-जहाँगीरी' (जहाँगीर की आत्मकथा) को पूरा करने का श्रेय किसे दिया जाता है?",
-    "options_en": ["Jahangir", "Nur Jahan", "Motamid Khan", "Abul Fazl"],
-    "options_hi": ["जहाँगीर", "नूरजहाँ", "मोतमिद खान", "अबुल फजल"],
-    "correct_option_index": 2,
-    "explanation_en": "Jahangir wrote his autobiography up to the 19th year of his reign; it was later completed by Motamid Khan.",
-    "explanation_hi": "जहाँगीर ने अपनी आत्मकथा अपने शासनकाल के 19वें वर्ष तक लिखी थी; इसे बाद में मोतमिद खान द्वारा पूरा किया गया था।",
-  },
-  {
-    "question_en": "Where is Jahangir's tomb located?",
-    "question_hi": "जहाँगीर का मकबरा कहाँ स्थित है?",
-    "options_en": ["Delhi", "Agra", "Kabul", "Shahdara (Lahore)"],
-    "options_hi": ["दिल्ली", "आगरा", "काबुल", "शाहदरा (लाहौर)"],
-    "correct_option_index": 3,
-    "explanation_en": "Jahangir's tomb is located at Shahdara Bagh in Lahore (now in Pakistan).",
-    "explanation_hi": "जहाँगीर का मकबरा शाहदरा बाग, लाहौर (अब पाकिस्तान में) में स्थित है।",
-  },
-  {
-    "question_en": "When did Akbar abolish the Pilgrimage Tax?",
-    "question_hi": "अकबर ने तीर्थ यात्रा कर (Pilgrimage Tax) को कब समाप्त किया?",
-    "options_en": ["1562 AD", "1563 AD", "1564 AD", "1565 AD"],
-    "options_hi": ["1562 AD", "1563 AD", "1564 AD", "1565 AD"],
-    "correct_option_index": 1,
-    "explanation_en": "Akbar abolished the Pilgrimage Tax (tax on Hindu pilgrims) in 1563 AD.",
-    "explanation_hi": "अकबर ने 1563 ई. में तीर्थ यात्रा कर (हिंदू तीर्थयात्रियों पर कर) को समाप्त कर दिया।",
-  },
-  {
-    "question_en": "The reign of which Mughal ruler is called the 'Golden Age of Painting'?",
-    "question_hi": "'चित्रकला का स्वर्ण युग' (Golden Age of Painting) किस मुगल शासक के काल को कहा जाता है?",
-    "options_en": ["Akbar", "Jahangir", "Shah Jahan", "Humayun"],
-    "options_hi": ["अकबर", "जहाँगीर", "शाहजहाँ", "हुमायूँ"],
-    "correct_option_index": 1,
-    "explanation_en": "The reign of Jahangir is considered the 'Golden Age of Mughal Painting' due to his personal interest and patronage of the art.",
-    "explanation_hi": "जहाँगीर के शासनकाल को कला में उनकी व्यक्तिगत रुचि और संरक्षण के कारण 'मुगल चित्रकला का स्वर्ण युग' माना जाता है।",
-  },
-  {
-    "question_en": "Which policy did Akbar adopt for peaceful conduct towards all religions?",
-    "question_hi": "अकबर ने सभी धर्मों के प्रति शांतिपूर्ण व्यवहार के लिए किस नीति को अपनाया?",
-    "options_en": ["Iqta System", "Sulh-i-Kul", "Dahsala System", "Din-i Ilahi"],
-    "options_hi": ["इक्ता प्रणाली", "सुलह-ए-कुल", "दहशाला प्रणाली", "दीन-ए-इलाही"],
-    "correct_option_index": 1,
-    "explanation_en": "Akbar adopted the policy of 'Sulh-i-Kul' (Peace with All) to maintain harmony among different religious communities.",
-    "explanation_hi": "अकबर ने विभिन्न धार्मिक समुदायों के बीच सद्भाव बनाए रखने के लिए 'सुलह-ए-कुल' (सभी के साथ शांति) की नीति अपनाई।",
-  },
-  {
-    "question_en": "What was the real name of 'Nur Jahan'?",
-    "question_hi": "'नूरजहाँ' (Nur Jahan) का वास्तविक नाम क्या था?",
-    "options_en": ["Arjumand Bano", "Ladli Begum", "Mehr-un-Nisa", "Hamida Bano"],
-    "options_hi": ["अर्जुमंद बानो", "लाडली बेगम", "मेहरुन्निसा", "हमीदा बानो"],
-    "correct_option_index": 2,
-    "explanation_en": "The real name of Nur Jahan was Mehr-un-Nisa. She was the wife of Jahangir.",
-    "explanation_hi": "नूरजहाँ का वास्तविक नाम मेहरुन्निसा था। वह जहाँगीर की पत्नी थीं।",
-  },
-  {
-    "question_en": "The Persian translation of the Mahabharata, 'Razmnama', was carried out under whose leadership?",
-    "question_hi": "महाभारत का फारसी अनुवाद 'रज्मनामा' (Razmnama) किसके नेतृत्व में किया गया?",
-    "options_en": ["Abul Fazl", "Faizi", "Badauni", "Both (B) and (C)"],
-    "options_hi": ["अबुल फजल", "फैजी", "बदायूंनी", "(B) और (C) दोनों"],
-    "correct_option_index": 3,
-    "explanation_en": "The Persian translation of the Mahabharata, 'Razmnama' (Book of Wars), was carried out by a team of scholars including Faizi and Badauni.",
-    "explanation_hi": "महाभारत का फारसी अनुवाद, 'रज्मनामा' (युद्धों की पुस्तक), फैजी और बदायूंनी सहित विद्वानों की एक टीम द्वारा किया गया था।",
-  },
-  {
-    "question_en": "What was the childhood name of Shah Jahan?",
-    "question_hi": "शाहजहाँ के बचपन का नाम क्या था?",
-    "options_en": ["Salim", "Khurram", "Dara Shikoh", "Murad"],
-    "options_hi": ["सलीम", "खुर्रम", "दारा शिकोह", "मुराद"],
-    "correct_option_index": 1,
-    "explanation_en": "Shah Jahan's childhood name was Prince Khurram.",
-    "explanation_hi": "शाहजहाँ के बचपन का नाम प्रिंस खुर्रम था।",
-  },
-  {
-    "question_en": "Who is considered the chief architect of the Taj Mahal?",
-    "question_hi": "ताजमहल का मुख्य वास्तुकार (Chief Architect) किसे माना जाता है?",
-    "options_en": ["Mirak Mirza Ghiyas", "Ustad Ahmad Lahauri", "Ustad Isa", "Shah Jahan"],
-    "options_hi": ["मिर्ज़ा गियास", "उस्ताद अहमद लाहौरी", "उस्ताद ईसा", "शाहजहाँ"],
-    "correct_option_index": 1,
-    "explanation_en": "Ustad Ahmad Lahauri is generally credited as the chief architect of the Taj Mahal, while Ustad Isa is often mentioned as the head of the team of architects.",
-    "explanation_hi": "उस्ताद अहमद लाहौरी को आम तौर पर ताजमहल का मुख्य वास्तुकार माना जाता है, जबकि उस्ताद ईसा को अक्सर वास्तुकारों की टीम के प्रमुख के रूप में उल्लेख किया जाता है।",
-  },
-  {
-    "question_en": "Akbar's Dahsala system was based on what?",
-    "question_hi": "अकबर द्वारा शुरू की गई दहशाला प्रणाली किस पर आधारित थी?",
-    "options_en": ["Average of the previous 5 years", "Average of the previous 10 years", "Average of the previous 20 years", "Average per year"],
-    "options_hi": ["पिछले 5 वर्षों का औसत", "पिछले 10 वर्षों का औसत", "पिछले 20 वर्षों का औसत", "प्रति वर्ष का औसत"],
-    "correct_option_index": 1,
-    "explanation_en": "The Dahsala system was a land revenue system where the average produce and average price of the previous ten years were calculated to fix the land revenue.",
-    "explanation_hi": "दहशाला प्रणाली एक भू-राजस्व प्रणाली थी जहाँ भू-राजस्व निर्धारित करने के लिए पिछले दस वर्षों के औसत उत्पादन और औसत मूल्य की गणना की जाती थी।",
-  },
-  {
-    "question_en": "What did 'Polaj' land mean under Akbar's land division category?",
-    "question_hi": "अकबर की भू-विभाजन श्रेणी के तहत 'पोलज' (Polaj) भूमि का क्या अर्थ था?",
-    "options_en": ["Left fallow for 5+ years", "Left fallow for 3-4 years", "Left fallow for 1-2 years", "Cultivated every year"],
-    "options_hi": ["5+ वर्ष खाली", "3-4 वर्ष खाली", "1-2 वर्ष खाली", "प्रति वर्ष खेती वाली"],
-    "correct_option_index": 3,
-    "explanation_en": "'Polaj' was the ideal type of land under Akbar's classification, which was continually cultivated (every year).",
-    "explanation_hi": "'पोलज' अकबर के वर्गीकरण के तहत आदर्श प्रकार की भूमि थी, जिस पर लगातार (प्रति वर्ष) खेती की जाती थी।",
-  },
-  {
-    "question_en": "Shah Jahan shifted his capital from Agra to Delhi; what was the name of that new capital?",
-    "question_hi": "शाहजहाँ ने अपनी राजधानी आगरा से दिल्ली स्थानांतरित की, उस नई राजधानी का नाम क्या था?",
-    "options_en": ["Tughlaqabad", "Din Panah", "Shahjahanabad", "Jahanpanah"],
-    "options_hi": ["तुगलकाबाद", "दीन पनाह", "शाहजहानाबाद", "जहाँपनाह"],
-    "correct_option_index": 2,
-    "explanation_en": "Shah Jahan shifted his capital to the newly built city of 'Shahjahanabad' (Old Delhi) in 1639.",
-    "explanation_hi": "शाहजहाँ ने 1639 में अपनी राजधानी नवनिर्मित शहर 'शाहजहानाबाद' (पुरानी दिल्ली) में स्थानांतरित कर दी।",
-  },
-  {
-    "question_en": "Who was the ruler of Malwa during Akbar's first military campaign in 1561?",
-    "question_hi": "अकबर द्वारा 1561 में मालवा पर किए गए पहले सैन्य अभियान का शासक कौन था?",
-    "options_en": ["Baz Bahadur", "Rani Roopmati", "Abdullah Uzbek", "Pir Muhammad"],
-    "options_hi": ["बाज बहादुर", "रानी रूपमती", "अब्दुल्ला उज्बेक", "पीर मुहम्मद"],
-    "correct_option_index": 0,
-    "explanation_en": "The ruler of Malwa whom Akbar's forces defeated in 1561 AD was Baz Bahadur.",
-    "explanation_hi": "मालवा का शासक जिसे अकबर की सेनाओं ने 1561 ई. में पराजित किया था, बाज बहादुर था।",
-  },
-  {
-    "question_en": "In 1562 AD, Akbar married Harkha Bai (Jodha Bai), the daughter of which Rajput ruler?",
-    "question_hi": "1562 AD में अकबर ने किस राजपूत शासक की पुत्री हरखाबाई (जोधाबाई) से विवाह किया था?",
-    "options_en": ["Raja Man Singh", "Raja Bhagwan Das", "Raja Bharmal (Amer)", "Rana Udai Singh"],
-    "options_hi": ["राजा मानसिंह", "राजा भगवानदास", "राजा भारमल (आमेर)", "राणा उदय सिंह"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar married Harkha Bai (Jodha Bai), the daughter of Raja Bharmal of Amer, in 1562 AD.",
-    "explanation_hi": "अकबर ने 1562 ई. में आमेर के राजा भारमल की पुत्री हरखाबाई (जोधाबाई) से विवाह किया था।",
-  },
-  {
-    "question_en": "After gaining control of Chittor in 1568, which decree did Akbar issue?",
-    "question_hi": "1568 में चित्तौड़ पर अधिकार करने के बाद अकबर ने कौन सा फरमान जारी किया था?",
-    "options_en": ["Mazhar", "Fatehnama", "Din-i Ilahi", "Sulh-i-Kul"],
-    "options_hi": ["मजहर", "फतेहनामा", "दीन-ए-इलाही", "सुलह-ए-कुल"],
-    "correct_option_index": 1,
-    "explanation_en": "After the victory over Chittor in 1568, Akbar issued the 'Fatehnama' (Letter of Conquest) to commemorate the event.",
-    "explanation_hi": "1568 में चित्तौड़ पर विजय के बाद, अकबर ने घटना के उपलक्ष्य में 'फतेहनामा' (विजय का पत्र) जारी किया था।",
-  },
-  {
-    "question_en": "The Battle of Haldighati (1576 AD) was fought between the Mughal general Man Singh and whom?",
-    "question_hi": "हल्दीघाटी का युद्ध (1576 AD) मुगल सेनापति मानसिंह और किसके बीच लड़ा गया था?",
-    "options_en": ["Rana Sanga", "Rana Udai Singh", "Maharana Pratap", "Rana Kumbha"],
-    "options_hi": ["राणा साँगा", "राणा उदय सिंह", "महाराणा प्रताप", "राणा कुम्भा"],
-    "correct_option_index": 2,
-    "explanation_en": "The Battle of Haldighati (1576 AD) was fought between Maharana Pratap and the Mughal forces led by Raja Man Singh.",
-    "explanation_hi": "हल्दीघाटी का युद्ध (1576 ई.) महाराणा प्रताप और राजा मान सिंह के नेतृत्व वाली मुगल सेनाओं के बीच लड़ा गया था।",
-  },
-  {
-    "question_en": "What was the childhood name of Maharana Pratap?",
-    "question_hi": "महाराणा प्रताप के बचपन का नाम क्या था?",
-    "options_en": ["Kumbha", "Udai", "Kika", "Pratap Singh"],
-    "options_hi": ["कुंभा", "उदय", "कीका", "प्रताप सिंह"],
-    "correct_option_index": 2,
-    "explanation_en": "Maharana Pratap's childhood name was 'Kika', a common term used for children in the local dialect.",
-    "explanation_hi": "महाराणा प्रताप के बचपन का नाम 'कीका' था, जो स्थानीय बोली में बच्चों के लिए इस्तेमाल होने वाला एक सामान्य शब्द है।",
-  },
-  {
-    "question_en": "Who called the Battle of Dewair (1582 AD) the 'Marathon of Mewar'?",
-    "question_hi": "1582 AD में लड़े गए दिवेर के युद्ध को 'मेवाड़ का मैराथन' किसने कहा था?",
-    "options_en": ["Abul Fazl", "Colonel James Tod", "Badauni", "Akbar"],
-    "options_hi": ["अबुल फजल", "कर्नल जेम्स टॉड", "बदायूंनी", "अकबर"],
-    "correct_option_index": 1,
-    "explanation_en": "Colonel James Tod, a British officer and historian, called the Battle of Dewair (1582) the 'Marathon of Mewar'.",
-    "explanation_hi": "ब्रिटिश अधिकारी और इतिहासकार कर्नल जेम्स टॉड ने दिवेर के युद्ध (1582) को 'मेवाड़ का मैराथन' कहा था।",
-  },
-  {
-    "question_en": "Which Mughal ruler was called 'Zinda Pir' (Living Saint) due to his religious orthodoxy?",
-    "question_hi": "किस मुगल शासक को उसकी धार्मिक कट्टरता के कारण 'जिंदा पीर' (Living Saint) कहा जाता था?",
-    "options_en": ["Akbar", "Jahangir", "Shah Jahan", "Aurangzeb"],
-    "options_hi": ["अकबर", "जहाँगीर", "शाहजहाँ", "औरंगजेब"],
-    "correct_option_index": 3,
-    "explanation_en": "Aurangzeb was called 'Zinda Pir' due to his simple living and strict adherence to Islamic principles.",
-    "explanation_hi": "औरंगजेब को उनके सादे जीवन और इस्लामी सिद्धांतों के कड़े पालन के कारण 'जिंदा पीर' कहा जाता था।",
-  },
-  {
-    "question_en": "Who saw the sea for the first time during the Gujarat campaign (1572)?",
-    "question_hi": "गुजरात अभियान (1572) के दौरान पहली बार समुद्र किसने देखा?",
-    "options_en": ["Man Singh", "Mirza Aziz Koka", "Todar Mal", "Akbar"],
-    "options_hi": ["मानसिंह", "मिर्ज़ा अज़ीज़ कोका", "टोडरमल", "अकबर"],
-    "correct_option_index": 3,
-    "explanation_en": "Emperor Akbar saw the sea for the first time during his campaign in Gujarat in 1572 AD.",
-    "explanation_hi": "सम्राट अकबर ने 1572 ई. में गुजरात में अपने अभियान के दौरान पहली बार समुद्र देखा था।",
-  },
-  {
-    "question_en": "What was the real name of Tansen, Akbar's court musician?",
-    "question_hi": "अकबर के दरबारी संगीतज्ञ तानसेन का वास्तविक नाम क्या था?",
-    "options_en": ["Tanna Mishra", "Ramatnu Pande", "Mahesh Das", "Baz Bahadur"],
-    "options_hi": ["तन्ना मिश्रा", "रामसन्नू पांडे", "महेश दास", "बाज बहादुर"],
-    "correct_option_index": 1,
-    "explanation_en": "The real name of Tansen, one of the Navaratnas in Akbar's court, was Ramatnu Pande (or Ramtanu Pandey).",
-    "explanation_hi": "अकबर के दरबार में नवरत्नों में से एक तानसेन का वास्तविक नाम रामतनु पांडे था।",
-  },
-  {
-    "question_en": "Who is considered the most excellent painter in Akbar's court, who committed suicide?",
-    "question_hi": "अकबर के दरबार में सर्वोत्कृष्ट चित्रकार किसे माना गया है, जिसने आत्महत्या कर ली थी?",
-    "options_en": ["Mir Sayyid Ali", "Daswant", "Basawan", "Abul Hasan"],
-    "options_hi": ["मीर सैय्यद अली", "दसवंत", "बसावन", "अबुल हसन"],
-    "correct_option_index": 1,
-    "explanation_en": "Daswant was a prominent painter in Akbar's court, known for his work in Razmnama, who later became mentally unstable and committed suicide.",
-    "explanation_hi": "दसवंत अकबर के दरबार का एक प्रमुख चित्रकार था, जो 'रज्मनामा' में अपने काम के लिए जाना जाता था, जो बाद में मानसिक रूप से अस्थिर हो गया और उसने आत्महत्या कर ली।",
-  },
-  {
-    "question_en": "Who built the 'Bibi Ka Maqbara' (Taj Mahal of the South)?",
-    "question_hi": "'बीबी का मकबरा' (दक्षिण का ताजमहल) का निर्माण किसने करवाया था?",
-    "options_en": ["Shah Jahan", "Aurangzeb", "Jahanara", "Dara Shikoh"],
-    "options_hi": ["शाहजहाँ", "औरंगजेब", "जहाँआरा", "दारा शिकोह"],
-    "correct_option_index": 1,
-    "explanation_en": "Bibi Ka Maqbara, built in Aurangabad (Maharashtra) in memory of his wife Dilras Banu Begum, was constructed by Aurangzeb (or his son Prince Azam Shah).",
-    "explanation_hi": "अपनी पत्नी दिलरास बानू बेगम की याद में औरंगाबाद (महाराष्ट्र) में निर्मित बीबी का मकबरा, औरंगजेब (या उसके पुत्र प्रिंस आजम शाह) द्वारा बनवाया गया था।",
-  },
-  {
-    "question_en": "Who built the Khairul Manzil Mosque (Delhi) during Akbar's reign?",
-    "question_hi": "खैरुल मंजिल मस्जिद (दिल्ली) का निर्माण अकबर के शासनकाल में किसने करवाया था?",
-    "options_en": ["Maham Anga", "Bairam Khan", "Mir Baqi", "Hamida Bano Begum"],
-    "options_hi": ["महाम अंगा", "बैरम खान", "मीर बाकी", "हमीदा बानो बेगम"],
-    "correct_option_index": 0,
-    "explanation_en": "The Khairul Manzil Mosque, located opposite the Purana Qila in Delhi, was built by Maham Anga in 1561 AD.",
-    "explanation_hi": "दिल्ली में पुराना किला के सामने स्थित खैरुल मंजिल मस्जिद का निर्माण 1561 ई. में महाम अंगा ने करवाया था।",
-  },
-  {
-    "question_en": "What did Akbar affectionately call Jahangir by his childhood name (Salim)?",
-    "question_hi": "जहाँगीर के बचपन का नाम (सलीम) अकबर उसे प्यार से क्या कहकर बुलाते थे?",
-    "options_en": ["Salim", "Khurram", "Sheikhu Baba", "Jahangir"],
-    "options_hi": ["सलीम", "खुर्रम", "शेखू बाबा", "जहाँगीर"],
-    "correct_option_index": 2,
-    "explanation_en": "Akbar affectionately called his son Salim (Jahangir) 'Sheikhu Baba', as he was born after seeking blessings from the Sufi saint Shaikh Salim Chishti.",
-    "explanation_hi": "अकबर अपने पुत्र सलीम (जहाँगीर) को प्यार से 'शेखू बाबा' कहकर बुलाते थे, क्योंकि उनका जन्म सूफी संत शेख सलीम चिश्ती से आशीर्वाद लेने के बाद हुआ था।",
-  },
-  {
-    "question_en": "Which Sikh Guru was executed by Jahangir in 1606 for supporting Khusro's rebellion?",
-    "question_hi": "1606 में खुसरो के विद्रोह में उसका साथ देने के कारण जहाँगीर ने किस सिख गुरु की हत्या करवा दी थी?",
-    "options_en": ["Guru Ram Das", "Guru Tegh Bahadur", "Guru Arjan Dev", "Guru Hargobind"],
-    "options_hi": ["गुरु रामदास", "गुरु तेग बहादुर", "गुरु अर्जुन देव", "गुरु हरगोबिंद"],
-    "correct_option_index": 2,
-    "explanation_en": "Jahangir executed the fifth Sikh Guru, Guru Arjan Dev, in 1606 AD for helping his rebellious son, Prince Khusro.",
-    "explanation_hi": "जहाँगीर ने अपने विद्रोही पुत्र प्रिंस खुसरो की मदद करने के कारण 1606 ई. में पाँचवें सिख गुरु, गुरु अर्जुन देव की हत्या करवा दी थी।",
-  }
+   {
+    question_en: "1717 के फर्रुखसियर फरमान (जिसे 'कंपनी का मैग्ना कार्टा' कहा जाता है) के तहत, ब्रिटिश कंपनी को कर-मुक्त व्यापार का अधिकार भारत के किन तीन क्षेत्रों में मिला था?",
+    question_hi: "1717 के फर्रुखसियर फरमान (जिसे 'कंपनी का मैग्ना कार्टा' कहा जाता है) के तहत, ब्रिटिश कंपनी को कर-मुक्त व्यापार का अधिकार भारत के किन तीन क्षेत्रों में मिला था?",
+    options_en: [
+      "बंगाल, बॉम्बे, मद्रास",
+      "बंगाल, बिहार, उड़ीसा",
+      "सूरत, कलकत्ता, गोवा",
+      "बंबई, मद्रास, कड़ा"
+    ],
+    options_hi: [
+      "बंगाल, बॉम्बे, मद्रास",
+      "बंगाल, बिहार, उड़ीसा",
+      "सूरत, कलकत्ता, गोवा",
+      "बंबई, मद्रास, कड़ा"
+    ],
+    correct_option_index: 1,
+    explanation_en: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, कंपनी को बंगाल, बिहार व उड़ीसा में कर-मुक्त व्यापार (Duty-free trade) करने का अधिकार प्राप्त हुआ था।",
+    explanation_hi: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, कंपनी को बंगाल, बिहार व उड़ीसा में कर-मुक्त व्यापार (Duty-free trade) करने का अधिकार प्राप्त हुआ था।"
+  },
+  {
+    question_en: "वह कौन सा एकमात्र शासक था जिसने पुर्तगालियों के पतन के लिए निर्णायक सिद्ध हुए स्वाली के युद्ध (1611-12) और डचों के पतन के लिए निर्णायक सिद्ध हुए बेदरा के युद्ध (1759) को लड़ा?",
+    question_hi: "वह कौन सा एकमात्र शासक था जिसने पुर्तगालियों के पतन के लिए निर्णायक सिद्ध हुए स्वाली के युद्ध (1611-12) और डचों के पतन के लिए निर्णायक सिद्ध हुए बेदरा के युद्ध (1759) को लड़ा?",
+    options_en: [
+      "पुर्तगाली",
+      "ब्रिटिश",
+      "डच",
+      "फ्रांसीसी"
+    ],
+    options_hi: [
+      "पुर्तगाली",
+      "ब्रिटिश",
+      "डच",
+      "फ्रांसीसी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "स्वाली का युद्ध (1611-12) और बेदरा का युद्ध (1759) दोनों ब्रिटिशों ने क्रमशः पुर्तगालियों और डचों के विरुद्ध लड़े थे, जिनमें ब्रिटिश विजयी रहे और अन्य शक्तियों का पतन हुआ।",
+    explanation_hi: "स्वाली का युद्ध (1611-12) और बेदरा का युद्ध (1759) दोनों ब्रिटिशों ने क्रमशः पुर्तगालियों और डचों के विरुद्ध लड़े थे, जिनमें ब्रिटिश विजयी रहे और अन्य शक्तियों का पतन हुआ।"
+  },
+  {
+    question_en: "वास्को डी गामा 20 मई 1498 ई. को कालीकट पहुँचे थे। स्रोतों के अनुसार, उनके भारत आगमन का तत्काल लाभ पुर्तगाल को कितना गुना हुआ?",
+    question_hi: "वास्को डी गामा 20 मई 1498 ई. को कालीकट पहुँचे थे। स्रोतों के अनुसार, उनके भारत आगमन का तत्काल लाभ पुर्तगाल को कितना गुना हुआ?",
+    options_en: [
+      "40 गुना",
+      "50 गुना",
+      "60 गुना",
+      "100 गुना"
+    ],
+    options_hi: [
+      "40 गुना",
+      "50 गुना",
+      "60 गुना",
+      "100 गुना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वास्को डि गामा के सफल आगमन पर पुर्तगाल को 60 गुना लाभ हुआ था। पुर्तगालियों ने 1503 में कोचीन में अपनी पहली फैक्ट्री की स्थापना की।",
+    explanation_hi: "वास्को डि गामा के सफल आगमन पर पुर्तगाल को 60 गुना लाभ हुआ था। पुर्तगालियों ने 1503 में कोचीन में अपनी पहली फैक्ट्री की स्थापना की।"
+  },
+  {
+    question_en: "श्रीरंगपट्टनम की संधि (1792) के प्रावधानों के तहत, टीपू सुल्तान को युद्ध क्षतिपूर्ति के रूप में कंपनी को कितनी राशि का भुगतान करना पड़ा?",
+    question_hi: "श्रीरंगपट्टनम की संधि (1792) के प्रावधानों के तहत, टीपू सुल्तान को युद्ध क्षतिपूर्ति के रूप में कंपनी को कितनी राशि का भुगतान करना पड़ा?",
+    options_en: [
+      "5 करोड़ रुपये",
+      "3 करोड़ रुपये",
+      "1 करोड़ रुपये",
+      "50 लाख रुपये"
+    ],
+    options_hi: [
+      "5 करोड़ रुपये",
+      "3 करोड़ रुपये",
+      "1 करोड़ रुपये",
+      "50 लाख रुपये"
+    ],
+    correct_option_index: 1,
+    explanation_en: "1792 की संधि के तहत, टीपू को युद्ध क्षति के रूप में कंपनी को 3 करोड़ रुपये (3 Crore) का भुगतान करना पड़ा था।",
+    explanation_hi: "1792 की संधि के तहत, टीपू को युद्ध क्षति के रूप में कंपनी को 3 करोड़ रुपये (3 Crore) का भुगतान करना पड़ा था।"
+  },
+  {
+    question_en: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला राज्य (1798) कौन सा था, और मराठा प्रमुखों में सबसे पहले इस पर हस्ताक्षर किसने किए?",
+    question_hi: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला राज्य (1798) कौन सा था, और मराठा प्रमुखों में सबसे पहले इस पर हस्ताक्षर किसने किए?",
+    options_en: [
+      "मैसूर; भोंसले",
+      "हैदराबाद; पेशवा",
+      "तंजौर; सिंधिया",
+      "अवध; होल्कर"
+    ],
+    options_hi: [
+      "मैसूर; भोंसले",
+      "हैदराबाद; पेशवा",
+      "तंजौर; सिंधिया",
+      "अवध; होल्कर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला राज्य हैदराबाद (1798) था। मराठा प्रमुखों में सबसे पहले पेशवा (1802) ने हस्ताक्षर किए।",
+    explanation_hi: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला राज्य हैदराबाद (1798) था। मराठा प्रमुखों में सबसे पहले पेशवा (1802) ने हस्ताक्षर किए।"
+  },
+  {
+    question_en: "मराठा साम्राज्य में पेशवा पद को वंशानुगत (Hereditary) बनाने का श्रेय किसे दिया जाता है, और पहले वंशानुगत पेशवा कौन थे?",
+    question_hi: "मराठा साम्राज्य में पेशवा पद को वंशानुगत (Hereditary) बनाने का श्रेय किसे दिया जाता है, और पहले वंशानुगत पेशवा कौन थे?",
+    options_en: [
+      "शिवाजी; मोरोपंत त्र्यंबक पिंगले",
+      "शाहू; बालाजी विश्वनाथ",
+      "बालाजी बाजीराव; बाजीराव प्रथम",
+      "रघुनाथ राव; माधव नारायण राव"
+    ],
+    options_hi: [
+      "शिवाजी; मोरोपंत त्र्यंबक पिंगले",
+      "शाहू; बालाजी विश्वनाथ",
+      "बालाजी बाजीराव; बाजीराव प्रथम",
+      "रघुनाथ राव; माधव नारायण राव"
+    ],
+    correct_option_index: 1,
+    explanation_en: "1713 में नए राजा बने शाहू ने पेशवा पद को वंशानुगत बनाया। पहले वंशानुगत पेशवा बालाजी विश्वनाथ (1713-1720) थे।",
+    explanation_hi: "1713 में नए राजा बने शाहू ने पेशवा पद को वंशानुगत बनाया। पहले वंशानुगत पेशवा बालाजी विश्वनाथ (1713-1720) थे।"
+  },
+  {
+    question_en: "पानीपत के तृतीय युद्ध (1761) में मराठा सेना का नेतृत्व किसने किया था, और इस युद्ध का तात्कालिक कारण क्या था?",
+    question_hi: "पानीपत के तृतीय युद्ध (1761) में मराठा सेना का नेतृत्व किसने किया था, और इस युद्ध का तात्कालिक कारण क्या था?",
+    options_en: [
+      "बाजीराव प्रथम; तैमूर शाह की वापसी",
+      "सदाशिव राव भाऊ; मराठों द्वारा तैमूर शाह को पंजाब से बाहर निकालना",
+      "बालाजी बाजीराव; अहमद शाह अब्दाली का आक्रमण",
+      "माधवराव; मराठा संघ का टूटना"
+    ],
+    options_hi: [
+      "बाजीराव प्रथम; तैमूर शाह की वापसी",
+      "सदाशिव राव भाऊ; मराठों द्वारा तैमूर शाह को पंजाब से बाहर निकालना",
+      "बालाजी बाजीराव; अहमद शाह अब्दाली का आक्रमण",
+      "माधवराव; मराठा संघ का टूटना"
+    ],
+    correct_option_index: 1,
+    explanation_en: "मराठा सेनापति सदाशिव राव भाऊ ने नेतृत्व किया था। तात्कालिक कारण मराठों द्वारा अब्दाली के बेटे तैमूर शाह को पंजाब का गवर्नर पद से बाहर निकालना था।",
+    explanation_hi: "मराठा सेनापति सदाशिव राव भाऊ ने नेतृत्व किया था। तात्कालिक कारण मराठों द्वारा अब्दाली के बेटे तैमूर शाह को पंजाब का गवर्नर पद से बाहर निकालना था।"
+  },
+  {
+    question_en: "प्रथम आंग्ल-सिख युद्ध (1845-46) किस संधि के साथ समाप्त हुआ, और इस संधि के तहत कश्मीर क्षेत्र कितने रुपये में बेचा गया?",
+    question_hi: "प्रथम आंग्ल-सिख युद्ध (1845-46) किस संधि के साथ समाप्त हुआ, और इस संधि के तहत कश्मीर क्षेत्र कितने रुपये में बेचा गया?",
+    options_en: [
+      "भैरोवाल की संधि; 1 करोड़ रुपये",
+      "लाहौर की संधि; 1 करोड़ रुपये",
+      "भैरोवाल की संधि; 1.5 करोड़ रुपये",
+      "अमृतसर की संधि; 4.5 करोड़ रुपये"
+    ],
+    options_hi: [
+      "भैरोवाल की संधि; 1 करोड़ रुपये",
+      "लाहौर की संधि; 1 करोड़ रुपये",
+      "भैरोवाल की संधि; 1.5 करोड़ रुपये",
+      "अमृतसर की संधि; 4.5 करोड़ रुपये"
+    ],
+    correct_option_index: 1,
+    explanation_en: "प्रथम आंग्ल-सिख युद्ध लाहौर की संधि (मार्च 1846) के साथ समाप्त हुआ, जिसके तहत सिखों को जुर्माने के रूप में 1.5 करोड़ रुपये देने थे (जिसमें से 1 करोड़ रुपये के बदले कश्मीर क्षेत्र बेचा गया)।",
+    explanation_hi: "प्रथम आंग्ल-सिख युद्ध लाहौर की संधि (मार्च 1846) के साथ समाप्त हुआ, जिसके तहत सिखों को जुर्माने के रूप में 1.5 करोड़ रुपये देने थे (जिसमें से 1 करोड़ रुपये के बदले कश्मीर क्षेत्र बेचा गया)।"
+  },
+  {
+    question_en: "लॉर्ड डलहौजी द्वारा 'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत विलय किया गया पहला राज्य कौन सा था, और किस राज्य को कुशासन (Misgovernance) के आधार पर विलय किया गया?",
+    question_hi: "लॉर्ड डलहौजी द्वारा 'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत विलय किया गया पहला राज्य कौन सा था, और किस राज्य को कुशासन (Misgovernance) के आधार पर विलय किया गया?",
+    options_en: [
+      "जैतपुर; सतारा",
+      "सतारा; अवध",
+      "झांसी; नागपुर",
+      "नागपुर; उदयपुर"
+    ],
+    options_hi: [
+      "जैतपुर; सतारा",
+      "सतारा; अवध",
+      "झांसी; नागपुर",
+      "नागपुर; उदयपुर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "व्यपगत के सिद्धांत का पहला शिकार सतारा (1848) था। अवध राज्य का विलय कुशासन के आधार पर किया गया था, न कि व्यपगत के सिद्धांत के तहत।",
+    explanation_hi: "व्यपगत के सिद्धांत का पहला शिकार सतारा (1848) था। अवध राज्य का विलय कुशासन के आधार पर किया गया था, न कि व्यपगत के सिद्धांत के तहत।"
+  },
+  {
+    question_en: "'रैयतवाड़ी बंदोबस्त' (Ryotwari Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू किया गया था, और लगान वसूलने के लिए 'महालवाड़ी बंदोबस्त' में गाँव को इकाई मानने का सुझाव किसने दिया?",
+    question_hi: "'रैयतवाड़ी बंदोबस्त' (Ryotwari Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू किया गया था, और लगान वसूलने के लिए 'महालवाड़ी बंदोबस्त' में गाँव को इकाई मानने का सुझाव किसने दिया?",
+    options_en: [
+      "19%; लॉर्ड विलियम बेंटिक",
+      "51%; हॉल्ट मैकेंजी",
+      "30%; थॉमस मुनरो",
+      "49%; कॉर्नवालिस"
+    ],
+    options_hi: [
+      "19%; लॉर्ड विलियम बेंटिक",
+      "51%; हॉल्ट मैकेंजी",
+      "30%; थॉमस मुनरो",
+      "49%; कॉर्नवालिस"
+    ],
+    correct_option_index: 1,
+    explanation_en: "रैयतवाड़ी बंदोबस्त 51 प्रतिशत हिस्से पर लागू था। महालवाड़ी बंदोबस्त में गाँव को इकाई मानने का सुझाव हॉल्ट मैकेंजी ने 1819 ईस्वी में दिया था।",
+    explanation_hi: "रैयतवाड़ी बंदोबस्त 51 प्रतिशत हिस्से पर लागू था। महालवाड़ी बंदोबस्त में गाँव को इकाई मानने का सुझाव हॉल्ट मैकेंजी ने 1819 ईस्वी में दिया था।"
+  },
+  {
+    question_en: "'स्थायी बंदोबस्त' (Permanent Settlement) के विपरीत, 'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत (1772) किस गवर्नर जनरल द्वारा की गई थी, और इसे किसने समाप्त किया?",
+    question_hi: "'स्थायी बंदोबस्त' (Permanent Settlement) के विपरीत, 'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत (1772) किस गवर्नर जनरल द्वारा की गई थी, और इसे किसने समाप्त किया?",
+    options_en: [
+      "वॉरेन हेस्टिंग्स; लॉर्ड कॉर्नवालिस",
+      "लॉर्ड कॉर्नवालिस; वॉरेन हेस्टिंग्स",
+      "विलियम बेंटिक; लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग; थॉमस मुनरो"
+    ],
+    options_hi: [
+      "वॉरेन हेस्टिंग्स; लॉर्ड कॉर्नवालिस",
+      "लॉर्ड कॉर्नवालिस; वॉरेन हेस्टिंग्स",
+      "विलियम बेंटिक; लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग; थॉमस मुनरो"
+    ],
+    correct_option_index: 0,
+    explanation_en: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) द्वारा की गई थी। इसका अंत लॉर्ड कॉर्नवालिस ने किया।",
+    explanation_hi: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) द्वारा की गई थी। इसका अंत लॉर्ड कॉर्नवालिस ने किया।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय को 'राजा' की उपाधि किस मुगल बादशाह ने दी थी, और उनकी पहली संस्था आत्मीय सभा की स्थापना कब हुई थी?",
+    question_hi: "राजा राम मोहन रॉय को 'राजा' की उपाधि किस मुगल बादशाह ने दी थी, और उनकी पहली संस्था आत्मीय सभा की स्थापना कब हुई थी?",
+    options_en: [
+      "बहादुर शाह जफर; 1825",
+      "शाह आलम द्वितीय; 1828",
+      "अकबर शाह द्वितीय; 1815",
+      "फर्रुखसियर; 1829"
+    ],
+    options_hi: [
+      "बहादुर शाह जफर; 1825",
+      "शाह आलम द्वितीय; 1828",
+      "अकबर शाह द्वितीय; 1815",
+      "फर्रुखसियर; 1829"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्हें 'राजा' की उपाधि मुगल बादशाह अकबर शाह द्वितीय ने दी थी। उनकी पहली संस्था आत्मीय सभा की स्थापना 1815 में कलकत्ता में हुई थी।",
+    explanation_hi: "उन्हें 'राजा' की उपाधि मुगल बादशाह अकबर शाह द्वितीय ने दी थी। उनकी पहली संस्था आत्मीय सभा की स्थापना 1815 में कलकत्ता में हुई थी।"
+  },
+  {
+    question_en: "सती प्रथा का उन्मूलन 1829 में हुआ। उसी दशक में, राजा राम मोहन रॉय द्वारा स्थापित तीन प्रमुख संस्थाओं का सही कालक्रम क्या है?",
+    question_hi: "सती प्रथा का उन्मूलन 1829 में हुआ। उसी दशक में, राजा राम मोहन रॉय द्वारा स्थापित तीन प्रमुख संस्थाओं का सही कालक्रम क्या है?",
+    options_en: [
+      "वेदांत कॉलेज (1825), ब्रह्म समाज (1828), आत्मीय सभा (1815)",
+      "आत्मीय सभा (1815), वेदांत कॉलेज (1825), ब्रह्म समाज (1828)",
+      "ब्रह्म समाज (1828), आत्मीय सभा (1815), वेदांत कॉलेज (1825)",
+      "आत्मीय सभा (1815), ब्रह्म समाज (1828), वेदांत कॉलेज (1825)"
+    ],
+    options_hi: [
+      "वेदांत कॉलेज (1825), ब्रह्म समाज (1828), आत्मीय सभा (1815)",
+      "आत्मीय सभा (1815), वेदांत कॉलेज (1825), ब्रह्म समाज (1828)",
+      "ब्रह्म समाज (1828), आत्मीय सभा (1815), वेदांत कॉलेज (1825)",
+      "आत्मीय सभा (1815), ब्रह्म समाज (1828), वेदांत कॉलेज (1825)"
+    ],
+    correct_option_index: 1,
+    explanation_en: "सही कालक्रम है: आत्मीय सभा (1815), वेदांत कॉलेज (1825), और ब्रह्म समाज (1828)।",
+    explanation_hi: "सही कालक्रम है: आत्मीय सभा (1815), वेदांत कॉलेज (1825), और ब्रह्म समाज (1828)।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन 1866 में किस वैचारिक मतभेद के कारण हुआ था, और केशव चंद्र सेन के अलग होने के बाद देवेन्द्र नाथ टैगोर के समाज को किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन 1866 में किस वैचारिक मतभेद के कारण हुआ था, और केशव चंद्र सेन के अलग होने के बाद देवेन्द्र नाथ टैगोर के समाज को किस नाम से जाना गया?",
+    options_en: [
+      "सती प्रथा के विरोध में; भारतीय ब्रह्म समाज",
+      "शिक्षा के माध्यम पर; साधारण ब्रह्म समाज",
+      "केशव चंद्र सेन के उदारवादी विचारों के कारण; आदि ब्रह्म समाज",
+      "मूर्ति पूजा के विरोध में; प्रार्थना समाज"
+    ],
+    options_hi: [
+      "सती प्रथा के विरोध में; भारतीय ब्रह्म समाज",
+      "शिक्षा के माध्यम पर; साधारण ब्रह्म समाज",
+      "केशव चंद्र सेन के उदारवादी विचारों के कारण; आदि ब्रह्म समाज",
+      "मूर्ति पूजा के विरोध में; प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ब्रह्म समाज का विभाजन केशव चंद्र सेन के उदारवादी विचारों के कारण हुआ था, जिसके बाद देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।",
+    explanation_hi: "ब्रह्म समाज का विभाजन केशव चंद्र सेन के उदारवादी विचारों के कारण हुआ था, जिसके बाद देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "सम्मति आयु अधिनियम (Age of Consent Act) किस वर्ष पारित हुआ, और यह किस समाज सुधारक के प्रयासों से संबंधित था?",
+    question_hi: "सम्मति आयु अधिनियम (Age of Consent Act) किस वर्ष पारित हुआ, और यह किस समाज सुधारक के प्रयासों से संबंधित था?",
+    options_en: [
+      "1856; ईश्वर चंद्र विद्यासागर",
+      "1872; ज्योतिराव फुले",
+      "1891; बहरामजी मालाबारी",
+      "1886; स्वामी दयानंद सरस्वती"
+    ],
+    options_hi: [
+      "1856; ईश्वर चंद्र विद्यासागर",
+      "1872; ज्योतिराव फुले",
+      "1891; बहरामजी मालाबारी",
+      "1886; स्वामी दयानंद सरस्वती"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह अधिनियम 1891 में पारित हुआ था, और यह बहरामजी मालाबारी से संबंधित था। इसने 12 वर्ष से कम आयु की कन्याओं के विवाह पर रोक लगा दी थी।",
+    explanation_hi: "यह अधिनियम 1891 में पारित हुआ था, और यह बहरामजी मालाबारी से संबंधित था। इसने 12 वर्ष से कम आयु की कन्याओं के विवाह पर रोक लगा दी थी।"
+  },
+  {
+    question_en: "सत्यशोधक समाज की स्थापना ज्योतिराव फुले ने 1873 में कहाँ की थी, और उन्हें 'महात्मा' की उपाधि किसने दी?",
+    question_hi: "सत्यशोधक समाज की स्थापना ज्योतिराव फुले ने 1873 में कहाँ की थी, और उन्हें 'महात्मा' की उपाधि किसने दी?",
+    options_en: [
+      "बंबई; महात्मा गांधी",
+      "पुणे; विट्ठलराव वाडेकर",
+      "मद्रास; बी.आर. अंबेडकर",
+      "अहमदाबाद; गोपाल कृष्ण गोखले"
+    ],
+    options_hi: [
+      "बंबई; महात्मा गांधी",
+      "पुणे; विट्ठलराव वाडेकर",
+      "मद्रास; बी.आर. अंबेडकर",
+      "अहमदाबाद; गोपाल कृष्ण गोखले"
+    ],
+    correct_option_index: 1,
+    explanation_en: "सत्यशोधक समाज की स्थापना पुणे में 1873 में हुई थी। फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई थी।",
+    explanation_hi: "सत्यशोधक समाज की स्थापना पुणे में 1873 में हुई थी। फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई थी।"
+  },
+  {
+    question_en: "आर्य समाज की पहली इकाई 1875 में कहाँ स्थापित हुई थी, और 'स्वराज' (Swaraj) शब्द का सर्वप्रथम प्रयोग करने वाले समाज सुधारक कौन थे?",
+    question_hi: "आर्य समाज की पहली इकाई 1875 में कहाँ स्थापित हुई थी, और 'स्वराज' (Swaraj) शब्द का सर्वप्रथम प्रयोग करने वाले समाज सुधारक कौन थे?",
+    options_en: [
+      "लाहौर; राजा राम मोहन रॉय",
+      "बंबई; स्वामी दयानंद सरस्वती",
+      "कलकत्ता; स्वामी विवेकानंद",
+      "पूना; बाल गंगाधर तिलक"
+    ],
+    options_hi: [
+      "लाहौर; राजा राम मोहन रॉय",
+      "बंबई; स्वामी दयानंद सरस्वती",
+      "कलकत्ता; स्वामी विवेकानंद",
+      "पूना; बाल गंगाधर तिलक"
+    ],
+    correct_option_index: 1,
+    explanation_en: "आर्य समाज की पहली इकाई बंबई में 1875 में स्थापित हुई थी, जिसका मुख्यालय बाद में लाहौर में बना। 'स्वराज' शब्द का सर्वप्रथम प्रयोग स्वामी दयानंद सरस्वती ने किया।",
+    explanation_hi: "आर्य समाज की पहली इकाई बंबई में 1875 में स्थापित हुई थी, जिसका मुख्यालय बाद में लाहौर में बना। 'स्वराज' शब्द का सर्वप्रथम प्रयोग स्वामी दयानंद सरस्वती ने किया।"
+  },
+  {
+    question_en: "1857 के विद्रोह के तात्कालिक कारण चर्बीयुक्त कारतूस थे, जबकि सैन्य कारणों में 1856 में किस अधिनियम का पारित होना शामिल था?",
+    question_hi: "1857 के विद्रोह के तात्कालिक कारण चर्बीयुक्त कारतूस थे, जबकि सैन्य कारणों में 1856 में किस अधिनियम का पारित होना शामिल था?",
+    options_en: [
+      "डॉक्ट्रिन ऑफ लैप्स",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल"
+    ],
+    options_hi: [
+      "डॉक्ट्रिन ऑफ लैप्स",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल"
+    ],
+    correct_option_index: 1,
+    explanation_en: "तात्कालिक कारण चर्बीयुक्त कारतूस थे। सैन्य कारणों में जनरल सर्विस एनलिस्टमेंट एक्ट (General Service Enlistment Act) 1856 में लॉर्ड कैनिंग के समय पारित हुआ था, जिसका उच्च जाति के हिंदू सिपाहियों ने धार्मिक कारणों से विरोध किया था।",
+    explanation_hi: "तात्कालिक कारण चर्बीयुक्त कारतूस थे। सैन्य कारणों में जनरल सर्विस एनलिस्टमेंट एक्ट (General Service Enlistment Act) 1856 में लॉर्ड कैनिंग के समय पारित हुआ था, जिसका उच्च जाति के हिंदू सिपाहियों ने धार्मिक कारणों से विरोध किया था।"
+  },
+  {
+    question_en: "1857 के विद्रोह में कानपुर और लखनऊ, दोनों केंद्रों के विद्रोह को किस ब्रिटिश कमांडर ने दबाया था?",
+    question_hi: "1857 के विद्रोह में कानपुर और लखनऊ, दोनों केंद्रों के विद्रोह को किस ब्रिटिश कमांडर ने दबाया था?",
+    options_en: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    options_hi: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कानपुर (नाना साहब) और लखनऊ (बेगम हजरत महल) दोनों केंद्रों के विद्रोह को कॉलिन कैंपबेल ने दबाया था।",
+    explanation_hi: "कानपुर (नाना साहब) और लखनऊ (बेगम हजरत महल) दोनों केंद्रों के विद्रोह को कॉलिन कैंपबेल ने दबाया था।"
+  },
+  {
+    question_en: "तात्या टोपे को 8 अप्रैल 1859 को कहाँ फाँसी दी गई थी, और नाना साहब अंग्रेजों से बचने के लिए कहाँ चले गए थे?",
+    question_hi: "तात्या टोपे को 8 अप्रैल 1859 को कहाँ फाँसी दी गई थी, और नाना साहब अंग्रेजों से बचने के लिए कहाँ चले गए थे?",
+    options_en: [
+      "झांसी; बर्मा",
+      "बिठूर; कानपुर",
+      "शिवपुरी; नेपाल",
+      "ग्वालियर; इलाहाबाद"
+    ],
+    options_hi: [
+      "झांसी; बर्मा",
+      "बिठूर; कानपुर",
+      "शिवपुरी; नेपाल",
+      "ग्वालियर; इलाहाबाद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "तात्या टोपे को शिवपुरी में फाँसी दी गई थी। नाना साहब 1859 में नेपाल चले गए थे।",
+    explanation_hi: "तात्या टोपे को शिवपुरी में फाँसी दी गई थी। नाना साहब 1859 में नेपाल चले गए थे।"
+  },
+  {
+    question_en: "कांग्रेस की स्थापना से पहले 'द लैंडहोल्डर्स सोसाइटी' (Landholders Society) की स्थापना कब और किसने की थी?",
+    question_hi: "कांग्रेस की स्थापना से पहले 'द लैंडहोल्डर्स सोसाइटी' (Landholders Society) की स्थापना कब और किसने की थी?",
+    options_en: [
+      "1836; राजा राम मोहन राय के सहयोगी",
+      "1838; द्वारकानाथ टैगोर",
+      "1866; दादा भाई नौरोजी",
+      "1876; सुरेंद्र नाथ बनर्जी"
+    ],
+    options_hi: [
+      "1836; राजा राम मोहन राय के सहयोगी",
+      "1838; द्वारकानाथ टैगोर",
+      "1866; दादा भाई नौरोजी",
+      "1876; सुरेंद्र नाथ बनर्जी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "'द लैंडहोल्डर्स सोसाइटी' (जिसे जमींदारी एसोसिएशन भी कहा जाता है) की स्थापना 1838 में द्वारकानाथ टैगोर ने की थी।",
+    explanation_hi: "'द लैंडहोल्डर्स सोसाइटी' (जिसे जमींदारी एसोसिएशन भी कहा जाता है) की स्थापना 1838 में द्वारकानाथ टैगोर ने की थी।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के पहले सत्र (1885, बॉम्बे) में कितने प्रतिनिधियों ने भाग लिया था, और प्रथम मुस्लिम अध्यक्ष कौन थे?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के पहले सत्र (1885, बॉम्बे) में कितने प्रतिनिधियों ने भाग लिया था, और प्रथम मुस्लिम अध्यक्ष कौन थे?",
+    options_en: [
+      "72 प्रतिनिधि; बदरुद्दीन तैयबजी",
+      "75 प्रतिनिधि; रहमतुल्लाह एम. सयानी",
+      "92 प्रतिनिधि; बदरुद्दीन तैयबजी",
+      "100 प्रतिनिधि; मोहम्मद अली जिन्ना"
+    ],
+    options_hi: [
+      "72 प्रतिनिधि; बदरुद्दीन तैयबजी",
+      "75 प्रतिनिधि; रहमतुल्लाह एम. सयानी",
+      "92 प्रतिनिधि; बदरुद्दीन तैयबजी",
+      "100 प्रतिनिधि; मोहम्मद अली जिन्ना"
+    ],
+    correct_option_index: 0,
+    explanation_en: "पहले सत्र में 72 प्रतिनिधियों ने भाग लिया था। कांग्रेस के प्रथम मुस्लिम अध्यक्ष बदरुद्दीन तैयबजी थे (तीसरा सत्र, 1887, मद्रास)।",
+    explanation_hi: "पहले सत्र में 72 प्रतिनिधियों ने भाग लिया था। कांग्रेस के प्रथम मुस्लिम अध्यक्ष बदरुद्दीन तैयबजी थे (तीसरा सत्र, 1887, मद्रास)।"
+  },
+  {
+    question_en: "दादा भाई नौरोजी ब्रिटिश संसद (हाउस ऑफ कॉमन्स) के सदस्य कब बने, और उन्होंने अपनी किस पुस्तक में 'धन-निष्कासन सिद्धांत' (Drain of Wealth theory) प्रकाशित किया?",
+    question_hi: "दादा भाई नौरोजी ब्रिटिश संसद (हाउस ऑफ कॉमन्स) के सदस्य कब बने, और उन्होंने अपनी किस पुस्तक में 'धन-निष्कासन सिद्धांत' (Drain of Wealth theory) प्रकाशित किया?",
+    options_en: [
+      "1892; 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया'",
+      "1885; 'द इंडियन मिरर'",
+      "1906; 'स्वराज्य'",
+      "1901; 'यंग इंडिया'"
+    ],
+    options_hi: [
+      "1892; 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया'",
+      "1885; 'द इंडियन मिरर'",
+      "1906; 'स्वराज्य'",
+      "1901; 'यंग इंडिया'"
+    ],
+    correct_option_index: 0,
+    explanation_en: "दादा भाई नौरोजी 1892 में ब्रिटिश संसद के सदस्य बने। उन्होंने यह सिद्धांत 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' (1901) में प्रकाशित किया।",
+    explanation_hi: "दादा भाई नौरोजी 1892 में ब्रिटिश संसद के सदस्य बने। उन्होंने यह सिद्धांत 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' (1901) में प्रकाशित किया।"
+  },
+  {
+    question_en: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    question_hi: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "व्योमेश चंद्र बनर्जी"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "व्योमेश चंद्र बनर्जी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था। वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने।",
+    explanation_hi: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था। वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने।"
+  },
+  {
+    question_en: "लॉर्ड कर्जन द्वारा बंगाल विभाजन की घोषणा कब की गई थी, और स्वदेशी आंदोलन की शुरुआत किस तिथि को हुई?",
+    question_hi: "लॉर्ड कर्जन द्वारा बंगाल विभाजन की घोषणा कब की गई थी, और स्वदेशी आंदोलन की शुरुआत किस तिथि को हुई?",
+    options_en: [
+      "19 जुलाई 1905; 16 अक्टूबर 1905",
+      "16 अक्टूबर 1905; 19 जुलाई 1905",
+      "19 जुलाई 1905; 7 अगस्त 1905",
+      "7 अगस्त 1905; 16 अक्टूबर 1905"
+    ],
+    options_hi: [
+      "19 जुलाई 1905; 16 अक्टूबर 1905",
+      "16 अक्टूबर 1905; 19 जुलाई 1905",
+      "19 जुलाई 1905; 7 अगस्त 1905",
+      "7 अगस्त 1905; 16 अक्टूबर 1905"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई। स्वदेशी आंदोलन की शुरुआत 7 अगस्त, 1905 को हुई।",
+    explanation_hi: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई। स्वदेशी आंदोलन की शुरुआत 7 अगस्त, 1905 को हुई।"
+  },
+  {
+    question_en: "1905 के स्वदेशी आंदोलन के दौरान 'स्वदेश बांधव समिति' का नेतृत्व किसने किया, और यह समिति किस प्रांत में सक्रिय थी?",
+    question_hi: "1905 के स्वदेशी आंदोलन के दौरान 'स्वदेश बांधव समिति' का नेतृत्व किसने किया, और यह समिति किस प्रांत में सक्रिय थी?",
+    options_en: [
+      "बाल गंगाधर तिलक; बंबई प्रांत",
+      "अश्विनी कुमार दत्ता; बंगाल प्रांत",
+      "सैयद हैदर रज़ा; दिल्ली",
+      "चिदंबरम पिल्लै; मद्रास प्रेसीडेंसी"
+    ],
+    options_hi: [
+      "बाल गंगाधर तिलक; बंबई प्रांत",
+      "अश्विनी कुमार दत्ता; बंगाल प्रांत",
+      "सैयद हैदर रज़ा; दिल्ली",
+      "चिदंबरम पिल्लै; मद्रास प्रेसीडेंसी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "'स्वदेश बांधव समिति' का नेतृत्व अश्विनी कुमार दत्ता ने किया था, और यह बंगाल में सक्रिय थी।",
+    explanation_hi: "'स्वदेश बांधव समिति' का नेतृत्व अश्विनी कुमार दत्ता ने किया था, और यह बंगाल में सक्रिय थी।"
+  },
+  {
+    question_en: "कांग्रेस का सूरत विभाजन (1907) किस अधिवेशन में हुआ, और उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "कांग्रेस का सूरत विभाजन (1907) किस अधिवेशन में हुआ, और उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "कलकत्ता अधिवेशन; दादा भाई नौरोजी",
+      "सूरत अधिवेशन; रास बिहारी घोष",
+      "लाहौर अधिवेशन; जवाहरलाल नेहरू",
+      "मद्रास अधिवेशन; बदरुद्दीन तैयबजी"
+    ],
+    options_hi: [
+      "कलकत्ता अधिवेशन; दादा भाई नौरोजी",
+      "सूरत अधिवेशन; रास बिहारी घोष",
+      "लाहौर अधिवेशन; जवाहरलाल नेहरू",
+      "मद्रास अधिवेशन; बदरुद्दीन तैयबजी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "कांग्रेस का विभाजन सूरत अधिवेशन (1907) में हुआ, और इसकी अध्यक्षता रास बिहारी घोष ने की थी।",
+    explanation_hi: "कांग्रेस का विभाजन सूरत अधिवेशन (1907) में हुआ, और इसकी अध्यक्षता रास बिहारी घोष ने की थी।"
+  },
+  {
+    question_en: "बाल गंगाधर तिलक द्वारा स्थापित होम रूल लीग (1916) का मुख्यालय कहाँ स्थित था, और इसका प्रसार क्षेत्र क्या था?",
+    question_hi: "बाल गंगाधर तिलक द्वारा स्थापित होम रूल लीग (1916) का मुख्यालय कहाँ स्थित था, और इसका प्रसार क्षेत्र क्या था?",
+    options_en: [
+      "अड्यार (मद्रास); शेष भारत",
+      "पूना; कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार",
+      "कलकत्ता; बंगाल और उड़ीसा",
+      "बंबई; केवल बंबई शहर"
+    ],
+    options_hi: [
+      "अड्यार (मद्रास); शेष भारत",
+      "पूना; कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार",
+      "कलकत्ता; बंगाल और उड़ीसा",
+      "बंबई; केवल बंबई शहर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "तिलक की होम रूल लीग का मुख्यालय पूना में स्थित था। इसका प्रसार क्षेत्र कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार था।",
+    explanation_hi: "तिलक की होम रूल लीग का मुख्यालय पूना में स्थित था। इसका प्रसार क्षेत्र कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार था।"
+  },
+  {
+    question_en: "'वंदे मातरम्‌' को पहली बार 1896 के कलकत्ता अधिवेशन में गाया गया था, उस सत्र की अध्यक्षता किसने की थी, और यह किस उपन्यास से लिया गया है?",
+    question_hi: "'वंदे मातरम्‌' को पहली बार 1896 के कलकत्ता अधिवेशन में गाया गया था, उस सत्र की अध्यक्षता किसने की थी, और यह किस उपन्यास से लिया गया है?",
+    options_en: [
+      "रहमतुल्लाह एम. सयानी; 'आनंद मठ'",
+      "दादा भाई नौरोजी; 'गीता रहस्य'",
+      "व्योमेश चंद्र बनर्जी; 'यंग इंडिया'",
+      "रास बिहारी घोष; 'प्रबुद्ध भारत'"
+    ],
+    options_hi: [
+      "रहमतुल्लाह एम. सयानी; 'आनंद मठ'",
+      "दादा भाई नौरोजी; 'गीता रहस्य'",
+      "व्योमेश चंद्र बनर्जी; 'यंग इंडिया'",
+      "रास बिहारी घोष; 'प्रबुद्ध भारत'"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'वंदे मातरम्‌' को 1896 के कलकत्ता अधिवेशन में गाया गया था, जिसके अध्यक्ष रहमतुल्लाह एम. सयानी थे, और यह 'आनंद मठ' उपन्यास से लिया गया है।",
+    explanation_hi: "'वंदे मातरम्‌' को 1896 के कलकत्ता अधिवेशन में गाया गया था, जिसके अध्यक्ष रहमतुल्लाह एम. सयानी थे, और यह 'आनंद मठ' उपन्यास से लिया गया है।"
+  },
+  {
+    question_en: "मुजफ्फरपुर में खुदीराम बोस और प्रफुल्ल चाकी ने किस ब्रिटिश न्यायाधीश की हत्या का प्रयास किया था, और गलती से किनकी मौत हुई?",
+    question_hi: "मुजफ्फरपुर में खुदीराम बोस और प्रफुल्ल चाकी ने किस ब्रिटिश न्यायाधीश की हत्या का प्रयास किया था, और गलती से किनकी मौत हुई?",
+    options_en: [
+      "रैंड; वासुदेव चापेकर",
+      "कर्जन वाइली; मदनलाल ढींगरा",
+      "किंग्सफोर्ड; दो महिलाएँ",
+      "जैक्सन; अनंत कान्हेरे"
+    ],
+    options_hi: [
+      "रैंड; वासुदेव चापेकर",
+      "कर्जन वाइली; मदनलाल ढींगरा",
+      "किंग्सफोर्ड; दो महिलाएँ",
+      "जैक्सन; अनंत कान्हेरे"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्होंने ब्रिटिश न्यायाधीश किंग्सफोर्ड की हत्या का प्रयास किया था। बम हमले के परिणामस्वरूप गलती से दो महिलाओं की मौत हुई थी।",
+    explanation_hi: "उन्होंने ब्रिटिश न्यायाधीश किंग्सफोर्ड की हत्या का प्रयास किया था। बम हमले के परिणामस्वरूप गलती से दो महिलाओं की मौत हुई थी।"
+  },
+  {
+    question_en: "गांधीजी ने भारत में अपना पहला सत्याग्रह (1917) किस प्रणाली के विरोध में किया, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    question_hi: "गांधीजी ने भारत में अपना पहला सत्याग्रह (1917) किस प्रणाली के विरोध में किया, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    options_en: [
+      "स्थायी बंदोबस्त; 1/3 भाग",
+      "रैयतवाड़ी; 51 प्रतिशत",
+      "इजारेदारी; 1/5 भाग",
+      "तीनकठिया; 3/20 भाग"
+    ],
+    options_hi: [
+      "स्थायी बंदोबस्त; 1/3 भाग",
+      "रैयतवाड़ी; 51 प्रतिशत",
+      "इजारेदारी; 1/5 भाग",
+      "तीनकठिया; 3/20 भाग"
+    ],
+    correct_option_index: 3,
+    explanation_en: "गांधीजी का पहला सत्याग्रह चंपारण में तीनकठिया पद्धति के विरोध में था। इस पद्धति के तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती करना अनिवार्य था।",
+    explanation_hi: "गांधीजी का पहला सत्याग्रह चंपारण में तीनकठिया पद्धति के विरोध में था। इस पद्धति के तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती करना अनिवार्य था।"
+  },
+  {
+    question_en: "रवींद्रनाथ टैगोर ने गांधीजी को 'महात्मा' की उपाधि किस घटना की सफलता के बाद दी थी?",
+    question_hi: "रवींद्रनाथ टैगोर ने गांधीजी को 'महात्मा' की उपाधि किस घटना की सफलता के बाद दी थी?",
+    options_en: [
+      "खेड़ा सत्याग्रह",
+      "अहमदाबाद मिल हड़ताल",
+      "चंपारण सत्याग्रह",
+      "असहयोग आंदोलन"
+    ],
+    options_hi: [
+      "खेड़ा सत्याग्रह",
+      "अहमदाबाद मिल हड़ताल",
+      "चंपारण सत्याग्रह",
+      "असहयोग आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रवींद्रनाथ टैगोर ने चंपारण सत्याग्रह की सफलता के बाद गांधीजी को 'महात्मा' की उपाधि दी थी।",
+    explanation_hi: "रवींद्रनाथ टैगोर ने चंपारण सत्याग्रह की सफलता के बाद गांधीजी को 'महात्मा' की उपाधि दी थी।"
+  },
+  {
+    question_en: "जलियाँवाला बाग कांड (13 अप्रैल 1919) के विरोध में रवींद्रनाथ टैगोर ने कौन सी उपाधि वापस कर दी थी?",
+    question_hi: "जलियाँवाला बाग कांड (13 अप्रैल 1919) के विरोध में रवींद्रनाथ टैगोर ने कौन सी उपाधि वापस कर दी थी?",
+    options_en: [
+      "महात्मा",
+      "सर",
+      "कैसर-ए-हिंद",
+      "खान बहादुर"
+    ],
+    options_hi: [
+      "महात्मा",
+      "सर",
+      "कैसर-ए-हिंद",
+      "खान बहादुर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "रवींद्रनाथ टैगोर ने जलियाँवाला बाग कांड के विरोध में 'सर' की उपाधि वापस कर दी थी। गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।",
+    explanation_hi: "रवींद्रनाथ टैगोर ने जलियाँवाला बाग कांड के विरोध में 'सर' की उपाधि वापस कर दी थी। गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।"
+  },
+  {
+    question_en: "असहयोग आंदोलन (Non-Cooperation Movement) किस तिथि को शुरू हुआ, और आंदोलन का प्रस्ताव कांग्रेस के किस अधिवेशन में पारित किया गया?",
+    question_hi: "असहयोग आंदोलन (Non-Cooperation Movement) किस तिथि को शुरू हुआ, और आंदोलन का प्रस्ताव कांग्रेस के किस अधिवेशन में पारित किया गया?",
+    options_en: [
+      "13 अप्रैल 1919; अमृतसर अधिवेशन",
+      "1 अगस्त 1920; नागपुर अधिवेशन",
+      "5 मार्च 1931; लाहौर अधिवेशन",
+      "8 अगस्त 1942; बंबई अधिवेशन"
+    ],
+    options_hi: [
+      "13 अप्रैल 1919; अमृतसर अधिवेशन",
+      "1 अगस्त 1920; नागपुर अधिवेशन",
+      "5 मार्च 1931; लाहौर अधिवेशन",
+      "8 अगस्त 1942; बंबई अधिवेशन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "असहयोग आंदोलन 1 अगस्त, 1920 को शुरू हुआ। इसका प्रस्ताव दिसंबर 1920 में नागपुर अधिवेशन (अध्यक्ष: वीर राघवाचारी) में पारित हुआ।",
+    explanation_hi: "असहयोग आंदोलन 1 अगस्त, 1920 को शुरू हुआ। इसका प्रस्ताव दिसंबर 1920 में नागपुर अधिवेशन (अध्यक्ष: वीर राघवाचारी) में पारित हुआ।"
+  },
+  {
+    question_en: "स्वराज पार्टी की स्थापना 1 जनवरी 1923 को किन दो नेताओं ने अध्यक्ष और सचिव के रूप में की थी?",
+    question_hi: "स्वराज पार्टी की स्थापना 1 जनवरी 1923 को किन दो नेताओं ने अध्यक्ष और सचिव के रूप में की थी?",
+    options_en: [
+      "मोतीलाल नेहरू (अध्यक्ष) और सी.आर. दास (सचिव)",
+      "चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव)",
+      "सुभाष चंद्र बोस (अध्यक्ष) और जवाहरलाल नेहरू (सचिव)",
+      "लाला लाजपत राय (अध्यक्ष) और मोतीलाल नेहरू (सचिव)"
+    ],
+    options_hi: [
+      "मोतीलाल नेहरू (अध्यक्ष) और सी.आर. दास (सचिव)",
+      "चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव)",
+      "सुभाष चंद्र बोस (अध्यक्ष) और जवाहरलाल नेहरू (सचिव)",
+      "लाला लाजपत राय (अध्यक्ष) और मोतीलाल नेहरू (सचिव)"
+    ],
+    correct_option_index: 1,
+    explanation_en: "स्वराज पार्टी की स्थापना चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव) ने मिलकर 1 जनवरी, 1923 को की थी।",
+    explanation_hi: "स्वराज पार्टी की स्थापना चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव) ने मिलकर 1 जनवरी, 1923 को की थी।"
+  },
+  {
+    question_en: "साइमन आयोग (Simon Commission) भारत में किस तिथि को आया, और लाला लाजपत राय की मृत्यु किस तिथि को हुई?",
+    question_hi: "साइमन आयोग (Simon Commission) भारत में किस तिथि को आया, और लाला लाजपत राय की मृत्यु किस तिथि को हुई?",
+    options_en: [
+      "3 फरवरी 1928; 17 नवंबर 1928",
+      "17 नवंबर 1928; 3 फरवरी 1928",
+      "3 दिसंबर 1928; 26 जनवरी 1930",
+      "3 फरवरी 1929; 22 अक्टूबर 1929"
+    ],
+    options_hi: [
+      "3 फरवरी 1928; 17 नवंबर 1928",
+      "17 नवंबर 1928; 3 फरवरी 1928",
+      "3 दिसंबर 1928; 26 जनवरी 1930",
+      "3 फरवरी 1929; 22 अक्टूबर 1929"
+    ],
+    correct_option_index: 0,
+    explanation_en: "साइमन आयोग 3 फरवरी, 1928 को बंबई बंदरगाह पर उतरा। लाठी चार्ज के कारण लाला लाजपत राय की मृत्यु 17 नवंबर, 1928 को हुई।",
+    explanation_hi: "साइमन आयोग 3 फरवरी, 1928 को बंबई बंदरगाह पर उतरा। लाठी चार्ज के कारण लाला लाजपत राय की मृत्यु 17 नवंबर, 1928 को हुई।"
+  },
+  {
+    question_en: "1928 में सुभाष चंद्र बोस और जवाहरलाल नेहरू ने पूर्ण स्वतंत्रता की मांग के लिए कांग्रेस के युवा वर्गों के भीतर किस लीग की स्थापना की?",
+    question_hi: "1928 में सुभाष चंद्र बोस और जवाहरलाल नेहरू ने पूर्ण स्वतंत्रता की मांग के लिए कांग्रेस के युवा वर्गों के भीतर किस लीग की स्थापना की?",
+    options_en: [
+      "फॉरवर्ड ब्लॉक",
+      "हिन्दुस्तान रिपब्लिकन एसोसिएशन",
+      "ऑल इंडिया इंडिपेंडेंस लीग",
+      "अनुशीलन समिति"
+    ],
+    options_hi: [
+      "फॉरवर्ड ब्लॉक",
+      "हिन्दुस्तान रिपब्लिकन एसोसिएशन",
+      "ऑल इंडिया इंडिपेंडेंस लीग",
+      "अनुशीलन समिति"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्होंने ऑल इंडिया इंडिपेंडेंस लीग की स्थापना 1928 में की थी, जिसकी मांग पूर्ण स्वतंत्रता थी।",
+    explanation_hi: "उन्होंने ऑल इंडिया इंडिपेंडेंस लीग की स्थापना 1928 में की थी, जिसकी मांग पूर्ण स्वतंत्रता थी।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस ने 'पूर्ण स्वराज' (Purna Swaraj) का प्रस्ताव किस अधिवेशन में पारित किया, और पहला स्वतंत्रता दिवस कब मनाया गया?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस ने 'पूर्ण स्वराज' (Purna Swaraj) का प्रस्ताव किस अधिवेशन में पारित किया, और पहला स्वतंत्रता दिवस कब मनाया गया?",
+    options_en: [
+      "कलकत्ता अधिवेशन (1906); 15 अगस्त 1947",
+      "लाहौर अधिवेशन (1929); 26 जनवरी 1930",
+      "कराची अधिवेशन (1931); 31 दिसंबर 1929",
+      "फैजपुर अधिवेशन (1936); 12 मार्च 1930"
+    ],
+    options_hi: [
+      "कलकत्ता अधिवेशन (1906); 15 अगस्त 1947",
+      "लाहौर अधिवेशन (1929); 26 जनवरी 1930",
+      "कराची अधिवेशन (1931); 31 दिसंबर 1929",
+      "फैजपुर अधिवेशन (1936); 12 मार्च 1930"
+    ],
+    correct_option_index: 1,
+    explanation_en: "कांग्रेस ने 'पूर्ण स्वराज' का प्रस्ताव लाहौर अधिवेशन (1929) में पारित किया। 26 जनवरी, 1930 को रावी नदी के किनारे पहला स्वतंत्रता दिवस मनाया गया।",
+    explanation_hi: "कांग्रेस ने 'पूर्ण स्वराज' का प्रस्ताव लाहौर अधिवेशन (1929) में पारित किया। 26 जनवरी, 1930 को रावी नदी के किनारे पहला स्वतंत्रता दिवस मनाया गया।"
+  },
+  {
+    question_en: "दांडी मार्च (Dandi March) कितने किलोमीटर की पैदल यात्रा थी, और गांधीजी की गिरफ्तारी के बाद आंदोलन का नेतृत्व किसने किया?",
+    question_hi: "दांडी मार्च (Dandi March) कितने किलोमीटर की पैदल यात्रा थी, और गांधीजी की गिरफ्तारी के बाद आंदोलन का नेतृत्व किसने किया?",
+    options_en: [
+      "241 किमी; सरोजिनी नायडू",
+      "384 किमी; अब्बास तैयबजी",
+      "390 किमी; खान अब्दुल गफ्फार खान",
+      "200 किमी; जवाहरलाल नेहरू"
+    ],
+    options_hi: [
+      "241 किमी; सरोजिनी नायडू",
+      "384 किमी; अब्बास तैयबजी",
+      "390 किमी; खान अब्दुल गफ्फार खान",
+      "200 किमी; जवाहरलाल नेहरू"
+    ],
+    correct_option_index: 1,
+    explanation_en: "दांडी मार्च 384 किमी की पैदल यात्रा थी। गांधीजी की गिरफ्तारी पर नेतृत्व अब्बास तैयबजी ने संभाला।",
+    explanation_hi: "दांडी मार्च 384 किमी की पैदल यात्रा थी। गांधीजी की गिरफ्तारी पर नेतृत्व अब्बास तैयबजी ने संभाला।"
+  },
+  {
+    question_en: "द्वितीय गोलमेज सम्मेलन (1931) में महात्मा गांधी के साथ दलितों के पृथक निर्वाचन मंडल के मुद्दे पर तीखा टकराव किस नेता का हुआ था?",
+    question_hi: "द्वितीय गोलमेज सम्मेलन (1931) में महात्मा गांधी के साथ दलितों के पृथक निर्वाचन मंडल के मुद्दे पर तीखा टकराव किस नेता का हुआ था?",
+    options_en: [
+      "मोहम्मद अली जिन्ना",
+      "डॉ. बी.आर. अंबेडकर",
+      "तेज बहादुर सप्रू",
+      "सी. राजगोपालाचारी"
+    ],
+    options_hi: [
+      "मोहम्मद अली जिन्ना",
+      "डॉ. बी.आर. अंबेडकर",
+      "तेज बहादुर सप्रू",
+      "सी. राजगोपालाचारी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "द्वितीय गोलमेज सम्मेलन में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी और डॉ. बी.आर. अंबेडकर के बीच टकराव हुआ।",
+    explanation_hi: "द्वितीय गोलमेज सम्मेलन में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी और डॉ. बी.आर. अंबेडकर के बीच टकराव हुआ।"
+  },
+  {
+    question_en: "पूना समझौता (Poona Pact) 24 सितंबर 1932 को हुआ था, इसके तहत प्रांतीय विधानसभाओं में दलितों के लिए कितनी सीटें आरक्षित की गईं?",
+    question_hi: "पूना समझौता (Poona Pact) 24 सितंबर 1932 को हुआ था, इसके तहत प्रांतीय विधानसभाओं में दलितों के लिए कितनी सीटें आरक्षित की गईं?",
+    options_en: [
+      "71 सीटें",
+      "100 सीटें",
+      "147 सीटें",
+      "18% सीटें"
+    ],
+    options_hi: [
+      "71 सीटें",
+      "100 सीटें",
+      "147 सीटें",
+      "18% सीटें"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पूना समझौते के तहत, प्रांतीय विधानसभाओं में दलितों के लिए आरक्षित सीटें 71 से बढ़ाकर 147 कर दी गईं। केंद्रीय सीटों में 18% आरक्षण दिया गया।",
+    explanation_hi: "पूना समझौते के तहत, प्रांतीय विधानसभाओं में दलितों के लिए आरक्षित सीटें 71 से बढ़ाकर 147 कर दी गईं। केंद्रीय सीटों में 18% आरक्षण दिया गया।"
+  },
+  {
+    question_en: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले 1933 में किसने किया था, और किस अधिवेशन में मुस्लिम लीग ने 'द्वि-राष्ट्र सिद्धांत' (Two Nation Theory) का प्रस्ताव पारित किया?",
+    question_hi: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले 1933 में किसने किया था, और किस अधिवेशन में मुस्लिम लीग ने 'द्वि-राष्ट्र सिद्धांत' (Two Nation Theory) का प्रस्ताव पारित किया?",
+    options_en: [
+      "मोहम्मद इकबाल; कलकत्ता (1933)",
+      "चौधरी रहमत अली; लाहौर (1940)",
+      "मोहम्मद अली जिन्ना; लखनऊ (1937)",
+      "आगा खान; ढाका (1906)"
+    ],
+    options_hi: [
+      "मोहम्मद इकबाल; कलकत्ता (1933)",
+      "चौधरी रहमत अली; लाहौर (1940)",
+      "मोहम्मद अली जिन्ना; लखनऊ (1937)",
+      "आगा खान; ढाका (1906)"
+    ],
+    correct_option_index: 1,
+    explanation_en: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया। लाहौर अधिवेशन (23 मार्च 1940) में मुस्लिम लीग ने द्वि-राष्ट्र सिद्धांत का प्रस्ताव पारित किया।",
+    explanation_hi: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया। लाहौर अधिवेशन (23 मार्च 1940) में मुस्लिम लीग ने द्वि-राष्ट्र सिद्धांत का प्रस्ताव पारित किया।"
+  },
+  {
+    question_en: "व्यक्तिगत सत्याग्रह आंदोलन (Individual Satyagraha) कब शुरू हुआ, और इसे किस अन्य नाम से भी जाना जाता है?",
+    question_hi: "व्यक्तिगत सत्याग्रह आंदोलन (Individual Satyagraha) कब शुरू हुआ, और इसे किस अन्य नाम से भी जाना जाता है?",
+    options_en: [
+      "17 अक्टूबर 1940; दिल्ली चलो आंदोलन",
+      "8 अगस्त 1942; भारत छोड़ो आंदोलन",
+      "23 मार्च 1942; क्रिप्स मिशन",
+      "1 अगस्त 1920; खिलाफत आंदोलन"
+    ],
+    options_hi: [
+      "17 अक्टूबर 1940; दिल्ली चलो आंदोलन",
+      "8 अगस्त 1942; भारत छोड़ो आंदोलन",
+      "23 मार्च 1942; क्रिप्स मिशन",
+      "1 अगस्त 1920; खिलाफत आंदोलन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "व्यक्तिगत सत्याग्रह आंदोलन 17 अक्टूबर 1940 को शुरू हुआ। इसे 'दिल्ली चलो आंदोलन' के नाम से भी जाना जाता है।",
+    explanation_hi: "व्यक्तिगत सत्याग्रह आंदोलन 17 अक्टूबर 1940 को शुरू हुआ। इसे 'दिल्ली चलो आंदोलन' के नाम से भी जाना जाता है।"
+  },
+  {
+    question_en: "व्यक्तिगत सत्याग्रह (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    question_hi: "व्यक्तिगत सत्याग्रह (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    options_en: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल",
+      "विनोबा भावे और सरदार पटेल"
+    ],
+    options_hi: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल",
+      "विनोबा भावे और सरदार पटेल"
+    ],
+    correct_option_index: 1,
+    explanation_en: "प्रथम सत्याग्रही विनोबा भावे थे, और दूसरे सत्याग्रही जवाहरलाल नेहरू थे।",
+    explanation_hi: "प्रथम सत्याग्रही विनोबा भावे थे, और दूसरे सत्याग्रही जवाहरलाल नेहरू थे।"
+  },
+  {
+    question_en: "'ऑपरेशन जीरो आवर' (Operation Zero Hour) कब चलाया गया था, और इसके तहत महात्मा गांधी को कहाँ कैद किया गया?",
+    question_hi: "'ऑपरेशन जीरो आवर' (Operation Zero Hour) कब चलाया गया था, और इसके तहत महात्मा गांधी को कहाँ कैद किया गया?",
+    options_en: [
+      "9 अगस्त 1942; आगा खां पैलेस (पुणे)",
+      "8 अगस्त 1942; अहमदनगर दुर्ग",
+      "9 अगस्त 1942; अहमदनगर दुर्ग",
+      "16 अक्टूबर 1905; अंडमान जेल"
+    ],
+    options_hi: [
+      "9 अगस्त 1942; आगा खां पैलेस (पुणे)",
+      "8 अगस्त 1942; अहमदनगर दुर्ग",
+      "9 अगस्त 1942; अहमदनगर दुर्ग",
+      "16 अक्टूबर 1905; अंडमान जेल"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'ऑपरेशन जीरो आवर' 9 अगस्त 1942 को चलाया गया था। इसके तहत गांधीजी और सरोजिनी नायडू को आगा खां पैलेस (पुणे) में कैद किया गया।",
+    explanation_hi: "'ऑपरेशन जीरो आवर' 9 अगस्त 1942 को चलाया गया था। इसके तहत गांधीजी और सरोजिनी नायडू को आगा खां पैलेस (पुणे) में कैद किया गया।"
+  },
+  {
+    question_en: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    question_hi: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    options_en: [
+      "बलिया (चित्त पांडेय)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    options_hi: [
+      "बलिया (चित्त पांडेय)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भारत छोड़ो आंदोलन के दौरान सतारा में समानांतर सरकार स्थापित हुई, जिसका उल्लेख अन्य सरकारों (बलिया, तामलुक) के साथ किया गया है। सतारा की सरकार सबसे लंबे समय तक चली।",
+    explanation_hi: "भारत छोड़ो आंदोलन के दौरान सतारा में समानांतर सरकार स्थापित हुई, जिसका उल्लेख अन्य सरकारों (बलिया, तामलुक) के साथ किया गया है। सतारा की सरकार सबसे लंबे समय तक चली।"
+  },
+  {
+    question_en: "जतिन दास ने अमानवीय परिस्थितियों के विरोध में कितने दिनों की भूख हड़ताल के बाद 1929 में जेल में शहादत दी थी?",
+    question_hi: "जतिन दास ने अमानवीय परिस्थितियों के विरोध में कितने दिनों की भूख हड़ताल के बाद 1929 में जेल में शहादत दी थी?",
+    options_en: [
+      "30 दिन",
+      "45 दिन",
+      "64 दिन",
+      "100 दिन"
+    ],
+    options_hi: [
+      "30 दिन",
+      "45 दिन",
+      "64 दिन",
+      "100 दिन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जतिन दास ने अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के 64वें दिन (सितंबर 1929) शहादत दी थी।",
+    explanation_hi: "जतिन दास ने अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के 64वें दिन (सितंबर 1929) शहादत दी थी।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1943 में सिंगापुर में अस्थाई सरकार की स्थापना की थी, और उनकी महिला रेजिमेंट का नाम क्या था?",
+    question_hi: "सुभाष चंद्र बोस ने 1943 में सिंगापुर में अस्थाई सरकार की स्थापना की थी, और उनकी महिला रेजिमेंट का नाम क्या था?",
+    options_en: [
+      "आजाद रेजिमेंट",
+      "रानी लक्ष्मीबाई रेजिमेंट",
+      "झांसी की रानी रेजिमेंट",
+      "दुर्गावती रेजिमेंट"
+    ],
+    options_hi: [
+      "आजाद रेजिमेंट",
+      "रानी लक्ष्मीबाई रेजिमेंट",
+      "झांसी की रानी रेजिमेंट",
+      "दुर्गावती रेजिमेंट"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1943 में सिंगापुर में अस्थाई सरकार की स्थापना की गई। उनकी महिला रेजिमेंट का नाम 'झांसी की रानी रेजिमेंट' था।",
+    explanation_hi: "1943 में सिंगापुर में अस्थाई सरकार की स्थापना की गई। उनकी महिला रेजिमेंट का नाम 'झांसी की रानी रेजिमेंट' था।"
+  },
+  {
+    question_en: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    question_hi: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    options_en: [
+      "पैथिक लोरेंस (अध्यक्ष), ए.वी. अलेक्जेंडर, स्टैफोर्ड क्रिप्स",
+      "स्टैफोर्ड क्रिप्स (अध्यक्ष), पैथिक लोरेंस, ए.वी. अलेक्जेंडर",
+      "लॉर्ड माउंटबेटन (अध्यक्ष), स्टैफोर्ड क्रिप्स, पैथिक लोरेंस",
+      "क्लीमेंट एटली (अध्यक्ष), लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स"
+    ],
+    options_hi: [
+      "पैथिक लोरेंस (अध्यक्ष), ए.वी. अलेक्जेंडर, स्टैफोर्ड क्रिप्स",
+      "स्टैफोर्ड क्रिप्स (अध्यक्ष), पैथिक लोरेंस, ए.वी. अलेक्जेंडर",
+      "लॉर्ड माउंटबेटन (अध्यक्ष), स्टैफोर्ड क्रिप्स, पैथिक लोरेंस",
+      "क्लीमेंट एटली (अध्यक्ष), लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स"
+    ],
+    correct_option_index: 0,
+    explanation_en: "1946 के कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।",
+    explanation_hi: "1946 के कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।"
+  },
+  {
+    question_en: "महाराजा रणजीत सिंह की राजनीतिक राजधानी और धार्मिक राजधानी का सही युग्म क्या था, और 1809 की अमृतसर की संधि में किस नदी को सीमा बनाया गया था?",
+    question_hi: "महाराजा रणजीत सिंह की राजनीतिक राजधानी और धार्मिक राजधानी का सही युग्म क्या था, और 1809 की अमृतसर की संधि में किस नदी को सीमा बनाया गया था?",
+    options_en: [
+      "लाहौर (राजनीतिक), अमृतसर (धार्मिक); सिंधु नदी",
+      "अमृतसर (राजनीतिक), लाहौर (धार्मिक); रावी नदी",
+      "लाहौर (राजनीतिक), अमृतसर (धार्मिक); सतलज नदी",
+      "पटियाला (राजनीतिक), अमृतसर (धार्मिक); व्यास नदी"
+    ],
+    options_hi: [
+      "लाहौर (राजनीतिक), अमृतसर (धार्मिक); सिंधु नदी",
+      "अमृतसर (राजनीतिक), लाहौर (धार्मिक); रावी नदी",
+      "लाहौर (राजनीतिक), अमृतसर (धार्मिक); सतलज नदी",
+      "पटियाला (राजनीतिक), अमृतसर (धार्मिक); व्यास नदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रणजीत सिंह की राजनीतिक राजधानी लाहौर और धार्मिक राजधानी अमृतसर थी। अमृतसर की संधि (1809) में सतलज नदी को सीमा तय किया गया था।",
+    explanation_hi: "रणजीत सिंह की राजनीतिक राजधानी लाहौर और धार्मिक राजधानी अमृतसर थी। अमृतसर की संधि (1809) में सतलज नदी को सीमा तय किया गया था।"
+  },
+    {
+    question_en: "प्लासी के युद्ध से पहले, नवाब सिराजुद्दौला ने किस तिथि को कासिम बाज़ार की अंग्रेजी फैक्ट्री पर कब्ज़ा किया था?",
+    question_hi: "प्लासी के युद्ध से पहले, नवाब सिराजुद्दौला ने किस तिथि को कासिम बाज़ार की अंग्रेजी फैक्ट्री पर कब्ज़ा किया था?",
+    options_en: [
+      "23 जून 1757",
+      "19 जुलाई 1756",
+      "4 जून 1756",
+      "16 अक्टूबर 1756"
+    ],
+    options_hi: [
+      "23 जून 1757",
+      "19 जुलाई 1756",
+      "4 जून 1756",
+      "16 अक्टूबर 1756"
+    ],
+    correct_option_index: 2,
+    explanation_en: "युद्ध से पहले की घटनाओं में 4 जून 1756 को सिराज ने कासिम बाज़ार की अंग्रेजी फैक्ट्री जीत ली।",
+    explanation_hi: "युद्ध से पहले की घटनाओं में 4 जून 1756 को सिराज ने कासिम बाज़ार की अंग्रेजी फैक्ट्री जीत ली।"
+  },
+  {
+    question_en: "कलकत्ता जीतने के बाद सिराजुद्दौला ने उसका नाम क्या रखा था, और काल कोठरी घटना को किसने उजागर किया था?",
+    question_hi: "कलकत्ता जीतने के बाद सिराजुद्दौला ने उसका नाम क्या रखा था, और काल कोठरी घटना को किसने उजागर किया था?",
+    options_en: [
+      "मुर्शिदाबाद; रॉबर्ट क्लाइव",
+      "फैजाबाद; वाट्सन",
+      "अलीनगर; जेड हॉलवेल",
+      "फोर्ट विलियम; मीर जाफ़र"
+    ],
+    options_hi: [
+      "मुर्शिदाबाद; रॉबर्ट क्लाइव",
+      "फैजाबाद; वाट्सन",
+      "अलीनगर; जेड हॉलवेल",
+      "फोर्ट विलियम; मीर जाफ़र"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सिराज ने कलकत्ता का नया नाम 'अलीनगर' रखा। जेड हॉलवेल (J.Z. Hallwell) उन 23 लोगों में शामिल था जो काल कोठरी घटना के बाद बचे थे और जिसने इस घटना को उजागर किया।",
+    explanation_hi: "सिराज ने कलकत्ता का नया नाम 'अलीनगर' रखा। जेड हॉलवेल (J.Z. Hallwell) उन 23 लोगों में शामिल था जो काल कोठरी घटना के बाद बचे थे और जिसने इस घटना को उजागर किया।"
+  },
+  {
+    question_en: "प्लासी के युद्ध के बाद (1757-1760), बंगाल का प्रथम ब्रिटिश-नियुक्त नवाब कौन था, जिसे 'कर्नल क्लाइव का गधा' कहा गया?",
+    question_hi: "प्लासी के युद्ध के बाद (1757-1760), बंगाल का प्रथम ब्रिटिश-नियुक्त नवाब कौन था, जिसे 'कर्नल क्लाइव का गधा' कहा गया?",
+    options_en: [
+      "सिराजुद्दौला",
+      "मीर कासिम",
+      "मीर जाफ़र",
+      "शाह आलम द्वितीय"
+    ],
+    options_hi: [
+      "सिराजुद्दौला",
+      "मीर कासिम",
+      "मीर जाफ़र",
+      "शाह आलम द्वितीय"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्लासी के बाद मीर जाफ़र बंगाल का प्रथम ब्रिटिश-नियुक्त नवाब बना, जिसे 'कर्नल क्लाइव का गधा' कहा गया।",
+    explanation_hi: "प्लासी के बाद मीर जाफ़र बंगाल का प्रथम ब्रिटिश-नियुक्त नवाब बना, जिसे 'कर्नल क्लाइव का गधा' कहा गया।"
+  },
+  {
+    question_en: "बक्सर के युद्ध (1764) में अंग्रेजों ने त्रिगुट सेना को हराया था। त्रिगुट में शामिल तीन शासक कौन थे?",
+    question_hi: "बक्सर के युद्ध (1764) में अंग्रेजों ने त्रिगुट सेना को हराया था। त्रिगुट में शामिल तीन शासक कौन थे?",
+    options_en: [
+      "मीर जाफ़र, शुजाउद्दौला, शाह आलम द्वितीय",
+      "टीपू सुल्तान, हैदर अली, मीर कासिम",
+      "मीर कासिम, शुजाउद्दौला, शाह आलम द्वितीय",
+      "मीर कासिम, मीर जाफ़र, शुजाउद्दौला"
+    ],
+    options_hi: [
+      "मीर जाफ़र, शुजाउद्दौला, शाह आलम द्वितीय",
+      "टीपू सुल्तान, हैदर अली, मीर कासिम",
+      "मीर कासिम, शुजाउद्दौला, शाह आलम द्वितीय",
+      "मीर कासिम, मीर जाफ़र, शुजाउद्दौला"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बक्सर का युद्ध मीर कासिम, शुजाउद्दौला (अवध का नवाब), और शाह आलम द्वितीय (मुगल सम्राट) के त्रिगुट और ब्रिटिशों (हेक्टर मुनरो) के बीच हुआ।",
+    explanation_hi: "बक्सर का युद्ध मीर कासिम, शुजाउद्दौला (अवध का नवाब), और शाह आलम द्वितीय (मुगल सम्राट) के त्रिगुट और ब्रिटिशों (हेक्टर मुनरो) के बीच हुआ।"
+  },
+  {
+    question_en: "मीर कासिम ने अपनी राजधानी मुर्शिदाबाद से कहाँ स्थानांतरित कर दी थी, और उसने सैन्य पुनर्गठन के लिए किस आर्मीनियाई व्यक्ति का सहयोग लिया?",
+    question_hi: "मीर कासिम ने अपनी राजधानी मुर्शिदाबाद से कहाँ स्थानांतरित कर दी थी, और उसने सैन्य पुनर्गठन के लिए किस आर्मीनियाई व्यक्ति का सहयोग लिया?",
+    options_en: [
+      "कलकत्ता; जेड हॉलवेल",
+      "मुंगेर; रॉबर्ट क्लाइव",
+      "मुंगेर; गुर्गिन खां",
+      "ढाका; माणिकचंद"
+    ],
+    options_hi: [
+      "कलकत्ता; जेड हॉलवेल",
+      "मुंगेर; रॉबर्ट क्लाइव",
+      "मुंगेर; गुर्गिन खां",
+      "ढाका; माणिकचंद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "मीर कासिम ने अपनी राजधानी मुर्शिदाबाद से मुंगेर स्थानांतरित कर दी। उसने सैन्य पुनर्गठन के लिए आर्मीनियाई 'गुर्गिन खां' का सहयोग लिया।",
+    explanation_hi: "मीर कासिम ने अपनी राजधानी मुर्शिदाबाद से मुंगेर स्थानांतरित कर दी। उसने सैन्य पुनर्गठन के लिए आर्मीनियाई 'गुर्गिन खां' का सहयोग लिया।"
+  },
+  {
+    question_en: "इलाहाबाद की प्रथम संधि (1765) के तहत, मुगल सम्राट शाह आलम द्वितीय को कहाँ रखा गया, और उसे वार्षिक पेंशन के रूप में कितनी राशि मिली?",
+    question_hi: "इलाहाबाद की प्रथम संधि (1765) के तहत, मुगल सम्राट शाह आलम द्वितीय को कहाँ रखा गया, और उसे वार्षिक पेंशन के रूप में कितनी राशि मिली?",
+    options_en: [
+      "पटना; 50 लाख रुपये",
+      "मुर्शिदाबाद; 26 लाख रुपये",
+      "इलाहाबाद और कड़ा; 26 लाख रुपये",
+      "दिल्ली; 50 लाख रुपये"
+    ],
+    options_hi: [
+      "पटना; 50 लाख रुपये",
+      "मुर्शिदाबाद; 26 लाख रुपये",
+      "इलाहाबाद और कड़ा; 26 लाख रुपये",
+      "दिल्ली; 50 लाख रुपये"
+    ],
+    correct_option_index: 2,
+    explanation_en: "शाह आलम द्वितीय को इलाहाबाद और कड़ा में रखा गया। कंपनी ने उसे 26 लाख रुपये की वार्षिक पेंशन देना स्वीकार किया।",
+    explanation_hi: "शाह आलम द्वितीय को इलाहाबाद और कड़ा में रखा गया। कंपनी ने उसे 26 लाख रुपये की वार्षिक पेंशन देना स्वीकार किया।"
+  },
+  {
+    question_en: "इलाहाबाद की द्वितीय संधि (1765) के तहत, अवध के नवाब शुजाउद्दौला को अंग्रेजों को कितना जुर्माना (Penalty) देना पड़ा था?",
+    question_hi: "इलाहाबाद की द्वितीय संधि (1765) के तहत, अवध के नवाब शुजाउद्दौला को अंग्रेजों को कितना जुर्माना (Penalty) देना पड़ा था?",
+    options_en: [
+      "26 लाख रुपये",
+      "50 लाख रुपये",
+      "3 करोड़ रुपये",
+      "1 करोड़ रुपये"
+    ],
+    options_hi: [
+      "26 लाख रुपये",
+      "50 लाख रुपये",
+      "3 करोड़ रुपये",
+      "1 करोड़ रुपये"
+    ],
+    correct_option_index: 1,
+    explanation_en: "शुजाउद्दौला ने अंग्रेजों को 50 लाख रुपये का जुर्माना देना स्वीकार किया था।",
+    explanation_hi: "शुजाउद्दौला ने अंग्रेजों को 50 लाख रुपये का जुर्माना देना स्वीकार किया था।"
+  },
+  {
+    question_en: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता है, और उन्होंने किस वर्ष विदेशों (फ्रांस, तुर्की, अरब) में दूत (Embassies) स्थापित किए थे?",
+    question_hi: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता है, और उन्होंने किस वर्ष विदेशों (फ्रांस, तुर्की, अरब) में दूत (Embassies) स्थापित किए थे?",
+    options_en: [
+      "1792",
+      "1799",
+      "स्रोतों में वर्ष अज्ञात है",
+      "1780"
+    ],
+    options_hi: [
+      "1792",
+      "1799",
+      "स्रोतों में वर्ष अज्ञात है",
+      "1780"
+    ],
+    correct_option_index: 2,
+    explanation_en: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता है। उन्होंने फ्रांस, तुर्की और अरब जैसे विदेशों में दूत (Embassies) स्थापित किए थे, हालांकि स्रोतों में वर्ष अज्ञात है।",
+    explanation_hi: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता है। उन्होंने फ्रांस, तुर्की और अरब जैसे विदेशों में दूत (Embassies) स्थापित किए थे, हालांकि स्रोतों में वर्ष अज्ञात है।"
+  },
+  {
+    question_en: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला मैसूर राज्य के बाद (1799) कौन सा राज्य था?",
+    question_hi: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला मैसूर राज्य के बाद (1799) कौन सा राज्य था?",
+    options_en: [
+      "हैदराबाद (1798)",
+      "अवध (1801)",
+      "तंजौर (1799)",
+      "पेशवा (1802)"
+    ],
+    options_hi: [
+      "हैदराबाद (1798)",
+      "अवध (1801)",
+      "तंजौर (1799)",
+      "पेशवा (1802)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वेलेसली की सहायक संधि पर हैदराबाद (1798) के बाद मैसूर (1799) और फिर तंजौर (1799) ने हस्ताक्षर किए थे।",
+    explanation_hi: "वेलेसली की सहायक संधि पर हैदराबाद (1798) के बाद मैसूर (1799) और फिर तंजौर (1799) ने हस्ताक्षर किए थे।"
+  },
+  {
+    question_en: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत किस शासक ने 1713 में की थी?",
+    question_hi: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत किस शासक ने 1713 में की थी?",
+    options_en: [
+      "बाजीराव प्रथम",
+      "शाहू",
+      "शिवाजी",
+      "माधवराव"
+    ],
+    options_hi: [
+      "बाजीराव प्रथम",
+      "शाहू",
+      "शिवाजी",
+      "माधवराव"
+    ],
+    correct_option_index: 1,
+    explanation_en: "शाहू ने 1713 में नए राजा बनने के बाद पेशवा पद को वंशानुगत बना दिया था।",
+    explanation_hi: "शाहू ने 1713 में नए राजा बनने के बाद पेशवा पद को वंशानुगत बना दिया था।"
+  },
+  {
+    question_en: "मराठा संघ (Maratha Confederacy) का निर्माण किस पेशवा ने किया, और किस पेशवा के कार्यकाल में पानीपत का तृतीय युद्ध हुआ?",
+    question_hi: "मराठा संघ (Maratha Confederacy) का निर्माण किस पेशवा ने किया, और किस पेशवा के कार्यकाल में पानीपत का तृतीय युद्ध हुआ?",
+    options_en: [
+      "बालाजी विश्वनाथ; बाजीराव प्रथम",
+      "बाजीराव प्रथम; बालाजी बाजीराव",
+      "बालाजी बाजीराव; माधवराव",
+      "माधवराव; बाजीराव द्वितीय"
+    ],
+    options_hi: [
+      "बालाजी विश्वनाथ; बाजीराव प्रथम",
+      "बाजीराव प्रथम; बालाजी बाजीराव",
+      "बालाजी बाजीराव; माधवराव",
+      "माधवराव; बाजीराव द्वितीय"
+    ],
+    correct_option_index: 1,
+    explanation_en: "मराठा संघ का निर्माण बाजीराव प्रथम ने किया। पानीपत का तृतीय युद्ध बालाजी बाजीराव के कार्यकाल में हुआ था।",
+    explanation_hi: "मराठा संघ का निर्माण बाजीराव प्रथम ने किया। पानीपत का तृतीय युद्ध बालाजी बाजीराव के कार्यकाल में हुआ था।"
+  },
+  {
+    question_en: "पानीपत के तृतीय युद्ध (1761) में मराठा सेना का नेतृत्व सदाशिव राव भाऊ ने किया था। इस युद्ध के सदमे के कारण किस पेशवा की मृत्यु हुई थी?",
+    question_hi: "पानीपत के तृतीय युद्ध (1761) में मराठा सेना का नेतृत्व सदाशिव राव भाऊ ने किया था। इस युद्ध के सदमे के कारण किस पेशवा की मृत्यु हुई थी?",
+    options_en: [
+      "बाजीराव प्रथम",
+      "बालाजी बाजीराव",
+      "माधव नारायण राव",
+      "बाजीराव द्वितीय"
+    ],
+    options_hi: [
+      "बाजीराव प्रथम",
+      "बालाजी बाजीराव",
+      "माधव नारायण राव",
+      "बाजीराव द्वितीय"
+    ],
+    correct_option_index: 1,
+    explanation_en: "मराठा हार के सदमे के कारण पेशवा बालाजी बाजीराव की मृत्यु हो गई।",
+    explanation_hi: "मराठा हार के सदमे के कारण पेशवा बालाजी बाजीराव की मृत्यु हो गई।"
+  },
+  {
+    question_en: "प्रथम आंग्ल-मराठा युद्ध (1775-1782) किस संधि के साथ समाप्त हुआ, और इस युद्ध का प्रमुख कारण क्या था?",
+    question_hi: "प्रथम आंग्ल-मराठा युद्ध (1775-1782) किस संधि के साथ समाप्त हुआ, और इस युद्ध का प्रमुख कारण क्या था?",
+    options_en: [
+      "बेसिन की संधि; पेशवा का अपमान",
+      "मंगलौर की संधि; हैदर अली का हस्तक्षेप",
+      "सालबाई की संधि; रघुनाथ राव की पेशवा बनने की इच्छा",
+      "श्रीरंगपट्टनम की संधि; मैसूर का आक्रमण"
+    ],
+    options_hi: [
+      "बेसिन की संधि; पेशवा का अपमान",
+      "मंगलौर की संधि; हैदर अली का हस्तक्षेप",
+      "सालबाई की संधि; रघुनाथ राव की पेशवा बनने की इच्छा",
+      "श्रीरंगपट्टनम की संधि; मैसूर का आक्रमण"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम आंग्ल-मराठा युद्ध सालबाई की संधि (1782) द्वारा समाप्त हुआ। मुख्य कारण रघुनाथ राव द्वारा पेशवा बनने की इच्छा थी, जिसके लिए उसने अंग्रेजों से मदद ली।",
+    explanation_hi: "प्रथम आंग्ल-मराठा युद्ध सालबाई की संधि (1782) द्वारा समाप्त हुआ। मुख्य कारण रघुनाथ राव द्वारा पेशवा बनने की इच्छा थी, जिसके लिए उसने अंग्रेजों से मदद ली।"
+  },
+  {
+    question_en: "महाराजा रणजीत सिंह ने किस मिसल (Misl) में जन्म लिया था, और उनकी धार्मिक राजधानी कहाँ थी?",
+    question_hi: "महाराजा रणजीत सिंह ने किस मिसल (Misl) में जन्म लिया था, और उनकी धार्मिक राजधानी कहाँ थी?",
+    options_en: [
+      "आहलुवालिया मिसल; लाहौर",
+      "फूलकिया मिसल; पटियाला",
+      "सुकरचकिया मिसल; अमृतसर",
+      "भोंसले मिसल; लाहौर"
+    ],
+    options_hi: [
+      "आहलुवालिया मिसल; लाहौर",
+      "फूलकिया मिसल; पटियाला",
+      "सुकरचकिया मिसल; अमृतसर",
+      "भोंसले मिसल; लाहौर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रणजीत सिंह का जन्म 1780 में सुकरचकिया मिसल में हुआ था। उनकी धार्मिक राजधानी अमृतसर थी।",
+    explanation_hi: "रणजीत सिंह का जन्म 1780 में सुकरचकिया मिसल में हुआ था। उनकी धार्मिक राजधानी अमृतसर थी।"
+  },
+  {
+    question_en: "1809 की अमृतसर की संधि में, अंग्रेजों और रणजीत सिंह के बीच किस नदी को सीमा रेखा के रूप में तय किया गया था?",
+    question_hi: "1809 की अमृतसर की संधि में, अंग्रेजों और रणजीत सिंह के बीच किस नदी को सीमा रेखा के रूप में तय किया गया था?",
+    options_en: [
+      "रावी नदी",
+      "झेलम नदी",
+      "सतलज नदी",
+      "चिनाब नदी"
+    ],
+    options_hi: [
+      "रावी नदी",
+      "झेलम नदी",
+      "सतलज नदी",
+      "चिनाब नदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अमृतसर की संधि (1809) ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया था।",
+    explanation_hi: "अमृतसर की संधि (1809) ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया था।"
+  },
+  {
+    question_en: "प्रथम आंग्ल-सिख युद्ध (1845-46) के दौरान ब्रिटिश गवर्नर-जनरल कौन थे?",
+    question_hi: "प्रथम आंग्ल-सिख युद्ध (1845-46) के दौरान ब्रिटिश गवर्नर-जनरल कौन थे?",
+    options_en: [
+      "लॉर्ड डलहौजी",
+      "लॉर्ड वेलेसली",
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड कैनिंग"
+    ],
+    options_hi: [
+      "लॉर्ड डलहौजी",
+      "लॉर्ड वेलेसली",
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड कैनिंग"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम आंग्ल-सिख युद्ध के समय ब्रिटिश गवर्नर-जनरल लॉर्ड हार्डिंग थे।",
+    explanation_hi: "प्रथम आंग्ल-सिख युद्ध के समय ब्रिटिश गवर्नर-जनरल लॉर्ड हार्डिंग थे।"
+  },
+  {
+    question_en: "लाहौर की संधि (मार्च 1846) के तहत, सिखों को जुर्माने के रूप में 1.5 करोड़ रुपये देने थे, जिसमें से 1 करोड़ रुपये के बदले कौन सा क्षेत्र बेचा गया?",
+    question_hi: "लाहौर की संधि (मार्च 1846) के तहत, सिखों को जुर्माने के रूप में 1.5 करोड़ रुपये देने थे, जिसमें से 1 करोड़ रुपये के बदले कौन सा क्षेत्र बेचा गया?",
+    options_en: [
+      "जालंधर दोआब",
+      "मुल्तान",
+      "कश्मीर क्षेत्र",
+      "पेशावर"
+    ],
+    options_hi: [
+      "जालंधर दोआब",
+      "मुल्तान",
+      "कश्मीर क्षेत्र",
+      "पेशावर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1.5 करोड़ रुपये के भुगतान में से 1 करोड़ रुपये के बदले कश्मीर क्षेत्र बेचा गया था।",
+    explanation_hi: "1.5 करोड़ रुपये के भुगतान में से 1 करोड़ रुपये के बदले कश्मीर क्षेत्र बेचा गया था।"
+  },
+  {
+    question_en: "लॉर्ड डलहौजी के 'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत, कौन सा राज्य 1850 में विलय किया गया था?",
+    question_hi: "लॉर्ड डलहौजी के 'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत, कौन सा राज्य 1850 में विलय किया गया था?",
+    options_en: [
+      "सतारा",
+      "झांसी",
+      "बघाट",
+      "नागपुर"
+    ],
+    options_hi: [
+      "सतारा",
+      "झांसी",
+      "बघाट",
+      "नागपुर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डलहौजी ने इस सिद्धांत के तहत 1848 में सतारा, 1849 में जैतपुर, 1849 में संबलपुर और 1850 में बघाट का विलय किया।",
+    explanation_hi: "डलहौजी ने इस सिद्धांत के तहत 1848 में सतारा, 1849 में जैतपुर, 1849 में संबलपुर और 1850 में बघाट का विलय किया।"
+  },
+  {
+    question_en: "भारत में पहली टेलीग्राफ (तार) सेवा 1853 में कहाँ से कहाँ तक शुरू की गई थी?",
+    question_hi: "भारत में पहली टेलीग्राफ (तार) सेवा 1853 में कहाँ से कहाँ तक शुरू की गई थी?",
+    options_en: [
+      "बॉम्बे से ठाणे",
+      "कलकत्ता से बॉम्बे",
+      "कलकत्ता से आगरा",
+      "बॉम्बे से पूना"
+    ],
+    options_hi: [
+      "बॉम्बे से ठाणे",
+      "कलकत्ता से बॉम्बे",
+      "कलकत्ता से आगरा",
+      "बॉम्बे से पूना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डलहौजी के समय में पहली तार सेवा 1853 में कलकत्ता से आगरा तक शुरू हुई।",
+    explanation_hi: "डलहौजी के समय में पहली तार सेवा 1853 में कलकत्ता से आगरा तक शुरू हुई।"
+  },
+  {
+    question_en: "भू-राजस्व प्रणाली में, 'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत किसने की, और इसे किसने समाप्त किया?",
+    question_hi: "भू-राजस्व प्रणाली में, 'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत किसने की, और इसे किसने समाप्त किया?",
+    options_en: [
+      "थॉमस मुनरो; विलियम बेंटिक",
+      "हॉल्ट मैकेंजी; कॉर्नवालिस",
+      "वॉरेन हेस्टिंग्स; लॉर्ड कॉर्नवालिस",
+      "लॉर्ड डलहौजी; वॉरेन हेस्टिंग्स"
+    ],
+    options_hi: [
+      "थॉमस मुनरो; विलियम बेंटिक",
+      "हॉल्ट मैकेंजी; कॉर्नवालिस",
+      "वॉरेन हेस्टिंग्स; लॉर्ड कॉर्नवालिस",
+      "लॉर्ड डलहौजी; वॉरेन हेस्टिंग्स"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) ने की थी, और लॉर्ड कॉर्नवालिस ने इसका अंत किया।",
+    explanation_hi: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) ने की थी, और लॉर्ड कॉर्नवालिस ने इसका अंत किया।"
+  },
+  {
+    question_en: "'स्थायी बंदोबस्त' (Permanent Settlement) ब्रिटिश भारत के 19% हिस्से पर लागू था। 'रैयतवाड़ी बंदोबस्त' का प्रारंभिक प्रयोग 1792 में कहाँ किया गया था?",
+    question_hi: "'स्थायी बंदोबस्त' (Permanent Settlement) ब्रिटिश भारत के 19% हिस्से पर लागू था। 'रैयतवाड़ी बंदोबस्त' का प्रारंभिक प्रयोग 1792 में कहाँ किया गया था?",
+    options_en: [
+      "बंगाल",
+      "अवध",
+      "तमिलनाडु के बारामहल जिले में",
+      "मध्य भारत"
+    ],
+    options_hi: [
+      "बंगाल",
+      "अवध",
+      "तमिलनाडु के बारामहल जिले में",
+      "मध्य भारत"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रैयतवाड़ी बंदोबस्त का प्रारंभिक प्रयोग 1792 ईस्वी में तमिलनाडु के बारामहल जिले में अलेक्जेंडर रीड द्वारा किया गया था।",
+    explanation_hi: "रैयतवाड़ी बंदोबस्त का प्रारंभिक प्रयोग 1792 ईस्वी में तमिलनाडु के बारामहल जिले में अलेक्जेंडर रीड द्वारा किया गया था।"
+  },
+  {
+    question_en: "'महालवाड़ी बंदोबस्त' (Mahalwari Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू था, और इसे किसके कार्यकाल में पारित किया गया?",
+    question_hi: "'महालवाड़ी बंदोबस्त' (Mahalwari Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू था, और इसे किसके कार्यकाल में पारित किया गया?",
+    options_en: [
+      "19%; कॉर्नवालिस",
+      "51%; थॉमस मुनरो",
+      "30%; लॉर्ड विलियम बेंटिक",
+      "49%; हॉल्ट मैकेंजी"
+    ],
+    options_hi: [
+      "19%; कॉर्नवालिस",
+      "51%; थॉमस मुनरो",
+      "30%; लॉर्ड विलियम बेंटिक",
+      "49%; हॉल्ट मैकेंजी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "महालवाड़ी बंदोबस्त 30 प्रतिशत हिस्से पर लागू था। इसे लॉर्ड विलियम बेंटिक ने 1833 में पारित किया।",
+    explanation_hi: "महालवाड़ी बंदोबस्त 30 प्रतिशत हिस्से पर लागू था। इसे लॉर्ड विलियम बेंटिक ने 1833 में पारित किया।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय की किस पत्रिका का नाम फारसी भाषा में था?",
+    question_hi: "राजा राम मोहन रॉय की किस पत्रिका का नाम फारसी भाषा में था?",
+    options_en: [
+      "संवाद कौमुदी",
+      "बंगदूत",
+      "मिरात-उल-अखबार",
+      "तत्त्वबोधिनी"
+    ],
+    options_hi: [
+      "संवाद कौमुदी",
+      "बंगदूत",
+      "मिरात-उल-अखबार",
+      "तत्त्वबोधिनी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उनकी पत्रिकाएँ थीं: संवाद कौमुदी (बंगाली), मिरात-उल-अखबार (फारसी), और बंगदूत (हिन्दी)।",
+    explanation_hi: "उनकी पत्रिकाएँ थीं: संवाद कौमुदी (बंगाली), मिरात-उल-अखबार (फारसी), और बंगदूत (हिन्दी)।"
+  },
+  {
+    question_en: "महर्षि देवेन्द्र नाथ टैगोर ने 'तत्त्वबोधिनी सभा' की स्थापना कब की, और वे किस वर्ष ब्रह्म समाज में शामिल हुए?",
+    question_hi: "महर्षि देवेन्द्र नाथ टैगोर ने 'तत्त्वबोधिनी सभा' की स्थापना कब की, और वे किस वर्ष ब्रह्म समाज में शामिल हुए?",
+    options_en: [
+      "1833; 1839",
+      "1839; 1842",
+      "1842; 1866",
+      "1828; 1815"
+    ],
+    options_hi: [
+      "1833; 1839",
+      "1839; 1842",
+      "1842; 1866",
+      "1828; 1815"
+    ],
+    correct_option_index: 1,
+    explanation_en: "उन्होंने 1839 में तत्त्वबोधिनी सभा की स्थापना की और 1842 में ब्रह्म समाज में शामिल हुए।",
+    explanation_hi: "उन्होंने 1839 में तत्त्वबोधिनी सभा की स्थापना की और 1842 में ब्रह्म समाज में शामिल हुए।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन (1866) होने पर, देवेन्द्र नाथ टैगोर का समाज किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन (1866) होने पर, देवेन्द्र नाथ टैगोर का समाज किस नाम से जाना गया?",
+    options_en: [
+      "भारतीय ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "आदि ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    options_hi: [
+      "भारतीय ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "आदि ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1866 में विभाजन के बाद, देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।",
+    explanation_hi: "1866 में विभाजन के बाद, देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "'विधवा पुनर्विवाह अधिनियम' (Widow Remarriage Act) किस गवर्नर जनरल के कार्यकाल के दौरान पारित हुआ था?",
+    question_hi: "'विधवा पुनर्विवाह अधिनियम' (Widow Remarriage Act) किस गवर्नर जनरल के कार्यकाल के दौरान पारित हुआ था?",
+    options_en: [
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग"
+    ],
+    options_hi: [
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग"
+    ],
+    correct_option_index: 2,
+    explanation_en: "विधवा पुनर्विवाह अधिनियम लॉर्ड डलहौजी (1848-56) के कार्यकाल के दौरान पारित हुआ था।",
+    explanation_hi: "विधवा पुनर्विवाह अधिनियम लॉर्ड डलहौजी (1848-56) के कार्यकाल के दौरान पारित हुआ था।"
+  },
+  {
+    question_en: "सम्मति आयु अधिनियम (1891) ने किस आयु से कम की कन्याओं के विवाह पर रोक लगाई थी?",
+    question_hi: "सम्मति आयु अधिनियम (1891) ने किस आयु से कम की कन्याओं के विवाह पर रोक लगाई थी?",
+    options_en: [
+      "10 वर्ष",
+      "12 वर्ष",
+      "14 वर्ष",
+      "16 वर्ष"
+    ],
+    options_hi: [
+      "10 वर्ष",
+      "12 वर्ष",
+      "14 वर्ष",
+      "16 वर्ष"
+    ],
+    correct_option_index: 1,
+    explanation_en: "इस अधिनियम ने 12 वर्ष से कम आयु की कन्याओं के विवाह पर रोक लगा दी थी।",
+    explanation_hi: "इस अधिनियम ने 12 वर्ष से कम आयु की कन्याओं के विवाह पर रोक लगा दी थी।"
+  },
+  {
+    question_en: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी, और उनका प्रसिद्ध प्रकाशन कौन सा है?",
+    question_hi: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी, और उनका प्रसिद्ध प्रकाशन कौन सा है?",
+    options_en: [
+      "रवींद्रनाथ टैगोर; गीता रहस्य",
+      "महात्मा गांधी; यंग इंडिया",
+      "विट्ठलराव वाडेकर; सार्वजनिक सत्यधर्म",
+      "महादेव गोविंद रानाडे; प्रबुद्ध भारत"
+    ],
+    options_hi: [
+      "रवींद्रनाथ टैगोर; गीता रहस्य",
+      "महात्मा गांधी; यंग इंडिया",
+      "विट्ठलराव वाडेकर; सार्वजनिक सत्यधर्म",
+      "महादेव गोविंद रानाडे; प्रबुद्ध भारत"
+    ],
+    correct_option_index: 2,
+    explanation_en: "फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई। उनके प्रकाशन 'सार्वजनिक सत्यधर्म' और 'किसान का कोड़ा' थे।",
+    explanation_hi: "फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई। उनके प्रकाशन 'सार्वजनिक सत्यधर्म' और 'किसान का कोड़ा' थे।"
+  },
+  {
+    question_en: "यंग बंगाल आंदोलन के नेता हेनरी विवियन डेरोजियो किस दैनिक समाचार पत्र का संपादन करते थे?",
+    question_hi: "यंग बंगाल आंदोलन के नेता हेनरी विवियन डेरोजियो किस दैनिक समाचार पत्र का संपादन करते थे?",
+    options_en: [
+      "संवाद कौमुदी",
+      "तत्त्वबोधिनी",
+      "ईस्ट इंडिया",
+      "इंडियन ओपिनियन"
+    ],
+    options_hi: [
+      "संवाद कौमुदी",
+      "तत्त्वबोधिनी",
+      "ईस्ट इंडिया",
+      "इंडियन ओपिनियन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डेरोजियो ने 'ईस्ट इंडिया' नामक एक दैनिक समाचार पत्र का संपादन किया था।",
+    explanation_hi: "डेरोजियो ने 'ईस्ट इंडिया' नामक एक दैनिक समाचार पत्र का संपादन किया था।"
+  },
+  {
+    question_en: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    question_hi: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    options_en: [
+      "लंदन; 1885",
+      "अड्यार; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "बंबई; 1885"
+    ],
+    options_hi: [
+      "लंदन; 1885",
+      "अड्यार; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "बंबई; 1885"
+    ],
+    correct_option_index: 2,
+    explanation_en: "थियोसोफिकल सोसायटी की स्थापना 1875 ईस्वी में न्यूयॉर्क, यू.एस.ए. में हुई थी। इसका मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।",
+    explanation_hi: "थियोसोफिकल सोसायटी की स्थापना 1875 ईस्वी में न्यूयॉर्क, यू.एस.ए. में हुई थी। इसका मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।"
+  },
+  {
+    question_en: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    question_hi: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    options_en: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    options_hi: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा शुरू किया गया था और यह पश्चिमी प्रभावों का विरोध करता था।",
+    explanation_hi: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा शुरू किया गया था और यह पश्चिमी प्रभावों का विरोध करता था।"
+  },
+  {
+    question_en: "सर सैय्यद अहमद खान द्वारा 1875 में स्थापित 'मोहम्मडन एंग्लो ओरिएंटल कॉलेज' ने किस पत्रिका को शुरू किया था?",
+    question_hi: "सर सैय्यद अहमद खान द्वारा 1875 में स्थापित 'मोहम्मडन एंग्लो ओरिएंटल कॉलेज' ने किस पत्रिका को शुरू किया था?",
+    options_en: [
+      "सत्यार्थ प्रकाश",
+      "वंदे मातरम्‌",
+      "तहजीब-उल-अखलाक",
+      "तत्त्वबोधिनी"
+    ],
+    options_hi: [
+      "सत्यार्थ प्रकाश",
+      "वंदे मातरम्‌",
+      "तहजीब-उल-अखलाक",
+      "तत्त्वबोधिनी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सर सैय्यद अहमद खान ने 'तहजीब-उल-अखलाक' नामक पत्रिका भी शुरू की थी।",
+    explanation_hi: "सर सैय्यद अहमद खान ने 'तहजीब-उल-अखलाक' नामक पत्रिका भी शुरू की थी।"
+  },
+  {
+    question_en: "1857 के विद्रोह के दौरान, सैन्य कारणों में 1856 में किस अधिनियम का पारित होना शामिल था, जिसने उच्च जाति के हिंदू सिपाहियों को धार्मिक आपत्ति के कारण नाराज किया?",
+    question_hi: "1857 के विद्रोह के दौरान, सैन्य कारणों में 1856 में किस अधिनियम का पारित होना शामिल था, जिसने उच्च जाति के हिंदू सिपाहियों को धार्मिक आपत्ति के कारण नाराज किया?",
+    options_en: [
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "डॉक्ट्रिन ऑफ लैप्स"
+    ],
+    options_hi: [
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "डॉक्ट्रिन ऑफ लैप्स"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1856 में लॉर्ड कैनिंग के समय पारित जनरल सर्विस एनलिस्टमेंट एक्ट उच्च जाति के हिंदू सिपाहियों की धार्मिक आपत्तियों का कारण बना।",
+    explanation_hi: "1856 में लॉर्ड कैनिंग के समय पारित जनरल सर्विस एनलिस्टमेंट एक्ट उच्च जाति के हिंदू सिपाहियों की धार्मिक आपत्तियों का कारण बना।"
+  },
+  {
+    question_en: "1857 के विद्रोह में कानपुर और बरेली, दोनों केंद्रों के विद्रोह को किस ब्रिटिश कमांडर ने दबाया था?",
+    question_hi: "1857 के विद्रोह में कानपुर और बरेली, दोनों केंद्रों के विद्रोह को किस ब्रिटिश कमांडर ने दबाया था?",
+    options_en: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    options_hi: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कानपुर और बरेली दोनों केंद्रों के विद्रोह को कॉलिन कैंपबेल ने दबाया था।",
+    explanation_hi: "कानपुर और बरेली दोनों केंद्रों के विद्रोह को कॉलिन कैंपबेल ने दबाया था।"
+  },
+  {
+    question_en: "1857 के विद्रोह के नायक तात्या टोपे को 1859 में कहाँ फाँसी दी गई थी, और नाना साहब कहाँ चले गए थे?",
+    question_hi: "1857 के विद्रोह के नायक तात्या टोपे को 1859 में कहाँ फाँसी दी गई थी, और नाना साहब कहाँ चले गए थे?",
+    options_en: [
+      "झांसी; बर्मा",
+      "बिठूर; कानपुर",
+      "शिवपुरी; नेपाल",
+      "ग्वालियर; इलाहाबाद"
+    ],
+    options_hi: [
+      "झांसी; बर्मा",
+      "बिठूर; कानपुर",
+      "शिवपुरी; नेपाल",
+      "ग्वालियर; इलाहाबाद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "तात्या टोपे को शिवपुरी में 8 अप्रैल, 1859 को फाँसी दी गई। नाना साहब अंग्रेजों से बचने के लिए नेपाल चले गए थे।",
+    explanation_hi: "तात्या टोपे को शिवपुरी में 8 अप्रैल, 1859 को फाँसी दी गई। नाना साहब अंग्रेजों से बचने के लिए नेपाल चले गए थे।"
+  },
+  {
+    question_en: "कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, और इसकी स्थापना किसने की थी?",
+    question_hi: "कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, और इसकी स्थापना किसने की थी?",
+    options_en: [
+      "इंडियन एसोसिएशन; सुरेंद्र नाथ बनर्जी",
+      "पूना सार्वजनिक सभा; एम.जी. रानाडे",
+      "द लैंडहोल्डर्स सोसाइटी; द्वारकानाथ टैगोर",
+      "ईस्ट इंडिया एसोसिएशन; दादा भाई नौरोजी"
+    ],
+    options_hi: [
+      "इंडियन एसोसिएशन; सुरेंद्र नाथ बनर्जी",
+      "पूना सार्वजनिक सभा; एम.जी. रानाडे",
+      "द लैंडहोल्डर्स सोसाइटी; द्वारकानाथ टैगोर",
+      "ईस्ट इंडिया एसोसिएशन; दादा भाई नौरोजी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था, जिसकी स्थापना द्वारकानाथ टैगोर ने 1838 में की थी।",
+    explanation_hi: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था, जिसकी स्थापना द्वारकानाथ टैगोर ने 1838 में की थी।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के समय (1885) भारत के वायसराय कौन थे?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के समय (1885) भारत के वायसराय कौन थे?",
+    options_en: [
+      "लॉर्ड लिटन",
+      "लॉर्ड रिपन",
+      "लॉर्ड डफरिन",
+      "लॉर्ड कर्जन"
+    ],
+    options_hi: [
+      "लॉर्ड लिटन",
+      "लॉर्ड रिपन",
+      "लॉर्ड डफरिन",
+      "लॉर्ड कर्जन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "INC की स्थापना (1885) के समय वायसराय लॉर्ड डफरिन थे।",
+    explanation_hi: "INC की स्थापना (1885) के समय वायसराय लॉर्ड डफरिन थे।"
+  },
+  {
+    question_en: "दादा भाई नौरोजी ने अपना प्रसिद्ध 'धन-निष्कासन सिद्धांत' (Drain of Wealth theory) किस पुस्तक में प्रकाशित किया था?",
+    question_hi: "दादा भाई नौरोजी ने अपना प्रसिद्ध 'धन-निष्कासन सिद्धांत' (Drain of Wealth theory) किस पुस्तक में प्रकाशित किया था?",
+    options_en: [
+      "यंग इंडिया",
+      "गीता रहस्य",
+      "पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया",
+      "संवाद कौमुदी"
+    ],
+    options_hi: [
+      "यंग इंडिया",
+      "गीता रहस्य",
+      "पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया",
+      "संवाद कौमुदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्होंने यह सिद्धांत 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' (1901) में प्रकाशित किया था।",
+    explanation_hi: "उन्होंने यह सिद्धांत 'पॉवर्टी एंड अन-ब्रिटिश रूल इन इंडिया' (1901) में प्रकाशित किया था।"
+  },
+  {
+    question_en: "किस उदारवादी नेता को 'कर्मयोगी' का दर्जा डॉ. एस. राधाकृष्णन ने दिया था?",
+    question_hi: "किस उदारवादी नेता को 'कर्मयोगी' का दर्जा डॉ. एस. राधाकृष्णन ने दिया था?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "दादा भाई नौरोजी",
+      "मदन मोहन मालवीय",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "दादा भाई नौरोजी",
+      "मदन मोहन मालवीय",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डॉ. एस. राधाकृष्णन ने मदन मोहन मालवीय को 'कर्मयोगी' का दर्जा दिया था।",
+    explanation_hi: "डॉ. एस. राधाकृष्णन ने मदन मोहन मालवीय को 'कर्मयोगी' का दर्जा दिया था।"
+  },
+  {
+    question_en: "बाल गंगाधर तिलक द्वारा शुरू की गई 'होम रूल लीग' (1916) का प्रसार क्षेत्र क्या था?",
+    question_hi: "बाल गंगाधर तिलक द्वारा शुरू की गई 'होम रूल लीग' (1916) का प्रसार क्षेत्र क्या था?",
+    options_en: [
+      "बंबई शहर और मद्रास",
+      "संपूर्ण भारत",
+      "कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार",
+      "बंगाल, बिहार और उड़ीसा"
+    ],
+    options_hi: [
+      "बंबई शहर और मद्रास",
+      "संपूर्ण भारत",
+      "कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार",
+      "बंगाल, बिहार और उड़ीसा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "तिलक की लीग का प्रसार क्षेत्र कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार था।",
+    explanation_hi: "तिलक की लीग का प्रसार क्षेत्र कर्नाटक, महाराष्ट्र (बंबई छोड़कर), मध्य प्रांत और बरार था।"
+  },
+  {
+    question_en: "स्वदेशी आंदोलन की शुरुआत (1905) किस तिथि को हुई, और विभाजन लागू होने की तिथि क्या थी?",
+    question_hi: "स्वदेशी आंदोलन की शुरुआत (1905) किस तिथि को हुई, और विभाजन लागू होने की तिथि क्या थी?",
+    options_en: [
+      "19 जुलाई 1905; 7 अगस्त 1905",
+      "16 अक्टूबर 1905; 19 जुलाई 1905",
+      "7 अगस्त 1905; 16 अक्टूबर 1905",
+      "19 जुलाई 1905; 16 अक्टूबर 1905"
+    ],
+    options_hi: [
+      "19 जुलाई 1905; 7 अगस्त 1905",
+      "16 अक्टूबर 1905; 19 जुलाई 1905",
+      "7 अगस्त 1905; 16 अक्टूबर 1905",
+      "19 जुलाई 1905; 16 अक्टूबर 1905"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वदेशी आंदोलन की शुरुआत 7 अगस्त, 1905 को हुई। विभाजन 16 अक्टूबर, 1905 को लागू हुआ।",
+    explanation_hi: "स्वदेशी आंदोलन की शुरुआत 7 अगस्त, 1905 को हुई। विभाजन 16 अक्टूबर, 1905 को लागू हुआ।"
+  },
+  {
+    question_en: "1907 के सूरत विभाजन के समय कांग्रेस के उग्रवादी दल का लक्ष्य क्या था?",
+    question_hi: "1907 के सूरत विभाजन के समय कांग्रेस के उग्रवादी दल का लक्ष्य क्या था?",
+    options_en: [
+      "संवैधानिक तरीकों से स्वराज्य",
+      "भारत विभाजन तक विरोध",
+      "स्वराज (बंगाल के अंदर और बाहर दोनों जगह विरोध)",
+      "केवल नरम दल की नीतियों का समर्थन"
+    ],
+    options_hi: [
+      "संवैधानिक तरीकों से स्वराज्य",
+      "भारत विभाजन तक विरोध",
+      "स्वराज (बंगाल के अंदर और बाहर दोनों जगह विरोध)",
+      "केवल नरम दल की नीतियों का समर्थन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उग्रवादियों का लक्ष्य स्वराज था, और वे विरोध को बंगाल के अंदर और बाहर दोनों जगह फैलाना चाहते थे।",
+    explanation_hi: "उग्रवादियों का लक्ष्य स्वराज था, और वे विरोध को बंगाल के अंदर और बाहर दोनों जगह फैलाना चाहते थे।"
+  },
+  {
+    question_en: "1912 के दिल्ली षड्यंत्र केस में किस ब्रिटिश अधिकारी पर हमला किया गया था?",
+    question_hi: "1912 के दिल्ली षड्यंत्र केस में किस ब्रिटिश अधिकारी पर हमला किया गया था?",
+    options_en: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "लॉर्ड हार्डिंग",
+      "डब्ल्यू.सी. रैंड"
+    ],
+    options_hi: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "लॉर्ड हार्डिंग",
+      "डब्ल्यू.सी. रैंड"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दिल्ली षड्यंत्र केस (1912) में लॉर्ड हार्डिंग पर हमला किया गया था, जिसमें वह बुरी तरह घायल हुए।",
+    explanation_hi: "दिल्ली षड्यंत्र केस (1912) में लॉर्ड हार्डिंग पर हमला किया गया था, जिसमें वह बुरी तरह घायल हुए।"
+  },
+  {
+    question_en: "काकोरी षड्यंत्र केस (1925) में किन नेताओं को फाँसी दी गई?",
+    question_hi: "काकोरी षड्यंत्र केस (1925) में किन नेताओं को फाँसी दी गई?",
+    options_en: [
+      "भगत सिंह, राजगुरु, सुखदेव",
+      "खुदीराम बोस, प्रफुल्ल चाकी",
+      "रामप्रसाद बिस्मिल, राजेन्द्र लाहिडी, रोशन सिंह, अशफाकउल्लाह खां",
+      "चंद्रशेखर आजाद, जतिन दास"
+    ],
+    options_hi: [
+      "भगत सिंह, राजगुरु, सुखदेव",
+      "खुदीराम बोस, प्रफुल्ल चाकी",
+      "रामप्रसाद बिस्मिल, राजेन्द्र लाहिडी, रोशन सिंह, अशफाकउल्लाह खां",
+      "चंद्रशेखर आजाद, जतिन दास"
+    ],
+    correct_option_index: 2,
+    explanation_en: "काकोरी षड्यंत्र केस के तहत रामप्रसाद बिस्मिल, राजेन्द्र लाहिडी, रोशन सिंह, अशफाकउल्लाह खां को फाँसी दी गई।",
+    explanation_hi: "काकोरी षड्यंत्र केस के तहत रामप्रसाद बिस्मिल, राजेन्द्र लाहिडी, रोशन सिंह, अशफाकउल्लाह खां को फाँसी दी गई।"
+  },
+  {
+    question_en: "किस क्रांतिकारी को विदेशी धरती पर पहली बार (1907, स्टुटगार्ट, जर्मनी) तिरंगा फहराने का गौरव प्राप्त है?",
+    question_hi: "किस क्रांतिकारी को विदेशी धरती पर पहली बार (1907, स्टुटगार्ट, जर्मनी) तिरंगा फहराने का गौरव प्राप्त है?",
+    options_en: [
+      "एनी बेसेंट",
+      "सरोजिनी नायडू",
+      "भीकाजी रुस्तम कामा",
+      "मैडम ब्लावात्स्की"
+    ],
+    options_hi: [
+      "एनी बेसेंट",
+      "सरोजिनी नायडू",
+      "भीकाजी रुस्तम कामा",
+      "मैडम ब्लावात्स्की"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भीकाजी रुस्तम कामा को 22 अगस्त 1907 को जर्मनी में विदेशी धरती पर पहली बार तिरंगा फहराने का गौरव प्राप्त है।",
+    explanation_hi: "भीकाजी रुस्तम कामा को 22 अगस्त 1907 को जर्मनी में विदेशी धरती पर पहली बार तिरंगा फहराने का गौरव प्राप्त है।"
+  },
+  {
+    question_en: "गांधीजी के किस सत्याग्रह की सफलता पर रवींद्रनाथ टैगोर ने उन्हें 'महात्मा' की उपाधि दी थी?",
+    question_hi: "गांधीजी के किस सत्याग्रह की सफलता पर रवींद्रनाथ टैगोर ने उन्हें 'महात्मा' की उपाधि दी थी?",
+    options_en: [
+      "अहमदाबाद मिल हड़ताल (1918)",
+      "खेड़ा सत्याग्रह (1918)",
+      "चंपारण सत्याग्रह (1917)",
+      "असहयोग आंदोलन (1920)"
+    ],
+    options_hi: [
+      "अहमदाबाद मिल हड़ताल (1918)",
+      "खेड़ा सत्याग्रह (1918)",
+      "चंपारण सत्याग्रह (1917)",
+      "असहयोग आंदोलन (1920)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रवींद्रनाथ टैगोर ने चंपारण सत्याग्रह की सफलता पर गांधीजी को 'महात्मा' की उपाधि दी।",
+    explanation_hi: "रवींद्रनाथ टैगोर ने चंपारण सत्याग्रह की सफलता पर गांधीजी को 'महात्मा' की उपाधि दी।"
+  },
+  {
+    question_en: "चंपारण सत्याग्रह (1917) किस प्रणाली के विरोध में था, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    question_hi: "चंपारण सत्याग्रह (1917) किस प्रणाली के विरोध में था, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    options_en: [
+      "इक्ट्ठा पद्धति; 1/3 भाग",
+      "पाँचकठिया पद्धति; 5/20 भाग",
+      "तीनकठिया पद्धति; 3/20 भाग",
+      "रयतवाड़ी पद्धति; 51% भाग"
+    ],
+    options_hi: [
+      "इक्ट्ठा पद्धति; 1/3 भाग",
+      "पाँचकठिया पद्धति; 5/20 भाग",
+      "तीनकठिया पद्धति; 3/20 भाग",
+      "रयतवाड़ी पद्धति; 51% भाग"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह आंदोलन तीनकठिया पद्धति के विरोध में था, जिसके तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती करना अनिवार्य था।",
+    explanation_hi: "यह आंदोलन तीनकठिया पद्धति के विरोध में था, जिसके तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती करना अनिवार्य था।"
+  },
+  {
+    question_en: "असहयोग आंदोलन (1920) का प्रस्ताव कांग्रेस के किस अधिवेशन में पारित किया गया, और उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "असहयोग आंदोलन (1920) का प्रस्ताव कांग्रेस के किस अधिवेशन में पारित किया गया, और उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "कलकत्ता (1920); लाला लाजपत राय",
+      "गया (1922); सी.आर. दास",
+      "नागपुर (1920); वीर राघवाचारी",
+      "मद्रास (1927); एम.ए. अंसारी"
+    ],
+    options_hi: [
+      "कलकत्ता (1920); लाला लाजपत राय",
+      "गया (1922); सी.आर. दास",
+      "नागपुर (1920); वीर राघवाचारी",
+      "मद्रास (1927); एम.ए. अंसारी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "असहयोग आंदोलन का प्रस्ताव दिसंबर 1920 में नागपुर अधिवेशन में पारित किया गया, जिसके अध्यक्ष वीर राघवाचारी थे।",
+    explanation_hi: "असहयोग आंदोलन का प्रस्ताव दिसंबर 1920 में नागपुर अधिवेशन में पारित किया गया, जिसके अध्यक्ष वीर राघवाचारी थे।"
+  },
+  {
+    question_en: "स्वराज पार्टी (1923) के अध्यक्ष और सचिव कौन थे?",
+    question_hi: "स्वराज पार्टी (1923) के अध्यक्ष और सचिव कौन थे?",
+    options_en: [
+      "मोतीलाल नेहरू (अध्यक्ष) और सी.आर. दास (सचिव)",
+      "सुभाष चंद्र बोस (अध्यक्ष) और जवाहरलाल नेहरू (सचिव)",
+      "चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव)",
+      "लाला लाजपत राय (अध्यक्ष) और मोतीलाल नेहरू (सचिव)"
+    ],
+    options_hi: [
+      "मोतीलाल नेहरू (अध्यक्ष) और सी.आर. दास (सचिव)",
+      "सुभाष चंद्र बोस (अध्यक्ष) और जवाहरलाल नेहरू (सचिव)",
+      "चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव)",
+      "लाला लाजपत राय (अध्यक्ष) और मोतीलाल नेहरू (सचिव)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वराज पार्टी की स्थापना चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव) ने मिलकर की थी।",
+    explanation_hi: "स्वराज पार्टी की स्थापना चित्तरंजन दास (अध्यक्ष) और मोतीलाल नेहरू (सचिव) ने मिलकर की थी।"
+  },
+  {
+    question_en: "साइमन आयोग में कुल कितने सदस्य थे, और वे सभी किस राष्ट्रीयता के थे?",
+    question_hi: "साइमन आयोग में कुल कितने सदस्य थे, और वे सभी किस राष्ट्रीयता के थे?",
+    options_en: [
+      "5 सदस्य; भारतीय",
+      "9 सदस्य; ब्रिटिश और भारतीय",
+      "7 सदस्य; ब्रिटिश",
+      "7 सदस्य; भारतीय"
+    ],
+    options_hi: [
+      "5 सदस्य; भारतीय",
+      "9 सदस्य; ब्रिटिश और भारतीय",
+      "7 सदस्य; ब्रिटिश",
+      "7 सदस्य; भारतीय"
+    ],
+    correct_option_index: 2,
+    explanation_en: "साइमन आयोग में कुल 7 सदस्य थे और वे सभी ब्रिटिश थे।",
+    explanation_hi: "साइमन आयोग में कुल 7 सदस्य थे और वे सभी ब्रिटिश थे।"
+  },
+    {
+    question_en: "ब्रिटिश महारानी एलिजाबेथ प्रथम ने कंपनी को भारत से व्यापार करने का एकाधिकार शुरुआती तौर पर कितने वर्षों के लिए दिया था?",
+    question_hi: "ब्रिटिश महारानी एलिजाबेथ प्रथम ने कंपनी को भारत से व्यापार करने का एकाधिकार शुरुआती तौर पर कितने वर्षों के लिए दिया था?",
+    options_en: [
+      "10 वर्ष",
+      "20 वर्ष",
+      "15 वर्ष",
+      "5 वर्ष"
+    ],
+    options_hi: [
+      "10 वर्ष",
+      "20 वर्ष",
+      "15 वर्ष",
+      "5 वर्ष"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ब्रिटिश महारानी एलिजाबेथ प्रथम ने कंपनी को भारत से व्यापार करने का एकाधिकार 15 वर्षों के लिए दिया था।",
+    explanation_hi: "ब्रिटिश महारानी एलिजाबेथ प्रथम ने कंपनी को भारत से व्यापार करने का एकाधिकार 15 वर्षों के लिए दिया था।"
+  },
+  {
+    question_en: "1602 ई. में जेम्स लैंकेस्टर किस जहाज से भारत की यात्रा पर निकले थे, लेकिन वह बंदरगाह पर नहीं उतरे?",
+    question_hi: "1602 ई. में जेम्स लैंकेस्टर किस जहाज से भारत की यात्रा पर निकले थे, लेकिन वह बंदरगाह पर नहीं उतरे?",
+    options_en: [
+      "हेक्टर",
+      "ग्लोब",
+      "रेड ड्रैगन",
+      "क्वीन मैरी"
+    ],
+    options_hi: [
+      "हेक्टर",
+      "ग्लोब",
+      "रेड ड्रैगन",
+      "क्वीन मैरी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जेम्स लैंकेस्टर 1602 ई. में 'रेड ड्रैगन' नामक जहाज से भारत आए, पर बंदरगाह पर नहीं उतरे।",
+    explanation_hi: "जेम्स लैंकेस्टर 1602 ई. में 'रेड ड्रैगन' नामक जहाज से भारत आए, पर बंदरगाह पर नहीं उतरे।"
+  },
+  {
+    question_en: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, जॉन सुरमन शिष्टमंडल में शामिल वह सर्जन कौन था जिसने फर्रुखसियर के फोड़े का सफल इलाज किया था?",
+    question_hi: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, जॉन सुरमन शिष्टमंडल में शामिल वह सर्जन कौन था जिसने फर्रुखसियर के फोड़े का सफल इलाज किया था?",
+    options_en: [
+      "विलियम हॉकिन्स",
+      "जॉर्ज हैमिल्टन",
+      "सर थॉमस रो",
+      "रॉबर्ट क्लाइव"
+    ],
+    options_hi: [
+      "विलियम हॉकिन्स",
+      "जॉर्ज हैमिल्टन",
+      "सर थॉमस रो",
+      "रॉबर्ट क्लाइव"
+    ],
+    correct_option_index: 1,
+    explanation_en: "फर्रुखसियर एक गंभीर फोड़े से पीड़ित थे, जिसका सफल इलाज जॉर्ज हैमिल्टन ने किया था।",
+    explanation_hi: "फर्रुखसियर एक गंभीर फोड़े से पीड़ित थे, जिसका सफल इलाज जॉर्ज हैमिल्टन ने किया था।"
+  },
+  {
+    question_en: "प्लासी के युद्ध से पहले, कलकत्ता के किस अंग्रेज गवर्नर ने नवाब सिराजुद्दौला के हमले के बाद व्यापारियों, महिलाओं और बच्चों के साथ हुगली पर स्थित फुलटा द्वीप में शरण ली थी?",
+    question_hi: "प्लासी के युद्ध से पहले, कलकत्ता के किस अंग्रेज गवर्नर ने नवाब सिराजुद्दौला के हमले के बाद व्यापारियों, महिलाओं और बच्चों के साथ हुगली पर स्थित फुलटा द्वीप में शरण ली थी?",
+    options_en: [
+      "रॉबर्ट क्लाइव",
+      "वाट्सन",
+      "जेड हॉलवेल",
+      "रोजर ड्रेक"
+    ],
+    options_hi: [
+      "रॉबर्ट क्लाइव",
+      "वाट्सन",
+      "जेड हॉलवेल",
+      "रोजर ड्रेक"
+    ],
+    correct_option_index: 3,
+    explanation_en: "कलकत्ता का अंग्रेज गवर्नर रोजर ड्रेक व्यापारियों, महिलाओं और बच्चों के साथ हुगली पर फुलटा द्वीप में शरण लेता है।",
+    explanation_hi: "कलकत्ता का अंग्रेज गवर्नर रोजर ड्रेक व्यापारियों, महिलाओं और बच्चों के साथ हुगली पर फुलटा द्वीप में शरण लेता है।"
+  },
+  {
+    question_en: "बक्सर के युद्ध के बाद (1764), इलाहाबाद की प्रथम संधि (2 अगस्त, 1765) किन दो पक्षों के बीच हुई थी?",
+    question_hi: "बक्सर के युद्ध के बाद (1764), इलाहाबाद की प्रथम संधि (2 अगस्त, 1765) किन दो पक्षों के बीच हुई थी?",
+    options_en: [
+      "क्लाइव और शुजाउद्दौला",
+      "हेक्टर मुनरो और मीर कासिम",
+      "क्लाइव और मुगल सम्राट शाह आलम द्वितीय",
+      "क्लाइव और मीर जाफ़र"
+    ],
+    options_hi: [
+      "क्लाइव और शुजाउद्दौला",
+      "हेक्टर मुनरो और मीर कासिम",
+      "क्लाइव और मुगल सम्राट शाह आलम द्वितीय",
+      "क्लाइव और मीर जाफ़र"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इलाहाबाद की प्रथम संधि क्लाइव और मुगल सम्राट शाह आलम द्वितीय के बीच 2 अगस्त, 1765 को हुई थी।",
+    explanation_hi: "इलाहाबाद की प्रथम संधि क्लाइव और मुगल सम्राट शाह आलम द्वितीय के बीच 2 अगस्त, 1765 को हुई थी।"
+  },
+  {
+    question_en: "इलाहाबाद की द्वितीय संधि (6 अगस्त, 1765) के तहत, अवध के नवाब शुजाउद्दौला से कौन से जिले लेकर मुगल सम्राट शाह आलम द्वितीय को दे दिए गए थे?",
+    question_hi: "इलाहाबाद की द्वितीय संधि (6 अगस्त, 1765) के तहत, अवध के नवाब शुजाउद्दौला से कौन से जिले लेकर मुगल सम्राट शाह आलम द्वितीय को दे दिए गए थे?",
+    options_en: [
+      "पटना और मुंगेर",
+      "ढाका और कलकत्ता",
+      "इलाहाबाद और कड़ा",
+      "बनारस और गाजीपुर"
+    ],
+    options_hi: [
+      "पटना और मुंगेर",
+      "ढाका और कलकत्ता",
+      "इलाहाबाद और कड़ा",
+      "बनारस और गाजीपुर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इलाहाबाद और कड़ा के जिले नवाब शुजाउद्दौला से लेकर मुगल सम्राट शाह आलम द्वितीय को दे दिए गए।",
+    explanation_hi: "इलाहाबाद और कड़ा के जिले नवाब शुजाउद्दौला से लेकर मुगल सम्राट शाह आलम द्वितीय को दे दिए गए।"
+  },
+  {
+    question_en: "प्रथम आंग्ल-मैसूर युद्ध (1767-1769) किस संधि के साथ समाप्त हुआ, और इस युद्ध में कौन विजयी हुआ था?",
+    question_hi: "प्रथम आंग्ल-मैसूर युद्ध (1767-1769) किस संधि के साथ समाप्त हुआ, और इस युद्ध में कौन विजयी हुआ था?",
+    options_en: [
+      "मंगलौर की संधि; टीपू सुल्तान",
+      "श्रीरंगपट्टनम की संधि; हैदर अली",
+      "मद्रास की संधि; हैदर अली",
+      "पेरिस की संधि; ब्रिटिश"
+    ],
+    options_hi: [
+      "मंगलौर की संधि; टीपू सुल्तान",
+      "श्रीरंगपट्टनम की संधि; हैदर अली",
+      "मद्रास की संधि; हैदर अली",
+      "पेरिस की संधि; ब्रिटिश"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम आंग्ल-मैसूर युद्ध मद्रास की संधि (1769) के साथ समाप्त हुआ। इसमें हैदर अली विजयी हुए थे।",
+    explanation_hi: "प्रथम आंग्ल-मैसूर युद्ध मद्रास की संधि (1769) के साथ समाप्त हुआ। इसमें हैदर अली विजयी हुए थे।"
+  },
+  {
+    question_en: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता था। मैसूर पर किस राजवंश का शासन था, जिसे ब्रिटिशों ने चौथे आंग्ल-मैसूर युद्ध के बाद बहाल किया?",
+    question_hi: "टीपू सुल्तान को 'मैसूर का बाघ' कहा जाता था। मैसूर पर किस राजवंश का शासन था, जिसे ब्रिटिशों ने चौथे आंग्ल-मैसूर युद्ध के बाद बहाल किया?",
+    options_en: [
+      "निजाम राजवंश",
+      "मराठा राजवंश",
+      "वोडेयार राजवंश",
+      "अर्काट राजवंश"
+    ],
+    options_hi: [
+      "निजाम राजवंश",
+      "मराठा राजवंश",
+      "वोडेयार राजवंश",
+      "अर्काट राजवंश"
+    ],
+    correct_option_index: 2,
+    explanation_en: "मैसूर पर वोडेयार राजवंश (Wodeyar Dynasty) का शासन था।",
+    explanation_hi: "मैसूर पर वोडेयार राजवंश (Wodeyar Dynasty) का शासन था।"
+  },
+  {
+    question_en: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला तीसरा राज्य कौन सा था, जिसने 1799 में हस्ताक्षर किए?",
+    question_hi: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला तीसरा राज्य कौन सा था, जिसने 1799 में हस्ताक्षर किए?",
+    options_en: [
+      "हैदराबाद",
+      "मैसूर",
+      "तंजौर",
+      "अवध"
+    ],
+    options_hi: [
+      "हैदराबाद",
+      "मैसूर",
+      "तंजौर",
+      "अवध"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सहायक संधि पर हस्ताक्षर करने वाला क्रम है: हैदराबाद (1798), मैसूर (1799), तंजौर (1799)।",
+    explanation_hi: "सहायक संधि पर हस्ताक्षर करने वाला क्रम है: हैदराबाद (1798), मैसूर (1799), तंजौर (1799)।"
+  },
+  {
+    question_en: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत 1713 में हुई। पहले पेशवा (जो वंशानुगत नहीं थे) कौन थे?",
+    question_hi: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत 1713 में हुई। पहले पेशवा (जो वंशानुगत नहीं थे) कौन थे?",
+    options_en: [
+      "बाजीराव प्रथम",
+      "बालाजी विश्वनाथ",
+      "मोरोपंत त्र्यंबक पिंगले",
+      "रघुनाथ राव"
+    ],
+    options_hi: [
+      "बाजीराव प्रथम",
+      "बालाजी विश्वनाथ",
+      "मोरोपंत त्र्यंबक पिंगले",
+      "रघुनाथ राव"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पहले पेशवा मोरोपंत त्र्यंबक पिंगले थे। पहले वंशानुगत पेशवा बालाजी विश्वनाथ थे।",
+    explanation_hi: "पहले पेशवा मोरोपंत त्र्यंबक पिंगले थे। पहले वंशानुगत पेशवा बालाजी विश्वनाथ थे।"
+  },
+  {
+    question_en: "मराठा संघ (Maratha Confederacy) में पवारों का केंद्र (राजधानी) क्या था?",
+    question_hi: "मराठा संघ (Maratha Confederacy) में पवारों का केंद्र (राजधानी) क्या था?",
+    options_en: [
+      "पूना",
+      "नागपुर",
+      "इंदौर",
+      "धार"
+    ],
+    options_hi: [
+      "पूना",
+      "नागपुर",
+      "इंदौर",
+      "धार"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मराठा संघ के घटकों में पवारों का केंद्र धार था।",
+    explanation_hi: "मराठा संघ के घटकों में पवारों का केंद्र धार था।"
+  },
+  {
+    question_en: "किस आंग्ल-मराठा युद्ध के बाद पेशवा बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया था?",
+    question_hi: "किस आंग्ल-मराठा युद्ध के बाद पेशवा बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया था?",
+    options_en: [
+      "प्रथम आंग्ल-मराठा युद्ध",
+      "द्वितीय आंग्ल-मराठा युद्ध",
+      "तृतीय आंग्ल-मराठा युद्ध",
+      "कोई नहीं"
+    ],
+    options_hi: [
+      "प्रथम आंग्ल-मराठा युद्ध",
+      "द्वितीय आंग्ल-मराठा युद्ध",
+      "तृतीय आंग्ल-मराठा युद्ध",
+      "कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद पेशवा पद समाप्त कर दिया गया, और बाजी राव द्वितीय को बिठूर भेज दिया गया।",
+    explanation_hi: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद पेशवा पद समाप्त कर दिया गया, और बाजी राव द्वितीय को बिठूर भेज दिया गया।"
+  },
+  {
+    question_en: "प्रथम आंग्ल-सिख युद्ध (1845-46) के समय ब्रिटिश गवर्नर-जनरल कौन थे?",
+    question_hi: "प्रथम आंग्ल-सिख युद्ध (1845-46) के समय ब्रिटिश गवर्नर-जनरल कौन थे?",
+    options_en: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड वेलेसली"
+    ],
+    options_hi: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड वेलेसली"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम आंग्ल-सिख युद्ध के समय ब्रिटिश गवर्नर-जनरल लॉर्ड हार्डिंग थे।",
+    explanation_hi: "प्रथम आंग्ल-सिख युद्ध के समय ब्रिटिश गवर्नर-जनरल लॉर्ड हार्डिंग थे।"
+  },
+  {
+    question_en: "व्यपगत के सिद्धांत (Doctrine of Lapse) के तहत विलय किया गया चौथा राज्य कौन सा था, जिसे 1850 में विलय किया गया?",
+    question_hi: "व्यपगत के सिद्धांत (Doctrine of Lapse) के तहत विलय किया गया चौथा राज्य कौन सा था, जिसे 1850 में विलय किया गया?",
+    options_en: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    options_hi: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    correct_option_index: 3,
+    explanation_en: "विलय किए गए राज्यों का क्रम (शुरुआत से): सतारा (1848), जैतपुर (1849), संबलपुर (1849), बघाट (1850)।",
+    explanation_hi: "विलय किए गए राज्यों का क्रम (शुरुआत से): सतारा (1848), जैतपुर (1849), संबलपुर (1849), बघाट (1850)।"
+  },
+  {
+    question_en: "भारत में पहली टेलीग्राफ (तार) सेवा लॉर्ड डलहौजी के समय 1853 में कहाँ से कहाँ तक शुरू की गई थी?",
+    question_hi: "भारत में पहली टेलीग्राफ (तार) सेवा लॉर्ड डलहौजी के समय 1853 में कहाँ से कहाँ तक शुरू की गई थी?",
+    options_en: [
+      "बंबई से ठाणे",
+      "मद्रास से कलकत्ता",
+      "कलकत्ता से आगरा",
+      "बंबई से पूना"
+    ],
+    options_hi: [
+      "बंबई से ठाणे",
+      "मद्रास से कलकत्ता",
+      "कलकत्ता से आगरा",
+      "बंबई से पूना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पहली तार सेवा 1853 में कलकत्ता से आगरा तक शुरू हुई।",
+    explanation_hi: "पहली तार सेवा 1853 में कलकत्ता से आगरा तक शुरू हुई।"
+  },
+  {
+    question_en: "'रैयतवाड़ी बंदोबस्त' ब्रिटिश भारत के 51% हिस्से पर लागू किया गया था। इसका पूर्ण कार्यान्वयन 1820 ईस्वी में किसके द्वारा किया गया था?",
+    question_hi: "'रैयतवाड़ी बंदोबस्त' ब्रिटिश भारत के 51% हिस्से पर लागू किया गया था। इसका पूर्ण कार्यान्वयन 1820 ईस्वी में किसके द्वारा किया गया था?",
+    options_en: [
+      "अलेक्जेंडर रीड",
+      "लॉर्ड कॉर्नवालिस",
+      "हॉल्ट मैकेंजी",
+      "थॉमस मुनरो"
+    ],
+    options_hi: [
+      "अलेक्जेंडर रीड",
+      "लॉर्ड कॉर्नवालिस",
+      "हॉल्ट मैकेंजी",
+      "थॉमस मुनरो"
+    ],
+    correct_option_index: 3,
+    explanation_en: "रैयतवाड़ी बंदोबस्त का पूर्ण कार्यान्वयन 1820 ईस्वी में थॉमस मुनरो द्वारा किया गया।",
+    explanation_hi: "रैयतवाड़ी बंदोबस्त का पूर्ण कार्यान्वयन 1820 ईस्वी में थॉमस मुनरो द्वारा किया गया।"
+  },
+  {
+    question_en: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) 1833 में किसके कार्यकाल में पारित किया गया था?",
+    question_hi: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) 1833 में किसके कार्यकाल में पारित किया गया था?",
+    options_en: [
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी"
+    ],
+    options_hi: [
+      "लॉर्ड हार्डिंग",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "महालवाड़ी बंदोबस्त 1833 में लॉर्ड विलियम बेंटिक द्वारा पारित किया गया था।",
+    explanation_hi: "महालवाड़ी बंदोबस्त 1833 में लॉर्ड विलियम बेंटिक द्वारा पारित किया गया था।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय द्वारा स्थापित किस संस्था का उद्देश्य एकेश्वरवाद का समर्थन करना था?",
+    question_hi: "राजा राम मोहन रॉय द्वारा स्थापित किस संस्था का उद्देश्य एकेश्वरवाद का समर्थन करना था?",
+    options_en: [
+      "ब्रह्म समाज",
+      "वेदांत कॉलेज",
+      "आत्मीय सभा",
+      "तत्त्वबोधिनी सभा"
+    ],
+    options_hi: [
+      "ब्रह्म समाज",
+      "वेदांत कॉलेज",
+      "आत्मीय सभा",
+      "तत्त्वबोधिनी सभा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "आत्मीय सभा (1815, कलकत्ता) एकेश्वरवाद के समर्थक थे।",
+    explanation_hi: "आत्मीय सभा (1815, कलकत्ता) एकेश्वरवाद के समर्थक थे।"
+  },
+  {
+    question_en: "महर्षि देवेन्द्र नाथ टैगोर ने तत्त्वबोधिनी सभा की स्थापना कब की थी?",
+    question_hi: "महर्षि देवेन्द्र नाथ टैगोर ने तत्त्वबोधिनी सभा की स्थापना कब की थी?",
+    options_en: [
+      "1815",
+      "1828",
+      "1839",
+      "1866"
+    ],
+    options_hi: [
+      "1815",
+      "1828",
+      "1839",
+      "1866"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवेन्द्र नाथ टैगोर ने 1839 में तत्त्वबोधिनी सभा की स्थापना की।",
+    explanation_hi: "देवेन्द्र नाथ टैगोर ने 1839 में तत्त्वबोधिनी सभा की स्थापना की।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन 1866 में होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन 1866 में होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    options_en: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    options_hi: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "केशव चंद्र सेन के अलग होने पर उनका समाज 'भारतीय ब्रह्म समाज' कहलाया।",
+    explanation_hi: "केशव चंद्र सेन के अलग होने पर उनका समाज 'भारतीय ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने, जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    question_hi: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने, जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    options_en: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    options_hi: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।",
+    explanation_hi: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।"
+  },
+  {
+    question_en: "यंग बंगाल आंदोलन के नेता हेनरी विवियन डेरोजियो किस दैनिक समाचार पत्र का संपादन करते थे?",
+    question_hi: "यंग बंगाल आंदोलन के नेता हेनरी विवियन डेरोजियो किस दैनिक समाचार पत्र का संपादन करते थे?",
+    options_en: [
+      "संवाद कौमुदी",
+      "बंगदूत",
+      "मिरात-उल-अखबार",
+      "ईस्ट इंडिया"
+    ],
+    options_hi: [
+      "संवाद कौमुदी",
+      "बंगदूत",
+      "मिरात-उल-अखबार",
+      "ईस्ट इंडिया"
+    ],
+    correct_option_index: 3,
+    explanation_en: "डेरोजियो ने 'ईस्ट इंडिया' नामक एक दैनिक समाचार पत्र का संपादन किया।",
+    explanation_hi: "डेरोजियो ने 'ईस्ट इंडिया' नामक एक दैनिक समाचार पत्र का संपादन किया।"
+  },
+  {
+    question_en: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी थी?",
+    question_hi: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी थी?",
+    options_en: [
+      "रवींद्रनाथ टैगोर",
+      "दादा भाई नौरोजी",
+      "विट्ठलराव वाडेकर",
+      "महात्मा गांधी"
+    ],
+    options_hi: [
+      "रवींद्रनाथ टैगोर",
+      "दादा भाई नौरोजी",
+      "विट्ठलराव वाडेकर",
+      "महात्मा गांधी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ज्योतिराव फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई थी।",
+    explanation_hi: "ज्योतिराव फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई थी।"
+  },
+  {
+    question_en: "थियोसोफिकल सोसायटी की स्थापना न्यूयॉर्क, यू.एस.ए. में किसने की थी?",
+    question_hi: "थियोसोफिकल सोसायटी की स्थापना न्यूयॉर्क, यू.एस.ए. में किसने की थी?",
+    options_en: [
+      "एनी बेसेंट और दयानंद सरस्वती",
+      "मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट",
+      "स्वामी विवेकानंद और रामकृष्ण परमहंस",
+      "राजा राम मोहन रॉय और डेवेन्द्र नाथ टैगोर"
+    ],
+    options_hi: [
+      "एनी बेसेंट और दयानंद सरस्वती",
+      "मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट",
+      "स्वामी विवेकानंद और रामकृष्ण परमहंस",
+      "राजा राम मोहन रॉय और डेवेन्द्र नाथ टैगोर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "इसकी स्थापना 1875 ईस्वी में मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट द्वारा न्यूयॉर्क में की गई थी।",
+    explanation_hi: "इसकी स्थापना 1875 ईस्वी में मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट द्वारा न्यूयॉर्क में की गई थी।"
+  },
+  {
+    question_en: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    question_hi: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    options_en: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    options_hi: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।",
+    explanation_hi: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।"
+  },
+  {
+    question_en: "सर सैय्यद अहमद खान ने अपनी पत्रिका 'तहजीब-उल-अखलाक' किस आंदोलन के तहत शुरू की थी?",
+    question_hi: "सर सैय्यद अहमद खान ने अपनी पत्रिका 'तहजीब-उल-अखलाक' किस आंदोलन के तहत शुरू की थी?",
+    options_en: [
+      "देवबंद आंदोलन",
+      "वहाबी आंदोलन",
+      "अलीगढ़ आंदोलन",
+      "आत्म-सम्मान आंदोलन"
+    ],
+    options_hi: [
+      "देवबंद आंदोलन",
+      "वहाबी आंदोलन",
+      "अलीगढ़ आंदोलन",
+      "आत्म-सम्मान आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सर सैय्यद अहमद खान ने अलीगढ़ आंदोलन के तहत 'तहजीब-उल-अखलाक' नामक पत्रिका शुरू की थी।",
+    explanation_hi: "सर सैय्यद अहमद खान ने अलीगढ़ आंदोलन के तहत 'तहजीब-उल-अखलाक' नामक पत्रिका शुरू की थी।"
+  },
+  {
+    question_en: "1857 के विद्रोह के तात्कालिक कारण चर्बीयुक्त कारतूस थे, जबकि सैन्य कारणों में 1856 में कौन सा अधिनियम पारित हुआ था?",
+    question_hi: "1857 के विद्रोह के तात्कालिक कारण चर्बीयुक्त कारतूस थे, जबकि सैन्य कारणों में 1856 में कौन सा अधिनियम पारित हुआ था?",
+    options_en: [
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "डॉक्ट्रिन ऑफ लैप्स"
+    ],
+    options_hi: [
+      "वर्नाक्यूलर प्रेस एक्ट",
+      "इल्बर्ट बिल",
+      "जनरल सर्विस एनलिस्टमेंट एक्ट",
+      "डॉक्ट्रिन ऑफ लैप्स"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जनरल सर्विस एनलिस्टमेंट एक्ट 1856 में लॉर्ड कैनिंग के समय पारित हुआ, जिसका उच्च जाति के हिंदू सिपाहियों ने धार्मिक आपत्ति के कारण विरोध किया।",
+    explanation_hi: "जनरल सर्विस एनलिस्टमेंट एक्ट 1856 में लॉर्ड कैनिंग के समय पारित हुआ, जिसका उच्च जाति के हिंदू सिपाहियों ने धार्मिक आपत्ति के कारण विरोध किया।"
+  },
+  {
+    question_en: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस स्थान पर मार दिया था?",
+    question_hi: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस स्थान पर मार दिया था?",
+    options_en: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "कुतुब मीनार"
+    ],
+    options_hi: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "कुतुब मीनार"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उनके तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।",
+    explanation_hi: "उनके तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।"
+  },
+  {
+    question_en: "1857 के विद्रोह के किस केंद्र के विद्रोह को कर्नल नील ने दबाया था?",
+    question_hi: "1857 के विद्रोह के किस केंद्र के विद्रोह को कर्नल नील ने दबाया था?",
+    options_en: [
+      "लखनऊ",
+      "कानपुर",
+      "दिल्ली",
+      "इलाहाबाद"
+    ],
+    options_hi: [
+      "लखनऊ",
+      "कानपुर",
+      "दिल्ली",
+      "इलाहाबाद"
+    ],
+    correct_option_index: 3,
+    explanation_en: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।",
+    explanation_hi: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।"
+  },
+  {
+    question_en: "कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में द्वारकानाथ टैगोर ने की थी?",
+    question_hi: "कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में द्वारकानाथ टैगोर ने की थी?",
+    options_en: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    options_hi: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।",
+    explanation_hi: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के पहले सत्र (1885) की अध्यक्षता किसने की थी?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के पहले सत्र (1885) की अध्यक्षता किसने की थी?",
+    options_en: [
+      "दादा भाई नौरोजी",
+      "ए.ओ. ह्यूम",
+      "व्योमेश चंद्र बनर्जी",
+      "बदरुद्दीन तैयबजी"
+    ],
+    options_hi: [
+      "दादा भाई नौरोजी",
+      "ए.ओ. ह्यूम",
+      "व्योमेश चंद्र बनर्जी",
+      "बदरुद्दीन तैयबजी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "INC के पहले अध्यक्ष व्योमेश चंद्र बनर्जी थे।",
+    explanation_hi: "INC के पहले अध्यक्ष व्योमेश चंद्र बनर्जी थे।"
+  },
+  {
+    question_en: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    question_hi: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था।",
+    explanation_hi: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था।"
+  },
+  {
+    question_en: "बाल गंगाधर तिलक द्वारा शुरू किया गया 'केसरी' समाचार पत्र किस भाषा में प्रकाशित होता था?",
+    question_hi: "बाल गंगाधर तिलक द्वारा शुरू किया गया 'केसरी' समाचार पत्र किस भाषा में प्रकाशित होता था?",
+    options_en: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    options_hi: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'केसरी' मराठी भाषा में प्रकाशित होता था।",
+    explanation_hi: "'केसरी' मराठी भाषा में प्रकाशित होता था।"
+  },
+  {
+    question_en: "1907 के सूरत अधिवेशन में, कांग्रेस का विभाजन नरम दल और गरम दल में हुआ, उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "1907 के सूरत अधिवेशन में, कांग्रेस का विभाजन नरम दल और गरम दल में हुआ, उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "बाल गंगाधर तिलक",
+      "गोपाल कृष्ण गोखले",
+      "रास बिहारी घोष",
+      "रास बिहारी बोस"
+    ],
+    options_hi: [
+      "बाल गंगाधर तिलक",
+      "गोपाल कृष्ण गोखले",
+      "रास बिहारी घोष",
+      "रास बिहारी बोस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सूरत विभाजन (1907) के अध्यक्ष रास बिहारी घोष थे।",
+    explanation_hi: "सूरत विभाजन (1907) के अध्यक्ष रास बिहारी घोष थे।"
+  },
+  {
+    question_en: "स्वदेशी आंदोलन (1905) के दौरान 'स्वदेश बांधव समिति' का नेतृत्व किसने किया था, जो बंगाल में सक्रिय थी?",
+    question_hi: "स्वदेशी आंदोलन (1905) के दौरान 'स्वदेश बांधव समिति' का नेतृत्व किसने किया था, जो बंगाल में सक्रिय थी?",
+    options_en: [
+      "लाला लाजपत राय",
+      "अश्विनी कुमार दत्ता",
+      "सैयद हैदर रज़ा",
+      "चिदंबरम पिल्लै"
+    ],
+    options_hi: [
+      "लाला लाजपत राय",
+      "अश्विनी कुमार दत्ता",
+      "सैयद हैदर रज़ा",
+      "चिदंबरम पिल्लै"
+    ],
+    correct_option_index: 1,
+    explanation_en: "'स्वदेश बांधव समिति' का नेतृत्व अश्विनी कुमार दत्ता ने किया था।",
+    explanation_hi: "'स्वदेश बांधव समिति' का नेतृत्व अश्विनी कुमार दत्ता ने किया था।"
+  },
+  {
+    question_en: "1912 के दिल्ली षड्यंत्र केस में किस ब्रिटिश अधिकारी पर हमला किया गया था?",
+    question_hi: "1912 के दिल्ली षड्यंत्र केस में किस ब्रिटिश अधिकारी पर हमला किया गया था?",
+    options_en: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "लॉर्ड हार्डिंग",
+      "डब्ल्यू.सी. रैंड"
+    ],
+    options_hi: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "लॉर्ड हार्डिंग",
+      "डब्ल्यू.सी. रैंड"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दिल्ली षड्यंत्र केस (1912) में लॉर्ड हार्डिंग पर हमला किया गया था।",
+    explanation_hi: "दिल्ली षड्यंत्र केस (1912) में लॉर्ड हार्डिंग पर हमला किया गया था।"
+  },
+  {
+    question_en: "किस वर्ष में विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    question_hi: "किस वर्ष में विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    options_en: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    options_hi: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    correct_option_index: 1,
+    explanation_en: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।",
+    explanation_hi: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।"
+  },
+  {
+    question_en: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के कितनेवें दिन शहादत दी थी?",
+    question_hi: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के कितनेवें दिन शहादत दी थी?",
+    options_en: [
+      "30वें दिन",
+      "45वें दिन",
+      "64वें दिन",
+      "100वें दिन"
+    ],
+    options_hi: [
+      "30वें दिन",
+      "45वें दिन",
+      "64वें दिन",
+      "100वें दिन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जतिन दास भूख हड़ताल के 64वें दिन शहीद हुए थे।",
+    explanation_hi: "जतिन दास भूख हड़ताल के 64वें दिन शहीद हुए थे।"
+  },
+  {
+    question_en: "1929 में केंद्रीय विधानसभा में बम फेंकने के बाद भगत सिंह और बटुकेश्वर दत्त पर किस अन्य मामले के साथ मुकदमा चला था?",
+    question_hi: "1929 में केंद्रीय विधानसभा में बम फेंकने के बाद भगत सिंह और बटुकेश्वर दत्त पर किस अन्य मामले के साथ मुकदमा चला था?",
+    options_en: [
+      "काकोरी षड्यंत्र केस",
+      "नासिक षड्यंत्र केस",
+      "लाहौर षड्यंत्र केस",
+      "अलीपुर षड्यंत्र केस"
+    ],
+    options_hi: [
+      "काकोरी षड्यंत्र केस",
+      "नासिक षड्यंत्र केस",
+      "लाहौर षड्यंत्र केस",
+      "अलीपुर षड्यंत्र केस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन पर लाहौर षड्यंत्र केस के साथ-साथ केंद्रीय विधानसभा बम विस्फोट मामले के तहत मुकदमा चला था।",
+    explanation_hi: "उन पर लाहौर षड्यंत्र केस के साथ-साथ केंद्रीय विधानसभा बम विस्फोट मामले के तहत मुकदमा चला था।"
+  },
+  {
+    question_en: "महात्मा गांधी दक्षिण अफ्रीका से भारत किस तिथि को लौटे थे?",
+    question_hi: "महात्मा गांधी दक्षिण अफ्रीका से भारत किस तिथि को लौटे थे?",
+    options_en: [
+      "1893",
+      "1914",
+      "जनवरी 1915",
+      "1917"
+    ],
+    options_hi: [
+      "1893",
+      "1914",
+      "जनवरी 1915",
+      "1917"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी जनवरी 1915 में भारत लौटे।",
+    explanation_hi: "गांधीजी जनवरी 1915 में भारत लौटे।"
+  },
+  {
+    question_en: "चंपारण सत्याग्रह (1917) में गांधीजी को 'महात्मा' की उपाधि रवींद्रनाथ टैगोर ने दी। गांधीजी को 'सम्मान' (Honor) की उपाधि किसने दी थी?",
+    question_hi: "चंपारण सत्याग्रह (1917) में गांधीजी को 'महात्मा' की उपाधि रवींद्रनाथ टैगोर ने दी। गांधीजी को 'सम्मान' (Honor) की उपाधि किसने दी थी?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "सरदार पटेल",
+      "एस.सी. बोस",
+      "बी.आर. अंबेडकर"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "सरदार पटेल",
+      "एस.सी. बोस",
+      "बी.आर. अंबेडकर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "एस.सी. बोस (सुभाष चंद्र बोस) द्वारा उन्हें 'सम्मान' की उपाधि दी गई थी।",
+    explanation_hi: "एस.सी. बोस (सुभाष चंद्र बोस) द्वारा उन्हें 'सम्मान' की उपाधि दी गई थी।"
+  },
+  {
+    question_en: "किस सत्याग्रह के दौरान गांधीजी ने प्लेग बोनस के 'झमेले' को सुलझाने के लिए अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था?",
+    question_hi: "किस सत्याग्रह के दौरान गांधीजी ने प्लेग बोनस के 'झमेले' को सुलझाने के लिए अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था?",
+    options_en: [
+      "चंपारण सत्याग्रह",
+      "खेड़ा सत्याग्रह",
+      "अहमदाबाद मिल हड़ताल",
+      "रॉलेट सत्याग्रह"
+    ],
+    options_hi: [
+      "चंपारण सत्याग्रह",
+      "खेड़ा सत्याग्रह",
+      "अहमदाबाद मिल हड़ताल",
+      "रॉलेट सत्याग्रह"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अहमदाबाद मिल हड़ताल में गांधीजी का अनशन उनका 'अनोखा' हथियार बना।",
+    explanation_hi: "अहमदाबाद मिल हड़ताल में गांधीजी का अनशन उनका 'अनोखा' हथियार बना।"
+  },
+  {
+    question_en: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर द्वारा 'सर' की उपाधि लौटाने के अलावा, गांधीजी ने किस उपाधि को लौटाया था?",
+    question_hi: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर द्वारा 'सर' की उपाधि लौटाने के अलावा, गांधीजी ने किस उपाधि को लौटाया था?",
+    options_en: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    options_hi: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।",
+    explanation_hi: "गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।"
+  },
+  {
+    question_en: "असहयोग आंदोलन (1920) का प्रस्ताव दिसंबर 1920 में कांग्रेस के किस अधिवेशन में पारित किया गया, जिसकी अध्यक्षता वीर राघवाचारी ने की थी?",
+    question_hi: "असहयोग आंदोलन (1920) का प्रस्ताव दिसंबर 1920 में कांग्रेस के किस अधिवेशन में पारित किया गया, जिसकी अध्यक्षता वीर राघवाचारी ने की थी?",
+    options_en: [
+      "कलकत्ता अधिवेशन (विशेष)",
+      "मद्रास अधिवेशन",
+      "नागपुर अधिवेशन (वार्षिक)",
+      "गया अधिवेशन"
+    ],
+    options_hi: [
+      "कलकत्ता अधिवेशन (विशेष)",
+      "मद्रास अधिवेशन",
+      "नागपुर अधिवेशन (वार्षिक)",
+      "गया अधिवेशन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रस्ताव दिसंबर 1920 में कांग्रेस के वार्षिक नागपुर अधिवेशन में पारित किया गया।",
+    explanation_hi: "प्रस्ताव दिसंबर 1920 में कांग्रेस के वार्षिक नागपुर अधिवेशन में पारित किया गया।"
+  },
+  {
+    question_en: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    question_hi: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    options_en: [
+      "86 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "120 सीटें"
+    ],
+    options_hi: [
+      "86 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "120 सीटें"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वराज पार्टी ने केंद्रीय विधानसभा चुनाव में 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।",
+    explanation_hi: "स्वराज पार्टी ने केंद्रीय विधानसभा चुनाव में 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।"
+  },
+  {
+    question_en: "1928 में लॉर्ड रे बर्कनहेड की चुनौती का जवाब देने के लिए सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    question_hi: "1928 में लॉर्ड रे बर्कनहेड की चुनौती का जवाब देने के लिए सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।",
+    explanation_hi: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।"
+  },
+  {
+    question_en: "सविनय अवज्ञा आंदोलन (1930) के दौरान, गांधीजी की गिरफ्तारी के बाद आंदोलन का नेतृत्व किसने किया?",
+    question_hi: "सविनय अवज्ञा आंदोलन (1930) के दौरान, गांधीजी की गिरफ्तारी के बाद आंदोलन का नेतृत्व किसने किया?",
+    options_en: [
+      "सरोजिनी नायडू",
+      "जवाहरलाल नेहरू",
+      "अब्बास तैयबजी",
+      "खान अब्दुल गफ्फार खान"
+    ],
+    options_hi: [
+      "सरोजिनी नायडू",
+      "जवाहरलाल नेहरू",
+      "अब्बास तैयबजी",
+      "खान अब्दुल गफ्फार खान"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी की गिरफ्तारी पर नेतृत्व अब्बास तैयबजी ने संभाला था।",
+    explanation_hi: "गांधीजी की गिरफ्तारी पर नेतृत्व अब्बास तैयबजी ने संभाला था।"
+  },
+  {
+    question_en: "किस आंदोलन के दौरान मंजरी सेना (लड़के) और वानर सेना (लड़कियाँ) का गठन, और प्रभात फेरियों का आयोजन किया गया था?",
+    question_hi: "किस आंदोलन के दौरान मंजरी सेना (लड़के) और वानर सेना (लड़कियाँ) का गठन, और प्रभात फेरियों का आयोजन किया गया था?",
+    options_en: [
+      "असहयोग आंदोलन",
+      "भारत छोड़ो आंदोलन",
+      "सविनय अवज्ञा आंदोलन",
+      "स्वदेशी आंदोलन"
+    ],
+    options_hi: [
+      "असहयोग आंदोलन",
+      "भारत छोड़ो आंदोलन",
+      "सविनय अवज्ञा आंदोलन",
+      "स्वदेशी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इन नई तकनीकों का प्रयोग सविनय अवज्ञा आंदोलन के दौरान किया गया था।",
+    explanation_hi: "इन नई तकनीकों का प्रयोग सविनय अवज्ञा आंदोलन के दौरान किया गया था।"
+  },
+  {
+    question_en: "द्वितीय गोलमेज सम्मेलन (1931) में गांधीजी और अंबेडकर के बीच टकराव का समाधान पूना समझौता (1932) से हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना आरक्षण दिया गया?",
+    question_hi: "द्वितीय गोलमेज सम्मेलन (1931) में गांधीजी और अंबेडकर के बीच टकराव का समाधान पूना समझौता (1932) से हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना आरक्षण दिया गया?",
+    options_en: [
+      "100 सीटें",
+      "147 सीटें",
+      "18%",
+      "50%"
+    ],
+    options_hi: [
+      "100 सीटें",
+      "147 सीटें",
+      "18%",
+      "50%"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।",
+    explanation_hi: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।"
+  },
+  {
+    question_en: "भारत छोड़ो आंदोलन (1942) के दौरान 'ऑपरेशन जीरो आवर' के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    question_hi: "भारत छोड़ो आंदोलन (1942) के दौरान 'ऑपरेशन जीरो आवर' के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    options_en: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    options_hi: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी और सरोजिनी नायडू को आगा खां पैलेस में, जबकि नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।",
+    explanation_hi: "गांधीजी और सरोजिनी नायडू को आगा खां पैलेस में, जबकि नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।"
+  },
+    {
+    question_en: "लॉर्ड क्लाइव द्वारा 1765 में मुगल सम्राट शाह आलम द्वितीय और अवध के नवाब शुजाउद्दौला के साथ की गई इलाहाबाद की संधियों के परिणामस्वरूप, कंपनी को बंगाल में किस प्रकार का अधिकार प्राप्त हुआ?",
+    question_hi: "लॉर्ड क्लाइव द्वारा 1765 में मुगल सम्राट शाह आलम द्वितीय और अवध के नवाब शुजाउद्दौला के साथ की गई इलाहाबाद की संधियों के परिणामस्वरूप, कंपनी को बंगाल में किस प्रकार का अधिकार प्राप्त हुआ?",
+    options_en: [
+      "न्यायिक अधिकार",
+      "सैन्य नियंत्रण",
+      "दीवानी अधिकार (कर/राजस्व)",
+      "नवाब का पद"
+    ],
+    options_hi: [
+      "न्यायिक अधिकार",
+      "सैन्य नियंत्रण",
+      "दीवानी अधिकार (कर/राजस्व)",
+      "नवाब का पद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इलाहाबाद की प्रथम संधि के तहत, शाह आलम द्वितीय ने बंगाल, बिहार और उड़ीसा के दीवानी अधिकार (कर/राजस्व अधिकार) ब्रिटिशों को सौंप दिए।",
+    explanation_hi: "इलाहाबाद की प्रथम संधि के तहत, शाह आलम द्वितीय ने बंगाल, बिहार और उड़ीसा के दीवानी अधिकार (कर/राजस्व अधिकार) ब्रिटिशों को सौंप दिए।"
+  },
+  {
+    question_en: "फ्रांसीसी गवर्नर डुप्ले को सहायक संधि का 'आविष्कारक' माना जाता है। डुप्ले प्रथम यूरोपीय थे जिन्होंने भारतीय राज्यों की सहायता के लिए अपनी सेना किराए पर देना कब शुरू किया?",
+    question_hi: "फ्रांसीसी गवर्नर डुप्ले को सहायक संधि का 'आविष्कारक' माना जाता है। डुप्ले प्रथम यूरोपीय थे जिन्होंने भारतीय राज्यों की सहायता के लिए अपनी सेना किराए पर देना कब शुरू किया?",
+    options_en: [
+      "1798",
+      "1757",
+      "वर्ष स्रोतों में अज्ञात",
+      "1802"
+    ],
+    options_hi: [
+      "1798",
+      "1757",
+      "वर्ष स्रोतों में अज्ञात",
+      "1802"
+    ],
+    correct_option_index: 2,
+    explanation_en: "फ्रांसीसी गवर्नर डुप्ले को सहायक संधि का आविष्कारक माना जाता है, जिन्होंने भारतीय राज्यों की सहायता के लिए अपनी सेना किराए पर देना शुरू किया था। हालांकि, स्रोतों में वर्ष अज्ञात है।",
+    explanation_hi: "फ्रांसीसी गवर्नर डुप्ले को सहायक संधि का आविष्कारक माना जाता है, जिन्होंने भारतीय राज्यों की सहायता के लिए अपनी सेना किराए पर देना शुरू किया था। हालांकि, स्रोतों में वर्ष अज्ञात है।"
+  },
+  {
+    question_en: "1781 में द्वितीय आंग्ल-मैसूर युद्ध के दौरान, हैदर अली किस विशिष्ट युद्ध में सर आयरकूट के हाथों पराजित हुए थे?",
+    question_hi: "1781 में द्वितीय आंग्ल-मैसूर युद्ध के दौरान, हैदर अली किस विशिष्ट युद्ध में सर आयरकूट के हाथों पराजित हुए थे?",
+    options_en: [
+      "वंदिवाश का युद्ध",
+      "पालूर का युद्ध",
+      "पोर्टो नोवो का युद्ध",
+      "अड्यार का युद्ध"
+    ],
+    options_hi: [
+      "वंदिवाश का युद्ध",
+      "पालूर का युद्ध",
+      "पोर्टो नोवो का युद्ध",
+      "अड्यार का युद्ध"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द्वितीय आंग्ल-मैसूर युद्ध के दौरान हैदर अली 1781 में पोर्टो नोवो में सर आयरकूट के हाथों पराजित हुए थे।",
+    explanation_hi: "द्वितीय आंग्ल-मैसूर युद्ध के दौरान हैदर अली 1781 में पोर्टो नोवो में सर आयरकूट के हाथों पराजित हुए थे।"
+  },
+  {
+    question_en: "महाराजा रणजीत सिंह ने किस फ्रांसीसी अधिकारी द्वारा प्रशिक्षित एक कुशल सेना बनाए रखी थी?",
+    question_hi: "महाराजा रणजीत सिंह ने किस फ्रांसीसी अधिकारी द्वारा प्रशिक्षित एक कुशल सेना बनाए रखी थी?",
+    options_en: [
+      "डुप्ले",
+      "काउंट-डी-लाली",
+      "आयरकूट",
+      "नाम अज्ञात"
+    ],
+    options_hi: [
+      "डुप्ले",
+      "काउंट-डी-लाली",
+      "आयरकूट",
+      "नाम अज्ञात"
+    ],
+    correct_option_index: 3,
+    explanation_en: "महाराजा रणजीत सिंह ने फ्रांसीसी अधिकारियों द्वारा प्रशिक्षित एक कुशल सेना बनाए रखी थी। हालांकि, स्रोतों में उस अधिकारी का नाम अज्ञात है।",
+    explanation_hi: "महाराजा रणजीत सिंह ने फ्रांसीसी अधिकारियों द्वारा प्रशिक्षित एक कुशल सेना बनाए रखी थी। हालांकि, स्रोतों में उस अधिकारी का नाम अज्ञात है।"
+  },
+  {
+    question_en: "मराठा संघ (Maratha Confederacy) में पवारों का केंद्र (राजधानी) क्या था, जिसे बाजीराव प्रथम ने स्थापित किया था?",
+    question_hi: "मराठा संघ (Maratha Confederacy) में पवारों का केंद्र (राजधानी) क्या था, जिसे बाजीराव प्रथम ने स्थापित किया था?",
+    options_en: [
+      "पूना",
+      "इंदौर",
+      "ग्वालियर",
+      "धार"
+    ],
+    options_hi: [
+      "पूना",
+      "इंदौर",
+      "ग्वालियर",
+      "धार"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मराठा संघ के घटकों में पवारों का केंद्र धार था।",
+    explanation_hi: "मराठा संघ के घटकों में पवारों का केंद्र धार था।"
+  },
+  {
+    question_en: "किस आंग्ल-मराठा युद्ध के दौरान भीमा-कोरेगांव की लड़ाई हुई, जिसमें ब्रिटिश विजयी हुए थे?",
+    question_hi: "किस आंग्ल-मराठा युद्ध के दौरान भीमा-कोरेगांव की लड़ाई हुई, जिसमें ब्रिटिश विजयी हुए थे?",
+    options_en: [
+      "प्रथम आंग्ल-मराठा युद्ध",
+      "द्वितीय आंग्ल-मराठा युद्ध",
+      "तृतीय आंग्ल-मराठा युद्ध",
+      "चतुर्थ आंग्ल-मराठा युद्ध"
+    ],
+    options_hi: [
+      "प्रथम आंग्ल-मराठा युद्ध",
+      "द्वितीय आंग्ल-मराठा युद्ध",
+      "तृतीय आंग्ल-मराठा युद्ध",
+      "चतुर्थ आंग्ल-मराठा युद्ध"
+    ],
+    correct_option_index: 2,
+    explanation_en: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के दौरान भीमा-कोरेगांव की लड़ाई हुई थी।",
+    explanation_hi: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के दौरान भीमा-कोरेगांव की लड़ाई हुई थी।"
+  },
+  {
+    question_en: "डलहौजी द्वारा 'व्यपगत के सिद्धांत' के तहत विलय किया गया चौथा राज्य कौन सा था, जिसे 1850 में विलय किया गया?",
+    question_hi: "डलहौजी द्वारा 'व्यपगत के सिद्धांत' के तहत विलय किया गया चौथा राज्य कौन सा था, जिसे 1850 में विलय किया गया?",
+    options_en: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    options_hi: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    correct_option_index: 3,
+    explanation_en: "'व्यपगत के सिद्धांत' के तहत विलय का क्रम है: सतारा (1848), जैतपुर (1849), संबलपुर (1849), और बघाट (1850)।",
+    explanation_hi: "'व्यपगत के सिद्धांत' के तहत विलय का क्रम है: सतारा (1848), जैतपुर (1849), संबलपुर (1849), और बघाट (1850)।"
+  },
+  {
+    question_en: "कुशासन (Misgovernance) के आधार पर डलहौजी द्वारा विलय किए गए अवध राज्य पर, डलहौजी ने किस सिद्धांत का उपयोग नहीं किया था?",
+    question_hi: "कुशासन (Misgovernance) के आधार पर डलहौजी द्वारा विलय किए गए अवध राज्य पर, डलहौजी ने किस सिद्धांत का उपयोग नहीं किया था?",
+    options_en: [
+      "सहायक संधि",
+      "स्थायी बंदोबस्त",
+      "रैयतवाड़ी बंदोबस्त",
+      "व्यपगत का सिद्धांत"
+    ],
+    options_hi: [
+      "सहायक संधि",
+      "स्थायी बंदोबस्त",
+      "रैयतवाड़ी बंदोबस्त",
+      "व्यपगत का सिद्धांत"
+    ],
+    correct_option_index: 3,
+    explanation_en: "अवध राज्य का विलय कुशासन के कारण किया गया था, न कि व्यपगत के सिद्धांत (Doctrine of Lapse) के तहत।",
+    explanation_hi: "अवध राज्य का विलय कुशासन के कारण किया गया था, न कि व्यपगत के सिद्धांत (Doctrine of Lapse) के तहत।"
+  },
+  {
+    question_en: "'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत (1772) किसने की थी, जिसे लॉर्ड कॉर्नवालिस ने समाप्त किया?",
+    question_hi: "'इजारेदारी प्रथा' (Ijaredari System) की शुरुआत (1772) किसने की थी, जिसे लॉर्ड कॉर्नवालिस ने समाप्त किया?",
+    options_en: [
+      "थॉमस मुनरो",
+      "हॉल्ट मैकेंजी",
+      "वॉरेन हेस्टिंग्स",
+      "लॉर्ड विलियम बेंटिक"
+    ],
+    options_hi: [
+      "थॉमस मुनरो",
+      "हॉल्ट मैकेंजी",
+      "वॉरेन हेस्टिंग्स",
+      "लॉर्ड विलियम बेंटिक"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) द्वारा की गई थी।",
+    explanation_hi: "इजारेदारी प्रथा की शुरुआत वॉरेन हेस्टिंग्स (1772) द्वारा की गई थी।"
+  },
+  {
+    question_en: "रैयतवाड़ी बंदोबस्त (51% हिस्से पर लागू) का प्रारंभिक प्रयोग 1792 ईस्वी में किसने, और किस जिले में किया था?",
+    question_hi: "रैयतवाड़ी बंदोबस्त (51% हिस्से पर लागू) का प्रारंभिक प्रयोग 1792 ईस्वी में किसने, और किस जिले में किया था?",
+    options_en: [
+      "थॉमस मुनरो, बंबई",
+      "हॉल्ट मैकेंजी, गंगा घाटी",
+      "अलेक्जेंडर रीड, तमिलनाडु के बारामहल जिले में",
+      "लॉर्ड कॉर्नवालिस, बंगाल"
+    ],
+    options_hi: [
+      "थॉमस मुनरो, बंबई",
+      "हॉल्ट मैकेंजी, गंगा घाटी",
+      "अलेक्जेंडर रीड, तमिलनाडु के बारामहल जिले में",
+      "लॉर्ड कॉर्नवालिस, बंगाल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रैयतवाड़ी का प्रारंभिक प्रयोग 1792 ईस्वी में अलेक्जेंडर रीड द्वारा तमिलनाडु के बारामहल जिले में किया गया था।",
+    explanation_hi: "रैयतवाड़ी का प्रारंभिक प्रयोग 1792 ईस्वी में अलेक्जेंडर रीड द्वारा तमिलनाडु के बारामहल जिले में किया गया था।"
+  },
+  {
+    question_en: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) के लिए 'गाँव को इकाई' मानने का सुझाव 1819 में किसने दिया था?",
+    question_hi: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) के लिए 'गाँव को इकाई' मानने का सुझाव 1819 में किसने दिया था?",
+    options_en: [
+      "लॉर्ड विलियम बेंटिक",
+      "थॉमस मुनरो",
+      "हॉल्ट मैकेंजी",
+      "लॉर्ड कॉर्नवालिस"
+    ],
+    options_hi: [
+      "लॉर्ड विलियम बेंटिक",
+      "थॉमस मुनरो",
+      "हॉल्ट मैकेंजी",
+      "लॉर्ड कॉर्नवालिस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "महालवाड़ी बंदोबस्त के लिए गाँव को इकाई मानने का सुझाव 1819 ईस्वी में हॉल्ट मैकेंजी ने दिया था।",
+    explanation_hi: "महालवाड़ी बंदोबस्त के लिए गाँव को इकाई मानने का सुझाव 1819 ईस्वी में हॉल्ट मैकेंजी ने दिया था।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय की मृत्यु 1833 में कहाँ हुई थी?",
+    question_hi: "राजा राम मोहन रॉय की मृत्यु 1833 में कहाँ हुई थी?",
+    options_en: [
+      "लंदन",
+      "कलकत्ता",
+      "ब्रिस्टल, इंग्लैंड",
+      "बंबई"
+    ],
+    options_hi: [
+      "लंदन",
+      "कलकत्ता",
+      "ब्रिस्टल, इंग्लैंड",
+      "बंबई"
+    ],
+    correct_option_index: 2,
+    explanation_en: "राजा राम मोहन रॉय की मृत्यु 1833 में ब्रिस्टल, इंग्लैंड में हुई थी।",
+    explanation_hi: "राजा राम मोहन रॉय की मृत्यु 1833 में ब्रिस्टल, इंग्लैंड में हुई थी।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन (1866) होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन (1866) होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    options_en: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    options_hi: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1866 में विभाजन के बाद, केशव चंद्र सेन का समाज 'भारतीय ब्रह्म समाज' कहलाया।",
+    explanation_hi: "1866 में विभाजन के बाद, केशव चंद्र सेन का समाज 'भारतीय ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने (1850), जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    question_hi: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने (1850), जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    options_en: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    options_hi: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।",
+    explanation_hi: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।"
+  },
+  {
+    question_en: "हेनरी विवियन डेरोजियो, जो यंग बंगाल आंदोलन के नेता थे, ने किस दैनिक समाचार पत्र का संपादन किया था?",
+    question_hi: "हेनरी विवियन डेरोजियो, जो यंग बंगाल आंदोलन के नेता थे, ने किस दैनिक समाचार पत्र का संपादन किया था?",
+    options_en: [
+      "संवाद कौमुदी",
+      "तत्त्वबोधिनी",
+      "ईस्ट इंडिया",
+      "यंग इंडिया"
+    ],
+    options_hi: [
+      "संवाद कौमुदी",
+      "तत्त्वबोधिनी",
+      "ईस्ट इंडिया",
+      "यंग इंडिया"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डेरोजियो ने 'ईस्ट इंडिया' नामक दैनिक समाचार पत्र का संपादन किया था।",
+    explanation_hi: "डेरोजियो ने 'ईस्ट इंडिया' नामक दैनिक समाचार पत्र का संपादन किया था।"
+  },
+  {
+    question_en: "किस समाज सुधारक को डॉ. एस. राधाकृष्णन ने 'कर्मयोगी' का दर्जा दिया था?",
+    question_hi: "किस समाज सुधारक को डॉ. एस. राधाकृष्णन ने 'कर्मयोगी' का दर्जा दिया था?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "दादा भाई नौरोजी",
+      "मदन मोहन मालवीय",
+      "स्वामी विवेकानंद"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "दादा भाई नौरोजी",
+      "मदन मोहन मालवीय",
+      "स्वामी विवेकानंद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डॉ. एस. राधाकृष्णन ने मदन मोहन मालवीय को 'कर्मयोगी' का दर्जा दिया था।",
+    explanation_hi: "डॉ. एस. राधाकृष्णन ने मदन मोहन मालवीय को 'कर्मयोगी' का दर्जा दिया था।"
+  },
+  {
+    question_en: "थियोसोफिकल सोसायटी की स्थापना न्यूयॉर्क में किसने की थी?",
+    question_hi: "थियोसोफिकल सोसायटी की स्थापना न्यूयॉर्क में किसने की थी?",
+    options_en: [
+      "एनी बेसेंट",
+      "मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट",
+      "स्वामी दयानंद सरस्वती",
+      "राजा राम मोहन रॉय"
+    ],
+    options_hi: [
+      "एनी बेसेंट",
+      "मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट",
+      "स्वामी दयानंद सरस्वती",
+      "राजा राम मोहन रॉय"
+    ],
+    correct_option_index: 1,
+    explanation_en: "थियोसोफिकल सोसायटी की स्थापना मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट ने 1875 में न्यूयॉर्क में की थी।",
+    explanation_hi: "थियोसोफिकल सोसायटी की स्थापना मैडम एच.पी. ब्लावात्स्की और कर्नल एच.एस. ऑलकॉट ने 1875 में न्यूयॉर्क में की थी।"
+  },
+  {
+    question_en: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    question_hi: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    options_en: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    options_hi: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।",
+    explanation_hi: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।"
+  },
+  {
+    question_en: "भारत के किस गवर्नर जनरल के कार्यकाल के दौरान 'विधवा पुनर्विवाह अधिनियम' (1856) पारित हुआ था?",
+    question_hi: "भारत के किस गवर्नर जनरल के कार्यकाल के दौरान 'विधवा पुनर्विवाह अधिनियम' (1856) पारित हुआ था?",
+    options_en: [
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग"
+    ],
+    options_hi: [
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड कैनिंग",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड हार्डिंग"
+    ],
+    correct_option_index: 2,
+    explanation_en: "विधवा पुनर्विवाह अधिनियम लॉर्ड डलहौजी के कार्यकाल (1848-56) के दौरान पारित हुआ था।",
+    explanation_hi: "विधवा पुनर्विवाह अधिनियम लॉर्ड डलहौजी के कार्यकाल (1848-56) के दौरान पारित हुआ था।"
+  },
+  {
+    question_en: "1857 के विद्रोह में किस केंद्र के विद्रोह को कर्नल नील ने दबाया था?",
+    question_hi: "1857 के विद्रोह में किस केंद्र के विद्रोह को कर्नल नील ने दबाया था?",
+    options_en: [
+      "लखनऊ",
+      "कानपुर",
+      "दिल्ली",
+      "इलाहाबाद"
+    ],
+    options_hi: [
+      "लखनऊ",
+      "कानपुर",
+      "दिल्ली",
+      "इलाहाबाद"
+    ],
+    correct_option_index: 3,
+    explanation_en: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।",
+    explanation_hi: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।"
+  },
+  {
+    question_en: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस विशिष्ट स्थान पर मार दिया था?",
+    question_hi: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस विशिष्ट स्थान पर मार दिया था?",
+    options_en: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "इंडिया गेट"
+    ],
+    options_hi: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "इंडिया गेट"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।",
+    explanation_hi: "बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के समय (1885) भारत के वायसराय कौन थे?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस (INC) की स्थापना के समय (1885) भारत के वायसराय कौन थे?",
+    options_en: [
+      "लॉर्ड लिटन",
+      "लॉर्ड रिपन",
+      "लॉर्ड डफरिन",
+      "लॉर्ड कर्जन"
+    ],
+    options_hi: [
+      "लॉर्ड लिटन",
+      "लॉर्ड रिपन",
+      "लॉर्ड डफरिन",
+      "लॉर्ड कर्जन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "INC की स्थापना (1885) के समय वायसराय लॉर्ड डफरिन थे।",
+    explanation_hi: "INC की स्थापना (1885) के समय वायसराय लॉर्ड डफरिन थे।"
+  },
+  {
+    question_en: "किस उदारवादी नेता को ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाला पहला पत्रकार होने का गौरव प्राप्त है?",
+    question_hi: "किस उदारवादी नेता को ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाला पहला पत्रकार होने का गौरव प्राप्त है?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था और वह गिरफ्तार होने वाले पहले पत्रकार बने।",
+    explanation_hi: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था और वह गिरफ्तार होने वाले पहले पत्रकार बने।"
+  },
+  {
+    question_en: "दादा भाई नौरोजी कांग्रेस के किस अधिवेशन में अध्यक्ष थे, जहाँ पहली बार 'स्वराज्य' शब्द का प्रयोग किया गया था?",
+    question_hi: "दादा भाई नौरोजी कांग्रेस के किस अधिवेशन में अध्यक्ष थे, जहाँ पहली बार 'स्वराज्य' शब्द का प्रयोग किया गया था?",
+    options_en: [
+      "बंबई (1885)",
+      "सूरत (1907)",
+      "कलकत्ता (1906)",
+      "लाहौर (1929)"
+    ],
+    options_hi: [
+      "बंबई (1885)",
+      "सूरत (1907)",
+      "कलकत्ता (1906)",
+      "लाहौर (1929)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कांग्रेस ने पहली बार 1906 के कलकत्ता अधिवेशन (अध्यक्ष: दादा भाई नौरोजी) में 'स्वराज्य' शब्द का प्रयोग किया।",
+    explanation_hi: "कांग्रेस ने पहली बार 1906 के कलकत्ता अधिवेशन (अध्यक्ष: दादा भाई नौरोजी) में 'स्वराज्य' शब्द का प्रयोग किया।"
+  },
+  {
+    question_en: "बाल गंगाधर तिलक द्वारा शुरू की गई 'केसरी' पत्रिका किस भाषा में प्रकाशित होती थी?",
+    question_hi: "बाल गंगाधर तिलक द्वारा शुरू की गई 'केसरी' पत्रिका किस भाषा में प्रकाशित होती थी?",
+    options_en: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    options_hi: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'केसरी' मराठी भाषा में प्रकाशित होता था।",
+    explanation_hi: "'केसरी' मराठी भाषा में प्रकाशित होता था।"
+  },
+  {
+    question_en: "1907 के सूरत अधिवेशन में कांग्रेस के विभाजन के समय, नरम दल का लक्ष्य कहाँ तक सीमित विरोध करना था?",
+    question_hi: "1907 के सूरत अधिवेशन में कांग्रेस के विभाजन के समय, नरम दल का लक्ष्य कहाँ तक सीमित विरोध करना था?",
+    options_en: [
+      "पूरे भारत में विरोध",
+      "केवल स्वदेशी वस्तुओं का बहिष्कार",
+      "केवल बंगाल के अंदर ही विरोध",
+      "विदेशी धरती पर विरोध"
+    ],
+    options_hi: [
+      "पूरे भारत में विरोध",
+      "केवल स्वदेशी वस्तुओं का बहिष्कार",
+      "केवल बंगाल के अंदर ही विरोध",
+      "विदेशी धरती पर विरोध"
+    ],
+    correct_option_index: 2,
+    explanation_en: "नरम दल का लक्ष्य विभाजन के विरुद्ध केवल बंगाल के अंदर ही विरोध तक सीमित था।",
+    explanation_hi: "नरम दल का लक्ष्य विभाजन के विरुद्ध केवल बंगाल के अंदर ही विरोध तक सीमित था।"
+  },
+  {
+    question_en: "1911 में बंगाल विभाजन रद्द करने की घोषणा के समय भारत की राजधानी को कलकत्ता से कहाँ स्थानांतरित करने की घोषणा की गई थी?",
+    question_hi: "1911 में बंगाल विभाजन रद्द करने की घोषणा के समय भारत की राजधानी को कलकत्ता से कहाँ स्थानांतरित करने की घोषणा की गई थी?",
+    options_en: [
+      "बंबई",
+      "मद्रास",
+      "दिल्ली",
+      "ढाका"
+    ],
+    options_hi: [
+      "बंबई",
+      "मद्रास",
+      "दिल्ली",
+      "ढाका"
+    ],
+    correct_option_index: 2,
+    explanation_en: "12 दिसंबर, 1911 को सम्राट जॉर्ज पंचम ने बंगाल विभाजन रद्द करने और राजधानी कलकत्ता से दिल्ली स्थानांतरित करने की घोषणा की।",
+    explanation_hi: "12 दिसंबर, 1911 को सम्राट जॉर्ज पंचम ने बंगाल विभाजन रद्द करने और राजधानी कलकत्ता से दिल्ली स्थानांतरित करने की घोषणा की।"
+  },
+  {
+    question_en: "पुणे में प्लेग पीड़ितों के साथ अमानवीय व्यवहार के खिलाफ, चापेकर बंधुओं ने 1897 में किस ब्रिटिश अधिकारी की हत्या की थी?",
+    question_hi: "पुणे में प्लेग पीड़ितों के साथ अमानवीय व्यवहार के खिलाफ, चापेकर बंधुओं ने 1897 में किस ब्रिटिश अधिकारी की हत्या की थी?",
+    options_en: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "डब्ल्यू.सी. रैंड",
+      "माइकल ओ'डायर"
+    ],
+    options_hi: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "डब्ल्यू.सी. रैंड",
+      "माइकल ओ'डायर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "चापेकर बंधुओं ने 1897 में डब्ल्यू.सी. रैंड (और एक नोट में लेफ्टिनेंट आयर्स्ट) की हत्या की थी।",
+    explanation_hi: "चापेकर बंधुओं ने 1897 में डब्ल्यू.सी. रैंड (और एक नोट में लेफ्टिनेंट आयर्स्ट) की हत्या की थी।"
+  },
+  {
+    question_en: "किस वर्ष अभिनव भारत की स्थापना हुई, जिसे पहले 'मित्रा मेला' के नाम से जाना जाता था?",
+    question_hi: "किस वर्ष अभिनव भारत की स्थापना हुई, जिसे पहले 'मित्रा मेला' के नाम से जाना जाता था?",
+    options_en: [
+      "1902",
+      "1904",
+      "1905",
+      "1913"
+    ],
+    options_hi: [
+      "1902",
+      "1904",
+      "1905",
+      "1913"
+    ],
+    correct_option_index: 1,
+    explanation_en: "अभिनव भारत की स्थापना 1904 में हुई थी, जिसे पहले मित्रा मेला के नाम से जाना जाता था।",
+    explanation_hi: "अभिनव भारत की स्थापना 1904 में हुई थी, जिसे पहले मित्रा मेला के नाम से जाना जाता था।"
+  },
+  {
+    question_en: "मदनलाल ढींगरा ने 1909 में लंदन में किसकी हत्या की थी, और वह किस संगठन से जुड़े थे?",
+    question_hi: "मदनलाल ढींगरा ने 1909 में लंदन में किसकी हत्या की थी, और वह किस संगठन से जुड़े थे?",
+    options_en: [
+      "रैंड; अभिनव भारत",
+      "लॉर्ड हार्डिंग; गदर पार्टी",
+      "कर्जन वाइली; इंडिया हाउस",
+      "किंग्सफोर्ड; अनुशीलन समिति"
+    ],
+    options_hi: [
+      "रैंड; अभिनव भारत",
+      "लॉर्ड हार्डिंग; गदर पार्टी",
+      "कर्जन वाइली; इंडिया हाउस",
+      "किंग्सफोर्ड; अनुशीलन समिति"
+    ],
+    correct_option_index: 2,
+    explanation_en: "मदनलाल ढींगरा ने कर्जन वाइली की हत्या की, और वह इंडिया हाउस संगठन से जुड़े थे।",
+    explanation_hi: "मदनलाल ढींगरा ने कर्जन वाइली की हत्या की, और वह इंडिया हाउस संगठन से जुड़े थे।"
+  },
+  {
+    question_en: "लाहौर षड्यंत्र केस (1928) में क्रांतिकारियों का लक्ष्य कौन था, जिसकी गलती से जे.पी. सॉन्डर्स की हत्या हुई?",
+    question_hi: "लाहौर षड्यंत्र केस (1928) में क्रांतिकारियों का लक्ष्य कौन था, जिसकी गलती से जे.पी. सॉन्डर्स की हत्या हुई?",
+    options_en: [
+      "जनरल डायर",
+      "कर्नल नील",
+      "पुलिस अधीक्षक जेम्स स्कॉट",
+      "लॉर्ड कर्जन"
+    ],
+    options_hi: [
+      "जनरल डायर",
+      "कर्नल नील",
+      "पुलिस अधीक्षक जेम्स स्कॉट",
+      "लॉर्ड कर्जन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इस साजिश का उद्देश्य पुलिस अधीक्षक जेम्स स्कॉट को मारना था, लेकिन गलती से जे.पी. सॉन्डर्स की हत्या कर दी गई।",
+    explanation_hi: "इस साजिश का उद्देश्य पुलिस अधीक्षक जेम्स स्कॉट को मारना था, लेकिन गलती से जे.पी. सॉन्डर्स की हत्या कर दी गई।"
+  },
+  {
+    question_en: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में कितने दिनों की भूख हड़ताल के बाद शहादत दी थी?",
+    question_hi: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में कितने दिनों की भूख हड़ताल के बाद शहादत दी थी?",
+    options_en: [
+      "30 दिन",
+      "45 दिन",
+      "64 दिन",
+      "100 दिन"
+    ],
+    options_hi: [
+      "30 दिन",
+      "45 दिन",
+      "64 दिन",
+      "100 दिन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जतिन दास ने भूख हड़ताल के 64वें दिन शहादत दी थी।",
+    explanation_hi: "जतिन दास ने भूख हड़ताल के 64वें दिन शहादत दी थी।"
+  },
+  {
+    question_en: "भारत के गवर्नर जनरल (GGI) का पद वायसराय में किस अधिनियम द्वारा बदल दिया गया था?",
+    question_hi: "भारत के गवर्नर जनरल (GGI) का पद वायसराय में किस अधिनियम द्वारा बदल दिया गया था?",
+    options_en: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    options_hi: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भारत सरकार अधिनियम 1858 के तहत गवर्नर जनरल ऑफ इंडिया (GGI) का पद वायसराय में बदल गया।",
+    explanation_hi: "भारत सरकार अधिनियम 1858 के तहत गवर्नर जनरल ऑफ इंडिया (GGI) का पद वायसराय में बदल गया।"
+  },
+  {
+    question_en: "लॉर्ड कैनिंग भारत के पहले वायसराय बने। वह किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    question_hi: "लॉर्ड कैनिंग भारत के पहले वायसराय बने। वह किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    options_en: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    options_hi: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    correct_option_index: 1,
+    explanation_en: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।",
+    explanation_hi: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।"
+  },
+  {
+    question_en: "गांधीजी दक्षिण अफ्रीका में किस मुकदमे को लड़ने के लिए 1893 में वहाँ पहुँचे थे?",
+    question_hi: "गांधीजी दक्षिण अफ्रीका में किस मुकदमे को लड़ने के लिए 1893 में वहाँ पहुँचे थे?",
+    options_en: [
+      "ब्रिटिश राज के खिलाफ",
+      "गोपाल कृष्ण गोखले का केस",
+      "दादा अब्दुल्ला का केस",
+      "नेटाल भारतीय कांग्रेस का केस"
+    ],
+    options_hi: [
+      "ब्रिटिश राज के खिलाफ",
+      "गोपाल कृष्ण गोखले का केस",
+      "दादा अब्दुल्ला का केस",
+      "नेटाल भारतीय कांग्रेस का केस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी दादा अब्दुल्ला के केस को लड़ने के लिए 1893 में दक्षिण अफ्रीका पहुँचे।",
+    explanation_hi: "गांधीजी दादा अब्दुल्ला के केस को लड़ने के लिए 1893 में दक्षिण अफ्रीका पहुँचे।"
+  },
+  {
+    question_en: "चंपारण सत्याग्रह (1917) में, रवींद्रनाथ टैगोर द्वारा 'महात्मा' की उपाधि देने के अलावा, सुभाष चंद्र बोस ने गांधीजी को किस उपाधि से संबोधित किया था?",
+    question_hi: "चंपारण सत्याग्रह (1917) में, रवींद्रनाथ टैगोर द्वारा 'महात्मा' की उपाधि देने के अलावा, सुभाष चंद्र बोस ने गांधीजी को किस उपाधि से संबोधित किया था?",
+    options_en: [
+      "राष्ट्रपिता",
+      "गुरुदेव",
+      "सम्मान (Honor)",
+      "मोहनदास"
+    ],
+    options_hi: [
+      "राष्ट्रपिता",
+      "गुरुदेव",
+      "सम्मान (Honor)",
+      "मोहनदास"
+    ],
+    correct_option_index: 2,
+    explanation_en: "एस.सी. बोस (सुभाष चंद्र बोस) ने उन्हें 'सम्मान' की उपाधि दी थी।",
+    explanation_hi: "एस.सी. बोस (सुभाष चंद्र बोस) ने उन्हें 'सम्मान' की उपाधि दी थी।"
+  },
+  {
+    question_en: "गांधीजी ने अहमदाबाद मिल हड़ताल के दौरान अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था। यह अनशन किस 'झमेले' को सुलझाने के लिए था?",
+    question_hi: "गांधीजी ने अहमदाबाद मिल हड़ताल के दौरान अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था। यह अनशन किस 'झमेले' को सुलझाने के लिए था?",
+    options_en: [
+      "नील की खेती",
+      "कर-वृद्धि",
+      "प्लेग बोनस",
+      "लगान न देना"
+    ],
+    options_hi: [
+      "नील की खेती",
+      "कर-वृद्धि",
+      "प्लेग बोनस",
+      "लगान न देना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अहमदाबाद मिल हड़ताल का कारण प्लेग बोनस का 'झमेला' था, जिसके लिए गांधीजी ने अनशन किया।",
+    explanation_hi: "अहमदाबाद मिल हड़ताल का कारण प्लेग बोनस का 'झमेला' था, जिसके लिए गांधीजी ने अनशन किया।"
+  },
+  {
+    question_en: "'कोई वकील नहीं, कोई दलील नहीं, कोई अपील नहीं' का नारा किस अधिनियम के विरोध में दिया गया था?",
+    question_hi: "'कोई वकील नहीं, कोई दलील नहीं, कोई अपील नहीं' का नारा किस अधिनियम के विरोध में दिया गया था?",
+    options_en: [
+      "भारत सरकार अधिनियम 1858",
+      "सती प्रथा अधिनियम 1829",
+      "रॉलेट अधिनियम 1919",
+      "सम्मति आयु अधिनियम 1891"
+    ],
+    options_hi: [
+      "भारत सरकार अधिनियम 1858",
+      "सती प्रथा अधिनियम 1829",
+      "रॉलेट अधिनियम 1919",
+      "सम्मति आयु अधिनियम 1891"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह नारा रॉलेट अधिनियम (1919) के विरोध में दिया गया था।",
+    explanation_hi: "यह नारा रॉलेट अधिनियम (1919) के विरोध में दिया गया था।"
+  },
+  {
+    question_en: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर ने 'सर' की उपाधि लौटाई थी, जबकि गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में कौन सी उपाधि वापस की थी?",
+    question_hi: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर ने 'सर' की उपाधि लौटाई थी, जबकि गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में कौन सी उपाधि वापस की थी?",
+    options_en: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    options_hi: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी ने असहयोग आंदोलन की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।",
+    explanation_hi: "गांधीजी ने असहयोग आंदोलन की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।"
+  },
+  {
+    question_en: "1920 के नागपुर अधिवेशन (अध्यक्ष: वीर राघवाचारी) में पारित असहयोग आंदोलन के दो कार्यक्रम कौन से थे?",
+    question_hi: "1920 के नागपुर अधिवेशन (अध्यक्ष: वीर राघवाचारी) में पारित असहयोग आंदोलन के दो कार्यक्रम कौन से थे?",
+    options_en: [
+      "सविनय अवज्ञा और अहिंसा",
+      "केवल बहिष्कार और हड़ताल",
+      "सकारात्मक (रचनात्मक) और नकारात्मक",
+      "स्वराज्य और पूर्ण स्वतंत्रता"
+    ],
+    options_hi: [
+      "सविनय अवज्ञा और अहिंसा",
+      "केवल बहिष्कार और हड़ताल",
+      "सकारात्मक (रचनात्मक) और नकारात्मक",
+      "स्वराज्य और पूर्ण स्वतंत्रता"
+    ],
+    correct_option_index: 2,
+    explanation_en: "असहयोग आंदोलन के दो कार्यक्रम निर्धारित किए गए थे: सकारात्मक (रचनात्मक) और नकारात्मक।",
+    explanation_hi: "असहयोग आंदोलन के दो कार्यक्रम निर्धारित किए गए थे: सकारात्मक (रचनात्मक) और नकारात्मक।"
+  },
+  {
+    question_en: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    question_hi: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    options_en: [
+      "71 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "147 सीटें"
+    ],
+    options_hi: [
+      "71 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "147 सीटें"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वराज पार्टी ने केंद्रीय विधानसभा की 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।",
+    explanation_hi: "स्वराज पार्टी ने केंद्रीय विधानसभा की 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।"
+  },
+  {
+    question_en: "1928 में लॉर्ड बर्कनहेड की चुनौती का जवाब देने के लिए, सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    question_hi: "1928 में लॉर्ड बर्कनहेड की चुनौती का जवाब देने के लिए, सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।",
+    explanation_hi: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।"
+  },
+  {
+    question_en: "1929 के लाहौर अधिवेशन में पूर्ण स्वराज प्रस्ताव पारित हुआ। इस अधिवेशन में कांग्रेस अध्यक्ष कौन थे?",
+    question_hi: "1929 के लाहौर अधिवेशन में पूर्ण स्वराज प्रस्ताव पारित हुआ। इस अधिवेशन में कांग्रेस अध्यक्ष कौन थे?",
+    options_en: [
+      "मोतीलाल नेहरू",
+      "दादा भाई नौरोजी",
+      "जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस"
+    ],
+    options_hi: [
+      "मोतीलाल नेहरू",
+      "दादा भाई नौरोजी",
+      "जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "लाहौर अधिवेशन (31 दिसंबर, 1929) की अध्यक्षता जवाहरलाल नेहरू ने की थी।",
+    explanation_hi: "लाहौर अधिवेशन (31 दिसंबर, 1929) की अध्यक्षता जवाहरलाल नेहरू ने की थी।"
+  },
+  {
+    question_en: "सविनय अवज्ञा आंदोलन (1930) के दौरान, मंजरी सेना और वानर सेना का गठन, और प्रभात फेरियों का आयोजन किस विशिष्ट कार्य के लिए किया गया था?",
+    question_hi: "सविनय अवज्ञा आंदोलन (1930) के दौरान, मंजरी सेना और वानर सेना का गठन, और प्रभात फेरियों का आयोजन किस विशिष्ट कार्य के लिए किया गया था?",
+    options_en: [
+      "स्वदेशी वस्तुओं के प्रचार के लिए",
+      "ब्रिटिश सेना के खिलाफ लड़ाई के लिए",
+      "आंदोलन के नए तरीके",
+      "शांति मार्च"
+    ],
+    options_hi: [
+      "स्वदेशी वस्तुओं के प्रचार के लिए",
+      "ब्रिटिश सेना के खिलाफ लड़ाई के लिए",
+      "आंदोलन के नए तरीके",
+      "शांति मार्च"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ये सभी आंदोलन के दौरान अपनाए गए नए तरीकों में शामिल थे।",
+    explanation_hi: "ये सभी आंदोलन के दौरान अपनाए गए नए तरीकों में शामिल थे।"
+  },
+  {
+    question_en: "द्वितीय गोलमेज सम्मेलन (1931) में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी से टकराव के बाद पूना समझौता (1932) हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना प्रतिशत आरक्षण आरक्षित किया गया?",
+    question_hi: "द्वितीय गोलमेज सम्मेलन (1931) में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी से टकराव के बाद पूना समझौता (1932) हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना प्रतिशत आरक्षण आरक्षित किया गया?",
+    options_en: [
+      "147 सीटें",
+      "100 सीटें",
+      "18%",
+      "50%"
+    ],
+    options_hi: [
+      "147 सीटें",
+      "100 सीटें",
+      "18%",
+      "50%"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।",
+    explanation_hi: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।"
+  },
+  {
+    question_en: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया, और इसके प्रथम अध्यक्ष कौन थे?",
+    question_hi: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया, और इसके प्रथम अध्यक्ष कौन थे?",
+    options_en: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    options_hi: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया था।",
+    explanation_hi: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया था।"
+  },
+  {
+    question_en: "1933 में 'पाकिस्तान' शब्द का प्रयोग सबसे पहले किसने किया था?",
+    question_hi: "1933 में 'पाकिस्तान' शब्द का प्रयोग सबसे पहले किसने किया था?",
+    options_en: [
+      "मोहम्मद इकबाल",
+      "मोहम्मद अली जिन्ना",
+      "चौधरी रहमत अली",
+      "लियाकत अली खान"
+    ],
+    options_hi: [
+      "मोहम्मद इकबाल",
+      "मोहम्मद अली जिन्ना",
+      "चौधरी रहमत अली",
+      "लियाकत अली खान"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया था।",
+    explanation_hi: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया था।"
+  },
+  {
+    question_en: "व्यक्तिगत सत्याग्रह आंदोलन (1940) को किस अन्य नाम से भी जाना जाता है?",
+    question_hi: "व्यक्तिगत सत्याग्रह आंदोलन (1940) को किस अन्य नाम से भी जाना जाता है?",
+    options_en: [
+      "ऑपरेशन जीरो आवर",
+      "स्वदेशी आंदोलन",
+      "दिल्ली चलो आंदोलन",
+      "भारत छोड़ो आंदोलन"
+    ],
+    options_hi: [
+      "ऑपरेशन जीरो आवर",
+      "स्वदेशी आंदोलन",
+      "दिल्ली चलो आंदोलन",
+      "भारत छोड़ो आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "व्यक्तिगत सत्याग्रह आंदोलन को 'दिल्ली चलो आंदोलन' के नाम से भी जाना जाता है।",
+    explanation_hi: "व्यक्तिगत सत्याग्रह आंदोलन को 'दिल्ली चलो आंदोलन' के नाम से भी जाना जाता है।"
+  },
+  {
+    question_en: "भारत छोड़ो आंदोलन (1942) के दौरान, समानांतर सरकार की स्थापना बलिया (चित्तू पांडे) और तामलुक (सतीश सावंत) के अलावा किस स्थान पर सबसे लंबे समय तक चली?",
+    question_hi: "भारत छोड़ो आंदोलन (1942) के दौरान, समानांतर सरकार की स्थापना बलिया (चित्तू पांडे) और तामलुक (सतीश सावंत) के अलावा किस स्थान पर सबसे लंबे समय तक चली?",
+    options_en: [
+      "मिदनापुर",
+      "गोरखपुर",
+      "सतारा (वाई.बी. पाटिल)",
+      "फैजाबाद"
+    ],
+    options_hi: [
+      "मिदनापुर",
+      "गोरखपुर",
+      "सतारा (वाई.बी. पाटिल)",
+      "फैजाबाद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।",
+    explanation_hi: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    question_hi: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    options_en: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    options_hi: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।",
+    explanation_hi: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।"
+  },
+    {
+    question_en: "डच ईस्ट इंडिया कंपनी ने 1605 में अपनी पहली फैक्ट्री कहाँ स्थापित की थी, और 21 वर्षों का व्यापारिक एकाधिकार उन्हें किसने दिया था?",
+    question_hi: "डच ईस्ट इंडिया कंपनी ने 1605 में अपनी पहली फैक्ट्री कहाँ स्थापित की थी, और 21 वर्षों का व्यापारिक एकाधिकार उन्हें किसने दिया था?",
+    options_en: [
+      "कोचीन; पुर्तगाली शासक",
+      "सूरत; ब्रिटिश महारानी",
+      "मसूलीपट्टनम; डच संसद",
+      "ट्रैंकेबार; डेनमार्क राजा"
+    ],
+    options_hi: [
+      "कोचीन; पुर्तगाली शासक",
+      "सूरत; ब्रिटिश महारानी",
+      "मसूलीपट्टनम; डच संसद",
+      "ट्रैंकेबार; डेनमार्क राजा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डच ने 1605 में मसूलीपट्टनम में पहली फैक्ट्री स्थापित की थी। उन्हें डच संसद से 21 वर्षों का एकाधिकार प्राप्त था।",
+    explanation_hi: "डच ने 1605 में मसूलीपट्टनम में पहली फैक्ट्री स्थापित की थी। उन्हें डच संसद से 21 वर्षों का एकाधिकार प्राप्त था।"
+  },
+  {
+    question_en: "1760 के वांडीवाश के युद्ध में, फ्रांसीसी सेना का नेतृत्व किसने किया था, और वह किसके हाथों पराजित हुए?",
+    question_hi: "1760 के वांडीवाश के युद्ध में, फ्रांसीसी सेना का नेतृत्व किसने किया था, और वह किसके हाथों पराजित हुए?",
+    options_en: [
+      "डुप्ले; रॉबर्ट क्लाइव",
+      "काउंट-डी-लाली; सर आयरकूट",
+      "काउंट-डी-लाली; रॉबर्ट क्लाइव",
+      "डुप्ले; आयरकूट"
+    ],
+    options_hi: [
+      "डुप्ले; रॉबर्ट क्लाइव",
+      "काउंट-डी-लाली; सर आयरकूट",
+      "काउंट-डी-लाली; रॉबर्ट क्लाइव",
+      "डुप्ले; आयरकूट"
+    ],
+    correct_option_index: 1,
+    explanation_en: "फ्रांसीसी सेना का नेतृत्व काउंट-डी-लाली ने किया था, और वे अंग्रेजी सेना के सर आयरकूट के हाथों पराजित हुए थे।",
+    explanation_hi: "फ्रांसीसी सेना का नेतृत्व काउंट-डी-लाली ने किया था, और वे अंग्रेजी सेना के सर आयरकूट के हाथों पराजित हुए थे।"
+  },
+  {
+    question_en: "प्लासी के युद्ध से पहले, कलकत्ता पर कब्ज़ा करने के बाद नवाब सिराजुद्दौला ने उसका नया नाम क्या रखा था, और इसे किसे सौंपा था?",
+    question_hi: "प्लासी के युद्ध से पहले, कलकत्ता पर कब्ज़ा करने के बाद नवाब सिराजुद्दौला ने उसका नया नाम क्या रखा था, और इसे किसे सौंपा था?",
+    options_en: [
+      "फोर्ट विलियम; रॉबर्ट क्लाइव",
+      "फैजाबाद; वाट्सन",
+      "अलीनगर; माणिकचंद",
+      "मुर्शिदाबाद; मीर जाफ़र"
+    ],
+    options_hi: [
+      "फोर्ट विलियम; रॉबर्ट क्लाइव",
+      "फैजाबाद; वाट्सन",
+      "अलीनगर; माणिकचंद",
+      "मुर्शिदाबाद; मीर जाफ़र"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कलकत्ता जीतने के बाद सिराज ने उसका नया नाम 'अलीनगर' रखा और इसे अपने प्रतिनिधि माणिकचंद को सौंप दिया था।",
+    explanation_hi: "कलकत्ता जीतने के बाद सिराज ने उसका नया नाम 'अलीनगर' रखा और इसे अपने प्रतिनिधि माणिकचंद को सौंप दिया था।"
+  },
+  {
+    question_en: "बक्सर के युद्ध के बाद (1764), इलाहाबाद की प्रथम संधि (1765) के तहत, मुगल सम्राट शाह आलम द्वितीय को वार्षिक पेंशन के रूप में कितनी राशि मिली?",
+    question_hi: "बक्सर के युद्ध के बाद (1764), इलाहाबाद की प्रथम संधि (1765) के तहत, मुगल सम्राट शाह आलम द्वितीय को वार्षिक पेंशन के रूप में कितनी राशि मिली?",
+    options_en: [
+      "50 लाख रुपये",
+      "3 करोड़ रुपये",
+      "26 लाख रुपये",
+      "1.5 करोड़ रुपये"
+    ],
+    options_hi: [
+      "50 लाख रुपये",
+      "3 करोड़ रुपये",
+      "26 लाख रुपये",
+      "1.5 करोड़ रुपये"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कंपनी ने शाह आलम द्वितीय को 26 लाख रुपये की वार्षिक पेंशन देना स्वीकार किया था।",
+    explanation_hi: "कंपनी ने शाह आलम द्वितीय को 26 लाख रुपये की वार्षिक पेंशन देना स्वीकार किया था।"
+  },
+  {
+    question_en: "द्वितीय आंग्ल-मैसूर युद्ध (1780-1784) के दौरान, हैदर अली 1781 में सर आयरकूट के हाथों किस विशिष्ट युद्ध में पराजित हुए थे?",
+    question_hi: "द्वितीय आंग्ल-मैसूर युद्ध (1780-1784) के दौरान, हैदर अली 1781 में सर आयरकूट के हाथों किस विशिष्ट युद्ध में पराजित हुए थे?",
+    options_en: [
+      "अड्यार का युद्ध",
+      "मंगलौर का युद्ध",
+      "पोर्टो नोवो का युद्ध",
+      "मद्रास का युद्ध"
+    ],
+    options_hi: [
+      "अड्यार का युद्ध",
+      "मंगलौर का युद्ध",
+      "पोर्टो नोवो का युद्ध",
+      "मद्रास का युद्ध"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द्वितीय आंग्ल-मैसूर युद्ध के दौरान हैदर अली 1781 में पोर्टो नोवो में सर आयरकूट के हाथों पराजित हुए थे।",
+    explanation_hi: "द्वितीय आंग्ल-मैसूर युद्ध के दौरान हैदर अली 1781 में पोर्टो नोवो में सर आयरकूट के हाथों पराजित हुए थे।"
+  },
+  {
+    question_en: "लॉर्ड वेलेसली की सहायक संधि (1798-1805) के प्रावधानों के तहत, शासक को कंपनी की अनुमति के बिना किसे अपनी सेवा में नियुक्त करने की अनुमति नहीं थी?",
+    question_hi: "लॉर्ड वेलेसली की सहायक संधि (1798-1805) के प्रावधानों के तहत, शासक को कंपनी की अनुमति के बिना किसे अपनी सेवा में नियुक्त करने की अनुमति नहीं थी?",
+    options_en: [
+      "देशी राजा",
+      "किसी भी यूरोपीय को",
+      "अफगान शासक",
+      "अमेरिकी व्यापारी"
+    ],
+    options_hi: [
+      "देशी राजा",
+      "किसी भी यूरोपीय को",
+      "अफगान शासक",
+      "अमेरिकी व्यापारी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "शासक को कंपनी की अनुमति के बिना किसी भी यूरोपीय को अपनी सेवा में नियुक्त करने की अनुमति नहीं थी।",
+    explanation_hi: "शासक को कंपनी की अनुमति के बिना किसी भी यूरोपीय को अपनी सेवा में नियुक्त करने की अनुमति नहीं थी।"
+  },
+  {
+    question_en: "मराठा संघ (Maratha Confederacy) का निर्माण बाजीराव प्रथम ने किया था, इस संघ में पवारों का केंद्र (राजधानी) क्या था?",
+    question_hi: "मराठा संघ (Maratha Confederacy) का निर्माण बाजीराव प्रथम ने किया था, इस संघ में पवारों का केंद्र (राजधानी) क्या था?",
+    options_en: [
+      "पूना",
+      "ग्वालियर",
+      "इंदौर",
+      "धार"
+    ],
+    options_hi: [
+      "पूना",
+      "ग्वालियर",
+      "इंदौर",
+      "धार"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मराठा संघ के घटकों में पवारों का केंद्र धार था।",
+    explanation_hi: "मराठा संघ के घटकों में पवारों का केंद्र धार था।"
+  },
+  {
+    question_en: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद, अंतिम पेशवा बाजी राव द्वितीय को कानपुर के पास किस स्थान पर भेज दिया गया था?",
+    question_hi: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद, अंतिम पेशवा बाजी राव द्वितीय को कानपुर के पास किस स्थान पर भेज दिया गया था?",
+    options_en: [
+      "पूना",
+      "सतारा",
+      "बिठूर",
+      "ग्वालियर"
+    ],
+    options_hi: [
+      "पूना",
+      "सतारा",
+      "बिठूर",
+      "ग्वालियर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पेशवा बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया था।",
+    explanation_hi: "पेशवा बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया था।"
+  },
+  {
+    question_en: "महाराजा रणजीत सिंह ने 1809 में अंग्रेजों के साथ 'अमृतसर की संधि' पर हस्ताक्षर किए, जिसमें किस नदी को सीमा रेखा के रूप में तय किया गया था?",
+    question_hi: "महाराजा रणजीत सिंह ने 1809 में अंग्रेजों के साथ 'अमृतसर की संधि' पर हस्ताक्षर किए, जिसमें किस नदी को सीमा रेखा के रूप में तय किया गया था?",
+    options_en: [
+      "झेलम नदी",
+      "रावी नदी",
+      "सतलज नदी",
+      "सिंधु नदी"
+    ],
+    options_hi: [
+      "झेलम नदी",
+      "रावी नदी",
+      "सतलज नदी",
+      "सिंधु नदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अमृतसर की संधि ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया था।",
+    explanation_hi: "अमृतसर की संधि ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया था।"
+  },
+  {
+    question_en: "'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत, लॉर्ड डलहौजी द्वारा विलय किया गया चौथा राज्य कौन सा था (वर्ष 1850)?",
+    question_hi: "'व्यपगत के सिद्धांत' (Doctrine of Lapse) के तहत, लॉर्ड डलहौजी द्वारा विलय किया गया चौथा राज्य कौन सा था (वर्ष 1850)?",
+    options_en: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    options_hi: [
+      "सतारा",
+      "जैतपुर",
+      "संबलपुर",
+      "बघाट"
+    ],
+    correct_option_index: 3,
+    explanation_en: "विलय का क्रम: सतारा (1848), जैतपुर (1849), संबलपुर (1849), और बघाट (1850)।",
+    explanation_hi: "विलय का क्रम: सतारा (1848), जैतपुर (1849), संबलपुर (1849), और बघाट (1850)।"
+  },
+  {
+    question_en: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) के लिए 'गाँव को इकाई' मानने का सुझाव 1819 ईस्वी में किसने दिया था?",
+    question_hi: "महालवाड़ी बंदोबस्त (30% हिस्से पर लागू) के लिए 'गाँव को इकाई' मानने का सुझाव 1819 ईस्वी में किसने दिया था?",
+    options_en: [
+      "थॉमस मुनरो",
+      "अलेक्जेंडर रीड",
+      "हॉल्ट मैकेंजी",
+      "लॉर्ड विलियम बेंटिक"
+    ],
+    options_hi: [
+      "थॉमस मुनरो",
+      "अलेक्जेंडर रीड",
+      "हॉल्ट मैकेंजी",
+      "लॉर्ड विलियम बेंटिक"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गाँव को इकाई मानने का सुझाव 1819 ईस्वी में हॉल्ट मैकेंजी ने दिया था।",
+    explanation_hi: "गाँव को इकाई मानने का सुझाव 1819 ईस्वी में हॉल्ट मैकेंजी ने दिया था।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय द्वारा स्थापित किस संस्था का मुख्य उद्देश्य एकेश्वरवाद का समर्थन करना था, जिसकी स्थापना 1815 में हुई?",
+    question_hi: "राजा राम मोहन रॉय द्वारा स्थापित किस संस्था का मुख्य उद्देश्य एकेश्वरवाद का समर्थन करना था, जिसकी स्थापना 1815 में हुई?",
+    options_en: [
+      "ब्रह्म समाज",
+      "वेदांत कॉलेज",
+      "आत्मीय सभा",
+      "तत्त्वबोधिनी सभा"
+    ],
+    options_hi: [
+      "ब्रह्म समाज",
+      "वेदांत कॉलेज",
+      "आत्मीय सभा",
+      "तत्त्वबोधिनी सभा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "आत्मीय सभा (1815, कलकत्ता) एकेश्वरवाद के समर्थक थे।",
+    explanation_hi: "आत्मीय सभा (1815, कलकत्ता) एकेश्वरवाद के समर्थक थे।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन (1866) होने पर, महर्षि देवेन्द्र नाथ टैगोर के समाज को किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन (1866) होने पर, महर्षि देवेन्द्र नाथ टैगोर के समाज को किस नाम से जाना गया?",
+    options_en: [
+      "भारतीय ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "आदि ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    options_hi: [
+      "भारतीय ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "आदि ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "विभाजन के बाद देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।",
+    explanation_hi: "विभाजन के बाद देवेन्द्र नाथ टैगोर का समाज 'आदि ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "ईश्वर चंद्र विद्यासागर ने 1850 में किस कॉलेज के प्रधानाचार्य बनकर उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    question_hi: "ईश्वर चंद्र विद्यासागर ने 1850 में किस कॉलेज के प्रधानाचार्य बनकर उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    options_en: [
+      "हिंदू कॉलेज",
+      "बेथ्यून कॉलेज",
+      "संस्कृत कॉलेज",
+      "कलकत्ता कॉलेज"
+    ],
+    options_hi: [
+      "हिंदू कॉलेज",
+      "बेथ्यून कॉलेज",
+      "संस्कृत कॉलेज",
+      "कलकत्ता कॉलेज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वह संस्कृत कॉलेज के प्रधानाचार्य बने, और गैर-ब्राह्मणों को भी प्रवेश दिया।",
+    explanation_hi: "वह संस्कृत कॉलेज के प्रधानाचार्य बने, और गैर-ब्राह्मणों को भी प्रवेश दिया।"
+  },
+  {
+    question_en: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    question_hi: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    options_en: [
+      "बंबई; 1882",
+      "लंदन; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "अड्यार; 1907"
+    ],
+    options_hi: [
+      "बंबई; 1882",
+      "लंदन; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "अड्यार; 1907"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इसकी स्थापना न्यूयॉर्क, यू.एस.ए. में 1875 में हुई। मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।",
+    explanation_hi: "इसकी स्थापना न्यूयॉर्क, यू.एस.ए. में 1875 में हुई। मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।"
+  },
+  {
+    question_en: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    question_hi: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    options_en: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    options_hi: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा शुरू किया गया था, और यह पश्चिमी प्रभावों का विरोध करता था।",
+    explanation_hi: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा शुरू किया गया था, और यह पश्चिमी प्रभावों का विरोध करता था।"
+  },
+  {
+    question_en: "सर सैय्यद अहमद खान द्वारा शुरू की गई पत्रिका 'तहजीब-उल-अखलाक' किस आंदोलन से जुड़ी थी?",
+    question_hi: "सर सैय्यद अहमद खान द्वारा शुरू की गई पत्रिका 'तहजीब-उल-अखलाक' किस आंदोलन से जुड़ी थी?",
+    options_en: [
+      "देवबंद आंदोलन",
+      "वहाबी आंदोलन",
+      "अलीगढ़ आंदोलन",
+      "आत्म-सम्मान आंदोलन"
+    ],
+    options_hi: [
+      "देवबंद आंदोलन",
+      "वहाबी आंदोलन",
+      "अलीगढ़ आंदोलन",
+      "आत्म-सम्मान आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सर सैय्यद अहमद खान ने अलीगढ़ आंदोलन के तहत 'तहजीब-उल-अखलाक' नामक पत्रिका शुरू की थी।",
+    explanation_hi: "सर सैय्यद अहमद खान ने अलीगढ़ आंदोलन के तहत 'तहजीब-उल-अखलाक' नामक पत्रिका शुरू की थी।"
+  },
+  {
+    question_en: "1857 के विद्रोह के दौरान, किस ब्रिटिश कमांडर ने इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को दबाया था?",
+    question_hi: "1857 के विद्रोह के दौरान, किस ब्रिटिश कमांडर ने इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को दबाया था?",
+    options_en: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    options_hi: [
+      "जॉन निकोलसन",
+      "ह्यूज रोज़",
+      "कॉलिन कैंपबेल",
+      "कर्नल नील"
+    ],
+    correct_option_index: 3,
+    explanation_en: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।",
+    explanation_hi: "इलाहाबाद (मौलवी लियाकत अली का केंद्र) के विद्रोह को कर्नल नील ने दबाया था।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में हुई?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में हुई?",
+    options_en: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    options_hi: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।",
+    explanation_hi: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।"
+  },
+  {
+    question_en: "दादा भाई नौरोजी कांग्रेस के किस अधिवेशन में अध्यक्ष थे, जहाँ पहली बार 'स्वराज्य' शब्द का प्रयोग किया गया था?",
+    question_hi: "दादा भाई नौरोजी कांग्रेस के किस अधिवेशन में अध्यक्ष थे, जहाँ पहली बार 'स्वराज्य' शब्द का प्रयोग किया गया था?",
+    options_en: [
+      "बंबई (1885)",
+      "सूरत (1907)",
+      "कलकत्ता (1906)",
+      "लाहौर (1929)"
+    ],
+    options_hi: [
+      "बंबई (1885)",
+      "सूरत (1907)",
+      "कलकत्ता (1906)",
+      "लाहौर (1929)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कांग्रेस ने पहली बार 1906 के कलकत्ता अधिवेशन (अध्यक्ष: दादा भाई नौरोजी) में 'स्वराज्य' शब्द का प्रयोग किया।",
+    explanation_hi: "कांग्रेस ने पहली बार 1906 के कलकत्ता अधिवेशन (अध्यक्ष: दादा भाई नौरोजी) में 'स्वराज्य' शब्द का प्रयोग किया।"
+  },
+  {
+    question_en: "लॉर्ड कर्जन ने बंगाल विभाजन की घोषणा कब की थी?",
+    question_hi: "लॉर्ड कर्जन ने बंगाल विभाजन की घोषणा कब की थी?",
+    options_en: [
+      "16 अक्टूबर 1905",
+      "7 अगस्त 1905",
+      "19 जुलाई 1905",
+      "12 दिसंबर 1911"
+    ],
+    options_hi: [
+      "16 अक्टूबर 1905",
+      "7 अगस्त 1905",
+      "19 जुलाई 1905",
+      "12 दिसंबर 1911"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई थी।",
+    explanation_hi: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई थी।"
+  },
+  {
+    question_en: "1907 के सूरत अधिवेशन में, कांग्रेस का विभाजन नरम दल और गरम दल में हुआ, उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "1907 के सूरत अधिवेशन में, कांग्रेस का विभाजन नरम दल और गरम दल में हुआ, उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "बाल गंगाधर तिलक",
+      "गोपाल कृष्ण गोखले",
+      "रास बिहारी घोष",
+      "रास बिहारी बोस"
+    ],
+    options_hi: [
+      "बाल गंगाधर तिलक",
+      "गोपाल कृष्ण गोखले",
+      "रास बिहारी घोष",
+      "रास बिहारी बोस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सूरत विभाजन (1907) के अध्यक्ष रास बिहारी घोष थे।",
+    explanation_hi: "सूरत विभाजन (1907) के अध्यक्ष रास बिहारी घोष थे।"
+  },
+  {
+    question_en: "1912 के दिल्ली षड्यंत्र केस में, लॉर्ड हार्डिंग पर हमला करने वाले क्रांतिकारी कौन थे?",
+    question_hi: "1912 के दिल्ली षड्यंत्र केस में, लॉर्ड हार्डिंग पर हमला करने वाले क्रांतिकारी कौन थे?",
+    options_en: [
+      "खुदीराम बोस और प्रफुल्ल चाकी",
+      "भगत सिंह और बटुकेश्वर दत्त",
+      "रास बिहारी बोस और सचिन सान्याल",
+      "मदनलाल ढींगरा"
+    ],
+    options_hi: [
+      "खुदीराम बोस और प्रफुल्ल चाकी",
+      "भगत सिंह और बटुकेश्वर दत्त",
+      "रास बिहारी बोस और सचिन सान्याल",
+      "मदनलाल ढींगरा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "लॉर्ड हार्डिंग पर हमला रास बिहारी बोस और सचिन सान्याल द्वारा किया गया।",
+    explanation_hi: "लॉर्ड हार्डिंग पर हमला रास बिहारी बोस और सचिन सान्याल द्वारा किया गया।"
+  },
+  {
+    question_en: "किस वर्ष में विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    question_hi: "किस वर्ष में विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    options_en: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    options_hi: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    correct_option_index: 1,
+    explanation_en: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।",
+    explanation_hi: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।"
+  },
+  {
+    question_en: "1929 में केंद्रीय विधानसभा में बम फेंकने के बाद भगत सिंह और बटुकेश्वर दत्त पर किस अन्य मामले के साथ मुकदमा चला था?",
+    question_hi: "1929 में केंद्रीय विधानसभा में बम फेंकने के बाद भगत सिंह और बटुकेश्वर दत्त पर किस अन्य मामले के साथ मुकदमा चला था?",
+    options_en: [
+      "काकोरी षड्यंत्र केस",
+      "नासिक षड्यंत्र केस",
+      "लाहौर षड्यंत्र केस",
+      "अलीपुर षड्यंत्र केस"
+    ],
+    options_hi: [
+      "काकोरी षड्यंत्र केस",
+      "नासिक षड्यंत्र केस",
+      "लाहौर षड्यंत्र केस",
+      "अलीपुर षड्यंत्र केस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भगत सिंह और बटुकेश्वर दत्त पर लाहौर षड्यंत्र केस के साथ-साथ केंद्रीय विधानसभा बम विस्फोट मामले के तहत मुकदमा चला।",
+    explanation_hi: "भगत सिंह और बटुकेश्वर दत्त पर लाहौर षड्यंत्र केस के साथ-साथ केंद्रीय विधानसभा बम विस्फोट मामले के तहत मुकदमा चला।"
+  },
+  {
+    question_en: "गांधीजी ने भारत में अपना पहला सत्याग्रह (1917, चंपारण) किस प्रणाली के विरोध में किया, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    question_hi: "गांधीजी ने भारत में अपना पहला सत्याग्रह (1917, चंपारण) किस प्रणाली के विरोध में किया, और इस प्रणाली के तहत किसानों को अपनी कितनी भूमि पर नील की खेती करना अनिवार्य था?",
+    options_en: [
+      "इजारेदारी; 1/3 भाग",
+      "रैयतवाड़ी; 51 प्रतिशत",
+      "तीनकठिया; 3/20 भाग",
+      "स्थायी बंदोबस्त; 1/5 भाग"
+    ],
+    options_hi: [
+      "इजारेदारी; 1/3 भाग",
+      "रैयतवाड़ी; 51 प्रतिशत",
+      "तीनकठिया; 3/20 भाग",
+      "स्थायी बंदोबस्त; 1/5 भाग"
+    ],
+    correct_option_index: 2,
+    explanation_en: "चंपारण सत्याग्रह तीनकठिया पद्धति के विरोध में था, जिसके तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती अनिवार्य थी।",
+    explanation_hi: "चंपारण सत्याग्रह तीनकठिया पद्धति के विरोध में था, जिसके तहत किसानों को अपनी भूमि के 3/20वें हिस्से पर नील की खेती अनिवार्य थी।"
+  },
+  {
+    question_en: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर द्वारा 'सर' की उपाधि लौटाने के अलावा, गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में कौन सी उपाधि वापस की थी?",
+    question_hi: "जलियाँवाला बाग कांड (1919) के विरोध में रवींद्रनाथ टैगोर द्वारा 'सर' की उपाधि लौटाने के अलावा, गांधीजी ने असहयोग आंदोलन (1920) की शुरुआत में कौन सी उपाधि वापस की थी?",
+    options_en: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    options_hi: [
+      "राय बहादुर",
+      "खान बहादुर",
+      "कैसर-ए-हिंद",
+      "महात्मा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "गांधीजी ने असहयोग आंदोलन की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।",
+    explanation_hi: "गांधीजी ने असहयोग आंदोलन की शुरुआत में 'कैसर-ए-हिंद' की उपाधि वापस की थी।"
+  },
+  {
+    question_en: "1920 के नागपुर अधिवेशन (वार्षिक) में असहयोग आंदोलन का प्रस्ताव पारित किया गया, उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "1920 के नागपुर अधिवेशन (वार्षिक) में असहयोग आंदोलन का प्रस्ताव पारित किया गया, उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "लाला लाजपत राय",
+      "सी.आर. दास",
+      "वीर राघवाचारी",
+      "मोतीलाल नेहरू"
+    ],
+    options_hi: [
+      "लाला लाजपत राय",
+      "सी.आर. दास",
+      "वीर राघवाचारी",
+      "मोतीलाल नेहरू"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दिसंबर 1920 में नागपुर अधिवेशन की अध्यक्षता वीर राघवाचारी ने की थी।",
+    explanation_hi: "दिसंबर 1920 में नागपुर अधिवेशन की अध्यक्षता वीर राघवाचारी ने की थी।"
+  },
+  {
+    question_en: "स्वराज पार्टी (1923) का मुख्य उद्देश्य क्या था, जिसके लिए वह विधान परिषदों में प्रवेश करना चाहते थे?",
+    question_hi: "स्वराज पार्टी (1923) का मुख्य उद्देश्य क्या था, जिसके लिए वह विधान परिषदों में प्रवेश करना चाहते थे?",
+    options_en: [
+      "पूर्ण स्वतंत्रता प्राप्त करना",
+      "असहयोग आंदोलन जारी रखना",
+      "विधान परिषदों में प्रवेश (प्रशासनिक सुधार)",
+      "विदेशी वस्तुओं का बहिष्कार"
+    ],
+    options_hi: [
+      "पूर्ण स्वतंत्रता प्राप्त करना",
+      "असहयोग आंदोलन जारी रखना",
+      "विधान परिषदों में प्रवेश (प्रशासनिक सुधार)",
+      "विदेशी वस्तुओं का बहिष्कार"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वराज पार्टी का उद्देश्य विधान परिषदों में प्रवेश करना था।",
+    explanation_hi: "स्वराज पार्टी का उद्देश्य विधान परिषदों में प्रवेश करना था।"
+  },
+  {
+    question_en: "साइमन आयोग में कुल कितने सदस्य थे, और उस आयोग के अध्यक्ष कौन थे?",
+    question_hi: "साइमन आयोग में कुल कितने सदस्य थे, और उस आयोग के अध्यक्ष कौन थे?",
+    options_en: [
+      "5 सदस्य; लॉर्ड बर्कनहेड",
+      "9 सदस्य; लॉर्ड इरविन",
+      "7 सदस्य; जॉन साइमन",
+      "7 सदस्य; लॉर्ड कर्जन"
+    ],
+    options_hi: [
+      "5 सदस्य; लॉर्ड बर्कनहेड",
+      "9 सदस्य; लॉर्ड इरविन",
+      "7 सदस्य; जॉन साइमन",
+      "7 सदस्य; लॉर्ड कर्जन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "साइमन आयोग में कुल 7 सदस्य थे, और उसके अध्यक्ष जॉन साइमन थे।",
+    explanation_hi: "साइमन आयोग में कुल 7 सदस्य थे, और उसके अध्यक्ष जॉन साइमन थे।"
+  },
+  {
+    question_en: "1928 में लॉर्ड बर्कनहेड की चुनौती का जवाब देने के लिए, सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    question_hi: "1928 में लॉर्ड बर्कनहेड की चुनौती का जवाब देने के लिए, सर्वसम्मत संविधान की रूपरेखा तैयार करने वाली समिति की अध्यक्षता किसने की थी?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "मोतीलाल नेहरू",
+      "सुभाष चंद्र बोस",
+      "डॉ. बी.आर. अंबेडकर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।",
+    explanation_hi: "इस समिति की अध्यक्षता मोतीलाल नेहरू ने की थी।"
+  },
+  {
+    question_en: "1929 के लाहौर अधिवेशन में पूर्ण स्वराज प्रस्ताव पारित हुआ। पहला स्वतंत्रता दिवस कब मनाया गया, और किस नदी के किनारे झंडा फहराया गया?",
+    question_hi: "1929 के लाहौर अधिवेशन में पूर्ण स्वराज प्रस्ताव पारित हुआ। पहला स्वतंत्रता दिवस कब मनाया गया, और किस नदी के किनारे झंडा फहराया गया?",
+    options_en: [
+      "15 अगस्त 1947; यमुना नदी",
+      "26 जनवरी 1930; सिंधु नदी",
+      "26 जनवरी 1930; रावी नदी",
+      "31 दिसंबर 1929; सतलज नदी"
+    ],
+    options_hi: [
+      "15 अगस्त 1947; यमुना नदी",
+      "26 जनवरी 1930; सिंधु नदी",
+      "26 जनवरी 1930; रावी नदी",
+      "31 दिसंबर 1929; सतलज नदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "26 जनवरी, 1930 को रावी नदी के किनारे पहला स्वतंत्रता दिवस मनाया गया।",
+    explanation_hi: "26 जनवरी, 1930 को रावी नदी के किनारे पहला स्वतंत्रता दिवस मनाया गया।"
+  },
+  {
+    question_en: "सविनय अवज्ञा आंदोलन (1930) के दौरान, दांडी मार्च कितने किलोमीटर की पैदल यात्रा थी, और गांधीजी के साथ कितने सहयोगी थे?",
+    question_hi: "सविनय अवज्ञा आंदोलन (1930) के दौरान, दांडी मार्च कितने किलोमीटर की पैदल यात्रा थी, और गांधीजी के साथ कितने सहयोगी थे?",
+    options_en: [
+      "200 किमी; 50 सहयोगी",
+      "300 किमी; 100 सहयोगी",
+      "384 किमी; 78 सहयोगी",
+      "400 किमी; 80 सहयोगी"
+    ],
+    options_hi: [
+      "200 किमी; 50 सहयोगी",
+      "300 किमी; 100 सहयोगी",
+      "384 किमी; 78 सहयोगी",
+      "400 किमी; 80 सहयोगी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दांडी मार्च 384 किमी की पैदल यात्रा थी, जिसे 78 चुने हुए सहयोगियों के साथ शुरू किया गया।",
+    explanation_hi: "दांडी मार्च 384 किमी की पैदल यात्रा थी, जिसे 78 चुने हुए सहयोगियों के साथ शुरू किया गया।"
+  },
+  {
+    question_en: "द्वितीय गोलमेज सम्मेलन (1931) में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी से तीखा टकराव किस नेता का हुआ था?",
+    question_hi: "द्वितीय गोलमेज सम्मेलन (1931) में दलितों के पृथक निर्वाचन मंडल के मुद्दे पर गांधीजी से तीखा टकराव किस नेता का हुआ था?",
+    options_en: [
+      "मोहम्मद अली जिन्ना",
+      "सी. राजगोपालाचारी",
+      "डॉ. बी.आर. अंबेडकर",
+      "तेज बहादुर सप्रू"
+    ],
+    options_hi: [
+      "मोहम्मद अली जिन्ना",
+      "सी. राजगोपालाचारी",
+      "डॉ. बी.आर. अंबेडकर",
+      "तेज बहादुर सप्रू"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द्वितीय गोलमेज सम्मेलन में गांधीजी और डॉ. बी.आर. अंबेडकर के बीच तीखा टकराव हुआ।",
+    explanation_hi: "द्वितीय गोलमेज सम्मेलन में गांधीजी और डॉ. बी.आर. अंबेडकर के बीच तीखा टकराव हुआ।"
+  },
+  {
+    question_en: "पूना समझौता (1932) के तहत, प्रांतीय विधानसभाओं में दलितों के लिए कितनी सीटें आरक्षित की गईं (बढ़ाकर)?",
+    question_hi: "पूना समझौता (1932) के तहत, प्रांतीय विधानसभाओं में दलितों के लिए कितनी सीटें आरक्षित की गईं (बढ़ाकर)?",
+    options_en: [
+      "71 सीटें",
+      "100 सीटें",
+      "147 सीटें",
+      "18% सीटें"
+    ],
+    options_hi: [
+      "71 सीटें",
+      "100 सीटें",
+      "147 सीटें",
+      "18% सीटें"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पूना समझौते के तहत, प्रांतीय विधानसभाओं में दलितों के लिए आरक्षित सीटें बढ़ाकर 147 कर दी गईं।",
+    explanation_hi: "पूना समझौते के तहत, प्रांतीय विधानसभाओं में दलितों के लिए आरक्षित सीटें बढ़ाकर 147 कर दी गईं।"
+  },
+  {
+    question_en: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया। इसके प्रथम अध्यक्ष कौन थे?",
+    question_hi: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया। इसके प्रथम अध्यक्ष कौन थे?",
+    options_en: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    options_hi: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया।",
+    explanation_hi: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया।"
+  },
+  {
+    question_en: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले 1933 में किसने किया था?",
+    question_hi: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले 1933 में किसने किया था?",
+    options_en: [
+      "मोहम्मद इकबाल",
+      "मोहम्मद अली जिन्ना",
+      "चौधरी रहमत अली",
+      "लियाकत अली खान"
+    ],
+    options_hi: [
+      "मोहम्मद इकबाल",
+      "मोहम्मद अली जिन्ना",
+      "चौधरी रहमत अली",
+      "लियाकत अली खान"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया था।",
+    explanation_hi: "'पाकिस्तान' शब्द का प्रयोग सबसे पहले कैंब्रिज विश्वविद्यालय के छात्र चौधरी रहमत अली ने 1933 में किया था।"
+  },
+  {
+    question_en: "द्वितीय विश्व युद्ध में भारतीयों का सहयोग प्राप्त करने के लिए ब्रिटिशों ने 8 अगस्त 1940 को कौन सा प्रस्ताव भेजा था?",
+    question_hi: "द्वितीय विश्व युद्ध में भारतीयों का सहयोग प्राप्त करने के लिए ब्रिटिशों ने 8 अगस्त 1940 को कौन सा प्रस्ताव भेजा था?",
+    options_en: [
+      "क्रिप्स मिशन",
+      "कैबिनेट मिशन",
+      "लिनलिथगो प्रस्ताव (अगस्त प्रस्ताव)",
+      "माउंटबेटन योजना"
+    ],
+    options_hi: [
+      "क्रिप्स मिशन",
+      "कैबिनेट मिशन",
+      "लिनलिथगो प्रस्ताव (अगस्त प्रस्ताव)",
+      "माउंटबेटन योजना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ब्रिटिशों ने लिनलिथगो प्रस्ताव (अगस्त प्रस्ताव) 8 अगस्त 1940 को भेजा था।",
+    explanation_hi: "ब्रिटिशों ने लिनलिथगो प्रस्ताव (अगस्त प्रस्ताव) 8 अगस्त 1940 को भेजा था।"
+  },
+  {
+    question_en: "व्यक्तिगत सत्याग्रह आंदोलन (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    question_hi: "व्यक्तिगत सत्याग्रह आंदोलन (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    options_en: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और सरदार पटेल",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल"
+    ],
+    options_hi: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और सरदार पटेल",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम सत्याग्रही विनोबा भावे और द्वितीय सत्याग्रही जवाहरलाल नेहरू थे।",
+    explanation_hi: "प्रथम सत्याग्रही विनोबा भावे और द्वितीय सत्याग्रही जवाहरलाल नेहरू थे।"
+  },
+  {
+    question_en: "'ऑपरेशन जीरो आवर' (9 अगस्त 1942) के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    question_hi: "'ऑपरेशन जीरो आवर' (9 अगस्त 1942) के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    options_en: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    options_hi: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।",
+    explanation_hi: "नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।"
+  },
+  {
+    question_en: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    question_hi: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    options_en: [
+      "बलिया (चित्तू पांडे)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    options_hi: [
+      "बलिया (चित्तू पांडे)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।",
+    explanation_hi: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    question_hi: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    options_en: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    options_hi: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।",
+    explanation_hi: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1943 में सिंगापुर में अस्थाई सरकार की स्थापना की थी। उनकी महिला रेजिमेंट का नाम क्या था?",
+    question_hi: "सुभाष चंद्र बोस ने 1943 में सिंगापुर में अस्थाई सरकार की स्थापना की थी। उनकी महिला रेजिमेंट का नाम क्या था?",
+    options_en: [
+      "आजाद रेजिमेंट",
+      "रानी लक्ष्मीबाई रेजिमेंट",
+      "झांसी की रानी रेजिमेंट",
+      "दुर्गावती रेजिमेंट"
+    ],
+    options_hi: [
+      "आजाद रेजिमेंट",
+      "रानी लक्ष्मीबाई रेजिमेंट",
+      "झांसी की रानी रेजिमेंट",
+      "दुर्गावती रेजिमेंट"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उनकी महिला रेजिमेंट का नाम 'झांसी की रानी रेजिमेंट' था।",
+    explanation_hi: "उनकी महिला रेजिमेंट का नाम 'झांसी की रानी रेजिमेंट' था।"
+  },
+  {
+    question_en: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    question_hi: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    options_en: [
+      "स्टैफोर्ड क्रिप्स, पैथिक लोरेंस, ए.वी. अलेक्जेंडर; क्रिप्स",
+      "लॉर्ड माउंटबेटन, स्टैफोर्ड क्रिप्स, पैथिक लोरेंस; माउंटबेटन",
+      "पैथिक लोरेंस, क्रिप्स, ए.वी. अलेक्जेंडर; पैथिक लोरेंस",
+      "क्लीमेंट एटली, लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स; एटली"
+    ],
+    options_hi: [
+      "स्टैफोर्ड क्रिप्स, पैथिक लोरेंस, ए.वी. अलेक्जेंडर; क्रिप्स",
+      "लॉर्ड माउंटबेटन, स्टैफोर्ड क्रिप्स, पैथिक लोरेंस; माउंटबेटन",
+      "पैथिक लोरेंस, क्रिप्स, ए.वी. अलेक्जेंडर; पैथिक लोरेंस",
+      "क्लीमेंट एटली, लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स; एटली"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।",
+    explanation_hi: "कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।"
+  },
+  {
+    question_en: "कैबिनेट मिशन योजना के तहत, संविधान सभा में कुल कितने सदस्य होने थे?",
+    question_hi: "कैबिनेट मिशन योजना के तहत, संविधान सभा में कुल कितने सदस्य होने थे?",
+    options_en: [
+      "292 सदस्य",
+      "300 सदस्य",
+      "389 सदस्य",
+      "400 सदस्य"
+    ],
+    options_hi: [
+      "292 सदस्य",
+      "300 सदस्य",
+      "389 सदस्य",
+      "400 सदस्य"
+    ],
+    correct_option_index: 2,
+    explanation_en: "संविधान सभा का गठन कैबिनेट मिशन योजना के तहत किया गया, जिसमें कुल 389 सदस्य होने थे।",
+    explanation_hi: "संविधान सभा का गठन कैबिनेट मिशन योजना के तहत किया गया, जिसमें कुल 389 सदस्य होने थे।"
+  },
+  {
+    question_en: "भारत स्वतंत्रता अधिनियम (Indian Independence Act) ब्रिटिश पार्लियामेंट द्वारा किस तिथि को पारित किया गया था?",
+    question_hi: "भारत स्वतंत्रता अधिनियम (Indian Independence Act) ब्रिटिश पार्लियामेंट द्वारा किस तिथि को पारित किया गया था?",
+    options_en: [
+      "3 जून 1947",
+      "15 अगस्त 1947",
+      "18 जुलाई 1947",
+      "24 मार्च 1947"
+    ],
+    options_hi: [
+      "3 जून 1947",
+      "15 अगस्त 1947",
+      "18 जुलाई 1947",
+      "24 मार्च 1947"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ब्रिटिश पार्लियामेंट द्वारा 'भारत स्वतंत्रता अधिनियम' 18 जुलाई, 1947 को पारित किया गया था।",
+    explanation_hi: "ब्रिटिश पार्लियामेंट द्वारा 'भारत स्वतंत्रता अधिनियम' 18 जुलाई, 1947 को पारित किया गया था।"
+  },
+  {
+    question_en: "स्वतंत्रता के समय (अगस्त 1947) भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+    question_hi: "स्वतंत्रता के समय (अगस्त 1947) भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "महात्मा गांधी",
+      "जे.बी. कृपलानी",
+      "मौलाना अबुल कलाम आजाद"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "महात्मा गांधी",
+      "जे.बी. कृपलानी",
+      "मौलाना अबुल कलाम आजाद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वतंत्रता के समय कांग्रेस अध्यक्ष जे.बी. कृपलानी थे।",
+    explanation_hi: "स्वतंत्रता के समय कांग्रेस अध्यक्ष जे.बी. कृपलानी थे।"
+  },
+  {
+    question_en: "किस अधिनियम के तहत 'गवर्नर जनरल ऑफ इंडिया' (G.G.I.) का पद 'वायसराय' में बदल दिया गया था?",
+    question_hi: "किस अधिनियम के तहत 'गवर्नर जनरल ऑफ इंडिया' (G.G.I.) का पद 'वायसराय' में बदल दिया गया था?",
+    options_en: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    options_hi: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भारत सरकार अधिनियम 1858 के तहत G.G.I. का पद वायसराय में बदल दिया गया था।",
+    explanation_hi: "भारत सरकार अधिनियम 1858 के तहत G.G.I. का पद वायसराय में बदल दिया गया था।"
+  },
+  {
+    question_en: "लॉर्ड कैनिंग, जो भारत के पहले वायसराय बने, किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    question_hi: "लॉर्ड कैनिंग, जो भारत के पहले वायसराय बने, किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    options_en: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    options_hi: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    correct_option_index: 1,
+    explanation_en: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।",
+    explanation_hi: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।"
+  },
+  {
+    question_en: "किस वायसराय के कार्यकाल में 'पोस्ट ऑफिस एक्ट' (Post Office Act) 1854 में पारित हुआ था?",
+    question_hi: "किस वायसराय के कार्यकाल में 'पोस्ट ऑफिस एक्ट' (Post Office Act) 1854 में पारित हुआ था?",
+    options_en: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड रिपन"
+    ],
+    options_hi: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड रिपन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'पोस्ट ऑफिस एक्ट' 1854 में लॉर्ड डलहौजी के कार्यकाल में पारित हुआ था।",
+    explanation_hi: "'पोस्ट ऑफिस एक्ट' 1854 में लॉर्ड डलहौजी के कार्यकाल में पारित हुआ था।"
+  },
+    {
+    question_en: "डच ईस्ट इंडिया कंपनी को अपनी पहली फैक्ट्री (1605, मसूलीपट्टनम) स्थापित करने के लिए कितने वर्षों का व्यापारिक एकाधिकार प्राप्त था?",
+    question_hi: "डच ईस्ट इंडिया कंपनी को अपनी पहली फैक्ट्री (1605, मसूलीपट्टनम) स्थापित करने के लिए कितने वर्षों का व्यापारिक एकाधिकार प्राप्त था?",
+    options_en: [
+      "15 वर्ष",
+      "10 वर्ष",
+      "21 वर्ष",
+      "5 वर्ष"
+    ],
+    options_hi: [
+      "15 वर्ष",
+      "10 वर्ष",
+      "21 वर्ष",
+      "5 वर्ष"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डच कंपनी को डच संसद से 21 वर्षों का एकाधिकार प्राप्त था।",
+    explanation_hi: "डच कंपनी को डच संसद से 21 वर्षों का एकाधिकार प्राप्त था।"
+  },
+  {
+    question_en: "1760 के वांडीवाश के युद्ध में, फ्रांसीसी सेना का नेतृत्व करने वाले काउंट-डी-लाली अंग्रेजों के किस कमांडर के हाथों पराजित हुए?",
+    question_hi: "1760 के वांडीवाश के युद्ध में, फ्रांसीसी सेना का नेतृत्व करने वाले काउंट-डी-लाली अंग्रेजों के किस कमांडर के हाथों पराजित हुए?",
+    options_en: [
+      "रॉबर्ट क्लाइव",
+      "हेक्टर मुनरो",
+      "सर आयरकूट",
+      "जेड हॉलवेल"
+    ],
+    options_hi: [
+      "रॉबर्ट क्लाइव",
+      "हेक्टर मुनरो",
+      "सर आयरकूट",
+      "जेड हॉलवेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वांडीवाश के युद्ध (1760) में अंग्रेजी सेना का नेतृत्व आयरकूट ने किया था, जिसने फ्रांसीसियों के प्रभाव को समाप्त कर दिया।",
+    explanation_hi: "वांडीवाश के युद्ध (1760) में अंग्रेजी सेना का नेतृत्व आयरकूट ने किया था, जिसने फ्रांसीसियों के प्रभाव को समाप्त कर दिया।"
+  },
+  {
+    question_en: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, जॉन सुरमन शिष्टमंडल में शामिल वह सर्जन कौन था जिसने फर्रुखसियर के फोड़े का सफल इलाज किया था?",
+    question_hi: "1717 के फर्रुखसियर फरमान (मैग्ना कार्टा) के तहत, जॉन सुरमन शिष्टमंडल में शामिल वह सर्जन कौन था जिसने फर्रुखसियर के फोड़े का सफल इलाज किया था?",
+    options_en: [
+      "विलियम हॉकिन्स",
+      "जॉर्ज हैमिल्टन",
+      "सर थॉमस रो",
+      "रॉबर्ट क्लाइव"
+    ],
+    options_hi: [
+      "विलियम हॉकिन्स",
+      "जॉर्ज हैमिल्टन",
+      "सर थॉमस रो",
+      "रॉबर्ट क्लाइव"
+    ],
+    correct_option_index: 1,
+    explanation_en: "फर्रुखसियर के गंभीर फोड़े का सफल इलाज जॉर्ज हैमिल्टन ने किया था, जिसके बाद फरमान जारी हुआ।",
+    explanation_hi: "फर्रुखसियर के गंभीर फोड़े का सफल इलाज जॉर्ज हैमिल्टन ने किया था, जिसके बाद फरमान जारी हुआ।"
+  },
+  {
+    question_en: "इलाहाबाद की प्रथम संधि (2 अगस्त 1765) के तहत, मुगल सम्राट शाह आलम द्वितीय अंग्रेजों का पेंशनर बनने वाला कौन सा मुगल बादशाह बना?",
+    question_hi: "इलाहाबाद की प्रथम संधि (2 अगस्त 1765) के तहत, मुगल सम्राट शाह आलम द्वितीय अंग्रेजों का पेंशनर बनने वाला कौन सा मुगल बादशाह बना?",
+    options_en: [
+      "दूसरा",
+      "तीसरा",
+      "प्रथम",
+      "अंतिम"
+    ],
+    options_hi: [
+      "दूसरा",
+      "तीसरा",
+      "प्रथम",
+      "अंतिम"
+    ],
+    correct_option_index: 2,
+    explanation_en: "शाह आलम द्वितीय अंग्रेजों का पेंशनर बनने वाला प्रथम मुगल बादशाह बना।",
+    explanation_hi: "शाह आलम द्वितीय अंग्रेजों का पेंशनर बनने वाला प्रथम मुगल बादशाह बना।"
+  },
+  {
+    question_en: "टीपू सुल्तान को मैसूर का बाघ कहा जाता है। श्रीरंगपट्टनम की संधि (1792) के तहत, कंपनी ने उनके दो बेटों को किस रूप में अपने पास रखा था?",
+    question_hi: "टीपू सुल्तान को मैसूर का बाघ कहा जाता है। श्रीरंगपट्टनम की संधि (1792) के तहत, कंपनी ने उनके दो बेटों को किस रूप में अपने पास रखा था?",
+    options_en: [
+      "राजनीतिक सलाहकार",
+      "सैन्य कमांडर",
+      "बंधक (Hostages)",
+      "दूत (Ambassadors)"
+    ],
+    options_hi: [
+      "राजनीतिक सलाहकार",
+      "सैन्य कमांडर",
+      "बंधक (Hostages)",
+      "दूत (Ambassadors)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "संधि के प्रावधानों के तहत, टीपू के दो बेटों को कंपनी के पास बंधक (Hostages) के रूप में रखा गया।",
+    explanation_hi: "संधि के प्रावधानों के तहत, टीपू के दो बेटों को कंपनी के पास बंधक (Hostages) के रूप में रखा गया।"
+  },
+  {
+    question_en: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला मराठा प्रमुख कौन था, जिसने 1802 में बेसिन की संधि पर हस्ताक्षर किए?",
+    question_hi: "लॉर्ड वेलेसली की सहायक संधि पर हस्ताक्षर करने वाला पहला मराठा प्रमुख कौन था, जिसने 1802 में बेसिन की संधि पर हस्ताक्षर किए?",
+    options_en: [
+      "सिंधिया (1804)",
+      "होल्कर (1818)",
+      "पेशवा (1802)",
+      "भोंसले (1803)"
+    ],
+    options_hi: [
+      "सिंधिया (1804)",
+      "होल्कर (1818)",
+      "पेशवा (1802)",
+      "भोंसले (1803)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "मराठों में सबसे पहले पेशवा (1802) ने सहायक संधि पर हस्ताक्षर किए थे।",
+    explanation_hi: "मराठों में सबसे पहले पेशवा (1802) ने सहायक संधि पर हस्ताक्षर किए थे।"
+  },
+  {
+    question_en: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत किस वर्ष हुई, और पहले वंशानुगत पेशवा कौन थे?",
+    question_hi: "मराठा साम्राज्य में पेशवा पद को वंशानुगत बनाने की शुरुआत किस वर्ष हुई, और पहले वंशानुगत पेशवा कौन थे?",
+    options_en: [
+      "1740; बाजीराव प्रथम",
+      "1707; शाहू",
+      "1713; बालाजी विश्वनाथ",
+      "1674; मोरोपंत त्र्यंबक पिंगले"
+    ],
+    options_hi: [
+      "1740; बाजीराव प्रथम",
+      "1707; शाहू",
+      "1713; बालाजी विश्वनाथ",
+      "1674; मोरोपंत त्र्यंबक पिंगले"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1713 में नए राजा बने शाहू ने पेशवा पद को वंशानुगत बनाया, और पहले वंशानुगत पेशवा बालाजी विश्वनाथ (1713-1720) थे।",
+    explanation_hi: "1713 में नए राजा बने शाहू ने पेशवा पद को वंशानुगत बनाया, और पहले वंशानुगत पेशवा बालाजी विश्वनाथ (1713-1720) थे।"
+  },
+  {
+    question_en: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद, अंतिम पेशवा बाजी राव द्वितीय को कानपुर के पास किस स्थान पर भेज दिया गया था?",
+    question_hi: "तृतीय आंग्ल-मराठा युद्ध (1817-18) के बाद, अंतिम पेशवा बाजी राव द्वितीय को कानपुर के पास किस स्थान पर भेज दिया गया था?",
+    options_en: [
+      "पूना",
+      "सतारा",
+      "बिठूर",
+      "ग्वालियर"
+    ],
+    options_hi: [
+      "पूना",
+      "सतारा",
+      "बिठूर",
+      "ग्वालियर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पेशवा पद समाप्त कर दिया गया, और बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया।",
+    explanation_hi: "पेशवा पद समाप्त कर दिया गया, और बाजी राव द्वितीय को कानपुर के पास बिठूर भेज दिया गया।"
+  },
+  {
+    question_en: "महाराजा रणजीत सिंह ने 1809 की अमृतसर की संधि में अंग्रेजों के साथ किस नदी को सीमा रेखा के रूप में तय किया था?",
+    question_hi: "महाराजा रणजीत सिंह ने 1809 की अमृतसर की संधि में अंग्रेजों के साथ किस नदी को सीमा रेखा के रूप में तय किया था?",
+    options_en: [
+      "रावी नदी",
+      "झेलम नदी",
+      "सतलज नदी",
+      "सिंधु नदी"
+    ],
+    options_hi: [
+      "रावी नदी",
+      "झेलम नदी",
+      "सतलज नदी",
+      "सिंधु नदी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अमृतसर की संधि (1809) ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया।",
+    explanation_hi: "अमृतसर की संधि (1809) ने सतलज नदी को दोनों के बीच की सीमा के रूप में तय किया।"
+  },
+  {
+    question_en: "लॉर्ड डलहौजी द्वारा 'व्यपगत के सिद्धांत' (DoL) के तहत विलय किया गया पांचवा राज्य कौन सा था, जिसे 1852 में विलय किया गया?",
+    question_hi: "लॉर्ड डलहौजी द्वारा 'व्यपगत के सिद्धांत' (DoL) के तहत विलय किया गया पांचवा राज्य कौन सा था, जिसे 1852 में विलय किया गया?",
+    options_en: [
+      "सतारा (1848)",
+      "बघाट (1850)",
+      "उदयपुर (1852)",
+      "झांसी (1853)"
+    ],
+    options_hi: [
+      "सतारा (1848)",
+      "बघाट (1850)",
+      "उदयपुर (1852)",
+      "झांसी (1853)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "DoL के तहत विलय का क्रम: सतारा (1848), जैतपुर (1849), संबलपुर (1849), बघाट (1850), और उदयपुर (1852)।",
+    explanation_hi: "DoL के तहत विलय का क्रम: सतारा (1848), जैतपुर (1849), संबलपुर (1849), बघाट (1850), और उदयपुर (1852)।"
+  },
+  {
+    question_en: "लॉर्ड डलहौजी के किस कार्य के कारण, मुंबई से ठाणे तक पहली ट्रेन 1853 में चली, और कोलकाता से आगरा तक पहली तार सेवा शुरू हुई?",
+    question_hi: "लॉर्ड डलहौजी के किस कार्य के कारण, मुंबई से ठाणे तक पहली ट्रेन 1853 में चली, और कोलकाता से आगरा तक पहली तार सेवा शुरू हुई?",
+    options_en: [
+      "पोस्ट ऑफिस एक्ट 1854",
+      "डाक विभाग की स्थापना",
+      "रेलवे का संचालन और टेलीग्राफ सेवा",
+      "व्यपगत का सिद्धांत"
+    ],
+    options_hi: [
+      "पोस्ट ऑफिस एक्ट 1854",
+      "डाक विभाग की स्थापना",
+      "रेलवे का संचालन और टेलीग्राफ सेवा",
+      "व्यपगत का सिद्धांत"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डलहौजी के शासनकाल में रेलवे का संचालन (1853, बॉम्बे से ठाणे) और टेलीग्राफ (तार) सेवा (1853, कोलकाता से आगरा) शुरू हुई।",
+    explanation_hi: "डलहौजी के शासनकाल में रेलवे का संचालन (1853, बॉम्बे से ठाणे) और टेलीग्राफ (तार) सेवा (1853, कोलकाता से आगरा) शुरू हुई।"
+  },
+  {
+    question_en: "'रैयतवाड़ी बंदोबस्त' (51% हिस्से पर लागू) का प्रारंभिक प्रयोग 1792 ईस्वी में किसने, और किस जिले में किया था?",
+    question_hi: "'रैयतवाड़ी बंदोबस्त' (51% हिस्से पर लागू) का प्रारंभिक प्रयोग 1792 ईस्वी में किसने, और किस जिले में किया था?",
+    options_en: [
+      "थॉमस मुनरो, बंबई",
+      "हॉल्ट मैकेंजी, गंगा घाटी",
+      "अलेक्जेंडर रीड, तमिलनाडु के बारामहल जिले में",
+      "लॉर्ड कॉर्नवालिस, बंगाल"
+    ],
+    options_hi: [
+      "थॉमस मुनरो, बंबई",
+      "हॉल्ट मैकेंजी, गंगा घाटी",
+      "अलेक्जेंडर रीड, तमिलनाडु के बारामहल जिले में",
+      "लॉर्ड कॉर्नवालिस, बंगाल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "रैयतवाड़ी का प्रारंभिक प्रयोग 1792 ईस्वी में अलेक्जेंडर रीड द्वारा तमिलनाडु के बारामहल जिले में किया गया था।",
+    explanation_hi: "रैयतवाड़ी का प्रारंभिक प्रयोग 1792 ईस्वी में अलेक्जेंडर रीड द्वारा तमिलनाडु के बारामहल जिले में किया गया था।"
+  },
+  {
+    question_en: "'स्थायी बंदोबस्त' (Permanent Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू की गई थी?",
+    question_hi: "'स्थायी बंदोबस्त' (Permanent Settlement) ब्रिटिश शासित भारत के कितने प्रतिशत हिस्से पर लागू की गई थी?",
+    options_en: [
+      "51%",
+      "30%",
+      "19%",
+      "49%"
+    ],
+    options_hi: [
+      "51%",
+      "30%",
+      "19%",
+      "49%"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्थायी बंदोबस्त ब्रिटिश शासित भारत के 19 प्रतिशत हिस्से पर लागू की गई थी।",
+    explanation_hi: "स्थायी बंदोबस्त ब्रिटिश शासित भारत के 19 प्रतिशत हिस्से पर लागू की गई थी।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय की किस पत्रिका का नाम फारसी भाषा में था?",
+    question_hi: "राजा राम मोहन रॉय की किस पत्रिका का नाम फारसी भाषा में था?",
+    options_en: [
+      "संवाद कौमुदी (बंगाली)",
+      "बंगदूत (हिन्दी)",
+      "मिरात-उल-अखबार (फारसी)",
+      "तत्त्वबोधिनी"
+    ],
+    options_hi: [
+      "संवाद कौमुदी (बंगाली)",
+      "बंगदूत (हिन्दी)",
+      "मिरात-उल-अखबार (फारसी)",
+      "तत्त्वबोधिनी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उनकी पत्रिकाएँ थीं: संवाद कौमुदी (बंगाली), मिरात-उल-अखबार (फारसी), और बंगदूत (हिन्दी)।",
+    explanation_hi: "उनकी पत्रिकाएँ थीं: संवाद कौमुदी (बंगाली), मिरात-उल-अखबार (फारसी), और बंगदूत (हिन्दी)।"
+  },
+  {
+    question_en: "राजा राम मोहन रॉय को 'राजा' की उपाधि किस मुगल बादशाह ने दी थी, और उनकी मृत्यु कहाँ हुई थी?",
+    question_hi: "राजा राम मोहन रॉय को 'राजा' की उपाधि किस मुगल बादशाह ने दी थी, और उनकी मृत्यु कहाँ हुई थी?",
+    options_en: [
+      "बहादुर शाह जफर; लंदन",
+      "शाह आलम द्वितीय; कलकत्ता",
+      "अकबर शाह द्वितीय; ब्रिस्टल, इंग्लैंड",
+      "फर्रुखसियर; बॉम्बे"
+    ],
+    options_hi: [
+      "बहादुर शाह जफर; लंदन",
+      "शाह आलम द्वितीय; कलकत्ता",
+      "अकबर शाह द्वितीय; ब्रिस्टल, इंग्लैंड",
+      "फर्रुखसियर; बॉम्बे"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्हें 'राजा' की उपाधि मुगल बादशाह अकबर शाह द्वितीय ने दी थी, और उनकी मृत्यु 1833 में ब्रिस्टल, इंग्लैंड में हुई थी।",
+    explanation_hi: "उन्हें 'राजा' की उपाधि मुगल बादशाह अकबर शाह द्वितीय ने दी थी, और उनकी मृत्यु 1833 में ब्रिस्टल, इंग्लैंड में हुई थी।"
+  },
+  {
+    question_en: "महर्षि देवेन्द्र नाथ टैगोर ने 'तत्त्वबोधिनी सभा' की स्थापना कब की थी, और वे ब्रह्म समाज में किस वर्ष शामिल हुए?",
+    question_hi: "महर्षि देवेन्द्र नाथ टैगोर ने 'तत्त्वबोधिनी सभा' की स्थापना कब की थी, और वे ब्रह्म समाज में किस वर्ष शामिल हुए?",
+    options_en: [
+      "1815; 1828",
+      "1833; 1839",
+      "1839; 1842",
+      "1842; 1866"
+    ],
+    options_hi: [
+      "1815; 1828",
+      "1833; 1839",
+      "1839; 1842",
+      "1842; 1866"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्होंने 1839 में तत्त्वबोधिनी सभा की स्थापना की और 1842 में ब्रह्म समाज में शामिल हुए।",
+    explanation_hi: "उन्होंने 1839 में तत्त्वबोधिनी सभा की स्थापना की और 1842 में ब्रह्म समाज में शामिल हुए।"
+  },
+  {
+    question_en: "ब्रह्म समाज का विभाजन (1866) होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    question_hi: "ब्रह्म समाज का विभाजन (1866) होने पर, केशव चंद्र सेन के समाज को किस नाम से जाना गया?",
+    options_en: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    options_hi: [
+      "आदि ब्रह्म समाज",
+      "साधारण ब्रह्म समाज",
+      "भारतीय ब्रह्म समाज",
+      "प्रार्थना समाज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "1866 में विभाजन के बाद, केशव चंद्र सेन का समाज 'भारतीय ब्रह्म समाज' कहलाया।",
+    explanation_hi: "1866 में विभाजन के बाद, केशव चंद्र सेन का समाज 'भारतीय ब्रह्म समाज' कहलाया।"
+  },
+  {
+    question_en: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने (1850), जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    question_hi: "ईश्वर चंद्र विद्यासागर किस कॉलेज के प्रधानाचार्य बने (1850), जहाँ उन्होंने उच्च जाति के एकाधिकार को समाप्त करने का प्रयास किया?",
+    options_en: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    options_hi: [
+      "हिंदू कॉलेज",
+      "बंगाल नेशनल कॉलेज",
+      "संस्कृत कॉलेज",
+      "बेथ्यून कॉलेज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।",
+    explanation_hi: "वह 1850 में संस्कृत कॉलेज के प्रधानाचार्य बने।"
+  },
+  {
+    question_en: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी, और उनका प्रसिद्ध प्रकाशन कौन सा है?",
+    question_hi: "ज्योतिराव फुले को 'महात्मा' की उपाधि किसने दी, और उनका प्रसिद्ध प्रकाशन कौन सा है?",
+    options_en: [
+      "रवींद्रनाथ टैगोर; गीता रहस्य",
+      "महात्मा गांधी; यंग इंडिया",
+      "विट्ठलराव वाडेकर; सार्वजनिक सत्यधर्म",
+      "महादेव गोविंद रानाडे; प्रबुद्ध भारत"
+    ],
+    options_hi: [
+      "रवींद्रनाथ टैगोर; गीता रहस्य",
+      "महात्मा गांधी; यंग इंडिया",
+      "विट्ठलराव वाडेकर; सार्वजनिक सत्यधर्म",
+      "महादेव गोविंद रानाडे; प्रबुद्ध भारत"
+    ],
+    correct_option_index: 2,
+    explanation_en: "फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई। उनके प्रकाशन 'सार्वजनिक सत्यधर्म' और 'किसान का कोड़ा' थे।",
+    explanation_hi: "फुले को विट्ठलराव वाडेकर द्वारा 'महात्मा' की उपाधि दी गई। उनके प्रकाशन 'सार्वजनिक सत्यधर्म' और 'किसान का कोड़ा' थे।"
+  },
+  {
+    question_en: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    question_hi: "थियोसोफिकल सोसायटी की स्थापना 1875 में कहाँ हुई थी, और इसका अंतर्राष्ट्रीय मुख्यालय अड्यार (मद्रास) में कब स्थापित हुआ?",
+    options_en: [
+      "बंबई; 1882",
+      "लंदन; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "अड्यार; 1907"
+    ],
+    options_hi: [
+      "बंबई; 1882",
+      "लंदन; 1875",
+      "न्यूयॉर्क, यू.एस.ए.; 1882",
+      "अड्यार; 1907"
+    ],
+    correct_option_index: 2,
+    explanation_en: "इसकी स्थापना 1875 ईस्वी में न्यूयॉर्क, यू.एस.ए. में हुई थी। इसका मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।",
+    explanation_hi: "इसकी स्थापना 1875 ईस्वी में न्यूयॉर्क, यू.एस.ए. में हुई थी। इसका मुख्यालय 1882 ईस्वी में अड्यार, मद्रास में स्थापित किया गया।"
+  },
+  {
+    question_en: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    question_hi: "किस मुस्लिम समाज सुधार आंदोलन ने पाश्चात्य प्रभावों का विरोध किया और रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में 1866 में शुरू किया गया था?",
+    options_en: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    options_hi: [
+      "अलीगढ़ आंदोलन",
+      "वहाबी आंदोलन",
+      "देवबंद आंदोलन",
+      "फराज़ी आंदोलन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।",
+    explanation_hi: "देवबंद आंदोलन 1866 में रूढ़िवादी उलेमाओं द्वारा सहारनपुर जिले में शुरू किया गया।"
+  },
+  {
+    question_en: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस विशिष्ट स्थान पर मार दिया था?",
+    question_hi: "1857 के विद्रोह के नायक बहादुर शाह जफर के तीन पुत्रों को अंग्रेजों ने दिल्ली के किस विशिष्ट स्थान पर मार दिया था?",
+    options_en: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "इंडिया गेट"
+    ],
+    options_hi: [
+      "लाल किला",
+      "चांदनी चौक",
+      "खूनी दरवाज़ा",
+      "इंडिया गेट"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उनके तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।",
+    explanation_hi: "उनके तीन पुत्रों को अंग्रेजों ने दिल्ली के 'खूनी दरवाज़ा' पर मार दिया था।"
+  },
+  {
+    question_en: "भारतीय राष्ट्रीय कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में हुई?",
+    question_hi: "भारतीय राष्ट्रीय कांग्रेस की स्थापना से पहले, किस संगठन को 'जमींदारी एसोसिएशन' भी कहा जाता था, जिसकी स्थापना 1838 में हुई?",
+    options_en: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    options_hi: [
+      "इंडियन एसोसिएशन",
+      "पूना सार्वजनिक सभा",
+      "द लैंडहोल्डर्स सोसाइटी",
+      "ईस्ट इंडिया एसोसिएशन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।",
+    explanation_hi: "द लैंडहोल्डर्स सोसाइटी को जमींदारी एसोसिएशन भी कहा जाता था।"
+  },
+  {
+    question_en: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    question_hi: "किस उदारवादी नेता को 'राष्ट्र के गुरु' (Guru of the Nation) कहा जाता था, और वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने?",
+    options_en: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    options_hi: [
+      "गोपाल कृष्ण गोखले",
+      "मदन मोहन मालवीय",
+      "सुरेंद्र नाथ बनर्जी",
+      "डब्ल्यू.सी. बनर्जी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था। वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने।",
+    explanation_hi: "सुरेंद्र नाथ बनर्जी को 'राष्ट्र के गुरु' कहा जाता था। वह ब्रिटिशों के खिलाफ विरोध के लिए गिरफ्तार होने वाले पहले पत्रकार बने।"
+  },
+  {
+    question_en: "दादा भाई नौरोजी किस वर्ष ब्रिटिश संसद (हाउस ऑफ कॉमन्स) के सदस्य बने?",
+    question_hi: "दादा भाई नौरोजी किस वर्ष ब्रिटिश संसद (हाउस ऑफ कॉमन्स) के सदस्य बने?",
+    options_en: [
+      "1885",
+      "1894",
+      "1892",
+      "1906"
+    ],
+    options_hi: [
+      "1885",
+      "1894",
+      "1892",
+      "1906"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दादा भाई नौरोजी 1892 में ब्रिटिश संसद के सदस्य बने थे।",
+    explanation_hi: "दादा भाई नौरोजी 1892 में ब्रिटिश संसद के सदस्य बने थे।"
+  },
+  {
+    question_en: "बाल गंगाधर तिलक द्वारा शुरू की गई 'केसरी' पत्रिका किस भाषा में प्रकाशित होती थी?",
+    question_hi: "बाल गंगाधर तिलक द्वारा शुरू की गई 'केसरी' पत्रिका किस भाषा में प्रकाशित होती थी?",
+    options_en: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    options_hi: [
+      "अंग्रेजी",
+      "हिन्दी",
+      "मराठी",
+      "गुजराती"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'केसरी' मराठी भाषा में प्रकाशित होता था।",
+    explanation_hi: "'केसरी' मराठी भाषा में प्रकाशित होता था।"
+  },
+  {
+    question_en: "लॉर्ड कर्जन द्वारा बंगाल विभाजन की घोषणा किस तिथि को की गई थी?",
+    question_hi: "लॉर्ड कर्जन द्वारा बंगाल विभाजन की घोषणा किस तिथि को की गई थी?",
+    options_en: [
+      "16 अक्टूबर 1905",
+      "7 अगस्त 1905",
+      "19 जुलाई 1905",
+      "12 दिसंबर 1911"
+    ],
+    options_hi: [
+      "16 अक्टूबर 1905",
+      "7 अगस्त 1905",
+      "19 जुलाई 1905",
+      "12 दिसंबर 1911"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई थी।",
+    explanation_hi: "बंगाल विभाजन की घोषणा 19 जुलाई, 1905 को हुई थी।"
+  },
+  {
+    question_en: "पुणे में प्लेग पीड़ितों के साथ अमानवीय व्यवहार के खिलाफ, चापेकर बंधुओं ने 1897 में किस ब्रिटिश अधिकारी की हत्या की थी?",
+    question_hi: "पुणे में प्लेग पीड़ितों के साथ अमानवीय व्यवहार के खिलाफ, चापेकर बंधुओं ने 1897 में किस ब्रिटिश अधिकारी की हत्या की थी?",
+    options_en: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "डब्ल्यू.सी. रैंड",
+      "माइकल ओ'डायर"
+    ],
+    options_hi: [
+      "किंग्सफोर्ड",
+      "कर्जन वाइली",
+      "डब्ल्यू.सी. रैंड",
+      "माइकल ओ'डायर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "चापेकर बंधुओं ने 1897 में डब्ल्यू.सी. रैंड की हत्या की थी।",
+    explanation_hi: "चापेकर बंधुओं ने 1897 में डब्ल्यू.सी. रैंड की हत्या की थी।"
+  },
+  {
+    question_en: "किस वर्ष विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    question_hi: "किस वर्ष विनायक दामोदर सावरकर को नासिक षड्यंत्र केस के तहत गिरफ्तार किया गया और काले पानी की सज़ा दी गई थी?",
+    options_en: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    options_hi: [
+      "1908",
+      "1910",
+      "1909",
+      "1912"
+    ],
+    correct_option_index: 1,
+    explanation_en: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।",
+    explanation_hi: "नासिक षड्यंत्र केस के तहत सावरकर को 1910 में गिरफ्तार किया गया।"
+  },
+  {
+    question_en: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के कितनेवें दिन शहादत दी थी?",
+    question_hi: "जतिन दास ने जेल में अमानवीय परिस्थितियों के विरोध में भूख हड़ताल के कितनेवें दिन शहादत दी थी?",
+    options_en: [
+      "30वें दिन",
+      "45वें दिन",
+      "64वें दिन",
+      "100वें दिन"
+    ],
+    options_hi: [
+      "30वें दिन",
+      "45वें दिन",
+      "64वें दिन",
+      "100वें दिन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जतिन दास भूख हड़ताल के 64वें दिन शहीद हुए थे।",
+    explanation_hi: "जतिन दास भूख हड़ताल के 64वें दिन शहीद हुए थे।"
+  },
+  {
+    question_en: "भारत के प्रथम वायसराय लॉर्ड कैनिंग किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    question_hi: "भारत के प्रथम वायसराय लॉर्ड कैनिंग किस वर्ष से किस वर्ष तक भारत के गवर्नर जनरल (G.G.) और वायसराय रहे?",
+    options_en: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    options_hi: [
+      "1858-1862",
+      "1856-1862",
+      "1857-1860",
+      "1862-1866"
+    ],
+    correct_option_index: 1,
+    explanation_en: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।",
+    explanation_hi: "कैनिंग 1856 से 1862 तक कार्यरत रहे, पहले गवर्नर जनरल और फिर पहले वायसराय।"
+  },
+  {
+    question_en: "चंपारण सत्याग्रह (1917) में, रवींद्रनाथ टैगोर द्वारा 'महात्मा' की उपाधि देने के अलावा, सुभाष चंद्र बोस ने गांधीजी को किस उपाधि से संबोधित किया था?",
+    question_hi: "चंपारण सत्याग्रह (1917) में, रवींद्रनाथ टैगोर द्वारा 'महात्मा' की उपाधि देने के अलावा, सुभाष चंद्र बोस ने गांधीजी को किस उपाधि से संबोधित किया था?",
+    options_en: [
+      "राष्ट्रपिता",
+      "गुरुदेव",
+      "सम्मान (Honor)",
+      "मोहनदास"
+    ],
+    options_hi: [
+      "राष्ट्रपिता",
+      "गुरुदेव",
+      "सम्मान (Honor)",
+      "मोहनदास"
+    ],
+    correct_option_index: 2,
+    explanation_en: "एस.सी. बोस (सुभाष चंद्र बोस) ने उन्हें 'सम्मान' की उपाधि दी थी।",
+    explanation_hi: "एस.सी. बोस (सुभाष चंद्र बोस) ने उन्हें 'सम्मान' की उपाधि दी थी।"
+  },
+  {
+    question_en: "गांधीजी ने अहमदाबाद मिल हड़ताल के दौरान अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था। यह अनशन किस 'झमेले' को सुलझाने के लिए था?",
+    question_hi: "गांधीजी ने अहमदाबाद मिल हड़ताल के दौरान अनशन का उपयोग किया, जो भारत में उनका पहला अनशन था। यह अनशन किस 'झमेले' को सुलझाने के लिए था?",
+    options_en: [
+      "नील की खेती",
+      "कर-वृद्धि",
+      "प्लेग बोनस",
+      "लगान न देना"
+    ],
+    options_hi: [
+      "नील की खेती",
+      "कर-वृद्धि",
+      "प्लेग बोनस",
+      "लगान न देना"
+    ],
+    correct_option_index: 2,
+    explanation_en: "अहमदाबाद मिल हड़ताल का कारण प्लेग बोनस का 'झमेला' था।",
+    explanation_hi: "अहमदाबाद मिल हड़ताल का कारण प्लेग बोनस का 'झमेला' था।"
+  },
+  {
+    question_en: "1920 के नागपुर अधिवेशन (वार्षिक) में असहयोग आंदोलन का प्रस्ताव पारित किया गया, उस सत्र की अध्यक्षता किसने की थी?",
+    question_hi: "1920 के नागपुर अधिवेशन (वार्षिक) में असहयोग आंदोलन का प्रस्ताव पारित किया गया, उस सत्र की अध्यक्षता किसने की थी?",
+    options_en: [
+      "लाला लाजपत राय",
+      "सी.आर. दास",
+      "वीर राघवाचारी",
+      "मोतीलाल नेहरू"
+    ],
+    options_hi: [
+      "लाला लाजपत राय",
+      "सी.आर. दास",
+      "वीर राघवाचारी",
+      "मोतीलाल नेहरू"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दिसंबर 1920 में नागपुर अधिवेशन की अध्यक्षता वीर राघवाचारी ने की थी।",
+    explanation_hi: "दिसंबर 1920 में नागपुर अधिवेशन की अध्यक्षता वीर राघवाचारी ने की थी।"
+  },
+  {
+    question_en: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    question_hi: "1923 के केंद्रीय विधानसभा चुनाव में स्वराज पार्टी ने कुल कितनी निर्वाचित सीटों में से 42 पर जीत हासिल की थी?",
+    options_en: [
+      "71 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "147 सीटें"
+    ],
+    options_hi: [
+      "71 सीटें",
+      "90 सीटें",
+      "105 सीटें",
+      "147 सीटें"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वराज पार्टी ने केंद्रीय विधानसभा की 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।",
+    explanation_hi: "स्वराज पार्टी ने केंद्रीय विधानसभा की 105 निर्वाचित सीटों में से 42 पर जीत हासिल की थी।"
+  },
+  {
+    question_en: "साइमन आयोग भारत में किस तिथि को बंबई बंदरगाह पर उतरा?",
+    question_hi: "साइमन आयोग भारत में किस तिथि को बंबई बंदरगाह पर उतरा?",
+    options_en: [
+      "17 नवंबर 1928",
+      "26 जनवरी 1930",
+      "3 फरवरी 1928",
+      "31 दिसंबर 1929"
+    ],
+    options_hi: [
+      "17 नवंबर 1928",
+      "26 जनवरी 1930",
+      "3 फरवरी 1928",
+      "31 दिसंबर 1929"
+    ],
+    correct_option_index: 2,
+    explanation_en: "साइमन आयोग 3 फरवरी, 1928 को बंबई बंदरगाह पर उतरा।",
+    explanation_hi: "साइमन आयोग 3 फरवरी, 1928 को बंबई बंदरगाह पर उतरा।"
+  },
+  {
+    question_en: "सविनय अवज्ञा आंदोलन (1930) के दौरान, दांडी मार्च कितने किलोमीटर की पैदल यात्रा थी, जिसे 78 चुने हुए सहयोगियों के साथ शुरू किया गया था?",
+    question_hi: "सविनय अवज्ञा आंदोलन (1930) के दौरान, दांडी मार्च कितने किलोमीटर की पैदल यात्रा थी, जिसे 78 चुने हुए सहयोगियों के साथ शुरू किया गया था?",
+    options_en: [
+      "241 किमी",
+      "300 किमी",
+      "384 किमी",
+      "400 किमी"
+    ],
+    options_hi: [
+      "241 किमी",
+      "300 किमी",
+      "384 किमी",
+      "400 किमी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "दांडी मार्च 384 किमी की पैदल यात्रा थी।",
+    explanation_hi: "दांडी मार्च 384 किमी की पैदल यात्रा थी।"
+  },
+  {
+    question_en: "द्वितीय गोलमेज सम्मेलन (1931) में गांधीजी और अंबेडकर के बीच टकराव का समाधान पूना समझौता (1932) से हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना प्रतिशत आरक्षण आरक्षित किया गया?",
+    question_hi: "द्वितीय गोलमेज सम्मेलन (1931) में गांधीजी और अंबेडकर के बीच टकराव का समाधान पूना समझौता (1932) से हुआ। इस समझौते के तहत केंद्रीय सीटों में दलितों के लिए कितना प्रतिशत आरक्षण आरक्षित किया गया?",
+    options_en: [
+      "147 सीटें",
+      "100 सीटें",
+      "18%",
+      "50%"
+    ],
+    options_hi: [
+      "147 सीटें",
+      "100 सीटें",
+      "18%",
+      "50%"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।",
+    explanation_hi: "पूना समझौते के तहत केंद्रीय सीटों में 18% आरक्षण आरक्षित किया गया था।"
+  },
+  {
+    question_en: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया, और इसके प्रथम अध्यक्ष कौन थे?",
+    question_hi: "गांधीजी ने 'हरिजन सेवक संघ' का गठन किया, और इसके प्रथम अध्यक्ष कौन थे?",
+    options_en: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    options_hi: [
+      "बी.आर. अंबेडकर",
+      "महादेव देसाई",
+      "घनश्याम दास बिड़ला",
+      "सरदार पटेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया था।",
+    explanation_hi: "घनश्याम दास बिड़ला को 'हरिजन सेवक संघ' का प्रथम अध्यक्ष बनाया गया था।"
+  },
+  {
+    question_en: "व्यक्तिगत सत्याग्रह आंदोलन (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    question_hi: "व्यक्तिगत सत्याग्रह आंदोलन (1940) के प्रथम और द्वितीय सत्याग्रही कौन थे?",
+    options_en: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और सरदार पटेल",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल"
+    ],
+    options_hi: [
+      "महात्मा गांधी और जवाहरलाल नेहरू",
+      "विनोबा भावे और सरदार पटेल",
+      "विनोबा भावे और जवाहरलाल नेहरू",
+      "सुभाष चंद्र बोस और वल्लभ भाई पटेल"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रथम सत्याग्रही विनोबा भावे और द्वितीय सत्याग्रही जवाहरलाल नेहरू थे।",
+    explanation_hi: "प्रथम सत्याग्रही विनोबा भावे और द्वितीय सत्याग्रही जवाहरलाल नेहरू थे।"
+  },
+  {
+    question_en: "'ऑपरेशन जीरो आवर' (9 अगस्त 1942) के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    question_hi: "'ऑपरेशन जीरो आवर' (9 अगस्त 1942) के तहत जवाहरलाल नेहरू और मौलाना अबुल कलाम आजाद को कहाँ कैद किया गया था?",
+    options_en: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    options_hi: [
+      "आगा खां पैलेस (पुणे)",
+      "यरवदा जेल (पुणे)",
+      "अहमदनगर दुर्ग",
+      "तिहाड़ जेल (दिल्ली)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।",
+    explanation_hi: "नेहरू और आजाद को अहमदनगर दुर्ग में कैद किया गया था।"
+  },
+  {
+    question_en: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    question_hi: "भारत छोड़ो आंदोलन के दौरान गठित समानांतर सरकार (Parallel Government) में सबसे लंबे समय तक चलने वाली सरकार कहाँ स्थापित हुई?",
+    options_en: [
+      "बलिया (चित्त पांडे)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    options_hi: [
+      "बलिया (चित्त पांडे)",
+      "तामलुक (सतीश सावंत)",
+      "सतारा (वाई.बी. पाटिल)",
+      "मिदनापुर (ज्ञानेन्द्रनाथ बसु)"
+    ],
+    correct_option_index: 2,
+    explanation_en: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।",
+    explanation_hi: "समानांतर सरकार सतारा (वाई.बी. पाटिल) में सबसे लंबे समय तक चली।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    question_hi: "सुभाष चंद्र बोस ने 1940 में ब्रिटिश नज़र से बचने के लिए किस नकली नाम का उपयोग करके यात्रा की थी?",
+    options_en: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    options_hi: [
+      "राम सिंह",
+      "चंद्रशेखर",
+      "ऑरलैंडो मैजोटा",
+      "रास बिहारी"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।",
+    explanation_hi: "सुभाष चंद्र बोस ब्रिटिश नज़र से बचने के लिए 'ऑरलैंडो मैजोटा' नाम के साथ यात्रा पर निकले थे।"
+  },
+  {
+    question_en: "सुभाष चंद्र बोस ने 1921 में इलाहाबाद (अब प्रयागराज) जिले में किस समाचार पत्र की शुरुआत की थी?",
+    question_hi: "सुभाष चंद्र बोस ने 1921 में इलाहाबाद (अब प्रयागराज) जिले में किस समाचार पत्र की शुरुआत की थी?",
+    options_en: [
+      "केसरी",
+      "यंग इंडिया",
+      "स्वराज्य",
+      "युगान्तर"
+    ],
+    options_hi: [
+      "केसरी",
+      "यंग इंडिया",
+      "स्वराज्य",
+      "युगान्तर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "उन्होंने 1921 में इलाहाबाद (अब प्रयागराज) जिले में 'स्वराज्य' नामक समाचार पत्र शुरू किया।",
+    explanation_hi: "उन्होंने 1921 में इलाहाबाद (अब प्रयागराज) जिले में 'स्वराज्य' नामक समाचार पत्र शुरू किया।"
+  },
+  {
+    question_en: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    question_hi: "1946 के कैबिनेट मिशन में शामिल तीन ब्रिटिश सदस्य कौन थे, और इनमें से अध्यक्ष कौन थे?",
+    options_en: [
+      "स्टैफोर्ड क्रिप्स, पैथिक लोरेंस, ए.वी. अलेक्जेंडर; क्रिप्स",
+      "लॉर्ड माउंटबेटन, स्टैफोर्ड क्रिप्स, पैथिक लोरेंस; माउंटबेटन",
+      "पैथिक लोरेंस, क्रिप्स, ए.वी. अलेक्जेंडर; पैथिक लोरेंस",
+      "क्लीमेंट एटली, लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स; एटली"
+    ],
+    options_hi: [
+      "स्टैफोर्ड क्रिप्स, पैथिक लोरेंस, ए.वी. अलेक्जेंडर; क्रिप्स",
+      "लॉर्ड माउंटबेटन, स्टैफोर्ड क्रिप्स, पैथिक लोरेंस; माउंटबेटन",
+      "पैथिक लोरेंस, क्रिप्स, ए.वी. अलेक्जेंडर; पैथिक लोरेंस",
+      "क्लीमेंट एटली, लॉर्ड वेवेल, स्टैफोर्ड क्रिप्स; एटली"
+    ],
+    correct_option_index: 2,
+    explanation_en: "कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।",
+    explanation_hi: "कैबिनेट मिशन में पैथिक लोरेंस (अध्यक्ष), क्रिप्स और ए.वी. अलेक्जेंडर शामिल थे।"
+  },
+  {
+    question_en: "कैबिनेट मिशन योजना के तहत, संविधान सभा में कुल कितने सदस्य होने थे?",
+    question_hi: "कैबिनेट मिशन योजना के तहत, संविधान सभा में कुल कितने सदस्य होने थे?",
+    options_en: [
+      "292 सदस्य",
+      "300 सदस्य",
+      "389 सदस्य",
+      "400 सदस्य"
+    ],
+    options_hi: [
+      "292 सदस्य",
+      "300 सदस्य",
+      "389 सदस्य",
+      "400 सदस्य"
+    ],
+    correct_option_index: 2,
+    explanation_en: "संविधान सभा का गठन कैबिनेट मिशन योजना के तहत किया गया, जिसमें कुल 389 सदस्य होने थे।",
+    explanation_hi: "संविधान सभा का गठन कैबिनेट मिशन योजना के तहत किया गया, जिसमें कुल 389 सदस्य होने थे।"
+  },
+  {
+    question_en: "भारत स्वतंत्रता अधिनियम (Indian Independence Act) ब्रिटिश पार्लियामेंट द्वारा किस तिथि को पारित किया गया था?",
+    question_hi: "भारत स्वतंत्रता अधिनियम (Indian Independence Act) ब्रिटिश पार्लियामेंट द्वारा किस तिथि को पारित किया गया था?",
+    options_en: [
+      "3 जून 1947",
+      "15 अगस्त 1947",
+      "18 जुलाई 1947",
+      "24 मार्च 1947"
+    ],
+    options_hi: [
+      "3 जून 1947",
+      "15 अगस्त 1947",
+      "18 जुलाई 1947",
+      "24 मार्च 1947"
+    ],
+    correct_option_index: 2,
+    explanation_en: "ब्रिटिश पार्लियामेंट द्वारा 'भारत स्वतंत्रता अधिनियम' 18 जुलाई, 1947 को पारित किया गया था।",
+    explanation_hi: "ब्रिटिश पार्लियामेंट द्वारा 'भारत स्वतंत्रता अधिनियम' 18 जुलाई, 1947 को पारित किया गया था।"
+  },
+  {
+    question_en: "स्वतंत्रता के समय (अगस्त 1947) भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+    question_hi: "स्वतंत्रता के समय (अगस्त 1947) भारतीय राष्ट्रीय कांग्रेस के अध्यक्ष कौन थे?",
+    options_en: [
+      "जवाहरलाल नेहरू",
+      "महात्मा गांधी",
+      "जे.बी. कृपलानी",
+      "मौलाना अबुल कलाम आजाद"
+    ],
+    options_hi: [
+      "जवाहरलाल नेहरू",
+      "महात्मा गांधी",
+      "जे.बी. कृपलानी",
+      "मौलाना अबुल कलाम आजाद"
+    ],
+    correct_option_index: 2,
+    explanation_en: "स्वतंत्रता के समय कांग्रेस अध्यक्ष जे.बी. कृपलानी थे।",
+    explanation_hi: "स्वतंत्रता के समय कांग्रेस अध्यक्ष जे.बी. कृपलानी थे।"
+  },
+  {
+    question_en: "किस अधिनियम के तहत 'गवर्नर जनरल ऑफ इंडिया' (G.G.I.) का पद 'वायसराय' में बदल दिया गया था?",
+    question_hi: "किस अधिनियम के तहत 'गवर्नर जनरल ऑफ इंडिया' (G.G.I.) का पद 'वायसराय' में बदल दिया गया था?",
+    options_en: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    options_hi: [
+      "चार्टर एक्ट 1833",
+      "इंडियन लीग एक्ट 1875",
+      "भारत सरकार अधिनियम 1858",
+      "मोंटेग्यू-चेम्सफोर्ड सुधार 1919"
+    ],
+    correct_option_index: 2,
+    explanation_en: "भारत सरकार अधिनियम 1858 के तहत G.G.I. का पद वायसराय में बदल दिया गया था।",
+    explanation_hi: "भारत सरकार अधिनियम 1858 के तहत G.G.I. का पद वायसराय में बदल दिया गया था।"
+  },
+  {
+    question_en: "किस वायसराय के कार्यकाल में 'पोस्ट ऑफिस एक्ट' (Post Office Act) 1854 में पारित हुआ था?",
+    question_hi: "किस वायसराय के कार्यकाल में 'पोस्ट ऑफिस एक्ट' (Post Office Act) 1854 में पारित हुआ था?",
+    options_en: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड रिपन"
+    ],
+    options_hi: [
+      "लॉर्ड कैनिंग",
+      "लॉर्ड विलियम बेंटिक",
+      "लॉर्ड डलहौजी",
+      "लॉर्ड रिपन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'पोस्ट ऑफिस एक्ट' 1854 में लॉर्ड डलहौजी के कार्यकाल में पारित हुआ था।",
+    explanation_hi: "'पोस्ट ऑफिस एक्ट' 1854 में लॉर्ड डलहौजी के कार्यकाल में पारित हुआ था।"
+  },
+
 ];
 
 export default historyRwaQuestions;

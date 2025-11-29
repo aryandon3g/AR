@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback, Suspense, lazy, useMemo } from 'react';
 import { Header } from './components/Header';
 import { Loader } from './components/Loader';
@@ -18,6 +19,7 @@ const LazySummaryScreen = lazy(() => import('./components/SummaryScreen').then(m
 const LazyModeSelectionScreen = lazy(() => import('./components/ModeSelectionScreen').then(module => ({ default: module.ModeSelectionScreen })));
 const LazyProgressVisualization = lazy(() => import('./components/ProgressVisualization').then(module => ({ default: module.ProgressVisualization })));
 const LazyAchievementsScreen = lazy(() => import('./components/AchievementsScreen').then(module => ({ default: module.AchievementsScreen })));
+
 
 const XP_PER_LEVEL = 100;
 const calculateLevelInfo = (totalXp: number) => {
@@ -40,7 +42,7 @@ const getDefaultAchievements = (language: Language): Achievement[] => [
     { id: 'theAce', name_en: achievementLabels.en.theAce.name, name_hi: achievementLabels.hi.theAce.name, description_en: achievementLabels.en.theAce.description, description_hi: achievementLabels.hi.theAce.description, icon: 'TrophyIcon', criteria: 'total_xp >= 1500 && overall_accuracy >= 85', unlocked: false, currentProgress: 0, targetValue: 85 },
     { id: 'theGambler', name_en: achievementLabels.en.theGambler.name, name_hi: achievementLabels.hi.theGambler.name, description_en: achievementLabels.en.theGambler.description, description_hi: achievementLabels.hi.theGambler.description, icon: 'BadgeIcon', criteria: 'attempt_mode_correct_answers >= 200', unlocked: false, currentProgress: 0, targetValue: 200 },
     { id: 'worldConqueror', name_en: achievementLabels.en.worldConqueror.name, name_hi: achievementLabels.hi.worldConqueror.name, description_en: achievementLabels.en.worldConqueror.description, description_hi: achievementLabels.hi.worldConqueror.description, icon: 'TrophyIcon', criteria: 'total_quizzes_completed >= 200', unlocked: false, currentProgress: 0, targetValue: 200 },
-    { id: 'theEmperor', name_en: achievementLabels.en.theEmperor.name, name_hi: achievementLabels.hi.theEmperor.name, description_en: achievementLabels.en.theEmperor.description, description_hi: achievementLabels.hi.theEmperor.description, icon: 'TrophyIcon', criteria: 'total_xp >= 10000', unlocked: false, currentProgress: 0, targetValue: 10000 },
+    { id: 'theEmperor', name_en: achievementLabels.en.theEmperor.name, name_hi: achievementLabels.hi.theEmperor.name, description_en: achievementLabels.hi.theEmperor.description, description_hi: achievementLabels.hi.theEmperor.description, icon: 'TrophyIcon', criteria: 'total_xp >= 10000', unlocked: false, currentProgress: 0, targetValue: 10000 },
 ];
 
 

@@ -1,5 +1,4 @@
 
-
 import type { QuizQuestion, QuizSubject, QuizTopic } from '../types';
 
 // Topic question files (now using default exports)
@@ -70,6 +69,8 @@ const loadGeographyTest3Questions = () => import('./subjectQuizzesData/geography
 const loadGeographyTest4Questions = () => import('./subjectQuizzesData/geography/test4Questions').then(module => module.default);
 const loadGeographyTest5Questions = () => import('./subjectQuizzesData/geography/test5Questions').then(module => module.default);
 const loadGeographyTest6Questions = () => import('./subjectQuizzesData/geography/test6Questions').then(module => module.default);
+const loadSeriesQuestions = () => import('./subjectQuizzesData/geography/seriesQuestions').then(module => module.default);
+const loadSociology2Questions = () => import('./subjectQuizzesData/geography/sociology2Questions').then(module => module.default);
 
 // Political Science
 const loadPoliticalScienceTest1Questions = () => import('./subjectQuizzesData/politicalScience/test1Questions').then(module => module.default);
@@ -79,7 +80,15 @@ const loadPoliticalScienceTest4Questions = () => import('./subjectQuizzesData/po
 const loadPoliticalScienceTest5Questions = () => import('./subjectQuizzesData/politicalScience/test5Questions').then(module => module.default);
 const loadPoliticalScienceTest6Questions = () => import('./subjectQuizzesData/politicalScience/test6Questions').then(module => module.default);
 
-
+// Reasoning
+const loadBloodRelationQuestions = () => import('./subjectQuizzesData/reasoning/bloodRelationQuestions').then(module => module.default);
+const loadSyllogismQuestions = () => import('./subjectQuizzesData/reasoning/syllogismQuestions').then(module => module.default);
+const loadCodingDecodingQuestions = () => import('./subjectQuizzesData/reasoning/codingDecodingQuestions').then(module => module.default);
+const loadCalendarReasoningQuestions = () => import('./subjectQuizzesData/reasoning/calendarreasoningQuestions').then(module => module.default);
+const loadSittingArrangementQuestions = () => import('./subjectQuizzesData/reasoning/sittingarrangementQuestions').then(module => module.default);
+const loadClassificationofWordsQuestions = () => import('./subjectQuizzesData/reasoning/classificationofwordsQuestions').then(module => module.default);
+const loadDirectionQuestions = () => import('./subjectQuizzesData/reasoning/directionQuestions').then(module => module.default);
+const loadNumberSeriesQuestions = () => import ('./subjectQuizzesData/reasoning/numberseriesQuestions').then(module => module.default);
 export const subjectQuizzes: (QuizSubject & {iconEmoji?: string})[] = [
     {
         name_en: "Mathematics",
@@ -136,7 +145,7 @@ export const subjectQuizzes: (QuizSubject & {iconEmoji?: string})[] = [
         name_hi: "इतिहास",
         iconEmoji: "📜", // Scroll for history
         topics: [
-            { name_en: "History Rwa", name_hi: "हिस्ट्री Rwa", questionsLoader: loadHistoryRwaQuestions },
+            { name_en: "Modern History 1757 to 1947 ", name_hi: "Modern History", questionsLoader: loadHistoryRwaQuestions },
             { name_en: "History Test 2", name_hi: "इतिहास टेस्ट 2", questionsLoader: loadHistoryTest2Questions },
             { name_en: "History Test 3", name_hi: "इतिहास टेस्ट 3", questionsLoader: loadHistoryTest3Questions },
             { name_en: "History Test 4", name_hi: "इतिहास टेस्ट 4", questionsLoader: loadHistoryTest4Questions },
@@ -173,6 +182,8 @@ export const subjectQuizzes: (QuizSubject & {iconEmoji?: string})[] = [
             { name_en: "Geography Test 4", name_hi: "भूगोल टेस्ट 4", questionsLoader: loadGeographyTest4Questions },
             { name_en: "Geography Test 5", name_hi: "भूगोल टेस्ट 5", questionsLoader: loadGeographyTest5Questions },
             { name_en: "Geography Test 6", name_hi: "भूगोल टेस्ट 6", questionsLoader: loadGeographyTest6Questions },
+            {name_en: "Geography Sure Series", name_hi:"sociology", questionsLoader:loadSeriesQuestions},
+            {name_en:"Sociology 2",name_hi:"Sociology 2 mcq", questionsLoader:loadSociology2Questions},
         ]
     },
     {
@@ -189,6 +200,25 @@ export const subjectQuizzes: (QuizSubject & {iconEmoji?: string})[] = [
         ]
     },
     {
+        name_en: "Reasoning",
+        name_hi: "तर्कशक्ति",
+        iconEmoji: "🤔",
+        topics: [
+            { name_en: "Blood Relation", name_hi: "रक्त संबंध", questionsLoader: loadBloodRelationQuestions },
+            { name_en: "Syllogism", name_hi: "न्याय", questionsLoader: loadSyllogismQuestions },
+            { name_en: "Coding Decoding", name_hi: "कोडिंग डिकोडिंग", questionsLoader: loadCodingDecodingQuestions },
+            {name_en: "Calendar Reasoning", name_hi: "कैलेंडर आधारित प्रश्न", questionsLoader:loadCalendarReasoningQuestions},
+            {name_en:"Classification of Words", name_hi: "शब्दों का वर्गीकरण", questionsLoader:loadClassificationofWordsQuestions},
+            {name_en:"Alphabet Series", name_hi: "अंग्रेजी वर्णमाला शृंखला", questionsLoader:loadAlphabetseriesQuestions}, 
+            {name_en: "Classification Of Words GK", name_hi: "शब्दों का सामान्य ज्ञान", questionsLoader:loadCowgk},
+            {name_en: "Sitting Arrangement", name_hi: "बैठक व्यवस्था", questionsLoader:loadSittingArrangementQuestions},
+            {name_en: "Direction", name_hi: "दिशा", questionsLoader:loadDirectionQuestions},
+            {name_en: "Number Series", name_hi: "संख्या शृंख्ला", questionsLoader:loadNumberSeriesQuestions},
+        ]
+            
+    },
+
+    {
         name_en: "General Knowledge",
         name_hi: "सामान्य ज्ञान",
         iconEmoji: "🧠", // Brain for general knowledge
@@ -202,5 +232,14 @@ export const subjectQuizzes: (QuizSubject & {iconEmoji?: string})[] = [
     }
 ];
 
+
+
+function loadAlphabetseriesQuestions(): Promise<QuizQuestion[]> {
+throw new Error('Function not implemented.');
+}
+
+function loadCowgk(): Promise<QuizQuestion[]> {
+throw new Error('Function not implemented.');
+}
 // NOTE: getMixedQuizQuestions and custom quiz handling moved to quizDataService.ts
 // to centralize dynamic loading logic.

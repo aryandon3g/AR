@@ -1,5 +1,4 @@
 
-
 import type { Language } from '../types';
 import type { GamificationTitle } from '../types';
 
@@ -258,38 +257,6 @@ export const modeSelectionLabels = {
         practiceDesc: "Get instant feedback and explanations after each question. Perfect for learning!", // Always English
         attemptTitle: "Attempt Mode", // Always English
         attemptDesc: "Test yourself. Answers are revealed only after you finish the entire quiz.", // Always English
-    }
-};
-
-export const chatScreenLabels = {
-    en: {
-        thinking: 'Thinking...',
-        generateQuiz: 'Generate Quiz from this Topic',
-        placeholder: 'Ask a follow-up question...'
-    },
-    hi: {
-        thinking: 'सोच रहा है...',
-        generateQuiz: 'इस विषय से प्रश्नोत्तरी बनाएँ',
-        placeholder: 'एक और प्रश्न पूछें...'
-    }
-};
-
-export const solutionModalLabels = {
-    en: {
-        title: 'AI-Powered Solution',
-        close: 'Close',
-        loading: 'Generating solution...',
-        errorTitle: 'Error',
-        stepByStep: 'Step-by-step Solution',
-        shortTrick: 'Short Trick / Tip'
-    },
-    hi: {
-        title: 'AI-संचालित समाधान',
-        close: 'बंद करें',
-        loading: 'समाधान तैयार हो रहा है...',
-        errorTitle: 'त्रुटि',
-        stepByStep: 'चरण-दर-चरण समाधान',
-        shortTrick: 'शॉर्ट ट्रिक / टिप'
     }
 };
 

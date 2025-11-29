@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import type { Language, ProgressDataPoint } from '../types';
 import { commonLabels, summaryScreenLabels } from '../services/labels';
@@ -74,21 +73,21 @@ export const ProgressVisualization: React.FC<ProgressVisualizationProps> = ({ la
                 return Object.entries(timeBuckets).map(([name, value]) => ({ name, value })).filter(d => d.value > 0);
             
             case 'xp':
-                // FIX: Add type assertion to the initial value of the reduce function to resolve arithmetic operation error.
-                const xpByTopic = progressData.reduce((acc, d) => {
+                // FIX: Explicitly type the accumulator for `xpByTopic` to resolve arithmetic operation types.
+                const xpByTopic = progressData.reduce((acc: { [key: string]: number }, d) => {
                     const topicName = d.topic || 'Untitled';
                     acc[topicName] = (acc[topicName] || 0) + d.xpEarned;
                     return acc;
-                }, {} as Record<string, number>);
+                }, {});
                 return Object.entries(xpByTopic).map(([name, value]) => ({ name, value })).sort((a,b) => b.value - a.value);
 
             case 'count':
-                // FIX: Add type assertion to the initial value of the reduce function to resolve arithmetic operation error.
-                const countByTopic = progressData.reduce((acc, d) => {
+                // FIX: Explicitly type the accumulator for `countByTopic` to resolve arithmetic operation types.
+                const countByTopic = progressData.reduce((acc: { [key: string]: number }, d) => {
                     const topicName = d.topic || 'Untitled';
                     acc[topicName] = (acc[topicName] || 0) + 1;
                     return acc;
-                }, {} as Record<string, number>);
+                }, {});
                 return Object.entries(countByTopic).map(([name, value]) => ({ name, value })).sort((a,b) => b.value - a.value);
 
             default:
@@ -168,7 +167,7 @@ export const ProgressVisualization: React.FC<ProgressVisualizationProps> = ({ la
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                     ))}
                                 </Pie>
-                                <Tooltip contentStyle={{ backgroundColor: 'rgba(0,0,0,0.7)', border: 'none', borderRadius: '8px' }} itemStyle={{ color: '#fff' }} />
+                                <Tooltip contentStyle={{ backgroundColor: 'rgba(0,0,0,0.7)', border: 'none', borderRadius: '8px' }} itemStyle={{ color: isDarkMode ? '#e0f2fe' : '#374151' }} />
                                 <Legend layout="horizontal" verticalAlign="bottom" align="center" wrapperStyle={{ color: isDarkMode ? '#e0f2fe' : '#374151', fontSize: '12px' }}/>
                             </PieChart>
                         </ResponsiveContainer>

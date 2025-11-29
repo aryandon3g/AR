@@ -1,3 +1,4 @@
+
 import React from 'react';
 import type { Language } from '../types';
 import { loaderLabels as labels } from '../services/labels';
@@ -8,16 +9,6 @@ interface LoaderProps {
 
 export const Loader: React.FC<LoaderProps> = ({ language }) => {
     const l = labels[language];
-
-    // Array of transforms for the 6 faces of the cube
-    const cubeFaces = [
-        'rotateY(0deg) translateZ(3rem)',
-        'rotateY(90deg) translateZ(3rem)',
-        'rotateY(180deg) translateZ(3rem)',
-        'rotateY(-90deg) translateZ(3rem)',
-        'rotateX(90deg) translateZ(3rem)',
-        'rotateX(-90deg) translateZ(3rem)',
-    ];
 
     return (
         <div className="flex flex-col items-center justify-center h-full text-center p-4">
@@ -33,20 +24,16 @@ export const Loader: React.FC<LoaderProps> = ({ language }) => {
             
             <div className="h-16"></div> {/* Spacer */}
 
-            <div className="w-24 h-24" style={{ perspective: '800px' }}>
-                <div 
-                    className="w-full h-full relative animate-spin-cube" 
-                    style={{ transformStyle: 'preserve-3d' }}
-                >
-                    {cubeFaces.map((transform, index) => (
-                        <div 
-                            key={index}
-                            className="absolute w-24 h-24 border border-primary-400/50 bg-primary-500/10 rounded-lg" 
-                            style={{ transform }}
-                        ></div>
-                    ))}
-                </div>
+            {/* NEW LOADER START */}
+            <div className="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+            {/* NEW LOADER END */}
         </div>
     );
 };

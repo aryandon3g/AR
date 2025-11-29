@@ -1,8 +1,7 @@
 
-
 import React, { useState, useEffect } from 'react';
 import type { SummaryData, Language, GamificationTitle, QuizMode } from '../types';
-import { ReviewIcon, RedoIcon, AnalyticsIcon, ChevronDownIcon, CheckCircleIcon, XCircleIcon, BookmarkIcon, HistoryIcon, SparkleIcon, FireIcon, XPIcon } from './icons';
+import { ReviewIcon, RedoIcon, AnalyticsIcon, ChevronDownIcon, CheckCircleIcon, XCircleIcon, BookmarkIcon, HistoryIcon, XPIcon } from './icons';
 import { summaryScreenLabels as labels, gamificationTitles, commonLabels } from '../services/labels';
 import { SummaryChart } from './SummaryChart';
 import { ConfettiEffect } from './ConfettiEffect';

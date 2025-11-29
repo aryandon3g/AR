@@ -1,7 +1,10 @@
+
+
 import React, { useState, useEffect, useCallback } from 'react';
 import type { QuizQuestion, Language, QuizMode } from '../types';
 import { CheckCircleIcon, XCircleIcon, CheckmarkIcon, HistoryIcon, BookmarkIcon, XIcon } from './icons';
 import { quizCardLabels as labels } from '../services/labels';
+
 
 interface QuizCardProps {
     question: QuizQuestion;
@@ -49,7 +52,7 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
     const [showIncorrectFeedback, setShowIncorrectFeedback] = useState<{ text: string, key: number } | null>(null);
     const [showCorrectIcon, setShowCorrectIcon] = useState<number | null>(null);
     const [showIncorrectIcon, setShowIncorrectIcon] = useState<number | null>(null);
-
+    
     const l = labels[language];
 
     useEffect(() => {
@@ -58,6 +61,7 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
         setShowIncorrectFeedback(null);
         setShowCorrectIcon(null);
         setShowIncorrectIcon(null);
+        
     }, [userAnswerIndex, questionNumber]);
 
     useEffect(() => {
@@ -79,6 +83,11 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
             return () => clearTimeout(iconTimer);
         }
     }, [showFeedback, mode, selectedOption, question.correct_option_index]);
+    
+    const isHindi = language === 'hi';
+    const q = isHindi ? question.question_hi : question.question_en;
+    const options = isHindi ? question.options_hi : question.options_en;
+    const explanation = isHindi ? question.explanation_hi : question.explanation_en;
 
     const handleOptionClick = useCallback((index: number) => {
         if (showFeedback || isReviewMode) return;
@@ -139,10 +148,6 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
         return `${base} opacity-60`;
     };
     
-    const isHindi = language === 'hi';
-    const q = isHindi ? question.question_hi : question.question_en;
-    const options = isHindi ? question.options_hi : question.options_en;
-    const explanation = isHindi ? question.explanation_hi : question.explanation_en;
     const showExplanation = (showFeedback || isReviewMode) && (mode === 'practice' || isReviewMode);
 
     const formatTime = (seconds: number) => {
@@ -162,6 +167,16 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 backdrop-blur-sm text-white text-base font-bold px-4 py-2 rounded-lg shadow-xl z-30 animate-insult-in-out border border-red-400"
                 >
                     {showIncorrectFeedback.text}
+                </div>
+            )}
+            {question.imageUrl && (
+                <div className="flex-shrink-0 mb-4 text-center">
+                    <img 
+                        src={question.imageUrl} 
+                        alt={isHindi ? question.question_hi : question.question_en} 
+                        className="max-w-full h-auto mx-auto rounded-lg shadow-md"
+                        style={{ maxWidth: 'min(100%, 300px)', maxHeight: '200px', objectFit: 'contain' }}
+                    />
                 </div>
             )}
             <div className="flex-shrink-0 mb-4">
@@ -206,7 +221,7 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
                     </button>
                 ))}
             </div>
-
+            
             {showExplanation && (
                 <div className="mt-4 p-4 rounded-2xl bg-white/20 dark:bg-black/30 animate-slide-in shadow-inner">
                     <div className="flex items-center mb-2">
@@ -220,6 +235,7 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
                     <p className={`text-sm text-gray-700 dark:text-gray-300 leading-normal ${isHindi ? 'font-sans' : ''}`}>{explanation}</p>
                 </div>
             )}
+            
         </div>
     );
 });

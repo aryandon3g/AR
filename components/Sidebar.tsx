@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import type { Language, SummaryData, QuizQuestion, SidebarView, XpData } from '../types';
-import { SunIcon, MoonIcon, XIcon, HistoryIcon, TrashIcon, BookOpenIcon, BackArrowIcon, ArrowRightIcon, PlusIcon, SparkleIcon, ChartIcon, TrophyIcon, XPIcon } from './icons';
+import { SunIcon, MoonIcon, XIcon, HistoryIcon, TrashIcon, BookOpenIcon, BackArrowIcon, ArrowRightIcon, PlusIcon, ChartIcon, TrophyIcon, XPIcon } from './icons';
 import { subjectQuizzes } from '../services/subjectQuizzes';
 import { sidebarLabels as labels, commonLabels } from '../services/labels';
 import { QuizSubject, QuizTopic } from '../types';

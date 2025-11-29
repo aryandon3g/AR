@@ -1,29 +1,13 @@
 
-
 import React from 'react';
 
 
 export type Language = 'en' | 'hi';
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
 export type AppScreen = 'home' | 'generating' | 'quiz' | 'summary' | 'review' | 'modeSelection' | 'progress' | 'achievements';
-export type InputType = 'media' | 'text';
 export type GamificationTitle = 'Novice' | 'Explorer' | 'Virtuoso' | 'Master';
 export type QuizMode = 'practice' | 'attempt';
 export type SidebarView = 'main' | 'subjects' | 'topics' | 'mixedQuizConfig' | 'topicQuizConfig';
-
-// FIX: Add missing ChatMessage type
-export interface ChatMessage {
-  sender: 'user' | 'ai';
-  text: string;
-}
-
-// FIX: Add missing Solution type
-export interface Solution {
-  solution_en: string;
-  solution_hi: string;
-  trick_en: string;
-  trick_hi: string;
-}
 
 export interface QuizQuestion {
   question_en: string;
@@ -33,6 +17,7 @@ export interface QuizQuestion {
   correct_option_index: number;
   explanation_en: string;
   explanation_hi: string;
+  imageUrl?: string; // New: Optional image URL for figure-based questions
 }
 
 export interface QuizSettings {

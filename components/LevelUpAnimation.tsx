@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react';
-import { SparkleIcon } from './icons';
+import { SparkleIcon } from './icons'; // Add: Import SparkleIcon
 import { ConfettiEffect } from './ConfettiEffect';
 import type { Language } from '../types';
 import { summaryScreenLabels, commonLabels, quizCardLabels } from '../services/labels';
