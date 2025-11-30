@@ -5704,4 +5704,26 @@ const historyRwaQuestions: QuizQuestion[] = [
 
 ];
 
-export default historyRwaQuestions;
+
+function removeDuplicates(questions: QuizQuestion[]): QuizQuestion[] {
+  const uniqueQuestions: QuizQuestion[] = [];
+  const seenQuestions = new Set<string>();
+
+  questions.forEach((q) => {
+    // हम 'हिंदी प्रश्न' (question_hi) को आधार मानकर डुप्लिकेट चेक करेंगे
+    const questionText = q.question_hi.trim();
+    
+    if (!seenQuestions.has(questionText)) {
+      seenQuestions.add(questionText);
+      uniqueQuestions.push(q);
+    }
+  });
+
+  return uniqueQuestions;
+}
+
+// 2. ओरिजिनल लिस्ट को साफ़ करें
+const cleanedQuestions = removeDuplicates(historyRwaQuestions);
+
+// 3. अब साफ़ की गई (Unique) लिस्ट को export करें
+export default cleanedQuestions;
