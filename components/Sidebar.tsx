@@ -316,7 +316,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 <>
                 <div className="text-center py-2 bg-primary-500/10 dark:bg-primary-500/20 rounded-2xl">
                   <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-300 animate-gradient-pan">
-                    I Love You Maidam ji ♥️
+                    Aryan♥️Ragini
                   </p>
                 </div>
 
