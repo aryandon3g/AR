@@ -209,6 +209,22 @@
   }
 }
 </script>
+<style>
+  html, body {
+    overscroll-behavior: none;
+    overflow: hidden; /* अगर आप चाहते हैं कि पूरी बॉडी स्क्रॉल न हो */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root {
+    height: 100%;
+    overflow-y: auto; /* सिर्फ ऐप के अंदर का कंटेंट स्क्रॉल होगा */
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
 </head>
   <body class="bg-gray-100 dark:bg-primary-950 transition-colors duration-300 font-sans">
     <div id="root"></div>
