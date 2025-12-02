@@ -210,39 +210,40 @@
 }
 </script>
 <style>
+  /* 1. SCROLLBAR REMOVER: यह उस "डंडी" को गायब कर देगा */
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+  }
+  
+  * {
+    -ms-overflow-style: none;  /* IE और Edge के लिए */
+    scrollbar-width: none;  /* Firefox के लिए */
+    -webkit-tap-highlight-color: transparent; /* क्लिक करने पर नीला बॉक्स नहीं आएगा */
+  }
+
+  /* 2. BODY LOCK: स्क्रीन को हिलने से रोकने का सबसे पक्का तरीका */
   html, body {
-    /* 1. स्क्रीन को पूरी तरह जाम (Freeze) करने के लिए */
-    position: fixed;   /* यह लाइन आपके पिछले कोड में मिसिंग थी */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;         /* चारों कोनों से चिपका दिया */
-    
+    position: fixed; 
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    
-    /* 2. एक्स्ट्रा स्वाइप रोकने के लिए */
-    overflow: hidden;
+    overflow: hidden; 
     overscroll-behavior: none;
-    touch-action: none; /* यह बॉडी पर किसी भी टच को इग्नोर करेगा */
-    
-    /* बैकग्राउंड कलर (ताकि अगर 1% भी हिले तो पीछे वाइट न दिखे) */
-    background-color: #0f172a; 
+    touch-action: pan-y; /* साइड स्वाइप पूरी तरह बंद */
+    -webkit-user-select: none; /* टेक्स्ट सिलेक्शन और ज़ूम रोकेगा */
+    user-select: none;
+    background-color: #0f172a;
   }
 
   #root {
     width: 100%;
     height: 100%;
-    
-    /* 3. ऐप के अंदर स्क्रॉल चलने दें */
-    overflow-y: auto;
+    overflow-y: scroll; /* स्क्रॉलिंग चालू रहेगी */
     -webkit-overflow-scrolling: touch;
-    
-    /* 4. यह सुनिश्चित करेगा कि ऐप के अंदर भी बाउंस न हो */
     overscroll-behavior: none;
-    touch-action: pan-y; /* सिर्फ ऊपर-नीचे स्क्रॉल काम करेगा */
   }
 </style>
 </head>
