@@ -42,8 +42,6 @@ const TimerComponent = memo(({ startTime, onTick }: { startTime: number, onTick:
     return () => clearInterval(intervalId);
   }, [startTime, onTick]);
 
-  // We don't render anything visible here because the time is shown inside QuizCard.
-  // But this component keeps the interval logic ISOLATED.
   return null; 
 });
 
@@ -265,13 +263,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
   const showFeedback = mode === 'practice' && !!currentAnswer;
   
-  // Determine if we should show the live timer
   const shouldRunTimer = !isReviewMode && !currentAnswer;
 
   return (
     <div className="w-full h-[100dvh] relative flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
       
-      {/* 🚀 Mount the Timer Component (Invisible but logic runs) */}
       {shouldRunTimer && <TimerComponent startTime={startTime} onTick={handleTimerTick} />}
 
       {insult && (
@@ -295,7 +291,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
             transform: isDragging ? `translateX(${dragOffset}px)` : '',
             transition: isDragging ? 'none' : (isAnimatingOut ? 'transform 0.2s ease-out' : ''),
             opacity: isAnimatingOut ? 0 : 1,
-            // 🚀 Force GPU Layer
             willChange: 'transform, opacity'
         }}
       >
@@ -310,18 +305,18 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
           userAnswerIndex={currentAnswer?.selectedOptionIndex}
           isReviewMode={isReviewMode}
           mode={mode}
-          // Note: Timer display inside card might be static now or needs its own interval if you want to see numbers ticking. 
-          // For performance, usually, exact seconds don't need to be re-rendered in parent. 
-          // If you need visible timer, pass startTime and let QuizCard handle its own display timer.
           timer={currentTimeRef.current} 
           isBookmarked={bookmarkedQuestions.has(currentQuestionIndex)}
           onToggleBookmark={handleToggleBookmark}
         />
       </div>
 
-      {/* Bottom Navigation */}
-      <div className="absolute bottom-0 left-0 right-0 z-40 w-full px-4 py-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800">
-        <div className="flex items-center justify-between max-w-xl mx-auto">
+      {/* FIX: Instagram Style Locked Footer */}
+      <div 
+        className="fixed bottom-0 left-0 right-0 z-50 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
+        <div className="flex items-center justify-between max-w-xl mx-auto px-4 py-4">
             <button onClick={goToPrevious} disabled={currentQuestionIndex === 0} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform" aria-label="Previous question">
              <ArrowLeftIcon className="w-6 h-6" />
             </button>
