@@ -210,19 +210,28 @@
 }
 </script>
 <style>
+  /* 1. Body को पूरी तरह लॉक करें (Nuclear Option) */
   html, body {
-    overscroll-behavior: none;
-    overflow: hidden; /* अगर आप चाहते हैं कि पूरी बॉडी स्क्रॉल न हो */
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
-  }
-  
-  #root {
+    width: 100%;
     height: 100%;
-    overflow-y: auto; /* सिर्फ ऐप के अंदर का कंटेंट स्क्रॉल होगा */
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;         /* बॉडी का स्क्रॉल बंद */
+    position: fixed;          /* यह सबसे जरूरी है: स्क्रीन को हिलने ही नहीं देगा */
+    overscroll-behavior: none; /* बाउंस इफेक्ट बंद */
+  }
+
+  /* 2. स्क्रॉल सिर्फ #root (App) के अंदर होगा */
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;         /* सिर्फ ऊपर-नीचे स्क्रॉल (Vertical) */
+    overflow-x: hidden;       /* साइड स्क्रॉल पूरी तरह बंद */
+    -webkit-overflow-scrolling: touch; /* स्मूथ स्क्रॉलिंग */
+    
+    /* 3. ये कमांड्स स्वाइप जेस्चर को कंट्रोल करेंगी */
+    overscroll-behavior: none;   /* ऐप के अंदर भी बाउंस नहीं होगा */
+    touch-action: pan-y;         /* सिर्फ वर्टिकल स्क्रॉल काम करेगा, साइड स्वाइप इग्नोर होगा */
   }
 </style>
 </head>
