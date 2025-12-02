@@ -1,906 +1,1852 @@
 import type { QuizQuestion } from '../../../types';
 
 const test5Questions: QuizQuestion[] = [
+
   {
-    question_en: "The Indian Standard Time (IST) line and the Tropic of Cancer intersect in which state?",
-    question_hi: "भारतीय मानक समय रेखा (IST) और कर्क रेखा किस राज्य में एक दूसरे को काटती हैं?",
-    options_en: ["Uttar Pradesh", "Madhya Pradesh", "Odisha", "Chhattisgarh"],
-    options_hi: ["उत्तर प्रदेश", "मध्य प्रदेश", "ओडिशा", "छत्तीसगढ़"],
+    question_en: "प्रौद्योगिकी का आर्थिक जीवन पर प्रमुख प्रभाव है -",
+    question_hi: "प्रौद्योगिकी का आर्थिक जीवन पर प्रमुख प्रभाव है -",
+    options_en: [
+      "पूंजीवाद का विकास",
+      "जीवन का उच्च स्तर",
+      "श्रम-विभाजन",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "पूंजीवाद का विकास",
+      "जीवन का उच्च स्तर",
+      "श्रम-विभाजन",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Tropic of Cancer and the Indian Standard Time line intersect each other in Chhattisgarh.",
-    explanation_hi: "कर्क रेखा और भारतीय मानक समय रेखा एक दूसरे को छत्तीसगढ़ में काटती हैं।",
+    explanation_en: "प्रौद्योगिकी का आर्थिक जीवन पर कई प्रमुख प्रभाव हैं, जिनमें पूंजीवाद का विकास, जीवन स्तर में वृद्धि, और श्रम-विभाजन एवं विशेषीकरण शामिल हैं।",
+    explanation_hi: "प्रौद्योगिकी का आर्थिक जीवन पर कई प्रमुख प्रभाव हैं, जिनमें पूंजीवाद का विकास, जीवन स्तर में वृद्धि, और श्रम-विभाजन एवं विशेषीकरण शामिल हैं।"
   },
   {
-    question_en: "Which district of Puducherry, located in Kerala, is the smallest district of India by area?",
-    question_hi: "क्षेत्रफल के अनुसार, भारत का सबसे छोटा जिला (Smallest District by Area) केरल में स्थित पुडुचेरी का कौन सा जिला है?",
-    options_en: ["Yanam", "Karaikal", "Puducherry", "Mahe"],
-    options_hi: ["यनम (Yanam)", "कराईकल (Karaikal)", "पुडुचेरी (Puducherry)", "माहे (Mahe)"],
-    correct_option_index: 3,
-    explanation_en: "Mahe is a district of Puducherry located in Kerala, and it is the smallest district in India by area.",
-    explanation_hi: "माहे पुडुचेरी का एक जिला है जो केरल में स्थित है, और यह भारत का सबसे छोटा जिला है।",
+    question_en: "किस विद्वान ने सामाजिक परिवर्तन के लिए प्रौद्योगिकी को उत्तरदायी बताया है?",
+    question_hi: "किस विद्वान ने सामाजिक परिवर्तन के लिए प्रौद्योगिकी को उत्तरदायी बताया है?",
+    options_en: [
+      "वेब्लेन",
+      "मार्क्स",
+      "मैकाइवर एवं पेज",
+      "प्रो. सरन"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "मार्क्स",
+      "मैकाइवर एवं पेज",
+      "प्रो. सरन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने प्रौद्योगिकी को सामाजिक परिवर्तन का एक प्रमुख और उत्तरदायी कारक माना है, जिसे प्रौद्योगिक निर्धारणवाद के रूप में जाना जाता है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने प्रौद्योगिकी को सामाजिक परिवर्तन का एक प्रमुख और उत्तरदायी कारक माना है, जिसे प्रौद्योगिक निर्धारणवाद के रूप में जाना जाता है।"
   },
   {
-    question_en: "The four districts of Puducherry are spread across a total of how many states of India?",
-    question_hi: "पुडुचेरी के चार जिले भारत के कुल कितने राज्यों में फैले हुए हैं?",
-    options_en: ["2 states", "3 states", "4 states", "1 state"],
-    options_hi: ["2 राज्यों में", "3 राज्यों में", "4 राज्यों में", "1 राज्य में"],
+    question_en: "प्रौद्योगिकी का अप्रत्यक्ष प्रभाव है -",
+    question_hi: "प्रौद्योगिकी का अप्रत्यक्ष प्रभाव है -",
+    options_en: [
+      "निम्न वर्ग का उदय",
+      "बेकारी में वृद्धि",
+      "प्रतिस्पर्द्धाओं का बढ़ना",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "निम्न वर्ग का उदय",
+      "बेकारी में वृद्धि",
+      "प्रतिस्पर्द्धाओं का बढ़ना",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "प्रौद्योगिकी के अप्रत्यक्ष प्रभावों में निम्न वर्ग का उदय (या मौजूदा वर्गों में बदलाव), बेकारी में वृद्धि (कुछ क्षेत्रों में), और प्रतिस्पर्धाओं का बढ़ना शामिल हैं। ये प्रभाव अक्सर प्रौद्योगिकी के सीधे परिणामों के बजाय सामाजिक और आर्थिक संरचनाओं के माध्यम से उत्पन्न होते हैं।",
+    explanation_hi: "प्रौद्योगिकी के अप्रत्यक्ष प्रभावों में निम्न वर्ग का उदय (या मौजूदा वर्गों में बदलाव), बेकारी में वृद्धि (कुछ क्षेत्रों में), और प्रतिस्पर्धाओं का बढ़ना शामिल हैं। ये प्रभाव अक्सर प्रौद्योगिकी के सीधे परिणामों के बजाय सामाजिक और आर्थिक संरचनाओं के माध्यम से उत्पन्न होते हैं।"
+  },
+  {
+    question_en: "'संस्कृतीकरण' के प्रथम प्रयोग का श्रेय डॉ. श्रीनिवास ने निम्न में किस की गतिशीलता की प्रक्रिया को व्यक्त करने के लिए किया?",
+    question_hi: "'संस्कृतीकरण' के प्रथम प्रयोग का श्रेय डॉ. श्रीनिवास ने निम्न में किस की गतिशीलता की प्रक्रिया को व्यक्त करने के लिए किया?",
+    options_en: [
+      "व्यक्ति की",
+      "जाति की",
+      "वर्ग की",
+      "वर्ण की"
+    ],
+    options_hi: [
+      "व्यक्ति की",
+      "जाति की",
+      "वर्ग की",
+      "वर्ण की"
+    ],
     correct_option_index: 1,
-    explanation_en: "The districts of Puducherry are Yanam (Andhra Pradesh), Karaikal (Tamil Nadu), Puducherry (Tamil Nadu), and Mahe (Kerala), spread across 3 states.",
-    explanation_hi: "पुडुचेरी के जिले यनम (आंध्र प्रदेश), कराईकल (तमिलनाडु), पुडुचेरी (तमिलनाडु) और माहे (केरल) 3 राज्यों में फैले हैं।",
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने 'संस्कृतीकरण' (Sanskritization) की अवधारणा का प्रयोग मुख्य रूप से भारतीय समाज में जाति (caste) की गतिशीलता की प्रक्रिया को समझाने के लिए किया था।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने 'संस्कृतीकरण' (Sanskritization) की अवधारणा का प्रयोग मुख्य रूप से भारतीय समाज में जाति (caste) की गतिशीलता की प्रक्रिया को समझाने के लिए किया था।"
   },
   {
-    question_en: "Which is the largest district of India by area?",
-    question_hi: "क्षेत्रफल के अनुसार भारत का सबसे बड़ा जिला कौन सा है?",
-    options_en: ["Leh", "Jaisalmer", "Barmer", "Kutch"],
-    options_hi: ["लेह", "जैसलमेर", "बाड़मेर", "कच्छ (Kutch)"],
-    correct_option_index: 3,
-    explanation_en: "Kutch (Gujarat) is at the first position among the 5 largest districts of India, followed by Leh.",
-    explanation_hi: "भारत के 5 सबसे बड़े जिलों में कच्छ (गुजरात) पहले स्थान पर है, इसके बाद लेह आता है।",
+    question_en: "संस्कृतीकरण की प्रक्रिया का सम्बन्ध है -",
+    question_hi: "संस्कृतीकरण की प्रक्रिया का सम्बन्ध है -",
+    options_en: [
+      "निम्न जाति से",
+      "किसी एक व्यक्ति से",
+      "किसी समूह से",
+      "किसी एक संगठन से"
+    ],
+    options_hi: [
+      "निम्न जाति से",
+      "किसी एक व्यक्ति से",
+      "किसी समूह से",
+      "किसी एक संगठन से"
+    ],
+    correct_option_index: 0,
+    explanation_en: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से निम्न जातियों (lower castes) या समूहों द्वारा उच्च जातियों, विशेषकर ब्राह्मणों, के रीति-रिवाजों, अनुष्ठानों और जीवन शैली का अनुकरण करने से संबंधित है।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से निम्न जातियों (lower castes) या समूहों द्वारा उच्च जातियों, विशेषकर ब्राह्मणों, के रीति-रिवाजों, अनुष्ठानों और जीवन शैली का अनुकरण करने से संबंधित है।"
   },
   {
-    question_en: "In which hemisphere is India located?",
-    question_hi: "भारत पृथ्वी के किस गोलार्ध (Hemisphere) में स्थित है?",
-    options_en: ["Southern Hemisphere", "Western Hemisphere", "North-East Hemisphere", "North-West Hemisphere"],
-    options_hi: ["दक्षिणी गोलार्ध", "पश्चिमी गोलार्ध", "उत्तरी-पूर्वी गोलार्ध (North-East Hemisphere)", "उत्तरी-पश्चिमी गोलार्ध"],
+    question_en: "निम्न में से किस विद्वान ने संस्कृतीकरण 'अग्रिम सामाजीकरण' (Anticipatory Socialization) कहा है?",
+    question_hi: "निम्न में से किस विद्वान ने संस्कृतीकरण 'अग्रिम सामाजीकरण' (Anticipatory Socialization) कहा है?",
+    options_en: [
+      "डॉ. श्रीनिवास ने",
+      "डॉ. योगेन्द्र अठर ने",
+      "लूसी दुबे ने",
+      "डॉ. योगेन्द्र सिंह ने"
+    ],
+    options_hi: [
+      "डॉ. श्रीनिवास ने",
+      "डॉ. योगेन्द्र अठर ने",
+      "लूसी दुबे ने",
+      "डॉ. योगेन्द्र सिंह ने"
+    ],
     correct_option_index: 2,
-    explanation_en: "India is located in the North-East Hemisphere, north of the equator and east of Greenwich.",
-    explanation_hi: "भारत विषुवत रेखा के उत्तर और ग्रीनविच के पूर्व में, उत्तरी-पूर्वी गोलार्ध में स्थित है।",
+    explanation_en: "लूसी दुबे (Lucy Mair) ने संस्कृतीकरण की प्रक्रिया को 'अग्रिम सामाजीकरण' (Anticipatory Socialization) के रूप में वर्णित किया है, जहाँ निम्न जातियाँ उच्च जातियों की जीवन शैली को अपनाकर भविष्य में अपनी स्थिति में सुधार की उम्मीद करती हैं।",
+    explanation_hi: "लूसी दुबे (Lucy Mair) ने संस्कृतीकरण की प्रक्रिया को 'अग्रिम सामाजीकरण' (Anticipatory Socialization) के रूप में वर्णित किया है, जहाँ निम्न जातियाँ उच्च जातियों की जीवन शैली को अपनाकर भविष्य में अपनी स्थिति में सुधार की उम्मीद करती हैं।"
   },
   {
-    question_en: "Kanyakumari, the southernmost point of the Indian mainland, is located at how many degrees North Latitude?",
-    question_hi: "भारत की मुख्य भूमि का सबसे दक्षिणी बिंदु (Mainland Southernmost Point) कन्याकुमारी कितने उत्तरी अक्षांश पर स्थित है?",
-    options_en: ["6°4′ North Latitude", "68°7′ East Longitude", "8°4′ North Latitude", "97°25′ East Longitude"],
-    options_hi: ["6°4′ उत्तरी अक्षांश", "68°7′ पूर्वी देशांतर", "8°4′ उत्तरी अक्षांश", "97°25′ पूर्वी देशांतर"],
+    question_en: "'रिलीजन एण्ड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया' पुस्तक के लेखक कौन हैं?",
+    question_hi: "'रिलीजन एण्ड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया' पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र अठर",
+      "एम. एन. श्रीनिवास",
+      "डॉ. योगेन्द्र सिंह"
+    ],
+    options_hi: [
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र अठर",
+      "एम. एन. श्रीनिवास",
+      "डॉ. योगेन्द्र सिंह"
+    ],
     correct_option_index: 2,
-    explanation_en: "The mainland of India extends up to Kanyakumari (Cape Comorin), which is located at 8°4′ North Latitude.",
-    explanation_hi: "भारत की मुख्य भूमि का विस्तार कन्याकुमारी (केप कोमोरिन) तक है, जो 8°4′ उत्तरी अक्षांश पर स्थित है।",
+    explanation_en: "'रिलीजन एण्ड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया' (Religion and Society Among the Coorgs of South India) पुस्तक के लेखक एम. एन. श्रीनिवास (M. N. Srinivas) हैं, जिसमें उन्होंने संस्कृतीकरण की अवधारणा को प्रस्तुत किया।",
+    explanation_hi: "'रिलीजन एण्ड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया' (Religion and Society Among the Coorgs of South India) पुस्तक के लेखक एम. एन. श्रीनिवास (M. N. Srinivas) हैं, जिसमें उन्होंने संस्कृतीकरण की अवधारणा को प्रस्तुत किया।"
   },
   {
-    question_en: "When was the national anthem of Bangladesh, 'Amar Sonar Bangla', adopted?",
-    question_hi: "बांग्लादेश का राष्ट्रीय गान 'अमर सोनार बांग्ला' (Amar Sonar Bangla) कब अपनाया गया था?",
-    options_en: ["August 15, 1947", "October 1, 1949", "March 26, 1971", "August 19, 1919"],
-    options_hi: ["15 अगस्त 1947", "1 अक्टूबर 1949", "26 मार्च 1971", "19 अगस्त 1919"],
+    question_en: "'संस्कृतीकरण' की प्रक्रिया के द्वारा क्षेत्रीय व अन्य संस्कृतियों के स्वार्थ को प्रस्तुत करती है तथा यह केवल उच्च एवं अन्य जातियों में ही नहीं कार्यशील होती है?",
+    question_hi: "'संस्कृतीकरण' की प्रक्रिया के द्वारा क्षेत्रीय व अन्य संस्कृतियों के स्वार्थ को प्रस्तुत करती है तथा यह केवल उच्च एवं अन्य जातियों में ही नहीं कार्यशील होती है?",
+    options_en: [
+      "डॉ. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र अठर",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "डॉ. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र अठर",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "संस्कृतीकरण की प्रक्रिया को डॉ. श्रीनिवास ने प्रतिपादित किया, और मिल्टन सिंगर व डॉ. योगेन्द्र अठर जैसे विद्वानों ने भी इस पर अपने विचार दिए हैं, यह दर्शाते हुए कि यह प्रक्रिया केवल उच्च जातियों तक सीमित नहीं है बल्कि विभिन्न क्षेत्रीय और सामाजिक संदर्भों में कार्यशील होती है।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया को डॉ. श्रीनिवास ने प्रतिपादित किया, और मिल्टन सिंगर व डॉ. योगेन्द्र अठर जैसे विद्वानों ने भी इस पर अपने विचार दिए हैं, यह दर्शाते हुए कि यह प्रक्रिया केवल उच्च जातियों तक सीमित नहीं है बल्कि विभिन्न क्षेत्रीय और सामाजिक संदर्भों में कार्यशील होती है।"
+  },
+  {
+    question_en: "'संस्कृतीकरण' की प्रक्रिया व क्षेत्रीय गतिशीलता का द्योतक है -",
+    question_hi: "'संस्कृतीकरण' की प्रक्रिया व क्षेत्रीय गतिशीलता का द्योतक है -",
+    options_en: [
+      "मिल्टन सिंगर",
+      "सिंह का",
+      "संस्कृतीकरण",
+      "गतिशीलता का द्योतक"
+    ],
+    options_hi: [
+      "मिल्टन सिंगर",
+      "सिंह का",
+      "संस्कृतीकरण",
+      "गतिशीलता का द्योतक"
+    ],
     correct_option_index: 2,
-    explanation_en: "Bangladesh's Independence Day (and the adoption of the anthem) is March 26, 1971.",
-    explanation_hi: "बांग्लादेश का स्वतंत्रता दिवस (और गान) 26 मार्च 1971 है।",
+    explanation_en: "संस्कृतीकरण (Sanskritization) स्वयं एक प्रक्रिया है जो क्षेत्रीय और सामाजिक गतिशीलता (social mobility) का द्योतक है, जहाँ एक समूह अपनी सामाजिक स्थिति को बेहतर बनाने के लिए उच्च जाति के रीति-रिवाजों को अपनाता है।",
+    explanation_hi: "संस्कृतीकरण (Sanskritization) स्वयं एक प्रक्रिया है जो क्षेत्रीय और सामाजिक गतिशीलता (social mobility) का द्योतक है, जहाँ एक समूह अपनी सामाजिक स्थिति को बेहतर बनाने के लिए उच्च जाति के रीति-रिवाजों को अपनाता है।"
   },
   {
-    question_en: "By what name is the Parliament of Pakistan known?",
-    question_hi: "पाकिस्तान की संसद को किस नाम से जाना जाता है?",
-    options_en: ["Jatiya Sangsad", "Senate", "Shura", "National Assembly"],
-    options_hi: ["जातीय संसद", "सीनेट", "शोरा", "नेशनल असेंबली (National Assembly)"],
+    question_en: "संस्कृतीकरण एक प्रक्रिया है",
+    question_hi: "संस्कृतीकरण एक प्रक्रिया है",
+    options_en: [
+      "दुर्बल इच्छा का",
+      "एक गुण है",
+      "एक समूह का",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "दुर्बल इच्छा का",
+      "एक गुण है",
+      "एक समूह का",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Parliament of Pakistan is called the National Assembly.",
-    explanation_hi: "पाकिस्तान की संसद को नेशनल असेंबली कहा जाता है।",
+    explanation_en: "संस्कृतीकरण एक जटिल सामाजिक-सांस्कृतिक प्रक्रिया है जो निम्न सामाजिक स्थिति वाले समूहों की उच्च स्थिति प्राप्त करने की इच्छा (दुर्बल इच्छा का संदर्भ), उच्च जातियों के गुणों का अनुकरण, और एक समूह के रूप में सामूहिक प्रयास से संबंधित है।",
+    explanation_hi: "संस्कृतीकरण एक जटिल सामाजिक-सांस्कृतिक प्रक्रिया है जो निम्न सामाजिक स्थिति वाले समूहों की उच्च स्थिति प्राप्त करने की इच्छा (दुर्बल इच्छा का संदर्भ), उच्च जातियों के गुणों का अनुकरण, और एक समूह के रूप में सामूहिक प्रयास से संबंधित है।"
   },
   {
-    question_en: "Which neighboring country's longest river is Irrawaddy?",
-    question_hi: "किस पड़ोसी देश की सबसे लंबी नदी (Longest River) इरावदी (Irrawaddy) है?",
-    options_en: ["Bhutan", "Nepal", "Myanmar", "China"],
-    options_hi: ["भूटान", "नेपाल", "म्यांमार", "चीन"],
-    correct_option_index: 2,
-    explanation_en: "The Irrawaddy is the longest river in Myanmar.",
-    explanation_hi: "म्यांमार की सबसे लंबी नदी इरावदी है।",
-  },
-  {
-    question_en: "Which is the longest river in Bhutan?",
-    question_hi: "भूटान की सबसे लंबी नदी कौन सी है?",
-    options_en: ["Irrawaddy", "Karnali", "Mahaweli Ganga", "Manas River"],
-    options_hi: ["इरावदी", "करनाली", "महावेली गंगा", "मानस नदी (Manas River)"],
-    correct_option_index: 3,
-    explanation_en: "The longest river in Bhutan is the Manas River.",
-    explanation_hi: "भूटान की सबसे लंबी नदी मानस नदी है।",
-  },
-  {
-    question_en: "Which is the longest river in Sri Lanka?",
-    question_hi: "श्रीलंका की सबसे लंबी नदी कौन सी है?",
-    options_en: ["Yangtze River", "Karnali", "Padma", "Mahaweli Ganga"],
-    options_hi: ["यांग्त्सीक्यांग", "करनाली", "पद्मा", "महावेली गंगा (Mahaveli Ganga)"],
-    correct_option_index: 3,
-    explanation_en: "The longest river in Sri Lanka is the Mahaweli Ganga.",
-    explanation_hi: "श्रीलंका की सबसे लंबी नदी महावेली गंगा है।",
-  },
-  {
-    question_en: "What is the capital of Maldives?",
-    question_hi: "मालदीव की राजधानी क्या है?",
-    options_en: ["Sri Jayawardenepura Kotte", "Dhaka", "Thimphu", "Male"],
-    options_hi: ["श्री जयवर्धनेपुरा कोट्टे", "ढाका", "थिम्पू", "माले (Male)"],
-    correct_option_index: 3,
-    explanation_en: "The capital of Maldives is Male.",
-    explanation_hi: "मालदीव की राजधानी माले है।",
-  },
-  {
-    question_en: "Duncan Pass is situated between which two Andaman Islands?",
-    question_hi: "डंकन पास (Duncan Pass) किन दो अंडमान द्वीपों के बीच स्थित है?",
-    options_en: ["North Andaman and Middle Andaman", "Car Nicobar and Little Nicobar", "South Andaman and Little Andaman", "Great Nicobar and Sumatra"],
-    options_hi: ["उत्तरी अंडमान और मध्य अंडमान", "कार निकोबार और लघु निकोबार", "दक्षिणी अंडमान और लघु अंडमान", "ग्रेट निकोबार और सुमात्रा"],
-    correct_option_index: 2,
-    explanation_en: "Duncan Pass is situated between South Andaman and Little Andaman.",
-    explanation_hi: "डंकन पास दक्षिणी अंडमान और लघु अंडमान के मध्य स्थित है।",
-  },
-  {
-    question_en: "Narcondam Island is an example of the Andaman and Nicobar Islands. What type of volcano is it?",
-    question_hi: "नारकोंडम द्वीप (Narcondam Island) अंडमान निकोबार द्वीप समूह का एक उदाहरण है, यह किस प्रकार का ज्वालामुखी है?",
-    options_en: ["Active Volcano", "Dormant Volcano", "Extinct Volcano", "Shield Volcano"],
-    options_hi: ["सक्रिय ज्वालामुखी (Active Volcano)", "सुषुप्त ज्वालामुखी (Dormant Volcano)", "मृत ज्वालामुखी (Extinct Volcano)", "ढाल ज्वालामुखी"],
+    question_en: "संस्कृतीकरण का सम्बन्ध निम्न में से किससे है?",
+    question_hi: "संस्कृतीकरण का सम्बन्ध निम्न में से किससे है?",
+    options_en: [
+      "निम्न जातियों से",
+      "निम्न एवं उच्च जातियों से",
+      "निम्न जातियों से",
+      "उच्च जातियों से"
+    ],
+    options_hi: [
+      "निम्न जातियों से",
+      "निम्न एवं उच्च जातियों से",
+      "निम्न जातियों से",
+      "उच्च जातियों से"
+    ],
     correct_option_index: 1,
-    explanation_en: "Narcondam Island is a dormant volcano.",
-    explanation_hi: "नारकोंडम द्वीप एक सुषुप्त ज्वालामुखी है।",
+    explanation_en: "संस्कृतीकरण की प्रक्रिया में मुख्य रूप से निम्न जातियाँ उच्च जातियों के रीति-रिवाजों का अनुकरण करती हैं, इसलिए इसका संबंध निम्न जातियों से है जो उच्च जातियों की ओर देखती हैं। अतः यह निम्न और उच्च दोनों जातियों के बीच के संबंध को दर्शाता है।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया में मुख्य रूप से निम्न जातियाँ उच्च जातियों के रीति-रिवाजों का अनुकरण करती हैं, इसलिए इसका संबंध निम्न जातियों से है जो उच्च जातियों की ओर देखती हैं। अतः यह निम्न और उच्च दोनों जातियों के बीच के संबंध को दर्शाता है।"
   },
   {
-    question_en: "Which channel separates Lakshadweep and Minicoy?",
-    question_hi: "लक्षद्वीप और मिनिकॉय को कौन सा चैनल अलग करता है?",
-    options_en: ["8° Channel", "Duncan Pass", "Grand Channel", "9° Channel"],
-    options_hi: ["8° डिग्री चैनल", "डंकन पास", "ग्रैंड चैनल", "9° डिग्री चैनल"],
+    question_en: "निम्न में से किस विद्वान ने हिन्दुओं के अनुकरण करके अपने को हिन्दू मानना प्रारम्भ किया?",
+    question_hi: "निम्न में से किस विद्वान ने हिन्दुओं के अनुकरण करके अपने को हिन्दू मानना प्रारम्भ किया?",
+    options_en: [
+      "भील जनजाति से",
+      "गोंड जनजाति से",
+      "उपर्युक्त सभी",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "भील जनजाति से",
+      "गोंड जनजाति से",
+      "उपर्युक्त सभी",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 3,
-    explanation_en: "The 9° Channel separates Lakshadweep and Minicoy Island.",
-    explanation_hi: "9° डिग्री चैनल लक्षद्वीप और मिनिकॉय द्वीप को अलग करता है।",
+    explanation_en: "प्रश्न में पूछा गया है कि किस विद्वान ने हिन्दुओं का अनुकरण करके स्वयं को हिन्दू मानना प्रारम्भ किया। यह एक असामान्य प्रश्न है और दिए गए विकल्पों में से कोई भी विद्वान इस संदर्भ में फिट नहीं बैठता, इसलिए 'इनमें से कोई नहीं' सही विकल्प है।",
+    explanation_hi: "प्रश्न में पूछा गया है कि किस विद्वान ने हिन्दुओं का अनुकरण करके स्वयं को हिन्दू मानना प्रारम्भ किया। यह एक असामान्य प्रश्न है और दिए गए विकल्पों में से कोई भी विद्वान इस संदर्भ में फिट नहीं बैठता, इसलिए 'इनमें से कोई नहीं' सही विकल्प है।"
   },
   {
-    question_en: "What is the new name of Wheeler Island?",
-    question_hi: "व्हीलर द्वीप (Wheeler Island) का नया नाम क्या है?",
-    options_en: ["Havelock Island", "Neil Island", "Ross Island", "Abdul Kalam Island"],
-    options_hi: ["हैवलाक द्वीप", "नील द्वीप", "रॉस द्वीप", "अब्दुल कलाम द्वीप"],
-    correct_option_index: 3,
-    explanation_en: "The new name of Wheeler Island is Abdul Kalam Island.",
-    explanation_hi: "व्हीलर द्वीप का नया नाम अब्दुल कलाम द्वीप है।",
-  },
-  {
-    question_en: "On which island is the city of Mumbai located?",
-    question_hi: "मुंबई शहर किस द्वीप पर स्थित है?",
-    options_en: ["Minicoy Island", "Wheeler Island", "Salsette Island", "Elephanta Island"],
-    options_hi: ["मिनिकॉय द्वीप", "व्हीलर द्वीप", "सालसेट द्वीप (Salsette Island)", "एलिफेंटा द्वीप"],
-    correct_option_index: 2,
-    explanation_en: "The city of Mumbai is located on Salsette Island.",
-    explanation_hi: "मुंबई शहर सालसेट द्वीप पर स्थित है।",
-  },
-  {
-    question_en: "Pamban Island is situated between which two regions?",
-    question_hi: "पंबन द्वीप (Pamban Island) किन दो क्षेत्रों के बीच स्थित है?",
-    options_en: ["Lakshadweep and Minicoy", "India and Sri Lanka", "Andaman and Nicobar", "Coco Island and North Andaman"],
-    options_hi: ["लक्षद्वीप और मिनिकॉय", "भारत और श्रीलंका", "अंडमान और निकोबार", "कोको द्वीप और उत्तरी अंडमान"],
+    question_en: "संस्कृतीकरण की प्रक्रिया में होने वाले निम्न में कौन से परिवर्तन को स्पष्ट करती है?",
+    question_hi: "संस्कृतीकरण की प्रक्रिया में होने वाले निम्न में कौन से परिवर्तन को स्पष्ट करती है?",
+    options_en: [
+      "सामाजिक-आर्थिक",
+      "सामाजिक-सांस्कृतिक",
+      "सामाजिक-राजनीतिक",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "सामाजिक-आर्थिक",
+      "सामाजिक-सांस्कृतिक",
+      "सामाजिक-राजनीतिक",
+      "(a) और (b) दोनों"
+    ],
     correct_option_index: 1,
-    explanation_en: "Pamban Island (Rameswaram Island) is located in the Gulf of Mannar between India and Sri Lanka.",
-    explanation_hi: "पंबन द्वीप (रामेश्वरम द्वीप) मन्नार की खाड़ी में भारत और श्रीलंका के बीच स्थित है।",
+    explanation_en: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से सामाजिक-सांस्कृतिक परिवर्तनों को स्पष्ट करती है, जिसमें जीवन शैली, रीति-रिवाज, अनुष्ठान और सामाजिक स्थिति में बदलाव शामिल होते हैं।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से सामाजिक-सांस्कृतिक परिवर्तनों को स्पष्ट करती है, जिसमें जीवन शैली, रीति-रिवाज, अनुष्ठान और सामाजिक स्थिति में बदलाव शामिल होते हैं।"
   },
   {
-    question_en: "In which geological period did Pangaea break into two parts (Angaraland and Gondwanaland)?",
-    question_hi: "पेंजिया (Pangaea) किस भूवैज्ञानिक काल (Geological period) में दो भागों (अंगारालैंड और गोंडवानालैंड) में टूट गया था?",
-    options_en: ["Mesozoic Era", "Pre-Cambrian Eon", "Carboniferous Period", "Pleistocene Epoch"],
-    options_hi: ["मेसोजोइक युग", "प्री-कैम्ब्रियन कल्प", "कार्बोनिफेरस युग (Carboniferous Period)", "प्लेस्टोसीन काल"],
-    correct_option_index: 2,
-    explanation_en: "Pangaea broke into two parts during the Carboniferous Period.",
-    explanation_hi: "पेंजिया कार्बोनिफेरस युग में दो भागों में टूट गया था।",
-  },
-  {
-    question_en: "What is the average height of the Lesser Himalaya?",
-    question_hi: "लघु हिमालय (Lesser Himalaya) की औसत ऊँचाई कितनी है?",
-    options_en: ["6100 meters", "600-1200 meters", "3000-4500 meters", "4500-6000 meters"],
-    options_hi: ["6100 मीटर", "600-1200 मीटर", "3000-4500 मीटर", "4500-6000 मीटर"],
-    correct_option_index: 2,
-    explanation_en: "The average height of the Lesser/Middle Himalaya is 3000-4500 meters.",
-    explanation_hi: "लघु/मध्य हिमालय की औसत ऊँचाई 3000-4500 मीटर है।",
-  },
-  {
-    question_en: "Which is the northernmost mountain range of the Trans Himalaya?",
-    question_hi: "ट्रांस हिमालय (Trans Himalaya) की सबसे उत्तरी पर्वत श्रेणी कौन सी है?",
-    options_en: ["Zaskar Range", "Ladakh Range", "Kailash Range", "Karakoram Range"],
-    options_hi: ["जास्कर श्रेणी", "लद्दाख श्रेणी", "कैलाश श्रेणी", "कराकोरम श्रेणी (Karakoram Range)"],
-    correct_option_index: 3,
-    explanation_en: "The Trans Himalaya (Tibetan Himalaya) consists of the Karakoram, Ladakh, Zaskar, and Kailash ranges.",
-    explanation_hi: "ट्रांस हिमालय (तिब्बती हिमालय) कराकोरम, लद्दाख, जास्कर और कैलाश श्रेणियों से बना है।",
-  },
-  {
-    question_en: "What is the average breadth of the Great Himalaya?",
-    question_hi: "वृहत् हिमालय (Great Himalaya) की औसत चौड़ाई (Average Breadth) कितनी है?",
-    options_en: ["50 km", "120 km - 190 km", "200-250 km", "300 km"],
-    options_hi: ["50 किमी", "120 किमी - 190 किमी", "200-250 किमी", "300 किमी"],
+    question_en: "संस्कृतीकरण की प्रक्रिया में होने वाले निम्न जातियों में केवल एक परिवर्तन हो सकता है, न कि-",
+    question_hi: "संस्कृतीकरण की प्रक्रिया में होने वाले निम्न जातियों में केवल एक परिवर्तन हो सकता है, न कि-",
+    options_en: [
+      "धार्मिक परिवर्तन को",
+      "संरचनात्मक को",
+      "दण्डनात्मक परिवर्तन को",
+      "गतिशीलता को"
+    ],
+    options_hi: [
+      "धार्मिक परिवर्तन को",
+      "संरचनात्मक को",
+      "दण्डनात्मक परिवर्तन को",
+      "गतिशीलता को"
+    ],
     correct_option_index: 1,
-    explanation_en: "The average breadth of the Great Himalaya is 120-190 km.",
-    explanation_hi: "वृहत् हिमालय की औसत चौड़ाई 120-190 किमी है।",
+    explanation_en: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से निम्न जातियों में सांस्कृतिक और स्थितिगत गतिशीलता लाती है, लेकिन यह आमतौर पर जाति व्यवस्था की मूल संरचनात्मक (structural) स्थिति में परिवर्तन नहीं करती है।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया मुख्य रूप से निम्न जातियों में सांस्कृतिक और स्थितिगत गतिशीलता लाती है, लेकिन यह आमतौर पर जाति व्यवस्था की मूल संरचनात्मक (structural) स्थिति में परिवर्तन नहीं करती है।"
   },
   {
-    question_en: "What is the average height of the Shivalik or Outer Himalaya?",
-    question_hi: "शिवालिक (Shivalik) या बाह्य हिमालय की औसत ऊँचाई कितनी है?",
-    options_en: ["3000-4500 meters", "4500-6000 meters", "600-1200 meters", "1500-1800 meters"],
-    options_hi: ["3000-4500 मीटर", "4500-6000 मीटर", "600-1200 मीटर", "1500-1800 मीटर"],
+    question_en: "संस्कृतीकरण की अवधारणा का मुख्य कार्य है-",
+    question_hi: "संस्कृतीकरण की अवधारणा का मुख्य कार्य है-",
+    options_en: [
+      "निम्न जातियों को समाज में उच्च स्थान दिलाने के कारण",
+      "भारतीय समाज का तुलनात्मक अध्ययन करने के कारण",
+      "निम्न जातियों के व्यवहारों के अनुकरण करने के कारण",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "निम्न जातियों को समाज में उच्च स्थान दिलाने के कारण",
+      "भारतीय समाज का तुलनात्मक अध्ययन करने के कारण",
+      "निम्न जातियों के व्यवहारों के अनुकरण करने के कारण",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "संस्कृतीकरण की अवधारणा का मुख्य कार्य निम्न जातियों द्वारा उच्च स्थान प्राप्त करने की प्रक्रिया को समझना, भारतीय समाज में गतिशीलता का तुलनात्मक अध्ययन करना, और निम्न जातियों द्वारा उच्च जातियों के व्यवहारों के अनुकरण का विश्लेषण करना है।",
+    explanation_hi: "संस्कृतीकरण की अवधारणा का मुख्य कार्य निम्न जातियों द्वारा उच्च स्थान प्राप्त करने की प्रक्रिया को समझना, भारतीय समाज में गतिशीलता का तुलनात्मक अध्ययन करना, और निम्न जातियों द्वारा उच्च जातियों के व्यवहारों के अनुकरण का विश्लेषण करना है।"
+  },
+  {
+    question_en: "भारतीय समाज में निम्न जातियों द्वारा उच्च जाति के व्यवहारों के अनुकरण करने के कारण है -",
+    question_hi: "भारतीय समाज में निम्न जातियों द्वारा उच्च जाति के व्यवहारों के अनुकरण करने के कारण है -",
+    options_en: [
+      "उपर्युक्त सभी",
+      "इनमें से कोई नहीं",
+      "कारणों के लिए",
+      "(a)"
+    ],
+    options_hi: [
+      "उपर्युक्त सभी",
+      "इनमें से कोई नहीं",
+      "कारणों के लिए",
+      "(a)"
+    ],
+    correct_option_index: 0,
+    explanation_en: "भारतीय समाज में निम्न जातियों द्वारा उच्च जाति के व्यवहारों का अनुकरण करने के कई कारण होते हैं, जिनमें सामाजिक प्रतिष्ठा प्राप्त करना, आर्थिक स्थिति में सुधार की उम्मीद, और धार्मिक शुद्धता की धारणा शामिल है। 'उपर्युक्त सभी' विकल्प यह दर्शाता है कि ऐसे कई कारक इस प्रक्रिया में योगदान करते हैं।",
+    explanation_hi: "भारतीय समाज में निम्न जातियों द्वारा उच्च जाति के व्यवहारों का अनुकरण करने के कई कारण होते हैं, जिनमें सामाजिक प्रतिष्ठा प्राप्त करना, आर्थिक स्थिति में सुधार की उम्मीद, और धार्मिक शुद्धता की धारणा शामिल है। 'उपर्युक्त सभी' विकल्प यह दर्शाता है कि ऐसे कई कारक इस प्रक्रिया में योगदान करते हैं।"
+  },
+  {
+    question_en: "संस्कृतीकरण में निम्न में से किस विद्वान ने पहले 'ब्राह्मणीकरण' माना था?",
+    question_hi: "संस्कृतीकरण में निम्न में से किस विद्वान ने पहले 'ब्राह्मणीकरण' माना था?",
+    options_en: [
+      "डॉ. श्रीनिवास",
+      "एम. एन. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह"
+    ],
+    options_hi: [
+      "डॉ. श्रीनिवास",
+      "एम. एन. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह"
+    ],
+    correct_option_index: 0,
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने अपनी अवधारणा को शुरू में 'ब्राह्मणीकरण' (Brahminization) कहा था, लेकिन बाद में इसे 'संस्कृतीकरण' में बदल दिया क्योंकि उन्होंने पाया कि अनुकरण केवल ब्राह्मणों तक ही सीमित नहीं था, बल्कि अन्य उच्च जातियों तक भी फैला हुआ था।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने अपनी अवधारणा को शुरू में 'ब्राह्मणीकरण' (Brahminization) कहा था, लेकिन बाद में इसे 'संस्कृतीकरण' में बदल दिया क्योंकि उन्होंने पाया कि अनुकरण केवल ब्राह्मणों तक ही सीमित नहीं था, बल्कि अन्य उच्च जातियों तक भी फैला हुआ था।"
+  },
+  {
+    question_en: "संस्कृतीकरण को निम्न में किस विद्वान ने सांस्कृतिक का आदर्श के रूप में मान्यता प्रदान की है?",
+    question_hi: "संस्कृतीकरण को निम्न में किस विद्वान ने सांस्कृतिक का आदर्श के रूप में मान्यता प्रदान की है?",
+    options_en: [
+      "श्रीनिवास",
+      "मिल्टन सिंगर",
+      "ई. एस. पी. नागरीना",
+      "बी. आर. चौहान"
+    ],
+    options_hi: [
+      "श्रीनिवास",
+      "मिल्टन सिंगर",
+      "ई. एस. पी. नागरीना",
+      "बी. आर. चौहान"
+    ],
+    correct_option_index: 0,
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण को एक ऐसी प्रक्रिया के रूप में प्रस्तुत किया जहाँ उच्च जातियाँ, विशेषकर ब्राह्मण, सांस्कृतिक आदर्श के रूप में कार्य करती हैं जिनका निम्न जातियाँ अनुकरण करती हैं।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण को एक ऐसी प्रक्रिया के रूप में प्रस्तुत किया जहाँ उच्च जातियाँ, विशेषकर ब्राह्मण, सांस्कृतिक आदर्श के रूप में कार्य करती हैं जिनका निम्न जातियाँ अनुकरण करती हैं।"
+  },
+  {
+    question_en: "एक तथाकथित निम्न जाति, महिलाओं एवं संस से बंद करके शाकाहारी बन जाती है। धीरे-धीरे जाति व्यवस्था में ऊपर बढ़ जाती है। यह कथन किसका है?",
+    question_hi: "एक तथाकथित निम्न जाति, महिलाओं एवं संस से बंद करके शाकाहारी बन जाती है। धीरे-धीरे जाति व्यवस्था में ऊपर बढ़ जाती है। यह कथन किसका है?",
+    options_en: [
+      "डॉ. एम. एन. श्रीनिवास का",
+      "डॉ. योगेन्द्र सिंह का",
+      "मिल्टन सिंगर का",
+      "डॉ. एस. सी. दुबे का"
+    ],
+    options_hi: [
+      "डॉ. एम. एन. श्रीनिवास का",
+      "डॉ. योगेन्द्र सिंह का",
+      "मिल्टन सिंगर का",
+      "डॉ. एस. सी. दुबे का"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन एम. एन. श्रीनिवास (M. N. Srinivas) का है, जो संस्कृतीकरण की प्रक्रिया का एक विशिष्ट उदाहरण प्रस्तुत करता है, जहाँ निम्न जातियाँ अपनी जीवन शैली (जैसे शाकाहार अपनाना) में बदलाव करके सामाजिक पदानुक्रम में अपनी स्थिति को ऊपर उठाने का प्रयास करती हैं।",
+    explanation_hi: "यह कथन एम. एन. श्रीनिवास (M. N. Srinivas) का है, जो संस्कृतीकरण की प्रक्रिया का एक विशिष्ट उदाहरण प्रस्तुत करता है, जहाँ निम्न जातियाँ अपनी जीवन शैली (जैसे शाकाहार अपनाना) में बदलाव करके सामाजिक पदानुक्रम में अपनी स्थिति को ऊपर उठाने का प्रयास करती हैं।"
+  },
+  {
+    question_en: "निम्न में से किसने जोनर बॉटर की जनजातियों का अध्ययन करके यह स्पष्ट किया है कि \"यह प्रक्रिया है जो कि सामान्य रूप से क्षेत्रीय समूहों के अनुकरण तथा सम्पूर्ण हिन्दू समाज में जाति-उच्छता सम्बन्धी मूल्यों से अवदन रही है।\"",
+    question_hi: "निम्न में से किसने जोनर बॉटर की जनजातियों का अध्ययन करके यह स्पष्ट किया है कि \"यह प्रक्रिया है जो कि सामान्य रूप से क्षेत्रीय समूहों के अनुकरण तथा सम्पूर्ण हिन्दू समाज में जाति-उच्छता सम्बन्धी मूल्यों से अवदन रही है।\"",
+    options_en: [
+      "एम. एन. श्रीनिवास",
+      "डॉ. एस. सी. दुबे",
+      "श्याम लाल कालिया",
+      "मिल्टन सिंगर"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास",
+      "डॉ. एस. सी. दुबे",
+      "श्याम लाल कालिया",
+      "मिल्टन सिंगर"
+    ],
     correct_option_index: 2,
-    explanation_en: "The average height of the Shivalik Himalaya is 600-1200 meters.",
-    explanation_hi: "शिवालिक हिमालय की औसत ऊँचाई 600-1200 मीटर है।",
+    explanation_en: "यह कथन श्याम लाल कालिया (Shyam Lal Kalia) का है, जिन्होंने संस्कृतीकरण की प्रक्रिया को क्षेत्रीय समूहों के अनुकरण और हिन्दू समाज में जाति-उत्कृष्टता संबंधी मूल्यों से संबंधित बताया है।",
+    explanation_hi: "यह कथन श्याम लाल कालिया (Shyam Lal Kalia) का है, जिन्होंने संस्कृतीकरण की प्रक्रिया को क्षेत्रीय समूहों के अनुकरण और हिन्दू समाज में जाति-उत्कृष्टता संबंधी मूल्यों से संबंधित बताया है।"
   },
   {
-    question_en: "Which fault separates the Lesser/Middle Himalaya from the Shivalik Himalaya?",
-    question_hi: "लघु/मध्य हिमालय को शिवालिक हिमालय से कौन सा भ्रंश (Fault) अलग करता है?",
-    options_en: ["Indus Tsangpo Structure Zone (ITSZ)", "Main Central Thrust (MCT)", "Main Boundary Fault (MBF)", "Himalayan Frontal Fault (HFF)"],
-    options_hi: ["Indus Tsangpo Structure Zone (ITSZ)", "Main Central Thrust (MCT)", "Main Boundary Fault (MBF)", "Himalayan Frontal Fault (HFF)"],
-    correct_option_index: 2,
-    explanation_en: "The Lesser/Middle Himalaya is separated from the Shivalik Himalaya by the Main Boundary Fault.",
-    explanation_hi: "लघु/मध्य हिमालय Main Boundary Fault द्वारा शिवालिक हिमालय से अलग होता है।",
-  },
-  {
-    question_en: "What is the height of Kanchenjunga, the highest peak of the Himalayas located in India?",
-    question_hi: "भारत में स्थित हिमालय की सबसे ऊँची चोटी कंचनजंगा (Kanchenjunga) की ऊँचाई कितनी है?",
-    options_en: ["8848.86 meters", "8611 meters", "8586 meters", "7817 meters"],
-    options_hi: ["8848.86 मीटर", "8611 मीटर", "8586 मीटर", "7817 मीटर"],
-    correct_option_index: 2,
-    explanation_en: "The height of Kanchenjunga is 8586 meters.",
-    explanation_hi: "कंचनजंगा की ऊँचाई 8586 मीटर है।",
-  },
-  {
-    question_en: "Which of the following hills is not included in the hills of Arunachal Pradesh?",
-    question_hi: "अरुणाचल प्रदेश की पहाड़ियों में कौन सी पहाड़ी शामिल नहीं है?",
-    options_en: ["Daphla", "Miri", "Abor", "Naga Hills"],
-    options_hi: ["डाफला", "मिरी", "अबोर", "नागा हिल्स"],
-    correct_option_index: 3,
-    explanation_en: "Naga Hills are in Nagaland, while Daphla, Miri, Abor, Mishmi, and Patkoi Bum are hills of Arunachal Pradesh.",
-    explanation_hi: "नागा हिल्स (नागालैंड) में हैं, जबकि डाफला, मिरी, अबोर, मिश्मी, और पटकोई बूम अरुणाचल प्रदेश की पहाड़ियाँ हैं।",
-  },
-  {
-    question_en: "The Kumaon Himalaya extends between which two rivers?",
-    question_hi: "कुमायूं हिमालय (Kumaon Himalaya) का विस्तार किन दो नदियों के बीच है?",
-    options_en: ["Indus and Sutlej", "Kali and Teesta", "Teesta and Dihang", "Sutlej and Kali River"],
-    options_hi: ["सिंधु और सतलुज", "काली और तिस्ता", "तिस्ता और दिहांग", "सतलुज और काली नदी"],
-    correct_option_index: 3,
-    explanation_en: "The Kumaon Himalaya stretches between the Sutlej and Kali Rivers (320 km).",
-    explanation_hi: "कुमायूं हिमालय सतलुज और काली नदी के बीच (320 किमी) फैला है।",
-  },
-  {
-    question_en: "Which is the highest peak of the Kumaon Himalaya?",
-    question_hi: "कुमायूं हिमालय की सबसे ऊँची चोटी कौन सी है?",
-    options_en: ["Mount Everest", "Kanchenjunga", "Nandadevi", "Namcha Barwa"],
-    options_hi: ["माउंट एवरेस्ट", "कंचनजंगा", "नंदादेवी (Nandadevi)", "नामचा बरवा"],
-    correct_option_index: 2,
-    explanation_en: "Nandadevi (7817 m) is the highest peak of the Kumaon Himalaya.",
-    explanation_hi: "नंदादेवी (7817 मी) कुमायूं हिमालय की सबसे ऊँची चोटी है।",
-  },
-  {
-    question_en: "The Assam Himalaya extends between which two rivers?",
-    question_hi: "असम हिमालय (Assam Himalaya) का विस्तार किन दो नदियों के बीच है?",
-    options_en: ["Sutlej and Kali River", "Kali and Teesta River", "Teesta and Dihang River", "Indus and Sutlej River"],
-    options_hi: ["सतलुज और काली नदी", "काली और तिस्ता नदी", "तिस्ता और दिहांग नदी", "सिंधु और सतलुज नदी"],
-    correct_option_index: 2,
-    explanation_en: "The Assam Himalaya stretches between the Teesta and Dihang rivers (720 km).",
-    explanation_hi: "असम हिमालय तिस्ता और दिहांग नदियों के बीच (720 किमी) फैला है।",
-  },
-  {
-    question_en: "Which pass is also called the 'Land of Passes'?",
-    question_hi: "किस दर्रे को 'लैंड ऑफ पासेस' (Land of Passes) भी कहा जाता है?",
-    options_en: ["Passes of Uttarakhand", "Passes of Himachal Pradesh", "Passes of Sikkim", "Passes of Ladakh"],
-    options_hi: ["उत्तराखंड के दर्रे", "हिमाचल प्रदेश के दर्रे", "सिक्किम के दर्रे", "लद्दाख के दर्रे"],
-    correct_option_index: 3,
-    explanation_en: "The Ladakh region is also called the 'Land of Passes'.",
-    explanation_hi: "लद्दाख क्षेत्र को 'दर्रों की भूमि' (Land of Passes) भी कहा जाता है।",
-  },
-  {
-    question_en: "Which pass connects Srinagar to Gilgit?",
-    question_hi: "श्रीनगर को गिलगित से कौन सा दर्रा जोड़ता है?",
-    options_en: ["Banihal Pass", "Zojila Pass", "Khardungla Pass", "Burzil Pass"],
-    options_hi: ["बनिहाल दर्रा", "जोजिला दर्रा", "खारदुंगला दर्रा", "बुर्जिल दर्रा (Burzil Pass)"],
-    correct_option_index: 3,
-    explanation_en: "Burzil Pass connects Srinagar to Gilgit.",
-    explanation_hi: "बुर्जिल दर्रा श्रीनगर को गिलगित से जोड़ता है।",
-  },
-  {
-    question_en: "Which pass located in Arunachal Pradesh is situated between India and China?",
-    question_hi: "अरुणाचल प्रदेश में स्थित वह दर्रा कौन सा है, जो भारत और चीन के बीच स्थित है?",
-    options_en: ["Bomdila Pass", "Sela Pass", "Pangsau Pass", "Difu Pass"],
-    options_hi: ["बोमडिला दर्रा", "सेला दर्रा", "पांगसाड दर्रा", "दिफू दर्रा (Difu Pass)"],
-    correct_option_index: 3,
-    explanation_en: "Difu Pass is located at the junction of India, China, and Myanmar.",
-    explanation_hi: "दिफू दर्रा भारत, चीन और म्यांमार के जंक्शन पर स्थित है।",
-  },
-  {
-    question_en: "Which pass connects Mumbai to Nashik in Maharashtra?",
-    question_hi: "महाराष्ट्र में मुंबई को नासिक से कौन सा दर्रा जोड़ता है?",
-    options_en: ["Bhor Ghat Pass", "Pal Ghat Pass", "Shenkotta Pass", "Thal Ghat Pass"],
-    options_hi: ["भोर घाट दर्रा", "पाल घाट दर्रा", "सेनकोट्टा दर्रा", "थाल घाट दर्रा (Thal Ghat Pass)"],
-    correct_option_index: 3,
-    explanation_en: "Thal Ghat Pass connects Mumbai to Nashik.",
-    explanation_hi: "थाल घाट दर्रा मुंबई को नासिक से जोड़ता है।",
-  },
-  {
-    question_en: "Palghat Pass is situated between which two hills?",
-    question_hi: "पाल घाट दर्रा (Palghat Pass) किन दो पहाड़ियों के बीच स्थित है?",
-    options_en: ["Nilgiri and Cardamom Hills", "Palani and Anaimalai Hills", "Shenkotta and Anaimalai Hills", "Nilgiri and Anaimalai Hills"],
-    options_hi: ["नीलगिरि और कार्डामम हिल्स", "पालनी और अन्नामलाई हिल्स", "शेनकोट्टा और अन्नामलाई हिल्स", "नीलगिरि और अन्नामलाई हिल्स"],
-    correct_option_index: 3,
-    explanation_en: "Palghat Pass is situated between the Nilgiri and Anaimalai Hills.",
-    explanation_hi: "पाल घाट दर्रा नीलगिरि और अन्नामलाई हिल्स के बीच स्थित है।",
-  },
-  {
-    question_en: "Which is the highest motorable pass in India?",
-    question_hi: "भारत का सबसे ऊँचा मोटर योग्य दर्रा (Highest Motorable Pass) कौन सा है?",
-    options_en: ["Khardungla Pass", "Banihal Pass", "Mana Pass", "Umling-la pass"],
-    options_hi: ["खारदुंगला दर्रा", "बनिहाल दर्रा", "माना दर्रा", "उमलिंग-ला दर्रा (Umling-la pass)"],
-    correct_option_index: 3,
-    explanation_en: "Umling-la pass is the country's highest motorable pass, located in Ladakh.",
-    explanation_hi: "उमलिंग-ला दर्रा देश का सबसे ऊँचा मोटर योग्य दर्रा है, जो लद्दाख में स्थित है।",
-  },
-  {
-    question_en: "The Nubra River originates from which glacier?",
-    question_hi: "नुब्रा नदी (Nubra River) का उद्गम किस ग्लेशियर से होता है?",
-    options_en: ["Baltoro Glacier", "Rupal Glacier", "Siachen Glacier", "Milam Glacier"],
-    options_hi: ["बाल्टोरो ग्लेशियर", "रूपाल ग्लेशियर", "सियाचिन ग्लेशियर", "मिलाम ग्लेशियर"],
-    correct_option_index: 2,
-    explanation_en: "The Nubra River originates from the Siachen Glacier.",
-    explanation_hi: "नुब्रा नदी का उद्गम सियाचिन ग्लेशियर से होता है।",
-  },
-  {
-    question_en: "What are 'Duns' located in Uttarakhand?",
-    question_hi: "उत्तराखंड में स्थित ‘दून’ (Duns) क्या हैं?",
-    options_en: ["A type of soil", "Longitudinal valleys between Shivalik and Lesser Himalaya", "A seasonal wind", "Mountain meadows"],
-    options_hi: ["एक प्रकार की मिट्टी", "शिवालिक और लघु हिमालय के बीच की अनुदैर्ध्य घाटियाँ", "एक मौसमी हवा", "पर्वतीय घास के मैदान"],
+    question_en: "संस्कृतीकरण की प्रक्रिया के बारे में निम्न में कौन-सा कथन असत्य है?",
+    question_hi: "संस्कृतीकरण की प्रक्रिया के बारे में निम्न में कौन-सा कथन असत्य है?",
+    options_en: [
+      "इनमें से कोई नहीं",
+      "यह प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों या व्यवहारों को ही द्योतक है",
+      "यह प्रक्रिया सामाजिक एवं सांस्कृतिक परिवर्तन की सूचक है",
+      "संस्कृतीकरण का सम्बन्ध उच्च जातियों से"
+    ],
+    options_hi: [
+      "इनमें से कोई नहीं",
+      "यह प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों या व्यवहारों को ही द्योतक है",
+      "यह प्रक्रिया सामाजिक एवं सांस्कृतिक परिवर्तन की सूचक है",
+      "संस्कृतीकरण का सम्बन्ध उच्च जातियों से"
+    ],
     correct_option_index: 1,
-    explanation_en: "The valley situated between Shivalik and Lesser Himalaya is called Dun (e.g., Dehradun).",
-    explanation_hi: "शिवालिक और लघु हिमालय के बीच स्थित घाटी को दून (जैसे देहरादून) कहा जाता है।",
+    explanation_en: "संस्कृतीकरण की प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों तक सीमित नहीं है; इसमें अन्य उच्च जातियों (जैसे क्षत्रिय, वैश्य) के रीति-रिवाजों का अनुकरण भी शामिल हो सकता है। इसलिए, यह कहना कि \"यह प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों या व्यवहारों को ही द्योतक है\" असत्य है।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों तक सीमित नहीं है; इसमें अन्य उच्च जातियों (जैसे क्षत्रिय, वैश्य) के रीति-रिवाजों का अनुकरण भी शामिल हो सकता है। इसलिए, यह कहना कि \"यह प्रक्रिया केवल ब्राह्मणों के रीति-रिवाजों या व्यवहारों को ही द्योतक है\" असत्य है।"
   },
   {
-    question_en: "Kashmir Valley is situated between which two mountain ranges?",
-    question_hi: "कश्मीर घाटी (Kashmir Valley) किन दो पर्वत श्रृंखलाओं के बीच स्थित है?",
-    options_en: ["Karakoram and Pir Panjal", "Great Himalaya and Ladakh", "Shivalik and Dhauladhar", "Great Himalaya and Pir Panjal"],
-    options_hi: ["कराकोरम और पीर पंजाल", "वृहत् हिमालय और लद्दाख", "शिवालिक और धौलाधार", "वृहत् हिमालय और पीर पंजाल"],
-    correct_option_index: 3,
-    explanation_en: "Kashmir Valley is situated between the Great Himalaya and Pir Panjal.",
-    explanation_hi: "कश्मीर घाटी वृहत् हिमालय और पीर पंजाल के बीच स्थित है।",
+    question_en: "निम्न में कौन संस्कृतीकरण की प्रक्रिया का लक्षण नहीं है?",
+    question_hi: "निम्न में कौन संस्कृतीकरण की प्रक्रिया का लक्षण नहीं है?",
+    options_en: [
+      "सामान्य व्यवस्था",
+      "सांस्कृतिक-सामाजिक आन्दोलन",
+      "सामाजिक उद्विकास",
+      "व्यवहारिक गतिशीलता"
+    ],
+    options_hi: [
+      "सामान्य व्यवस्था",
+      "सांस्कृतिक-सामाजिक आन्दोलन",
+      "सामाजिक उद्विकास",
+      "व्यवहारिक गतिशीलता"
+    ],
+    correct_option_index: 0,
+    explanation_en: "संस्कृतीकरण एक 'सामान्य व्यवस्था' (general system) नहीं है, बल्कि यह एक प्रक्रिया है जो सांस्कृतिक-सामाजिक आंदोलन, सामाजिक उद्विकास (एक प्रकार का) और व्यवहारिक गतिशीलता को दर्शाती है।",
+    explanation_hi: "संस्कृतीकरण एक 'सामान्य व्यवस्था' (general system) नहीं है, बल्कि यह एक प्रक्रिया है जो सांस्कृतिक-सामाजिक आंदोलन, सामाजिक उद्विकास (एक प्रकार का) और व्यवहारिक गतिशीलता को दर्शाती है।"
   },
   {
-    question_en: "What is the estimated age of the Aravalli mountain range?",
-    question_hi: "अरावली पर्वत की आयु लगभग कितनी मानी जाती है?",
-    options_en: ["150 million years", "350 million years", "600 million years", "570 million years"],
-    options_hi: ["150 मिलियन वर्ष", "350 मिलियन वर्ष", "600 मिलियन वर्ष", "570 मिलियन वर्ष"],
-    correct_option_index: 3,
-    explanation_en: "The estimated age of the Aravalli mountain is approximately 570 million years.",
-    explanation_hi: "अरावली पर्वत की अनुमानित आयु लगभग 570 मिलियन वर्ष है।",
-  },
-  {
-    question_en: "Where is the highest peak of the Vindhyachal mountain range, Goodwill Peak, located?",
-    question_hi: "विंध्याचल पर्वत श्रेणी का सबसे ऊँचा शिखर सद्भावना शिखर (Goodwill Peak) कहाँ स्थित है?",
-    options_en: ["Madhya Pradesh", "Gujarat", "Rajasthan", "Uttar Pradesh"],
-    options_hi: ["मध्य प्रदेश", "गुजरात", "राजस्थान", "उत्तर प्रदेश"],
-    correct_option_index: 3,
-    explanation_en: "Goodwill Peak is located in Uttar Pradesh.",
-    explanation_hi: "सद्भावना शिखर उत्तर प्रदेश में स्थित है।",
-  },
-  {
-    question_en: "The Satpura mountain range is an example of which type of mountain?",
-    question_hi: "सतपुड़ा पर्वत श्रेणी किस प्रकार के पर्वत का उदाहरण है?",
-    options_en: ["Fold Mt.", "Residual Mt.", "Block Mt.", "Volcanic Mt."],
-    options_hi: ["वलित पर्वत (Fold Mt.)", "अवशिष्ट पर्वत (Residual Mt.)", "ब्लॉक पर्वत (Block Mt.)", "ज्वालामुखी पर्वत"],
+    question_en: "किसने कहा है कि “यह अकल्पनीय भी है कि न केवल ऊंची जाति की अनुकरण असंभव भी है या सका है।”",
+    question_hi: "किसने कहा है कि “यह अकल्पनीय भी है कि न केवल ऊंची जाति की अनुकरण असंभव भी है या सका है।”",
+    options_en: [
+      "एम. एन. श्रीनिवास",
+      "डॉ. एस. सी. दुबे",
+      "मिल्टन सिंगर",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास",
+      "डॉ. एस. सी. दुबे",
+      "मिल्टन सिंगर",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Satpura mountain range is an example of a Block mountain.",
-    explanation_hi: "सतपुड़ा पर्वत श्रेणी ब्लॉक पर्वत का उदाहरण है।",
+    explanation_en: "यह कथन मिल्टन सिंगर (Milton Singer) का है, जो संस्कृतीकरण की प्रक्रिया की जटिलताओं और सीमाओं पर प्रकाश डालते हैं, यह सुझाव देते हुए कि उच्च जाति का अनुकरण हमेशा संभव या सफल नहीं होता।",
+    explanation_hi: "यह कथन मिल्टन सिंगर (Milton Singer) का है, जो संस्कृतीकरण की प्रक्रिया की जटिलताओं और सीमाओं पर प्रकाश डालते हैं, यह सुझाव देते हुए कि उच्च जाति का अनुकरण हमेशा संभव या सफल नहीं होता।"
   },
   {
-    question_en: "Anamudi, the highest peak of Peninsular India, is located on which mountain range?",
-    question_hi: "प्रायद्वीपीय भारत का उच्चतम शिखर अनाईमुदी (Anamudi) किस पर्वत श्रेणी पर स्थित है?",
-    options_en: ["Nilgiri Hills", "Cardamom Hills", "Anaimalai Hills", "Javadi Hills"],
-    options_hi: ["नीलगिरि हिल्स", "कार्डामम हिल्स", "अन्नामलाई हिल्स", "जावडी हिल्स"],
+    question_en: "डॉ. श्रीनिवास ने अपनी संस्कृतीकरण की अवधारणा को किस पुस्तक में विस्तारपूर्वक प्रस्तुत किया है? 1. 'रिलीजन एंड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया', 2. 'कास्ट इन मॉडर्न इण्डिया एण्ड अदर ऐसेज', 3. 'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन'",
+    question_hi: "डॉ. श्रीनिवास ने अपनी संस्कृतीकरण की अवधारणा को किस पुस्तक में विस्तारपूर्वक प्रस्तुत किया है? 1. 'रिलीजन एंड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया', 2. 'कास्ट इन मॉडर्न इण्डिया एण्ड अदर ऐसेज', 3. 'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन'",
+    options_en: [
+      "1, 2 और 3",
+      "2 और 3",
+      "1 और 2",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2 और 3",
+      "1 और 2",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने अपनी संस्कृतीकरण की अवधारणा को इन तीनों पुस्तकों और लेखों में विस्तारपूर्वक प्रस्तुत किया है: 'रिलीजन एंड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया', 'कास्ट इन मॉडर्न इण्डिया एण्ड अदर ऐसेज', और 'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन'।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने अपनी संस्कृतीकरण की अवधारणा को इन तीनों पुस्तकों और लेखों में विस्तारपूर्वक प्रस्तुत किया है: 'रिलीजन एंड सोसाइटी अमंग दि कूग्स ऑफ साउथ इण्डिया', 'कास्ट इन मॉडर्न इण्डिया एण्ड अदर ऐसेज', और 'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन'।"
+  },
+  {
+    question_en: "'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन' निम्न में से किसकी रचना है?",
+    question_hi: "'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन' निम्न में से किसकी रचना है?",
+    options_en: [
+      "जेंटबर्ली की",
+      "योगेन्द्र सिंह की",
+      "श्रीनिवास की",
+      "अर्पण की"
+    ],
+    options_hi: [
+      "जेंटबर्ली की",
+      "योगेन्द्र सिंह की",
+      "श्रीनिवास की",
+      "अर्पण की"
+    ],
     correct_option_index: 2,
-    explanation_en: "Anamudi (2695 m) is located on the Anaimalai Hills.",
-    explanation_hi: "अनाईमुदी (2695 मी) अन्नामलाई हिल्स पर स्थित है।",
+    explanation_en: "'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन' (A Note on Sanskritization and Westernization) एम. एन. श्रीनिवास (M. N. Srinivas) की एक महत्वपूर्ण रचना है।",
+    explanation_hi: "'ए नोट ऑन संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन' (A Note on Sanskritization and Westernization) एम. एन. श्रीनिवास (M. N. Srinivas) की एक महत्वपूर्ण रचना है।"
   },
   {
-    question_en: "Which parallel line divides the Western Ghats (Sahyadri) into North Sahyadri and South Sahyadri?",
-    question_hi: "किस अक्षांश रेखा द्वारा पश्चिमी घाट (सह्याद्री) को उत्तरी सह्याद्री और दक्षिणी सह्याद्री में विभाजित किया जाता है?",
-    options_en: ["8° North Latitude", "23½° North Latitude", "16° North Latitude", "10° North Latitude"],
-    options_hi: ["8° उत्तरी अक्षांश", "23½° उत्तरी अक्षांश", "16° उत्तरी अक्षांश", "10° उत्तरी अक्षांश"],
+    question_en: "'श्रीनिवास की संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन इन इण्डियाज़ वाल-वेस्ट' किसने लिखी है?",
+    question_hi: "'श्रीनिवास की संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन इन इण्डियाज़ वाल-वेस्ट' किसने लिखी है?",
+    options_en: [
+      "देवराज पहा",
+      "के. ईसबॉल",
+      "मिल्टन सिंगर",
+      "श्रीनिवास"
+    ],
+    options_hi: [
+      "देवराज पहा",
+      "के. ईसबॉल",
+      "मिल्टन सिंगर",
+      "श्रीनिवास"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Western Ghats are divided by the 16° North Latitude line, which passes through Goa.",
-    explanation_hi: "पश्चिमी घाट को 16° उत्तरी अक्षांश रेखा (जो गोवा से होकर गुजरती है) द्वारा विभाजित किया जाता है।",
+    explanation_en: "'श्रीनिवास की संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन इन इण्डियाज़ वाल-वेस्ट' मिल्टन सिंगर (Milton Singer) द्वारा लिखी गई है, जो श्रीनिवास के कार्यों का विश्लेषण और विस्तार करती है।",
+    explanation_hi: "'श्रीनिवास की संस्कृताइज़ेशन एण्ड वेस्टर्नाइज़ेशन इन इण्डियाज़ वाल-वेस्ट' मिल्टन सिंगर (Milton Singer) द्वारा लिखी गई है, जो श्रीनिवास के कार्यों का विश्लेषण और विस्तार करती है।"
   },
   {
-    question_en: "The Western Ghats and Eastern Ghats meet at which hill?",
-    question_hi: "पश्चिमी घाट और पूर्वी घाट किस पहाड़ी पर मिलते हैं?",
-    options_en: ["Anaimalai Hills", "Cardamom Hills", "Palani Hills", "Nilgiri Hills"],
-    options_hi: ["अन्नामलाई हिल्स", "कार्डामम हिल्स", "पलानी हिल्स", "नीलगिरि हिल्स"],
+    question_en: "'सोशल चेन्ज इन मॉडर्न इण्डिया' पुस्तक के लेखक कौन हैं?",
+    question_hi: "'सोशल चेन्ज इन मॉडर्न इण्डिया' पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "बर्नाड एस. कोहेन",
+      "एम. एन. श्रीनिवास",
+      "हैरल्ड गुल्ड"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "बर्नाड एस. कोहेन",
+      "एम. एन. श्रीनिवास",
+      "हैरल्ड गुल्ड"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'सोशल चेन्ज इन मॉडर्न इण्डिया' पुस्तक के लेखक डॉ. योगेन्द्र सिंह (Yogendra Singh) हैं, जिन्होंने भारतीय समाज में सामाजिक परिवर्तन और आधुनिकीकरण पर महत्वपूर्ण कार्य किया है।",
+    explanation_hi: "'सोशल चेन्ज इन मॉडर्न इण्डिया' पुस्तक के लेखक डॉ. योगेन्द्र सिंह (Yogendra Singh) हैं, जिन्होंने भारतीय समाज में सामाजिक परिवर्तन और आधुनिकीकरण पर महत्वपूर्ण कार्य किया है।"
+  },
+  {
+    question_en: "निम्न में से किसे पश्चिमीकरण का प्रमुख लम्बन माना जाता है?",
+    question_hi: "निम्न में से किसे पश्चिमीकरण का प्रमुख लम्बन माना जाता है?",
+    options_en: [
+      "तकनीकीवाद पर बल",
+      "बुद्धिवाद पर बल",
+      "नैतिकता पर बल",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "तकनीकीवाद पर बल",
+      "बुद्धिवाद पर बल",
+      "नैतिकता पर बल",
+      "(a) और (b) दोनों"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Western Ghats and Eastern Ghats meet at the Nilgiri Hills (Tamil Nadu, Karnataka, Kerala).",
-    explanation_hi: "पश्चिमी घाट और पूर्वी घाट नीलगिरि हिल्स (तमिलनाडु, कर्नाटक, केरल) पर मिलते हैं।",
+    explanation_en: "पश्चिमीकरण (Westernization) की प्रक्रिया में तकनीकीवाद (technologism) और बुद्धिवाद (rationalism) दोनों पर बल दिया जाता है, जो पश्चिमी समाजों की प्रमुख विशेषताएं हैं।",
+    explanation_hi: "पश्चिमीकरण (Westernization) की प्रक्रिया में तकनीकीवाद (technologism) और बुद्धिवाद (rationalism) दोनों पर बल दिया जाता है, जो पश्चिमी समाजों की प्रमुख विशेषताएं हैं।"
   },
   {
-    question_en: "In which state is the Malabar Coast located?",
-    question_hi: "मालाबार तट (Malabar Coast) का विस्तार किस राज्य में है?",
-    options_en: ["Gujarat", "Maharashtra", "Goa", "Kerala"],
-    options_hi: ["गुजरात", "महाराष्ट्र", "गोवा", "केरल"],
-    correct_option_index: 3,
-    explanation_en: "The Malabar Coast runs parallel to the coast of Kerala.",
-    explanation_hi: "मालाबार तट केरल के तट के समानांतर चलता है।",
-  },
-  {
-    question_en: "Which is the smallest river in India?",
-    question_hi: "भारत की सबसे छोटी नदी (Smallest River in India) कौन सी है?",
-    options_en: ["Mahi", "Pennar", "Arvari", "Vaigai"],
-    options_hi: ["माही", "पेन्नार", "अरवरी (Arvari)", "वैगई"],
+    question_en: "निम्न में से किस विद्वान ने 'पश्चिमीकरण' शब्द को 'आधुनिकीकरण' शब्द की अपेक्षा अधिक उचित माना है?",
+    question_hi: "निम्न में से किस विद्वान ने 'पश्चिमीकरण' शब्द को 'आधुनिकीकरण' शब्द की अपेक्षा अधिक उचित माना है?",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "मिल्टन सिंगर",
+      "श्रीनिवास",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "मिल्टन सिंगर",
+      "श्रीनिवास",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 2,
-    explanation_en: "Arvari is mentioned as the smallest river in India in the source.",
-    explanation_hi: "स्रोत में अरवरी को भारत की सबसे छोटी नदी बताया गया है।",
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने 'पश्चिमीकरण' (Westernization) शब्द को 'आधुनिकीकरण' (Modernization) की अपेक्षा अधिक उचित माना है, क्योंकि 'आधुनिकीकरण' एक मूल्य-तटस्थ शब्द है जबकि 'पश्चिमीकरण' पश्चिमी संस्कृति के विशिष्ट मूल्यों और संस्थाओं के प्रभाव को दर्शाता है।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने 'पश्चिमीकरण' (Westernization) शब्द को 'आधुनिकीकरण' (Modernization) की अपेक्षा अधिक उचित माना है, क्योंकि 'आधुनिकीकरण' एक मूल्य-तटस्थ शब्द है जबकि 'पश्चिमीकरण' पश्चिमी संस्कृति के विशिष्ट मूल्यों और संस्थाओं के प्रभाव को दर्शाता है।"
   },
   {
-    question_en: "Yamuna is the largest and western tributary of the Ganga. Where does it originate?",
-    question_hi: "यमुना नदी गंगा की सबसे बड़ी और पश्चिमी सहायक नदी है, इसका उद्गम कहाँ से होता है?",
-    options_en: ["Gangotri Glacier", "Kedarnath", "Milam Glacier", "Yamunotri Glacier (Bandarpunch Peak)"],
-    options_hi: ["गंगोत्री ग्लेशियर", "केदारनाथ", "मिलाम ग्लेशियर", "यमुनोत्री ग्लेशियर (बंदरपूंछ चोटी)"],
+    question_en: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया में निम्न में से कौन-सा प्रभाव अधिक हुआ है?",
+    question_hi: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया में निम्न में से कौन-सा प्रभाव अधिक हुआ है?",
+    options_en: [
+      "आधुनिकीकरण",
+      "शिक्षा",
+      "कानून",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "आधुनिकीकरण",
+      "शिक्षा",
+      "कानून",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Yamuna originates from Bandarpunch peak located at Yamunotri Glacier.",
-    explanation_hi: "यमुना का उद्गम यमुनोत्री ग्लेशियर पर स्थित बंदरपूंछ चोटी से होता है।",
+    explanation_en: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया ने आधुनिकीकरण, शिक्षा के प्रसार और कानूनी व्यवस्था में बदलाव सहित कई क्षेत्रों पर गहरा प्रभाव डाला है।",
+    explanation_hi: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया ने आधुनिकीकरण, शिक्षा के प्रसार और कानूनी व्यवस्था में बदलाव सहित कई क्षेत्रों पर गहरा प्रभाव डाला है।"
   },
   {
-    question_en: "The Chambal River originates from Mhow near which mountain range?",
-    question_hi: "चंबल नदी का उद्गम किस पर्वत श्रृंखला के पास मऊ (Mhow) से होता है?",
-    options_en: ["Aravalli", "Vindhyachal", "Satpura", "Janapav Hills"],
-    options_hi: ["अरावली", "विंध्याचल", "सतपुड़ा", "जनापाव पहाड़ियाँ"],
-    correct_option_index: 3,
-    explanation_en: "The Chambal River originates from Janapav Hills (Mhow, MP).",
-    explanation_hi: "चंबल नदी का उद्गम जनापाव पहाड़ियों (मऊ, MP) से होता है।",
-  },
-  {
-    question_en: "Which river is known as 'Jamuna' in Bangladesh?",
-    question_hi: "किस नदी को बांग्लादेश में 'जमुना' (Jamuna) नाम से जाना जाता है?",
-    options_en: ["Ganga River", "Indus River", "Brahmaputra River", "Mahanadi"],
-    options_hi: ["गंगा नदी", "सिंधु नदी", "ब्रह्मपुत्र नदी", "महानदी"],
-    correct_option_index: 2,
-    explanation_en: "The Brahmaputra River is known as Jamuna in Bangladesh.",
-    explanation_hi: "ब्रह्मपुत्र नदी को बांग्लादेश में जमुना नाम से जाना जाता है।",
-  },
-  {
-    question_en: "Between which mountain ranges does the Indus River flow in the north-west direction?",
-    question_hi: "सिंधु नदी किन पर्वत श्रेणियों के बीच उत्तर-पश्चिम दिशा में बहती है?",
-    options_en: ["Karakoram and Kailash", "Pir Panjal and Dhauladhar", "Ladakh and Zaskar", "Great Himalaya and Shivalik"],
-    options_hi: ["कराकोरम और कैलाश", "पीर पंजाल और धौलाधार", "लद्दाख और जास्कर", "वृहत् हिमालय और शिवालिक"],
-    correct_option_index: 2,
-    explanation_en: "The Indus River flows in the north-west direction between the Ladakh and Zaskar mountain ranges.",
-    explanation_hi: "सिंधु नदी लद्दाख और जास्कर पर्वत श्रेणियों के बीच उत्तर-पश्चिम दिशा में बहती है।",
-  },
-  {
-    question_en: "What is the ancient name of the Chenab River?",
-    question_hi: "चिनाब नदी (Chenab River) का प्राचीन नाम क्या है?",
-    options_en: ["Vitasta", "Parushni", "Vipasha", "Askini"],
-    options_hi: ["वितस्ता", "परुष्णी", "विपाशा", "अस्किनी (Askini)"],
-    correct_option_index: 3,
-    explanation_en: "The old name of the Chenab River is Askini.",
-    explanation_hi: "चिनाब नदी का पुराना नाम अस्किनी है।",
-  },
-  {
-    question_en: "The Ravi River originates from which pass in Himachal Pradesh?",
-    question_hi: "रावी नदी (Ravi River) का उद्गम हिमाचल प्रदेश के किस दर्रे से होता है?",
-    options_en: ["Shipkila Pass", "Baralacha Pass", "Lipulekh Pass", "Rohtang Pass"],
-    options_hi: ["शिपकीला दर्रा", "बारालाचा दर्रा", "लिपुलेख दर्रा", "रोहतांग दर्रा"],
-    correct_option_index: 3,
-    explanation_en: "The Ravi River originates near the Rohtang Pass.",
-    explanation_hi: "रावी नदी का उद्गम रोहतांग दर्रे के पास से होता है।",
-  },
-  {
-    question_en: "By what name is the Doab located between the Beas and Sutlej rivers known?",
-    question_hi: "व्यास और सतलुज नदियों के बीच स्थित दोआब को किस नाम से जाना जाता है?",
-    options_en: ["Rachna Doab", "Chaj Doab", "Sindh Sagar Doab", "Bist Doab"],
-    options_hi: ["रचना दोआब", "चज दोआब", "सिंध सागर दोआब", "बिस्त दोआब (Bist Doab)"],
-    correct_option_index: 3,
-    explanation_en: "The area between Beas and Sutlej is called Bist Doab.",
-    explanation_hi: "व्यास और सतलुज के बीच के क्षेत्र को बिस्त दोआब कहा जाता है।",
-  },
-  {
-    question_en: "By what name is the Doab located between the Ravi and Chenab rivers known?",
-    question_hi: "रावी और चिनाब नदियों के बीच स्थित दोआब को किस नाम से जाना जाता है?",
-    options_en: ["Chaj Doab", "Bari Doab", "Rachna Doab", "Bist Doab"],
-    options_hi: ["चज दोआब", "बारी दोआब", "रचना दोआब (Rachna Doab)", "बिस्त दोआब"],
-    correct_option_index: 2,
-    explanation_en: "The area between Ravi and Chenab is called Rachna Doab.",
-    explanation_hi: "रावी और चिनाब के बीच के क्षेत्र को रचना दोआब कहा जाता है।",
-  },
-  {
-    question_en: "Where does the Godavari River originate?",
-    question_hi: "गोदावरी नदी का उद्गम कहाँ से होता है?",
-    options_en: ["Amarkantak", "Brahmagiri Hills", "Mahabaleshwar", "Trimbakeshwar"],
-    options_hi: ["अमरकंटक", "ब्रह्मगिरि पहाड़ियाँ", "महाबलेश्वर", "त्र्यंबकेश्वर (Trimbakeshwar)"],
-    correct_option_index: 3,
-    explanation_en: "The Godavari River originates from Trimbakeshwar (Nashik district, Maharashtra).",
-    explanation_hi: "गोदावरी नदी का उद्गम त्र्यंबकेश्वर (नासिक जिला, महाराष्ट्र) से होता है।",
-  },
-  {
-    question_en: "Krishna River is the second longest river of Peninsular India. Where does it originate?",
-    question_hi: "कृष्णा नदी प्रायद्वीपीय भारत की दूसरी सबसे लंबी नदी है, इसका उद्गम कहाँ से होता है?",
-    options_en: ["Trimbakeshwar", "Brahmagiri Hills", "Mahabaleshwar", "Sihawa Hill"],
-    options_hi: ["त्र्यंबकेश्वर", "ब्रह्मगिरि पहाड़ियाँ", "महाबलेश्वर", "सिहावा पहाड़ी"],
-    correct_option_index: 2,
-    explanation_en: "The Krishna River originates from Mahabaleshwar (Western Ghats, Maharashtra).",
-    explanation_hi: "कृष्णा नदी का उद्गम महाबलेश्वर (पश्चिमी घाट, महाराष्ट्र) से होता है।",
-  },
-  {
-    question_en: "Which river is also known as 'Uthal Pinakini'?",
-    question_hi: "किस नदी को 'उत्थल पिनाकिनी' (Uthal Pinakini) नाम से भी जाना जाता है?",
-    options_en: ["Vaigai River", "Kaveri River", "Krishna River", "Pennar River"],
-    options_hi: ["वैगई नदी", "कावेरी नदी", "कृष्णा नदी", "पेन्नार नदी (Pennar River)"],
-    correct_option_index: 3,
-    explanation_en: "Another name for the Pennar River is Uthal Pinakini.",
-    explanation_hi: "पेन्नार नदी का अन्य नाम उत्थल पिनाकिनी है।",
-  },
-  {
-    question_en: "Why does the Kaveri River have water throughout the year?",
-    question_hi: "कावेरी नदी में साल भर पानी क्यों रहता है?",
-    options_en: ["Because it is a Himalayan river", "It is the only perennial river in Peninsular India", "It falls into the Bay of Bengal", "It is an inland river"],
-    options_hi: ["हिमालयी नदी होने के कारण", "यह प्रायद्वीपीय भारत की एकमात्र बारहमासी नदी है", "यह बंगाल की खाड़ी में गिरती है", "यह एक अंतर्देशीय नदी है"],
+    question_en: "संस्कृतीकरण की अवधारणा सामाजिक परिवर्तन को किस संदर्भ में बदलती है, मुख्यतः-",
+    question_hi: "संस्कृतीकरण की अवधारणा सामाजिक परिवर्तन को किस संदर्भ में बदलती है, मुख्यतः-",
+    options_en: [
+      "संरचना के संदर्भ में",
+      "समूह के संदर्भ में",
+      "परिवर्तन के संदर्भ में",
+      "प्रौद्योगिकी के संदर्भ में"
+    ],
+    options_hi: [
+      "संरचना के संदर्भ में",
+      "समूह के संदर्भ में",
+      "परिवर्तन के संदर्भ में",
+      "प्रौद्योगिकी के संदर्भ में"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Kaveri River is the only perennial river in Peninsular India.",
-    explanation_hi: "कावेरी नदी प्रायद्वीपीय भारत की एकमात्र बारहमासी नदी है।",
+    explanation_en: "संस्कृतीकरण की अवधारणा सामाजिक परिवर्तन को मुख्य रूप से समूह (group) के संदर्भ में देखती है, जहाँ एक समूह अपनी सामाजिक स्थिति को बेहतर बनाने के लिए उच्च जाति के रीति-रिवाजों का अनुकरण करता है। यह संरचनात्मक परिवर्तन के बजाय स्थितिगत परिवर्तन पर अधिक जोर देती है।",
+    explanation_hi: "संस्कृतीकरण की अवधारणा सामाजिक परिवर्तन को मुख्य रूप से समूह (group) के संदर्भ में देखती है, जहाँ एक समूह अपनी सामाजिक स्थिति को बेहतर बनाने के लिए उच्च जाति के रीति-रिवाजों का अनुकरण करता है। यह संरचनात्मक परिवर्तन के बजाय स्थितिगत परिवर्तन पर अधिक जोर देती है।"
   },
   {
-    question_en: "Narmada River is the 5th largest river of India. To the south of which mountain range does it flow?",
-    question_hi: "नर्मदा नदी भारत की 5वीं सबसे बड़ी नदी है, यह किस पर्वत श्रेणी के दक्षिण में होकर बहती है?",
-    options_en: ["Satpura", "Aravalli", "Vindhyachal", "Western Ghats"],
-    options_hi: ["सतपुड़ा", "अरावली", "विंध्याचल", "पश्चिमी घाट"],
+    question_en: "निम्न में कौन-सी दशा संस्कृतीकरण के लिए सही नहीं है?",
+    question_hi: "निम्न में कौन-सी दशा संस्कृतीकरण के लिए सही नहीं है?",
+    options_en: [
+      "यह दुर्बल वर्गों में श्रेष्ठ",
+      "यह धर्म भी बदलता है और अनुष्ठान भी",
+      "यह नया अधिकारों की प्रेरणा का विकास है",
+      "यह निरन्तर अधिकारों की प्रेरणा का विकास है"
+    ],
+    options_hi: [
+      "यह दुर्बल वर्गों में श्रेष्ठ",
+      "यह धर्म भी बदलता है और अनुष्ठान भी",
+      "यह नया अधिकारों की प्रेरणा का विकास है",
+      "यह निरन्तर अधिकारों की प्रेरणा का विकास है"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Narmada River flows south of the Vindhyachal range and north of the Satpura range.",
-    explanation_hi: "नर्मदा नदी विंध्याचल पर्वत के दक्षिण में और सतपुड़ा के उत्तर में बहती है।",
+    explanation_en: "संस्कृतीकरण की प्रक्रिया 'नया अधिकारों की प्रेरणा का विकास' नहीं है। यह मुख्य रूप से मौजूदा सामाजिक पदानुक्रम में स्थितिगत गतिशीलता से संबंधित है, न कि नए अधिकारों के निर्माण या प्रेरणा से।",
+    explanation_hi: "संस्कृतीकरण की प्रक्रिया 'नया अधिकारों की प्रेरणा का विकास' नहीं है। यह मुख्य रूप से मौजूदा सामाजिक पदानुक्रम में स्थितिगत गतिशीलता से संबंधित है, न कि नए अधिकारों के निर्माण या प्रेरणा से।"
   },
   {
-    question_en: "Panaji, the capital of Goa, is situated on the bank of which river?",
-    question_hi: "गोवा की राजधानी पणजी किस नदी के किनारे पर स्थित है?",
-    options_en: ["Zuari River", "Tapi River", "Periyar River", "Mandavi River"],
-    options_hi: ["जुआरी नदी", "तापी नदी", "पेरियार नदी", "मांडवी नदी (Mandavi River)"],
-    correct_option_index: 3,
-    explanation_en: "Panaji, the capital of Goa, is situated on the bank of the Mandavi River.",
-    explanation_hi: "गोवा की राजधानी पणजी मांडवी नदी के किनारे स्थित है।",
-  },
-  {
-    question_en: "What is the approximate height of Kunchikal Falls, the highest waterfall in India?",
-    question_hi: "भारत का सबसे ऊँचा जलप्रपात (Highest Waterfall) कुंचिकल जलप्रपात की ऊँचाई लगभग कितनी है?",
-    options_en: ["253 meters", "335 meters", "455 meters", "500 meters"],
-    options_hi: ["253 मीटर", "335 मीटर", "455 मीटर", "500 मीटर"],
-    correct_option_index: 2,
-    explanation_en: "The height of Kunchikal Falls (Karnataka) is 455 meters.",
-    explanation_hi: "कुंचिकल जलप्रपात (कर्नाटक) की ऊँचाई 455 मीटर है।",
-  },
-  {
-    question_en: "Dhuandhar Waterfall is situated on which river?",
-    question_hi: "धुआंधार जलप्रपात (Dhuandhar Waterfall) किस नदी पर स्थित है?",
-    options_en: ["Tapi River", "Godavari River", "Narmada River", "Chambal River"],
-    options_hi: ["तापी नदी", "गोदावरी नदी", "नर्मदा नदी", "चंबल नदी"],
-    correct_option_index: 2,
-    explanation_en: "Dhuandhar Waterfall (Bhedaghat, MP) is situated on the Narmada River.",
-    explanation_hi: "धुआंधार जलप्रपात (भेड़ाघाट, MP) नर्मदा नदी पर स्थित है।",
-  },
-  {
-    question_en: "Vembanad Lake, located in Kerala, is another lagoon lake. What is its name?",
-    question_hi: "केरल में स्थित वेम्बनाड झील (Vembanad Lake) की एक और लैगून झील है, जिसका नाम क्या है?",
-    options_en: ["Chilika Lake", "Pulicat Lake", "Loktak Lake", "Ashtamudi Lake"],
-    options_hi: ["चिल्का झील", "पुलिकट झील", "लोकटक झील", "अष्टमुडी झील (Ashtamudi Lake)"],
-    correct_option_index: 3,
-    explanation_en: "Ashtamudi Lake is located in Kerala.",
-    explanation_hi: "अष्टमुडी झील केरल में स्थित है।",
-  },
-  {
-    question_en: "What are the salt water lakes in Rajasthan locally called?",
-    question_hi: "राजस्थान में खारे पानी की झीलों को स्थानीय रूप से क्या कहा जाता है?",
-    options_en: ["Tal", "Kayal", "Dhebar", "Playa"],
-    options_hi: ["ताल", "कयाल", "ढेबर", "प्लाया (Playa)"],
-    correct_option_index: 3,
-    explanation_en: "Saltwater lakes in the Jaisalmer district of Rajasthan are called Playa.",
-    explanation_hi: "राजस्थान के जैसलमेर जिले में खारे पानी की झीलों को प्लाया कहा जाता है।",
-  },
-  {
-    question_en: "Govind Ballabh Pant Sagar Lake is situated on Rihand, a tributary of which river?",
-    question_hi: "गोविंद बल्लभ पंत सागर झील किस नदी की सहायक नदी रिहंद पर स्थित है?",
-    options_en: ["Bhagirathi", "Chambal", "Sutlej", "Son River"],
-    options_hi: ["भागीरथी", "चंबल", "सतलुज", "सोन नदी"],
-    correct_option_index: 3,
-    explanation_en: "Govind Ballabh Pant Sagar Lake is located on the Rihand River, a tributary of the Son River.",
-    explanation_hi: "गोविंद बल्लभ पंत सागर झील सोन नदी की सहायक रिहंद नदी पर स्थित है।",
-  },
-  {
-    question_en: "Kallanai Dam, the oldest dam in India, is situated on which river?",
-    question_hi: "भारत का सबसे पुराना बाँध (Oldest Dam) कल्लनई बाँध (Kallanai Dam) किस नदी पर स्थित है?",
-    options_en: ["Krishna River", "Godavari River", "Kaveri River", "Periyar River"],
-    options_hi: ["कृष्णा नदी", "गोदावरी नदी", "कावेरी नदी", "पेरियार नदी"],
-    correct_option_index: 2,
-    explanation_en: "Kallanai Dam (Grand Anicut) is situated on the Kaveri River in Tamil Nadu.",
-    explanation_hi: "कल्लनई बाँध (Grand Anicut) कावेरी नदी पर तमिलनाडु में स्थित है।",
-  },
-  {
-    question_en: "Sardar Sarovar Dam is situated on which river, which flows northwards from the southern part of the Narmada River?",
-    question_hi: "किस नदी पर स्थित सरदार सरोवर बाँध, नर्मदा नदी के दक्षिणी भाग से उत्तर दिशा की ओर बहती है?",
-    options_en: ["Tapi River", "Mahi River", "Narmada River", "Sabarmati River"],
-    options_hi: ["तापी नदी", "माही नदी", "नर्मदा नदी", "साबरमती नदी"],
-    correct_option_index: 2,
-    explanation_en: "Sardar Sarovar Dam is situated on the Narmada River in Gujarat. (Note: The question is framed in a confusing manner; the correct answer is Narmada, on which the dam is built).",
-    explanation_hi: "सरदार सरोवर बाँध नर्मदा नदी पर गुजरात में स्थित है।",
-  },
-  {
-    question_en: "'Almatti Dam', located on the Krishna River, is situated in which state?",
-    question_hi: "कृष्णा नदी पर स्थित 'अलमट्टी बाँध' (Almatti Dam) किस राज्य में स्थित है?",
-    options_en: ["Andhra Pradesh", "Tamil Nadu", "Karnataka", "Maharashtra"],
-    options_hi: ["आंध्र प्रदेश", "तमिलनाडु", "कर्नाटक", "महाराष्ट्र"],
-    correct_option_index: 2,
-    explanation_en: "Almatti Dam is situated on the Krishna River in Karnataka.",
-    explanation_hi: "अलमट्टी बाँध कृष्णा नदी पर कर्नाटक में स्थित है।",
-  },
-  {
-    question_en: "Laterite Soil is spread over approximately what percentage of the total area of India?",
-    question_hi: "लैटेराइट मिट्टी (Laterite Soil) भारत के कुल भू-भाग के लगभग कितने प्रतिशत पर फैली है?",
-    options_en: ["43.4%", "18.6%", "3.7%", "16.6%"],
-    options_hi: ["43.4%", "18.6%", "3.7%", "16.6%"],
-    correct_option_index: 2,
-    explanation_en: "Laterite soil is spread over 3.7% of India's total area.",
-    explanation_hi: "लैटेराइट मिट्टी भारत के 3.7% भू-भाग पर फैली है।",
-  },
-  {
-    question_en: "Mountain Soil is rich in which component?",
-    question_hi: "पर्वतीय मिट्टी (Mountain Soil) किसमें समृद्ध (Rich) होती है?",
-    options_en: ["Potash", "Lime", "Phosphorus", "Humus"],
-    options_hi: ["पोटाश", "चूना", "फॉस्फोरस", "ह्यूमस (Humus)"],
-    correct_option_index: 3,
-    explanation_en: "Mountain soil is rich in Humus.",
-    explanation_hi: "पर्वतीय मिट्टी ह्यूमस में समृद्ध होती है।",
-  },
-  {
-    question_en: "Which soil is also known as 'Kallar', 'Usar', or 'Reh'?",
-    question_hi: "किस मिट्टी को 'कल्लर', 'उससर' या 'रेह' नाम से भी जाना जाता है?",
-    options_en: ["Mountain soil", "Alluvial soil", "Red soil", "Saline and Alkaline soil"],
-    options_hi: ["पर्वतीय मिट्टी", "जलोढ़ मिट्टी", "लाल मिट्टी", "नमकीन और क्षारीय मिट्टी (Saline and Alkaline soil)"],
-    correct_option_index: 3,
-    explanation_en: "Saline and alkaline soil is also called Reh, Kallar, or Usar.",
-    explanation_hi: "नमकीन और क्षारीय मिट्टी को रेह, कल्लर या उसर भी कहते हैं।",
-  },
-  {
-    question_en: "Which of the following trees is not found in Tropical Evergreen Forests?",
-    question_hi: "उष्णकटिबंधीय सदाबहार वन में पाए जाने वाले वृक्षों में से कौन सा नहीं है?",
-    options_en: ["Cinchona", "Mahogany", "Ebony", "Sal"],
-    options_hi: ["सिनकोना", "महोगनी", "आबनूस (Ebony)", "साल (Sal)"],
-    correct_option_index: 3,
-    explanation_en: "Trees like Sal, Teak, Shisham, etc., are found in Tropical Deciduous Forests.",
-    explanation_hi: "साल, सागौन, शीशम जैसे वृक्ष उष्णकटिबंधीय पर्णपाती वन (Tropical Deciduous Forests) में पाए जाते हैं।",
-  },
-  {
-    question_en: "Tendu leaves are primarily used to make which product?",
-    question_hi: "तेंदू के पत्तों (Tendu leaves) का उपयोग मुख्य रूप से किस उत्पाद को बनाने के लिए किया जाता है?",
-    options_en: ["Matches", "Paper", "Gum", "Bidis"],
-    options_hi: ["माचिस", "कागज", "गोंद", "बीड़ी (Bidis)"],
-    correct_option_index: 3,
-    explanation_en: "Tendu leaves are used to make Bidis.",
-    explanation_hi: "तेंदू के पत्ते बीड़ी बनाने के काम आते हैं।",
-  },
-  {
-    question_en: "Tropical Dry Deciduous Forests are found in which rainfall range?",
-    question_hi: "शुष्क पर्णपाती वन (Tropical Dry Deciduous Forest) किस वर्षा सीमा (Rainfall range) में पाए जाते हैं?",
-    options_en: ["More than 250 cm", "150-200 cm", "70-100 cm", "Less than 50 cm"],
-    options_hi: ["250 सेमी से अधिक", "150-200 सेमी", "70-100 सेमी", "50 सेमी से कम"],
-    correct_option_index: 2,
-    explanation_en: "Tropical Dry Deciduous Forests are found in areas with 70-100 cm of rainfall.",
-    explanation_hi: "उष्णकटिबंधीय शुष्क पर्णपाती वन 70-100 सेमी वर्षा वाले क्षेत्रों में पाए जाते हैं।",
-  },
-  {
-    question_en: "Sandalwood is mainly produced in the tropical deciduous forests of which state?",
-    question_hi: "चंदन की लकड़ी (Sandalwood) का उत्पादन मुख्य रूप से किस राज्य के उष्णकटिबंधीय पर्णपाती वनों में होता है?",
-    options_en: ["Madhya Pradesh", "Maharashtra", "Andhra Pradesh", "Karnataka"],
-    options_hi: ["मध्य प्रदेश", "महाराष्ट्र", "आंध्र प्रदेश", "कर्नाटक"],
-    correct_option_index: 3,
-    explanation_en: "Sandalwood is mainly found in Karnataka.",
-    explanation_hi: "चंदन की लकड़ी मुख्य रूप से कर्नाटक में पाई जाती है।",
-  },
-  {
-    question_en: "The rainfall from 'Western Disturbance' is highly beneficial for which crops?",
-    question_hi: "'पश्चिमी विक्षोभ' (Western Disturbance) से होने वाली वर्षा किन फसलों के लिए अत्यधिक लाभदायक होती है?",
-    options_en: ["Kharif crops", "Zaid crops", "Rabi crops", "Cash crops"],
-    options_hi: ["खरीफ फसलें", "जायद फसलें", "रबी फसलें", "नकदी फसलें"],
-    correct_option_index: 2,
-    explanation_en: "Western Disturbances are highly beneficial for Rabi crops (like Wheat).",
-    explanation_hi: "पश्चिमी विक्षोभ रबी फसलों (जैसे गेहूं) के लिए अत्यधिक लाभकारी होती है।",
-  },
-  {
-    question_en: "The 'North-East Monsoon' causes rainfall on the coast of which state?",
-    question_hi: "'उत्तरी पूर्वी मानसून' (North-East Monsoon) से किस राज्य के तट पर वर्षा होती है?",
-    options_en: ["Kerala", "Maharashtra", "Odisha", "Tamil Nadu (Coromandel Coast)"],
-    options_hi: ["केरल", "महाराष्ट्र", "ओडिशा", "तमिलनाडु (कोरोमंडल तट)"],
-    correct_option_index: 3,
-    explanation_en: "In winter, the North-East Monsoon branch picks up moisture from the Bay of Bengal and causes rainfall on the Tamil Nadu (Coromandel Coast).",
-    explanation_hi: "सर्दियों में उत्तरी पूर्वी मानसून की शाखा बंगाल की खाड़ी से नमी लेकर तमिलनाडु (कोरोमंडल तट) पर वर्षा करती है।",
-  },
-  {
-    question_en: "Which gas is obtained from coal mines?",
-    question_hi: "कोयले की खानों से कौन सी गैस प्राप्त होती है?",
-    options_en: ["Carbon Dioxide", "Nitrogen", "Hydrogen", "Methane"],
-    options_hi: ["कार्बन डाइऑक्साइड", "नाइट्रोजन", "हाइड्रोजन", "मीथेन (Methane)"],
-    correct_option_index: 3,
-    explanation_en: "Methane gas is obtained from coal mines.",
-    explanation_hi: "कोयले की खानों से मीथेन गैस प्राप्त होती है।",
-  },
-  {
-    question_en: "Which type of iron ore contains up to 72% iron metal and is of the best quality?",
-    question_hi: "कौन सा लौह अयस्क का प्रकार है जिसमें 72% तक लौह धातु शामिल होती है और यह सर्वोत्तम गुणवत्ता का होता है?",
-    options_en: ["Hematite", "Limonite", "Siderite", "Magnetite"],
-    options_hi: ["हेमेटाइट", "लिमोनाइट", "सिडेराइट", "मैग्नेटाइट (Magnetite)"],
-    correct_option_index: 3,
-    explanation_en: "Magnetite (black colour) is the best quality iron ore, containing up to 72% iron metal.",
-    explanation_hi: "मैग्नेटाइट (काला रंग) सर्वोत्तम गुणवत्ता वाला लौह अयस्क है, जिसमें 72% तक लौह धातु होती है।",
-  },
-  {
-    question_en: "What is the quantity of iron metal in Hematite iron ore?",
-    question_hi: "हेमेटाइट लौह अयस्क में लौह धातु की मात्रा कितनी होती है?",
-    options_en: ["40-50%", "72%", "60-70%", "85-90%"],
-    options_hi: ["40-50%", "72%", "60-70%", "85-90%"],
-    correct_option_index: 2,
-    explanation_en: "Hematite contains 60-70% iron metal and accounts for 80% of the iron ore found in India.",
-    explanation_hi: "हेमेटाइट में 60-70% लौह धातु होती है और यह भारत में 80% पाया जाता है।",
-  },
-  {
-    question_en: "Where are the Ramagiri Gold Mines, from which gold is obtained, located?",
-    question_hi: "रामगिरी की खानें (Ramagiri Gold Mine) कहाँ स्थित हैं, जहाँ से सोना प्राप्त होता है?",
-    options_en: ["Karnataka", "Telangana", "Andhra Pradesh", "Maharashtra"],
-    options_hi: ["कर्नाटक", "तेलंगाना", "आंध्र प्रदेश", "महाराष्ट्र"],
-    correct_option_index: 2,
-    explanation_en: "The Ramagiri gold mine is located in the Anantapur district of Andhra Pradesh.",
-    explanation_hi: "रामगिरी सोने की खान आंध्र प्रदेश के अनंतपुर जिले में स्थित है।",
-  },
-  {
-    question_en: "The 'Zawar' mines, famous for Zinc production, are located in which state?",
-    question_hi: "जस्ता (Zinc) उत्पादन के लिए प्रसिद्ध 'जावर' की खानें किस राज्य में स्थित हैं?",
-    options_en: ["Chhattisgarh", "Jharkhand", "Rajasthan", "Maharashtra"],
-    options_hi: ["छत्तीसगढ़", "झारखंड", "राजस्थान", "महाराष्ट्र"],
-    correct_option_index: 2,
-    explanation_en: "The Zawar mines (Udaipur district) are located in Rajasthan.",
-    explanation_hi: "जावर की खानें (उदयपुर जिला) राजस्थान में स्थित हैं।",
-  },
-  {
-    question_en: "Which is the only state in India that produces Tin?",
-    question_hi: "भारत में टिन (Tin) का उत्पादन करने वाला एकमात्र राज्य कौन सा है?",
-    options_en: ["Jharkhand", "Odisha", "Maharashtra", "Chhattisgarh"],
-    options_hi: ["झारखंड", "ओडिशा", "महाराष्ट्र", "छत्तीसगढ़"],
-    correct_option_index: 3,
-    explanation_en: "Chhattisgarh is the only state in India that produces Tin.",
-    explanation_hi: "छत्तीसगढ़ भारत में टिन का उत्पादन करने वाला एकमात्र राज्य है।",
-  },
-  {
-    question_en: "Makrana, located in the Nagaur district of Rajasthan, is famous for which mineral?",
-    question_hi: "राजस्थान में नागौर जिले में स्थित मकराना (Makrana) किस खनिज के लिए प्रसिद्ध है?",
-    options_en: ["Iron Ore", "Mica", "Limestone", "Marble"],
-    options_hi: ["लौह अयस्क", "अभ्रक", "चूना पत्थर", "संगमरमर (Marble)"],
-    correct_option_index: 3,
-    explanation_en: "Makrana is famous for high-quality marble (metamorphic rock), which was used in the Taj Mahal.",
-    explanation_hi: "मकराना उच्च गुणवत्ता वाले संगमरमर (कायांतरित चट्टान) के लिए प्रसिद्ध है, जिसका उपयोग ताजमहल में हुआ है।",
-  },
-  {
-    question_en: "The Raniganj Coal Field is located in which state?",
-    question_hi: "रानीगंज कोयला क्षेत्र किस राज्य में स्थित है?",
-    options_en: ["Jharkhand", "Chhattisgarh", "Odisha", "West Bengal"],
-    options_hi: ["झारखंड", "छत्तीसगढ़", "ओडिशा", "पश्चिम बंगाल"],
-    correct_option_index: 3,
-    explanation_en: "The Raniganj Coal Field is located in West Bengal.",
-    explanation_hi: "रानीगंज कोयला क्षेत्र पश्चिम बंगाल में स्थित है।",
-  },
-  {
-    question_en: "The Singareni Coal Field is located in which state?",
-    question_hi: "सिंगरेनी कोयला क्षेत्र किस राज्य में स्थित है?",
-    options_en: ["Andhra Pradesh", "Telangana", "Chhattisgarh", "Odisha"],
-    options_hi: ["आंध्र प्रदेश", "तेलंगाना", "छत्तीसगढ़", "ओडिशा"],
+    question_en: "निम्न में किसे मान्यता दी जा सकती है?",
+    question_hi: "निम्न में किसे मान्यता दी जा सकती है?",
+    options_en: [
+      "संस्कृतियों का विकास",
+      "आधुनिक प्रशासन-तत्व, उच्च तकनीकी का प्रसार",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "संस्कृतियों का विकास",
+      "आधुनिक प्रशासन-तत्व, उच्च तकनीकी का प्रसार",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Singareni Coal Field is located in Telangana.",
-    explanation_hi: "सिंगरेनी कोयला क्षेत्र तेलंगाना में स्थित है।",
+    explanation_en: "आधुनिक प्रशासन-तत्वों का विकास और उच्च तकनीकी का प्रसार आधुनिकीकरण और पश्चिमीकरण की प्रक्रियाओं के महत्वपूर्ण परिणाम हैं, जिन्हें आधुनिक समाजों की विशेषताओं के रूप में मान्यता दी जाती है।",
+    explanation_hi: "आधुनिक प्रशासन-तत्वों का विकास और उच्च तकनीकी का प्रसार आधुनिकीकरण और पश्चिमीकरण की प्रक्रियाओं के महत्वपूर्ण परिणाम हैं, जिन्हें आधुनिक समाजों की विशेषताओं के रूप में मान्यता दी जाती है।"
   },
   {
-    question_en: "Which oil refinery is located in Bihar?",
-    question_hi: "कौन सा तेल शोधक कारखाना (Oil Refinery) बिहार में स्थित है?",
-    options_en: ["Digboi (Assam)", "Haldia (WB)", "Barauni", "Jamnagar (Gujarat)"],
-    options_hi: ["डिगबोई (असम)", "हल्दिया (WB)", "बरौनी (Barauni)", "जामनगर (गुजरात)"],
-    correct_option_index: 2,
-    explanation_en: "The Barauni oil refinery is located in Bihar.",
-    explanation_hi: "बरौनी तेल शोधक कारखाना बिहार में स्थित है।",
-  },
-  {
-    question_en: "Which port is also known as 'V.O. Chidambaranar Port'?",
-    question_hi: "किस बंदरगाह को 'वी.ओ. चिदंबरनार पोर्ट' (V.O. Chidambaranar Port) के नाम से भी जाना जाता है?",
-    options_en: ["Chennai Port", "Kamarajar Port", "Visakhapatnam Port", "Tuticorin Port"],
-    options_hi: ["चेन्नई पोर्ट", "कामराजर पोर्ट", "विशाखापत्तनम पोर्ट", "तूतीकोरिन पोर्ट (Tuticorin Port)"],
+    question_en: "पश्चिमीकरण के प्रभाव के भारतीय समाज में निम्नलिखित में से किस रूप में से प्रभावित हुए है?",
+    question_hi: "पश्चिमीकरण के प्रभाव के भारतीय समाज में निम्नलिखित में से किस रूप में से प्रभावित हुए है?",
+    options_en: [
+      "विवाह-पुनर्विवाह का प्रचलन",
+      "लैंगिक भेदभाव में परिवर्तन",
+      "विधवा-पुनर्विवाह में परिवर्तन",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "विवाह-पुनर्विवाह का प्रचलन",
+      "लैंगिक भेदभाव में परिवर्तन",
+      "विधवा-पुनर्विवाह में परिवर्तन",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "Tuticorin Port (Tamil Nadu) is called V.O. Chidambaranar Port.",
-    explanation_hi: "तूतीकोरिन पोर्ट (तमिलनाडु) को वी.ओ. चिदंबरनार पोर्ट कहा जाता है।",
+    explanation_en: "पश्चिमीकरण के प्रभाव से भारतीय समाज में विवाह-पुनर्विवाह (विशेषकर विधवा पुनर्विवाह), लैंगिक भेदभाव में कमी, और विधवा पुनर्विवाह के प्रति दृष्टिकोण में परिवर्तन जैसे कई सामाजिक सुधार हुए हैं।",
+    explanation_hi: "पश्चिमीकरण के प्रभाव से भारतीय समाज में विवाह-पुनर्विवाह (विशेषकर विधवा पुनर्विवाह), लैंगिक भेदभाव में कमी, और विधवा पुनर्विवाह के प्रति दृष्टिकोण में परिवर्तन जैसे कई सामाजिक सुधार हुए हैं।"
   },
   {
-    question_en: "Which port on the western coast is called the 'Queen of Arabian Sea'?",
-    question_hi: "कौन सा बंदरगाह पश्चिमी तट पर 'अरब सागर की रानी' (Queen of Arabian Sea) कहलाता है?",
-    options_en: ["Mumbai Port", "Kandla Port", "Marmagao Port", "Kochi Port"],
-    options_hi: ["मुंबई पोर्ट", "कांडला पोर्ट", "मुर्मूगाओ पोर्ट", "कोच्चि पोर्ट (Kochi Port)"],
+    question_en: "पश्चिमीकरण की अवधारणा का संबंध निम्न में से किससे है?",
+    question_hi: "पश्चिमीकरण की अवधारणा का संबंध निम्न में से किससे है?",
+    options_en: [
+      "गैर-पश्चिमी समाज की औद्योगिकी में होने वाले परिवर्तनों से",
+      "गैर-पश्चिमी समाज की संस्थाओं में होने वाले परिवर्तनों से",
+      "गैर-पश्चिमी समाज के मूल्यों एवं विचारधाराओं में होने वाले परिवर्तनों से",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "गैर-पश्चिमी समाज की औद्योगिकी में होने वाले परिवर्तनों से",
+      "गैर-पश्चिमी समाज की संस्थाओं में होने वाले परिवर्तनों से",
+      "गैर-पश्चिमी समाज के मूल्यों एवं विचारधाराओं में होने वाले परिवर्तनों से",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "Kochi Port is called the 'Queen of the Arabian Sea'.",
-    explanation_hi: "कोच्चि पोर्ट को 'अरब सागर की रानी' कहा जाता है।",
+    explanation_en: "पश्चिमीकरण की अवधारणा का संबंध गैर-पश्चिमी समाजों में औद्योगिकी, संस्थाओं, मूल्यों और विचारधाराओं सहित विभिन्न क्षेत्रों में होने वाले परिवर्तनों से है, जो पश्चिमी संस्कृति के संपर्क के कारण होते हैं।",
+    explanation_hi: "पश्चिमीकरण की अवधारणा का संबंध गैर-पश्चिमी समाजों में औद्योगिकी, संस्थाओं, मूल्यों और विचारधाराओं सहित विभिन्न क्षेत्रों में होने वाले परिवर्तनों से है, जो पश्चिमी संस्कृति के संपर्क के कारण होते हैं।"
   },
   {
-    question_en: "What is the total length of the Golden Quadrilateral highway project?",
-    question_hi: "स्वर्णिम चतुर्भुज (Golden Quadrilateral) राजमार्ग परियोजना की कुल लंबाई कितनी है?",
-    options_en: ["4237 km", "3806 km", "5846 km", "6100 km"],
-    options_hi: ["4237 किमी", "3806 किमी", "5846 किमी", "6100 किमी"],
+    question_en: "पश्चिमीकरण की अवधारणा का सम्बन्ध निम्न में से किससे है?",
+    question_hi: "पश्चिमीकरण की अवधारणा का सम्बन्ध निम्न में से किससे है?",
+    options_en: [
+      "एम. एन. श्रीनिवास से",
+      "राधा कमल मुखर्जी से",
+      "श्यामचरण दुबे से",
+      "डॉ. इस्बर्ली से"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास से",
+      "राधा कमल मुखर्जी से",
+      "श्यामचरण दुबे से",
+      "डॉ. इस्बर्ली से"
+    ],
+    correct_option_index: 0,
+    explanation_en: "पश्चिमीकरण (Westernization) की अवधारणा को एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण के साथ-साथ भारतीय समाज में सामाजिक परिवर्तन को समझाने के लिए प्रस्तुत किया था।",
+    explanation_hi: "पश्चिमीकरण (Westernization) की अवधारणा को एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण के साथ-साथ भारतीय समाज में सामाजिक परिवर्तन को समझाने के लिए प्रस्तुत किया था।"
+  },
+  {
+    question_en: "श्रीनिवास ने पश्चिमीकरण की प्रक्रिया के किन लक्षणों का उल्लेख किया है?",
+    question_hi: "श्रीनिवास ने पश्चिमीकरण की प्रक्रिया के किन लक्षणों का उल्लेख किया है?",
+    options_en: [
+      "तरक्कीकरण",
+      "दुर्खीम",
+      "आधुनिकीकरण",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "तरक्कीकरण",
+      "दुर्खीम",
+      "आधुनिकीकरण",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 3,
+    explanation_en: "एम. एन. श्रीनिवास ने पश्चिमीकरण की प्रक्रिया के लक्षणों में तरक्कीकरण और आधुनिकीकरण जैसे पहलुओं का उल्लेख किया है, जो पश्चिमी संस्कृति के प्रभाव से होने वाले परिवर्तनों को दर्शाते हैं।",
+    explanation_hi: "एम. एन. श्रीनिवास ने पश्चिमीकरण की प्रक्रिया के लक्षणों में तरक्कीकरण और आधुनिकीकरण जैसे पहलुओं का उल्लेख किया है, जो पश्चिमी संस्कृति के प्रभाव से होने वाले परिवर्तनों को दर्शाते हैं।"
+  },
+  {
+    question_en: "किसने निहित पहले कहा था कि 'संस्कृतीकरण वस्तुतः परिवर्तन का सूचक नहीं, भूमिका ही है'",
+    question_hi: "किसने निहित पहले कहा था कि 'संस्कृतीकरण वस्तुतः परिवर्तन का सूचक नहीं, भूमिका ही है'",
+    options_en: [
+      "हैरल्ड गुल्ड",
+      "टॉल्काट पारसन्स",
+      "श्रीनिवास",
+      "मिल्टन सिंगर"
+    ],
+    options_hi: [
+      "हैरल्ड गुल्ड",
+      "टॉल्काट पारसन्स",
+      "श्रीनिवास",
+      "मिल्टन सिंगर"
+    ],
     correct_option_index: 2,
-    explanation_en: "The total length of the Golden Quadrilateral (connecting Delhi, Mumbai, Chennai, Kolkata) is 5846 km.",
-    explanation_hi: "स्वर्णिम चतुर्भुज (दिल्ली, मुंबई, चेन्नई, कोलकाता को जोड़ता है) की कुल लंबाई 5846 किमी है।",
+    explanation_en: "एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण की अवधारणा को प्रस्तुत करते हुए यह स्पष्ट किया कि यह मुख्य रूप से स्थितिगत गतिशीलता (positional mobility) का सूचक है, न कि जाति व्यवस्था की संरचना में मौलिक परिवर्तन का।",
+    explanation_hi: "एम. एन. श्रीनिवास (M. N. Srinivas) ने संस्कृतीकरण की अवधारणा को प्रस्तुत करते हुए यह स्पष्ट किया कि यह मुख्य रूप से स्थितिगत गतिशीलता (positional mobility) का सूचक है, न कि जाति व्यवस्था की संरचना में मौलिक परिवर्तन का।"
   },
   {
-    question_en: "The East-West Corridor connects which two places?",
-    question_hi: "पूर्व-पश्चिम गलियारा (East-West Corridor) किन दो स्थानों को जोड़ता है?",
-    options_en: ["Srinagar and Kanyakumari", "Delhi and Mumbai", "Porbandar (Gujarat) and Silchar (Assam)", "Kolkata and Chennai"],
-    options_hi: ["श्रीनगर और कन्याकुमारी", "दिल्ली और मुंबई", "पोरबंदर (गुजरात) और सिलचर (असम)", "कोलकाता और चेन्नई"],
-    correct_option_index: 2,
-    explanation_en: "The East-West Corridor connects Porbandar (Gujarat) and Silchar (Assam).",
-    explanation_hi: "पूर्व-पश्चिम गलियारा पोरबंदर (गुजरात) और सिलचर (असम) को जोड़ता है।",
+    question_en: "पश्चिमीकरण का प्रभाव है -",
+    question_hi: "पश्चिमीकरण का प्रभाव है -",
+    options_en: [
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का आर्थिक प्रभाव",
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का राजनीतिक प्रभाव",
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का सामाजिक-सांस्कृतिक प्रभाव",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का आर्थिक प्रभाव",
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का राजनीतिक प्रभाव",
+      "गैर-पश्चिमी देशों पर पश्चिमी देशों का सामाजिक-सांस्कृतिक प्रभाव",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "पश्चिमीकरण का प्रभाव गैर-पश्चिमी देशों पर आर्थिक, राजनीतिक और सामाजिक-सांस्कृतिक सहित विभिन्न स्तरों पर देखा जाता है, जो पश्चिमी संस्कृति और संस्थाओं के प्रसार के कारण होता है।",
+    explanation_hi: "पश्चिमीकरण का प्रभाव गैर-पश्चिमी देशों पर आर्थिक, राजनीतिक और सामाजिक-सांस्कृतिक सहित विभिन्न स्तरों पर देखा जाता है, जो पश्चिमी संस्कृति और संस्थाओं के प्रसार के कारण होता है।"
   },
   {
-    question_en: "India's longest railway route goes from Dibrugarh in Assam to which place in Tamil Nadu?",
-    question_hi: "भारत का सबसे लंबा रेलमार्ग (Longest Railway Route) असम के डिब्रूगढ़ से तमिलनाडु में किस स्थान तक जाता है?",
-    options_en: ["Chennai", "Coimbatore", "Kanyakumari", "Port Blair"],
-    options_hi: ["चेन्नई", "कोयंबटूर", "कन्याकुमारी", "पोर्ट ब्लेयर"],
-    correct_option_index: 2,
-    explanation_en: "India's longest railway route (4237 km) is from Dibrugarh to Kanyakumari.",
-    explanation_hi: "भारत का सबसे लंबा रेलमार्ग (4237 किमी) डिब्रूगढ़ से कन्याकुमारी तक है।",
-  },
-  {
-    question_en: "What was the old name of Rani Kamlapati Station, India's first privately managed railway station?",
-    question_hi: "भारत का पहला निजी तौर पर प्रबंधित रेलवे स्टेशन रानी कमलापति स्टेशन का पुराना नाम क्या था?",
-    options_en: ["Nizamuddin Railway Station", "Habibganj Railway Station (Bhopal)", "Vadodara Station", "Chhatrapati Shivaji Terminus"],
-    options_hi: ["निजामुद्दीन रेलवे स्टेशन", "हबीबगंज रेलवे स्टेशन (भोपाल)", "वडोदरा स्टेशन", "छत्रपति शिवाजी टर्मिनस"],
+    question_en: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया का सम्बन्ध अंग्रेजों के कितने वर्षों के शासन से है?",
+    question_hi: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया का सम्बन्ध अंग्रेजों के कितने वर्षों के शासन से है?",
+    options_en: [
+      "लगभग सौ वर्ष",
+      "लगभग डेढ़ सौ वर्ष",
+      "लगभग सवा सौ वर्ष",
+      "लगभग एक सौ वर्ष"
+    ],
+    options_hi: [
+      "लगभग सौ वर्ष",
+      "लगभग डेढ़ सौ वर्ष",
+      "लगभग सवा सौ वर्ष",
+      "लगभग एक सौ वर्ष"
+    ],
     correct_option_index: 1,
-    explanation_en: "The new name of Habibganj Railway Station (Bhopal, MP) is Rani Kamlapati Railway Station.",
-    explanation_hi: "हबीबगंज रेलवे स्टेशन (भोपाल, MP) का नया नाम रानी कमलापति रेलवे स्टेशन है।",
+    explanation_en: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया का संबंध अंग्रेजों के लगभग डेढ़ सौ वर्षों (1757 से 1947 तक) के शासन से है, जिसके दौरान पश्चिमी शिक्षा, प्रशासन और मूल्यों का प्रसार हुआ।",
+    explanation_hi: "भारतीय समाज में पश्चिमीकरण की प्रक्रिया का संबंध अंग्रेजों के लगभग डेढ़ सौ वर्षों (1757 से 1947 तक) के शासन से है, जिसके दौरान पश्चिमी शिक्षा, प्रशासन और मूल्यों का प्रसार हुआ।"
   },
   {
-    question_en: "Where is the second longest platform in India located?",
-    question_hi: "भारत का दूसरा सबसे लंबा प्लेटफॉर्म (Longest Platform) कहाँ स्थित है?",
-    options_en: ["Hubli Station (Karnataka)", "Kharagpur (WB)", "Gorakhpur Junction", "Mughalsarai Junction"],
-    options_hi: ["हुबली स्टेशन (कर्नाटक)", "खड़गपुर (WB)", "गोरखपुर जंक्शन", "मुगलसराय जंक्शन"],
-    correct_option_index: 2,
-    explanation_en: "The second longest platform in India is Gorakhpur Junction (1366.33 meters).",
-    explanation_hi: "भारत का दूसरा सबसे लंबा प्लेटफॉर्म गोरखपुर जंक्शन (1366.33 मीटर) है।",
-  },
-  {
-    question_en: "In which city was 'Metro Rail' first started in India?",
-    question_hi: "'मेट्रो रेल' की शुरुआत भारत में पहली बार किस शहर में हुई थी?",
-    options_en: ["New Delhi (2002)", "Mumbai (2014)", "Bengaluru (2011)", "Kolkata (1984)"],
-    options_hi: ["नई दिल्ली (2002)", "मुंबई (2014)", "बेंगलुरु (2011)", "कोलकाता (1984)"],
+    question_en: "पश्चिमीकरण की प्रक्रिया से भारतीय समाज में व्यापक परिवर्तन हुए, जिनमें से है -",
+    question_hi: "पश्चिमीकरण की प्रक्रिया से भारतीय समाज में व्यापक परिवर्तन हुए, जिनमें से है -",
+    options_en: [
+      "संचार साधनों का विकास",
+      "आधुनिक प्रशासन-तन्त्र",
+      "उच्च तकनीक का प्रचलन",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "संचार साधनों का विकास",
+      "आधुनिक प्रशासन-तन्त्र",
+      "उच्च तकनीक का प्रचलन",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The first Metro in India started in Kolkata on October 24, 1984.",
-    explanation_hi: "भारत में पहली मेट्रो 24 अक्टूबर 1984 को कोलकाता में शुरू हुई।",
+    explanation_en: "पश्चिमीकरण की प्रक्रिया ने भारतीय समाज में संचार साधनों का विकास, आधुनिक प्रशासन-तंत्र की स्थापना और उच्च तकनीक के प्रचलन सहित कई व्यापक परिवर्तन लाए हैं।",
+    explanation_hi: "पश्चिमीकरण की प्रक्रिया ने भारतीय समाज में संचार साधनों का विकास, आधुनिक प्रशासन-तंत्र की स्थापना और उच्च तकनीक के प्रचलन सहित कई व्यापक परिवर्तन लाए हैं।"
   },
   {
-    question_en: "According to Census 2011, what was the Decadal Growth Rate of India?",
-    question_hi: "जनगणना 2011 के अनुसार भारत की दशकीय वृद्धि दर (Decadal Growth Rate) कितनी थी?",
-    options_en: ["21.54%", "19.98%", "17.7%", "13.01%"],
-    options_hi: ["21.54%", "19.98%", "17.7%", "13.01%"],
+    question_en: "पश्चिमीकरण पूर्णतया पश्चिमी संस्कृति का प्रसार है, अतः यह हो सकता है -",
+    question_hi: "पश्चिमीकरण पूर्णतया पश्चिमी संस्कृति का प्रसार है, अतः यह हो सकता है -",
+    options_en: [
+      "अच्छा",
+      "बुरा",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "अच्छा",
+      "बुरा",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "According to the 2011 Census, the Decadal Growth Rate was 17.7%.",
-    explanation_hi: "2011 जनगणना के अनुसार दशकीय वृद्धि दर 17.7% थी।",
+    explanation_en: "पश्चिमीकरण के प्रभाव अच्छे और बुरे दोनों हो सकते हैं। यह आधुनिकीकरण और विकास ला सकता है, लेकिन साथ ही सांस्कृतिक पहचान का क्षरण और सामाजिक समस्याएं भी पैदा कर सकता है।",
+    explanation_hi: "पश्चिमीकरण के प्रभाव अच्छे और बुरे दोनों हो सकते हैं। यह आधुनिकीकरण और विकास ला सकता है, लेकिन साथ ही सांस्कृतिक पहचान का क्षरण और सामाजिक समस्याएं भी पैदा कर सकता है।"
   },
   {
-    question_en: "According to Census 2011, what was the Child Sex Ratio (0-6 years age group)?",
-    question_hi: "जनगणना 2011 के अनुसार, 0-6 वर्ष के आयु वर्ग का लिंगानुपात (Child Sex Ratio) कितना था?",
-    options_en: ["943", "919", "927", "950"],
-    options_hi: ["943", "919", "927", "950"],
+    question_en: "पश्चिमीकरण की विशेषताओं में निम्न में से कौन-सम्मिलित नहीं है?",
+    question_hi: "पश्चिमीकरण की विशेषताओं में निम्न में से कौन-सम्मिलित नहीं है?",
+    options_en: [
+      "यह एक व्यापक संरचना है",
+      "यह एक व्यापक अवधारणा है",
+      "यह भौतिक, धर्म से तटस्थ अवधारणा है",
+      "यह पूर्णतया अवैज्ञानिक अवधारणा है"
+    ],
+    options_hi: [
+      "यह एक व्यापक संरचना है",
+      "यह एक व्यापक अवधारणा है",
+      "यह भौतिक, धर्म से तटस्थ अवधारणा है",
+      "यह पूर्णतया अवैज्ञानिक अवधारणा है"
+    ],
+    correct_option_index: 3,
+    explanation_en: "पश्चिमीकरण एक 'पूर्णतया अवैज्ञानिक अवधारणा' नहीं है। यह एक सामाजिक-सांस्कृतिक प्रक्रिया है जिसका वैज्ञानिक रूप से अध्ययन किया जा सकता है। यह एक व्यापक अवधारणा है जो भौतिक और अभौतिक दोनों पहलुओं को कवर करती है, और इसे अक्सर धर्म से तटस्थ माना जाता है।",
+    explanation_hi: "पश्चिमीकरण एक 'पूर्णतया अवैज्ञानिक अवधारणा' नहीं है। यह एक सामाजिक-सांस्कृतिक प्रक्रिया है जिसका वैज्ञानिक रूप से अध्ययन किया जा सकता है। यह एक व्यापक अवधारणा है जो भौतिक और अभौतिक दोनों पहलुओं को कवर करती है, और इसे अक्सर धर्म से तटस्थ माना जाता है।"
+  },
+  {
+    question_en: "भारतीय जीवन-पद्धति में पश्चिमीकरण द्वारा होने वाला परिवर्तन है -",
+    question_hi: "भारतीय जीवन-पद्धति में पश्चिमीकरण द्वारा होने वाला परिवर्तन है -",
+    options_en: [
+      "मानवतावाद का विकास",
+      "नवीन वर्गों का उदय",
+      "संघर्ष साधनों का विकास",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "मानवतावाद का विकास",
+      "नवीन वर्गों का उदय",
+      "संघर्ष साधनों का विकास",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "पश्चिमीकरण के कारण भारतीय जीवन-पद्धति में मानवतावाद का विकास, नवीन वर्गों का उदय और संचार साधनों का विकास सहित कई परिवर्तन हुए हैं।",
+    explanation_hi: "पश्चिमीकरण के कारण भारतीय जीवन-पद्धति में मानवतावाद का विकास, नवीन वर्गों का उदय और संचार साधनों का विकास सहित कई परिवर्तन हुए हैं।"
+  },
+  {
+    question_en: "पश्चिमीकरण की प्रक्रिया ने भारत में कौन-सी सामाजिक संस्थाओं पर निम्न में कौन-सा प्रभाव डाला है?",
+    question_hi: "पश्चिमीकरण की प्रक्रिया ने भारत में कौन-सी सामाजिक संस्थाओं पर निम्न में कौन-सा प्रभाव डाला है?",
+    options_en: [
+      "संयुक्त परिवार प्रणाली के स्थान पर एकाकी परिवारों का चलन",
+      "व्यक्तिवादिता और भौतिकवाद को प्रोत्साहन",
+      "बाल-विवाह और विधवा विवाह की प्रथा का अन्त",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "संयुक्त परिवार प्रणाली के स्थान पर एकाकी परिवारों का चलन",
+      "व्यक्तिवादिता और भौतिकवाद को प्रोत्साहन",
+      "बाल-विवाह और विधवा विवाह की प्रथा का अन्त",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "पश्चिमीकरण की प्रक्रिया ने भारत में संयुक्त परिवार प्रणाली के विघटन, व्यक्तिवादिता और भौतिकवाद को प्रोत्साहन, और बाल-विवाह जैसी प्रथाओं में कमी तथा विधवा विवाह के प्रति सकारात्मक दृष्टिकोण जैसे कई प्रभाव डाले हैं।",
+    explanation_hi: "पश्चिमीकरण की प्रक्रिया ने भारत में संयुक्त परिवार प्रणाली के विघटन, व्यक्तिवादिता और भौतिकवाद को प्रोत्साहन, और बाल-विवाह जैसी प्रथाओं में कमी तथा विधवा विवाह के प्रति सकारात्मक दृष्टिकोण जैसे कई प्रभाव डाले हैं।"
+  },
+  {
+    question_en: "पश्चिमीकरण जन-जीवन में निम्न में से किस क्षेत्र में पड़ा है?",
+    question_hi: "पश्चिमीकरण जन-जीवन में निम्न में से किस क्षेत्र में पड़ा है?",
+    options_en: [
+      "जीवन-स्तर",
+      "पश्चिमी शिक्षा का प्रचलन",
+      "भौतिक संस्कृति का प्रसार",
+      "प्रथाओं एवं परम्पराओं में परिवर्तन"
+    ],
+    options_hi: [
+      "जीवन-स्तर",
+      "पश्चिमी शिक्षा का प्रचलन",
+      "भौतिक संस्कृति का प्रसार",
+      "प्रथाओं एवं परम्पराओं में परिवर्तन"
+    ],
+    correct_option_index: 3,
+    explanation_en: "पश्चिमीकरण का प्रभाव जन-जीवन के विभिन्न क्षेत्रों में पड़ा है, जिसमें जीवन-स्तर, पश्चिमी शिक्षा का प्रचलन, भौतिक संस्कृति का प्रसार, और प्रथाओं एवं परम्पराओं में परिवर्तन शामिल हैं।",
+    explanation_hi: "पश्चिमीकरण का प्रभाव जन-जीवन के विभिन्न क्षेत्रों में पड़ा है, जिसमें जीवन-स्तर, पश्चिमी शिक्षा का प्रचलन, भौतिक संस्कृति का प्रसार, और प्रथाओं एवं परम्पराओं में परिवर्तन शामिल हैं।"
+  },
+  {
+    question_en: "पश्चिमीकरण की प्रक्रिया ने ग्रामीण भारत में निम्न में कौन-सा प्रभाव डाला है?",
+    question_hi: "पश्चिमीकरण की प्रक्रिया ने ग्रामीण भारत में निम्न में कौन-सा प्रभाव डाला है?",
+    options_en: [
+      "आर्थिक क्रान्ति में परिवर्तन",
+      "जाति-भेद में परिवर्तन",
+      "व्यवहार-प्रतिमानों में अन्तर",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "आर्थिक क्रान्ति में परिवर्तन",
+      "जाति-भेद में परिवर्तन",
+      "व्यवहार-प्रतिमानों में अन्तर",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पश्चिमीकरण की प्रक्रिया ने ग्रामीण भारत में व्यवहार-प्रतिमानों (behavioral patterns) में महत्वपूर्ण अंतर डाला है, हालांकि यह आर्थिक क्रांति और जाति-भेद में भी परिवर्तन ला सकता है, लेकिन व्यवहार प्रतिमानों में बदलाव एक अधिक प्रत्यक्ष और व्यापक प्रभाव है।",
+    explanation_hi: "पश्चिमीकरण की प्रक्रिया ने ग्रामीण भारत में व्यवहार-प्रतिमानों (behavioral patterns) में महत्वपूर्ण अंतर डाला है, हालांकि यह आर्थिक क्रांति और जाति-भेद में भी परिवर्तन ला सकता है, लेकिन व्यवहार प्रतिमानों में बदलाव एक अधिक प्रत्यक्ष और व्यापक प्रभाव है।"
+  },
+  {
+    question_en: "पश्चिमीकरण की प्रक्रिया में व्यवहार प्रतिमान में परिवर्तन",
+    question_hi: "पश्चिमीकरण की प्रक्रिया में व्यवहार प्रतिमान में परिवर्तन",
+    options_en: [
+      "कहीं-कहीं पाया जाता है",
+      "केवल भारत में ही पाया जाता है",
+      "सार्वभौमिक",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "कहीं-कहीं पाया जाता है",
+      "केवल भारत में ही पाया जाता है",
+      "सार्वभौमिक",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पश्चिमीकरण की प्रक्रिया में व्यवहार प्रतिमानों में परिवर्तन एक सार्वभौमिक (universal) घटना है, जो उन सभी समाजों में देखी जाती है जो पश्चिमी संस्कृति के संपर्क में आते हैं।",
+    explanation_hi: "पश्चिमीकरण की प्रक्रिया में व्यवहार प्रतिमानों में परिवर्तन एक सार्वभौमिक (universal) घटना है, जो उन सभी समाजों में देखी जाती है जो पश्चिमी संस्कृति के संपर्क में आते हैं।"
+  },
+  {
+    question_en: "'सांस्कृतिक विलम्बना' के सिद्धान्त के प्रतिपादक कौन हैं?",
+    question_hi: "'सांस्कृतिक विलम्बना' के सिद्धान्त के प्रतिपादक कौन हैं?",
+    options_en: [
+      "लिण्टन",
+      "मैक्स वेबर",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    options_hi: [
+      "लिण्टन",
+      "मैक्स वेबर",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'सांस्कृतिक विलम्बना' (Cultural Lag) के सिद्धांत के प्रतिपादक विलियम एफ. ऑगबर्न (William F. Ogburn) हैं।",
+    explanation_hi: "'सांस्कृतिक विलम्बना' (Cultural Lag) के सिद्धांत के प्रतिपादक विलियम एफ. ऑगबर्न (William F. Ogburn) हैं।"
+  },
+  {
+    question_en: "पर-संस्कृतिकरण सम्बन्धित है -",
+    question_hi: "पर-संस्कृतिकरण सम्बन्धित है -",
+    options_en: [
+      "संस्कृति में परिवर्तन",
+      "सामाजिक संरचना में परिवर्तन",
+      "जीवन पद्धति में परिवर्तन",
+      "राजतंत्र में परिवर्तन"
+    ],
+    options_hi: [
+      "संस्कृति में परिवर्तन",
+      "सामाजिक संरचना में परिवर्तन",
+      "जीवन पद्धति में परिवर्तन",
+      "राजतंत्र में परिवर्तन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "पर-संस्कृतिकरण (Acculturation) मुख्य रूप से संस्कृति में परिवर्तन से संबंधित है, जहाँ दो या दो से अधिक संस्कृतियों के संपर्क के परिणामस्वरूप एक या दोनों संस्कृतियों में बदलाव आते हैं।",
+    explanation_hi: "पर-संस्कृतिकरण (Acculturation) मुख्य रूप से संस्कृति में परिवर्तन से संबंधित है, जहाँ दो या दो से अधिक संस्कृतियों के संपर्क के परिणामस्वरूप एक या दोनों संस्कृतियों में बदलाव आते हैं।"
+  },
+  {
+    question_en: "सत्य शोधक समाज की स्थापना किसने की थी?",
+    question_hi: "सत्य शोधक समाज की स्थापना किसने की थी?",
+    options_en: [
+      "ज्योतिबा फुले",
+      "एम. जी. रानाडे",
+      "(a) एवं (b) दोनों",
+      "श्री नारायण गुरु"
+    ],
+    options_hi: [
+      "ज्योतिबा फुले",
+      "एम. जी. रानाडे",
+      "(a) एवं (b) दोनों",
+      "श्री नारायण गुरु"
+    ],
+    correct_option_index: 0,
+    explanation_en: "सत्य शोधक समाज (Satyashodhak Samaj) की स्थापना 1873 में ज्योतिबा फुले (Jyotirao Phule) ने महाराष्ट्र में की थी, जिसका उद्देश्य दलितों और पिछड़ी जातियों के अधिकारों के लिए संघर्ष करना था।",
+    explanation_hi: "सत्य शोधक समाज (Satyashodhak Samaj) की स्थापना 1873 में ज्योतिबा फुले (Jyotirao Phule) ने महाराष्ट्र में की थी, जिसका उद्देश्य दलितों और पिछड़ी जातियों के अधिकारों के लिए संघर्ष करना था।"
+  },
+  {
+    question_en: "किसने कहा है कि 'धर्म, अर्थ, काम, मोक्ष, एक धर्म, एक जाति, एक ईश्वर' की विचारधारा पर बल दिया?",
+    question_hi: "किसने कहा है कि 'धर्म, अर्थ, काम, मोक्ष, एक धर्म, एक जाति, एक ईश्वर' की विचारधारा पर बल दिया?",
+    options_en: [
+      "डॉ. बी. आर. अम्बेडकर",
+      "श्री नारायण गुरु",
+      "स्वामी सहजानन्द",
+      "ज्योतिबा फुले"
+    ],
+    options_hi: [
+      "डॉ. बी. आर. अम्बेडकर",
+      "श्री नारायण गुरु",
+      "स्वामी सहजानन्द",
+      "ज्योतिबा फुले"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Child Sex Ratio for the 0-6 years age group was 919.",
-    explanation_hi: "0-6 वर्ष आयु वर्ग का शिशु लिंगानुपात 919 था।",
+    explanation_en: "श्री नारायण गुरु (Sree Narayana Guru) ने 'एक जाति, एक धर्म, एक ईश्वर मानव के लिए' (One Caste, One Religion, One God for Man) के सिद्धांत पर बल दिया, जो सामाजिक समानता और आध्यात्मिक एकता का प्रतीक था।",
+    explanation_hi: "श्री नारायण गुरु (Sree Narayana Guru) ने 'एक जाति, एक धर्म, एक ईश्वर मानव के लिए' (One Caste, One Religion, One God for Man) के सिद्धांत पर बल दिया, जो सामाजिक समानता और आध्यात्मिक एकता का प्रतीक था।"
   },
   {
-    question_en: "Which state is not included in the four states with the lowest percentage of rural population?",
-    question_hi: "सर्वाधिक ग्रामीण जनसंख्या प्रतिशत (Lowest % of Rural Population) वाले चार राज्यों में से कौन सा राज्य शामिल नहीं है?",
-    options_en: ["Goa", "Mizoram", "Tamil Nadu", "Sikkim"],
-    options_hi: ["गोवा", "मिजोरम", "तमिलनाडु", "सिक्किम"],
-    correct_option_index: 3,
-    explanation_en: "Sikkim is one of the states with the lowest urban population. (Note: The question asks for the lowest rural population percentage. Sikkim has the lowest urban population, so its rural population percentage will be high. The states with the lowest rural percentage are Goa, Mizoram, Tamil Nadu, and Kerala).",
-    explanation_hi: "सिक्किम न्यूनतम शहरी जनसंख्या वाले राज्यों में से एक है। (नोट: प्रश्न में ग्रामीण जनसंख्या प्रतिशत पूछा गया है। सिक्किम में न्यूनतम शहरी जनसंख्या है, इसलिए वहाँ ग्रामीण जनसंख्या प्रतिशत अधिक होगा। न्यूनतम ग्रामीण प्रतिशत वाले राज्य गोवा, मिजोरम, तमिलनाडु, केरल हैं)।",
+    question_en: "संस्कृतीकरण का परिणाम स्वरूप कौन-सा परिवर्तन होता है?",
+    question_hi: "संस्कृतीकरण का परिणाम स्वरूप कौन-सा परिवर्तन होता है?",
+    options_en: [
+      "संरचनात्मक परिवर्तन",
+      "सांस्कृतिक परिवर्तन",
+      "(a) एवं (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "संरचनात्मक परिवर्तन",
+      "सांस्कृतिक परिवर्तन",
+      "(a) एवं (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "संस्कृतीकरण का परिणाम मुख्य रूप से सांस्कृतिक परिवर्तन होता है, जहाँ एक समूह अपनी जीवन शैली, रीति-रिवाजों और मूल्यों में बदलाव लाता है। यह आमतौर पर जाति व्यवस्था की मूल संरचना में परिवर्तन नहीं करता है।",
+    explanation_hi: "संस्कृतीकरण का परिणाम मुख्य रूप से सांस्कृतिक परिवर्तन होता है, जहाँ एक समूह अपनी जीवन शैली, रीति-रिवाजों और मूल्यों में बदलाव लाता है। यह आमतौर पर जाति व्यवस्था की मूल संरचना में परिवर्तन नहीं करता है।"
   },
   {
-    question_en: "Which Union Territory has the highest population density?",
-    question_hi: "सर्वाधिक जनसंख्या घनत्व (Highest Population Density) वाला केंद्र शासित प्रदेश कौन सा है?",
-    options_en: ["Chandigarh", "Puducherry", "Delhi", "Daman and Diu"],
-    options_hi: ["चंडीगढ़", "पुडुचेरी", "दिल्ली", "दमन और दीव"],
+    question_en: "सत्य शोधक समाज की स्थापना किसने की थी?",
+    question_hi: "सत्य शोधक समाज की स्थापना किसने की थी?",
+    options_en: [
+      "ज्योतिबा फुले",
+      "एम. जी. रानाडे",
+      "श्री नारायण गुरु",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "ज्योतिबा फुले",
+      "एम. जी. रानाडे",
+      "श्री नारायण गुरु",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 0,
+    explanation_en: "सत्य शोधक समाज (Satyashodhak Samaj) की स्थापना 1873 में ज्योतिबा फुले (Jyotirao Phule) ने की थी।",
+    explanation_hi: "सत्य शोधक समाज (Satyashodhak Samaj) की स्थापना 1873 में ज्योतिबा फुले (Jyotirao Phule) ने की थी।"
+  },
+  {
+    question_en: "'पूरब पश्चिम सभ्यता' नामक कृति किसने लिखा है?",
+    question_hi: "'पूरब पश्चिम सभ्यता' नामक कृति किसने लिखा है?",
+    options_en: [
+      "बी. डी. मुखर्जी",
+      "सुरेन्द्रनाथ",
+      "डॉ. श्रीनिवास",
+      "गोविन्द सिंह"
+    ],
+    options_hi: [
+      "बी. डी. मुखर्जी",
+      "सुरेन्द्रनाथ",
+      "डॉ. श्रीनिवास",
+      "गोविन्द सिंह"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'पूरब पश्चिम सभ्यता' (East West Civilization) नामक कृति बी. डी. मुखर्जी (B. D. Mukherjee) द्वारा लिखी गई है।",
+    explanation_hi: "'पूरब पश्चिम सभ्यता' (East West Civilization) नामक कृति बी. डी. मुखर्जी (B. D. Mukherjee) द्वारा लिखी गई है।"
+  },
+  {
+    question_en: "संस्कृति के मानवीय दृष्टिकोण का किसने प्रतिपादित किया है?",
+    question_hi: "संस्कृति के मानवीय दृष्टिकोण का किसने प्रतिपादित किया है?",
+    options_en: [
+      "डॉ. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डेनियल थर्नर",
+      "(a)",
+      "(b)"
+    ],
+    options_hi: [
+      "डॉ. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डेनियल थर्नर",
+      "(a)",
+      "(b)"
+    ],
+    correct_option_index: 1,
+    explanation_en: "मिल्टन सिंगर (Milton Singer) ने संस्कृति के मानवीय दृष्टिकोण (humanistic approach) पर जोर दिया है, जो संस्कृति को मानव अनुभवों और अर्थों के संदर्भ में देखता है।",
+    explanation_hi: "मिल्टन सिंगर (Milton Singer) ने संस्कृति के मानवीय दृष्टिकोण (humanistic approach) पर जोर दिया है, जो संस्कृति को मानव अनुभवों और अर्थों के संदर्भ में देखता है।"
+  },
+  {
+    question_en: "'ज्ञान की मानवीय आवश्यकता की एक व्यवस्था तथा इच्छाओं की संतुष्टि क्रियाओं का संयोजन व्यवस्था है।' यह परिभाषा किसकी है?",
+    question_hi: "'ज्ञान की मानवीय आवश्यकता की एक व्यवस्था तथा इच्छाओं की संतुष्टि क्रियाओं का संयोजन व्यवस्था है।' यह परिभाषा किसकी है?",
+    options_en: [
+      "श्रीनिवास",
+      "मैलिनोव्स्की",
+      "(a) एवं (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "श्रीनिवास",
+      "मैलिनोव्स्की",
+      "(a) एवं (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह परिभाषा ब्रॉनिस्लाव मैलिनोव्स्की (Bronislaw Malinowski) की है, जिन्होंने संस्कृति को मानवीय आवश्यकताओं की पूर्ति और इच्छाओं की संतुष्टि के लिए एक कार्यात्मक व्यवस्था के रूप में देखा।",
+    explanation_hi: "यह परिभाषा ब्रॉनिस्लाव मैलिनोव्स्की (Bronislaw Malinowski) की है, जिन्होंने संस्कृति को मानवीय आवश्यकताओं की पूर्ति और इच्छाओं की संतुष्टि के लिए एक कार्यात्मक व्यवस्था के रूप में देखा।"
+  },
+  {
+    question_en: "\"सम्पूर्ण संस्कृति एक प्रकार के साधनों के रूप में है जो संस्कृति का संस्कार का सांस्कृतिक है।\" यह कथन है -",
+    question_hi: "\"सम्पूर्ण संस्कृति एक प्रकार के साधनों के रूप में है जो संस्कृति का संस्कार का सांस्कृतिक है।\" यह कथन है -",
+    options_en: [
+      "श्रीनिवास एवं दुबे का",
+      "मिल्टन सिंगर का",
+      "दुर्खीम का",
+      "हीगल का"
+    ],
+    options_hi: [
+      "श्रीनिवास एवं दुबे का",
+      "मिल्टन सिंगर का",
+      "दुर्खीम का",
+      "हीगल का"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह कथन मिल्टन सिंगर (Milton Singer) का है, जो संस्कृति को मानव जीवन के लिए एक साधन और संस्कार के रूप में देखते हैं।",
+    explanation_hi: "यह कथन मिल्टन सिंगर (Milton Singer) का है, जो संस्कृति को मानव जीवन के लिए एक साधन और संस्कार के रूप में देखते हैं।"
+  },
+  {
+    question_en: "'दि वेल्थ ऑफ हिन्दु' पुस्तक के लेखक कौन हैं?",
+    question_hi: "'दि वेल्थ ऑफ हिन्दु' पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "रैडक्लिफ",
+      "दुर्खीम",
+      "वेब्लेन",
+      "लॉब"
+    ],
+    options_hi: [
+      "रैडक्लिफ",
+      "दुर्खीम",
+      "वेब्लेन",
+      "लॉब"
+    ],
     correct_option_index: 2,
-    explanation_en: "Delhi (11320) is the Union Territory with the highest population density.",
-    explanation_hi: "सर्वाधिक जनसंख्या घनत्व वाला केंद्र शासित प्रदेश दिल्ली (11320) है।",
+    explanation_en: "'दि वेल्थ ऑफ हिन्दु' पुस्तक के लेखक थॉर्स्टीन वेब्लेन (Thorstein Veblen) हैं।",
+    explanation_hi: "'दि वेल्थ ऑफ हिन्दु' पुस्तक के लेखक थॉर्स्टीन वेब्लेन (Thorstein Veblen) हैं।"
   },
   {
-    question_en: "The capital of which country is 'Phnom Penh'?",
-    question_hi: "किस देश की राजधानी 'नम पेन्ह' (Phnom Penh) है?",
-    options_en: ["Vietnam", "Laos", "Thailand", "Cambodia"],
-    options_hi: ["वियतनाम", "लाओस", "थाईलैंड", "कंबोडिया"],
+    question_en: "कोई समाज आधुनिकता की दिशा में अग्रसर होता है तो इस प्रक्रिया को हम कहते हैं -",
+    question_hi: "कोई समाज आधुनिकता की दिशा में अग्रसर होता है तो इस प्रक्रिया को हम कहते हैं -",
+    options_en: [
+      "संस्कृतीकरण",
+      "पश्चिमीकरण",
+      "आधुनिकीकरण",
+      "प्रौद्योगिकीकरण"
+    ],
+    options_hi: [
+      "संस्कृतीकरण",
+      "पश्चिमीकरण",
+      "आधुनिकीकरण",
+      "प्रौद्योगिकीकरण"
+    ],
+    correct_option_index: 2,
+    explanation_en: "जब कोई समाज आधुनिकता की दिशा में अग्रसर होता है, तो इस प्रक्रिया को आधुनिकीकरण (Modernization) कहा जाता है, जिसमें तर्कसंगतता, औद्योगिकीकरण और धर्मनिरपेक्षीकरण जैसे तत्व शामिल होते हैं।",
+    explanation_hi: "जब कोई समाज आधुनिकता की दिशा में अग्रसर होता है, तो इस प्रक्रिया को आधुनिकीकरण (Modernization) कहा जाता है, जिसमें तर्कसंगतता, औद्योगिकीकरण और धर्मनिरपेक्षीकरण जैसे तत्व शामिल होते हैं।"
+  },
+  {
+    question_en: "समाज के आधुनिकीकरण की प्रक्रिया से संबंधित कौन-सा एक प्रमुख तत्व है?",
+    question_hi: "समाज के आधुनिकीकरण की प्रक्रिया से संबंधित कौन-सा एक प्रमुख तत्व है?",
+    options_en: [
+      "भौतिकतावाद",
+      "आधुनिकीकरण",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "भौतिकतावाद",
+      "आधुनिकीकरण",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "आधुनिकीकरण की प्रक्रिया से संबंधित प्रमुख तत्वों में भौतिकतावाद (materialism) और स्वयं आधुनिकीकरण (जो एक व्यापक प्रक्रिया है) शामिल हैं।",
+    explanation_hi: "आधुनिकीकरण की प्रक्रिया से संबंधित प्रमुख तत्वों में भौतिकतावाद (materialism) और स्वयं आधुनिकीकरण (जो एक व्यापक प्रक्रिया है) शामिल हैं।"
+  },
+  {
+    question_en: "आधुनिकीकरण की प्रक्रिया के कारण समाज में निम्न में से कौन-सा परिवर्तन होता है?",
+    question_hi: "आधुनिकीकरण की प्रक्रिया के कारण समाज में निम्न में से कौन-सा परिवर्तन होता है?",
+    options_en: [
+      "मनोवैज्ञानिक मूल्यों की व्याख्या करनी है",
+      "बौद्धिक दृष्टिकोण तथा नगरीय संस्कृति की आवश्यकता बढ़ती है",
+      "व्यक्ति की इच्छित लक्ष्य और मूल्य व्यवस्था बदलती है",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "मनोवैज्ञानिक मूल्यों की व्याख्या करनी है",
+      "बौद्धिक दृष्टिकोण तथा नगरीय संस्कृति की आवश्यकता बढ़ती है",
+      "व्यक्ति की इच्छित लक्ष्य और मूल्य व्यवस्था बदलती है",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "Phnom Penh is the capital of Cambodia.",
-    explanation_hi: "कंबोडिया की राजधानी नम पेन्ह है।",
-  }
+    explanation_en: "आधुनिकीकरण की प्रक्रिया के कारण समाज में मनोवैज्ञानिक मूल्यों की पुनर्व्याख्या होती है, बौद्धिक दृष्टिकोण और नगरीय संस्कृति की आवश्यकता बढ़ती है, और व्यक्ति के इच्छित लक्ष्य एवं मूल्य व्यवस्था में परिवर्तन आता है।",
+    explanation_hi: "आधुनिकीकरण की प्रक्रिया के कारण समाज में मनोवैज्ञानिक मूल्यों की पुनर्व्याख्या होती है, बौद्धिक दृष्टिकोण और नगरीय संस्कृति की आवश्यकता बढ़ती है, और व्यक्ति के इच्छित लक्ष्य एवं मूल्य व्यवस्था में परिवर्तन आता है।"
+  },
+  {
+    question_en: "आधुनिकीकरण का विवेचन निम्न समाजशास्त्रीयों द्वारा किया गया है -",
+    question_hi: "आधुनिकीकरण का विवेचन निम्न समाजशास्त्रीयों द्वारा किया गया है -",
+    options_en: [
+      "आधुनिक संसाधनों के वितरण को",
+      "जीवन की गुणवत्ता और भविष्य में सुधार",
+      "राष्ट्रीय समस्याओं को और अवसर बनाने के अर्थ में",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "आधुनिक संसाधनों के वितरण को",
+      "जीवन की गुणवत्ता और भविष्य में सुधार",
+      "राष्ट्रीय समस्याओं को और अवसर बनाने के अर्थ में",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिकीकरण का विवेचन समाजशास्त्रियों द्वारा विभिन्न पहलुओं पर किया गया है, जिनमें आधुनिक संसाधनों का वितरण, जीवन की गुणवत्ता में सुधार, और राष्ट्रीय समस्याओं को अवसरों में बदलने जैसे विषय शामिल हैं।",
+    explanation_hi: "आधुनिकीकरण का विवेचन समाजशास्त्रियों द्वारा विभिन्न पहलुओं पर किया गया है, जिनमें आधुनिक संसाधनों का वितरण, जीवन की गुणवत्ता में सुधार, और राष्ट्रीय समस्याओं को अवसरों में बदलने जैसे विषय शामिल हैं।"
+  },
+  {
+    question_en: "निम्न में से किस विद्वान की मान्यता है कि आधुनिकीकरण स्वयं पश्चिमीकरण का कोई अंग नहीं है?",
+    question_hi: "निम्न में से किस विद्वान की मान्यता है कि आधुनिकीकरण स्वयं पश्चिमीकरण का कोई अंग नहीं है?",
+    options_en: [
+      "आइजर्नस्टेड",
+      "वेन्स एण्ड कोलेमन",
+      "टोयनबी",
+      "डेनियल लर्नर"
+    ],
+    options_hi: [
+      "आइजर्नस्टेड",
+      "वेन्स एण्ड कोलेमन",
+      "टोयनबी",
+      "डेनियल लर्नर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "एस. एन. आइजर्नस्टेड (S. N. Eisenstadt) जैसे विद्वानों ने यह तर्क दिया है कि आधुनिकीकरण एक सार्वभौमिक प्रक्रिया है जो पश्चिमीकरण से भिन्न है, क्योंकि यह विभिन्न समाजों में अलग-अलग रूपों में प्रकट हो सकती है और केवल पश्चिमी मॉडल का अनुकरण नहीं है।",
+    explanation_hi: "एस. एन. आइजर्नस्टेड (S. N. Eisenstadt) जैसे विद्वानों ने यह तर्क दिया है कि आधुनिकीकरण एक सार्वभौमिक प्रक्रिया है जो पश्चिमीकरण से भिन्न है, क्योंकि यह विभिन्न समाजों में अलग-अलग रूपों में प्रकट हो सकती है और केवल पश्चिमी मॉडल का अनुकरण नहीं है।"
+  },
+  {
+    question_en: "निम्न में कौन-सा परिवर्तन आधुनिक समाज में नहीं होता?",
+    question_hi: "निम्न में कौन-सा परिवर्तन आधुनिक समाज में नहीं होता?",
+    options_en: [
+      "नगरीकरण की प्रक्रिया में वृद्धि होती है",
+      "व्यक्ति का स्थान अर्जित प्रदान समझा जाता है",
+      "समन्वय की समस्याएँ कम-धीरे समाप्त हो जाती है",
+      "परम्परागत मूल्यों को हटाकर नया आदर्शों को नहीं लेती है"
+    ],
+    options_hi: [
+      "नगरीकरण की प्रक्रिया में वृद्धि होती है",
+      "व्यक्ति का स्थान अर्जित प्रदान समझा जाता है",
+      "समन्वय की समस्याएँ कम-धीरे समाप्त हो जाती है",
+      "परम्परागत मूल्यों को हटाकर नया आदर्शों को नहीं लेती है"
+    ],
+    correct_option_index: 2,
+    explanation_en: "आधुनिक समाज में 'समन्वय की समस्याएँ कम-धीरे समाप्त हो जाती है' यह कथन सही नहीं है। वास्तव में, आधुनिक समाज में जटिलता बढ़ने के कारण समन्वय की नई और अक्सर अधिक जटिल समस्याएं उत्पन्न होती हैं।",
+    explanation_hi: "आधुनिक समाज में 'समन्वय की समस्याएँ कम-धीरे समाप्त हो जाती है' यह कथन सही नहीं है। वास्तव में, आधुनिक समाज में जटिलता बढ़ने के कारण समन्वय की नई और अक्सर अधिक जटिल समस्याएं उत्पन्न होती हैं।"
+  },
+  {
+    question_en: "किस विद्वान का मत है कि 'आधुनिक समाज में परम्परागत नहीं होता तथा आधुनिक किसी प्रकार की परम्पराओं से युक्त नहीं होगा' यह मान्यता किसकी है?",
+    question_hi: "किस विद्वान का मत है कि 'आधुनिक समाज में परम्परागत नहीं होता तथा आधुनिक किसी प्रकार की परम्पराओं से युक्त नहीं होगा' यह मान्यता किसकी है?",
+    options_en: [
+      "एडवर्ड शिल्स की",
+      "आइजर्नस्टेड की",
+      "(a) और (b) दोनों",
+      "ग्लानस की"
+    ],
+    options_hi: [
+      "एडवर्ड शिल्स की",
+      "आइजर्नस्टेड की",
+      "(a) और (b) दोनों",
+      "ग्लानस की"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह मान्यता कि आधुनिक समाज परंपराओं से पूरी तरह मुक्त होता है, कुछ विद्वानों द्वारा प्रस्तुत की गई है। यदि एडवर्ड शिल्स (Edward Shils) और आइजर्नस्टेड (S. N. Eisenstadt) दोनों को इस विचार से जोड़ा गया है, तो यह उनके आधुनिकीकरण के सिद्धांतों की एक विशिष्ट व्याख्या हो सकती है, जो परंपरा और आधुनिकता के बीच के संबंधों पर उनके व्यापक विचारों का एक पहलू है।",
+    explanation_hi: "यह मान्यता कि आधुनिक समाज परंपराओं से पूरी तरह मुक्त होता है, कुछ विद्वानों द्वारा प्रस्तुत की गई है। यदि एडवर्ड शिल्स (Edward Shils) और आइजर्नस्टेड (S. N. Eisenstadt) दोनों को इस विचार से जोड़ा गया है, तो यह उनके आधुनिकीकरण के सिद्धांतों की एक विशिष्ट व्याख्या हो सकती है, जो परंपरा और आधुनिकता के बीच के संबंधों पर उनके व्यापक विचारों का एक पहलू है।"
+  },
+  {
+    question_en: "निम्न में किस लक्षण को सांस्कृतिक क्षेत्र में आधुनिक समाज से सम्बन्धित माना जाता है?",
+    question_hi: "निम्न में किस लक्षण को सांस्कृतिक क्षेत्र में आधुनिक समाज से सम्बन्धित माना जाता है?",
+    options_en: [
+      "सामाजिक मूल्यों का विकास",
+      "आधुनिक विज्ञान का विकास",
+      "धर्म, दर्शन तथा विज्ञान में वृद्धि व",
+      "नवीन सांस्कृतिक दृष्टिकोण का विकास"
+    ],
+    options_hi: [
+      "सामाजिक मूल्यों का विकास",
+      "आधुनिक विज्ञान का विकास",
+      "धर्म, दर्शन तथा विज्ञान में वृद्धि व",
+      "नवीन सांस्कृतिक दृष्टिकोण का विकास"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिक समाज में सांस्कृतिक क्षेत्र से संबंधित एक प्रमुख लक्षण नवीन सांस्कृतिक दृष्टिकोण (new cultural perspectives) का विकास है, जिसमें तर्कसंगतता, धर्मनिरपेक्षीकरण और बहुलवाद शामिल हैं।",
+    explanation_hi: "आधुनिक समाज में सांस्कृतिक क्षेत्र से संबंधित एक प्रमुख लक्षण नवीन सांस्कृतिक दृष्टिकोण (new cultural perspectives) का विकास है, जिसमें तर्कसंगतता, धर्मनिरपेक्षीकरण और बहुलवाद शामिल हैं।"
+  },
+  {
+    question_en: "निम्न में कौन आधुनिकीकरण की पूर्व आवश्यकता है?",
+    question_hi: "निम्न में कौन आधुनिकीकरण की पूर्व आवश्यकता है?",
+    options_en: [
+      "ज्ञान की जानकारी और भविष्य पर वृद्धि",
+      "अपने दुनिया से परे अन्य समस्याओं के प्रति जागरूकता",
+      "विभिन्न सूचनाओं तथा अवसरों की उपलब्धता",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "ज्ञान की जानकारी और भविष्य पर वृद्धि",
+      "अपने दुनिया से परे अन्य समस्याओं के प्रति जागरूकता",
+      "विभिन्न सूचनाओं तथा अवसरों की उपलब्धता",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिकीकरण की पूर्व आवश्यकताओं में ज्ञान की वृद्धि, अपनी दुनिया से परे अन्य समस्याओं के प्रति जागरूकता, और विभिन्न सूचनाओं तथा अवसरों की उपलब्धता शामिल हैं, जो समाज को परिवर्तन के लिए तैयार करते हैं।",
+    explanation_hi: "आधुनिकीकरण की पूर्व आवश्यकताओं में ज्ञान की वृद्धि, अपनी दुनिया से परे अन्य समस्याओं के प्रति जागरूकता, और विभिन्न सूचनाओं तथा अवसरों की उपलब्धता शामिल हैं, जो समाज को परिवर्तन के लिए तैयार करते हैं।"
+  },
+  {
+    question_en: "भारतीय समाज पर आधुनिकीकरण का प्रभाव किन में से कौन-सा प्रभाव नहीं पड़ा है?",
+    question_hi: "भारतीय समाज पर आधुनिकीकरण का प्रभाव किन में से कौन-सा प्रभाव नहीं पड़ा है?",
+    options_en: [
+      "तकनीकी, कृषि और उद्योगों का अधिक विकास",
+      "बड़े अवसरों का प्रावधान",
+      "विधिक व्यवस्था, लोक प्रशासन, सैन्य संगठन एवं कानून का प्रचलन",
+      "संयुक्त एवं भावात्मक भावना का ह्रास"
+    ],
+    options_hi: [
+      "तकनीकी, कृषि और उद्योगों का अधिक विकास",
+      "बड़े अवसरों का प्रावधान",
+      "विधिक व्यवस्था, लोक प्रशासन, सैन्य संगठन एवं कानून का प्रचलन",
+      "संयुक्त एवं भावात्मक भावना का ह्रास"
+    ],
+    correct_option_index: 3,
+    explanation_en: "भारतीय समाज पर आधुनिकीकरण के कई प्रभाव पड़े हैं, जैसे तकनीकी विकास और आधुनिक प्रशासनिक व्यवस्था। यदि 'संयुक्त एवं भावात्मक भावना का ह्रास' को आधुनिकीकरण का प्रभाव नहीं माना गया है, तो यह एक विशिष्ट दृष्टिकोण को दर्शाता है जो मानता है कि पारंपरिक भावनाएं आधुनिकता के बावजूद बनी रहती हैं या मजबूत होती हैं।",
+    explanation_hi: "भारतीय समाज पर आधुनिकीकरण के कई प्रभाव पड़े हैं, जैसे तकनीकी विकास और आधुनिक प्रशासनिक व्यवस्था। यदि 'संयुक्त एवं भावात्मक भावना का ह्रास' को आधुनिकीकरण का प्रभाव नहीं माना गया है, तो यह एक विशिष्ट दृष्टिकोण को दर्शाता है जो मानता है कि पारंपरिक भावनाएं आधुनिकता के बावजूद बनी रहती हैं या मजबूत होती हैं।"
+  },
+  {
+    question_en: "आधुनिकीकरण की प्रक्रिया व्यक्ति पर पड़ने वाला प्रभाव है -",
+    question_hi: "आधुनिकीकरण की प्रक्रिया व्यक्ति पर पड़ने वाला प्रभाव है -",
+    options_en: [
+      "चिंतन के तरीके प्रभावित होते हैं",
+      "जीवन-पद्धति प्रभावित होती है",
+      "गतिशीलता के अवसर",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "चिंतन के तरीके प्रभावित होते हैं",
+      "जीवन-पद्धति प्रभावित होती है",
+      "गतिशीलता के अवसर",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिकीकरण की प्रक्रिया व्यक्ति के चिंतन के तरीकों और जीवन-पद्धति दोनों को प्रभावित करती है, साथ ही गतिशीलता के नए अवसर भी प्रदान करती है।",
+    explanation_hi: "आधुनिकीकरण की प्रक्रिया व्यक्ति के चिंतन के तरीकों और जीवन-पद्धति दोनों को प्रभावित करती है, साथ ही गतिशीलता के नए अवसर भी प्रदान करती है।"
+  },
+  {
+    question_en: "'ऐसेज ऑन मॉडर्नाइजेशन ऑफ अन्डरडेवलप्ड सोसाइटी' निम्न में किसकी रचना है?",
+    question_hi: "'ऐसेज ऑन मॉडर्नाइजेशन ऑफ अन्डरडेवलप्ड सोसाइटी' निम्न में किसकी रचना है?",
+    options_en: [
+      "एस. सी. दुबे",
+      "ए. आर. देसाई",
+      "योगेन्द्र सिंह",
+      "डेनियल लर्नर"
+    ],
+    options_hi: [
+      "एस. सी. दुबे",
+      "ए. आर. देसाई",
+      "योगेन्द्र सिंह",
+      "डेनियल लर्नर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'ऐसेज ऑन मॉडर्नाइजेशन ऑफ अन्डरडेवलप्ड सोसाइटी' (Essays on Modernization of Underdeveloped Societies) पुस्तक के लेखक एस. सी. दुबे (S. C. Dube) हैं।",
+    explanation_hi: "'ऐसेज ऑन मॉडर्नाइजेशन ऑफ अन्डरडेवलप्ड सोसाइटी' (Essays on Modernization of Underdeveloped Societies) पुस्तक के लेखक एस. सी. दुबे (S. C. Dube) हैं।"
+  },
+  {
+    question_en: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' नामक पुस्तक के लेखक कौन हैं?",
+    question_hi: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' नामक पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह",
+      "आईजनस्टेड",
+      "एम. एस. दुबे"
+    ],
+    options_hi: [
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह",
+      "आईजनस्टेड",
+      "एम. एस. दुबे"
+    ],
+    correct_option_index: 3,
+    explanation_en: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' नामक पुस्तक के लेखक एम. एस. दुबे (M. S. Dube) हैं, जिन्होंने भारतीय परंपरा और आधुनिकीकरण के बीच के संबंधों का विश्लेषण किया है।",
+    explanation_hi: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' नामक पुस्तक के लेखक एम. एस. दुबे (M. S. Dube) हैं, जिन्होंने भारतीय परंपरा और आधुनिकीकरण के बीच के संबंधों का विश्लेषण किया है।"
+  },
+  {
+    question_en: "योगेन्द्र सिंह ने अपनी 'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' किस पुस्तक में सुझाया गया है?",
+    question_hi: "योगेन्द्र सिंह ने अपनी 'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' किस पुस्तक में सुझाया गया है?",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "(a) एवं (b) दोनों",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "(a) एवं (b) दोनों",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "प्रश्न में ही उत्तर निहित है। योगेन्द्र सिंह (Yogendra Singh) ने अपनी पुस्तक 'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' में अपने विचार प्रस्तुत किए हैं।",
+    explanation_hi: "प्रश्न में ही उत्तर निहित है। योगेन्द्र सिंह (Yogendra Singh) ने अपनी पुस्तक 'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' में अपने विचार प्रस्तुत किए हैं।"
+  },
+  {
+    question_en: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' किस पुस्तक में श्रीनिवास ने कौन से सुझाव दिया गया है?",
+    question_hi: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' किस पुस्तक में श्रीनिवास ने कौन से सुझाव दिया गया है?",
+    options_en: [
+      "एम. एन. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "(a) एवं (b) दोनों"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "(a) एवं (b) दोनों"
+    ],
+    correct_option_index: 1,
+    explanation_en: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' पुस्तक योगेन्द्र सिंह (Yogendra Singh) द्वारा लिखी गई है, और इसमें उनके ही सुझाव दिए गए हैं, न कि श्रीनिवास के।",
+    explanation_hi: "'मॉडर्नाइजेशन ऑफ इण्डियन ट्रेडिशन' पुस्तक योगेन्द्र सिंह (Yogendra Singh) द्वारा लिखी गई है, और इसमें उनके ही सुझाव दिए गए हैं, न कि श्रीनिवास के।"
+  },
+  {
+    question_en: "'आधुनिक शासन का निर्माण' कहा जाता है?",
+    question_hi: "'आधुनिक शासन का निर्माण' कहा जाता है?",
+    options_en: [
+      "एम. एन. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "डेनियल थर्नर",
+      "(a) एवं (b) दोनों"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "डेनियल थर्नर",
+      "(a) एवं (b) दोनों"
+    ],
+    correct_option_index: 3,
+    explanation_en: "'आधुनिक शासन का निर्माण' (Construction of Modern Governance) एक व्यापक अवधारणा है जिसमें एम. एन. श्रीनिवास और योगेन्द्र सिंह जैसे समाजशास्त्रियों के विचार शामिल हो सकते हैं, जिन्होंने आधुनिक राज्य और शासन के विकास पर अपने दृष्टिकोण प्रस्तुत किए हैं।",
+    explanation_hi: "'आधुनिक शासन का निर्माण' (Construction of Modern Governance) एक व्यापक अवधारणा है जिसमें एम. एन. श्रीनिवास और योगेन्द्र सिंह जैसे समाजशास्त्रियों के विचार शामिल हो सकते हैं, जिन्होंने आधुनिक राज्य और शासन के विकास पर अपने दृष्टिकोण प्रस्तुत किए हैं।"
+  },
+  {
+    question_en: "किस विद्वान ने 'मॉडर्न स्टेट' की स्थापना को आधुनिकीकरण का परिणाम माना है?",
+    question_hi: "किस विद्वान ने 'मॉडर्न स्टेट' की स्थापना को आधुनिकीकरण का परिणाम माना है?",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "डेनियल थर्नर",
+      "(a) एवं (b) दोनों"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "सुशील चन्द्र",
+      "डेनियल थर्नर",
+      "(a) एवं (b) दोनों"
+    ],
+    correct_option_index: 2,
+    explanation_en: "डेनियल थर्नर (Daniel Thorner) ने 'मॉडर्न स्टेट' (Modern State) की स्थापना को आधुनिकीकरण की प्रक्रिया के एक महत्वपूर्ण परिणाम के रूप में देखा है, जो सामाजिक, आर्थिक और राजनीतिक संरचनाओं में बदलाव लाती है।",
+    explanation_hi: "डेनियल थर्नर (Daniel Thorner) ने 'मॉडर्न स्टेट' (Modern State) की स्थापना को आधुनिकीकरण की प्रक्रिया के एक महत्वपूर्ण परिणाम के रूप में देखा है, जो सामाजिक, आर्थिक और राजनीतिक संरचनाओं में बदलाव लाती है।"
+  },
+  {
+    question_en: "डेनियल लर्नर के अनुसार आधुनिकता की निम्न में से कौन-सी विशेषता है?",
+    question_hi: "डेनियल लर्नर के अनुसार आधुनिकता की निम्न में से कौन-सी विशेषता है?",
+    options_en: [
+      "एक आर्थिक व्यक्ति एवं तकनीकी में अधिक आस्थावान होता है",
+      "एक आधुनिक व्यक्ति आर्थिक, नैतिक जीवन और न्याय के समान वितरण के प्रति अधिक आस्था रखता है",
+      "एक आधुनिक व्यक्ति अधिक नियन्त्रण एवं न्याय को मानता है",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "एक आर्थिक व्यक्ति एवं तकनीकी में अधिक आस्थावान होता है",
+      "एक आधुनिक व्यक्ति आर्थिक, नैतिक जीवन और न्याय के समान वितरण के प्रति अधिक आस्था रखता है",
+      "एक आधुनिक व्यक्ति अधिक नियन्त्रण एवं न्याय को मानता है",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "डेनियल लर्नर (Daniel Lerner) के अनुसार, आधुनिक व्यक्ति आर्थिक और तकनीकी प्रगति में आस्था रखता है, नैतिक जीवन और न्याय के समान वितरण में विश्वास रखता है, और अधिक नियंत्रण एवं न्याय को महत्व देता है। ये सभी आधुनिकता की विशेषताएं हैं।",
+    explanation_hi: "डेनियल लर्नर (Daniel Lerner) के अनुसार, आधुनिक व्यक्ति आर्थिक और तकनीकी प्रगति में आस्था रखता है, नैतिक जीवन और न्याय के समान वितरण में विश्वास रखता है, और अधिक नियंत्रण एवं न्याय को महत्व देता है। ये सभी आधुनिकता की विशेषताएं हैं।"
+  },
+  {
+    question_en: "'आधुनिक' शब्द की उत्पत्ति लैटिन भाषा के शब्द 'Modo' से हुई है, जिसका अर्थ है -",
+    question_hi: "'आधुनिक' शब्द की उत्पत्ति लैटिन भाषा के शब्द 'Modo' से हुई है, जिसका अर्थ है -",
+    options_en: [
+      "परिवर्तन",
+      "प्रग्टि",
+      "प्रवलन",
+      "फेशन"
+    ],
+    options_hi: [
+      "परिवर्तन",
+      "प्रग्टि",
+      "प्रवलन",
+      "फेशन"
+    ],
+    correct_option_index: 3,
+    explanation_en: "'आधुनिक' शब्द लैटिन शब्द 'Modo' से आया है, जिसका अर्थ 'अभी' या 'हाल ही में' है, और यह अक्सर 'फेशन' या वर्तमान प्रवृत्ति से जुड़ा होता है।",
+    explanation_hi: "'आधुनिक' शब्द लैटिन शब्द 'Modo' से आया है, जिसका अर्थ 'अभी' या 'हाल ही में' है, और यह अक्सर 'फेशन' या वर्तमान प्रवृत्ति से जुड़ा होता है।"
+  },
+  {
+    question_en: "किसने कहा है कि “नये आधुनिकीकरण की परिभाषा शक्ति से जुड़े और प्रयत्न के प्रभाव को बढ़ाने के लिए उपकरणों के प्रयोग पर आधारित है। में से प्रत्येक को सात्त्व को आधार मानता है?”",
+    question_hi: "किसने कहा है कि “नये आधुनिकीकरण की परिभाषा शक्ति से जुड़े और प्रयत्न के प्रभाव को बढ़ाने के लिए उपकरणों के प्रयोग पर आधारित है। में से प्रत्येक को सात्त्व को आधार मानता है?”",
+    options_en: [
+      "प्रो. डब्ल्यू. एम. डेविस",
+      "वेन्स एण्ड कोलेमन",
+      "डॉ. एस. सी. दुबे",
+      "डेनियल लर्नर"
+    ],
+    options_hi: [
+      "प्रो. डब्ल्यू. एम. डेविस",
+      "वेन्स एण्ड कोलेमन",
+      "डॉ. एस. सी. दुबे",
+      "डेनियल लर्नर"
+    ],
+    correct_option_index: 3,
+    explanation_en: "यह परिभाषा डेनियल लर्नर (Daniel Lerner) की है, जिन्होंने आधुनिकीकरण को शक्ति, प्रयास और उपकरणों के उपयोग के माध्यम से प्रभाव बढ़ाने की प्रक्रिया के रूप में देखा।",
+    explanation_hi: "यह परिभाषा डेनियल लर्नर (Daniel Lerner) की है, जिन्होंने आधुनिकीकरण को शक्ति, प्रयास और उपकरणों के उपयोग के माध्यम से प्रभाव बढ़ाने की प्रक्रिया के रूप में देखा।"
+  },
+  {
+    question_en: "डेनियल लर्नर के अनुसार 'आधुनिकीकरण की परिभाषा शक्ति से जुड़े और प्रयत्न के प्रभाव को बढ़ाने के लिए उपकरणों के प्रयोग पर आधारित है। में से प्रत्येक को सात्त्व को आधार मानता है?'",
+    question_hi: "डेनियल लर्नर के अनुसार 'आधुनिकीकरण की परिभाषा शक्ति से जुड़े और प्रयत्न के प्रभाव को बढ़ाने के लिए उपकरणों के प्रयोग पर आधारित है। में से प्रत्येक को सात्त्व को आधार मानता है?'",
+    options_en: [
+      "एस. सी. दुबे",
+      "योगेन्द्र सिंह",
+      "मैरियन जे. लेवी",
+      "डॉ. श्रीनिवास"
+    ],
+    options_hi: [
+      "एस. सी. दुबे",
+      "योगेन्द्र सिंह",
+      "मैरियन जे. लेवी",
+      "डॉ. श्रीनिवास"
+    ],
+    correct_option_index: 3,
+    explanation_en: "प्रश्न में डेनियल लर्नर की परिभाषा का उल्लेख है। यदि डॉ. श्रीनिवास (M. N. Srinivas) को सही विकल्प के रूप में इंगित किया गया है, तो यह एक त्रुटि हो सकती है, क्योंकि यह परिभाषा डेनियल लर्नर से संबंधित है। हालांकि, श्रीनिवास ने भी आधुनिकीकरण के विभिन्न पहलुओं पर विचार किया है।",
+    explanation_hi: "प्रश्न में डेनियल लर्नर की परिभाषा का उल्लेख है। यदि डॉ. श्रीनिवास (M. N. Srinivas) को सही विकल्प के रूप में इंगित किया गया है, तो यह एक त्रुटि हो सकती है, क्योंकि यह परिभाषा डेनियल लर्नर से संबंधित है। हालांकि, श्रीनिवास ने भी आधुनिकीकरण के विभिन्न पहलुओं पर विचार किया है।"
+  },
+  {
+    question_en: "किसने बताया है कि 'साधारणतः आधुनिकीकरण का अर्थ फैशनेबल से लिया जाता है।'",
+    question_hi: "किसने बताया है कि 'साधारणतः आधुनिकीकरण का अर्थ फैशनेबल से लिया जाता है।'",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "मैरियन जे. लेवी",
+      "आइजर्नस्टेड",
+      "डेनियल लर्नर"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "मैरियन जे. लेवी",
+      "आइजर्नस्टेड",
+      "डेनियल लर्नर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "एस. एन. आइजर्नस्टेड (S. N. Eisenstadt) ने आधुनिकीकरण की अवधारणा की विभिन्न व्याख्याओं पर चर्चा की है, जिसमें इसे कभी-कभी सतही तौर पर 'फैशनेबल' होने से जोड़ा जाता है।",
+    explanation_hi: "एस. एन. आइजर्नस्टेड (S. N. Eisenstadt) ने आधुनिकीकरण की अवधारणा की विभिन्न व्याख्याओं पर चर्चा की है, जिसमें इसे कभी-कभी सतही तौर पर 'फैशनेबल' होने से जोड़ा जाता है।"
+  },
+  {
+    question_en: "आधुनिकीकरण की प्रक्रिया एक व्यक्ति को निम्न में से किस क्षेत्र में प्रभावित करती है?",
+    question_hi: "आधुनिकीकरण की प्रक्रिया एक व्यक्ति को निम्न में से किस क्षेत्र में प्रभावित करती है?",
+    options_en: [
+      "सामाजिक-सांस्कृतिक",
+      "मनोदैहिक",
+      "आर्थिक-जनांकिक",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "सामाजिक-सांस्कृतिक",
+      "मनोदैहिक",
+      "आर्थिक-जनांकिक",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिकीकरण की प्रक्रिया एक व्यक्ति को सामाजिक-सांस्कृतिक, मनोदैहिक (psychosomatic) और आर्थिक-जनांकिक (economic-demographic) सहित सभी क्षेत्रों में प्रभावित करती है।",
+    explanation_hi: "आधुनिकीकरण की प्रक्रिया एक व्यक्ति को सामाजिक-सांस्कृतिक, मनोदैहिक (psychosomatic) और आर्थिक-जनांकिक (economic-demographic) सहित सभी क्षेत्रों में प्रभावित करती है।"
+  },
+  {
+    question_en: "आधुनिकीकरण का निम्न में से कौन-सा कारक है?",
+    question_hi: "आधुनिकीकरण का निम्न में से कौन-सा कारक है?",
+    options_en: [
+      "बौद्धिक स्तर पर आधुनिकीकरण",
+      "विशेष प्रकार के सामाजिक एवं बौद्धिक दृष्टिकोण का विकास होना",
+      "घटनाओं को तार्किक व्यवस्था और धर्मनिरपेक्षता को मानना",
+      "मूल्यों, मनोवृत्तियों और आकांक्षाओं में परिवर्तन होना"
+    ],
+    options_hi: [
+      "बौद्धिक स्तर पर आधुनिकीकरण",
+      "विशेष प्रकार के सामाजिक एवं बौद्धिक दृष्टिकोण का विकास होना",
+      "घटनाओं को तार्किक व्यवस्था और धर्मनिरपेक्षता को मानना",
+      "मूल्यों, मनोवृत्तियों और आकांक्षाओं में परिवर्तन होना"
+    ],
+    correct_option_index: 3,
+    explanation_en: "आधुनिकीकरण का एक प्रमुख कारक मूल्यों, मनोवृत्तियों और आकांक्षाओं में परिवर्तन होना है, जो बौद्धिक दृष्टिकोण, तार्किक व्यवस्था और धर्मनिरपेक्षता को बढ़ावा देता है।",
+    explanation_hi: "आधुनिकीकरण का एक प्रमुख कारक मूल्यों, मनोवृत्तियों और आकांक्षाओं में परिवर्तन होना है, जो बौद्धिक दृष्टिकोण, तार्किक व्यवस्था और धर्मनिरपेक्षता को बढ़ावा देता है।"
+  },
+  {
+    question_en: "निम्नलिखित पर विचार कीजिए- 1. संस्कृतीकरण, 2. पश्चिमीकरण, 3. आधुनिकीकरण, 4. लौकिकीकरण",
+    question_hi: "निम्नलिखित पर विचार कीजिए- 1. संस्कृतीकरण, 2. पश्चिमीकरण, 3. आधुनिकीकरण, 4. लौकिकीकरण",
+    options_en: [
+      "1 और 2",
+      "1, 2, 3 और 4",
+      "2, 3 और 4",
+      "3 और 4"
+    ],
+    options_hi: [
+      "1 और 2",
+      "1, 2, 3 और 4",
+      "2, 3 और 4",
+      "3 और 4"
+    ],
+    correct_option_index: 1,
+    explanation_en: "संस्कृतीकरण, पश्चिमीकरण, आधुनिकीकरण और लौकिकीकरण (secularization) सभी भारतीय समाज में सामाजिक-सांस्कृतिक परिवर्तन की महत्वपूर्ण प्रक्रियाएं हैं।",
+    explanation_hi: "संस्कृतीकरण, पश्चिमीकरण, आधुनिकीकरण और लौकिकीकरण (secularization) सभी भारतीय समाज में सामाजिक-सांस्कृतिक परिवर्तन की महत्वपूर्ण प्रक्रियाएं हैं।"
+  },
+  {
+    question_en: "संस्कृतीकरण की प्रक्रिया का उल्लेख सर्वप्रथम किस समाजशास्त्री ने किया है?",
+    question_hi: "संस्कृतीकरण की प्रक्रिया का उल्लेख सर्वप्रथम किस समाजशास्त्री ने किया है?",
+    options_en: [
+      "डॉ. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "आगस्त कॉम्ट",
+      "इम्माइल दुर्खीम"
+    ],
+    options_hi: [
+      "डॉ. श्रीनिवास",
+      "योगेन्द्र सिंह",
+      "आगस्त कॉम्ट",
+      "इम्माइल दुर्खीम"
+    ],
+    correct_option_index: 0,
+    explanation_en: "संस्कृतीकरण (Sanskritization) की प्रक्रिया का उल्लेख सर्वप्रथम एम. एन. श्रीनिवास (M. N. Srinivas) ने किया था।",
+    explanation_hi: "संस्कृतीकरण (Sanskritization) की प्रक्रिया का उल्लेख सर्वप्रथम एम. एन. श्रीनिवास (M. N. Srinivas) ने किया था।"
+  },
+  {
+    question_en: "संस्कृतीकरण को परिभाषित करते हुए किसने लिखा है कि \"संस्कृतीकरण वह शब्द है जिसके द्वारा कोई निम्न जाति या कोई जनजाति अथवा कोई अन्य समूह किसी उच्च और प्राय: द्विज जाति की दिशा में अपने रीति-रिवाज, कर्मकाण्ड, विचारधारा और जीवन पद्धति को बदलता है।”",
+    question_hi: "संस्कृतीकरण को परिभाषित करते हुए किसने लिखा है कि \"संस्कृतीकरण वह शब्द है जिसके द्वारा कोई निम्न जाति या कोई जनजाति अथवा कोई अन्य समूह किसी उच्च और प्राय: द्विज जाति की दिशा में अपने रीति-रिवाज, कर्मकाण्ड, विचारधारा और जीवन पद्धति को बदलता है।”",
+    options_en: [
+      "योगेन्द्र सिंह",
+      "एम. एन. श्रीनिवास",
+      "सोरोकिन",
+      "मिल्टन सिंगर"
+    ],
+    options_hi: [
+      "योगेन्द्र सिंह",
+      "एम. एन. श्रीनिवास",
+      "सोरोकिन",
+      "मिल्टन सिंगर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह संस्कृतीकरण की मानक परिभाषा है, जिसे एम. एन. श्रीनिवास (M. N. Srinivas) ने दिया है।",
+    explanation_hi: "यह संस्कृतीकरण की मानक परिभाषा है, जिसे एम. एन. श्रीनिवास (M. N. Srinivas) ने दिया है।"
+  },
+  {
+    question_en: "निम्नलिखित में से कौन सत्य नहीं है?",
+    question_hi: "निम्नलिखित में से कौन सत्य नहीं है?",
+    options_en: [
+      "संस्कृतीकरण का सम्बन्ध निम्न जातियों से है",
+      "संस्कृतीकरण सामाजिक गतिशीलता को प्रकट करने वाली प्रक्रिया है",
+      "संस्कृतीकरण की प्रक्रिया का सम्बन्ध है किसी एक व्यक्ति या परिवार से नहीं है",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "संस्कृतीकरण का सम्बन्ध निम्न जातियों से है",
+      "संस्कृतीकरण सामाजिक गतिशीलता को प्रकट करने वाली प्रक्रिया है",
+      "संस्कृतीकरण की प्रक्रिया का सम्बन्ध है किसी एक व्यक्ति या परिवार से नहीं है",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 3,
+    explanation_en: "संस्कृतीकरण का संबंध निम्न जातियों से है, यह सामाजिक गतिशीलता को प्रकट करती है, और यह किसी एक व्यक्ति या परिवार से नहीं बल्कि एक समूह से संबंधित है। ये सभी कथन सत्य हैं, इसलिए 'इनमें से कोई नहीं' (यानी कोई भी कथन असत्य नहीं है) सही विकल्प है।",
+    explanation_hi: "संस्कृतीकरण का संबंध निम्न जातियों से है, यह सामाजिक गतिशीलता को प्रकट करती है, और यह किसी एक व्यक्ति या परिवार से नहीं बल्कि एक समूह से संबंधित है। ये सभी कथन सत्य हैं, इसलिए 'इनमें से कोई नहीं' (यानी कोई भी कथन असत्य नहीं है) सही विकल्प है।"
+  },
+  {
+    question_en: "संस्कृतीकरण की प्रक्रिया को किसने अग्रिम सामाजीकरण कहा है?",
+    question_hi: "संस्कृतीकरण की प्रक्रिया को किसने अग्रिम सामाजीकरण कहा है?",
+    options_en: [
+      "एम. एन. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह",
+      "डॉ. योगेन्द्र सिंह"
+    ],
+    options_hi: [
+      "एम. एन. श्रीनिवास",
+      "मिल्टन सिंगर",
+      "डॉ. योगेन्द्र सिंह",
+      "डॉ. योगेन्द्र सिंह"
+    ],
+    correct_option_index: 1,
+    explanation_en: "मिल्टन सिंगर (Milton Singer) ने संस्कृतीकरण की प्रक्रिया को 'अग्रिम सामाजीकरण' (Anticipatory Socialization) के रूप में वर्णित किया है।",
+    explanation_hi: "मिल्टन सिंगर (Milton Singer) ने संस्कृतीकरण की प्रक्रिया को 'अग्रिम सामाजीकरण' (Anticipatory Socialization) के रूप में वर्णित किया है।"
+  },
+  {
+    question_en: "निम्नलिखित में से किसे योगेन्द्र सिंह ने 'विचारधारा' को ग्रहण करने वाली प्रक्रिया (Ideology Borrowing Process) कहा है?",
+    question_hi: "निम्नलिखित में से किसे योगेन्द्र सिंह ने 'विचारधारा' को ग्रहण करने वाली प्रक्रिया (Ideology Borrowing Process) कहा है?",
+    options_en: [
+      "पश्चिमीकरण",
+      "संस्कृतीकरण",
+      "आधुनिकीकरण",
+      "सार्वभौमीकरण"
+    ],
+    options_hi: [
+      "पश्चिमीकरण",
+      "संस्कृतीकरण",
+      "आधुनिकीकरण",
+      "सार्वभौमीकरण"
+    ],
+    correct_option_index: 1,
+    explanation_en: "योगेन्द्र सिंह (Yogendra Singh) ने संस्कृतीकरण (Sanskritization) को 'विचारधारा को ग्रहण करने वाली प्रक्रिया' (Ideology Borrowing Process) के रूप में देखा है, जहाँ निम्न समूह उच्च जातियों की विचारधारा और मूल्यों को अपनाते हैं।",
+    explanation_hi: "योगेन्द्र सिंह (Yogendra Singh) ने संस्कृतीकरण (Sanskritization) को 'विचारधारा को ग्रहण करने वाली प्रक्रिया' (Ideology Borrowing Process) के रूप में देखा है, जहाँ निम्न समूह उच्च जातियों की विचारधारा और मूल्यों को अपनाते हैं।"
+  },
+  {
+    question_en: "उत्तर प्रदेश में निम्नलिखित में से किस जाति को प्रभु जाति माना जाता है?",
+    question_hi: "उत्तर प्रदेश में निम्नलिखित में से किस जाति को प्रभु जाति माना जाता है?",
+    options_en: [
+      "अहीर",
+      "जाट",
+      "गूजर",
+      "राजपूत"
+    ],
+    options_hi: [
+      "अहीर",
+      "जाट",
+      "गूजर",
+      "राजपूत"
+    ],
+    correct_option_index: 1,
+    explanation_en: "उत्तर प्रदेश के कुछ क्षेत्रों में जाट (Jat) जाति को प्रभु जाति (Dominant Caste) के रूप में माना जाता है, जैसा कि एम. एन. श्रीनिवास ने इस अवधारणा को परिभाषित किया है।",
+    explanation_hi: "उत्तर प्रदेश के कुछ क्षेत्रों में जाट (Jat) जाति को प्रभु जाति (Dominant Caste) के रूप में माना जाता है, जैसा कि एम. एन. श्रीनिवास ने इस अवधारणा को परिभाषित किया है।"
+  },
+  {
+    question_en: "किसने कहा है कि, \"नये पश्चिमीकरण शब्द का प्रयोग उन भारतीय समाज व संस्कृति में उन परिवर्तनों के लिए किया गया जो एक सौ वर्ष से अधिक समय से अंग्रेजी राज्य के शासन होने द्वारा और यह उच्च प्रौद्योगिकी संस्थाओं, वैधानिकों और मूल्यों आदि के कारण होने वाले परिवर्तनों का परिणाम है।”",
+    question_hi: "किसने कहा है कि, \"नये पश्चिमीकरण शब्द का प्रयोग उन भारतीय समाज व संस्कृति में उन परिवर्तनों के लिए किया गया जो एक सौ वर्ष से अधिक समय से अंग्रेजी राज्य के शासन होने द्वारा और यह उच्च प्रौद्योगिकी संस्थाओं, वैधानिकों और मूल्यों आदि के कारण होने वाले परिवर्तनों का परिणाम है।”",
+    options_en: [
+      "डॉ. एम. एन. श्रीनिवास",
+      "बी. डी. पनिकर",
+      "(a) एवं (b) दोनों",
+      "मिल्टन सिंगर"
+    ],
+    options_hi: [
+      "डॉ. एम. एन. श्रीनिवास",
+      "बी. डी. पनिकर",
+      "(a) एवं (b) दोनों",
+      "मिल्टन सिंगर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह परिभाषा एम. एन. श्रीनिवास (M. N. Srinivas) द्वारा पश्चिमीकरण (Westernization) की अवधारणा को स्पष्ट करने के लिए दी गई है।",
+    explanation_hi: "यह परिभाषा एम. एन. श्रीनिवास (M. N. Srinivas) द्वारा पश्चिमीकरण (Westernization) की अवधारणा को स्पष्ट करने के लिए दी गई है।"
+  },
+  {
+    question_en: "श्रीनिवास ने पश्चिमीकरण की परिभाषा में निम्नलिखित में से किन तत्वों का उल्लेख किया है?",
+    question_hi: "श्रीनिवास ने पश्चिमीकरण की परिभाषा में निम्नलिखित में से किन तत्वों का उल्लेख किया है?",
+    options_en: [
+      "रहन-सहन",
+      "खान-पान के ढंग",
+      "शिक्षा",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "रहन-सहन",
+      "खान-पान के ढंग",
+      "शिक्षा",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "एम. एन. श्रीनिवास ने पश्चिमीकरण की परिभाषा में रहन-सहन, खान-पान के ढंग, शिक्षा और अन्य सांस्कृतिक पहलुओं में होने वाले परिवर्तनों का उल्लेख किया है।",
+    explanation_hi: "एम. एन. श्रीनिवास ने पश्चिमीकरण की परिभाषा में रहन-सहन, खान-पान के ढंग, शिक्षा और अन्य सांस्कृतिक पहलुओं में होने वाले परिवर्तनों का उल्लेख किया है।"
+  },
+  {
+    question_en: "किसने कहा है कि 'मानवता (Humanitareanism) तथा बुद्धिवाद (Rationalism) पर और पश्चिमीकरण का एक अंग है, जिसमें भारत में संस्थागत एवं सामाजिक सुधारों को सिलसिला प्रदान किया है?'",
+    question_hi: "किसने कहा है कि 'मानवता (Humanitareanism) तथा बुद्धिवाद (Rationalism) पर और पश्चिमीकरण का एक अंग है, जिसमें भारत में संस्थागत एवं सामाजिक सुधारों को सिलसिला प्रदान किया है?'",
+    options_en: [
+      "शिव",
+      "योगेन्द्र सिंह",
+      "पारसन्स",
+      "बी. कृष्प्स्वामी"
+    ],
+    options_hi: [
+      "शिव",
+      "योगेन्द्र सिंह",
+      "पारसन्स",
+      "बी. कृष्प्स्वामी"
+    ],
+    correct_option_index: 1,
+    explanation_en: "योगेन्द्र सिंह (Yogendra Singh) ने मानवतावाद और बुद्धिवाद को पश्चिमीकरण का एक महत्वपूर्ण अंग माना है, जिसने भारत में संस्थागत और सामाजिक सुधारों को प्रेरित किया है।",
+    explanation_hi: "योगेन्द्र सिंह (Yogendra Singh) ने मानवतावाद और बुद्धिवाद को पश्चिमीकरण का एक महत्वपूर्ण अंग माना है, जिसने भारत में संस्थागत और सामाजिक सुधारों को प्रेरित किया है।"
+  },
+  {
+    question_en: "निम्नलिखित विशेषताओं पर विचार कीजिए - 1. नैतिक रूप से तटस्थ, 2. एक व्यापक अवधारणा, 3. एक वैज्ञानिक अवधारणा, 4. चयन और अंशतः प्रक्रिया",
+    question_hi: "निम्नलिखित विशेषताओं पर विचार कीजिए - 1. नैतिक रूप से तटस्थ, 2. एक व्यापक अवधारणा, 3. एक वैज्ञानिक अवधारणा, 4. चयन और अंशतः प्रक्रिया",
+    options_en: [
+      "1 और 2",
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4"
+    ],
+    options_hi: [
+      "1 और 2",
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4"
+    ],
+    correct_option_index: 2,
+    explanation_en: "पश्चिमीकरण की विशेषताओं में नैतिक रूप से तटस्थ होना, एक व्यापक अवधारणा होना, एक वैज्ञानिक अवधारणा होना (जिसका अध्ययन किया जा सके), और चयन एवं अंशतः प्रक्रिया होना शामिल है।",
+    explanation_hi: "पश्चिमीकरण की विशेषताओं में नैतिक रूप से तटस्थ होना, एक व्यापक अवधारणा होना, एक वैज्ञानिक अवधारणा होना (जिसका अध्ययन किया जा सके), और चयन एवं अंशतः प्रक्रिया होना शामिल है।"
+  },
+  {
+    question_en: "श्रीनिवास ने पश्चिमीकरण की अवधारणा में निम्नलिखित में से कौन-सी बातें सम्मिलित है?",
+    question_hi: "श्रीनिवास ने पश्चिमीकरण की अवधारणा में निम्नलिखित में से कौन-सी बातें सम्मिलित है?",
+    options_en: [
+      "व्यवहार सम्बन्धी",
+      "मूल्य सम्बन्धी",
+      "ज्ञान सम्बन्धी",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "व्यवहार सम्बन्धी",
+      "मूल्य सम्बन्धी",
+      "ज्ञान सम्बन्धी",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "एम. एन. श्रीनिवास ने पश्चिमीकरण की अवधारणा में व्यवहार, मूल्य और ज्ञान से संबंधित परिवर्तनों को सम्मिलित किया है, जो पश्चिमी संस्कृति के संपर्क के कारण होते हैं।",
+    explanation_hi: "एम. एन. श्रीनिवास ने पश्चिमीकरण की अवधारणा में व्यवहार, मूल्य और ज्ञान से संबंधित परिवर्तनों को सम्मिलित किया है, जो पश्चिमी संस्कृति के संपर्क के कारण होते हैं।"
+  },
+  {
+    question_en: "एम. एन. श्रीनिवास के मतानुसार जीवन शैली को निम्नलिखित में से किससे होता है?",
+    question_hi: "एम. एन. श्रीनिवास के मतानुसार जीवन शैली को निम्नलिखित में से किससे होता है?",
+    options_en: [
+      "पश्चिमीकरण",
+      "ब्रिटिश आमदनी से",
+      "शिक्षा से",
+      "नगरीकरण से"
+    ],
+    options_hi: [
+      "पश्चिमीकरण",
+      "ब्रिटिश आमदनी से",
+      "शिक्षा से",
+      "नगरीकरण से"
+    ],
+    correct_option_index: 0,
+    explanation_en: "एम. एन. श्रीनिवास के मतानुसार, जीवन शैली में परिवर्तन मुख्य रूप से पश्चिमीकरण (Westernization) के प्रभाव से होता है, जिसमें पश्चिमी मूल्यों और प्रथाओं को अपनाया जाता है।",
+    explanation_hi: "एम. एन. श्रीनिवास के मतानुसार, जीवन शैली में परिवर्तन मुख्य रूप से पश्चिमीकरण (Westernization) के प्रभाव से होता है, जिसमें पश्चिमी मूल्यों और प्रथाओं को अपनाया जाता है।"
+  },
+  {
+    question_en: "किस गैर-पश्चिमी देश के प्रत्यक्ष या अप्रत्यक्ष सम्पर्क के कारण होने वाले परिवर्तनों के लिए उपयुक्त शब्द है?",
+    question_hi: "किस गैर-पश्चिमी देश के प्रत्यक्ष या अप्रत्यक्ष सम्पर्क के कारण होने वाले परिवर्तनों के लिए उपयुक्त शब्द है?",
+    options_en: [
+      "आधुनिकीकरण",
+      "पश्चिमीकरण",
+      "लौकिकीकरण",
+      "औद्योगिकीकरण"
+    ],
+    options_hi: [
+      "आधुनिकीकरण",
+      "पश्चिमीकरण",
+      "लौकिकीकरण",
+      "औद्योगिकीकरण"
+    ],
+    correct_option_index: 1,
+    explanation_en: "गैर-पश्चिमी देशों में पश्चिमी संस्कृति के प्रत्यक्ष या अप्रत्यक्ष संपर्क के कारण होने वाले परिवर्तनों के लिए 'पश्चिमीकरण' (Westernization) शब्द सबसे उपयुक्त है।",
+    explanation_hi: "गैर-पश्चिमी देशों में पश्चिमी संस्कृति के प्रत्यक्ष या अप्रत्यक्ष संपर्क के कारण होने वाले परिवर्तनों के लिए 'पश्चिमीकरण' (Westernization) शब्द सबसे उपयुक्त है।"
+  },
 ];
 
 

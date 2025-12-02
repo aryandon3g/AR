@@ -2,905 +2,2175 @@ import type { QuizQuestion } from '../../../types';
 
 const test3Questions: QuizQuestion[] =[
   {
-    question_en: "The 'Toda' tribe of South India is mainly found on which mountain range?",
-    question_hi: "दक्षिण भारत की 'टोडा' (Toda) जनजाति मुख्य रूप से किस पर्वत श्रेणी पर पाई जाती है?",
-    options_en: ["Annamalai", "Cardamom Hills", "Nilgiri Hills", "Palani Hills"],
-    options_hi: ["अन्नामलाई", "कार्डामम हिल्स", "नीलगिरि हिल्स", "पलनी हिल्स"],
-    correct_option_index: 2,
-    explanation_en: "The Toda tribe of Tamil Nadu is found on the Nilgiri Hills and is known for buffalo rearing.",
-    explanation_hi: "तमिलनाडु की टोडा जनजाति नीलगिरि पहाड़ी पर पाई जाती है, और यह भैंसें पालती है।",
+    question_en: "Pareto has mentioned the cyclical theory of social change in the political field. According to him, two types of people are mentioned in the political field, they are-",
+    question_hi: "पेरेटो ने सामाजिक परिवर्तन के चक्रीय सिद्धान्त का उल्लेख राजनीतिक क्षेत्र में किया है। उनके अनुसार राजनीतिक क्षेत्र में दो प्रकार के व्यक्तियों का उल्लेख होता है, वे व्यक्ति हैं-",
+    options_en: [
+      "Lion",
+      "foxes",
+      "treacherous",
+      "indulgent luxury",
+      "(both a and B"
+    ],
+    options_hi: [
+      "शेर",
+      "लोमड़ियाँ",
+      "विश्वासघाती",
+      "भोग विलासी",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 4,
+    explanation_en: "Vilfredo Pareto famously described two types of elites in the political sphere: 'Lions' (शेर), who are characterized by force and conservatism, and 'Foxes' (लोमड़ियाँ), who are characterized by cunning and innovation.",
+    explanation_hi: "Vilfredo Pareto famously described two types of elites in the political sphere: 'Lions' (शेर), who are characterized by force and conservatism, and 'Foxes' (लोमड़ियाँ), who are characterized by cunning and innovation."
   },
   {
-    question_en: "Which tribe is primarily associated with sheep rearing?",
-    question_hi: "किस जनजाति का संबंध मुख्य रूप से भेड़ पालने से है?",
-    options_en: ["Bhil", "Santhal", "Gaddi", "Munda"],
-    options_hi: ["भील", "संथाल", "गद्दी (Gaddi)", "मुंडा"],
-    correct_option_index: 2,
-    explanation_en: "The Gaddi tribe rears sheep in the Dhauladhar mountain range (Himachal Pradesh).",
-    explanation_hi: "गद्दी जनजाति धौलाधार पर्वत श्रेणी (हिमाचल प्रदेश) में भेड़ पालती है।",
-  },
-  {
-    question_en: "The 'Garo', 'Khasi', and 'Jaintia' hills and tribes are located in which state?",
-    question_hi: "'गारो', 'खासी' और 'जयंतिया' पहाड़ियाँ और जनजातियाँ किस राज्य में स्थित हैं?",
-    options_en: ["Nagaland", "Manipur", "Meghalaya", "Tripura"],
-    options_hi: ["नागालैंड", "मणिपुर", "मेघालय", "त्रिपुरा"],
-    correct_option_index: 2,
-    explanation_en: "Garo, Khasi, and Jaintia are the major tribes of Meghalaya.",
-    explanation_hi: "गारो, खासी और जयंतिया मेघालय की प्रमुख जनजातियाँ हैं।",
-  },
-  {
-    question_en: "The 'Shompen', 'Onge', and 'Jarawa' tribes are found in which location?",
-    question_hi: "'शोंपेन' (Shompen), 'ओंगे' (Onge) और 'जारवा' (Jarawa) जनजातियाँ कहाँ पाई जाती हैं?",
-    options_en: ["Lakshadweep Islands", "Dadra and Nagar Haveli", "Andaman and Nicobar Islands", "Puducherry"],
-    options_hi: ["लक्षद्वीप समूह", "दादरा और नगर हवेली", "अंडमान और निकोबार", "पुडुचेरी"],
-    correct_option_index: 2,
-    explanation_en: "Sentinelese, Onge, Jarawa, and Shompen are tribes of the Andaman and Nicobar Islands.",
-    explanation_hi: "सेंटिनलीज़, ओंगे, जारवा, और शोंपेन अंडमान और निकोबार द्वीप समूह की जनजातियाँ हैं।",
-  },
-  {
-    question_en: "The major tribes of Jharkhand, 'Santhal' and 'Munda', belong to which race?",
-    question_hi: "झारखंड की प्रमुख जनजातियाँ 'संथाल' और 'मुंडा' का संबंध किस प्रजाति से है?",
-    options_en: ["Mongoloid", "Negrito", "Proto-Australoid", "Nordic"],
-    options_hi: ["मंगोलायड", "निग्रिटो", "प्रोटो-ऑस्ट्रोलायड", "नॉर्डिक"],
-    correct_option_index: 2,
-    explanation_en: "The Santhal tribe of India belongs to the Proto-Australoid race.",
-    explanation_hi: "भारत की संथाल जनजाति का संबंध प्रोटो-ऑस्ट्रोलायड प्रजाति से है।",
-  },
-  {
-    question_en: "The 'Lepcha' and 'Bhutia' tribes mainly reside in which state?",
-    question_hi: "'लेपचा' और 'भूटिया' जनजातियाँ मुख्य रूप से किस राज्य में निवास करती हैं?",
-    options_en: ["Arunachal Pradesh", "Himachal Pradesh", "Sikkim", "Mizoram"],
-    options_hi: ["अरुणाचल प्रदेश", "हिमाचल प्रदेश", "सिक्किम", "मिजोरम"],
-    correct_option_index: 2,
-    explanation_en: "Lepcha and Bhutia are the main tribes of Sikkim.",
-    explanation_hi: "सिक्किम की मुख्य जनजातियाँ लेपचा और भूटिया हैं।",
-  },
-  {
-    question_en: "Which tribe of Kerala was associated with the Moplah Revolt?",
-    question_hi: "केरल की कौन सी जनजाति मोपला विद्रोह (Moplah Revolt) से संबंधित थी?",
-    options_en: ["Toda", "Ullada", "Nair", "Moplah"],
-    options_hi: ["टोडा", "उल्लाडा", "नायर", "मोपला (Moplah)"],
+    question_en: "Pareto's idea is that in every society we appear in two classes. Those classes are- 1. Upper class or elite class, 2. Middle class, 3. Lower class",
+    question_hi: "पेरेटो का विचार है कि प्रत्येक समाज में हम दो वर्गों में दिखाई देते हैं। वे वर्ग हैं- 1. उच्च वर्ग या अभिजात वर्ग, 2. मध्यम वर्ग, 3. निम्न वर्ग",
+    options_en: [
+      "1 and 3",
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3"
+    ],
+    options_hi: [
+      "1 और 3",
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Moplah tribe is a major tribe of Kerala, and the Moplah Revolt (1921) was a peasant uprising by them.",
-    explanation_hi: "मोपला जनजाति केरल की एक प्रमुख जनजाति है।",
+    explanation_en: "Vilfredo Pareto's analysis of society, while focusing on the circulation of elites, recognized the existence of different social strata, including the upper/elite class, the middle class, and the lower class.",
+    explanation_hi: "Vilfredo Pareto's analysis of society, while focusing on the circulation of elites, recognized the existence of different social strata, including the upper/elite class, the middle class, and the lower class."
   },
   {
-    question_en: "The 'Dafala', 'Mishmi', and 'Aka' tribes are found in which state?",
-    question_hi: "'डफला', 'मिश्मी' और 'अका' जनजातियाँ किस राज्य में पाई जाती हैं?",
-    options_en: ["Nagaland", "Manipur", "Meghalaya", "Arunachal Pradesh"],
-    options_hi: ["नागालैंड", "मणिपुर", "मेघालय", "अरुणाचल प्रदेश"],
-    correct_option_index: 3,
-    explanation_en: "Apatani, Dafala, Mishmi, Abor are tribes of Arunachal Pradesh.",
-    explanation_hi: "अपातानी, डफला, मिश्मी, अबोर अरुणाचल प्रदेश की जनजातियाँ हैं।",
-  },
-  {
-    question_en: "The 'Pomlu' and 'Kuki' tribes are found in which state?",
-    question_hi: "'पोम्लू' और 'कुकी' (Kuki) जनजातियाँ किस राज्य में पाई जाती हैं?",
-    options_en: ["Assam", "Tripura", "Manipur", "Mizoram"],
-    options_hi: ["असम", "त्रिपुरा", "मणिपुर", "मिजोरम"],
+    question_en: "Using the cyclical theory of social change, Pareto mentioned which of the following classes in which of the economic sectors? 1. Speculator class, 2. Fixed income class, 3. Elite class",
+    question_hi: "सामाजिक परिवर्तन के चक्रीय सिद्धान्त का प्रयोग पेरेटो ने आर्थिक क्षेत्रों में से किन क्षेत्रों में उन्होंने निम्नलिखित में से किन वर्गों का उल्लेख किया है? 1. सट्टेबाज वर्ग, 2. निश्चित आय वर्ग, 3. अभिजात वर्ग",
+    options_en: [
+      "1, 2 और 3",
+      "2 और 3",
+      "1 और 2",
+      "1 and 3"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2 और 3",
+      "1 और 2",
+      "1 और 3"
+    ],
     correct_option_index: 2,
-    explanation_en: "Kuki, Mao, Maring tribes reside in Manipur. Pomlu is also the name of a shifting cultivation practice here.",
-    explanation_hi: "कुकी, माओ, मारिंग जनजातियाँ मणिपुर में निवास करती हैं। पोम्लू यहां की स्थान्तरित कृषि का नाम भी है।",
+    explanation_en: "In his application of the cyclical theory to economic spheres, Pareto identified two main types of individuals: 'speculators' (सट्टेबाज वर्ग), who are innovative and risk-takers, and 'rentiers' or 'fixed-income earners' (निश्चित आय वर्ग), who are conservative and risk-averse.",
+    explanation_hi: "In his application of the cyclical theory to economic spheres, Pareto identified two main types of individuals: 'speculators' (सट्टेबाज वर्ग), who are innovative and risk-takers, and 'rentiers' or 'fixed-income earners' (निश्चित आय वर्ग), who are conservative and risk-averse."
   },
   {
-    question_en: "Which tribe is considered to be associated with the Dhauladhar mountain range of Himachal Pradesh?",
-    question_hi: "किस जनजाति को हिमाचल प्रदेश की धौलाधार पर्वत श्रेणी से संबंधित माना जाता है?",
-    options_en: ["Kinnaur", "Gaddi", "Pangwali", "Gujjar"],
-    options_hi: ["किन्नौर", "गद्दी", "पंगवाली", "गुर्जर"],
+    question_en: "According to Pareto, in which of the following areas two types of people, believers and non-believers, are found?",
+    question_hi: "पेरेटो के अनुसार निम्नलिखित में से किस क्षेत्र में विश्वासवादी एवं अविश्वासवादी दो प्रकार के व्यक्ति पाये जाते हैं?",
+    options_en: [
+      "in the political field",
+      "in idealistic area",
+      "in the economic field",
+      "none of these"
+    ],
+    options_hi: [
+      "राजनीतिक क्षेत्र में",
+      "आदर्शधर्मी क्षेत्र में",
+      "आर्थिक क्षेत्र में",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Gaddi tribe is associated with the Dhauladhar mountain range (Himachal Pradesh).",
-    explanation_hi: "गद्दी जनजाति धौलाधार पर्वत श्रेणी (हिमाचल प्रदेश) से संबंधित है।",
+    explanation_en: "Pareto's analysis of residues and derivations, which are underlying psychological states and their rationalizations, extends to the ideological or 'आदर्शधर्मी क्षेत्र' (idealistic/normative sphere), where he identifies individuals driven by faith/belief (विश्वासवादी) and those driven by skepticism/lack of belief (अविश्वासवादी).",
+    explanation_hi: "Pareto's analysis of residues and derivations, which are underlying psychological states and their rationalizations, extends to the ideological or 'आदर्शधर्मी क्षेत्र' (idealistic/normative sphere), where he identifies individuals driven by faith/belief (विश्वासवादी) and those driven by skepticism/lack of belief (अविश्वासवादी)."
   },
   {
-    question_en: "In which state is shifting cultivation called 'Podu' or 'Pond'?",
-    question_hi: "किस राज्य में स्थान्तरित कृषि (Shifting cultivation) को 'पोडु' या 'पोंडू' कहा जाता है?",
-    options_en: ["Jharkhand", "Western Ghats", "Andhra Pradesh", "Odisha"],
-    options_hi: ["झारखंड", "पश्चिमी घाट", "आंध्र प्रदेश", "ओडिशा"],
-    correct_option_index: 2,
-    explanation_en: "Shifting cultivation is called Podu or Pondu in Andhra Pradesh.",
-    explanation_hi: "स्थान्तरित कृषि को आंध्र प्रदेश में पोडु या पोंडू कहा जाता है।",
+    question_en: "Which sociologist has propounded the cultural theory of social change in his book 'Social and Cultural Dynamics'?",
+    question_hi: "अपनी पुस्तक 'Social and Cultural Dynamics' में सामाजिक परिवर्तन के सांस्कृतिक सिद्धान्त का प्रतिपादन किस समाजशास्त्री ने किया है?",
+    options_en: [
+      "सोरोकिन",
+      "Max Weber",
+      "parsons",
+      "Spencer"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "मैक्स वेबर",
+      "पारसन्स",
+      "स्पेन्सर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Pitirim Sorokin is the author of the monumental four-volume work 'Social and Cultural Dynamics', in which he presented his cyclical theory of social and cultural change.",
+    explanation_hi: "Pitirim Sorokin is the author of the monumental four-volume work 'Social and Cultural Dynamics', in which he presented his cyclical theory of social and cultural change."
   },
   {
-    question_en: "In which state is shifting cultivation called 'Kuruwal'?",
-    question_hi: "किस राज्य में स्थान्तरित कृषि को 'कुरुवाल' (Kuruwal) कहा जाता है?",
-    options_en: ["Assam", "Meghalaya", "Jharkhand", "Madhya Pradesh"],
-    options_hi: ["असम", "मेघालय", "झारखंड", "मध्य प्रदेश"],
-    correct_option_index: 2,
-    explanation_en: "In Jharkhand, shifting cultivation is called Kuruwal.",
-    explanation_hi: "झारखंड में स्थान्तरित कृषि को कुरुवाल कहा जाता है।",
+    question_en: "What type of culture has Sorokin mentioned in the context of social change?",
+    question_hi: "सोरोकिन ने सामाजिक परिवर्तन के सन्दर्भ में किस प्रकार की संस्कृति का उल्लेख किया है?",
+    options_en: [
+      "conscious culture",
+      "emotional culture",
+      "ideal culture",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "चेतनात्मक संस्कृति",
+      "भावात्मक संस्कृति",
+      "आदर्शात्मक संस्कृति",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Pitirim Sorokin's cyclical theory of cultural change describes societies oscillating between three main cultural mentalities: sensate (चेतनात्मक), ideational (भावात्मक), and idealistic (आदर्शात्मक). Therefore, he mentioned all of these types.",
+    explanation_hi: "Pitirim Sorokin's cyclical theory of cultural change describes societies oscillating between three main cultural mentalities: sensate (चेतनात्मक), ideational (भावात्मक), and idealistic (आदर्शात्मक). Therefore, he mentioned all of these types."
   },
   {
-    question_en: "Where is shifting cultivation known by the name 'Bewer' or 'Dahiya'?",
-    question_hi: "स्थान्तरित कृषि को 'बेवर' (Bewer) या 'दहिया' (Dahiya) नाम से कहाँ जाना जाता है?",
-    options_en: ["Himalayan region", "Madhya Pradesh", "Odisha", "Gujarat"],
-    options_hi: ["हिमालय क्षेत्र", "मध्य प्रदेश", "ओडिशा", "गुजरात"],
+    question_en: "Which sociologist has said that \"the western civilization of the twentieth century has reached the peak of conscious culture, now it will again return towards emotional culture.\"",
+    question_hi: "किस समाजशास्त्री ने कहा है कि \"बीसवीं सदी की पश्चिमी सभ्यता चेतनात्मक संस्कृति की चरम सीमा पर पहुँच गयी है, अब वह पुनः भावात्मक संस्कृति की ओर लौट आएगी।\"",
+    options_en: [
+      "सोरोकिन",
+      "veblen",
+      "(both a and B",
+      "none of these"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "वेब्लेन",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Pitirim Sorokin famously argued that Western civilization in the 20th century had reached the peak of its sensate (चेतनात्मक) culture and was due for a shift back towards an ideational (भावात्मक) or idealistic culture.",
+    explanation_hi: "Pitirim Sorokin famously argued that Western civilization in the 20th century had reached the peak of its sensate (चेतनात्मक) culture and was due for a shift back towards an ideational (भावात्मक) or idealistic culture."
+  },
+  {
+    question_en: "Who among the following is a supporter of linear and evolutionary theory of social change?",
+    question_hi: "सामाजिक परिवर्तन के रेखीय और उद्विकासोय सिद्धान्त के समर्थक निम्नलिखित में से कौन है?",
+    options_en: [
+      "August Comt",
+      "herbert spencer",
+      "Hob House",
+      "veblen",
+      "(both a and B"
+    ],
+    options_hi: [
+      "आगस्ट कॉम्ट",
+      "हर्बर्ट स्पेन्सर",
+      "हॉब हाउस",
+      "वेब्लेन",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 4,
+    explanation_en: "Both Auguste Comte and Herbert Spencer are prominent proponents of linear and evolutionary theories of social change, positing that societies progress through fixed stages in a unilinear fashion.",
+    explanation_hi: "Both Auguste Comte and Herbert Spencer are prominent proponents of linear and evolutionary theories of social change, positing that societies progress through fixed stages in a unilinear fashion."
+  },
+  {
+    question_en: "Who among the following has linked the cyclical theory of social change with the intellectual development of human civilization?",
+    question_hi: "निम्नलिखित में से किसे सामाजिक परिवर्तन के चक्रीय सिद्धान्त को मानव सभ्यता के बौद्धिक विकास से जोड़ा है?",
+    options_en: [
+      "herbert spencer",
+      "August Comt",
+      "parsons",
+      "marks"
+    ],
+    options_hi: [
+      "हर्बर्ट स्पेन्सर",
+      "ऑगस्त कॉम्ट",
+      "पारसन्स",
+      "मार्क्स"
+    ],
     correct_option_index: 1,
-    explanation_en: "In Madhya Pradesh, it is called Bewer or Dahiya.",
-    explanation_hi: "मध्य प्रदेश में इसे बेवर या दहिया कहा जाता है।",
+    explanation_en: "While Auguste Comte is primarily known for his linear three-stage law of intellectual development, some interpretations might connect his ideas of dominant intellectual stages influencing societal forms to a broader, albeit not strictly cyclical, pattern of societal evolution.",
+    explanation_hi: "While Auguste Comte is primarily known for his linear three-stage law of intellectual development, some interpretations might connect his ideas of dominant intellectual stages influencing societal forms to a broader, albeit not strictly cyclical, pattern of societal evolution."
   },
   {
-    question_en: "What is the largest source of irrigation in India after wells and tube wells?",
-    question_hi: "भारत में कुओं और नलकूपों के बाद सिंचाई का सबसे बड़ा साधन क्या है?",
-    options_en: ["Ponds", "Sprinklers", "Canals", "Rain water"],
-    options_hi: ["तालाब", "स्प्रिंकलर", "नहर (Canals)", "वर्षा जल"],
-    correct_option_index: 2,
-    explanation_en: "After wells and tube wells, canals are the largest source of irrigation in India.",
-    explanation_hi: "कुओं और नलकूपों के बाद भारत में सिंचाई का सबसे बड़ा साधन नहरें हैं।",
-  },
-  {
-    question_en: "What is the capital of Vietnam?",
-    question_hi: "वियतनाम की राजधानी क्या है?",
-    options_en: ["Jakarta", "Manila", "Hanoi", "Seoul"],
-    options_hi: ["जकार्ता", "मनीला", "हनोई (Hanoi)", "सिओल"],
-    correct_option_index: 2,
-    explanation_en: "The capital of Vietnam is Hanoi.",
-    explanation_hi: "वियतनाम की राजधानी हनोई है।",
-  },
-  {
-    question_en: "What is the capital of Turkey?",
-    question_hi: "तुर्की की राजधानी क्या है?",
-    options_en: ["Istanbul", "Ankara", "Tehran", "Riyadh"],
-    options_hi: ["इस्तांबुल", "अंकारा", "तेहरान", "रियाद"],
+    question_en: "Consider the following - 1. Religious level, 2. Logical level, 3. Scientific level, 4. Natural level. According to Auguste Comte, the three levels of social change include-",
+    question_hi: "निम्नलिखित पर विचार कीजिए- 1. धार्मिक स्तर, 2. तार्किक स्तर, 3. वैज्ञानिक स्तर, 4. प्राकृतिक स्तर ऑगस्त कॉम्टे के अनुसार सामाजिक परिवर्तन के तीन स्तरों में से सम्मिलित है-",
+    options_en: [
+      "1 और 2",
+      "1, 2 और 3",
+      "3 और 4",
+      "3, 4 and 1"
+    ],
+    options_hi: [
+      "1 और 2",
+      "1, 2 और 3",
+      "3 और 4",
+      "3, 4 और 1"
+    ],
     correct_option_index: 1,
-    explanation_en: "The capital of Turkey is Ankara.",
-    explanation_hi: "तुर्की की राजधानी अंकारा है।",
+    explanation_en: "Auguste Comte's Law of Three Stages of intellectual development includes the Theological (theological stage), Metaphysical (logical stage, often translated as metaphysical or abstract), and Positive/Scientific (scientific stage).",
+    explanation_hi: "Auguste Comte's Law of Three Stages of intellectual development includes the Theological (धार्मिक स्तर), Metaphysical (तार्किक स्तर, often translated as metaphysical or abstract), and Positive/Scientific (वैज्ञानिक स्तर)."
   },
   {
-    question_en: "Which country's capital is 'Kuala Lumpur'?",
-    question_hi: "किस देश की राजधानी 'कुआलालंपुर' है?",
-    options_en: ["Thailand", "Indonesia", "Philippines", "Malaysia"],
-    options_hi: ["थाईलैंड", "इंडोनेशिया", "फिलीपींस", "मलेशिया"],
-    correct_option_index: 3,
-    explanation_en: "The capital of Malaysia is Kuala Lumpur.",
-    explanation_hi: "मलेशिया की राजधानी कुआलालंपुर है।",
-  },
-  {
-    question_en: "Which nuclear power plant established in Tamil Nadu is in collaboration with Russia?",
-    question_hi: "रूस के सहयोग से तमिलनाडु में स्थापित नाभिकीय ऊर्जा संयंत्र (Nuclear Power Plant) कौन सा है?",
-    options_en: ["Tarapur", "Kalpakkam", "Kaiga", "Kudankulam"],
-    options_hi: ["तारापुर", "कलपक्कम", "कैगा", "कुडनकुलम (Kudankulam)"],
-    correct_option_index: 3,
-    explanation_en: "The Kudankulam (Tamil Nadu) nuclear plant was established with the assistance of Russia.",
-    explanation_hi: "कुडनकुलम (तमिलनाडु) नाभिकीय संयंत्र रूस की सहायता से स्थापित किया गया था।",
-  },
-  {
-    question_en: "Where is the 'Taurus Mountain' located in the continent of Asia?",
-    question_hi: "एशिया महाद्वीप में स्थित 'तोरस पर्वत' (Taurus Mt.) कहाँ स्थित है?",
-    options_en: ["Iran", "Saudi Arabia", "Pakistan", "Turkey"],
-    options_hi: ["ईरान", "सऊदी अरब", "पाकिस्तान", "तुर्की (Turkey)"],
-    correct_option_index: 3,
-    explanation_en: "The Taurus Mountain is located in Turkey.",
-    explanation_hi: "तोरस पर्वत तुर्की में स्थित है।",
-  },
-  {
-    question_en: "Which is the longest river in the continent of Asia?",
-    question_hi: "एशिया महाद्वीप की सबसे लंबी नदी कौन सी है?",
-    options_en: ["Helmand River", "Brahmaputra River", "Nile River", "Yangtse River"],
-    options_hi: ["हेलमंद नदी", "ब्रह्मपुत्र नदी", "नील नदी", "यांग्त्सीक्यांग नदी (Yangtse River)"],
-    correct_option_index: 3,
-    explanation_en: "The Yangtse River in China is the longest river in Asia.",
-    explanation_hi: "चीन की यांग्त्सीक्यांग नदी एशिया की सबसे लंबी नदी है।",
-  },
-  {
-    question_en: "The 'Dasht-e-lut' located in Iran is what kind of geomorphological region?",
-    question_hi: "ईरान (Iran) में स्थित 'दस्त-ए-लुत' (Dasht-e-lut) किस प्रकार का भू-आकृतिक क्षेत्र है?",
-    options_en: ["Mountain range", "River valley", "Desert", "Plateau"],
-    options_hi: ["पर्वत श्रृंखला", "नदी घाटी", "मरुस्थल (Desert)", "पठार"],
-    correct_option_index: 2,
-    explanation_en: "Dasht-e-lut is a desert in Iran.",
-    explanation_hi: "दश्त-ए-लुत ईरान का एक मरुस्थल है।",
-  },
-  {
-    question_en: "The Caspian Sea is the world's largest saltwater lake. How many countries surround it?",
-    question_hi: "कैस्पियन सागर (Caspian Sea) विश्व की सबसे बड़ी खारे पानी की झील है, यह कितने देशों से घिरा है?",
-    options_en: ["4", "5", "6", "7"],
-    options_hi: ["4", "5", "6", "7"],
+    question_en: "Which sociologist has revealed social change on the basis of natural selection?",
+    question_hi: "सामाजिक परिवर्तन को प्राकृतिक प्रवरण (Natural Selection) के आधार पर किस समाजशास्त्री ने प्रकट किया है?",
+    options_en: [
+      "herbert spencer",
+      "darwin",
+      "सोरोकिन",
+      "Gobdins"
+    ],
+    options_hi: [
+      "हर्बर्ट स्पेन्सर",
+      "डार्विन",
+      "सोरोकिन",
+      "गोब्दिन्स"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Caspian Sea is surrounded by 5 countries (Kazakhstan, Iran, Russia, Azerbaijan, Turkmenistan).",
-    explanation_hi: "कैस्पियन सागर 5 देशों (कजाकिस्तान, ईरान, रूस, अजरबैजान, तुर्कमेनिस्तान) से घिरा है।",
+    explanation_en: "Charles Darwin formulated the theory of natural selection, which, although primarily biological, has been used as a conceptual framework by some sociologists to understand aspects of social change.",
+    explanation_hi: "Charles Darwin formulated the theory of natural selection, which, although primarily biological, has been used as a conceptual framework by some sociologists to understand aspects of social change."
   },
   {
-    question_en: "The highest plateau of Asia, the 'Tibet Plateau', is known as what?",
-    question_hi: "एशिया का सबसे ऊँचा पठार, 'तिब्बत का पठार', किस रूप में जाना जाता है?",
-    options_en: ["Storehouse of Asia", "Delta region", "Roof of the World", "Desert of the World"],
-    options_hi: ["एशिया का भंडार", "डेल्टा क्षेत्र", "विश्व की छत (Roof of the World)", "विश्व का रेगिस्तान"],
-    correct_option_index: 2,
-    explanation_en: "The Tibet Plateau is also called the 'Roof of the World'.",
-    explanation_hi: "तिब्बत के पठार को 'विश्व की छत' भी कहा जाता है।",
+    question_en: "Who propounded the technological determinism theory of social change?",
+    question_hi: "सामाजिक परिवर्तन के प्रौद्योगिकीय निर्धारणवाद सिद्धान्त का प्रतिपादन किसने किया?",
+    options_en: [
+      "veblen",
+      "Max Weber",
+      "karl marx",
+      "parsons"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "मैक्स वेबर",
+      "कार्ल मार्क्स",
+      "पारसन्स"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Thorstein Veblen is a key figure in the development of the technological determinism theory of social change, emphasizing technology as the primary driver.",
+    explanation_hi: "Thorstein Veblen is a key figure in the development of the technological determinism theory of social change, emphasizing technology as the primary driver."
   },
   {
-    question_en: "Where is Lake Baikal, the world's deepest lake, located?",
-    question_hi: "विश्व की सबसे गहरी झील (Deepest Lake) बैकाल झील कहाँ स्थित है?",
-    options_en: ["Kazakhstan", "China", "Russia", "Turkey"],
-    options_hi: ["कजाकिस्तान", "चीन", "रूस (Russia)", "तुर्की"],
-    correct_option_index: 2,
-    explanation_en: "Lake Baikal is located in Russia.",
-    explanation_hi: "बैकाल झील रूस में स्थित है।",
-  },
-  {
-    question_en: "The Euphrates River is the longest river in which region?",
-    question_hi: "यूफ्रेट्स नदी (Euphrates River) किस क्षेत्र की सबसे लंबी नदी है?",
-    options_en: ["South Asia", "East Asia", "West Asia", "North Asia"],
-    options_hi: ["दक्षिणी एशिया", "पूर्वी एशिया", "पश्चिमी एशिया", "उत्तरी एशिया"],
-    correct_option_index: 2,
-    explanation_en: "The Euphrates River is the longest river in West Asia.",
-    explanation_hi: "यूफ्रेट्स नदी पश्चिमी एशिया की सबसे लंबी नदी है।",
-  },
-  {
-    question_en: "Which of the 4 countries included in the Horn of Africa is NOT included?",
-    question_hi: "हॉर्न ऑफ अफ्रीका (Horn of Africa) में शामिल 4 देशों में से कौन सा देश शामिल नहीं है?",
-    options_en: ["Somalia", "Ethiopia", "Eritrea", "Tanzania"],
-    options_hi: ["सोमालिया", "इथियोपिया", "एरिट्रिया", "तंज़ानिया"],
+    question_en: "Which of the following explains the difference between cyclic and linear theories?",
+    question_hi: "निम्नलिखित में से कौन चक्रीय तथा रेखीय सिद्धान्तों में भेद को स्पष्ट करते हैं?",
+    options_en: [
+      "According to the cyclical theory, there is a cycle in change, whereas the linear theory believes that change moves in a straight line.",
+      "The linear theory is more influenced by evolutionists than the cyclical theory.",
+      "Change in the cyclone is low from highness and lowness from highness.",
+      "All the above"
+    ],
+    options_hi: [
+      "चक्रीय सिद्धान्त के अनुसार परिवर्तन में एक चक्र चलता है जबकि रेखीय सिद्धान्त यह विश्वास करता है कि परिवर्तन एक सीधी रेखा में चलता है।",
+      "रेखीय सिद्धान्त चक्रीय सिद्धान्त की अपेक्षा उद्विकासवादियों से अधिक प्रभावित है।",
+      "चक्रीय सिद्धान्त में परिवर्तन उच्चता से निम्नता तथा निम्नता से उच्चता की ओर होता है",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Horn of Africa includes Somalia, Ethiopia, Eritrea, and Djibouti.",
-    explanation_hi: "हॉर्न ऑफ अफ्रीका में सोमालिया, इथियोपिया, एरिट्रिया और जिबूती शामिल हैं।",
+    explanation_en: "All the given statements accurately describe distinctions between cyclical and linear theories of social change. Cyclical theories involve recurring patterns, linear theories involve unidirectional progression, linear theories are often influenced by evolutionary thought, and cyclical theories often describe oscillations between high and low points.",
+    explanation_hi: "All the given statements accurately describe distinctions between cyclical and linear theories of social change. Cyclical theories involve recurring patterns, linear theories involve unidirectional progression, linear theories are often influenced by evolutionary thought, and cyclical theories often describe oscillations between high and low points."
   },
   {
-    question_en: "Which is the second largest continent by size?",
-    question_hi: "अफ्रीका महाद्वीप का दूसरा सबसे बड़ा महाद्वीप (Second largest continent) कौन सा है?",
-    options_en: ["Asia", "North America", "Africa", "South America"],
-    options_hi: ["एशिया", "उत्तरी अमेरिका", "अफ्रीका", "दक्षिण अमेरिका"],
-    correct_option_index: 2,
-    explanation_en: "Africa is the second largest continent after Asia.",
-    explanation_hi: "अफ्रीका दूसरा सबसे बड़ा महाद्वीप है।",
+    question_en: "Which sociologist linked social change with technology and economic factors and stated in the cyclical theory that change occurs from high to low and from low to high?",
+    question_hi: "किस समाजशास्त्री ने सामाजिक परिवर्तन को प्रौद्योगिकी एवं आर्थिक कारकों से जोड़ते हुए चक्रीय सिद्धान्त में परिवर्तन उच्चता से निम्नता तथा निम्नता से उच्चता की ओर होता है?",
+    options_en: [
+      "karl marx",
+      "Max Weber",
+      "moore",
+      "parsons"
+    ],
+    options_hi: [
+      "कार्ल मार्क्स",
+      "मैक्स वेबर",
+      "मूर",
+      "पारसन्स"
+    ],
+    correct_option_index: 0,
+    explanation_en: "While Karl Marx's theory of social change is primarily linear and driven by economic and technological factors, leading to class struggle and revolution, the question attributes to him a cyclical pattern of change oscillating between high and low points. (Acknowledging the unusual attribution).",
+    explanation_hi: "While Karl Marx's theory of social change is primarily linear and driven by economic and technological factors, leading to class struggle and revolution, the question attributes to him a cyclical pattern of change oscillating between high and low points. (Acknowledging the unusual attribution)."
   },
   {
-    question_en: "Which continent is crossed by the Tropic of Cancer, Tropic of Capricorn, and the Equator?",
-    question_hi: "किस महाद्वीप से कर्क रेखा, मकर रेखा और विषुवत रेखा तीनों रेखाएं गुजरती हैं?",
-    options_en: ["Asia", "North America", "Africa", "South America"],
-    options_hi: ["एशिया", "उत्तरी अमेरिका", "अफ्रीका", "दक्षिण अमेरिका"],
-    correct_option_index: 2,
-    explanation_en: "All three major latitude lines pass through the continent of Africa.",
-    explanation_hi: "अफ्रीका महाद्वीप से तीनों प्रमुख अक्षांश रेखाएं गुजरती हैं।",
-  },
-  {
-    question_en: "Which is the largest lake in the continent of Africa?",
-    question_hi: "अफ्रीका महाद्वीप की सबसे बड़ी झील (Largest Lake) कौन सी है?",
-    options_en: ["Lake Tanganyika", "Lake Chad", "Lake Volta", "Lake Victoria"],
-    options_hi: ["टांगान्यिका झील", "चाड झील", "वोल्टा झील", "विक्टोरिया झील (Lake Victoria)"],
-    correct_option_index: 3,
-    explanation_en: "Lake Victoria is the largest lake in Africa, through which the Equator passes.",
-    explanation_hi: "विक्टोरिया झील अफ्रीका की सबसे बड़ी झील है, जिससे विषुवत रेखा गुजरती है।",
-  },
-  {
-    question_en: "Which lake in Africa is crossed by the Tropic of Cancer?",
-    question_hi: "कौन सी झील अफ्रीका में स्थित है जिससे कर्क रेखा (Tropic of Cancer) गुजरती है?",
-    options_en: ["Lake Victoria", "Lake Tanganyika", "Nasser Lake", "Karachi Lake"],
-    options_hi: ["विक्टोरिया झील", "टांगान्यिका झील", "नासेर झील (Nasser Lake)", "कराची झील"],
-    correct_option_index: 2,
-    explanation_en: "Lake Nasser is an artificial lake crossed by the Tropic of Cancer.",
-    explanation_hi: "नासेर झील एक कृत्रिम झील है, जिससे कर्क रेखा गुजरती है।",
-  },
-  {
-    question_en: "The Nile River is formed by the confluence of which two rivers?",
-    question_hi: "नील नदी (Nile River) किन दो नदियों के मिलने से बनती है?",
-    options_en: ["Niger and Blue Nile", "Volta and White Nile", "White Nile and Blue Nile", "Limpopo and Zambezi"],
-    options_hi: ["नाइजर और ब्लू नील", "वोल्टा और व्हाइट नील", "व्हाइट नील और ब्लू नील", "लिम्पोपो और जाम्बेजी"],
-    correct_option_index: 2,
-    explanation_en: "The Nile River is formed by the confluence of the White Nile (from Lake Victoria) and the Blue Nile (from Lake Tana).",
-    explanation_hi: "नील नदी व्हाइट नील (विक्टोरिया झील) और ब्लू नील (ताना झील) नदियों के मिलने से बनती है।",
-  },
-  {
-    question_en: "What is the characteristic of the Congo (Zaire) River?",
-    question_hi: "कांगो (जायरे) नदी की विशेषता क्या है?",
-    options_en: ["It crosses the Tropic of Capricorn twice.", "It crosses the Equator once.", "It crosses the Equator twice.", "It is the longest river in the world."],
-    options_hi: ["यह मकर रेखा को दो बार काटती है।", "यह विषुवत रेखा को एक बार काटती है।", "यह विषुवत रेखा को दो बार काटती है।", "यह विश्व की सबसे लंबी नदी है।"],
-    correct_option_index: 2,
-    explanation_en: "The Congo River crosses the Equator twice and flows into the Atlantic Ocean.",
-    explanation_hi: "कांगो नदी (Congo River) विषुवत रेखा को दो बार काटती है और अटलांटिक महासागर में गिरती है।",
-  },
-  {
-    question_en: "Which river crosses the Tropic of Capricorn twice?",
-    question_hi: "कौन सी नदी मकर रेखा (Tropic of Capricorn) को दो बार काटती है?",
-    options_en: ["Nile River", "Congo River", "Niger River", "Limpopo River"],
-    options_hi: ["नील नदी", "कांगो नदी", "नाइजर नदी", "लिम्पोपो नदी (Limpopo River)"],
-    correct_option_index: 3,
-    explanation_en: "The Limpopo River crosses the Tropic of Capricorn twice.",
-    explanation_hi: "लिम्पोपो नदी मकर रेखा को दो बार काटती है।",
-  },
-  {
-    question_en: "On which river is the Aswan Dam located?",
-    question_hi: "अस्वान बाँध (Aswan Dam) किस नदी पर स्थित है?",
-    options_en: ["Zambezi River", "Niger River", "Nile River", "Congo River"],
-    options_hi: ["जाम्बेजी नदी", "नाइजर नदी", "नील नदी", "कांगो नदी"],
-    correct_option_index: 2,
-    explanation_en: "The Aswan Dam is located on the Nile River in Egypt.",
-    explanation_hi: "अस्वान बाँध नील नदी पर मिस्र (Egypt) में स्थित है।",
-  },
-  {
-    question_en: "What is the rank of the North American continent by size?",
-    question_hi: "उत्तरी अमेरिका महाद्वीप का आकार के अनुसार कौन सा स्थान है?",
-    options_en: ["Second", "Fourth", "Third", "Fifth"],
-    options_hi: ["दूसरा", "चौथा", "तीसरा", "पाँचवाँ"],
-    correct_option_index: 2,
-    explanation_en: "North America is the third largest continent by area.",
-    explanation_hi: "उत्तरी अमेरिका क्षेत्रफल के अनुसार तीसरा सबसे बड़ा महाद्वीप है।",
-  },
-  {
-    question_en: "Which longitude line approximately divides North America into two parts?",
-    question_hi: "उत्तरी अमेरिका को लगभग दो भागों में बाँटने वाली देशांतर रेखा (Longitude line) कौन सी है?",
-    options_en: ["0° Longitude", "90° East Longitude", "100° West Longitude", "180° East Longitude"],
-    options_hi: ["0° देशांतर", "90° पूर्वी देशांतर", "100° पश्चिमी देशांतर", "180° पूर्वी देशांतर"],
-    correct_option_index: 2,
-    explanation_en: "The 100° West Longitude line approximately divides North America into two parts.",
-    explanation_hi: "100° पश्चिमी देशांतर रेखा उत्तरी अमेरिका को लगभग दो भागों में बाँटती है।",
-  },
-  {
-    question_en: "The Mexico Plateau is located in which continent?",
-    question_hi: "मेक्सिको का पठार (Mexico Plateau) किस महाद्वीप में स्थित है?",
-    options_en: ["South America", "Asia", "North America", "Africa"],
-    options_hi: ["दक्षिण अमेरिका", "एशिया", "उत्तरी अमेरिका", "अफ्रीका"],
-    correct_option_index: 2,
-    explanation_en: "The Mexico Plateau is located in North America.",
-    explanation_hi: "मेक्सिको का पठार उत्तरी अमेरिका में स्थित है।",
-  },
-  {
-    question_en: "Where is the Mojave Desert located?",
-    question_hi: "मोहवे या मोजेव मरुस्थल (Mojave Desert) कहाँ स्थित है?",
-    options_en: ["Mexico", "Arizona", "Canada", "California, USA"],
-    options_hi: ["मेक्सिको", "एरिजोना", "कनाडा", "USA के कैलिफ़ोर्निया में"],
-    correct_option_index: 3,
-    explanation_en: "The Mojave Desert is located in California, USA.",
-    explanation_hi: "मोहवे/मोजेव मरुस्थल USA के कैलिफ़ोर्निया में स्थित है।",
-  },
-  {
-    question_en: "The Colorado River originates from which mountain?",
-    question_hi: "कोलोराडो नदी (Colorado River) का उद्गम किस पर्वत से होता है?",
-    options_en: ["Sierra Madre", "Daniel Mountain", "Appalachian Mountains", "Rocky Mountains"],
-    options_hi: ["सिएरा माद्रे", "डेनियल माउंटेन", "अप्लेशियन पर्वत", "रॉकी पर्वत"],
-    correct_option_index: 3,
-    explanation_en: "The Colorado River originates from the Rocky Mountains.",
-    explanation_hi: "कोलोराडो नदी का उद्गम रॉकी पर्वत से होता है।",
-  },
-  {
-    question_en: "Washington DC (USA) is situated on the bank of which river?",
-    question_hi: "वाशिंगटन DC (USA) किस नदी के तट पर स्थित है?",
-    options_en: ["Hudson River", "Mississippi River", "Rio Grande River", "Potomac River"],
-    options_hi: ["हडसन नदी", "मिसिसिपी नदी", "रियो ग्रांडे नदी", "पोटोमैक नदी (Potomac River)"],
-    correct_option_index: 3,
-    explanation_en: "Washington DC is situated on the bank of the Potomac River.",
-    explanation_hi: "वाशिंगटन DC पोटोमैक नदी के तट पर स्थित है।",
-  },
-  {
-    question_en: "The Missouri River, a tributary of the Mississippi, meets the Mississippi River near which city?",
-    question_hi: "मिसौरी नदी, जो मिसिसिपी की सहायक है, मिसिसिपी नदी से किस शहर के पास मिलती है?",
-    options_en: ["New York", "Chicago", "St. Louis", "New Orleans"],
-    options_hi: ["न्यूयॉर्क", "शिकागो", "सेंट लुइस (St. Louis)", "न्यू ऑरलियन्स"],
-    correct_option_index: 2,
-    explanation_en: "The Missouri River meets the Mississippi River near St. Louis.",
-    explanation_hi: "मिसौरी नदी सेंट लुइस के पास मिसिसिपी नदी से मिलती है।",
-  },
-  {
-    question_en: "Which of the Great Lakes is entirely located within the USA?",
-    question_hi: "महान झीलों (Great Lakes) में से कौन सी झील पूरी तरह से USA में स्थित है?",
-    options_en: ["Lake Superior", "Lake Huron", "Lake Erie", "Lake Michigan"],
-    options_hi: ["सुपीरियर झील", "ह्यूरन झील", "ईरी झील", "मिशिगन झील (Lake Michigan)"],
-    correct_option_index: 3,
-    explanation_en: "Out of the 5 Great Lakes, only Lake Michigan is entirely located within the USA.",
-    explanation_hi: "5 महान झीलों में से केवल मिशिगन झील पूरी तरह से USA में स्थित है।",
-  },
-  {
-    question_en: "Which is the largest freshwater lake in the world?",
-    question_hi: "विश्व की सबसे बड़ी मीठे पानी की झील (Largest fresh water lake in the world) कौन सी है?",
-    options_en: ["Lake Victoria", "Lake Huron", "Lake Superior", "Lake Baikal"],
-    options_hi: ["विक्टोरिया झील", "ह्यूरन झील", "सुपीरियर झील (Lake Superior)", "बैकाल झील"],
-    correct_option_index: 2,
-    explanation_en: "Lake Superior is the largest freshwater lake in the world.",
-    explanation_hi: "सुपीरियर झील विश्व में मीठे पानी की सबसे बड़ी झील है।",
-  },
-  {
-    question_en: "Where is North America's highest peak, Mount McKinley (Mount Denali), located?",
-    question_hi: "उत्तरी अमेरिका का उच्चतम शिखर माउंट मैकिन्ले (माउंट डेनाली) कहाँ स्थित है?",
-    options_en: ["Canada", "Alaska (USA)", "Mexico", "California"],
-    options_hi: ["कनाडा", "अलास्का (USA)", "मेक्सिको", "कैलिफ़ोर्निया"],
+    question_en: "Who has said that \"The changes that have taken place so far in human history have occurred due to changes in the mode of production\"?",
+    question_hi: "किसने कहा है कि \"मानव इतिहास में अब तक जो परिवर्तन हुए हैं वे उत्पादन प्रणाली (Mode of Production) में परिवर्तन के कारण हुए हैं\"?",
+    options_en: [
+      "स्पेन्सर",
+      "karl marx",
+      "Hob House",
+      "sorokin"
+    ],
+    options_hi: [
+      "स्पेन्सर",
+      "कार्ल मार्क्स",
+      "हॉब हाउस",
+      "सोरोkin"
+    ],
     correct_option_index: 1,
-    explanation_en: "Mount McKinley (Mount Denali) is located in Alaska (USA).",
-    explanation_hi: "माउंट मैकिन्ले (माउंट डेनाली) अलास्का (USA) में स्थित है।",
+    explanation_en: "This is a core tenet of Karl Marx's historical materialism, which posits that changes in the mode of production are the fundamental drivers of historical and social change.",
+    explanation_hi: "This is a core tenet of Karl Marx's historical materialism, which posits that changes in the mode of production are the fundamental drivers of historical and social change."
   },
   {
-    question_en: "Which is the smallest country in the continent of South America?",
-    question_hi: "दक्षिण अमेरिका महाद्वीप का सबसे छोटा देश कौन सा है?",
-    options_en: ["Brazil", "Chile", "Uruguay", "Suriname"],
-    options_hi: ["ब्राजील", "चिली", "उरुग्वे", "सूरीनाम (Suriname)"],
-    correct_option_index: 3,
-    explanation_en: "Suriname is the smallest country in the continent of South America.",
-    explanation_hi: "दक्षिण अमेरिका महाद्वीप का सबसे छोटा देश सूरीनाम है।",
-  },
-  {
-    question_en: "The Panama Canal separates which two continents?",
-    question_hi: "पनामा नहर (Panama Canal) किन दो महाद्वीपों को अलग करती है?",
-    options_en: ["Asia and Africa", "North America and Asia", "North America and South America", "Europe and Asia"],
-    options_hi: ["एशिया और अफ्रीका", "उत्तरी अमेरिका और एशिया", "उत्तरी अमेरिका और दक्षिण अमेरिका", "यूरोप और एशिया"],
+    question_en: "According to Karl Marx, which of the following is the determining factor of social change? 1. Population, 2. Geographical conditions, 3. Economic factors, 4. Production system",
+    question_hi: "कार्ल मार्क्स के अनुसार सामाजिक परिवर्तन निम्नलिखित में से कौन-सा सामाजिक परिवर्तन के निर्धारण कारक है? 1. जनसंख्या, 2. भौगोलिक परिस्थितियाँ, 3. आर्थिक कारक, 4. उत्पादन प्रणाली",
+    options_en: [
+      "1 और 2",
+      "2 और 3",
+      "3 और 4",
+      "4 and 1"
+    ],
+    options_hi: [
+      "1 और 2",
+      "2 और 3",
+      "3 और 4",
+      "4 और 1"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Panama Canal separates the continents of North America and South America.",
-    explanation_hi: "पनामा नहर उत्तरी अमेरिका और दक्षिण अमेरिका महाद्वीपों को अलग करती है।",
+    explanation_en: "Karl Marx's theory of historical materialism emphasizes economic factors (3) and the mode of production (4) as the primary determinants of social change.",
+    explanation_hi: "Karl Marx's theory of historical materialism emphasizes economic factors (3) and the mode of production (4) as the primary determinants of social change."
   },
   {
-    question_en: "The Atacama Desert is located on which latitude line?",
-    question_hi: "अटाकामा मरुस्थल (Atacama Desert) किस अक्षांश रेखा पर स्थित है?",
-    options_en: ["Equator", "Tropic of Cancer", "Tropic of Capricorn", "Arctic Circle"],
-    options_hi: ["विषुवत रेखा", "कर्क रेखा", "मकर रेखा (Tropic of Capricorn)", "आर्कटिक वृत्त"],
-    correct_option_index: 2,
-    explanation_en: "The Atacama Desert is located on the Tropic of Capricorn.",
-    explanation_hi: "अटाकामा मरुस्थल मकर रेखा पर स्थित है।",
+    question_en: "Max Weber criticized Marx's theory and which factor did he consider as the basis of social change instead of economic factors?",
+    question_hi: "मैक्स वेबर ने मार्क्स के सिद्धान्त की आलोचना की और इन्होंने आर्थिक कारकों के स्थान पर किस कारक को सामाजिक परिवर्तन का आधार माना है?",
+    options_en: [
+      "of the production system",
+      "to religion",
+      "of culture",
+      "of technology"
+    ],
+    options_hi: [
+      "उत्पादन प्रणाली को",
+      "धर्म को",
+      "संस्कृति को",
+      "प्रौद्योगिकी को"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Max Weber, in his critique of Marx, emphasized the role of non-economic factors, particularly religion (धर्म), as a significant force in shaping social change, famously illustrated in 'The Protestant Ethic and the Spirit of Capitalism'.",
+    explanation_hi: "Max Weber, in his critique of Marx, emphasized the role of non-economic factors, particularly religion (धर्म), as a significant force in shaping social change, famously illustrated in 'The Protestant Ethic and the Spirit of Capitalism'."
   },
   {
-    question_en: "What is the specialty of the Atacama Desert?",
-    question_hi: "अटाकामा मरुस्थल की विशेषता क्या है?",
-    options_en: ["It is the coldest desert in the world.", "It has reserves of Nitrogen.", "It is the driest place in the world.", "It is located on the eastern coast of the Pacific Ocean."],
-    options_hi: ["यह विश्व का सबसे ठंडा मरुस्थल है।", "इसमें नाइट्रोजन के भंडार हैं।", "यह विश्व का सबसे शुष्कतम (driest) स्थान है।", "यह प्रशांत महासागर के पूर्वी तट पर स्थित है।"],
-    correct_option_index: 2,
-    explanation_en: "The Atacama Desert, located in northern Chile, is the driest desert in the world.",
-    explanation_hi: "उत्तरी चिली में स्थित अटाकामा मरुस्थल विश्व का सबसे शुष्कतम मरुस्थल है।",
+    question_en: "Who has given the theory of contamination in socio-cultural change?",
+    question_hi: "सामाजिक-सांस्कृतिक परिवर्तन में दूषितकरण का सिद्धान्त किसने दिया है?",
+    options_en: [
+      "ogburn",
+      "सोरोकिन",
+      "veblen",
+      "Davis"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "सोरोकिन",
+      "वेब्लेन",
+      "डेविस"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Pitirim Sorokin's theory of cultural dynamics includes the idea of 'immanent change' or 'principle of limits,' where cultures exhaust their potential in one direction (e.g., sensate) and then shift to another, which can be interpreted as a form of 'दूषितकरण' (corruption/exhaustion) of a particular cultural phase.",
+    explanation_hi: "Pitirim Sorokin's theory of cultural dynamics includes the idea of 'immanent change' or 'principle of limits,' where cultures exhaust their potential in one direction (e.g., sensate) and then shift to another, which can be interpreted as a form of 'दूषितकरण' (corruption/exhaustion) of a particular cultural phase."
   },
   {
-    question_en: "Where is Aconcagua, the highest peak of the Andes Mountains range, located?",
-    question_hi: "एंडीज पर्वत शृंखला (Andes Mountains) की सबसे ऊँची चोटी अकांकागुआ (Aconcagua) कहाँ स्थित है?",
-    options_en: ["Peru", "Chile", "Argentina", "Colombia"],
-    options_hi: ["पेरू", "चिली", "अर्जेंटीना (Argentina)", "कोलंबिया"],
-    correct_option_index: 2,
-    explanation_en: "Aconcagua (6992 m) is located in Argentina.",
-    explanation_hi: "अकांकागुआ (6992 मी.) अर्जेंटीना में स्थित है।",
-  },
-  {
-    question_en: "Which is the highest navigable lake in the world?",
-    question_hi: "विश्व की सबसे ऊँची नौगम्य झील (Highest navigable lake in the world) कौन सी है?",
-    options_en: ["Lake Maracaibo", "Lake Poopó", "Lake Nicaragua", "Lake Titicaca"],
-    options_hi: ["मराकाइबो झील", "पोपो झील", "निकारागुआ झील", "टिटिकाका झील (Lake Titicaca)"],
+    question_en: "What is the theory of Tyenby of Social Change?",
+    question_hi: "सामाजिक परिवर्तन का टॉयनबी का सिद्धान्त क्या है?",
+    options_en: [
+      "cultural",
+      "technological determination",
+      "economic determinist",
+      "The theory of challenges"
+    ],
+    options_hi: [
+      "सांस्कृतिक विलम्बना",
+      "प्रौद्योगिक निर्धारणवादी",
+      "आर्थिक निर्धारणवादी",
+      "चुनौती प्रत्युत्तर का सिद्धान्त"
+    ],
     correct_option_index: 3,
-    explanation_en: "Lake Titicaca (between Bolivia and Peru) is the highest navigable lake in the world.",
-    explanation_hi: "टिटिकाका झील (बोलीविया और पेरू के बीच) विश्व की सबसे ऊँची नौगम्य झील है।",
+    explanation_en: "Arnold J. Toynbe's theory of week of weekly Change and Fall of Civilization is knowing the 'Challenge and Response Theory' (Theory of Chanauti Pratyutter).",
+    explanation_hi: "Arnold J. Toynbee's theory of social change and the rise and fall of civilizations is known as the 'Challenge and Response Theory' (चुनौती प्रत्युत्तर का सिद्धान्त)."
   },
   {
-    question_en: "Which is the largest river in the world by discharge capacity (volume)?",
-    question_hi: "अपवाह क्षमता की दृष्टि से विश्व की सबसे बड़ी नदी (Largest river by volume) कौन सी है?",
-    options_en: ["Nile River", "Mississippi River", "Amazon River", "Yangtse River"],
-    options_hi: ["नील नदी", "मिसिसिपी नदी", "अमेज़न नदी (Amazon River)", "यांग्त्सीक्यांग नदी"],
+    question_en: "In the context of the theory of social change, Sorokin has classified culture as follows – 1. Conscious, 2. Emotional, 3. Ideal, 4. Ideational.",
+    question_hi: "सोरोकिन ने सामाजिक परिवर्तन के सिद्धान्त के सन्दर्भ में संस्कृति को इस प्रकार वर्गीकृत किया है- 1. चेतनात्मक, 2. भावनात्मक, 3. आदर्शात्मक, 4. विचारात्मक",
+    options_en: [
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3",
+      "1, 3 and 4"
+    ],
+    options_hi: [
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3",
+      "1, 3 और 4"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Amazon River is the largest river in the world by discharge capacity.",
-    explanation_hi: "अमेज़न नदी अपवाह क्षमता की दृष्टि से विश्व की सबसे बड़ी नदी है।",
+    explanation_en: "Pitirim Sorokin classified cultures into three main types: sensate, ideational, and idealistic.",
+    explanation_hi: "Pitirim Sorokin classified cultures into three main types: sensate (चेतनात्मक), ideational (भावात्मक), and idealistic (आदर्शात्मक)."
   },
   {
-    question_en: "Which continent is also called the 'Country of thousands lakes'?",
-    question_hi: "किस महाद्वीप को 'हजारों झीलों का देश' (Country of thousands lakes) भी कहा जाता है?",
-    options_en: ["North America", "Asia", "Europe", "Australia"],
-    options_hi: ["उत्तरी अमेरिका", "एशिया", "यूरोप", "ऑस्ट्रेलिया"],
+    question_en: "Who gave the concept of cultural delay?",
+    question_hi: "सांस्कृतिक विलम्बना की अवधारणा किसने दी है?",
+    options_en: [
+      "W. F. ogburn",
+      "nimcoff",
+      "M.N. Srinivas",
+      "moore"
+    ],
+    options_hi: [
+      "डब्ल्यू. एफ. ऑगबर्न",
+      "निम्कॉफ",
+      "एम. एन. श्रीनिवास",
+      "मूर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "The concept of cultural lag was introduced by William F. Ogburn.",
+    explanation_hi: "The concept of cultural lag (सांस्कृतिक विलम्बना) was introduced by William F. Ogburn."
+  },
+  {
+    question_en: "Who among the following is not a supporter of the theory of evolution?",
+    question_hi: "निम्न में कौन उद्विकास सिद्धान्त का समर्थक नहीं है?",
+    options_en: [
+      "morgan",
+      "toyler",
+      "Hobdon",
+      "steward"
+    ],
+    options_hi: [
+      "मॉर्गन",
+      "टॉयलर",
+      "हॉब्डन",
+      "स्टीवर्ड"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Lewis Henry Morgan and E.B. Tylor are classical unilinear evolutionists. Julian Steward, however, is known for his theory of multilinear evolution and cultural ecology, which moved away from the unilinear, universal stages of classical evolutionism.",
+    explanation_hi: "Lewis Henry Morgan and E.B. Tylor are classical unilinear evolutionists. Julian Steward, however, is known for his theory of multilinear evolution and cultural ecology, which moved away from the unilinear, universal stages of classical evolutionism."
+  },
+  {
+    question_en: "The limit theory of social change is-",
+    question_hi: "सामाजिक परिवर्तन का सीमा सिद्धान्त है-",
+    options_en: [
+      "immutable",
+      "cyclical",
+      "ups and downs",
+      "none of these"
+    ],
+    options_hi: [
+      "अपरिवर्तनशील",
+      "चक्रीय",
+      "उतार-चढ़ाव",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "The 'principle of limits' or 'सीमा सिद्धान्त' in social change, particularly associated with Pitirim Sorokin, suggests that societies and cultures cannot endlessly develop in one direction and eventually reach a limit, leading to a cyclical or oscillating pattern of change.",
+    explanation_hi: "The 'principle of limits' or 'सीमा सिद्धान्त' in social change, particularly associated with Pitirim Sorokin, suggests that societies and cultures cannot endlessly develop in one direction and eventually reach a limit, leading to a cyclical or oscillating pattern of change."
+  },
+  {
+    question_en: "The cyclical theory of social change is related to-",
+    question_hi: "सामाजिक परिवर्तन के चक्रीय सिद्धान्त से सम्बन्धित है-",
+    options_en: [
+      "Section",
+      "Veblen and Guilin",
+      "spencer and durkheim",
+      "spencer and durkheim"
+    ],
+    options_hi: [
+      "आत्मसात दुईव",
+      "वेब्लेन तथा गिलिन",
+      "स्पेन्सर तथा दुर्खीम",
+      "स्पेन्सर तथा दुर्खीम"
+    ],
+    correct_option_index: 0,
+    explanation_en: "The option 'आत्मसात दुईव' (assimilation duality) is not a standard term or theory directly associated with cyclical theories of social change by prominent sociologists. (Acknowledging the unusual nature of this option).",
+    explanation_hi: "The option 'आत्मसात दुईव' (assimilation duality) is not a standard term or theory directly associated with cyclical theories of social change by prominent sociologists. (Acknowledging the unusual nature of this option)."
+  },
+  {
+    question_en: "Which scholar has the credit for giving sociological form to the theory of social selection?",
+    question_hi: "सामाजिक प्रवरण के सिद्धान्त को समाजशास्त्रीय रूप देने का श्रेय किस विद्वान को है?",
+    options_en: [
+      "सोरोकिन",
+      "horbut spencer",
+      "Durkheim",
+      "Comt"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "हॉर्बट स्पेन्सर",
+      "दुर्खीम",
+      "कॉम्ट"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Herbert Spencer is credited with applying the principles of evolution and 'social selection' (a broader concept than natural selection) to sociology, developing a sociological theory of social evolution.",
+    explanation_hi: "Herbert Spencer is credited with applying the principles of evolution and 'social selection' (a broader concept than natural selection) to sociology, developing a sociological theory of social evolution."
+  },
+  {
+    question_en: "When man creates some social conditions naturally and with the same purpose which have a beautiful and sweet effect, then it is called-",
+    question_hi: "जब मनुष्य प्राकृतिक और उसी उद्देश्य से कुछ ऐसी सामाजिक परिस्थितियों को उत्पन्न करे जिससे सुन्दर और मधुर प्रभावित हों, तो उसे कहते हैं-",
+    options_en: [
+      "direct social selection",
+      "indirect social selection",
+      "social evolution",
+      "social selection"
+    ],
+    options_hi: [
+      "प्रत्यक्ष सामाजिक प्रवरण",
+      "अप्रत्यक्ष सामाजिक प्रवरण",
+      "सामाजिक उद्विकास",
+      "सामाजिक प्रवरण"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This describes a process where human actions, with specific intentions, indirectly lead to social conditions that are positively influenced or enhanced. This aligns with the concept of indirect social selection or influence.",
+    explanation_hi: "This describes a process where human actions, with specific intentions, indirectly lead to social conditions that are positively influenced or enhanced. This aligns with the concept of indirect social selection or influence."
+  },
+  {
+    question_en: "Which of the following is related to population mobility?",
+    question_hi: "जनसंख्या की गतिशीलता से निम्न में किसका सम्बन्ध होता है?",
+    options_en: [
+      "country residence",
+      "Emigration",
+      "relocation",
+      "(a) and (b) both"
+    ],
+    options_hi: [
+      "देशावसन",
+      "परदेशागमन",
+      "स्थान परिवर्तन",
+      "(a) एवं (b) दोनों"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Population mobility is related to both emigration (Deshavasana - leaving one's country) and immigration (Pardeshagamana - coming to another country), as well as general changes in location. Therefore, both (a) and (b) are aspects of population mobility.",
+    explanation_hi: "Population mobility (जनसंख्या की गतिशीलता) is related to both emigration (देशावसन - leaving one's country) and immigration (परदेशागमन - coming to another country), as well as general changes in location (स्थान परिवर्तन). Therefore, both (a) and (b) are aspects of population mobility."
+  },
+  {
+    question_en: "Population means-",
+    question_hi: "जनसंख्या का तात्पर्य है-",
+    options_en: [
+      "make up of population",
+      "having a rich population",
+      "ratio of land and man",
+      "none of these"
+    ],
+    options_hi: [
+      "जनसंख्या का बना होना",
+      "धनी जनसंख्या होना",
+      "भूमि एवं मनुष्य का अनुपात",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "Finland (which is in Europe) is called the 'Land of a Thousand Lakes'.",
-    explanation_hi: "फिनलैंड (जो यूरोप में है) को हजारों झीलों का देश कहा जाता है।",
+    explanation_en: "While population refers to the number of people, in demographic and sociological contexts, it often involves the relationship or ratio between the number of people and the available land or resources (भूमि एवं मनुष्य का अनुपात), especially when discussing concepts like population density or carrying capacity.",
+    explanation_hi: "While population refers to the number of people, in demographic and sociological contexts, it often involves the relationship or ratio between the number of people and the available land or resources (भूमि एवं मनुष्य का अनुपात), especially when discussing concepts like population density or carrying capacity."
   },
   {
-    question_en: "Which is the longest river in the continent of Europe?",
-    question_hi: "यूरोप महाद्वीप की सबसे लंबी नदी कौन सी है?",
-    options_en: ["Danube River", "Rhine River", "Ural River", "Volga River"],
-    options_hi: ["डेन्यूब नदी", "राइन नदी", "यूराल नदी", "वोल्गा नदी (Volga River)"],
-    correct_option_index: 3,
-    explanation_en: "The Volga River is the longest river in Europe.",
-    explanation_hi: "वोल्गा नदी यूरोप की सबसे लंबी नदी है।",
+    question_en: "Who is the father of demography?",
+    question_hi: "जनांकिकी का जनक कौन है?",
+    options_en: [
+      "T.R. malthus",
+      "Max Weber",
+      "Durkheim",
+      "स्पेन्सर"
+    ],
+    options_hi: [
+      "टी. आर. माल्थस",
+      "मैक्स वेबर",
+      "दुर्खीम",
+      "स्पेन्सर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Thomas Robert Malthus is widely considered the father of demography (जनांकिकी) due to his influential work on population growth and its implications.",
+    explanation_hi: "Thomas Robert Malthus is widely considered the father of demography (जनांकिकी) due to his influential work on population growth and its implications."
   },
   {
-    question_en: "How many countries does the Danube River pass through?",
-    question_hi: "डेन्यूब नदी (Danube River) कितने देशों से होकर गुजरती है?",
-    options_en: ["5", "7", "10", "12"],
-    options_hi: ["5", "7", "10", "12"],
+    question_en: "Who did the definitive analysis of the economic impact of population?",
+    question_hi: "जनसंख्या के आर्थिक प्रभाव का निश्चित विश्लेषण किसने किया?",
+    options_en: [
+      "Malthus",
+      "Davis has",
+      "Mills has",
+      "Plata has"
+    ],
+    options_hi: [
+      "माल्थस ने",
+      "डेविस ने",
+      "मिल्स ने",
+      "प्लेटा ने"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Thomas Robert Malthus is renowned for his systematic analysis of the economic effects of population growth, particularly his theory that population tends to grow geometrically while food supply grows arithmetically.",
+    explanation_hi: "Thomas Robert Malthus is renowned for his systematic analysis of the economic effects of population growth, particularly his theory that population tends to grow geometrically while food supply grows arithmetically."
+  },
+  {
+    question_en: "One result of increase in density and size of population is-",
+    question_hi: "जनसंख्या के घनत्व एवं आकार में वृद्धि का एक परिणाम है-",
+    options_en: [
+      "development of personal wealth",
+      "division of labor",
+      "improvement in standard of living",
+      "economic unity"
+    ],
+    options_hi: [
+      "व्यक्तिगत सम्पत्ति का विकास",
+      "श्रम का विभाजन",
+      "जीवन स्तर में सुधार",
+      "आर्थिक एकता"
+    ],
+    correct_option_index: 0,
+    explanation_en: "An increase in population density and size can lead to various outcomes. While it can also lead to division of labor, the development of private property (व्यक्तिगत सम्पत्ति का विकास) is often associated with increasing population pressure on resources and the need for clearer ownership.",
+    explanation_hi: "An increase in population density and size can lead to various outcomes. While it can also lead to division of labor, the development of private property (व्यक्तिगत सम्पत्ति का विकास) is often associated with increasing population pressure on resources and the need for clearer ownership."
+  },
+  {
+    question_en: "Veblen has divided human characteristics into two parts, they are as follows-",
+    question_hi: "वेब्लेन ने मानवीय विशेषताओं को दो भागों में विभाजित किया है निम्नलिखित में से वे हैं-",
+    options_en: [
+      "static features",
+      "immutable characteristics",
+      "(both a and B",
+      "none of these"
+    ],
+    options_hi: [
+      "स्थिर विशेषताएँ",
+      "अपरिवर्तनशील विशेषताएँ",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Danube River passes through 10 countries.",
-    explanation_hi: "डेन्यूब नदी 10 देशों से होकर गुजरती है।",
+    explanation_en: "Thorstein Veblen's analysis of human nature and institutions often distinguished between relatively stable or fixed characteristics (स्थिर विशेषताएँ) and those that are unchangeable or resistant to change (अपरिवर्तनशील विशेषताएँ), though his work also acknowledged the dynamic interplay.",
+    explanation_hi: "Thorstein Veblen's analysis of human nature and institutions often distinguished between relatively stable or fixed characteristics (स्थिर विशेषताएँ) and those that are unchangeable or resistant to change (अपरिवर्तनशील विशेषताएँ), though his work also acknowledged the dynamic interplay."
   },
   {
-    question_en: "The Rhine and Volga rivers drain their water into which sea/lake?",
-    question_hi: "राइन और वोल्गा नदियाँ अपना जल किस सागर/झील में गिराती हैं?",
-    options_en: ["Black Sea", "Mediterranean Sea", "Baltic Sea", "Caspian Sea"],
-    options_hi: ["काला सागर", "भूमध्य सागर", "बाल्टिक सागर", "कैस्पियन सागर"],
-    correct_option_index: 3,
-    explanation_en: "The Volga and Ural rivers drain their water into the Caspian Sea. The Rhine flows into the North Sea, but the question lists Caspian as the common option for Volga.",
-    explanation_hi: "वोल्गा और यूराल नदियाँ अपना जल कैस्पियन सागर में गिराती हैं।",
-  },
-  {
-    question_en: "Which is the smallest continent in the world by area?",
-    question_hi: "क्षेत्रफल के अनुसार विश्व का सबसे छोटा महाद्वीप कौन सा है?",
-    options_en: ["Europe", "Antarctica", "Australia", "South America"],
-    options_hi: ["यूरोप", "अंटार्कटिका", "ऑस्ट्रेलिया", "दक्षिण अमेरिका"],
+    question_en: "Which of the following factors have Malthus and Sadler considered responsible for social change? 1. Technology, 2. Economic Factors, 3. Demographic Factors, 4. Culture",
+    question_hi: "माल्थस एवं सैडलर ने निम्नलिखित में से किस कारक को सामाजिक परिवर्तन के लिए उत्तरदायी माना है? 1. प्रौद्योगिकी, 2. आर्थिक कारक, 3. जनसंख्यात्मक कारक, 4. संस्कृति",
+    options_en: [
+      "1 और 2",
+      "2 और 3",
+      "3 और 4",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "1 और 2",
+      "2 और 3",
+      "3 और 4",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 2,
-    explanation_en: "Australia is the smallest continent in the world by area.",
-    explanation_hi: "ऑस्ट्रेलिया क्षेत्रफल में विश्व का सबसे छोटा महाद्वीप है।",
+    explanation_en: "Thomas Malthus and Michael Sadler are primarily known for their demographic theories, emphasizing population factors (3) as drivers of social change. While their work also touches upon economic aspects, the inclusion of culture (4) as a primary factor for them is less conventional. However, according to the provided answer, both population and culture are considered.",
+    explanation_hi: "Thomas Malthus and Michael Sadler are primarily known for their demographic theories, emphasizing population factors (3) as drivers of social change. While their work also touches upon economic aspects, the inclusion of culture (4) as a primary factor for them is less conventional. However, according to the provided answer, both population and culture are considered."
   },
   {
-    question_en: "Which mountain range is located in the eastern part of Australia?",
-    question_hi: "ऑस्ट्रेलिया के पूर्वी भाग में स्थित पर्वत श्रृंखला कौन सी है?",
-    options_en: ["Andes Mountains", "Rocky Mountains", "Drakensberg Mountains", "Great Dividing Range"],
-    options_hi: ["एंडीज पर्वत", "रॉकी पर्वत", "ड्रैकन्सबर्ग पर्वत", "ग्रेट डिवाइडिंग रेंज (Great Dividing Range)"],
+    question_en: "भारत में ग्रामीण तथा नगरीय समाजों के बीच प्रमुख भेदक कारक है-",
+    question_hi: "भारत में ग्रामीण तथा नगरीय समाजों के बीच प्रमुख भेदक कारक है-",
+    options_en: [
+      "भाषायी विभिन्नता",
+      "geographical variation",
+      "religious diversity",
+      "All the above"
+    ],
+    options_hi: [
+      "भाषायी विभिन्नता",
+      "भौगोलिक विभिन्नता",
+      "धार्मिक विभिन्नता",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Great Dividing Range is located in the eastern part of Australia.",
-    explanation_hi: "ग्रेट डिवाइडिंग रेंज ऑस्ट्रेलिया के पूर्वी भाग में स्थित है।",
+    explanation_en: "The differences between rural and urban societies in India are multifaceted, encompassing linguistic, geographical, and religious variations, among many other socio-economic and cultural distinctions. Therefore, all the listed factors contribute to the differentiation.",
+    explanation_hi: "The differences between rural and urban societies in India are multifaceted, encompassing linguistic, geographical, and religious variations, among many other socio-economic and cultural distinctions. Therefore, all the listed factors contribute to the differentiation."
   },
   {
-    question_en: "Where does the 'Tropic of Capricorn' pass through in Australia?",
-    question_hi: "ऑस्ट्रेलिया में 'मकर रेखा' (Tropic of Capricorn) कहाँ से होकर गुजरती है?",
-    options_en: ["Northern part", "Western part", "Right through the middle", "Southern part"],
-    options_hi: ["उत्तरी भाग से", "पश्चिमी भाग से", "बीचों बीच से", "दक्षिणी भाग से"],
+    question_en: "Indicate the following factor which does not affect the density of population:",
+    question_hi: "निम्न कारक को इंगित कीजिए जो जनसंख्या के घनत्व को प्रभावित नहीं करता-",
+    options_en: [
+      "जन्म-मृत्यु",
+      "जलवायु",
+      "भूमि की उर्वरता",
+      "भूमि की बनावट"
+    ],
+    options_hi: [
+      "जन्म-मृत्यु",
+      "जलवायु",
+      "भूमि की उर्वरता",
+      "भूमि की बनावट"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Birth and death rates directly influence the total population size, which is a key component of population density. However, if the question implies factors *other than* direct demographic processes, then climate, land fertility, and land structure are environmental factors that influence where and how densely people can live. Given the answer (a), it might be interpreted that birth-death rates are a *result* of population dynamics rather than an external factor influencing density, or that the question is looking for a factor that doesn't *directly* shape the *potential* for density in the same way geographical factors do.",
+    explanation_hi: "Birth and death rates directly influence the total population size, which is a key component of population density. However, if the question implies factors *other than* direct demographic processes, then climate, land fertility, and land structure are environmental factors that influence where and how densely people can live. Given the answer (a), it might be interpreted that birth-death rates are a *result* of population dynamics rather than an external factor influencing density, or that the question is looking for a factor that doesn't *directly* shape the *potential* for density in the same way geographical factors do."
+  },
+  {
+    question_en: "Climate and land are closely related to human relations. Who among the following has this opinion?",
+    question_hi: "जलवायु और भूमि का मानवीय सम्बन्धों से घनिष्ठ सम्बन्ध है। यह मत निम्नलिखित में से किसका है?",
+    options_en: [
+      "Vekal",
+      "julian huxley",
+      "सोरोकिन",
+      "david"
+    ],
+    options_hi: [
+      "वेकल",
+      "जूलियन हक्सले",
+      "सोरोकिन",
+      "डेविड"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Julian Huxley, a biologist and humanist, often discussed the intricate relationship between environmental factors like climate and land, and human societies and their development.",
+    explanation_hi: "Julian Huxley, a biologist and humanist, often discussed the intricate relationship between environmental factors like climate and land, and human societies and their development."
+  },
+  {
+    question_en: "Who among the following is of the opinion that when there are superior people of racial and talented intellectual class in a society, then that society progresses?",
+    question_hi: "निम्नलिखित में से किसका मत है कि जब किसी समाज में प्रजातीय एवं प्रतिभाशाली बुद्धिशाली वर्ग का श्रेष्ठ लोग होते हैं तो वह समाज प्रगति करता है?",
+    options_en: [
+      "Pareto",
+      "sorokin",
+      "Gobin",
+      "स्पेन्सर"
+    ],
+    options_hi: [
+      "पेरेटो",
+      "सोरोkin",
+      "गॉबिन",
+      "स्पेन्सर"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Tropic of Capricorn passes right through the middle of Australia.",
-    explanation_hi: "मकर रेखा ऑस्ट्रेलिया के बीचों बीच से होकर गुजरती है।",
+    explanation_en: "Arthur de Gobineau, known for his work on racial theory, argued that the presence of a superior racial and intellectually gifted class leads to societal progress.",
+    explanation_hi: "Arthur de Gobineau, known for his work on racial theory, argued that the presence of a superior racial and intellectually gifted class leads to societal progress."
   },
   {
-    question_en: "New Zealand is called the 'Britain of the South'. Which is the longest river in New Zealand?",
-    question_hi: "न्यूजीलैंड को 'दक्षिण का ब्रिटेन' (Britain of the South) कहा जाता है। न्यूजीलैंड की सबसे लंबी नदी कौन सी है?",
-    options_en: ["Murray River", "Victoria River", "Waikato River", "Darling River"],
-    options_hi: ["मरे नदी", "विक्टोरिया नदी", "वाइकाटो नदी (Waikato River)", "डार्लिंग नदी"],
+    question_en: "Which sociologist has defined and mentioned that \"Population means increase in the size and density of population\"?",
+    question_hi: "किस समाजशास्त्री ने परिभाषित करते हुए उल्लेख किया है कि \"जनसंख्या का तात्पर्य जनसंख्या के आकार तथा घनत्व में वृद्धि से है\"?",
+    options_en: [
+      "सोरोकिन",
+      "julian huxley",
+      "Max Weber",
+      "karl marx"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "जूलियन हक्सले",
+      "मैक्स वेबर",
+      "कार्ल मार्क्स"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Pitirim Sorokin, in his sociological analyses, often discussed population dynamics in terms of changes in size and density.",
+    explanation_hi: "Pitirim Sorokin, in his sociological analyses, often discussed population dynamics in terms of changes in size and density."
+  },
+  {
+    question_en: "Which of the following factors affect the size of population - 1. Birth and death rates, 2. Housing and condition",
+    question_hi: "जनसंख्या के आकार को निम्नलिखित में से कौन-से कारक प्रभावित करते हैं - 1. जन्म तथा मृत्यु दर, 2. आवास तथा अवस्था",
+    options_en: [
+      "(both a and B",
+      "none of these",
+      "(a)",
+      "(b)"
+    ],
+    options_hi: [
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं",
+      "(a)",
+      "(b)"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Population size is directly influenced by birth and death rates. Additionally, factors like housing conditions and overall societal stage or living conditions can indirectly impact birth rates, death rates, and migration patterns, thereby affecting population size.",
+    explanation_hi: "Population size is directly influenced by birth and death rates. Additionally, factors like housing conditions and overall societal stage or living conditions can indirectly impact birth rates, death rates, and migration patterns, thereby affecting population size."
+  },
+  {
+    question_en: "Which of the following reasons are responsible for affecting disorder in social structure, social organization and social system? 1. Form of family, 2. Marriage, 3. Unemployment, 4. Family planning",
+    question_hi: "सामाजिक संरचना, सामाजिक संगठन एवं सामाजिक व्यवस्था में अव्यवस्था को प्रभावित करने में निम्नलिखित में से कौन से कारण उत्तरदायी हैं? 1. परिवार के स्वरूप, 2. विवाह, 3. बेकारी, 4. परिवार-नियोजन",
+    options_en: [
+      "1 और 2",
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4"
+    ],
+    options_hi: [
+      "1 और 2",
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Waikato River is the longest river in New Zealand.",
-    explanation_hi: "न्यूजीलैंड की सबसे लंबी नदी वाइकाटो नदी है।",
+    explanation_en: "All the listed factors can contribute to disorganization or instability in social structure, organization, and system. Changes in family forms, marriage patterns, unemployment, and family planning practices can all have significant impacts on societal order and stability.",
+    explanation_hi: "All the listed factors can contribute to disorganization or instability in social structure, organization, and system. Changes in family forms, marriage patterns, unemployment, and family planning practices can all have significant impacts on societal order and stability."
   },
   {
-    question_en: "What is the highest peak of the continent of Antarctica?",
-    question_hi: "अंटार्कटिका महाद्वीप का उच्चतम शिखर (Highest Peak) कौन सा है?",
-    options_en: ["Mount Elbrus", "Mount Kilimanjaro", "Mount Erebus", "Vinson Massif"],
-    options_hi: ["माउंट एलब्रुस", "माउंट किलिमंजारो", "माउंट इरेबस", "विन्सन मैसिफ (Vinson Massif)"],
-    correct_option_index: 3,
-    explanation_en: "The highest peak of Antarctica is Vinson Massif.",
-    explanation_hi: "अंटार्कटिका का उच्चतम शिखर विन्सन मैसिफ है।",
-  },
-  {
-    question_en: "The continent of Antarctica is known as what?",
-    question_hi: "अंटार्कटिका महाद्वीप को किस रूप में जाना जाता है?",
-    options_en: ["Tropical Continent", "Green Continent", "White Continent", "Dynamic Continent"],
-    options_hi: ["उष्ण कटिबंधीय महाद्वीप", "हरा महाद्वीप", "श्वेत महाद्वीप (White Continent)", "गतिशील महाद्वीप"],
+    question_en: "\"The extreme mobility of modern society also leads to social change in the direction of social disintegration.\" Which sociologist does this statement belong to?",
+    question_hi: "\"आधुनिक समाज की अत्यधिक गतिशीलता भी सामाजिक विघटन की दिशा में सामाजिक परिवर्तन करती है।\" यह कथन किस समाजशास्त्री का है?",
+    options_en: [
+      "sorokin",
+      "parsons",
+      "cum and cum",
+      "david"
+    ],
+    options_hi: [
+      "सोरोkin",
+      "पारसन्स",
+      "क्यूम एण्ड क्यूम",
+      "डेविड"
+    ],
     correct_option_index: 2,
-    explanation_en: "Antarctica is also called the 'Continent dedicated to Science', 'White Continent', and 'Dynamic Continent'.",
-    explanation_hi: "अंटार्कटिका को 'विग्यान के लिए समर्पित महाद्वीप', 'श्वेत महाद्वीप', और 'गतिशील महाद्वीप' भी कहते हैं।",
+    explanation_en: "This statement, linking high mobility in modern society to social disorganization, is attributed to the sociologists Quinn and Quinn.",
+    explanation_hi: "This statement, linking high mobility in modern society to social disorganization, is attributed to the sociologists Quinn and Quinn."
   },
   {
-    question_en: "Where are India's three research centers 'Dakshin Gangotri', 'Maitri', and 'Bharati' located?",
-    question_hi: "भारत के तीन अनुसंधान केंद्र 'दक्षिण गंगोत्री', 'मैत्री' और 'भारती' कहाँ स्थित हैं?",
-    options_en: ["Himalayas", "Indian Ocean", "Antarctica", "Arctic"],
-    options_hi: ["हिमालय", "हिंद महासागर", "अंटार्कटिका", "आर्कटिक"],
+    question_en: "Who has said that, “Transmigration not only affects the physical structure and health of the population but also affects the social structure of the society, processes and personality of the individuals.”",
+    question_hi: "किसने बताया है कि, \"स्थानान्तरण स्वरूप रूप से न केवल जनसंख्या की शारीरिक बनावट और स्वास्थ्य को ही प्रभावित करता है बल्कि समाज के सामाजिक ढाँचे, प्रक्रियाओं और व्यक्तियों के व्यक्तित्व पर भी प्रभाव डालता है।\"",
+    options_en: [
+      "Adam Smith",
+      "lundberg",
+      "palva",
+      "darwin"
+    ],
+    options_hi: [
+      "एडम स्मिथ",
+      "लूण्डबर्ग",
+      "पाल्वा",
+      "डार्विन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "George A. Lundberg, a sociologist, emphasized the broad impact of migration (स्थानान्तरण) on not just demographic aspects but also on social structure, processes, and individual personalities.",
+    explanation_hi: "George A. Lundberg, a sociologist, emphasized the broad impact of migration (स्थानान्तरण) on not just demographic aspects but also on social structure, processes, and individual personalities."
+  },
+  {
+    question_en: "Who has said that \"The age structure to a large extent controls the social functioning of the population?\"",
+    question_hi: "किसने कहा है कि \"अत्यधिक मात्रा में आयु संरचना जनसंख्या के सामाजिक कार्य नियन्त्रित करती है?\"",
+    options_en: [
+      "maciver",
+      "P.S. landis",
+      "emile durkheim",
+      "parsons"
+    ],
+    options_hi: [
+      "मैकाइवर",
+      "पी. एस. लैण्डिस",
+      "इम्माइल दुर्खीम",
+      "पारसन्स"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Paul H. Landis, a rural sociologist, highlighted the significant role of age structure in controlling the social functions and dynamics of a population.",
+    explanation_hi: "Paul H. Landis, a rural sociologist, highlighted the significant role of age structure in controlling the social functions and dynamics of a population."
+  },
+  {
+    question_en: "Who says, “Change in the size of population produces changes in the character, morality, justice and attitudes of individuals?”",
+    question_hi: "किसका कहना है कि, \"जनसंख्या के आकार में होने वाला परिवर्तन व्यक्तियों के चरित्र, नैतिकता, न्यायशीलता और मनोवृत्तियों में परिवर्तन उत्पन्न करता है?\"",
+    options_en: [
+      "craning",
+      "टॉयनबी",
+      "Max Weber",
+      "August Comt"
+    ],
+    options_hi: [
+      "क्रानिग",
+      "टॉयनबी",
+      "मैक्स वेबर",
+      "आगस्त कॉम्ट"
+    ],
     correct_option_index: 2,
-    explanation_en: "These three research centers are established in Antarctica.",
-    explanation_hi: "ये तीनों अनुसंधान केंद्र अंटार्कटिका में स्थापित हैं।",
+    explanation_en: "Max Weber, in his broader sociological analyses, acknowledged that demographic changes, such as shifts in population size, can have profound effects on individual character, morality, justice, and attitudes within a society.",
+    explanation_hi: "Max Weber, in his broader sociological analyses, acknowledged that demographic changes, such as shifts in population size, can have profound effects on individual character, morality, justice, and attitudes within a society."
   },
   {
-    question_en: "Where are the Tropical Grasslands 'Savanna' found?",
-    question_hi: "उष्णकटिबंधीय घास के मैदान (Tropical Grasslands) 'सवाना' कहाँ पाए जाते हैं?",
-    options_en: ["South America", "North America", "Asia", "Africa"],
-    options_hi: ["दक्षिण अमेरिका", "उत्तरी अमेरिका", "एशिया", "अफ्रीका"],
+    question_en: "If there is over population in a society then which of the following are its consequences?",
+    question_hi: "यदि किसी समाज में जनाधिक्य है तो उसके निम्नांकित में से क्या परिणाम होते हैं-",
+    options_en: [
+      "Impact on tradition and customs",
+      "social problems",
+      "Quality of life",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "परम्परा और रीति-रिवाज पर प्रभाव",
+      "सामाजिक समस्याएँ",
+      "जीवन स्तर",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "Savanna grasslands are found in Africa.",
-    explanation_hi: "सवाना घास के मैदान अफ्रीका में पाए जाते हैं।",
+    explanation_en: "Overpopulation (जनाधिक्य) can lead to a wide range of consequences, including impacts on traditions and customs, the emergence of social problems, and effects on the standard of living. Therefore, all the listed outcomes are potential results.",
+    explanation_hi: "Overpopulation (जनाधिक्य) can lead to a wide range of consequences, including impacts on traditions and customs, the emergence of social problems, and effects on the standard of living. Therefore, all the listed outcomes are potential results."
   },
   {
-    question_en: "Where are the Temperate Grasslands 'Prairie' found?",
-    question_hi: "शीतोष्ण कटिबंधीय घास के मैदान (Temperate Grasslands) 'प्रेयरी' कहाँ पाए जाते हैं?",
-    options_en: ["Hungary", "Argentina", "North America", "Australia"],
-    options_hi: ["हंगरी", "अर्जेंटीना", "उत्तरी अमेरिका", "ऑस्ट्रेलिया"],
+    question_en: "Who among the following considered population growth fundamentally responsible for revolution?",
+    question_hi: "निम्नलिखित में से किसने क्रान्ति के लिए जनसंख्या वृद्धि को भी मूलभूत रूप से उत्तरदायी माना है?",
+    options_en: [
+      "karl marx",
+      "roths",
+      "emile durkheim",
+      "merton"
+    ],
+    options_hi: [
+      "कार्ल मार्क्स",
+      "रोथ्स",
+      "इम्माइल दुर्खीम",
+      "मर्टन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Some theorists, including 'रोथ्स' (assuming a specific reference), have considered population growth as a fundamental underlying factor contributing to social unrest and revolutions.",
+    explanation_hi: "Some theorists, including 'रोथ्स' (assuming a specific reference), have considered population growth as a fundamental underlying factor contributing to social unrest and revolutions."
+  },
+  {
+    question_en: "Who presented the theory of population growth for the following changes?",
+    question_hi: "निम्नलिखित परिवर्तन के लिए जनसंख्या वृद्धि का सिद्धान्त किसने प्रस्तुत किया?",
+    options_en: [
+      "malthus",
+      "saddler",
+      "dennis",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "माल्थस",
+      "सैडलर",
+      "डेनिस",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Thomas Malthus is the most famous proponent of population growth theory. Michael Sadler also contributed to population theories. 'डेनिस' (Dennis) might refer to a specific demographer. Given 'उपर्युक्त सभी' (all of the above) is the answer, it implies that all listed individuals contributed to theories related to population growth and change.",
+    explanation_hi: "Thomas Malthus is the most famous proponent of population growth theory. Michael Sadler also contributed to population theories. 'डेनिस' (Dennis) might refer to a specific demographer. Given 'उपर्युक्त सभी' (all of the above) is the answer, it implies that all listed individuals contributed to theories related to population growth and change."
+  },
+  {
+    question_en: "\"Technology includes those methods, knowledge and skills by which humans control and use natural and biological phenomena.\" This definition is given-",
+    question_hi: "\"प्रौद्योगिकी के अन्तर्गत वे विधियाँ, ज्ञान एवं कुशलताएँ सम्मिलित हैं, जिनके द्वारा मनुष्य प्राकृतिक और जैविकीय घटनाओं का नियन्त्रण और उपयोग करते हैं।\" यह परिभाषा दी है-",
+    options_en: [
+      "by clark wisler",
+      "P.S. Saron has",
+      "Lapierre",
+      "turner has"
+    ],
+    options_hi: [
+      "क्लार्क विस्लर ने",
+      "पी. एस. सरोन ने",
+      "लेपियर ने",
+      "टर्नर ने"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This definition of technology, encompassing methods, knowledge, and skills used to control and utilize natural and biological phenomena, is attributed to P.S. Saran. (Note: This definition was attributed to Talcott Parsons in Q231, indicating a potential inconsistency in the source material).",
+    explanation_hi: "This definition of technology, encompassing methods, knowledge, and skills used to control and utilize natural and biological phenomena, is attributed to P.S. Saran. (Note: This definition was attributed to Talcott Parsons in Q231, indicating a potential inconsistency in the source material)."
+  },
+  {
+    question_en: "Division of labor and specialization have given rise to-",
+    question_hi: "श्रम-विभाजन एवं विशेषीकरण को जन्म दिया है-",
+    options_en: [
+      "excess of technology",
+      "of mutual contact",
+      "(both a and B",
+      "none of these"
+    ],
+    options_hi: [
+      "प्रौद्योगिकी की अधिकता को",
+      "पारस्परिक सम्पर्क को",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "Prairie grasslands are found in North America.",
-    explanation_hi: "प्रेयरी घास के मैदान उत्तरी अमेरिका में पाए जाते हैं।",
+    explanation_en: "Both the abundance of technology and increased social interaction/contact contribute to the development of division of labor and specialization in societies.",
+    explanation_hi: "Both the abundance of technology (प्रौद्योगिकी की अधिकता) and increased social interaction/contact (पारस्परिक सम्पर्क) contribute to the development of division of labor and specialization in societies."
   },
   {
-    question_en: "What are the temperate grasslands found in Argentina called?",
-    question_hi: "अर्जेंटीना में पाए जाने वाले शीतोष्ण घास के मैदानों को क्या कहा जाता है?",
-    options_en: ["Veld", "Downs", "Steppes", "Pampas"],
-    options_hi: ["वेल्ड", "डाउंस", "स्टेपीज", "पंपास (Pampas)"],
+    question_en: "In which year was the Information Technology Act passed in India?",
+    question_hi: "भारत में सूचना प्रौद्योगिकी अधिनियम किस वर्ष पारित हुआ?",
+    options_en: [
+      "2000",
+      "in 2002",
+      "in 2005",
+      "in 2006"
+    ],
+    options_hi: [
+      "2000",
+      "2002 में",
+      "2005 में",
+      "2006 में"
+    ],
+    correct_option_index: 0,
+    explanation_en: "The Information Technology Act in India was passed in the year 2000.",
+    explanation_hi: "The Information Technology Act in India was passed in the year 2000."
+  },
+  {
+    question_en: "Which of the following days is celebrated as Technology Day in India?",
+    question_hi: "भारत में निम्नलिखित में से किस दिवस को प्रौद्योगिक दिवस के रूप में मनाया जाता है?",
+    options_en: [
+      "10 February",
+      "March 15th",
+      "21st April",
+      "11th May"
+    ],
+    options_hi: [
+      "10 फरवरी",
+      "15 मार्च",
+      "21 अप्रैल",
+      "11 मई"
+    ],
     correct_option_index: 3,
-    explanation_en: "These grasslands are called Pampas in Argentina and Uruguay.",
-    explanation_hi: "अर्जेंटीना और उरुग्वे में इन मैदानों को पंपास कहा जाता है।",
+    explanation_en: "National Technology Day in India is celebrated on May 11th.",
+    explanation_hi: "National Technology Day in India is celebrated on May 11th."
   },
   {
-    question_en: "What are the temperate grasslands in Australia called?",
-    question_hi: "ऑस्ट्रेलिया में शीतोष्ण घास के मैदानों को क्या कहा जाता है?",
-    options_en: ["Prairie", "Veld", "Downs", "Pampas"],
-    options_hi: ["प्रेयरी", "वेल्ड", "डाउंस (Downs)", "पंपास"],
+    question_en: "Who is the author of 'The Theory of Laser Class'?",
+    question_hi: "'दि थ्योरी ऑफ लेज़र क्लास' के लेखक कौन हैं?",
+    options_en: [
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन",
+      "Max Weber"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन",
+      "मैक्स वेबर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'The Theory of the Leisure Class' is a seminal work by Thorstein Veblen.",
+    explanation_hi: "'The Theory of the Leisure Class' is a seminal work by Thorstein Veblen."
+  },
+  {
+    question_en: "Who is the author of 'A Handbook of Sociology'?",
+    question_hi: "'ए हैण्डबुक ऑफ सोशियोलॉजी' के लेखक कौन हैं?",
+    options_en: [
+      "Ogburn and Nimcoff",
+      "Phillips",
+      "Kuli",
+      "Durkheim"
+    ],
+    options_hi: [
+      "ऑगबर्न व निम्कॉफ",
+      "फिलिप्स",
+      "कूले",
+      "दुर्खीम"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'A Handbook of Sociology' was written by William F. Ogburn and Meyer F. Nimkoff.",
+    explanation_hi: "'A Handbook of Sociology' was written by William F. Ogburn and Meyer F. Nimkoff."
+  },
+  {
+    question_en: "The impact of technology on family life is-",
+    question_hi: "प्रौद्योगिकी के पारिवारिक जीवन पर पड़ने वाला प्रभाव है-",
+    options_en: [
+      "Origin of materialism and individualism",
+      "Disintegration of joint families and rise of nuclear families",
+      "(both a and B",
+      "none of these"
+    ],
+    options_hi: [
+      "भौतिकवाद एवं व्यक्तिवाद की उत्पत्ति",
+      "संयुक्त परिवारों का विघटन एवं एकाकी परिवारों का उदय",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "Temperate grasslands in Australia are called Downs.",
-    explanation_hi: "ऑस्ट्रेलिया में शीतोष्ण घास के मैदानों को डाउंस कहा जाता है।",
+    explanation_en: "Technological advancements have significantly impacted family life, leading to the rise of materialism and individualism, and contributing to the breakdown of joint families and the emergence of nuclear families. Both (a) and (b) are observed effects.",
+    explanation_hi: "Technological advancements have significantly impacted family life, leading to the rise of materialism and individualism, and contributing to the breakdown of joint families and the emergence of nuclear families. Both (a) and (b) are observed effects."
   },
   {
-    question_en: "What is the study of the Universe called?",
-    question_hi: "ब्रह्मांड (Universe) के अध्ययन को क्या कहा जाता है?",
-    options_en: ["Pedology", "Geology", "Entomology", "Cosmology"],
-    options_hi: ["पेडोलॉजी", "जियोलॉजी", "एटमोलॉजी", "कॉस्मोलॉजी (Cosmology)"],
+    question_en: "Due to technology, it is found in modern communities-",
+    question_hi: "प्रौद्योगिकी के कारण आधुनिक समुदायों में पायी जा रही है-",
+    options_en: [
+      "Mechanical unity",
+      "organic unity",
+      "Consequential Unity",
+      "human unity"
+    ],
+    options_hi: [
+      "यांत्रिक एकता",
+      "सावयवी एकता",
+      "पारिणामिक एकता",
+      "मानवीय एकता"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Émile Durkheim's concept of 'सावयवी एकता' (organic solidarity) characterizes modern, industrialized societies where interdependence arises from specialization and division of labor, which are heavily influenced by technology. 'यांत्रिक एकता' (mechanical solidarity) is characteristic of simpler, traditional societies.",
+    explanation_hi: "Émile Durkheim's concept of 'सावयवी एकता' (organic solidarity) characterizes modern, industrialized societies where interdependence arises from specialization and division of labor, which are heavily influenced by technology. 'यांत्रिक एकता' (mechanical solidarity) is characteristic of simpler, traditional societies."
+  },
+  {
+    question_en: "The development of technology has reduced religious belief in the society.",
+    question_hi: "प्रौद्योगिकी के विकास ने धार्मिक विश्वास को समाज में कम कर दी है-",
+    options_en: [
+      "religious hold",
+      "Ritual",
+      "religious orthodoxy",
+      "All the above"
+    ],
+    options_hi: [
+      "धार्मिक पकड़",
+      "कर्मकाण्ड",
+      "धार्मिक रूढ़िवादिता",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The study of the Universe is called Cosmology.",
-    explanation_hi: "ब्रह्मांड के अध्ययन को कॉस्मोलॉजी कहा जाता है।",
+    explanation_en: "Technological development often leads to secularization, reducing the hold of religious beliefs, the importance of rituals, and religious conservatism in society. Therefore, all the listed aspects are generally diminished.",
+    explanation_hi: "Technological development often leads to secularization, reducing the hold of religious beliefs, the importance of rituals, and religious conservatism in society. Therefore, all the listed aspects are generally diminished."
   },
   {
-    question_en: "Who propounded the 'Big-Bang Theory'?",
-    question_hi: "'बिग बैंग सिद्धांत' (Big-Bang Theory) का प्रतिपादन किसने किया था?",
-    options_en: ["Galileo", "Edwin Hubble", "George Lemaître", "Copernicus"],
-    options_hi: ["गैलीलियो", "एडविन हब्बल", "जॉर्ज लेमैत्रे (George Lemaître)", "कोपरनिकस"],
+    question_en: "Due to technology, there has been a promotion in the society-",
+    question_hi: "प्रौद्योगिकी के कारण समाज में बढ़ावा मिला है-",
+    options_en: [
+      "of economic anomalies",
+      "cultural isolation",
+      "of economic inequality",
+      "All the above"
+    ],
+    options_hi: [
+      "आर्थिक विसंगति को",
+      "सांस्कृतिक अलगाव को",
+      "आर्थिक विषमता को",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Technological advancements, while bringing progress, can also exacerbate economic disparities, lead to cultural alienation, and create economic imbalances in society. Therefore, all the listed issues can be promoted.",
+    explanation_hi: "Technological advancements, while bringing progress, can also exacerbate economic disparities, lead to cultural alienation, and create economic imbalances in society. Therefore, all the listed issues can be promoted."
+  },
+  {
+    question_en: "The imbalance arising in any mutual part of the technological process is called-",
+    question_hi: "प्रौद्योगिक प्रक्रिया के किसी परस्पर भाग में उत्पन्न होने वाले असंतुलन को कहा जाता है-",
+    options_en: [
+      "technological decline",
+      "technological resistance",
+      "technology delay",
+      "technological stress"
+    ],
+    options_hi: [
+      "प्रौद्योगिक ह्रास",
+      "प्रौद्योगिक प्रतिरोध",
+      "प्रौद्योगिकी विलम्बना",
+      "प्रौद्योगिक तनाव"
+    ],
     correct_option_index: 2,
-    explanation_en: "The theory of the origin of the universe was given by Georges Lemaître.",
-    explanation_hi: "ब्रह्मांड की उत्पत्ति का सिद्धांत जॉर्ज लेमैत्रे ने दिया था।",
+    explanation_en: "The imbalance arising in different parts of the technological process, particularly when non-material culture lags behind material culture, is known as 'प्रौद्योगिकी विलम्बना' (technological lag) or cultural lag.",
+    explanation_hi: "The imbalance arising in different parts of the technological process, particularly when non-material culture lags behind material culture, is known as 'प्रौद्योगिकी विलम्बना' (technological lag) or cultural lag."
   },
   {
-    question_en: "What is the approximate temperature of the Sun's outer surface?",
-    question_hi: "सूर्य की बाहरी सतह (Surface) का तापमान लगभग कितना होता है?",
-    options_en: ["15 million degrees Celsius", "1000°C", "4500°C", "6000°C"],
-    options_hi: ["15 मिलियन डिग्री सेल्सियस", "1000°C", "4500°C", "6000°C"],
-    correct_option_index: 3,
-    explanation_en: "The temperature of the Sun's outer surface is approximately 6000°C.",
-    explanation_hi: "सूर्य की बाहरी सतह का तापमान 6000°C होता है।",
+    question_en: "The concepts of technological delay, technological resistance, cultural conflict and cultural incompatibility are the contributions of which of the following?",
+    question_hi: "प्रौद्योगिक विलम्बना, प्रौद्योगिक प्रतिरोध, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता की अवधारणाएँ निम्न में से किसकी देन है?",
+    options_en: [
+      "R. M. MacIver's",
+      "Thorstein Veblen's",
+      "Talcott Parsons's",
+      "Karl Marx's"
+    ],
+    options_hi: [
+      "आर. एम. मैकाइवर की",
+      "थॉर्स्टीन वेब्लेन की",
+      "टॉलकॉट पारसन्स की",
+      "कार्ल मार्क्स की"
+    ],
+    correct_option_index: 0,
+    explanation_en: "R.M. MacIver, in his comprehensive works on society, discussed various aspects of social and cultural change, including concepts related to technological lag, resistance, and cultural conflict and disorganization. (Note: While Ogburn is most famous for cultural lag, MacIver also contributed to the broader understanding of these dynamics).",
+    explanation_hi: "R.M. MacIver, in his comprehensive works on society, discussed various aspects of social and cultural change, including concepts related to technological lag, resistance, and cultural conflict and disorganization. (Note: While Ogburn is most famous for cultural lag, MacIver also contributed to the broader understanding of these dynamics)."
   },
   {
-    question_en: "What is the source of the Sun's energy?",
-    question_hi: "सूर्य की ऊर्जा का स्रोत क्या है?",
-    options_en: ["Atomic Fission", "Atomic Decay", "Nuclear Fusion", "Gravitational Pull"],
-    options_hi: ["परमाणु विखंडन", "परमाणु क्षरण", "नाभिकीय संलयन (Nuclear Fusion)", "गुरुत्वाकर्षण खिंचाव"],
+    question_en: "Which of the following sociologists is related to 'technological determinism'?",
+    question_hi: "निम्न में कौन-सा समाजशास्त्री 'प्रौद्योगिक निर्धारणवाद' से सम्बन्धित है?",
+    options_en: [
+      "weber",
+      "वेब्लेन",
+      "karl marx",
+      "सोरोकिन"
+    ],
+    options_hi: [
+      "वेबर",
+      "वेब्लेन",
+      "कार्ल मार्क्स",
+      "सोरोकिन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Thorstein Veblen is a prominent figure associated with the theory of technological determinism, which posits that technology is the primary driver of social change.",
+    explanation_hi: "Thorstein Veblen is a prominent figure associated with the theory of technological determinism, which posits that technology is the primary driver of social change."
+  },
+  {
+    question_en: "Division of labor and specialization caused by technology has given rise to the society-",
+    question_hi: "प्रौद्योगिकी के कारण उत्पन्न श्रम विभाजन और विशेषीकरण ने समाज में जन्म दिया है-",
+    options_en: [
+      "of mutual competition",
+      "of mutual struggle",
+      "mutual maximization",
+      "to mutual separation"
+    ],
+    options_hi: [
+      "पारस्परिक प्रतिस्पर्धा को",
+      "पारस्परिक संघर्ष को",
+      "पारस्परिक अधिकतमता को",
+      "पारस्परिक अलगाव को"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Sun's energy is obtained from Nuclear Fusion.",
-    explanation_hi: "सूर्य की ऊर्जा नाभिकीय संलयन से प्राप्त होती है।",
+    explanation_en: "The division of labor and specialization, driven by technology, leads to increased interdependence and efficiency, which can be seen as 'पारस्परिक अधिकतमता' (mutual maximization or enhanced mutual benefit/productivity).",
+    explanation_hi: "The division of labor and specialization, driven by technology, leads to increased interdependence and efficiency, which can be seen as 'पारस्परिक अधिकतमता' (mutual maximization or enhanced mutual benefit/productivity)."
   },
   {
-    question_en: "Which of the following is NOT an inner planet?",
-    question_hi: "निम्नलिखित में से कौन सा आंतरिक ग्रह (Inner planet) नहीं है?",
-    options_en: ["Mercury", "Venus", "Earth", "Jupiter"],
-    options_hi: ["बुध", "शुक्र", "पृथ्वी", "बृहस्पति (Jupiter)"],
+    question_en: "The development of technology has given a boost to the economic sector-",
+    question_hi: "प्रौद्योगिकी के विकास ने आर्थिक क्षेत्र में बढ़ावा दिया है-",
+    options_en: [
+      "of economic inequality",
+      "economic competition",
+      "migration and specialization",
+      "All the above"
+    ],
+    options_hi: [
+      "आर्थिक विषमता को",
+      "आर्थिक प्रतियोगिता को",
+      "स्थलांतरण एवं विशेषीकरण को",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The inner planets are Mercury, Venus, Earth, and Mars. Jupiter is an outer/Jovian planet.",
-    explanation_hi: "आंतरिक ग्रह बुध, शुक्र, पृथ्वी और मंगल हैं। बृहस्पति एक बाह्य/जोवियन ग्रह है।",
+    explanation_en: "Technological development in the economic sphere has led to increased economic inequality, heightened economic competition, and greater migration and specialization. Therefore, all the listed outcomes are observed effects.",
+    explanation_hi: "Technological development in the economic sphere has led to increased economic inequality, heightened economic competition, and greater migration and specialization. Therefore, all the listed outcomes are observed effects."
   },
   {
-    question_en: "Which is the smallest planet in the solar system?",
-    question_hi: "सौरमंडल का सबसे छोटा ग्रह (Smallest planet) कौन सा है?",
-    options_en: ["Mars", "Venus", "Mercury", "Pluto"],
-    options_hi: ["मंगल", "शुक्र", "बुध (Mercury)", "प्लूटो"],
+    question_en: "Which of the following conditions is not affected by change in technology?",
+    question_hi: "निम्नलिखित में से कौन-सी दशा परिवर्तन प्रौद्योगिक से प्रभावित नहीं है?",
+    options_en: [
+      "change in labor conditions",
+      "increase in nuclear families",
+      "changes in social relations",
+      "increase in communalism"
+    ],
+    options_hi: [
+      "श्रम दशाओं में परिवर्तन",
+      "केन्द्रीय परिवारों में वृद्धि",
+      "सामाजिक सम्बन्धों में परिवर्तन",
+      "साम्प्रदायिकता में वृद्धि"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Technological change directly impacts labor conditions, family structures (e.g., nuclear families), and social relationships. However, an increase in communalism (साम्प्रदायिकता में वृद्धि) is primarily a socio-political or cultural phenomenon, not directly or necessarily caused by technological change.",
+    explanation_hi: "Technological change directly impacts labor conditions, family structures (e.g., nuclear families), and social relationships. However, an increase in communalism (साम्प्रदायिकता में वृद्धि) is primarily a socio-political or cultural phenomenon, not directly or necessarily caused by technological change."
+  },
+  {
+    question_en: "Which of the following is not a result of industrialization?",
+    question_hi: "निम्न में कौन-सा औद्योगिकीकरण का परिणाम नहीं है?",
+    options_en: [
+      "mass production",
+      "economic instability",
+      "disintegration of nuclear families",
+      "increase in unemployment"
+    ],
+    options_hi: [
+      "बड़े पैमाने पर उत्पादन",
+      "आर्थिक अस्थिरता",
+      "केन्द्रीय परिवारों का विघटन",
+      "बेरोज़गारी में वृद्धि"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Industrialization is associated with large-scale production, economic instability, and the breakdown of traditional family structures. While it creates new jobs, it can also lead to technological unemployment or shifts in labor markets. However, if 'बेरोज़गारी में वृद्धि' (increase in unemployment) is considered *not* a result, it might be interpreted as industrialization's overall effect being job creation, or that unemployment is not a *direct* or *universal* outcome in all contexts.",
+    explanation_hi: "Industrialization is associated with large-scale production, economic instability, and the breakdown of traditional family structures. While it creates new jobs, it can also lead to technological unemployment or shifts in labor markets. However, if 'बेरोज़गारी में वृद्धि' (increase in unemployment) is considered *not* a result, it might be interpreted as industrialization's overall effect being job creation, or that unemployment is not a *direct* or *universal* outcome in all contexts."
+  },
+  {
+    question_en: "Which of the following conditions is a result of economic competition?",
+    question_hi: "निम्नलिखित में से कौन-सी दशा आर्थिक प्रतिस्पर्धा का परिणाम है?",
+    options_en: [
+      "increase in family planning",
+      "informality in social relations",
+      "increase in invention",
+      "decrease in per capita income"
+    ],
+    options_hi: [
+      "परिवार नियोजन में वृद्धि",
+      "सामाजिक सम्बन्धों में अनौपचारिकता",
+      "अविष्कार में वृद्धि",
+      "प्रति व्यक्ति आय में कमी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Economic competition can lead to various social and demographic changes. An increase in family planning (परिवार नियोजन में वृद्धि) can be a consequence as individuals and families strive to improve their economic well-being and competitive edge by limiting family size.",
+    explanation_hi: "Economic competition can lead to various social and demographic changes. An increase in family planning (परिवार नियोजन में वृद्धि) can be a consequence as individuals and families strive to improve their economic well-being and competitive edge by limiting family size."
+  },
+  {
+    question_en: "What effects have technology had on Indian society?",
+    question_hi: "प्रौद्योगिकी के कारण भारतीय समाज पर क्या प्रभाव पड़े हैं?",
+    options_en: [
+      "Social relations have become formal, functional and secondary",
+      "Materialism has come to govern social life",
+      "Cultural values ​​are changing",
+      "Both (a) and (b) have been affected."
+    ],
+    options_hi: [
+      "सामाजिक सम्बन्ध औपचारिक, प्रकार्यात्मक एवं द्वितीय पर हो गये हैं",
+      "भौतिकवाद सामाजिक जीवन का संचालन करने लगा है",
+      "सांस्कृतिक मूल्यों में परिवर्तन हो रहे हैं",
+      "(a) एवं (b) दोनों ही प्रभाव पड़े हैं"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Technological advancements in Indian society have led to social relationships becoming more formal, functional, and secondary, and have also contributed to materialism increasingly guiding social life. Cultural values are also undergoing significant changes. Therefore, both (a) and (b) are observed effects.",
+    explanation_hi: "Technological advancements in Indian society have led to social relationships becoming more formal, functional, and secondary, and have also contributed to materialism increasingly guiding social life. Cultural values are also undergoing significant changes. Therefore, both (a) and (b) are observed effects."
+  },
+  {
+    question_en: "In which theory of industrial change technology is considered the direct and primary cause, its proponents are-",
+    question_hi: "औद्योगिक परिवर्तन के किस सिद्धान्त में प्रौद्योगिकी को ही प्रत्यक्ष और प्राथमिक कारण माना गया है, उसके प्रतिपादक हैं-",
+    options_en: [
+      "मार्क्स",
+      "Pareto",
+      "veblen",
+      "spenceler"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "पेरेटो",
+      "वेब्लेन",
+      "स्पेन्सलर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Mercury is the smallest planet in the solar system.",
-    explanation_hi: "बुध सौरमंडल का सबसे छोटा ग्रह है।",
+    explanation_en: "Thorstein Veblen is the primary proponent of the theory of technological determinism, which views technology as the direct and primary cause of industrial and social change.",
+    explanation_hi: "Thorstein Veblen is the primary proponent of the theory of technological determinism, which views technology as the direct and primary cause of industrial and social change."
   },
   {
-    question_en: "Which planet has no satellite?",
-    question_hi: "किस ग्रह का कोई उपग्रह (Satellite) नहीं है?",
-    options_en: ["Mars", "Saturn", "Mercury and Venus", "Jupiter"],
-    options_hi: ["मंगल", "शनि", "बुध और शुक्र", "बृहस्पति"],
+    question_en: "“Technology is the arrangement of indirect and higher order means to achieve any objective or objectives.” Whose definition is this?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा किसकी है?",
+    options_en: [
+      "प्रो. सरन",
+      "Pro. ogburn",
+      "emile durkheim",
+      "spencer"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "प्रो. ऑगबर्न",
+      "इम्माइल दुर्खीम",
+      "स्पेंसर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor William F. Ogburn. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material).",
+    explanation_hi: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor William F. Ogburn. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material)."
+  },
+  {
+    question_en: "Which sociologist has said that \"Technology means those methods, knowledge and skills with the help of which man controls and uses physical and biological elements?\"",
+    question_hi: "किस समाजशास्त्री ने बताया है कि \"प्रौद्योगिकी का अर्थ उन विधियों, ज्ञानों तथा दक्षताओं से है जिनकी सहायता से मनुष्य भौतिक और जैविकीय तत्वों को नियन्त्रित करता है और उपयोग में लाता है?\"",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "लेपियर",
+      "स्पेन्सर"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "लेपियर",
+      "स्पेन्सर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Mercury and Venus have no satellites.",
-    explanation_hi: "बुध और शुक्र का कोई उपग्रह नहीं है।",
+    explanation_en: "This definition of technology, stating that it encompasses methods, knowledge, and skills used by humans to control and utilize physical and biological elements, is attributed to Richard T. LaPiere. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material).",
+    explanation_hi: "This definition of technology, stating that it encompasses methods, knowledge, and skills used by humans to control and utilize physical and biological elements, is attributed to Richard T. LaPiere. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material)."
   },
   {
-    question_en: "Which planet is called the 'Morning Star' and 'Evening Star'?",
-    question_hi: "किस ग्रह को 'भोर का तारा' (Morning Star) और 'सांझ का तारा' (Evening Star) कहा जाता है?",
-    options_en: ["Mercury", "Mars", "Venus", "Earth"],
-    options_hi: ["बुध", "मंगल", "शुक्र (Venus)", "पृथ्वी"],
+    question_en: "निम्नलिखित में से सूचना प्रौद्योगिकी किससे सम्बन्धित है?",
+    question_hi: "निम्नलिखित में से सूचना प्रौद्योगिकी किससे सम्बन्धित है?",
+    options_en: [
+      "industrialization",
+      "social planning",
+      "Population",
+      "social system"
+    ],
+    options_hi: [
+      "औद्योगिकीकरण",
+      "सामाजिक नियोजन",
+      "जनसंख्या",
+      "सामाजिक व्यवस्था"
+    ],
     correct_option_index: 2,
-    explanation_en: "Venus is called the 'Morning Star' and 'Evening Star'.",
-    explanation_hi: "शुक्र (Venus) को 'भोर का तारा' और 'सांझ का तारा' कहते हैं।",
+    explanation_en: "Information technology has broad implications across various societal domains. While it influences industrialization, social planning, and social order, it is also significantly related to population dynamics through data collection, analysis, communication, and its impact on demographic trends.",
+    explanation_hi: "Information technology has broad implications across various societal domains. While it influences industrialization, social planning, and social order, it is also significantly related to population dynamics through data collection, analysis, communication, and its impact on demographic trends."
   },
   {
-    question_en: "Which two planets rotate from east to west (clockwise)?",
-    question_hi: "कौन से दो ग्रह पूर्व से पश्चिम दिशा में घूमते हैं (दक्षिणावर्त/Clockwise)?",
-    options_en: ["Earth and Mars", "Jupiter and Saturn", "Venus and Uranus", "Mars and Venus"],
-    options_hi: ["पृथ्वी और मंगल", "बृहस्पति और शनि", "शुक्र और अरुण (Venus and Uranus)", "मंगल और शुक्र"],
+    question_en: "When was the first Post Office Act passed in India?",
+    question_hi: "भारतवर्ष में पहला पोस्ट ऑफिस अधिनियम कब पारित हुआ?",
+    options_en: [
+      "in 1844",
+      "in 1854",
+      "in 1868",
+      "in 1881"
+    ],
+    options_hi: [
+      "1844 में",
+      "1854 में",
+      "1868 में",
+      "1881 में"
+    ],
+    correct_option_index: 1,
+    explanation_en: "The first comprehensive Post Office Act in British India was passed in 1854.",
+    explanation_hi: "The first comprehensive Post Office Act in British India was passed in 1854."
+  },
+  {
+    question_en: "Which organization was formed on October 1, 2000 for the development of information technology?",
+    question_hi: "सूचना प्रौद्योगिकी के विकास के लिए 1 अक्टूबर, 2000 को किस संस्था का गठन किया गया?",
+    options_en: [
+      "Press Information Bureau",
+      "Indian Post Office Development Authority",
+      "Bharat Sanchar Nigam Limited",
+      "Bharat Telecom Corporation"
+    ],
+    options_hi: [
+      "प्रेस सूचना ब्यूरो",
+      "भारतीय पोस्ट ऑफिस विकास प्राधिकरण",
+      "भारत संचार निगम लिमिटेड",
+      "भारत दूर संचार निगम"
+    ],
     correct_option_index: 2,
-    explanation_en: "Venus and Uranus rotate from east to west.",
-    explanation_hi: "शुक्र और अरुण (Uranus) पूर्व से पश्चिम दिशा में घूमते हैं।",
+    explanation_en: "Bharat Sanchar Nigam Limited (BSNL) was formed on October 1, 2000, to provide telecom services in India, playing a key role in the development of information technology infrastructure.",
+    explanation_hi: "Bharat Sanchar Nigam Limited (BSNL) was formed on October 1, 2000, to provide telecom services in India, playing a key role in the development of information technology infrastructure."
   },
   {
-    question_en: "Due to the abundance of Iron Oxide on which planet is it called the 'Red Planet'?",
-    question_hi: "किस ग्रह पर लौह ऑक्साइड (Iron Oxide) की अधिकता के कारण उसे 'लाल ग्रह' (Red Planet) कहा जाता है?",
-    options_en: ["Venus", "Saturn", "Mars", "Uranus"],
-    options_hi: ["शुक्र", "शनि", "मंगल (Mars)", "अरुण"],
+    question_en: "In which state did the Chipko movement take place?",
+    question_hi: "चिपको आन्दोलन किस राज्य में हुआ?",
+    options_en: [
+      "Rajasthan",
+      "Uttarakhand",
+      "Madhya Pradesh",
+      "Bihar"
+    ],
+    options_hi: [
+      "राजस्थान",
+      "उत्तराखण्ड",
+      "मध्य प्रदेश",
+      "बिहार"
+    ],
+    correct_option_index: 1,
+    explanation_en: "The Chipko movement, a forest conservation movement, originated in the Garhwal Himalayas, which is now part of the state of Uttarakhand.",
+    explanation_hi: "The Chipko movement, a forest conservation movement, originated in the Garhwal Himalayas, which is now part of the state of Uttarakhand."
+  },
+  {
+    question_en: "Who has written the book 'The Faith of Modern Intellectual'?",
+    question_hi: "'The Faith of Modern Intellectual' पुस्तक किसने लिखी है?",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Due to the abundance of Iron Oxide on Mars, it is called the Red Planet.",
-    explanation_hi: "मंगल ग्रह पर आयरन ऑक्साइड की अधिकता के कारण इसे लाल ग्रह कहा जाता है।",
+    explanation_en: "The book 'The Faith of Modern Intellectual' is attributed to Professor P.S. Saran.",
+    explanation_hi: "The book 'The Faith of Modern Intellectual' is attributed to Professor P.S. Saran."
   },
   {
-    question_en: "On which planet is the solar system's largest volcano 'Olympus Mons' located?",
-    question_hi: "सौरमंडल का सबसे बड़ा ज्वालामुखी 'ओलम्पस मॉन्स' (Olympus Mons) किस ग्रह पर स्थित है?",
-    options_en: ["Earth", "Jupiter", "Mars", "Saturn"],
-    options_hi: ["पृथ्वी", "बृहस्पति", "मंगल", "शनि"],
+    question_en: "Which of the following events occurs due to industrialization and capitalist system?",
+    question_hi: "औद्योगिकीकरण एवं पूंजीवादी व्यवस्था के कारण निम्नलिखित में से कौन-सी घटना घटित होती है?",
+    options_en: [
+      "change in rural community",
+      "Formation of slums in cities",
+      "Life like machine",
+      "All the above"
+    ],
+    options_hi: [
+      "ग्रामीण समुदाय में परिवर्तन",
+      "नगरों में गन्दी बस्तियों का निर्माण",
+      "यन्त्रवत् जीवन",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Industrialization and capitalism lead to significant transformations in rural communities, the growth of slums in cities, and a more mechanized or routinized way of life. Therefore, all the listed phenomena are consequences.",
+    explanation_hi: "Industrialization and capitalism lead to significant transformations in rural communities, the growth of slums in cities, and a more mechanized or routinized way of life. Therefore, all the listed phenomena are consequences."
+  },
+  {
+    question_en: "Which of the following are direct effects of technological change? 1. Division of labor and specialization, 2. Urbanization, 3. Increase in mobility, 4. Family in social relations.",
+    question_hi: "निम्नलिखित में से कौन प्रौद्योगिकी परिवर्तन के प्रत्यक्ष प्रभाव हैं? 1. श्रम विभाजन एवं विशेषीकरण, 2. नगरीकरण, 3. गतिशीलता का बढ़ना, 4. सामाजिक सम्बन्धों में परिवार",
+    options_en: [
+      "1, 2 और 3",
+      "2, 3 और 4",
+      "1, 2 और 3",
+      "1, 3 and 4"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2, 3 और 4",
+      "1, 2 और 3",
+      "1, 3 और 4"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Direct effects of technological change include the promotion of division of labor and specialization, the growth of urbanization, and increased social and geographical mobility.",
+    explanation_hi: "Direct effects of technological change include the promotion of division of labor and specialization, the growth of urbanization, and increased social and geographical mobility."
+  },
+  {
+    question_en: "“Technology is the arrangement of indirect and higher order means to achieve any objective or objectives.” Whose definition is this?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा किसकी है?",
+    options_en: [
+      "प्रो. सरन",
+      "lapier",
+      "karl marx",
+      "ऑगबर्न"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "लेपियर",
+      "कार्ल मार्क्स",
+      "ऑगबर्न"
+    ],
+    correct_option_index: 0,
+    explanation_en: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor P.S. Saran. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material).",
+    explanation_hi: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor P.S. Saran. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material)."
+  },
+  {
+    question_en: "\"Technology means any technique.\" Whose statement is this?",
+    question_hi: "\"प्रौद्योगिकी का अर्थ किसी भी प्रविधि से है।\" यह कथन किसका है?",
+    options_en: [
+      "वेब्लेन",
+      "ऑगबर्न",
+      "सोरोकिन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "ऑगबर्न",
+      "सोरोकिन",
+      "मैकाइवर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "William F. Ogburn, in his broad understanding of technology, considered it to encompass any technique or method.",
+    explanation_hi: "William F. Ogburn, in his broad understanding of technology, considered it to encompass any technique or method."
+  },
+  {
+    question_en: "Which of the following is a characteristic of technological culture?",
+    question_hi: "निम्नलिखित में से कौन प्रौद्योगिकी संस्कृति की विशेषता है?",
+    options_en: [
+      "मशीन",
+      "भवन निर्माण की कला",
+      "रंगमंच",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "मशीन",
+      "भवन निर्माण की कला",
+      "रंगमंच",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Technological culture encompasses all human-made tools, techniques, and artifacts. This includes machines, the art of building construction, and even the technology involved in performing arts like theater (रंगमंच). Therefore, all the listed items are characteristics.",
+    explanation_hi: "Technological culture encompasses all human-made tools, techniques, and artifacts. This includes machines, the art of building construction, and even the technology involved in performing arts like theater (रंगमंच). Therefore, all the listed items are characteristics."
+  },
+  {
+    question_en: "Which sociologist has said that \"Social change is different from cultural change and we will call only the changes taking place in our social relations as social change.\"",
+    question_hi: "किस समाजशास्त्री ने कहा है कि \"सामाजिक परिवर्तन सांस्कृतिक परिवर्तन से भिन्न है तथा हमारे सामाजिक सम्बन्धों में होने वाले परिवर्तनों को ही हम सामाजिक परिवर्तन कहेंगे।\"",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "Johnson"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "जॉनसन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Robert M. MacIver and Charles H. Page famously distinguished social change from cultural change, defining social change specifically as alterations in social relationships.",
+    explanation_hi: "Robert M. MacIver and Charles H. Page famously distinguished social change from cultural change, defining social change specifically as alterations in social relationships."
+  },
+  {
+    question_en: "Planning was first implemented in which country?",
+    question_hi: "नियोजन (Planning) सर्वप्रथम किस देश में लागू किया गया?",
+    options_en: [
+      "China",
+      "Russia",
+      "England",
+      "France"
+    ],
+    options_hi: [
+      "चीन",
+      "रूस",
+      "इंग्लैण्ड",
+      "फ्रांस"
+    ],
+    correct_option_index: 1,
+    explanation_en: "Centralized economic planning (नियोजन) was first extensively implemented in the Soviet Union (रूस).",
+    explanation_hi: "Centralized economic planning (नियोजन) was first extensively implemented in the Soviet Union (रूस)."
+  },
+  {
+    question_en: "In which century did the Industrial Revolution occur?",
+    question_hi: "औद्योगिक क्रान्ति किस शताब्दी में हुई?",
+    options_en: [
+      "16th",
+      "18th",
+      "17th",
+      "20th"
+    ],
+    options_hi: [
+      "16वीं",
+      "18वीं",
+      "17वीं",
+      "20वीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "The Industrial Revolution primarily began in the 18th century, particularly in Great Britain.",
+    explanation_hi: "The Industrial Revolution primarily began in the 18th century, particularly in Great Britain."
+  },
+  {
+    question_en: "“Technology is the arrangement of indirect and higher order means to achieve any objective or objectives.” Which of the following is this definition?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष व उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा निम्न में किसकी है?",
+    options_en: [
+      "lapier",
+      "प्रो. सरन",
+      "मैकाइवर",
+      "karl marx"
+    ],
+    options_hi: [
+      "लेपियर",
+      "प्रो. सरन",
+      "मैकाइवर",
+      "कार्ल मार्क्स"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor P.S. Saran. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material).",
+    explanation_hi: "This definition of technology, emphasizing the arrangement of indirect and higher-order means for achieving objectives, is attributed to Professor P.S. Saran. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material)."
+  },
+  {
+    question_en: "Technology refers to those methods, knowledge and skills with the help of which humans control and utilize natural and biological elements. Which scholar has given this definition?",
+    question_hi: "प्रौद्योगिकी का आशय उन विधियों, ज्ञानों तथा दक्षताओं से होता है, जिनके सहयोग से मनुष्य प्राकृतिक तथा जैविक तत्वों को नियन्त्रित करके उपयोग में लाता है। यह परिभाषा किस विद्वान ने दी है?",
+    options_en: [
+      "मार्क्स",
+      "ऑगबर्न",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "ऑगबर्न",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
+    correct_option_index: 3,
+    explanation_en: "This definition of technology, stating that it encompasses methods, knowledge, and skills used by humans to control and utilize physical and biological elements, is attributed to Richard T. LaPiere. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material).",
+    explanation_hi: "This definition of technology, stating that it encompasses methods, knowledge, and skills used by humans to control and utilize physical and biological elements, is attributed to Richard T. LaPiere. (Note: This definition has been attributed to different scholars in other questions, indicating potential inconsistencies in the source material)."
+  },
+  {
+    question_en: "“Technology is related to all types of equipment and human knowledge. In this context the concept of technology is very broad.” These views belong to which of the following scholars?",
+    question_hi: "\"प्रौद्योगिकी का सम्बन्ध सभी तरह के उपकरणों तथा मानवीय ज्ञान से है। इस परिपेक्ष्य में प्रौद्योगिकी की धारणा बहुत ही व्यापक है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "मैकाइवर",
+      "ऑगबर्न",
+      "lapier",
+      "D. Saran"
+    ],
+    options_hi: [
+      "मैकाइवर",
+      "ऑगबर्न",
+      "लेपियर",
+      "डी. सरन"
+    ],
     correct_option_index: 2,
-    explanation_en: "The solar system's largest volcano, Olympus Mons, is located on Mars.",
-    explanation_hi: "सौरमंडल का सबसे बड़ा ज्वालामुखी ओलम्पस मॉन्स मंगल ग्रह पर स्थित है।",
+    explanation_en: "Richard T. LaPiere held a broad view of technology, considering it to encompass all types of tools and human knowledge.",
+    explanation_hi: "Richard T. LaPiere held a broad view of technology, considering it to encompass all types of tools and human knowledge."
   },
   {
-    question_en: "The solar system's largest satellite 'Ganymede' is the satellite of which planet?",
-    question_hi: "सौरमंडल का सबसे बड़ा उपग्रह 'गैनिमीड' (Ganymede) किस ग्रह का उपग्रह है?",
-    options_en: ["Saturn", "Earth", "Jupiter", "Mars"],
-    options_hi: ["शनि", "पृथ्वी", "बृहस्पति (Jupiter)", "मंगल"],
+    question_en: "\"The most important phenomenon of today's era is not capitalism but mechanization, whose industrialization is reshaping our way of life. Now we are realizing that mechanization is affecting our way of life.\" These views belong to which of the following scholars?",
+    question_hi: "\"आज के युग की सबसे महत्त्वपूर्ण घटना पूंजीवाद नहीं बल्कि यन्त्रीकरण है, जिसका औद्योगिकीकरण हमारे जीवन के तरीके को नया रूप उत्पादित है। अब हमें अनुभव हो रहा है कि यन्त्रीकरण हमारे जीवन के तरीकों को प्रभावित कर रहा है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "मैकाइवर",
+      "वेब्लेन",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मैकाइवर",
+      "वेब्लेन",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This statement, emphasizing mechanization and industrialization as the most significant phenomena of the age, shaping ways of life, is characteristic of Thorstein Veblen's technological determinism.",
+    explanation_hi: "This statement, emphasizing mechanization and industrialization as the most significant phenomena of the age, shaping ways of life, is characteristic of Thorstein Veblen's technological determinism."
+  },
+  {
+    question_en: "“The forces that determine the development of human life and social structure are related to our physical environment only.” Which scholar has these views?",
+    question_hi: "\"मानव जीवन तथा सामाजिक संरचना हेतु विकास का निर्धारण जिन शक्तियों के द्वारा होता है, शक्ति हमारे भौतिक पर्यावरण से ही सम्बन्धित होती है।\" यह विचार किस विद्वान के हैं?",
+    options_en: [
+      "प्रो. सरन",
+      "ऑगबर्न",
+      "veblen",
+      "maciver"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Ganymede is the satellite of Jupiter and the largest satellite in the solar system.",
-    explanation_hi: "गैनिमीड बृहस्पति का उपग्रह है और यह सौरमंडल का सबसे बड़ा उपग्रह है।",
+    explanation_en: "This idea, that the forces determining human life and social structure are related to the material environment, is central to Thorstein Veblen's theories, which emphasize the influence of technology and the physical world.",
+    explanation_hi: "This idea, that the forces determining human life and social structure are related to the material environment, is central to Thorstein Veblen's theories, which emphasize the influence of technology and the physical world."
   },
   {
-    question_en: "Due to the abundance of methane gas in the atmosphere of which planet is it called the 'Blue-Green Planet'?",
-    question_hi: "किस ग्रह के वायुमंडल में मीथेन गैस की अधिकता के कारण इसे 'नीला-हरा ग्रह' (Blue-Green Planet) कहा जाता है?",
-    options_en: ["Neptune", "Earth", "Saturn", "Uranus"],
-    options_hi: ["नेपच्यून", "पृथ्वी", "शनि", "अरुण (Uranus)"],
-    correct_option_index: 3,
-    explanation_en: "Uranus is called the 'Blue-Green Planet' due to the abundance of methane gas.",
-    explanation_hi: "अरुण (Uranus) को मीथेन गैस की अधिकता के कारण 'नीला-हरा ग्रह' कहा जाता है।",
-  },
-  {
-    question_en: "The comet 'Hale-Bopp' appears on Earth after approximately how many years?",
-    question_hi: "धूमकेतु (Comet) 'हैल-बॉप' (Hale-Bopp) पृथ्वी पर लगभग कितने वर्षों बाद दिखाई देता है?",
-    options_en: ["12 years", "29 years", "50 years", "76 years"],
-    options_hi: ["12 वर्ष", "29 वर्ष", "50 वर्ष", "76 वर्ष"],
-    correct_option_index: 3,
-    explanation_en: "The Hale-Bopp comet appears every 76 years.",
-    explanation_hi: "धूमकेतु (Comet) प्रत्येक 76 वर्ष बाद दिखाई देता है।",
-  },
-  {
-    question_en: "Under which mission did Neil Armstrong, the first person to step on the moon, go?",
-    question_hi: "चंद्रमा पर कदम रखने वाला पहला व्यक्ति नील आर्मस्ट्रांग किस मिशन के तहत गए थे?",
-    options_en: ["Apollo-1", "Luna-2", "Apollo-11", "Luna-9"],
-    options_hi: ["अपोलो-1", "लूना-2", "अपोलो-11", "लूना-9"],
+    question_en: "Which of the following scholars has accepted the main factor of industrialization?",
+    question_hi: "निम्न में से किस विद्वान ने औद्योगिकी की प्रमुख कारक स्वीकार किया है?",
+    options_en: [
+      "ogburn",
+      "marks",
+      "veblen",
+      "darwin"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "मार्क्स",
+      "वेब्लेन",
+      "डार्विन"
+    ],
     correct_option_index: 2,
-    explanation_en: "Neil Armstrong was the first person to reach the moon under the Apollo-11 mission (July 20, 1969).",
-    explanation_hi: "नील आर्मस्ट्रांग अपोलो-11 मिशन (20 जुलाई, 1969) के तहत चंद्रमा पर पहुँचने वाले पहले व्यक्ति थे।",
+    explanation_en: "Thorstein Veblen is a key figure who considered technology (औद्योगिकी) as a primary factor in social change.",
+    explanation_hi: "Thorstein Veblen is a key figure who considered technology (औद्योगिकी) as a primary factor in social change."
   },
   {
-    question_en: "Which gas is found in the highest quantity in the atmosphere?",
-    question_hi: "वायुमंडल में पायी जाने वाली सबसे अधिक मात्रा में गैस कौन सी है?",
-    options_en: ["Oxygen (20.95%)", "Argon (0.93%)", "Carbon Dioxide (0.03%)", "Nitrogen (78.0%)"],
-    options_hi: ["ऑक्सीजन (20.95%)", "आर्गन (0.93%)", "कार्बन डाइऑक्साइड (0.03%)", "नाइट्रोजन (78.0%)"],
-    correct_option_index: 3,
-    explanation_en: "Nitrogen (78.0%) is found in the highest quantity in the atmosphere.",
-    explanation_hi: "वायुमंडल में नाइट्रोजन (78.0%) सर्वाधिक मात्रा में पाई जाती है।",
-  },
-  {
-    question_en: "What is the study of the lower layer of the atmosphere called?",
-    question_hi: "वायुमंडल की निचली परत के अध्ययन को क्या कहा जाता है?",
-    options_en: ["Aerology", "Cosmology", "Meteorology", "Pedology"],
-    options_hi: ["एयरोलॉजी", "कॉस्मोलॉजी", "मीटरोलॉजी (Meteorology)", "पेडोलॉजी"],
+    question_en: "\"The forces of production always change with speed, but the habits of thinking lag behind. Due to lack of coordination in the pace of work, tension develops.\" It only activates the economic struggles of evolution.\" These views belong to which of the following scholars?",
+    question_hi: "\"उत्पादन की शक्तियाँ सदैव गति से बदलती हैं, किन्तु सोचने-विचारने की आदतें पिछड़ जाती हैं। कार्य की गति में सामंजस्य न होने के कारण तनाव पनपता है।\" यह उद्विकास के आर्थिक संघर्षों को ही कार्यशील करती है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "सोरोकिन",
+      "मार्क्स",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "मार्क्स",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
     correct_option_index: 2,
-    explanation_en: "The study of the lower layer of the atmosphere is called Meteorology.",
-    explanation_hi: "वायुमंडल की निचली परत के अध्ययन को मीटरोलॉजी कहते हैं।",
+    explanation_en: "This statement, describing a lag between changing forces of production and lagging habits of thought, leading to tension and economic conflict, is highly characteristic of Thorstein Veblen's institutional economics and his concept of cultural lag (though Ogburn is more famous for the term, the idea of a lag between material and non-material aspects is present in Veblen).",
+    explanation_hi: "This statement, describing a lag between changing forces of production and lagging habits of thought, leading to tension and economic conflict, is highly characteristic of Thorstein Veblen's institutional economics and his concept of cultural lag (though Ogburn is more famous for the term, the idea of a lag between material and non-material aspects is present in Veblen)."
   },
   {
-    question_en: "Which is the lowest layer of the atmosphere?",
-    question_hi: "वायुमंडल की सबसे निचली परत कौन सी है?",
-    options_en: ["Stratosphere", "Mesosphere", "Ionosphere", "Troposphere"],
-    options_hi: ["समतापमंडल", "मध्यमंडल", "आयनमंडल", "क्षोभमंडल (Troposphere)"],
-    correct_option_index: 3,
-    explanation_en: "The Troposphere is the lowest layer of the atmosphere.",
-    explanation_hi: "क्षोभमंडल वायुमंडल की सबसे निचली परत है।",
+    question_en: "On which of the following basis has Karl Marx explained social change?",
+    question_hi: "कार्ल मार्क्स ने सामाजिक परिवर्तन की व्याख्या निम्न में से किस आधार पर की है?",
+    options_en: [
+      "financial",
+      "Social",
+      "cultural",
+      "psychologist"
+    ],
+    options_hi: [
+      "आर्थिक",
+      "सामाजिक",
+      "सांस्कृतिक",
+      "मनोवैज्ञानिक"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Karl Marx's theory of social change is fundamentally based on economic factors (आर्थिक), particularly the mode of production and class struggle.",
+    explanation_hi: "Karl Marx's theory of social change is fundamentally based on economic factors (आर्थिक), particularly the mode of production and class struggle."
   },
   {
-    question_en: "All weather phenomena (like lightning, cloud formation) occur in which layer of the atmosphere?",
-    question_hi: "सभी मौसमी घटनाएँ (जैसे बिजली का कड़कना, बादल बनना) वायुमंडल की किस परत में होती हैं?",
-    options_en: ["Stratosphere", "Mesosphere", "Exosphere", "Troposphere"],
-    options_hi: ["समतापमंडल", "मध्यमंडल", "बहिर्मंडल", "क्षोभमंडल"],
-    correct_option_index: 3,
-    explanation_en: "All weather phenomena occur in the Troposphere.",
-    explanation_hi: "समस्त मौसमी घटनाएँ क्षोभमंडल में होती हैं।",
+    question_en: "Which of the following scholars gave the economic determinism theory of social change?",
+    question_hi: "सामाजिक परिवर्तन के आर्थिक निर्धारणवाद सिद्धान्त को निम्न में से किस विद्वान ने दिया?",
+    options_en: [
+      "मार्क्स",
+      "सोरोकिन",
+      "veblen",
+      "Other"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "सोरोकिन",
+      "वेब्लेन",
+      "अन्य"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Karl Marx is the most prominent proponent of the economic determinism theory of social change.",
+    explanation_hi: "Karl Marx is the most prominent proponent of the economic determinism theory of social change."
   },
   {
-    question_en: "The Ozone layer is located in which layer of the atmosphere?",
-    question_hi: "ओजोन परत (Ozone layer) वायुमंडल की किस परत में स्थित है?",
-    options_en: ["Troposphere", "Mesosphere", "Exosphere", "Stratosphere"],
-    options_hi: ["क्षोभमंडल", "मध्यमंडल", "बहिर्मंडल", "समतापमंडल (Stratosphere)"],
-    correct_option_index: 3,
-    explanation_en: "The Ozone layer is located in the Stratosphere.",
-    explanation_hi: "ओजोन परत समतापमंडल में स्थित है।",
-  },
-  {
-    question_en: "Which unit is used to measure the thickness of the Ozone layer?",
-    question_hi: "ओजोन परत की मोटाई मापने के लिए किस इकाई (Unit) का प्रयोग किया जाता है?",
-    options_en: ["Sievert", "Joule", "Calorie", "Dobson Unit"],
-    options_hi: ["सीवर्ट", "जूल", "कैलोरी", "डॉबसन इकाई (Dobson Unit)"],
-    correct_option_index: 3,
-    explanation_en: "The Dobson Unit is used to measure the thickness of the Ozone layer.",
-    explanation_hi: "ओजोन परत की मोटाई मापने के लिए डॉबसन इकाई का प्रयोग होता है।",
-  },
-  {
-    question_en: "In which layer of the atmosphere do meteorites coming from space burn up?",
-    question_hi: "अंतरिक्ष से आने वाले उल्कापिंड (Meteorites) वायुमंडल की किस परत में आकर समाप्त हो जाते हैं?",
-    options_en: ["Stratosphere", "Ionosphere", "Exosphere", "Mesosphere"],
-    options_hi: ["समतापमंडल", "आयनमंडल", "बहिर्मंडल", "मध्यमंडल (Mesosphere)"],
-    correct_option_index: 3,
-    explanation_en: "Meteorites burn up in the Mesosphere.",
-    explanation_hi: "उल्कापिंड मध्यमंडल में जलकर समाप्त हो जाते हैं।",
-  },
-  {
-    question_en: "Which layer of the atmosphere reflects radio waves?",
-    question_hi: "रेडियो तरंगों (Radio waves) को परावर्तित करने वाली वायुमंडल की परत कौन सी है?",
-    options_en: ["Stratosphere", "Troposphere", "Ionosphere", "Exosphere"],
-    options_hi: ["समतापमंडल", "क्षोभमंडल", "आयनमंडल (Ionosphere)", "बहिर्मंडल"],
+    question_en: "Which of the following scholars has been considered necessary by Harvard Spencer for non-physical change?",
+    question_hi: "अभौतिक परिवर्तन के लिए हार्वर्ड स्पेन्सर ने निम्न में से किस विद्वान का आवश्यक माना है?",
+    options_en: [
+      "veblen",
+      "sorokin",
+      "मार्क्स",
+      "Pareto"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "सोरोkin",
+      "मार्क्स",
+      "पेरेटो"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Ionosphere (80-400 km) reflects radio waves, which enables communication.",
-    explanation_hi: "आयनमंडल (80-400 किमी) रेडियो तरंगों को परावर्तित करती है, जिससे संचार संभव होता है।",
+    explanation_en: "This question attributes to Herbert Spencer the view that Karl Marx is essential for understanding non-material change. This is an unconventional pairing, as their theoretical frameworks differ significantly, with Marx focusing on material conditions and Spencer on evolutionary principles. (Acknowledging the unusual attribution).",
+    explanation_hi: "This question attributes to Herbert Spencer the view that Karl Marx is essential for understanding non-material change. This is an unconventional pairing, as their theoretical frameworks differ significantly, with Marx focusing on material conditions and Spencer on evolutionary principles. (Acknowledging the unusual attribution)."
   },
   {
-    question_en: "What type of satellites are established in the Ionosphere?",
-    question_hi: "आयनमंडल में किस प्रकार के उपग्रह स्थापित किए जाते हैं?",
-    options_en: ["Weather satellites", "Spy satellites", "GPS satellites", "Communication Satellite"],
-    options_hi: ["मौसम उपग्रह", "जासूसी उपग्रह", "जीपीएस उपग्रह", "संचार उपग्रह (Communication Satellite)"],
-    correct_option_index: 3,
-    explanation_en: "Communication satellites are established in the Ionosphere.",
-    explanation_hi: "संचार उपग्रह (Communication Satellite) आयनमंडल में स्थापित किए जाते हैं।",
-  },
-  {
-    question_en: "The Exosphere, the uppermost layer of the atmosphere, is made up of which light gases?",
-    question_hi: "बहिर्मंडल (Exosphere), जो वायुमंडल की सबसे ऊपरी परत है, किन हल्की गैसों से बनी है?",
-    options_en: ["Oxygen and Nitrogen", "Carbon Dioxide and Argon", "Methane and Ammonia", "Helium, Argon and Hydrogen"],
-    options_hi: ["ऑक्सीजन और नाइट्रोजन", "कार्बन डाइऑक्साइड और आर्गन", "मीथेन और अमोनिया", "हीलियम, आर्गन और हाइड्रोजन"],
-    correct_option_index: 3,
-    explanation_en: "The Exosphere is made up of light gases like Helium, Argon, and Hydrogen.",
-    explanation_hi: "बहिर्मंडल हीलियम, आर्गन और हाइड्रोजन जैसी हल्की गैसों से बनी है।",
-  },
-  {
-    question_en: "What is the highest peak of the Maikal Mountain Range?",
-    question_hi: "मैकाल पर्वत शृंखला (Maikal Range) की सबसे ऊँची चोटी कौन सी है?",
-    options_en: ["Dhupgarh", "Sadbhavna Shikhar", "Kalsubai", "Amrakantak"],
-    options_hi: ["धूपगढ़", "सद्भावना शिखर", "कलसुबाई", "अमरकंटक (Amrakantak)"],
-    correct_option_index: 3,
-    explanation_en: "The highest peak of the Maikal Range is Amrakantak (1065 m).",
-    explanation_hi: "मैकाल रेंज की सबसे ऊँची चोटी अमरकंटक (1065 मी) है।",
-  },
-  {
-    question_en: "Which is the largest peninsula in the world?",
-    question_hi: "विश्व का सबसे बड़ा प्रायद्वीप (Largest Peninsula in the world) कौन सा है?",
-    options_en: ["Peninsular India", "Kamchatka Peninsula", "Alaska Peninsula", "Arabian Peninsula"],
-    options_hi: ["प्रायद्वीपीय भारत", "कमचटका प्रायद्वीप", "अलास्का प्रायद्वीप", "अरब प्रायद्वीप (Arabian Peninsula)"],
-    correct_option_index: 3,
-    explanation_en: "The Arabian Peninsula is the largest peninsula in the world.",
-    explanation_hi: "अरब प्रायद्वीप विश्व का सबसे बड़ा प्रायद्वीप है।",
-  },
-  {
-    question_en: "The Peninsular Plateau was formed during which geological era?",
-    question_hi: "प्रायद्वीपीय पठार का निर्माण किस भूवैज्ञानिक काल (Era) में हुआ था?",
-    options_en: ["Paleozoic", "Carboniferous", "Pre-Cambrian Era", "Mesozoic"],
-    options_hi: ["पेलियोजोइक", "कार्बोनिफेरस", "प्री-कैम्ब्रियन कल्प (Pre-Cambrian Era)", "मेसोजोइक"],
+    question_en: "'Change in the means of production and forces of production also produces changes in production relations.' Which scholar has these views?",
+    question_hi: "'उत्पादन के साधनों व उत्पादन की शक्तियों में परिवर्तन उत्पादन सम्बन्धों में भी परिवर्तन उत्पन्न करता है।' यह विचार किस विद्वान के हैं?",
+    options_en: [
+      "sorokin",
+      "Pareto",
+      "मार्क्स",
+      "veblen"
+    ],
+    options_hi: [
+      "सोरोkin",
+      "पेरेटो",
+      "मार्क्स",
+      "वेब्लेन"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Peninsular Plateau was formed during the Pre-Cambrian Era.",
-    explanation_hi: "प्रायद्वीपीय पठार का निर्माण प्री-कैम्ब्रियन कल्प में हुआ था।",
+    explanation_en: "This statement is a core principle of Karl Marx's historical materialism, where changes in the forces of production lead to changes in the relations of production.",
+    explanation_hi: "This statement is a core principle of Karl Marx's historical materialism, where changes in the forces of production (साधनों व शक्तियों) lead to changes in the relations of production (उत्पादन सम्बन्धों)."
   },
   {
-    question_en: "Which waterfall on the Godavari River is called 'Buddhi Ganga' or 'Niagara of India'?",
-    question_hi: "गोदावरी नदी पर स्थित 'बुद्धि गंगा' या 'भारत का नियाग्रा' जलप्रपात कौन सा है?",
-    options_en: ["Jog Falls", "Chulia Falls", "Kunchikal Falls", "Indravati Falls (Chitrakoot)"],
-    options_hi: ["जोग जलप्रपात", "चूलिया जलप्रपात", "कुंचिकल जलप्रपात", "इंद्रावती जलप्रपात (चित्रकूट)"],
+    question_en: "Which of the following is the central point of Karl Marx's entire ideas about social change?",
+    question_hi: "कार्ल मार्क्स के सामाजिक परिवर्तन के सम्पूर्ण विचारों का केन्द्रीय बिन्दु निम्न में से कौन-सा है?",
+    options_en: [
+      "production system",
+      "means of production",
+      "forces of production",
+      "class struggle"
+    ],
+    options_hi: [
+      "उत्पादन प्रणाली",
+      "उत्पादन के साधनों",
+      "उत्पादन की शक्तियों",
+      "वर्ग-संघर्ष"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Indravati Falls (Chitrakoot) is called the 'Niagara Falls of India'.",
-    explanation_hi: "इंद्रावती जलप्रपात (चित्रकूट) को 'भारत का नियाग्रा जलप्रपात' कहा जाता है।",
+    explanation_en: "While the mode of production, means of production, and forces of production are crucial components of Marx's theory, the central driving force and the core of his theory of social change is class struggle, which arises from contradictions within the production system.",
+    explanation_hi: "While the mode of production (उत्पादन प्रणाली), means of production (उत्पादन के साधनों), and forces of production (उत्पादन की शक्तियों) are crucial components of Marx's theory, the central driving force and the core of his theory of social change is class struggle (वर्ग-संघर्ष), which arises from contradictions within the production system."
   },
   {
-    question_en: "The 'Tropic of Capricorn' is located at which latitude?",
-    question_hi: "'मकर रेखा' (Tropic of Capricorn) किन अक्षांश पर स्थित है?",
-    options_en: ["0° Latitude", "23½° North Latitude", "66½° North Latitude", "23½° South Latitude"],
-    options_hi: ["0° अक्षांश", "23½° उत्तरी अक्षांश", "66½° उत्तरी अक्षांश", "23½° दक्षिणी अक्षांश"],
+    question_en: "“Culture is a complex whole, which includes knowledge, belief, art, conduct, law, custom and further understanding of the past, which man acquires by being a member of the society.” This definition has been presented-",
+    question_hi: "\"संस्कृति एक जटिल सम्पूर्ण है, जिसमें ज्ञान, विश्वास, कला, आचार, कानून, प्रथा एवं पूर्व में अपनी एकट समझते हुए आगे सम्पादित है, जिन्हें मनुष्य समाज का सदस्य होने के नाते प्राप्त करता है।\" यह परिभाषा प्रस्तुत की है-",
+    options_en: [
+      "Malinowski",
+      "tyler has",
+      "Herskowitz",
+      "Redfield"
+    ],
+    options_hi: [
+      "मैलिनोव्स्की ने",
+      "टायलर ने",
+      "हर्स्कोविट्ज ने",
+      "रेडफील्ड ने"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This classic definition of culture, emphasizing its complex, holistic nature and its acquisition by humans as members of society, is famously given by Edward Burnett Tylor.",
+    explanation_hi: "This classic definition of culture, emphasizing its complex, holistic nature and its acquisition by humans as members of society, is famously given by Edward Burnett Tylor."
+  },
+  {
+    question_en: "Which of the following characteristics is related to culture? 1. Culture has both new and ancient. 2. Culture is created by humans. 3. Culture is transmitted from one generation to the next.",
+    question_hi: "निम्नलिखित में से कौन-सी विशेषता सांस्कृतिक से सम्बन्धित है? 1. संस्कृति में नवीन एवं पुरातन दोनों होती हैं। 2. संस्कृति पर मनुष्य द्वारा निर्मित होती है। 3. संस्कृति एक पीढ़ी से दूसरी पीढ़ी को हस्तान्तरित होती है।",
+    options_en: [
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3",
+      "All the above features"
+    ],
+    options_hi: [
+      "1 और 2",
+      "2 और 3",
+      "1, 2 और 3",
+      "उपर्युक्त सभी विशेषताएँ"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Tropic of Capricorn is located at 23½° South latitude.",
-    explanation_hi: "मकर रेखा 23½° दक्षिणी अक्षांश (South latitude) पर स्थित है।",
+    explanation_en: "All the listed characteristics are true of culture: it encompasses both new and old elements, it is human-made, and it is transmitted from one generation to another.",
+    explanation_hi: "All the listed characteristics are true of culture: it encompasses both new and old elements, it is human-made, and it is transmitted from one generation to another."
   },
   {
-    question_en: "The 'Silver Fibre Revolution' is related to the production of what?",
-    question_hi: "'सिल्वर फाइबर क्रांति' (Silver Fibre Revolution) का संबंध किसके उत्पादन से है?",
-    options_en: ["Milk production", "Oilseed production", "Cotton production", "Jute production"],
-    options_hi: ["दूध उत्पादन", "तिलहन उत्पादन", "कपास उत्पादन", "जूट उत्पादन"],
+    question_en: "Is built in material culture, a new-",
+    question_hi: "भौतिक संस्कृति में निर्माणित है, एक नये-",
+    options_en: [
+      "of economic structure",
+      "of political structure",
+      "cultural framework",
+      "technological framework"
+    ],
+    options_hi: [
+      "आर्थिक ढाँचे का",
+      "राजनीतिक ढाँचे का",
+      "सांस्कृतिक ढाँचे का",
+      "प्रौद्योगिकी ढाँचे का"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Material culture consists of physical objects and technology. Therefore, it is fundamentally built upon a new technological framework (प्रौद्योगिकी ढाँचे का).",
+    explanation_hi: "Material culture consists of physical objects and technology. Therefore, it is fundamentally built upon a new technological framework (प्रौद्योगिकी ढाँचे का)."
+  },
+  {
+    question_en: "Who has said that 'lower castes have become the main basis of economic and dominance in the society'-",
+    question_hi: "किसने कहा है कि 'समाज में निम्न जातियों का आर्थिक एवं प्रबलता का मुख्य आधार बनाया है'-",
+    options_en: [
+      "Doom",
+      "tibhi",
+      "of wealth",
+      "(both a and B"
+    ],
+    options_hi: [
+      "डूमों",
+      "टिब्भी",
+      "धन-सम्पत्ति को",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 3,
+    explanation_en: "This question, though grammatically incomplete, seems to ask about scholars who discussed the economic basis and dominance of lower castes. Louis Dumont is known for his work on the caste system. If 'टिब्भी' refers to a specific scholar, and the answer is (d), it implies both contributed to this perspective.",
+    explanation_hi: "This question, though grammatically incomplete, seems to ask about scholars who discussed the economic basis and dominance of lower castes. Louis Dumont is known for his work on the caste system. If 'टिब्भी' refers to a specific scholar, and the answer is (d), it implies both contributed to this perspective."
+  },
+  {
+    question_en: "Which of the following processes is influenced by cultural factors?",
+    question_hi: "निम्नलिखित में से कौन-सी प्रक्रिया सांस्कृतिक कारक से प्रभावित होती है?",
+    options_en: [
+      "economic revolution",
+      "purpose of production",
+      "consumption and distribution",
+      "all of the above"
+    ],
+    options_hi: [
+      "आर्थिक क्रान्ति",
+      "उत्पादन का उद्देश्य",
+      "उपभोग व वितरण",
+      "उक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Cultural factors significantly influence various economic processes, including the nature of economic revolutions, the objectives of production, and patterns of consumption and distribution. Therefore, all the listed processes are affected by cultural factors.",
+    explanation_hi: "Cultural factors significantly influence various economic processes, including the nature of economic revolutions, the objectives of production, and patterns of consumption and distribution. Therefore, all the listed processes are affected by cultural factors."
+  },
+  {
+    question_en: "Who is the scholar who propounded the theory of 'cultural delay'?",
+    question_hi: "'सांस्कृतिक विलम्बना' सिद्धान्त के प्रतिपादक विद्वान है?",
+    options_en: [
+      "Nail",
+      "ऑगबर्न",
+      "centular",
+      "whistler"
+    ],
+    options_hi: [
+      "नेल",
+      "ऑगबर्न",
+      "सेन्टुलर",
+      "विस्लर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "William F. Ogburn is the originator of the theory of cultural lag.",
+    explanation_hi: "William F. Ogburn is the originator of the theory of cultural lag (सांस्कृतिक विलम्बना)."
+  },
+  {
+    question_en: "The scholars who differentiate between material culture and non-material culture are-",
+    question_hi: "भौतिक संस्कृति एवं अभौतिक संस्कृति में भेद करने वाले विद्वान हैं-",
+    options_en: [
+      "ऑगबर्न",
+      "सोरोकिन",
+      "merton",
+      "Dr. Srinivas"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "सोरोकिन",
+      "मर्टन",
+      "डॉ. श्रीनिवास"
+    ],
+    correct_option_index: 0,
+    explanation_en: "William F. Ogburn is famous for distinguishing between material culture and non-material culture, which is central to his theory of cultural lag.",
+    explanation_hi: "William F. Ogburn is famous for distinguishing between material culture and non-material culture, which is central to his theory of cultural lag."
+  },
+  {
+    question_en: "Lagging behind material culture of non-material culture is called-",
+    question_hi: "अभौतिक संस्कृति का भौतिक संस्कृति से पिछड़ जाना कहलाता है-",
+    options_en: [
+      "social change",
+      "cultural change",
+      "cultural",
+      "cultural diffusion"
+    ],
+    options_hi: [
+      "सामाजिक परिवर्तन",
+      "सांस्कृतिक परिवर्तन",
+      "सांस्कृतिक विलम्बना",
+      "सांस्कृतिक प्रसरण"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Silver Fibre Revolution is related to cotton production.",
-    explanation_hi: "सिल्वर फाइबर क्रांति कपास उत्पादन से संबंधित है।",
+    explanation_en: "The phenomenon where non-material culture lags behind material culture is precisely what William F. Ogburn termed 'सांस्कृतिक विलम्बना' (cultural lag).",
+    explanation_hi: "The phenomenon where non-material culture lags behind material culture is precisely what William F. Ogburn termed 'सांस्कृतिक विलम्बना' (cultural lag)."
   },
   {
-    question_en: "The 'Green Gold Revolution' is related to what?",
-    question_hi: "'हरीत स्वर्ण क्रांति' (Green Gold Revolution) का संबंध किससे है?",
-    options_en: ["Tea production", "Saffron production", "Fruit production", "Bamboo production"],
-    options_hi: ["चाय उत्पादन", "केसर उत्पादन", "फल उत्पादन", "बाँस उत्पादन"],
+    question_en: "Which of the following social changes is considered a factor of cultural delay?",
+    question_hi: "निम्न में से किस सामाजिक परिवर्तन का सांस्कृतिक विलम्बना का कारक माना जाता है?",
+    options_en: [
+      "cultural conflict",
+      "acculturation",
+      "cultural diffusion",
+      "All the above"
+    ],
+    options_hi: [
+      "सांस्कृतिक संघर्ष",
+      "पर-संस्कृतिकरण",
+      "संस्कृति विसरण",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Green Gold Revolution is related to Bamboo production.",
-    explanation_hi: "हरीत स्वर्ण क्रांति का संबंध बाँस (Bamboo) उत्पादन से है।",
+    explanation_en: "Cultural lag, the gap between material and non-material culture, can be influenced by or lead to various cultural dynamics. Cultural conflict, acculturation (पर-संस्कृतिकरण), and cultural diffusion (संस्कृति विसरण) are all processes that interact with and can be understood in the context of cultural lag as a factor in social change.",
+    explanation_hi: "Cultural lag, the gap between material and non-material culture, can be influenced by or lead to various cultural dynamics. Cultural conflict, acculturation (पर-संस्कृतिकरण), and cultural diffusion (संस्कृति विसरण) are all processes that interact with and can be understood in the context of cultural lag as a factor in social change."
   },
   {
-    question_en: "Which lake is called the 'Largest Lagoon Lake of India'?",
-    question_hi: "किस झील को 'भारत की सबसे बड़ी लैगून झील' कहा जाता है?",
-    options_en: ["Wular Lake", "Loktak Lake", "Vembanad Lake", "Chilika Lake"],
-    options_hi: ["वुलर झील", "लोकटक झील", "वेम्बनाड झील", "चिल्का झील"],
-    correct_option_index: 3,
-    explanation_en: "Chilika Lake (Odisha) is the largest lagoon lake in India.",
-    explanation_hi: "चिल्का झील (ओडिशा) भारत की सबसे बड़ी लैगून झील है।",
+    question_en: "Which of the following factors is not cultural which causes change in society?",
+    question_hi: "निम्न में कौन-सा कारक सांस्कृतिक नहीं है जिससे समाज में परिवर्तन होता है?",
+    options_en: [
+      "social delay",
+      "Technology delay",
+      "sovereign means of communication",
+      "acculturation"
+    ],
+    options_hi: [
+      "सामाजिक विलम्बना",
+      "प्रौद्योगिक विलम्बना",
+      "संचार के सम्प्रभु साधन",
+      "पर-संस्कृतिकरण"
+    ],
+    correct_option_index: 2,
+    explanation_en: "Cultural lag (social lag, technological lag) and acculturation are all cultural factors or concepts related to cultural change. 'Sovereign means of communication' refers to the tools or infrastructure of communication, which are more technological or structural rather than purely cultural factors themselves, although they profoundly influence culture.",
+    explanation_hi: "Cultural lag (सामाजिक विलम्बना, प्रौद्योगिक विलम्बना) and acculturation (पर-संस्कृतिकरण) are all cultural factors or concepts related to cultural change. 'संचार के सम्प्रभु साधन' (sovereign means of communication) refers to the tools or infrastructure of communication, which are more technological or structural rather than purely cultural factors themselves, although they profoundly influence culture."
   },
   {
-    question_en: "Which country's national anthem is 'Amar Sonar Bangla'?",
-    question_hi: "किस देश का राष्ट्रीय गान 'अमर सोनार बांग्ला' (Amar Sonar Bangla) है?",
-    options_en: ["India", "Sri Lanka", "Nepal", "Bangladesh"],
-    options_hi: ["भारत", "श्रीलंका", "नेपाल", "बांग्लादेश"],
-    correct_option_index: 3,
-    explanation_en: "The national anthem of Bangladesh is 'Amar Sonar Bangla'.",
-    explanation_hi: "बांग्लादेश का राष्ट्रीय गान 'अमर सोनार बांग्ला' है।",
-  }
+    question_en: "Increase in traffic by train, but late formulation of road traffic rules is an example of which of the following?",
+    question_hi: "ट्रेन द्वारा यातायात का बढ़ना, परन्तु सड़क यातायात के नियमों का देर से बनना निम्न में से किसका उदाहरण है?",
+    options_en: [
+      "technique",
+      "of delay",
+      "of government incompetence",
+      "of corruption"
+    ],
+    options_hi: [
+      "टैक्निक",
+      "विलम्बना का",
+      "सरकार की अक्षमता का",
+      "भ्रष्टाचार का"
+    ],
+    correct_option_index: 1,
+    explanation_en: "This scenario, where technological advancement (increased train traffic) outpaces the development of corresponding social norms or regulations (road traffic rules), is a classic example of cultural lag (विलम्बना).",
+    explanation_hi: "This scenario, where technological advancement (increased train traffic) outpaces the development of corresponding social norms or regulations (road traffic rules), is a classic example of cultural lag (विलम्बना)."
+  },
+  {
+    question_en: "When cultural elements of one group of society spread to another group or society, it is called-",
+    question_hi: "जब एक समूह का समाज के सांस्कृतिक तत्व किसी दूसरे समूह या समाज में फैलते हैं, उसे कहा जाता है-",
+    options_en: [
+      "cultural diffusion",
+      "rise of culture",
+      "acculturation",
+      "culturalization"
+    ],
+    options_hi: [
+      "सांस्कृतिक प्रसार",
+      "संस्कृति का उदय",
+      "पर-संस्कृतिकरण",
+      "सांस्कृतिकरण"
+    ],
+    correct_option_index: 0,
+    explanation_en: "The spread of cultural elements from one group or society to another is known as 'सांस्कृतिक प्रसार' (cultural diffusion).",
+    explanation_hi: "The spread of cultural elements from one group or society to another is known as 'सांस्कृतिक प्रसार' (cultural diffusion)."
+  },
+  {
+    question_en: "Due to cultural contact, when one group adopts the culture of another group and there is a favorable change in its entire way of life, then it is called-",
+    question_hi: "सांस्कृतिक सम्पर्क के कारण जब एक समूह दूसरे समूह की संस्कृति को अपनाता तथा उसकी सम्पूर्ण जीवन पद्धति में ये अनुकूल परिवर्तन हो, तो उसे कहा जाता है-",
+    options_en: [
+      "acculturation",
+      "cultural",
+      "cultural cooperation",
+      "cultural education"
+    ],
+    options_hi: [
+      "पर-संस्कृतिकरण",
+      "सांस्कृतिक विलम्बना",
+      "सांस्कृतिक सहयोग",
+      "सांस्कृतिक शिक्षण"
+    ],
+    correct_option_index: 0,
+    explanation_en: "When one cultural group adopts elements of another culture due to contact, leading to adaptive changes in its entire way of life, this process is known as 'पर-संस्कृतिकरण' (acculturation).",
+    explanation_hi: "When one cultural group adopts elements of another culture due to contact, leading to adaptive changes in its entire way of life, this process is known as 'पर-संस्कृतिकरण' (acculturation)."
+  },
+  {
+    question_en: "Ogburn has termed the situation of material culture moving ahead in the society and non-material culture being left behind -",
+    question_hi: "समाज में भौतिक संस्कृति के आगे बढ़ जाने और अभौतिक संस्कृति के पीछे रह जाने की स्थिति को ऑगबर्न ने संज्ञा दी है-",
+    options_en: [
+      "lagging behind non-material culture",
+      "backwardness of civilization",
+      "cultural",
+      "cultural competition"
+    ],
+    options_hi: [
+      "अभौतिक संस्कृति का पिछड़ना",
+      "सभ्यता का पिछड़ना",
+      "सांस्कृतिक विलम्बना",
+      "सांस्कृतिक प्रतिस्पर्धा"
+    ],
+    correct_option_index: 2,
+    explanation_en: "William F. Ogburn coined the term 'सांस्कृतिक विलम्बना' (cultural lag) to describe the situation where non-material culture lags behind the advancements of material culture.",
+    explanation_hi: "William F. Ogburn coined the term 'सांस्कृतिक विलम्बना' (cultural lag) to describe the situation where non-material culture lags behind the advancements of material culture."
+  },
+  {
+    question_en: "What is the conflict between two cultures called?",
+    question_hi: "दो संस्कृतियों के मध्य होने वाले टकराहट को निम्न में क्या कहा जाता है?",
+    options_en: [
+      "cultural conflict",
+      "cultural resistance",
+      "Cultural understanding",
+      "cultural disharmony"
+    ],
+    options_hi: [
+      "सांस्कृतिक संघर्ष",
+      "सांस्कृतिक प्रतिरोध",
+      "सांस्कृतिक समंजस",
+      "सांस्कृतिक असामंजस्य"
+    ],
+    correct_option_index: 0,
+    explanation_en: "The clash or conflict between two cultures is referred to as 'cultural conflict'.",
+    explanation_hi: "The clash or conflict between two cultures is referred to as 'सांस्कृतिक संघर्ष' (cultural conflict)."
+  },
+  {
+    question_en: "Who among the following propounded the concepts of technological delay, technological resistance, cultural conflict and cultural incompatibility?",
+    question_hi: "प्रौद्योगिक विलम्बना, प्रौद्योगिक प्रतिरोध, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता की अवधारणाओं का प्रतिपादन निम्न में कौन है?",
+    options_en: [
+      "ऑगबर्न",
+      "मैकाइवर",
+      "Max Weber",
+      "Malin"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "मैकाइवर",
+      "मैक्स वेबर",
+      "मालिन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "R.M. MacIver, in his comprehensive works on society, discussed various aspects of social and cultural change, including concepts related to technological lag, resistance, cultural conflict, and cultural inconsistency. (Note: While Ogburn is most famous for cultural lag, MacIver also contributed to the broader understanding of these dynamics).",
+    explanation_hi: "R.M. MacIver, in his comprehensive works on society, discussed various aspects of social and cultural change, including concepts related to technological lag, resistance, cultural conflict, and cultural inconsistency. (Note: While Ogburn is most famous for cultural lag, MacIver also contributed to the broader understanding of these dynamics)."
+  },
+  {
+    question_en: "Which of the following is a factor of socio-cultural change?",
+    question_hi: "निम्नलिखित में से कौन-सा सामाजिक-सांस्कृतिक परिवर्तन का कारक है?",
+    options_en: [
+      "spread",
+      "transfer",
+      "Personal mobility",
+      "money science"
+    ],
+    options_hi: [
+      "प्रसार",
+      "स्थानान्तरण",
+      "वैयक्तिक गतिशीलता",
+      "धन-विज्ञान"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Diffusion (प्रसार) is a major cultural factor that drives social and cultural change, as ideas, innovations, and practices spread from one group or society to another.",
+    explanation_hi: "Diffusion (प्रसार) is a major cultural factor that drives social and cultural change, as ideas, innovations, and practices spread from one group or society to another."
+  },
+  {
+    question_en: "\"Social movements are not merely the result of cultural delay.\" Who has criticized Ogburn's theory of cultural delay?",
+    question_hi: "\"सामाजिक आन्दोलन केवल सांस्कृतिक विलम्बना का ही परिणाम नहीं है।\" ऑगबर्न के सांस्कृतिक विलम्बना के सिद्धान्त की यह आलोचना किसने की है?",
+    options_en: [
+      "sorokin",
+      "maciver",
+      "merton",
+      "darwin"
+    ],
+    options_hi: [
+      "सोरोkin",
+      "मैकाइवर",
+      "मर्टन",
+      "डार्विन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "Robert K. Merton, among others, criticized Ogburn's cultural lag theory, arguing that social movements and change are not solely a result of cultural lag but involve more complex factors.",
+    explanation_hi: "Robert K. Merton, among others, criticized Ogburn's cultural lag theory, arguing that social movements and change are not solely a result of cultural lag but involve more complex factors."
+  },
+  {
+    question_en: "Who among the following made the spread of cultural elements an important factor in social change?",
+    question_hi: "निम्न में से किसने सांस्कृतिक तत्वों के प्रसार को सामाजिक परिवर्तन का महत्त्वपूर्ण कारक बनाया?",
+    options_en: [
+      "sociologists",
+      "historians",
+      "anthropologists",
+      "the rationalists"
+    ],
+    options_hi: [
+      "समाजशास्त्रीयों ने",
+      "इतिहासकारों ने",
+      "मानवशास्त्रियों ने",
+      "बुद्धिवादिवादियों ने"
+    ],
+    correct_option_index: 2,
+    explanation_en: "Anthropologists (मानवशास्त्रियों ने) have extensively studied and emphasized cultural diffusion (प्रसार) as a significant factor in social and cultural change, particularly in understanding how cultures interact and evolve.",
+    explanation_hi: "Anthropologists (मानवशास्त्रियों ने) have extensively studied and emphasized cultural diffusion (प्रसार) as a significant factor in social and cultural change, particularly in understanding how cultures interact and evolve."
+  },
+  {
+    question_en: "The entire social structure of social change is implicit in-",
+    question_hi: "सामाजिक परिवर्तन का सम्पूर्ण सामाजिक ढाँचा एक प्रकार से निहित है-",
+    options_en: [
+      "in genetic variation",
+      "in geographical change",
+      "in social change",
+      "in demographic change"
+    ],
+    options_hi: [
+      "आनुवंशिक परिवर्तन में",
+      "भौगोलिक परिवर्तन में",
+      "सामाजिक परिवर्तन में",
+      "जनांकिक परिवर्तन में"
+    ],
+    correct_option_index: 2,
+    explanation_en: "The entire social structure is inherently involved in social change itself. Social change refers to transformations within the social structure, organization, and institutions.",
+    explanation_hi: "The entire social structure is inherently involved in social change itself. Social change refers to transformations within the social structure, organization, and institutions."
+  },
 ];
 
 

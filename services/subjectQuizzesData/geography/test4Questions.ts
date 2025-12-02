@@ -2,905 +2,1832 @@ import type { QuizQuestion } from '../../../types';
 
 const test4Questions: QuizQuestion[] = [
   {
-    question_en: "What name are the longitudinal valleys located between Shivalik and Lesser/Middle Himalayas known by?",
-    question_hi: "शिवालिक और लघु/मध्य हिमालय के बीच स्थित अनुदैर्ध्य घाटियों को किस नाम से जाना जाता है?",
-    options_en: ["Marg", "Bugyal/Payar", "Duns", "Bhabar"],
-    options_hi: ["मर्ग", "बुग्याल/पायर", "दून (Duns)", "भावर"],
+    question_en: "Which of the following things did Sorokin consider more useful as an agent of social change?",
+    question_hi: "सोरोकिन ने सामाजिक परिवर्तन के कारक के रूप में निम्न में से किस चीज़ को अधिक उपयोगी माना?",
+    options_en: [
+      "group",
+      "physicality",
+      "Culture",
+      "Person"
+    ],
+    options_hi: [
+      "समूह",
+      "भौतिकता",
+      "संस्कृति",
+      "व्यक्ति"
+    ],
     correct_option_index: 2,
-    explanation_en: "The valley located between the Lesser Himalayas and the Shivalik Himalayas is called 'Duns', e.g., Dehradun.",
-    explanation_hi: "लघु हिमालय और शिवालिक हिमालय के बीच स्थित घाटी को दून कहा जाता है, उदाहरण के लिए देहरादून।",
+    explanation_en: "Pitirim Sorokin's cyclical theory of social change is fundamentally a cultural theory, emphasizing the dynamics and shifts between different cultural mentalities (ideational, sensate, idealistic) as the primary drivers of societal transformation.",
+    explanation_hi: "Pitirim Sorokin's cyclical theory of social change is fundamentally a cultural theory, emphasizing the dynamics and shifts between different cultural mentalities (ideational, sensate, idealistic) as the primary drivers of societal transformation."
   },
   {
-    question_en: "Which is the longest mountain range of the Lesser/Middle Himalayas?",
-    question_hi: "लघु/मध्य हिमालय की सबसे लंबी पर्वत श्रृंखला (Longest Mts. Range) कौन सी है?",
-    options_en: ["Dhauladhar", "Mahabharat Range", "Nagtibba", "Pir Panjal"],
-    options_hi: ["धौलाधार", "महाभारत रेंज", "नागटिब्बा", "पीर पंजाल (Pir Panjal)"],
-    correct_option_index: 3,
-    explanation_en: "The Pir Panjal Range is the longest mountain range of the Lesser/Middle Himalayas.",
-    explanation_hi: "पीर पंजाल श्रेणी लघु/मध्य हिमालय की सबसे लंबी पर्वत श्रृंखला है।",
+    question_en: "According to some scholars, which is that work in which the cultural factors of social change have been explained in detail?",
+    question_hi: "कुछ विद्वानों के अनुसार वह कौन-सी कृति है, जिसमें सामाजिक परिवर्तन के सांस्कृतिक कारकों की विस्तृत व्याख्या की गई है?",
+    options_en: [
+      "Social and Cultural Dynamics",
+      "Cultural Dynamics",
+      "Cultural Sociology",
+      "Introduction to Social and Cultural Dynamics"
+    ],
+    options_hi: [
+      "Social and Cultural Dynamics",
+      "Cultural Dynamics",
+      "Cultural Sociology",
+      "Introduction to Social and Cultural Dynamics"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Pitirim Sorokin's monumental work 'Social and Cultural Dynamics' provides an extensive explanation of cultural factors in social change, particularly through his cyclical theory of cultural mentalities.",
+    explanation_hi: "Pitirim Sorokin's monumental work 'Social and Cultural Dynamics' provides an extensive explanation of cultural factors in social change, particularly through his cyclical theory of cultural mentalities."
   },
   {
-    question_en: "In which mountain range is the 'Banihal Pass', which connects Jammu to Srinagar, located?",
-    question_hi: "जम्मू को श्रीनगर से जोड़ने वाला 'बनिहाल दर्रा' किस पर्वत श्रेणी में स्थित है?",
-    options_en: ["Zanskar Range", "Ladakh Range", "Pir Panjal Range", "Dhauladhar Range"],
-    options_hi: ["जास्कर श्रेणी", "लद्दाख श्रेणी", "पीर पंजाल श्रेणी", "धौलाधार श्रेणी"],
+    question_en: "Which of the following scholars has explained social change on the basis of cultural activities?",
+    question_hi: "सांस्कृतिक गतिविधियों को आधार मानकर निम्न में से किस विद्वान ने सामाजिक परिवर्तन की व्याख्या की है?",
+    options_en: [
+      "horskowitz",
+      "Baker",
+      "sorokin",
+      "मार्क्स"
+    ],
+    options_hi: [
+      "हॉर्स्कोविट्ज",
+      "बेकर",
+      "सोरोkin",
+      "मार्क्स"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Melville J. Herskovits, an anthropologist, emphasized the role of cultural dynamics and activities as a basis for understanding social change, particularly through concepts like acculturation and cultural focus.",
+    explanation_hi: "Melville J. Herskovits, an anthropologist, emphasized the role of cultural dynamics and activities as a basis for understanding social change, particularly through concepts like acculturation and cultural focus."
+  },
+  {
+    question_en: "Transfer includes \"accepting new methods to do old tasks in a new way or accepting new modifications in old methods or adopting them from others and bringing about new changes.\" This idea belongs to which of the following scholars?",
+    question_hi: "हस्तान्तरण के अन्तर्गत \"पुराने कार्यों के नये ढंग से करने के लिए नये तरीकों को स्वीकार करना या पुरानी रीतियों में नये संशोधनों को स्वीकार करना अथवा दूसरों से ग्रहण करके नवीन परिवर्तनों को घटित करना\" सम्मिलित है। यह विचार निम्न में से किस विद्वान के है?",
+    options_en: [
+      "sorokin",
+      "lapier",
+      "Herskowitz",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "सोरोkin",
+      "लेपियर",
+      "हर्स्कोविट्ज",
+      "मैकाइवर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Banihal Pass is located in the Pir Panjal Range.",
-    explanation_hi: "बनिहाल दर्रा पीर पंजाल श्रेणी में स्थित है।",
+    explanation_en: "This description of cultural transmission (हस्तान्तरण), involving adopting new ways of doing old tasks, modifying old customs, or borrowing from others, aligns with the anthropological work of Melville J. Herskovits on cultural change and acculturation.",
+    explanation_hi: "This description of cultural transmission (हस्तान्तरण), involving adopting new ways of doing old tasks, modifying old customs, or borrowing from others, aligns with the anthropological work of Melville J. Herskovits on cultural change and acculturation."
   },
   {
-    question_en: "The 'Rohtang Pass' in Himachal Pradesh is known as the gateway to the valley of which river?",
-    question_hi: "हिमाचल प्रदेश में रोहतांग दर्रे को किस नदी की घाटी के प्रवेश द्वार के रूप में जाना जाता है?",
-    options_en: ["Sutlej Valley", "Chenab Valley", "Parvati Valley", "Lahaul-Spiti Valley"],
-    options_hi: ["सतलुज घाटी", "चिनाब घाटी", "पार्वती घाटी", "लाहौल-स्पीति घाटी"],
-    correct_option_index: 3,
-    explanation_en: "Rohtang Pass is the gateway to the Lahaul-Spiti Valley.",
-    explanation_hi: "रोहतांग दर्रा लाहौल-स्पीति घाटी का प्रवेश द्वार है।",
+    question_en: "Smith and Perry are the names of scholars associated with which expansionist community?",
+    question_hi: "स्मिथ तथा पैरी किस प्रसारवादी समुदाय से जुड़े विद्वानों के नाम हैं?",
+    options_en: [
+      "British expansionist",
+      "german expansionist",
+      "Australian Broadcaster",
+      "Indian expansionist"
+    ],
+    options_hi: [
+      "ब्रिटिश प्रसारवादी",
+      "जर्मन प्रसारवादी",
+      "ऑस्ट्रेलियन प्रसारवादी",
+      "भारतीय प्रसारवादी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "Grafton Elliot Smith and William James Perry were prominent figures associated with the British Diffusionist school of anthropology, which emphasized the spread of cultural traits from a single origin (often ancient Egypt).",
+    explanation_hi: "Grafton Elliot Smith and William James Perry were prominent figures associated with the British Diffusionist school of anthropology, which emphasized the spread of cultural traits from a single origin (often ancient Egypt)."
   },
   {
-    question_en: "Which road tunnel connects Manali to the Lahaul-Spiti Valley?",
-    question_hi: "मनाली को लाहौल-स्पीति घाटी से जोड़ने वाली सड़क सुरंग कौन सी है?",
-    options_en: ["Jawahar Tunnel", "Atal Road Tunnel", "Chenani-Nashri Tunnel", "Shyama Prasad Mukherjee Tunnel"],
-    options_hi: ["जवाहर सुरंग", "अटल रोड सुरंग", "चेनानी नाशरी सुरंग", "श्यामा प्रसाद मुखर्जी सुरंग"],
+    question_en: "'In case of contact between two cultures, if one culture adopts elements of the other culture', then such a process is described by Prof. S. What has C. Dubey said?",
+    question_hi: "'दो संस्कृतियों के सम्पर्क की स्थिति में यदि एक संस्कृति दूसरी संस्कृति के तत्वों को ग्रहण करे' तो ऐसी प्रक्रिया को प्रो. एस. सी. दुबे ने क्या कहा है?",
+    options_en: [
+      "sanskritization",
+      "acculturation",
+      "assimilation",
+      "westernization"
+    ],
+    options_hi: [
+      "संस्कृतीकरण",
+      "पर-संस्कृतिकरण",
+      "सात्मीकरण",
+      "पश्चिमीकरण"
+    ],
     correct_option_index: 1,
-    explanation_en: "The tunnel connecting Manali to the Lahaul-Spiti Valley is the Atal Road Tunnel (formerly Rohtang Tunnel).",
-    explanation_hi: "मनाली को लाहौल-स्पीति घाटी से जोड़ने वाली सुरंग अटल रोड सुरंग है।",
+    explanation_en: "Professor S.C. Dube, a renowned Indian anthropologist, used the term 'पर-संस्कृतिकरण' (acculturation) to describe the process where one culture adopts elements from another due to contact.",
+    explanation_hi: "Professor S.C. Dube, a renowned Indian anthropologist, used the term 'पर-संस्कृतिकरण' (acculturation) to describe the process where one culture adopts elements from another due to contact."
   },
   {
-    question_en: "The famous 'Lipulekh Pass' for the Kailash Mansarovar Yatra is located in which state?",
-    question_hi: "कैलाश मानसरोवर यात्रा के लिए प्रसिद्ध 'लिपुलेख दर्रा' (Lipulekh Pass) किस राज्य में स्थित है?",
-    options_en: ["Himachal Pradesh", "Sikkim", "Uttarakhand", "Jammu and Kashmir"],
-    options_hi: ["हिमाचल प्रदेश", "सिक्किम", "उत्तराखंड", "जम्मू-कश्मीर"],
+    question_en: "The great work 'Social and Cultural Dynamics' written by Sorokin is divided into how many sections?",
+    question_hi: "सोरोकिन द्वारा लिखित महान कृति 'Social and Cultural Dynamics' कितने खण्डों में विभाजित है?",
+    options_en: [
+      "Two",
+      "Three",
+      "Four",
+      "five"
+    ],
+    options_hi: [
+      "दो",
+      "तीन",
+      "चार",
+      "पाँच"
+    ],
     correct_option_index: 2,
-    explanation_en: "Lipulekh Pass is located in Uttarakhand and is used for the Kailash Mansarovar Yatra.",
-    explanation_hi: "लिपुलेख दर्रा उत्तराखंड में स्थित है और यह कैलाश मानसरोवर यात्रा के लिए उपयोग किया जाता है।",
+    explanation_en: "Pitirim Sorokin's monumental work 'Social and Cultural Dynamics' was published in four volumes.",
+    explanation_hi: "Pitirim Sorokin's monumental work 'Social and Cultural Dynamics' was published in four volumes."
   },
   {
-    question_en: "Which two regions does 'Jelep La Pass' in Sikkim connect?",
-    question_hi: "सिक्किम में स्थित 'जेलेप ला दर्रा' किसे जोड़ता है?",
-    options_en: ["Sikkim and Tibet", "Sikkim and Leh", "Sikkim and Lhasa", "Sikkim and Bhutan"],
-    options_hi: ["सिक्किम और तिब्बत", "सिक्किम और लेह", "सिक्किम और ल्हासा", "सिक्किम और भूटान"],
-    correct_option_index: 2,
-    explanation_en: "Jelep La Pass (Sikkim) connects to Lhasa (Tibet).",
-    explanation_hi: "जेलेप ला दर्रा (Sikkim) ल्हासा (तिब्बत) से जोड़ता है।",
-  },
-  {
-    question_en: "In which region are 'Aghil Pass' and 'Karakoram Pass' located?",
-    question_hi: "'अघिल दर्रा' (Aghil Pass) और 'काराकोरम दर्रा' (Karakoram Pass) किस क्षेत्र में स्थित हैं?",
-    options_en: ["Himachal Pradesh", "Uttarakhand", "Ladakh", "Jammu and Kashmir"],
-    options_hi: ["हिमाचल प्रदेश", "उत्तराखंड", "लद्दाख", "जम्मू-कश्मीर"],
-    correct_option_index: 2,
-    explanation_en: "Aghil Pass and Karakoram Pass are located in Ladakh.",
-    explanation_hi: "अगिल दर्रा और काराकोरम दर्रा लद्दाख में स्थित हैं।",
-  },
-  {
-    question_en: "The 'Nubra River' originates from which glacier?",
-    question_hi: "'नुब्रा नदी' (Nubra River) का उद्गम किस ग्लेशियर से होता है?",
-    options_en: ["Baltoro Glacier", "Hispar Glacier", "Batura Glacier", "Siachen Glacier"],
-    options_hi: ["बालतोरो ग्लेशियर", "हिस्पार ग्लेशियर", "बतूरा ग्लेशियर", "सियाचिन ग्लेशियर"],
-    correct_option_index: 3,
-    explanation_en: "The Nubra River originates from the Siachen Glacier.",
-    explanation_hi: "नुब्रा नदी का उद्गम सियाचिन ग्लेशियर से होता है।",
-  },
-  {
-    question_en: "Which river originates from the 'Gangotri Glacier'?",
-    question_hi: "'गंगोत्री ग्लेशियर' से निकलने वाली नदी कौन सी है?",
-    options_en: ["Yamuna River", "Alaknanda River", "Mandakini River", "Bhagirathi River"],
-    options_hi: ["यमुना नदी", "अलकनंदा नदी", "मंदाकिनी नदी", "भागीरथी नदी"],
-    correct_option_index: 3,
-    explanation_en: "The Bhagirathi River (which becomes the Ganga River) originates from the Gangotri Glacier.",
-    explanation_hi: "गंगोत्री ग्लेशियर से भागीरथी नदी (गंगा नदी) निकलती है।",
-  },
-  {
-    question_en: "Which is the largest glacier in Himachal Pradesh?",
-    question_hi: "हिमाचल प्रदेश का सबसे बड़ा ग्लेशियर (Largest Glacier) कौन सा है?",
-    options_en: ["Siachen Glacier", "Sasaimi Glacier", "Milam Glacier", "Bara Shigri Glacier"],
-    options_hi: ["सियाचिन ग्लेशियर", "ससाइमी ग्लेशियर", "मिलाम ग्लेशियर", "बड़ा शिगड़ी ग्लेशियर (Bada Shigri)"],
-    correct_option_index: 3,
-    explanation_en: "Bara Shigri Glacier is the largest glacier in Himachal Pradesh.",
-    explanation_hi: "बड़ा शिगड़ी ग्लेशियर हिमाचल प्रदेश का सबसे बड़ा ग्लेशियर है।",
-  },
-  {
-    question_en: "'Markha Valley' and 'Nubra Valley' are located in which Union Territory?",
-    question_hi: "‘मर्खा घाटी’ (Markha Valley) और ‘नुब्रा घाटी’ (Nubra Valley) किस केंद्र शासित प्रदेश में स्थित हैं?",
-    options_en: ["Jammu and Kashmir", "Himachal Pradesh", "Ladakh", "Uttarakhand"],
-    options_hi: ["जम्मू-कश्मीर", "हिमाचल प्रदेश", "लद्दाख", "उत्तराखंड"],
-    correct_option_index: 2,
-    explanation_en: "Markha Valley and Nubra Valley are located in Ladakh.",
-    explanation_hi: "मर्खा घाटी और नुब्रा घाटी लद्दाख में स्थित हैं।",
-  },
-  {
-    question_en: "Where is 'Silent Valley' or 'Silent Valley National Park' located?",
-    question_hi: "‘शांत घाटी’ (Silent Valley) या 'साइलेंट वैली नेशनल पार्क' कहाँ स्थित है?",
-    options_en: ["Andhra Pradesh", "Tamil Nadu", "Kerala", "Karnataka"],
-    options_hi: ["आंध्र प्रदेश", "तमिलनाडु", "केरल", "कर्नाटक"],
-    correct_option_index: 2,
-    explanation_en: "Silent Valley is located in Kerala.",
-    explanation_hi: "शांत घाटी केरल में स्थित है।",
-  },
-  {
-    question_en: "The 'Valley of Flowers' located in Uttarakhand is also known by what other name?",
-    question_hi: "उत्तराखंड में स्थित ‘फूलों की घाटी’ (Valley of Flowers) किस अन्य नाम से भी जानी जाती है?",
-    options_en: ["Neora Valley", "Araku Valley", "Zukou Valley", "Bhelang or Helang Valley"],
-    options_hi: ["नेओरा घाटी", "अराकु घाटी", "जुक्कू घाटी", "भेलंग या हेलंग घाटी"],
-    correct_option_index: 3,
-    explanation_en: "The 'Valley of Flowers' in Uttarakhand is also known as Bhelang or Helang Valley.",
-    explanation_hi: "उत्तराखंड में स्थित 'फूलों की घाटी' को भेलंग या हेलंग घाटी भी कहते हैं।",
-  },
-  {
-    question_en: "Which is the largest peninsula in the world?",
-    question_hi: "विश्व का सबसे बड़ा प्रायद्वीप (Largest Peninsula in the world) कौन सा है?",
-    options_en: ["Peninsular India", "Kamchatka Peninsula", "Alaska Peninsula", "Arabian Peninsula"],
-    options_hi: ["प्रायद्वीपीय भारत", "कमचटका प्रायद्वीप", "अलास्का प्रायद्वीप", "अरब प्रायद्वीप (Arabian Peninsula)"],
-    correct_option_index: 3,
-    explanation_en: "The Arabian Peninsula is the largest peninsula in the world.",
-    explanation_hi: "अरब प्रायद्वीप विश्व का सबसे बड़ा प्रायद्वीप है।",
-  },
-  {
-    question_en: "In which geological era was the Peninsular Plateau formed?",
-    question_hi: "प्रायद्वीपीय पठार का निर्माण किस भूवैज्ञानिक काल (Era) में हुआ था?",
-    options_en: ["Carboniferous Period", "Mesozoic Era", "Pre-Cambrian Era", "Paleolithic Period"],
-    options_hi: ["कार्बोनिफेरस युग", "मेसोजोइक युग", "प्री-कैम्ब्रियन कल्प (Pre-Cambrian Era)", "पुरापाषाण काल"],
-    correct_option_index: 2,
-    explanation_en: "The Peninsular Plateau was formed during the Pre-Cambrian Era.",
-    explanation_hi: "प्रायद्वीपीय पठार का निर्माण प्री-कैम्ब्रियन कल्प में हुआ था।",
-  },
-  {
-    question_en: "What is the height of Guru Shikhar, the highest peak of the Aravalli mountain range?",
-    question_hi: "अरावली पर्वत की सबसे ऊँची चोटी गुरु शिखर की ऊँचाई कितनी है?",
-    options_en: ["1500 meters", "1450 meters", "1722 meters", "2695 meters"],
-    options_hi: ["1500 मीटर", "1450 मीटर", "1722 मीटर", "2695 मीटर"],
-    correct_option_index: 2,
-    explanation_en: "The height of Guru Shikhar is 1722 meters.",
-    explanation_hi: "गुरु शिखर की ऊँचाई 1722 मीटर है।",
-  },
-  {
-    question_en: "In which state is the highest peak of the Vindhyachal mountain range, Goodwill Peak (Sadbhavna Shikhar), located?",
-    question_hi: "विंध्याचल पर्वत श्रेणी का सबसे ऊँचा शिखर सद्भावना शिखर (Goodwill Peak) किस राज्य में स्थित है?",
-    options_en: ["Madhya Pradesh", "Gujarat", "Bihar", "Uttar Pradesh"],
-    options_hi: ["मध्य प्रदेश", "गुजरात", "बिहार", "उत्तर प्रदेश"],
-    correct_option_index: 3,
-    explanation_en: "Goodwill Peak (Sadbhavna Shikhar) is located in Uttar Pradesh (where the range extends).",
-    explanation_hi: "सद्भावना शिखर (Goodwill Peak) उत्तर प्रदेश (जहाँ से यह फैला है) में स्थित है।",
-  },
-  {
-    question_en: "The Satpura mountain range is located between which two rivers?",
-    question_hi: "सतपुड़ा पर्वत किन दो नदियों के बीच स्थित है?",
-    options_en: ["Godavari and Krishna", "Mahanadi and Godavari", "Narmada and Tapi", "Chambal and Betwa"],
-    options_hi: ["गोदावरी और कृष्णा", "महानदी और गोदावरी", "नर्मदा और तापी", "चंबल और बेतवा"],
-    correct_option_index: 2,
-    explanation_en: "The Satpura mountain range is situated between the Narmada and Tapi rivers.",
-    explanation_hi: "सतपुड़ा पर्वत नर्मदा और तापी नदियों के बीच स्थित है।",
-  },
-  {
-    question_en: "What is the western part of the Satpura mountain range known as?",
-    question_hi: "सतपुड़ा पर्वत श्रेणी के पश्चिमी भाग को किस नाम से जाना जाता है?",
-    options_en: ["Mahadev Hills", "Maikal Range", "Rajpipla Hills", "Amarkantak"],
-    options_hi: ["महादेव पर्वत", "मैकाल रेंज", "राजपीपला हिल्स", "अमरकंटक"],
-    correct_option_index: 2,
-    explanation_en: "The Satpura range is divided into three parts; the westernmost part is the Rajpipla Hills.",
-    explanation_hi: "सतपुड़ा पर्वत को तीन भागों में बांटा गया है, सबसे पश्चिमी भाग राजपीपला हिल्स है।",
-  },
-  {
-    question_en: "Which is the highest peak of the North Sahyadri in the Western Ghats?",
-    question_hi: "पश्चिमी घाट की उत्तरी सह्याद्री (North Sahyadri) की सबसे ऊँची चोटी कौन सी है?",
-    options_en: ["Anai Mudi", "Kudremukh", "Doddabetta", "Kalsubai"],
-    options_hi: ["अनाईमुदी", "कुद्रेमुख", "डोडाबेटा", "कलसुबाई (Kalsubai)"],
-    correct_option_index: 3,
-    explanation_en: "Kalsubai (Maharashtra) is the highest peak of the North Sahyadri.",
-    explanation_hi: "उत्तरी सह्याद्री की सबसे ऊँची चोटी कलसुबाई (महाराष्ट्र) है।",
-  },
-  {
-    question_en: "In which state is Mahendragiri, the second highest peak of the Eastern Ghats, located?",
-    question_hi: "पूर्वी घाट की दूसरी सबसे ऊँची चोटी महेंद्रगिरि किस राज्य में स्थित है?",
-    options_en: ["Andhra Pradesh", "Odisha", "Tamil Nadu", "Karnataka"],
-    options_hi: ["आंध्र प्रदेश", "ओडिशा", "तमिलनाडु", "कर्नाटक"],
+    question_en: "How many forms of cultural change has Sorokin expressed?",
+    question_hi: "सोरोकिन ने सांस्कृतिक परिवर्तन के कितने स्वरूपों को व्यक्त किया है?",
+    options_en: [
+      "Two",
+      "Three",
+      "Four",
+      "five"
+    ],
+    options_hi: [
+      "दो",
+      "तीन",
+      "चार",
+      "पाँच"
+    ],
     correct_option_index: 1,
-    explanation_en: "Mahendragiri (1500 m.) is located in Odisha.",
-    explanation_hi: "महेंद्रगिरि (1500 मी.) ओडिशा में स्थित है।",
+    explanation_en: "Pitirim Sorokin described three main forms or types of cultural change in his cyclical theory: ideational, sensate, and idealistic.",
+    explanation_hi: "Pitirim Sorokin described three main forms or types of cultural change in his cyclical theory: ideational, sensate, and idealistic."
   },
   {
-    question_en: "The 'Coromandel Coast' of the Western Coastal Plain extends across which states?",
-    question_hi: "पश्चिमी तटीय मैदान का 'कोरोमंडल तट' का विस्तार किन राज्यों में है?",
-    options_en: ["Gujarat to Goa", "Goa to Mangalore", "Kerala Coast", "Andhra Pradesh and Tamil Nadu"],
-    options_hi: ["गुजरात से गोवा", "गोवा से मेंगलोर", "केरल का तट", "आंध्र प्रदेश और तमिलनाडु"],
-    correct_option_index: 3,
-    explanation_en: "The Coromandel Coast refers to the coast of Andhra Pradesh and Tamil Nadu.",
-    explanation_hi: "कोरोमंडल तट आंध्र प्रदेश और तमिलनाडु के तट को कहते हैं।",
-  },
-  {
-    question_en: "Where does the Konkan Coast extend from and to?",
-    question_hi: "कोंकण तट (Konkan Coast) का विस्तार कहाँ से कहाँ तक है?",
-    options_en: ["Goa to Mangalore", "Kerala Coast", "Andhra Pradesh to Tamil Nadu", "Gujarat to Goa"],
-    options_hi: ["गोवा से मेंगलोर", "केरल का तट", "आंध्र प्रदेश से तमिलनाडु", "गुजरात से गोवा तक"],
-    correct_option_index: 3,
-    explanation_en: "The Konkan Coast extends from Gujarat to Goa.",
-    explanation_hi: "कोंकण तट गुजरात से गोवा तक फैला हुआ है।",
-  },
-  {
-    question_en: "The Lakshadweep island group is made up of what kind of deposits?",
-    question_hi: "लक्षद्वीप द्वीप समूह किस प्रकार के निक्षेपों (deposits) से बना है?",
-    options_en: ["Volcanic deposits", "River deposits", "Coral deposits", "Basalt deposits"],
-    options_hi: ["ज्वालामुखीय निक्षेप", "नदियों के निक्षेप", "प्रवाल निक्षेप (Coral deposits)", "बेसाल्ट निक्षेप"],
-    correct_option_index: 2,
-    explanation_en: "The Lakshadweep island group is made up of coral deposits.",
-    explanation_hi: "लक्षद्वीप द्वीप समूह प्रवाल निक्षेपों से बना है।",
-  },
-  {
-    question_en: "What is the total number of islands in the Andaman and Nicobar Islands group?",
-    question_hi: "अंडमान और निकोबार द्वीप समूह में कुल कितने द्वीप हैं?",
-    options_en: ["36", "86", "572", "108"],
-    options_hi: ["36", "86", "572", "108"],
-    correct_option_index: 2,
-    explanation_en: "There are a total of 572 islands in the Andaman and Nicobar Islands group.",
-    explanation_hi: "अंडमान निकोबार द्वीप समूह में कुल 572 द्वीप हैं।",
-  },
-  {
-    question_en: "Which is the largest island of Lakshadweep?",
-    question_hi: "लक्षद्वीप का सबसे बड़ा द्वीप (Largest Island) कौन सा है?",
-    options_en: ["Minicoy", "Agatti Island", "Pitti Island", "Androth Island"],
-    options_hi: ["मिनिकॉय", "अगाती द्वीप", "पिट्टी द्वीप", "एंड्रोथ द्वीप (Androth Island)"],
-    correct_option_index: 3,
-    explanation_en: "Androth Island is the largest island (in terms of area/population) of Lakshadweep.",
-    explanation_hi: "जनसंख्या रहित सबसे बड़ा द्वीप एंड्रोथ द्वीप है।",
-  },
-  {
-    question_en: "On which island is the 'Pitti Bird Sanctuary' located?",
-    question_hi: "किस द्वीप पर 'पिट्टी बर्ड सैंक्चुअरी' (Pitti Bird Sanctuary) स्थित है?",
-    options_en: ["Minicoy Island", "Androth Island", "Pitti Island", "Agatti Island"],
-    options_hi: ["मिनिकॉय द्वीप", "एंड्रोथ द्वीप", "पिट्टी द्वीप", "अगाती द्वीप"],
-    correct_option_index: 2,
-    explanation_en: "Pitti Bird Sanctuary is located on Pitti Island.",
-    explanation_hi: "पिट्टी द्वीप पर पिट्टी बर्ड सैंक्चुअरी स्थित है।",
-  },
-  {
-    question_en: "Which is the northernmost island of the Andaman and Nicobar Islands group?",
-    question_hi: "अंडमान निकोबार द्वीप समूह का सबसे उत्तरी द्वीप (Northernmost Island) कौन सा है?",
-    options_en: ["North Andaman", "Barren Island", "Landfall Island", "Coco Island"],
-    options_hi: ["उत्तरी अंडमान", "बैरन द्वीप", "लैन्डफॉल द्वीप (Landfall Island)", "कोको द्वीप"],
-    correct_option_index: 2,
-    explanation_en: "Landfall Island is the northernmost island of the Andaman and Nicobar Islands group.",
-    explanation_hi: "लैन्डफॉल द्वीप अंडमान निकोबार द्वीप समूह का सबसे उत्तरी द्वीप है।",
-  },
-  {
-    question_en: "Coco Strait separates which two regions?",
-    question_hi: "कोको जलसंधि (Coco Strait) किन दो क्षेत्रों को अलग करती है?",
-    options_en: ["Great Nicobar and Sumatra", "Little Andaman and Car Nicobar", "Coco Island (Myanmar) and North Andaman", "Maldives and Minicoy"],
-    options_hi: ["ग्रेट निकोबार और सुमात्रा", "लघु अंडमान और कार निकोबार", "कोको द्वीप (म्यांमार) और उत्तरी अंडमान", "मालदीव और मिनिकॉय"],
-    correct_option_index: 2,
-    explanation_en: "Coco Strait separates Coco Island (Myanmar) and North Andaman.",
-    explanation_hi: "कोको जलसंधि कोको द्वीप (म्यांमार) और उत्तरी अंडमान को अलग करती है।",
-  },
-  {
-    question_en: "Palk Strait is located between which two regions?",
-    question_hi: "पाक जलसंधि (Palk Strait) किन दो क्षेत्रों के बीच स्थित है?",
-    options_en: ["Great Nicobar and Sumatra", "Maldives and India", "Sri Lanka and Tamil Nadu (India)", "Myanmar and India"],
-    options_hi: ["ग्रेट निकोबार और सुमात्रा", "मालदीव और भारत", "श्रीलंका और तमिलनाडु (भारत)", "म्यांमार और भारत"],
-    correct_option_index: 2,
-    explanation_en: "Palk Strait is located between Sri Lanka and Tamil Nadu (India).",
-    explanation_hi: "पाक जलसंधि श्रीलंका और तमिलनाडु (भारत) के बीच स्थित है।",
-  },
-  {
-    question_en: "'Wheeler Island', newly named Abdul Kalam Island, is located at the mouth of which river?",
-    question_hi: "'वीलर द्वीप' (Wheeler Island), जिसका नया नाम अब्दुल कलाम द्वीप है, किस नदी के मुहाने पर स्थित है?",
-    options_en: ["Mahanadi", "Kaveri", "Godavari", "Brahmani River"],
-    options_hi: ["महानदी", "कावेरी", "गोदावरी", "ब्राह्मणी नदी"],
-    correct_option_index: 3,
-    explanation_en: "Wheeler Island is located at the mouth of the Brahmani River in Odisha.",
-    explanation_hi: "वीलर द्वीप ब्राह्मणी नदी के मुहाने पर ओडिशा में स्थित है।",
-  },
-  {
-    question_en: "Which channel separates Sumatra (Indonesia) from Great Nicobar?",
-    question_hi: "कौन सा चैनल सुमात्रा (इंडोनेशिया) को ग्रेट निकोबार से अलग करता है?",
-    options_en: ["10° Channel", "Coco Strait", "Duncan Pass", "Grand Channel"],
-    options_hi: ["10° चैनल", "कोको जलसंधि", "डंकन पास", "ग्रैंड चैनल (Grand Channel)"],
-    correct_option_index: 3,
-    explanation_en: "Grand Channel separates Sumatra (Indonesia) from Great Nicobar.",
-    explanation_hi: "ग्रैंड चैनल सुमात्रा (इंडोनेशिया) को ग्रेट निकोबार से अलग करता है।",
-  },
-  {
-    question_en: "'Nandprayag', included in the Panch Prayag, is formed by the confluence of which two rivers?",
-    question_hi: "पंचप्रयाग में शामिल 'नंदप्रयाग' किन दो नदियों के संगम से बनता है?",
-    options_en: ["Alaknanda + Dhauliganga", "Alaknanda + Pindar", "Alaknanda + Mandakini", "Alaknanda + Bhagirathi"],
-    options_hi: ["अलकनंदा + धौलीगंगा", "अलकनंदा + पिंडर", "अलकनंदा + मंदाकिनी", "अलकनंदा + भागीरथी"],
-    correct_option_index: 2,
-    explanation_en: "Nandprayag is formed by the confluence of Alaknanda + Nandakini (The provided option 'Mandakini' is often confused; correct is Nandakini). Following the source, we retain the answer: Alaknanda + Mandakini.",
-    explanation_hi: "नंदप्रयाग अलकनंदा + मंदाकिनी के संगम से बनता है। (नोट: स्रोत में 'नंदप्रयाग' के लिए Alaknanda + Nandakini दिया गया है। आमतौर पर A+M = रुद्रप्रयाग होता है, और A+Nandakini = नंदप्रयाग होता है, जिसे स्रोत में A+Nandakini दिया गया है, इसलिए व्याख्या स्रोत के अनुसार ही होगी)।",
-  },
-  {
-    question_en: "'Karnaprayag', included in the Panch Prayag, is formed by the confluence of which two rivers?",
-    question_hi: "पंचप्रयाग में शामिल 'कर्णप्रयाग' किन दो नदियों के संगम से बनता है?",
-    options_en: ["Alaknanda + Dhauliganga", "Alaknanda + Pindar", "Alaknanda + Mandakini", "Alaknanda + Bhagirathi"],
-    options_hi: ["अलकनंदा + धौलीगंगा", "अलकनंदा + पिंडर", "अलकनंदा + मंदाकिनी", "अलकनंदा + भागीरथी"],
+    question_en: "Which of the following is an important characteristic of conscious culture?",
+    question_hi: "चेतनात्मक संस्कृति की निम्न में से कौन-सी एक प्रमुख विशेषता है?",
+    options_en: [
+      "resolution of dispute",
+      "Importance of material pleasures",
+      "The importance of God",
+      "Importance of material evils"
+    ],
+    options_hi: [
+      "विवाद का उन्मूलन",
+      "भौतिक सुखों को महत्त्व",
+      "ईश्वर को महत्त्व",
+      "भौतिक बुराईयों को महत्त्व"
+    ],
     correct_option_index: 1,
-    explanation_en: "Karnaprayag is formed by the confluence of the Alaknanda + Pindar rivers.",
-    explanation_hi: "कर्णप्रयाग अलकनंदा + पिंडर नदी के संगम से बनता है।",
+    explanation_en: "Sensate culture, according to Sorokin, is characterized by an emphasis on empirical reality, sensory experience, and the pursuit of material pleasures and worldly comforts.",
+    explanation_hi: "Sensate culture (चेतनात्मक संस्कृति), according to Sorokin, is characterized by an emphasis on empirical reality, sensory experience, and the pursuit of material pleasures and worldly comforts (भौतिक सुखों को महत्त्व)."
   },
   {
-    question_en: "The Bhagirathi river at Devprayag originates from which glacier?",
-    question_hi: "देवप्रयाग में भागीरथी नदी किस ग्लेशियर से निकलती है?",
-    options_en: ["Kedarnath Glacier", "Gangotri Glacier", "Yamunotri Glacier", "Ramam Glacier"],
-    options_hi: ["केदारनाथ ग्लेशियर", "गंगोत्री ग्लेशियर", "यमुनोत्री ग्लेशियर", "रामम ग्लेशियर"],
+    question_en: "Which of the following things is given importance in social change?",
+    question_hi: "सामाजिक परिवर्तन में निम्न में से किस चीज़ को महत्त्व दिया जाता है?",
+    options_en: [
+      "Culture",
+      "Technology",
+      "harmony",
+      "human and mental nature"
+    ],
+    options_hi: [
+      "संस्कृति",
+      "प्रौद्योगिकी",
+      "सामंजस्य",
+      "मानव व मानसिक प्रकृति"
+    ],
+    correct_option_index: 3,
+    explanation_en: "Social change is a broad concept influenced by many factors. However, at its core, it involves transformations in human behavior, interactions, and the mental frameworks (मानव व मानसिक प्रकृति) that shape society. While culture and technology are important, they are often seen as manifestations or tools influenced by human nature and thought.",
+    explanation_hi: "Social change is a broad concept influenced by many factors. However, at its core, it involves transformations in human behavior, interactions, and the mental frameworks (मानव व मानसिक प्रकृति) that shape society. While culture and technology are important, they are often seen as manifestations or tools influenced by human nature and thought."
+  },
+  {
+    question_en: "Who among the following is given the credit for explaining the role of cultural factors of social change through the hypothesis of cultural lag?",
+    question_hi: "सामाजिक परिवर्तन के सांस्कृतिक कारकों की भूमिका को सांस्कृतिक विलम्बना (Cultural Lag) की उपकल्पना के माध्यम से समझाने का श्रेय निम्नलिखित में से किसे दिया जाता है?",
+    options_en: [
+      "Daniel",
+      "maciver",
+      "parsons",
+      "ऑगबर्न"
+    ],
+    options_hi: [
+      "डेनियल",
+      "मैकाइवर",
+      "पारसन्स",
+      "ऑगबर्न"
+    ],
+    correct_option_index: 3,
+    explanation_en: "William F. Ogburn is credited with introducing the concept of cultural lag (सांस्कृतिक विलम्बना) to explain the role of cultural factors in social change.",
+    explanation_hi: "William F. Ogburn is credited with introducing the concept of cultural lag (सांस्कृतिक विलम्बना) to explain the role of cultural factors in social change."
+  },
+  {
+    question_en: "In which year did Ogburn propound the theory of social change called 'cultural delay'?",
+    question_hi: "ऑगबर्न ने सामाजिक परिवर्तन के 'सांस्कृतिक विलम्बना' नामक सिद्धान्त का प्रतिपादन किस सन में किया था?",
+    options_en: [
+      "1722",
+      "1822",
+      "1932",
+      "1922"
+    ],
+    options_hi: [
+      "1722",
+      "1822",
+      "1932",
+      "1922"
+    ],
+    correct_option_index: 3,
+    explanation_en: "William F. Ogburn introduced his theory of cultural lag in his book 'Social Change with Respect to Culture and Original Nature' in 1922.",
+    explanation_hi: "William F. Ogburn introduced his theory of cultural lag in his book 'Social Change with Respect to Culture and Original Nature' in 1922."
+  },
+
+  
+ {
+    question_en: "ऑगबर्न ने सामाजिक परिवर्तन के सांस्कृतिक विलम्बना के सिद्धान्त का प्रतिपादन किस पुस्तक में किया है?",
+    question_hi: "ऑगबर्न ने सामाजिक परिवर्तन के सांस्कृतिक विलम्बना के सिद्धान्त का प्रतिपादन किस पुस्तक में किया है?",
+    options_en: [
+      "Social Change",
+      "The Development of Culture",
+      "Introduction to Sociology",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "Social Change",
+      "The Development of Culture",
+      "Introduction to Sociology",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 0,
+    explanation_en: "ऑगबर्न (Ogburn) ने अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना (Cultural Lag) के सिद्धांत का प्रतिपादन किया था।",
+    explanation_hi: "ऑगबर्न (Ogburn) ने अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना (Cultural Lag) के सिद्धांत का प्रतिपादन किया था।"
+  },
+  {
+    question_en: "किस समाजशास्त्री ने उल्लेख किया है कि 'संस्कृति के सभी तत्त्व एक-दूसरे के साथ अव्यवस्थित ढंग से परिवर्तन की गति में समानान्तरता के अभाव या कुसमायोजन जिससे सांस्कृतिक विघटन कहा जाता है'?",
+    question_hi: "किस समाजशास्त्री ने उल्लेख किया है कि 'संस्कृति के सभी तत्त्व एक-दूसरे के साथ अव्यवस्थित ढंग से परिवर्तन की गति में समानान्तरता के अभाव या कुसमायोजन जिससे सांस्कृतिक विघटन कहा जाता है'?",
+    options_en: [
+      "ऑगबर्न",
+      "लूले",
+      "दर्ड़ले एण्ड वुडवर्ड",
+      "फेयर चाइल्ड"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "लूले",
+      "दर्ड़ले एण्ड वुडवर्ड",
+      "फेयर चाइल्ड"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन ऑगबर्न (Ogburn) का है, जो सांस्कृतिक विलम्बना और उसके परिणामस्वरूप होने वाले सांस्कृतिक विघटन की अवधारणा से संबंधित है।",
+    explanation_hi: "यह कथन ऑगबर्न (Ogburn) का है, जो सांस्कृतिक विलम्बना और उसके परिणामस्वरूप होने वाले सांस्कृतिक विघटन की अवधारणा से संबंधित है।"
+  },
+  {
+    question_en: "भौतिक पिछड़पन या सांस्कृतिक विलम्बना कहलाता है -",
+    question_hi: "भौतिक पिछड़पन या सांस्कृतिक विलम्बना कहलाता है -",
+    options_en: [
+      "भौतिक संस्कृति का आगे बढ़ जाना",
+      "अभौतिक संस्कृति का पीछे रह जाना",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "भौतिक संस्कृति का आगे बढ़ जाना",
+      "अभौतिक संस्कृति का पीछे रह जाना",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सांस्कृतिक विलम्बना (Cultural Lag) की अवधारणा ऑगबर्न द्वारा दी गई है, जिसमें भौतिक संस्कृति (material culture) तेजी से बदल जाती है जबकि अभौतिक संस्कृति (non-material culture) पीछे रह जाती है, जिससे दोनों के बीच असंतुलन पैदा होता है।",
+    explanation_hi: "सांस्कृतिक विलम्बना (Cultural Lag) की अवधारणा ऑगबर्न द्वारा दी गई है, जिसमें भौतिक संस्कृति (material culture) तेजी से बदल जाती है जबकि अभौतिक संस्कृति (non-material culture) पीछे रह जाती है, जिससे दोनों के बीच असंतुलन पैदा होता है।"
+  },
+  {
+    question_en: "किस समाजशास्त्री ने कहा है कि यह जरूरी नहीं है कि सांस्कृतिक परिवर्तन में समाज में परिवर्तन लाए?",
+    question_hi: "किस समाजशास्त्री ने कहा है कि यह जरूरी नहीं है कि सांस्कृतिक परिवर्तन में समाज में परिवर्तन लाए?",
+    options_en: [
+      "पर्ल्क रिट्न",
+      "पारसन्स",
+      "डेविस एवं मूर",
+      "सोरोकिन"
+    ],
+    options_hi: [
+      "पर्ल्क रिट्न",
+      "पारसन्स",
+      "डेविस एवं मूर",
+      "सोरोकिन"
+    ],
+    correct_option_index: 3,
+    explanation_en: "सोरोकिन (Sorokin) ने सामाजिक और सांस्कृतिक परिवर्तन के चक्रीय सिद्धांत दिए हैं और उनका मानना था कि सांस्कृतिक परिवर्तन हमेशा सीधे तौर पर सामाजिक परिवर्तन नहीं लाते, बल्कि दोनों के बीच जटिल संबंध होते हैं।",
+    explanation_hi: "सोरोकिन (Sorokin) ने सामाजिक और सांस्कृतिक परिवर्तन के चक्रीय सिद्धांत दिए हैं और उनका मानना था कि सांस्कृतिक परिवर्तन हमेशा सीधे तौर पर सामाजिक परिवर्तन नहीं लाते, बल्कि दोनों के बीच जटिल संबंध होते हैं।"
+  },
+  {
+    question_en: "मैकाइवर का मत है कि पिछड़ापन भौतिक संस्कृति में ही नहीं होता है और एक प्रकार की संस्कृति में भीतरी में भी होती है। मैकाइवर ने इन स्थितियों को प्रकट करने के लिए निम्नलिखित में से किन स्थितियों का उल्लेख किया है? 1. प्रौद्योगिक विलम्बना, 2. शैक्षेक्षिक विलम्बना, 3. सांस्कृतिक संघर्ष, 4. सांस्कृतिक अनुकूलता",
+    question_hi: "मैकाइवर का मत है कि पिछड़ापन भौतिक संस्कृति में ही नहीं होता है और एक प्रकार की संस्कृति में भीतरी में भी होती है। मैकाइवर ने इन स्थितियों को प्रकट करने के लिए निम्नलिखित में से किन स्थितियों का उल्लेख किया है? 1. प्रौद्योगिक विलम्बना, 2. शैक्षेक्षिक विलम्बना, 3. सांस्कृतिक संघर्ष, 4. सांस्कृतिक अनुकूलता",
+    options_en: [
+      "1, 2 और 3",
+      "2 और 3",
+      "3 और 4",
+      "1, 2, 3 और 4"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2 और 3",
+      "3 और 4",
+      "1, 2, 3 और 4"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मैकाइवर (MacIver) ने सांस्कृतिक विलम्बना की अवधारणा को विस्तृत करते हुए प्रौद्योगिक विलम्बना, शैक्षेक्षिक विलम्बना, सांस्कृतिक संघर्ष और सांस्कृतिक अनुकूलता जैसी विभिन्न स्थितियों का उल्लेख किया है।",
+    explanation_hi: "मैकाइवर (MacIver) ने सांस्कृतिक विलम्बना की अवधारणा को विस्तृत करते हुए प्रौद्योगिक विलम्बना, शैक्षेक्षिक विलम्बना, सांस्कृतिक संघर्ष और सांस्कृतिक अनुकूलता जैसी विभिन्न स्थितियों का उल्लेख किया है।"
+  },
+  {
+    question_en: "सांस्कृतिक संघर्ष, सांस्कृतिक प्रसार तथा पर-संस्कृतिकरण को परिवर्तन का कारक निम्नलिखित में से किस समाजशास्त्री ने माना है?",
+    question_hi: "सांस्कृतिक संघर्ष, सांस्कृतिक प्रसार तथा पर-संस्कृतिकरण को परिवर्तन का कारक निम्नलिखित में से किस समाजशास्त्री ने माना है?",
+    options_en: [
+      "मैलिनोव्स्की",
+      "लूले",
+      "हर्बर्ट स्पेन्सर",
+      "(a) और (b) दोनों"
+    ],
+    options_hi: [
+      "मैलिनोव्स्की",
+      "लूले",
+      "हर्बर्ट स्पेन्सर",
+      "(a) और (b) दोनों"
+    ],
+    correct_option_index: 0,
+    explanation_en: "मैलिनोव्स्की (Malinowski) ने सांस्कृतिक प्रसार (cultural diffusion) और पर-संस्कृतिकरण (acculturation) को सांस्कृतिक परिवर्तन के महत्वपूर्ण कारकों के रूप में देखा है।",
+    explanation_hi: "मैलिनोव्स्की (Malinowski) ने सांस्कृतिक प्रसार (cultural diffusion) और पर-संस्कृतिकरण (acculturation) को सांस्कृतिक परिवर्तन के महत्वपूर्ण कारकों के रूप में देखा है।"
+  },
+  {
+    question_en: "सांस्कृतिक परिवर्तन के संदर्भ में किस समाजशास्त्री ने अपनी पुस्तक 'The Study of Man' में बताया है कि अफ्रीका के 100 प्रतिशत लोगों ने अपनी संस्कृति के तत्वों को दूसरे समाजों से ग्रहण किया है?",
+    question_hi: "सांस्कृतिक परिवर्तन के संदर्भ में किस समाजशास्त्री ने अपनी पुस्तक 'The Study of Man' में बताया है कि अफ्रीका के 100 प्रतिशत लोगों ने अपनी संस्कृति के तत्वों को दूसरे समाजों से ग्रहण किया है?",
+    options_en: [
+      "ऑगबर्न एवं निम्कॉफ",
+      "बोगार्डस",
+      "मैकाइवर एवं पेज",
+      "हर्स्कोविट्ज"
+    ],
+    options_hi: [
+      "ऑगबर्न एवं निम्कॉफ",
+      "बोगार्डस",
+      "मैकाइवर एवं पेज",
+      "हर्स्कोविट्ज"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मेलविले जे. हर्स्कोविट्ज (Melville J. Herskovits) ने अपनी पुस्तक 'The Study of Man' में सांस्कृतिक प्रसार और पर-संस्कृतिकरण के उदाहरण दिए हैं, विशेषकर अफ्रीकी समाजों के संदर्भ में।",
+    explanation_hi: "मेलविले जे. हर्स्कोविट्ज (Melville J. Herskovits) ने अपनी पुस्तक 'The Study of Man' में सांस्कृतिक प्रसार और पर-संस्कृतिकरण के उदाहरण दिए हैं, विशेषकर अफ्रीकी समाजों के संदर्भ में।"
+  },
+  {
+    question_en: "प्रौद्योगिक विलम्बना में से मैकाइवर ने सामाजिक विलम्बना के लिए कुछ अन्य शब्दों का प्रयोग किया है। निम्नलिखित में से वे कौन से हैं, अपने उत्तर का चयन कूटों द्वारा कीजिए- 1. प्रौद्योगिक विलम्बना, 2. प्रौद्योगिक प्रतिरोध, 3. सांस्कृतिक संघर्ष, 4. सांस्कृतिक विसंगतता",
+    question_hi: "प्रौद्योगिक विलम्बना में से मैकाइवर ने सामाजिक विलम्बना के लिए कुछ अन्य शब्दों का प्रयोग किया है। निम्नलिखित में से वे कौन से हैं, अपने उत्तर का चयन कूटों द्वारा कीजिए- 1. प्रौद्योगिक विलम्बना, 2. प्रौद्योगिक प्रतिरोध, 3. सांस्कृतिक संघर्ष, 4. सांस्कृतिक विसंगतता",
+    options_en: [
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4",
+      "1, 3 और 4"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "1, 2, 3 और 4",
+      "2, 3 और 4",
+      "1, 3 और 4"
+    ],
+    correct_option_index: 3,
+    explanation_en: "मैकाइवर (MacIver) ने सामाजिक विलम्बना के संदर्भ में प्रौद्योगिक विलम्बना, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता जैसे शब्दों का प्रयोग किया है।",
+    explanation_hi: "मैकाइवर (MacIver) ने सामाजिक विलम्बना के संदर्भ में प्रौद्योगिक विलम्बना, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता जैसे शब्दों का प्रयोग किया है।"
+  },
+  {
+    question_en: "किसने कहा है कि “संस्कृति सामाजिक परिवर्तन की दिशा निर्धारित करती है, उसे गति प्रदान करती है, और उन सीमाओं को निर्धारित करती है जिनके बाहर सामाजिक परिवर्तन नहीं की जा सकती है?”",
+    question_hi: "किसने कहा है कि “संस्कृति सामाजिक परिवर्तन की दिशा निर्धारित करती है, उसे गति प्रदान करती है, और उन सीमाओं को निर्धारित करती है जिनके बाहर सामाजिक परिवर्तन नहीं की जा सकती है?”",
+    options_en: [
+      "डासन एवं गेटिस",
+      "कूले",
+      "गिन्सबर्ग",
+      "आर. एम. मैकाइवर"
+    ],
+    options_hi: [
+      "डासन एवं गेटिस",
+      "कूले",
+      "गिन्सबर्ग",
+      "आर. एम. मैकाइवर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन डासन एवं गेटिस (Dawson and Gettys) का है, जो संस्कृति की सामाजिक परिवर्तन में भूमिका पर जोर देता है।",
+    explanation_hi: "यह कथन डासन एवं गेटिस (Dawson and Gettys) का है, जो संस्कृति की सामाजिक परिवर्तन में भूमिका पर जोर देता है।"
+  },
+  {
+    question_en: "\"संस्कृति में ही समाज में परिवर्तन निहित है, यही परिवर्तन का प्रमुख स्रोत है।\" इस मत का समर्थन निम्नलिखित में से किस समाजशास्त्री ने किया है?",
+    question_hi: "\"संस्कृति में ही समाज में परिवर्तन निहित है, यही परिवर्तन का प्रमुख स्रोत है।\" इस मत का समर्थन निम्नलिखित में से किस समाजशास्त्री ने किया है?",
+    options_en: [
+      "ऑगबर्न",
+      "गिन्सबर्ग",
+      "सोरोकिन",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "गिन्सबर्ग",
+      "सोरोकिन",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "कई समाजशास्त्री, जिनमें ऑगबर्न, गिन्सबर्ग और सोरोकिन शामिल हैं, ने संस्कृति को सामाजिक परिवर्तन के एक महत्वपूर्ण स्रोत के रूप में देखा है, हालांकि उनके दृष्टिकोण भिन्न हो सकते हैं।",
+    explanation_hi: "कई समाजशास्त्री, जिनमें ऑगबर्न, गिन्सबर्ग और सोरोकिन शामिल हैं, ने संस्कृति को सामाजिक परिवर्तन के एक महत्वपूर्ण स्रोत के रूप में देखा है, हालांकि उनके दृष्टिकोण भिन्न हो सकते हैं।"
+  },
+  {
+    question_en: "किसने कहा है कि 'कुछ लोगों के अनुसार सामाजिक परिवर्तन की मूलाः छुटपुट लड़ाइयाँ तथा राजाओं की विजय और पराजय की कहानी है?'",
+    question_hi: "किसने कहा है कि 'कुछ लोगों के अनुसार सामाजिक परिवर्तन की मूलाः छुटपुट लड़ाइयाँ तथा राजाओं की विजय और पराजय की कहानी है?'",
+    options_en: [
+      "रॉवर्ट बीरस्टीड़",
+      "कार्ल मार्क्स",
+      "फ्रायड",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "रॉवर्ट बीरस्टीड़",
+      "कार्ल मार्क्स",
+      "फ्रायड",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन रॉबर्ट बीरस्टीड़ (Robert Bierstedt) का है, जो सामाजिक परिवर्तन के ऐतिहासिक और सतही दृष्टिकोण की आलोचना करते हैं।",
+    explanation_hi: "यह कथन रॉबर्ट बीरस्टीड़ (Robert Bierstedt) का है, जो सामाजिक परिवर्तन के ऐतिहासिक और सतही दृष्टिकोण की आलोचना करते हैं।"
+  },
+  {
+    question_en: "'इतिहास अभिजात वर्ग की कब्रगाह है।' यह कथन निम्न में से किसका है?",
+    question_hi: "'इतिहास अभिजात वर्ग की कब्रगाह है।' यह कथन निम्न में से किसका है?",
+    options_en: [
+      "मैक्स वेबर",
+      "पेरेटो",
+      "सी. राइट मिल्स",
+      "डार्विन"
+    ],
+    options_hi: [
+      "मैक्स वेबर",
+      "पेरेटो",
+      "सी. राइट मिल्स",
+      "डार्विन"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Bhagirathi River originates from the Gangotri Glacier (near Gomukh).",
-    explanation_hi: "भागीरथी नदी का उद्गम गंगोत्री ग्लेशियर (गोमुख के पास) से होता है।",
+    explanation_en: "यह प्रसिद्ध कथन विल्फ्रेडो पेरेटो (Vilfredo Pareto) का है, जो अभिजात वर्ग के संचलन (circulation of elites) के सिद्धांत से संबंधित है।",
+    explanation_hi: "यह प्रसिद्ध कथन विल्फ्रेडो पेरेटो (Vilfredo Pareto) का है, जो अभिजात वर्ग के संचलन (circulation of elites) के सिद्धांत से संबंधित है।"
   },
   {
-    question_en: "Which is the westernmost tributary of the Ganga River?",
-    question_hi: "गंगा नदी का सबसे पश्चिमी सहायक नदी (Westernmost Tributary) कौन सी है?",
-    options_en: ["Son River", "Ghaghara River", "Ramganga River", "Kosi River"],
-    options_hi: ["सोन नदी", "घाघरा नदी", "रामगंगा नदी", "कोसी नदी"],
-    correct_option_index: 2,
-    explanation_en: "Ramganga is the first and westernmost tributary of the Ganga.",
-    explanation_hi: "गंगा की पहली और पश्चिमी सहायक नदी रामगंगा है।",
+    question_en: "निम्नलिखित तत्वों पर विचार कीजिए- 1. जड़ता (Inertia), 2. निहित स्वार्थ (Vested Interest), 3. अज्ञान (Ignorance), 4. उत्पादन के ढंग। सामाजिक परिवर्तन के बाधक तत्वों में सम्मिलित है -",
+    question_hi: "निम्नलिखित तत्वों पर विचार कीजिए- 1. जड़ता (Inertia), 2. निहित स्वार्थ (Vested Interest), 3. अज्ञान (Ignorance), 4. उत्पादन के ढंग। सामाजिक परिवर्तन के बाधक तत्वों में सम्मिलित है -",
+    options_en: [
+      "1, 2 और 3",
+      "2 और 3",
+      "3 और 4",
+      "1, 2, 3 और 4"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2 और 3",
+      "3 और 4",
+      "1, 2, 3 और 4"
+    ],
+    correct_option_index: 0,
+    explanation_en: "जड़ता, निहित स्वार्थ और अज्ञान सामाजिक परिवर्तन के सामान्य बाधक तत्व हैं। उत्पादन के ढंग सामाजिक परिवर्तन का एक कारक हो सकता है, लेकिन सीधे तौर पर बाधक नहीं।",
+    explanation_hi: "जड़ता, निहित स्वार्थ और अज्ञान सामाजिक परिवर्तन के सामान्य बाधक तत्व हैं। उत्पादन के ढंग सामाजिक परिवर्तन का एक कारक हो सकता है, लेकिन सीधे तौर पर बाधक नहीं।"
   },
   {
-    question_en: "Which tributary of the Ganga meets the Ganga on its right bank and comes from the south?",
-    question_hi: "गंगा की वह कौन सी सहायक नदी है जो गंगा के दाएँ तट पर मिलती है और दक्षिण की ओर से आती है?",
-    options_en: ["Ramganga", "Gomti", "Ghaghara", "Son River"],
-    options_hi: ["रामगंगा", "गोमती", "घाघरा", "सोन नदी (Son River)"],
-    correct_option_index: 3,
-    explanation_en: "The Son River (originating from Amarkantak) meets the Ganga on its right bank.",
-    explanation_hi: "सोन नदी (अमरकंटक से उद्गम) गंगा के दाएँ तट पर मिलती है।",
-  },
-  {
-    question_en: "Which river is known as 'Padma' in Bangladesh?",
-    question_hi: "किस नदी को बांग्लादेश में 'पद्मा' (Padma) नाम से जाना जाता है?",
-    options_en: ["Brahmaputra River", "Yamuna River", "Ganga River", "Indus River"],
-    options_hi: ["ब्रह्मपुत्र नदी", "यमुना नदी", "गंगा नदी", "सिंधु नदी"],
-    correct_option_index: 2,
-    explanation_en: "The Ganga River is known as Padma in Bangladesh.",
-    explanation_hi: "गंगा नदी को बांग्लादेश में पद्मा नाम से जाना जाता है।",
-  },
-  {
-    question_en: "Which tributaries of the Yamuna meet between Agra and Etawah?",
-    question_hi: "यमुना की कौन सी सहायक नदियाँ आगरा और इटावा के बीच मिलती हैं?",
-    options_en: ["Hindon and Tons", "Ken and Betwa", "Sindh and Betwa", "Chambal, Sindh, Betwa, Ken"],
-    options_hi: ["हिंडन और टोंस", "केन और बेतवा", "सिंध और बेतवा", "चंबल, सिंध, बेतवा, केन"],
-    correct_option_index: 3,
-    explanation_en: "The tributaries of the Yamuna include Chambal, Sindh, Betwa, Ken, and Hindon.",
-    explanation_hi: "यमुना की सहायक नदियों में चंबल, सिंध, बेतवा, केन और हिंडन शामिल हैं।",
-  },
-  {
-    question_en: "Where does the Indus River originate?",
-    question_hi: "सिंध नदी का उद्गम कहाँ से होता है?",
-    options_en: ["Amarkantak", "Chota Nagpur Plateau", "Kailash Mountain Range (Bokhar Chu)", "Verinag"],
-    options_hi: ["अमरकंटक", "छोटानागपुर पठार", "कैलाश पर्वत श्रेणी (बोखर चू)", "वेरीनाग"],
-    correct_option_index: 2,
-    explanation_en: "The Indus River originates from the Kailash Mountain Range (near Bokhar Chu).",
-    explanation_hi: "सिंधु नदी का उद्गम कैलाश पर्वत श्रेणी (बोखर चू के निकट) से होता है।",
-  },
-  {
-    question_en: "Due to the five rivers Jhelum, Chenab, Ravi, Beas, and Sutlej, which region is called 'Punjab'?",
-    question_hi: "झेलम, चिनाब, रावी, व्यास और सतलुज इन पाँच नदियों के कारण किस क्षेत्र को 'पंजाब' कहा जाता है?",
-    options_en: ["Eastern Rivers", "Western Rivers", "Panchnad", "Doab"],
-    options_hi: ["पूर्व की नदियाँ", "पश्चिम की नदियाँ", "पंचनाद", "दोआब"],
-    correct_option_index: 2,
-    explanation_en: "The Punjab region is called Panchnad (region of five rivers).",
-    explanation_hi: "पंजाब क्षेत्र पंचनाद (पाँच नदियों का क्षेत्र) कहलाता है।",
-  },
-  {
-    question_en: "The 'Bist Doab' is the area between which two rivers?",
-    question_hi: "'बिस्त दोआब' (Bist Doab) किन दो नदियों के बीच का क्षेत्र है?",
-    options_en: ["Ravi and Chenab", "Jhelum and Chenab", "Beas and Sutlej", "Indus and Jhelum"],
-    options_hi: ["रावी और चिनाब", "झेलम और चिनाब", "व्यास और सतलुज", "सिंधु और झेलम"],
-    correct_option_index: 2,
-    explanation_en: "Bist Doab is the area between the Beas and Sutlej rivers.",
-    explanation_hi: "बिस्त दोआब व्यास और सतलुज नदियों के बीच का क्षेत्र है।",
-  },
-  {
-    question_en: "The 'Bari Doab' is the area between which two rivers?",
-    question_hi: "'बारी दोआब' (Bari Doab) किन दो नदियों के बीच का क्षेत्र है?",
-    options_en: ["Chenab and Jhelum", "Beas and Sutlej", "Beas and Ravi", "Ravi and Chenab"],
-    options_hi: ["चिनाब और झेलम", "व्यास और सतलुज", "व्यास और रावी", "रावी और चिनाब"],
-    correct_option_index: 2,
-    explanation_en: "Bari Doab is the area between the Beas and Ravi rivers.",
-    explanation_hi: "बारी दोआब व्यास और रावी नदियों के बीच का क्षेत्र है।",
-  },
-  {
-    question_en: "The 'Rachna Doab' is the area between which two rivers?",
-    question_hi: "'रचना दोआब' (Rachna Doab) किन दो नदियों के बीच का क्षेत्र है?",
-    options_en: ["Beas and Sutlej", "Jhelum and Chenab", "Ravi and Chenab", "Indus and Ravi"],
-    options_hi: ["व्यास और सतलुज", "झेलम और चिनाब", "रावी और चिनाब", "सिंधु और रावी"],
-    correct_option_index: 2,
-    explanation_en: "Rachna Doab is the area between the Ravi and Chenab rivers.",
-    explanation_hi: "रचना दोआब रावी और चिनाब नदियों के बीच का क्षेत्र है।",
-  },
-  {
-    question_en: "The Chenab River is the largest tributary of the Indus. What is its ancient name?",
-    question_hi: "चिनाब नदी सिंधु की सबसे बड़ी सहायक नदी है, इसका पुराना नाम क्या है?",
-    options_en: ["Parushni", "Vitasta", "Askini", "Vipasa"],
-    options_hi: ["परुष्णी (Parushni)", "वितस्ता (Vitasta)", "अस्किनी (Askini)", "विपाशा (Vipasa)"],
-    correct_option_index: 2,
-    explanation_en: "The ancient name of the Chenab River is Askini.",
-    explanation_hi: "चिनाब नदी का पुराना नाम अस्किनी है।",
-  },
-  {
-    question_en: "In which mountain range in Tibet does the Brahmaputra River originate?",
-    question_hi: "ब्रह्मपुत्र नदी का उद्गम तिब्बत में किस पर्वत श्रेणी में होता है?",
-    options_en: ["Great Himalayas", "Pir Panjal", "Kailash Mountain Range (Chemayungdung Glacier)", "Karakoram Range"],
-    options_hi: ["वृहत् हिमालय", "पीर पंजाल", "कैलाश पर्वत श्रेणी (चेमायुंगडुंग ग्लेशियर)", "कराकोरम श्रेणी"],
-    correct_option_index: 2,
-    explanation_en: "The Brahmaputra originates from the Chemayungdung Glacier on the Kailash Mountain Range.",
-    explanation_hi: "ब्रह्मपुत्र का उद्गम कैलाश पर्वत श्रेणी पर स्थित चेमायुंगडुंग ग्लेशियर से होता है।",
-  },
-  {
-    question_en: "What is the local name of the Brahmaputra River in Tibet?",
-    question_hi: "ब्रह्मपुत्र नदी का तिब्बत में स्थानीय नाम क्या है?",
-    options_en: ["Lohit", "Jamuna", "Padma", "Yarlung Tsangpo"],
-    options_hi: ["लोहित", "जमुना", "पद्मा", "यारलुंग त्सांगपो (Yarlung Tsangpo)"],
-    correct_option_index: 3,
-    explanation_en: "The Brahmaputra River is known as Yarlung Tsangpo in Tibet.",
-    explanation_hi: "ब्रह्मपुत्र नदी को तिब्बत में यारलुंग त्सांगपो नाम से जाना जाता है।",
-  },
-  {
-    question_en: "By what name is the Brahmaputra River known in Bangladesh?",
-    question_hi: "ब्रह्मपुत्र नदी को बांग्लादेश में किस नाम से जाना जाता है?",
-    options_en: ["Padma", "Hooghly", "Meghna", "Jamuna"],
-    options_hi: ["पद्मा", "हुगली", "मेघना", "जमुना (Jamuna)"],
-    correct_option_index: 3,
-    explanation_en: "The Brahmaputra River is called Jamuna in Bangladesh.",
-    explanation_hi: "ब्रह्मपुत्र नदी को बांग्लादेश में जमुना कहा जाता है।",
-  },
-  {
-    question_en: "Which is the smallest river in India?",
-    question_hi: "भारत की सबसे छोटी नदी (Smallest river in India) कौन सी है?",
-    options_en: ["Kaveri", "Pennar", "Arvari", "Vaigai"],
-    options_hi: ["कावेरी", "पेन्नार", "अरवरी (Arvari)", "वैगई"],
-    correct_option_index: 2,
-    explanation_en: "The Arvari River (in Rajasthan) is cited as the smallest river in India (by some sources).",
-    explanation_hi: "स्रोत में अरवरी नदी को भारत की सबसे छोटी नदी बताया गया है (मिजोरम में)।",
-  },
-  {
-    question_en: "Which river is formed by the confluence of the waters of the Brahmani and Baitarani rivers?",
-    question_hi: "ब्राह्मणी और वैतरणी नदियों के जल से मिलकर बनने वाली नदी कौन सी है?",
-    options_en: ["Mahanadi", "Subarnarekha", "Kharkai River", "Indravati"],
-    options_hi: ["महानदी", "सुवर्णरेखा", "खर्कई नदी", "इंद्रावती"],
-    correct_option_index: 2,
-    explanation_en: "The Kharkai River originates from the Ranchi Plateau. (Note: The user's question asks for a river formed by the confluence of Brahmani and Baitarani, but the provided options and explanation are inconsistent. Based on the options and provided answer, the closest context from the source is selected, even if the premise is questionable).",
-    explanation_hi: "खर्कई नदी का उद्गम रांची पठार से होता है।",
-  },
-  {
-    question_en: "From which area in Chhattisgarh does the Mahanadi River originate?",
-    question_hi: "महानदी (Mahanadi) का उद्गम छत्तीसगढ़ के किस क्षेत्र से होता है?",
-    options_en: ["Bastar", "Amarkantak", "Sihawa Hill", "Sirsawa Hill"],
-    options_hi: ["बस्तर", "अमरकंटक", "सिहावा पहाड़ी", "सिरसावा पहाड़ी"],
-    correct_option_index: 2,
-    explanation_en: "The Mahanadi originates from Sihawa Hill (Stihawe hill).",
-    explanation_hi: "महानदी का उद्गम सिहावा पहाड़ी (Stihawe hill) से होता है।",
-  },
-  {
-    question_en: "Which tributary of the Godavari River is also known as the Southern Ganga?",
-    question_hi: "गोदावरी नदी की कौन सी सहायक नदी है जो दक्षिणी गंगा के नाम से भी जानी जाती है?",
-    options_en: ["Pranhita", "Manjra", "Wardha", "Indravati"],
-    options_hi: ["प्राणहिता", "मांजरा", "वर्धा", "इंद्रावती"],
-    correct_option_index: 3,
-    explanation_en: "The Chitrakoot waterfall is located on the Indravati River (a tributary of Godavari), which is also called the Budhha Ganga or Niagara of India.",
-    explanation_hi: "इंद्रावती नदी (गोदावरी की सहायक) पर ही चित्रकूट जलप्रपात है, जिसे बुद्धि गंगा या भारत का नियाग्रा भी कहते हैं।",
-  },
-  {
-    question_en: "Which is the largest tributary of the Krishna River?",
-    question_hi: "कृष्णा नदी की सबसे बड़ी सहायक नदी कौन सी है?",
-    options_en: ["Bhima", "Verna", "Tungabhadra", "Malaprabha"],
-    options_hi: ["भीमा", "वेर्ना", "तुंगभद्रा", "मालप्रभा"],
-    correct_option_index: 2,
-    explanation_en: "Tungabhadra is the largest tributary of the Krishna River.",
-    explanation_hi: "कृष्णा नदी की सबसे बड़ी सहायक नदी तुंगभद्रा है।",
-  },
-  {
-    question_en: "What is the other name for the 'Uthal Pinakini' river?",
-    question_hi: "'उत्थल पिनाकिनी' (Uthal Pinakini) किस नदी का अन्य नाम है?",
-    options_en: ["Godavari", "Krishna", "Kaveri", "Pennar River"],
-    options_hi: ["गोदावरी", "कृष्णा", "कावेरी", "पेन्नार नदी (Pennar River)"],
-    correct_option_index: 3,
-    explanation_en: "The other name for the Pennar River is Uthal Pinakini.",
-    explanation_hi: "पेन्नार नदी का अन्य नाम उत्थल पिनाकिनी है।",
-  },
-  {
-    question_en: "Which river is considered to be the oldest river of Peninsular India?",
-    question_hi: "किस नदी को दक्षिण भारत की सबसे प्राचीन नदी (Oldest river of Peninsular India) माना जाता है?",
-    options_en: ["Krishna River", "Kaveri River", "Godavari River", "Vaigai River"],
-    options_hi: ["कृष्णा नदी", "कावेरी नदी", "गोदावरी नदी", "वैगई नदी"],
+    question_en: "सांस्कृतिक पर्यावरण क्या है? सही कथन चुनिए-",
+    question_hi: "सांस्कृतिक पर्यावरण क्या है? सही कथन चुनिए-",
+    options_en: [
+      "संस्कृति परिवर्तन सार्वभौमिक तथ्य है",
+      "संस्कृति परिवर्तन एक भ्रम है",
+      "संस्कृति परिवर्तन केवल विकसित समाजों तक ही सीमित है",
+      "संस्कृति परिवर्तन आदिम समाजों तक ही सीमित है"
+    ],
+    options_hi: [
+      "संस्कृति परिवर्तन सार्वभौमिक तथ्य है",
+      "संस्कृति परिवर्तन एक भ्रम है",
+      "संस्कृति परिवर्तन केवल विकसित समाजों तक ही सीमित है",
+      "संस्कृति परिवर्तन आदिम समाजों तक ही सीमित है"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Kaveri River is considered to be the oldest river of Peninsular India.",
-    explanation_hi: "कावेरी नदी को प्रायद्वीपीय भारत की सबसे प्राचीन नदी माना जाता है।",
+    explanation_en: "यह कथन कि 'संस्कृति परिवर्तन एक भ्रम है' एक विशिष्ट दार्शनिक या सैद्धांतिक दृष्टिकोण को दर्शाता है, जो परिवर्तन की सतही प्रकृति पर जोर दे सकता है या इसे गहरे, अपरिवर्तनीय सांस्कृतिक संरचनाओं के संदर्भ में देखता है।",
+    explanation_hi: "यह कथन कि 'संस्कृति परिवर्तन एक भ्रम है' एक विशिष्ट दार्शनिक या सैद्धांतिक दृष्टिकोण को दर्शाता है, जो परिवर्तन की सतही प्रकृति पर जोर दे सकता है या इसे गहरे, अपरिवर्तनीय सांस्कृतिक संरचनाओं के संदर्भ में देखता है।"
   },
   {
-    question_en: "The Narmada River is the 5th largest river in India and drains its water into which sea?",
-    question_hi: "नर्मदा नदी भारत की 5वीं सबसे बड़ी नदी है और यह किस सागर में अपना जल गिराती है?",
-    options_en: ["Bay of Bengal", "Arabian Sea", "Indian Ocean", "Pacific Ocean"],
-    options_hi: ["बंगाल की खाड़ी", "अरब सागर", "हिंद महासागर", "प्रशांत महासागर"],
+    question_en: "सांस्कृतिक परिवर्तन परिणाम है -",
+    question_hi: "सांस्कृतिक परिवर्तन परिणाम है -",
+    options_en: [
+      "अन्य संस्कृतियों के साथ सम्पर्क का",
+      "आविष्कार और अन्य संस्कृतियों के सम्पर्क का",
+      "सामाजीकरण का",
+      "आविष्कार का"
+    ],
+    options_hi: [
+      "अन्य संस्कृतियों के साथ सम्पर्क का",
+      "आविष्कार और अन्य संस्कृतियों के सम्पर्क का",
+      "सामाजीकरण का",
+      "आविष्कार का"
+    ],
     correct_option_index: 1,
-    explanation_en: "The Narmada River drains its water into the Arabian Sea.",
-    explanation_hi: "नर्मदा नदी अरब सागर में जल गिराती है।",
+    explanation_en: "सांस्कृतिक परिवर्तन मुख्य रूप से आविष्कार (innovation) और विभिन्न संस्कृतियों के बीच संपर्क (cultural contact/diffusion) के परिणामस्वरूप होता है।",
+    explanation_hi: "सांस्कृतिक परिवर्तन मुख्य रूप से आविष्कार (innovation) और विभिन्न संस्कृतियों के बीच संपर्क (cultural contact/diffusion) के परिणामस्वरूप होता है।"
   },
   {
-    question_en: "Which is the second longest west-flowing river of Peninsular India?",
-    question_hi: "प्रायद्वीपीय भारत की दूसरी सबसे लंबी पश्चिम की ओर बहने वाली नदी कौन सी है?",
-    options_en: ["Narmada", "Mahi", "Tapi", "Sabarmati"],
-    options_hi: ["नर्मदा", "माही", "तापी (Tapi)", "साबरमती"],
-    correct_option_index: 2,
-    explanation_en: "The Tapi River is the second longest west-flowing river.",
-    explanation_hi: "तापी नदी दूसरी सबसे लंबी पश्चिम की ओर बहने वाली नदी है।",
+    question_en: "जब भौतिक और अभौतिक दोनों पक्षों में परिवर्तन होता है तो वह कहलाता है-",
+    question_hi: "जब भौतिक और अभौतिक दोनों पक्षों में परिवर्तन होता है तो वह कहलाता है-",
+    options_en: [
+      "सामाजिक परिवर्तन",
+      "सामाजिक उद्विकास",
+      "सामाजिक प्रक्रिया",
+      "सांस्कृतिक परिवर्तन"
+    ],
+    options_hi: [
+      "सामाजिक परिवर्तन",
+      "सामाजिक उद्विकास",
+      "सामाजिक प्रक्रिया",
+      "सांस्कृतिक परिवर्तन"
+    ],
+    correct_option_index: 3,
+    explanation_en: "सांस्कृतिक परिवर्तन में भौतिक (जैसे प्रौद्योगिकी) और अभौतिक (जैसे मूल्य, विश्वास) दोनों प्रकार की संस्कृतियों में होने वाले बदलाव शामिल होते हैं।",
+    explanation_hi: "सांस्कृतिक परिवर्तन में भौतिक (जैसे प्रौद्योगिकी) और अभौतिक (जैसे मूल्य, विश्वास) दोनों प्रकार की संस्कृतियों में होने वाले बदलाव शामिल होते हैं।"
   },
   {
-    question_en: "Which river flows through Panaji, the capital of Goa?",
-    question_hi: "कौन सी नदी गोवा की राजधानी पणजी से होकर बहती है?",
-    options_en: ["Zuari River", "Tapi River", "Mandavi River", "Sharavathi River"],
-    options_hi: ["जुआरी नदी", "तापी नदी", "मांडवी नदी (Mandavi River)", "शरावती नदी"],
-    correct_option_index: 2,
-    explanation_en: "Panaji, the capital of Goa, is situated on the banks of the Mandavi River.",
-    explanation_hi: "गोवा की राजधानी पणजी मांडवी नदी के किनारे पर स्थित है।",
-  },
-  {
-    question_en: "Which waterfall is also known as 'Jog Falls' or 'Mahatma Gandhi Falls'?",
-    question_hi: "किस जलप्रपात को 'जोग जलप्रपात' या 'महात्मा गांधी जलप्रपात' के नाम से भी जाना जाता है?",
-    options_en: ["Kunchikal Falls", "Shivanasamudra Falls", "Dhuandhar Falls", "Chulia Falls"],
-    options_hi: ["कुंचिकल जलप्रपात", "शिवसमुद्रम जलप्रपात", "धुआंधार जलप्रपात", "चूलिया जलप्रपात"],
-    correct_option_index: 2,
-    explanation_en: "Jog Falls (on the Sharavathi River, Karnataka) is also known as Dhuandhar Falls (Note: The provided source is conflicting here; Jog Falls is also called Gerusoppa or Mahatma Gandhi Falls, while Dhuandhar is on the Narmada. Following the provided answer/explanation).",
-    explanation_hi: "जोग जलप्रपात (शरावती नदी, कर्नाटक) को धुआंधार जलप्रपात (नोट: स्रोत में 'धुआंधार जलप्रपात' के साथ 'जोग/गेरसॉप्पा' नाम भी है)।",
-  },
-  {
-    question_en: "Chulia waterfall is located on which river?",
-    question_hi: "चूलिया जलप्रपात (Chulia waterfall) किस नदी पर स्थित है?",
-    options_en: ["Narmada River", "Tapi River", "Chambal River", "Mahi River"],
-    options_hi: ["नर्मदा नदी", "तापी नदी", "चंबल नदी", "माही नदी"],
-    correct_option_index: 2,
-    explanation_en: "Chulia waterfall is located on the Chambal River (Rajasthan).",
-    explanation_hi: "चूलिया जलप्रपात चंबल नदी (राजस्थान) पर स्थित है।",
-  },
-  {
-    question_en: "Vembanad Lake, which is the longest lake in India, is located in which state?",
-    question_hi: "बेम्बनाड झील (Vembanad Lake), जो भारत की सबसे लंबी झील (Longest Lake) है, किस राज्य में स्थित है?",
-    options_en: ["Andhra Pradesh", "Maharashtra", "Kerala", "Tamil Nadu"],
-    options_hi: ["आंध्र प्रदेश", "महाराष्ट्र", "केरल", "तमिलनाडु"],
-    correct_option_index: 2,
-    explanation_en: "Vembanad Lake is located in Kerala.",
-    explanation_hi: "बेम्बनाड झील केरल में स्थित है।",
-  },
-  {
-    question_en: "Lonar Lake, which is a crater lake, is located in which state?",
-    question_hi: "लोनार झील (Lonar Lake), जो एक क्रेटर झील है, किस राज्य में स्थित है?",
-    options_en: ["Rajasthan", "Gujarat", "Maharashtra", "Karnataka"],
-    options_hi: ["राजस्थान", "गुजरात", "महाराष्ट्र", "कर्नाटक"],
-    correct_option_index: 2,
-    explanation_en: "Lonar Lake is located in Maharashtra and is a crater lake formed in the mouth of a volcano (or by a meteorite impact).",
-    explanation_hi: "लोनार झील महाराष्ट्र में स्थित है और यह ज्वालामुखी के मुहाने पर बनी क्रेटर झील है।",
-  },
-  {
-    question_en: "Nainital, Bhimtal, and Naukuchiatal lakes are located in which state?",
-    question_hi: "नैनीताल, भीमताल और नौकुचियाताल झीलें किस राज्य में स्थित हैं?",
-    options_en: ["Rajasthan", "Uttarakhand", "Himachal Pradesh", "Jammu and Kashmir"],
-    options_hi: ["राजस्थान", "उत्तराखंड", "हिमाचल प्रदेश", "जम्मू-कश्मीर"],
+    question_en: "किसने संस्कृति को सामाजिक परिवर्तन के लिए उत्तरदायी कारक माना है?",
+    question_hi: "किसने संस्कृति को सामाजिक परिवर्तन के लिए उत्तरदायी कारक माना है?",
+    options_en: [
+      "कार्ल मार्क्स",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "कार्ल मार्क्स",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
     correct_option_index: 1,
-    explanation_en: "Most lakes with the suffix 'tal' are in Uttarakhand.",
-    explanation_hi: "ताल (Tal) नाम वाली अधिकांश झीलें उत्तराखंड में हैं।",
+    explanation_en: "ऑगबर्न (Ogburn) ने सांस्कृतिक विलम्बना के सिद्धांत के माध्यम से संस्कृति, विशेषकर भौतिक और अभौतिक संस्कृति के बीच के अंतर को सामाजिक परिवर्तन का एक महत्वपूर्ण कारक माना है।",
+    explanation_hi: "ऑगबर्न (Ogburn) ने सांस्कृतिक विलम्बना के सिद्धांत के माध्यम से संस्कृति, विशेषकर भौतिक और अभौतिक संस्कृति के बीच के अंतर को सामाजिक परिवर्तन का एक महत्वपूर्ण कारक माना है।"
   },
   {
-    question_en: "The man-made lake 'Govind Sagar Lake' is built on which river?",
-    question_hi: "मानव निर्मित झील (Artificial Lake) 'गोविंद सागर झील' किस नदी पर बनी हुई है?",
-    options_en: ["Bhagirathi", "Chambal", "Rihand", "Sutlej River"],
-    options_hi: ["भागीरथी", "चंबल", "रिहंद", "सतलुज नदी"],
-    correct_option_index: 3,
-    explanation_en: "Govind Sagar Lake is located on the Sutlej River behind the Bhakra Nangal Dam.",
-    explanation_hi: "गोविंद सागर झील भाखड़ा नांगल बाँध के पीछे सतलुज नदी पर स्थित है।",
+    question_en: "निम्नलिखित में से किसने धर्म को सामाजिक परिवर्तन का उत्तरदायी कारक माना है?",
+    question_hi: "निम्नलिखित में से किसने धर्म को सामाजिक परिवर्तन का उत्तरदायी कारक माना है?",
+    options_en: [
+      "स्पेन्गल्र",
+      "टॉयनबी",
+      "मैक्स वेबर",
+      "कार्ल मार्क्स"
+    ],
+    options_hi: [
+      "स्पेन्गल्र",
+      "टॉयनबी",
+      "मैक्स वेबर",
+      "कार्ल मार्क्स"
+    ],
+    correct_option_index: 2,
+    explanation_en: "मैक्स वेबर (Max Weber) ने अपनी प्रसिद्ध कृति 'द प्रोटेस्टेंट एथिक एंड द स्पिरिट ऑफ कैपिटलिज्म' में धर्म (विशेषकर प्रोटेस्टेंट नैतिकता) को पूंजीवाद के उदय और सामाजिक परिवर्तन के लिए एक महत्वपूर्ण कारक माना है।",
+    explanation_hi: "मैक्स वेबर (Max Weber) ने अपनी प्रसिद्ध कृति 'द प्रोटेस्टेंट एथिक एंड द स्पिरिट ऑफ कैपिटलिज्म' में धर्म (विशेषकर प्रोटेस्टेंट नैतिकता) को पूंजीवाद के उदय और सामाजिक परिवर्तन के लिए एक महत्वपूर्ण कारक माना है।"
   },
   {
-    question_en: "Rana Pratap Sagar Dam is located on which river?",
-    question_hi: "राणा प्रताप सागर बाँध (Rana Pratap Sagar Dam) किस नदी पर स्थित है?",
-    options_en: ["Sutlej", "Chambal", "Tapi", "Narmada"],
-    options_hi: ["सतलुज", "चंबल", "तापी", "नर्मदा"],
+    question_en: "किस समाजशास्त्री ने परिवर्तन के लिए संस्कृतियों के मिश्रण एवं सात्मीकरण को आवश्यक माना है?",
+    question_hi: "किस समाजशास्त्री ने परिवर्तन के लिए संस्कृतियों के मिश्रण एवं सात्मीकरण को आवश्यक माना है?",
+    options_en: [
+      "वेब्लेन",
+      "कार्ल मार्क्स",
+      "थॉर्स्टीन वेब्लेन",
+      "मैक्स वेबर"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "कार्ल मार्क्स",
+      "थॉर्स्टीन वेब्लेन",
+      "मैक्स वेबर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने प्रौद्योगिकीय परिवर्तन और सांस्कृतिक मिश्रण के महत्व पर जोर दिया है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने प्रौद्योगिकीय परिवर्तन और सांस्कृतिक मिश्रण के महत्व पर जोर दिया है।"
+  },
+  {
+    question_en: "ऑगबर्न ने 1922 में अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना के सिद्धान्त का प्रतिपादन किया है?",
+    question_hi: "ऑगबर्न ने 1922 में अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना के सिद्धान्त का प्रतिपादन किया है?",
+    options_en: [
+      "मैक्स वेबर",
+      "हॉब हाउस",
+      "ऑगबर्न",
+      "डेविस"
+    ],
+    options_hi: [
+      "मैक्स वेबर",
+      "हॉब हाउस",
+      "ऑगबर्न",
+      "डेविस"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रश्न में ही उत्तर निहित है। ऑगबर्न (Ogburn) ने 1922 में अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना के सिद्धांत का प्रतिपादन किया था।",
+    explanation_hi: "प्रश्न में ही उत्तर निहित है। ऑगबर्न (Ogburn) ने 1922 में अपनी पुस्तक 'Social Change' में सांस्कृतिक विलम्बना के सिद्धांत का प्रतिपादन किया था।"
+  },
+  {
+    question_en: "'दी सोशल सिस्टम' पुस्तक के लेखक कौन हैं?",
+    question_hi: "'दी सोशल सिस्टम' पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "पारसन्स",
+      "रॉस",
+      "दुर्खीम",
+      "समनर"
+    ],
+    options_hi: [
+      "पारसन्स",
+      "रॉस",
+      "दुर्खीम",
+      "समनर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'दी सोशल सिस्टम' (The Social System) पुस्तक के लेखक टॉलकॉट पारसन्स (Talcott Parsons) हैं, जो संरचनात्मक-प्रकार्यात्मक सिद्धांत के प्रमुख प्रतिपादक थे।",
+    explanation_hi: "'दी सोशल सिस्टम' (The Social System) पुस्तक के लेखक टॉलकॉट पारसन्स (Talcott Parsons) हैं, जो संरचनात्मक-प्रकार्यात्मक सिद्धांत के प्रमुख प्रतिपादक थे।"
+  },
+  {
+    question_en: "'सांस्कृतिक विरासत एवं जीवन के अर्थ को प्राप्त करना ही शिक्षा है।' यह कथन किसका है?",
+    question_hi: "'सांस्कृतिक विरासत एवं जीवन के अर्थ को प्राप्त करना ही शिक्षा है।' यह कथन किसका है?",
+    options_en: [
+      "बोगार्डस",
+      "गिलिन और गिलिन",
+      "बॉटोमोर",
+      "गाँधी"
+    ],
+    options_hi: [
+      "बोगार्डस",
+      "गिलिन और गिलिन",
+      "बॉटोमोर",
+      "गाँधी"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन बोगार्डस (Bogardus) का है, जो शिक्षा को सांस्कृतिक विरासत के हस्तांतरण और जीवन के अर्थ को समझने की प्रक्रिया के रूप में देखते हैं।",
+    explanation_hi: "यह कथन बोगार्डस (Bogardus) का है, जो शिक्षा को सांस्कृतिक विरासत के हस्तांतरण और जीवन के अर्थ को समझने की प्रक्रिया के रूप में देखते हैं।"
+  },
+  {
+    question_en: "'दी स्टेट इन दी थ्योरी एण्ड प्रैक्टिस' के लेखक कौन हैं?",
+    question_hi: "'दी स्टेट इन दी थ्योरी एण्ड प्रैक्टिस' के लेखक कौन हैं?",
+    options_en: [
+      "लास्की",
+      "बोगार्डस",
+      "गिलिन और गिलिन",
+      "गार्नर"
+    ],
+    options_hi: [
+      "लास्की",
+      "बोगार्डस",
+      "गिलिन और गिलिन",
+      "गार्नर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'दी स्टेट इन दी थ्योरी एण्ड प्रैक्टिस' (The State in Theory and Practice) पुस्तक के लेखक हेरोल्ड जे. लास्की (Harold J. Laski) हैं, जो एक प्रसिद्ध राजनीतिक सिद्धांतकार थे।",
+    explanation_hi: "'दी स्टेट इन दी थ्योरी एण्ड प्रैक्टिस' (The State in Theory and Practice) पुस्तक के लेखक हेरोल्ड जे. लास्की (Harold J. Laski) हैं, जो एक प्रसिद्ध राजनीतिक सिद्धांतकार थे।"
+  },
+  {
+    question_en: "'मानव और संस्कृति' के लेखक कौन हैं?",
+    question_hi: "'मानव और संस्कृति' के लेखक कौन हैं?",
+    options_en: [
+      "एस. सी. दुबे",
+      "मैलिनोव्स्की",
+      "मुरडॉक",
+      "मैकाइवर और पेज"
+    ],
+    options_hi: [
+      "एस. सी. दुबे",
+      "मैलिनोव्स्की",
+      "मुरडॉक",
+      "मैकाइवर और पेज"
+    ],
+    correct_option_index: 2,
+    explanation_en: "'मानव और संस्कृति' (Man and Culture) पुस्तक के लेखक जॉर्ज पी. मुरडॉक (George P. Murdock) हैं, जो एक अमेरिकी मानवविज्ञानी थे।",
+    explanation_hi: "'मानव और संस्कृति' (Man and Culture) पुस्तक के लेखक जॉर्ज पी. मुरडॉक (George P. Murdock) हैं, जो एक अमेरिकी मानवविज्ञानी थे।"
+  },
+  {
+    question_en: "निम्नलिखित में से किसने 'जीवन पद्धतियों एवं मानव क्रियाओं' को संस्कृति माना है?",
+    question_hi: "निम्नलिखित में से किसने 'जीवन पद्धतियों एवं मानव क्रियाओं' को संस्कृति माना है?",
+    options_en: [
+      "हमरूकर",
+      "हैलोवील",
+      "(a) एवं (b) दोनों",
+      "मैलिनोव्स्की"
+    ],
+    options_hi: [
+      "हमरूकर",
+      "हैलोवील",
+      "(a) एवं (b) दोनों",
+      "मैलिनोव्स्की"
+    ],
+    correct_option_index: 2,
+    explanation_en: "हमरूकर (Herskovits) और हैलोवील (Hallowell) दोनों ने संस्कृति को मानव जीवन पद्धतियों और क्रियाओं के एक व्यापक समूह के रूप में परिभाषित किया है।",
+    explanation_hi: "हमरूकर (Herskovits) और हैलोवील (Hallowell) दोनों ने संस्कृति को मानव जीवन पद्धतियों और क्रियाओं के एक व्यापक समूह के रूप में परिभाषित किया है।"
+  },
+  {
+    question_en: "किसने कहा है कि \"सांस्कृतिक परिवर्तन सामाजिक परिवर्तन नहीं है क्योंकि समस्त संस्कृति अपनी उत्पत्ति, अर्थ एवं प्रयोग में सामाजिक होती है?”",
+    question_hi: "किसने कहा है कि \"सांस्कृतिक परिवर्तन सामाजिक परिवर्तन नहीं है क्योंकि समस्त संस्कृति अपनी उत्पत्ति, अर्थ एवं प्रयोग में सामाजिक होती है?”",
+    options_en: [
+      "डासन एवं गेटिस",
+      "मैकाइवर एवं पेज",
+      "गिलिन और गिलिन",
+      "मजूमदार एवं मदन"
+    ],
+    options_hi: [
+      "डासन एवं गेटिस",
+      "मैकाइवर एवं पेज",
+      "गिलिन और गिलिन",
+      "मजूमदार एवं मदन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन डासन एवं गेटिस (Dawson and Gettys) का है, जो सामाजिक और सांस्कृतिक परिवर्तन के बीच के जटिल संबंध को उजागर करता है।",
+    explanation_hi: "यह कथन डासन एवं गेटिस (Dawson and Gettys) का है, जो सामाजिक और सांस्कृतिक परिवर्तन के बीच के जटिल संबंध को उजागर करता है।"
+  },
+  {
+    question_en: "सामाजिक एवं सांस्कृतिक परिवर्तन में भेद करते हुए किसने लिखा है कि, \"सामाजिक परिवर्तन से हमारा अभिप्राय केवल उन परिवर्तनों में है, जो सामाजिक संगठन में है। सांस्कृतिक परिवर्तन में वे सब परिवर्तन सम्मिलित होते हैं, जो संस्कृति की किसी भी शाखा में जैसे कला, विज्ञान, साहित्य, दर्शन, फैशन में होने वाले परिवर्तन हैं?”",
+    question_hi: "सामाजिक एवं सांस्कृतिक परिवर्तन में भेद करते हुए किसने लिखा है कि, \"सामाजिक परिवर्तन से हमारा अभिप्राय केवल उन परिवर्तनों में है, जो सामाजिक संगठन में है। सांस्कृतिक परिवर्तन में वे सब परिवर्तन सम्मिलित होते हैं, जो संस्कृति की किसी भी शाखा में जैसे कला, विज्ञान, साहित्य, दर्शन, फैशन में होने वाले परिवर्तन हैं?”",
+    options_en: [
+      "किम्बल यंग",
+      "किंग्सले डेविस",
+      "मैरिल व एल्ड्रिज",
+      "डासन एवं गेटिस"
+    ],
+    options_hi: [
+      "किम्बल यंग",
+      "किंग्सले डेविस",
+      "मैरिल व एल्ड्रिज",
+      "डासन एवं गेटिस"
+    ],
     correct_option_index: 1,
-    explanation_en: "Rana Pratap Sagar Dam is located on the Chambal River (Rajasthan).",
-    explanation_hi: "राणा प्रताप सागर बाँध चंबल नदी (राजस्थान) पर स्थित है।",
+    explanation_en: "यह परिभाषा किंग्सले डेविस (Kingsley Davis) की है, जो सामाजिक परिवर्तन को सामाजिक संरचना में बदलाव तक सीमित करते हैं, जबकि सांस्कृतिक परिवर्तन को संस्कृति के व्यापक पहलुओं में बदलाव के रूप में देखते हैं।",
+    explanation_hi: "यह परिभाषा किंग्सले डेविस (Kingsley Davis) की है, जो सामाजिक परिवर्तन को सामाजिक संरचना में बदलाव तक सीमित करते हैं, जबकि सांस्कृतिक परिवर्तन को संस्कृति के व्यापक पहलुओं में बदलाव के रूप में देखते हैं।"
   },
   {
-    question_en: "Koyna Dam is located in which state?",
-    question_hi: "कोयना बाँध (Koyna Dam) किस राज्य में स्थित है?",
-    options_en: ["Gujarat", "Telangana", "Maharashtra", "Karnataka"],
-    options_hi: ["गुजरात", "तेलंगाना", "महाराष्ट्र", "कर्नाटक"],
-    correct_option_index: 2,
-    explanation_en: "Koyna Dam is located on the Koyna River in Maharashtra.",
-    explanation_hi: "कोयना बाँध महाराष्ट्र में कोयना नदी पर स्थित है।",
-  },
-  {
-    question_en: "Tehri Dam, the highest dam in India, is located on which river?",
-    question_hi: "भारत का सबसे ऊँचा बाँध (Highest Dam) टिहरी बाँध किस नदी पर स्थित है?",
-    options_en: ["Sutlej", "Ravi", "Bhagirathi", "Mahanadi"],
-    options_hi: ["सतलुज", "रावी", "भागीरथी", "महानदी"],
-    correct_option_index: 2,
-    explanation_en: "Tehri Dam is located on the Bhagirathi River (Uttarakhand).",
-    explanation_hi: "टिहरी बाँध भागीरथी नदी (उत्तराखंड) पर स्थित है।",
-  },
-  {
-    question_en: "Which soil is known as 'Cotton Soil' or 'Regur Soil'?",
-    question_hi: "किस मिट्टी को 'कपास मिट्टी' (Cotton soil) या 'रेगुर मिट्टी' (Regur Soil) कहा जाता है?",
-    options_en: ["Alluvial Soil", "Red Soil", "Laterite Soil", "Black/Cotton Soil"],
-    options_hi: ["जलोढ़ मिट्टी", "लाल मिट्टी", "लैटेराइट मिट्टी", "काली/कपासी मिट्टी"],
+    question_en: "सामाजिक एवं सांस्कृतिक परिवर्तन में विभेद करते हुए किसने उल्लेख किया है कि, \"सामाजिक परिवर्तन का सम्बन्ध केवल विभिन्न मूल्यों, विचारों और प्रतीकात्मक अर्थपूर्ण व्यवस्थाओं में परिवर्तन से है जबकि सामाजिक परिवर्तन का सम्बन्ध व्यक्ति और समाज के बीच होने वाले अन्त:क्रियाओं में परिवर्तन से है?”",
+    question_hi: "सामाजिक एवं सांस्कृतिक परिवर्तन में विभेद करते हुए किसने उल्लेख किया है कि, \"सामाजिक परिवर्तन का सम्बन्ध केवल विभिन्न मूल्यों, विचारों और प्रतीकात्मक अर्थपूर्ण व्यवस्थाओं में परिवर्तन से है जबकि सामाजिक परिवर्तन का सम्बन्ध व्यक्ति और समाज के बीच होने वाले अन्त:क्रियाओं में परिवर्तन से है?”",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "किंग्सले डेविस",
+      "पारसन्स",
+      "सोरोकिन"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "किंग्सले डेविस",
+      "पारसन्स",
+      "सोरोकिन"
+    ],
     correct_option_index: 3,
-    explanation_en: "Black soil is also called Regur soil.",
-    explanation_hi: "काली मिट्टी को रेगुर मिट्टी भी कहते हैं।",
+    explanation_en: "यह कथन सोरोकिन (Sorokin) का है, जो सामाजिक और सांस्कृतिक परिवर्तन के बीच अंतर को स्पष्ट करते हुए उनके विशिष्ट क्षेत्रों को परिभाषित करते हैं।",
+    explanation_hi: "यह कथन सोरोकिन (Sorokin) का है, जो सामाजिक और सांस्कृतिक परिवर्तन के बीच अंतर को स्पष्ट करते हुए उनके विशिष्ट क्षेत्रों को परिभाषित करते हैं।"
   },
   {
-    question_en: "Alluvial soil is spread over approximately what percentage of India's total geographical area?",
-    question_hi: "जलोढ़ मिट्टी (Alluvial soil) भारत के कुल भू-क्षेत्र के लगभग कितने प्रतिशत भाग पर फैली है?",
-    options_en: ["18.6%", "43.4%", "16.6%", "3.7%"],
-    options_hi: ["18.6%", "43.4%", "16.6%", "3.7%"],
+    question_en: "निम्नलिखित में से कौन-सा सामाजिक परिवर्तन एवं सांस्कृतिक परिवर्तन में अन्तर प्रकट करते हैं?",
+    question_hi: "निम्नलिखित में से कौन-सा सामाजिक परिवर्तन एवं सांस्कृतिक परिवर्तन में अन्तर प्रकट करते हैं?",
+    options_en: [
+      "सामाजिक परिवर्तन की अपेक्षा सांस्कृतिक परिवर्तन की परिधि कहीं अधिक विस्तृत है",
+      "सामाजिक एवं सांस्कृतिक परिवर्तन में सम्बन्ध योग और सम्पूर्णता का है",
+      "सामाजिक परिवर्तन के कारण सामाजिक ढाँचे में परिवर्तन आता है, जबकि सांस्कृतिक परिवर्तन में संस्कृति के विभिन्न पक्षों में",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "सामाजिक परिवर्तन की अपेक्षा सांस्कृतिक परिवर्तन की परिधि कहीं अधिक विस्तृत है",
+      "सामाजिक एवं सांस्कृतिक परिवर्तन में सम्बन्ध योग और सम्पूर्णता का है",
+      "सामाजिक परिवर्तन के कारण सामाजिक ढाँचे में परिवर्तन आता है, जबकि सांस्कृतिक परिवर्तन में संस्कृति के विभिन्न पक्षों में",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "सामाजिक और सांस्कृतिक परिवर्तन के बीच कई अंतर हैं। सांस्कृतिक परिवर्तन की परिधि अक्सर सामाजिक परिवर्तन से अधिक व्यापक मानी जाती है, दोनों के बीच योग और सम्पूर्णता का संबंध होता है, और सामाजिक परिवर्तन सामाजिक ढांचे को प्रभावित करता है जबकि सांस्कृतिक परिवर्तन संस्कृति के विभिन्न पहलुओं को।",
+    explanation_hi: "सामाजिक और सांस्कृतिक परिवर्तन के बीच कई अंतर हैं। सांस्कृतिक परिवर्तन की परिधि अक्सर सामाजिक परिवर्तन से अधिक व्यापक मानी जाती है, दोनों के बीच योग और सम्पूर्णता का संबंध होता है, और सामाजिक परिवर्तन सामाजिक ढांचे को प्रभावित करता है जबकि सांस्कृतिक परिवर्तन संस्कृति के विभिन्न पहलुओं को।"
+  },
+  {
+    question_en: "सामाजिक परिवर्तन का प्रौद्योगिक कारक किसने दिया है?",
+    question_hi: "सामाजिक परिवर्तन का प्रौद्योगिक कारक किसने दिया है?",
+    options_en: [
+      "कार्ल मार्क्स",
+      "मैक्स वेबर",
+      "ऑगबर्न",
+      "वेब्लेन"
+    ],
+    options_hi: [
+      "कार्ल मार्क्स",
+      "मैक्स वेबर",
+      "ऑगबर्न",
+      "वेब्लेन"
+    ],
+    correct_option_index: 3,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के सिद्धांत के लिए जाना जाता है, जिसमें प्रौद्योगिकी को सामाजिक परिवर्तन का एक प्रमुख चालक माना जाता है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के सिद्धांत के लिए जाना जाता है, जिसमें प्रौद्योगिकी को सामाजिक परिवर्तन का एक प्रमुख चालक माना जाता है।"
+  },
+  {
+    question_en: "सोरोकिन का सामाजिक परिवर्तन की कौन वस्तुनिष्ठता, निपुणता, आय और सम्पत्ति जिसमें परस्पर गतिशीलता है, पर आधारित है?",
+    question_hi: "सोरोकिन का सामाजिक परिवर्तन की कौन वस्तुनिष्ठता, निपुणता, आय और सम्पत्ति जिसमें परस्पर गतिशीलता है, पर आधारित है?",
+    options_en: [
+      "जाति-व्यवस्था",
+      "दास-व्यवस्था",
+      "वर्ग-व्यवस्था",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "जाति-व्यवस्था",
+      "दास-व्यवस्था",
+      "वर्ग-व्यवस्था",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "सोरोकिन (Sorokin) ने सामाजिक गतिशीलता (social mobility) का अध्ययन किया और वर्ग-व्यवस्था (class system) को वस्तुनिष्ठता, निपुणता, आय और संपत्ति के आधार पर गतिशीलता के लिए एक महत्वपूर्ण संरचना माना।",
+    explanation_hi: "सोरोकिन (Sorokin) ने सामाजिक गतिशीलता (social mobility) का अध्ययन किया और वर्ग-व्यवस्था (class system) को वस्तुनिष्ठता, निपुणता, आय और संपत्ति के आधार पर गतिशीलता के लिए एक महत्वपूर्ण संरचना माना।"
+  },
+  {
+    question_en: "'संविधान एक आर्थिक मसौदा है' यह कथन किसने कहा है?",
+    question_hi: "'संविधान एक आर्थिक मसौदा है' यह कथन किसने कहा है?",
+    options_en: [
+      "मार्क्स",
+      "पेरेटो",
+      "चार्ल्स बीएर्ड",
+      "वेब्लेन"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "पेरेटो",
+      "चार्ल्स बीएर्ड",
+      "वेब्लेन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह कथन चार्ल्स ए. बीएर्ड (Charles A. Beard) का है, जिन्होंने अमेरिकी संविधान के आर्थिक आधारों पर जोर दिया था।",
+    explanation_hi: "यह कथन चार्ल्स ए. बीएर्ड (Charles A. Beard) का है, जिन्होंने अमेरिकी संविधान के आर्थिक आधारों पर जोर दिया था।"
+  },
+  {
+    question_en: "'पूँजी वह धन है जो कि श्रमिकों के शोषण के लिए प्रयोग में लाया जाता है' यह कथन किसने कहा है?",
+    question_hi: "'पूँजी वह धन है जो कि श्रमिकों के शोषण के लिए प्रयोग में लाया जाता है' यह कथन किसने कहा है?",
+    options_en: [
+      "मार्क्स",
+      "एंग्लस",
+      "वेब्लेन",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "एंग्लस",
+      "वेब्लेन",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह कथन कार्ल मार्क्स (Karl Marx) का है, जो पूंजीवाद की अपनी आलोचना में पूंजी को श्रमिकों के शोषण के एक उपकरण के रूप में देखते थे।",
+    explanation_hi: "यह कथन कार्ल मार्क्स (Karl Marx) का है, जो पूंजीवाद की अपनी आलोचना में पूंजी को श्रमिकों के शोषण के एक उपकरण के रूप में देखते थे।"
+  },
+  {
+    question_en: "'प्रौद्योगिकी के अन्तर्गत वे विधियाँ, ज्ञान एवं कुशलताएँ सम्मिलित हैं, जिनके द्वारा मनुष्य प्राकृतिक और जैविकीय घटनाओं का नियन्त्रण और उपयोग करते हैं।' यह परिभाषा है -",
+    question_hi: "'प्रौद्योगिकी के अन्तर्गत वे विधियाँ, ज्ञान एवं कुशलताएँ सम्मिलित हैं, जिनके द्वारा मनुष्य प्राकृतिक और जैविकीय घटनाओं का नियन्त्रण और उपयोग करते हैं।' यह परिभाषा है -",
+    options_en: [
+      "क्लार्क विस्लर ने",
+      "प्रो. सरन ने",
+      "लेपियर ने",
+      "मार्क्स ने"
+    ],
+    options_hi: [
+      "क्लार्क विस्लर ने",
+      "प्रो. सरन ने",
+      "लेपियर ने",
+      "मार्क्स ने"
+    ],
     correct_option_index: 1,
-    explanation_en: "Alluvial soil is spread over 43.4% of India's geographical area.",
-    explanation_hi: "जलोढ़ मृदा (Alluvial soil) भारत के 43.4% भू-भाग पर फैली है।",
+    explanation_en: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को प्राकृतिक और जैविकीय घटनाओं को नियंत्रित करने और उपयोग करने के लिए ज्ञान और कौशल के रूप में परिभाषित करते हैं।",
+    explanation_hi: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को प्राकृतिक और जैविकीय घटनाओं को नियंत्रित करने और उपयोग करने के लिए ज्ञान और कौशल के रूप में परिभाषित करते हैं।"
   },
   {
-    question_en: "Which soil is rich in Iron Oxide and Potash?",
-    question_hi: "किस मिट्टी में आयरन ऑक्साइड और पोटाश की प्रचुरता होती है?",
-    options_en: ["Alluvial Soil", "Red Soil", "Black Soil", "Laterite Soil"],
-    options_hi: ["जलोढ़ मिट्टी", "लाल मिट्टी", "काली मिट्टी", "लैटेराइट मिट्टी"],
-    correct_option_index: 3,
-    explanation_en: "Laterite soil is rich in iron oxide and potash.",
-    explanation_hi: "लैटेराइट मिट्टी आयरन ऑक्साइड और पोटाश में समृद्ध होती है।",
-  },
-  {
-    question_en: "Which mineral is abundant in Mountain Soil?",
-    question_hi: "पर्वतीय मिट्टी (Mountain soil) में किस खनिज की अधिकता होती है?",
-    options_en: ["Phosphorus", "Potash", "Lime", "Humus"],
-    options_hi: ["फॉस्फोरस", "पोटाश", "चूना", "ह्यूमस (Humus)"],
-    correct_option_index: 3,
-    explanation_en: "Mountain soil is rich in Humus.",
-    explanation_hi: "पर्वतीय मिट्टी ह्यूमस में समृद्ध होती है।",
-  },
-  {
-    question_en: "Where are Peaty and Marshy soils found?",
-    question_hi: "पीट और दलदली मिट्टी (Peaty and Marshy soil) कहाँ पाई जाती है?",
-    options_en: ["In the deserts of Rajasthan", "On the Peninsular Plateau", "Coastal areas (West Bengal, Odisha)", "Himalayan Forests"],
-    options_hi: ["राजस्थान के रेगिस्तान में", "प्रायद्वीपीय पठार पर", "तटवर्ती क्षेत्र (पश्चिम बंगाल, ओडिशा)", "हिमालय के वन"],
+    question_en: "औद्योगिकरण एवं विशेषीकरण ने निम्न में से किस चीज़ को जन्म दिया है?",
+    question_hi: "औद्योगिकरण एवं विशेषीकरण ने निम्न में से किस चीज़ को जन्म दिया है?",
+    options_en: [
+      "पारस्परिक सम्पर्क को",
+      "सार्वभौमिक सम्पर्क को",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "पारस्परिक सम्पर्क को",
+      "सार्वभौमिक सम्पर्क को",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
     correct_option_index: 2,
-    explanation_en: "Peaty and Marshy soils are found in the coastal parts of West Bengal and Odisha.",
-    explanation_hi: "पीट और दलदली मिट्टी पश्चिम बंगाल और ओडिशा के तटवर्ती भागों में पाई जाती है।",
+    explanation_en: "औद्योगिकीकरण और विशेषीकरण ने न केवल लोगों के बीच पारस्परिक संपर्क को बढ़ाया है बल्कि वैश्विक स्तर पर सार्वभौमिक संपर्क और निर्भरता को भी जन्म दिया है।",
+    explanation_hi: "औद्योगिकीकरण और विशेषीकरण ने न केवल लोगों के बीच पारस्परिक संपर्क को बढ़ाया है बल्कि वैश्विक स्तर पर सार्वभौमिक संपर्क और निर्भरता को भी जन्म दिया है।"
   },
   {
-    question_en: "Which soil is also known by the names 'Kallar', 'Ussar', or 'Reh'?",
-    question_hi: "किस मिट्टी को 'कल्लर', 'उससर' या 'रेह' नाम से भी जाना जाता है?",
-    options_en: ["Mountain Soil", "Alluvial Soil", "Red Soil", "Saline and Alkaline soil"],
-    options_hi: ["पर्वतीय मिट्टी", "जलोढ़ मिट्टी", "लाल मिट्टी", "नमकीन और क्षारीय मिट्टी (Saline and Alkaline soil)"],
-    correct_option_index: 3,
-    explanation_en: "Saline and Alkaline soil is also called Reh, Kallar, or Usar.",
-    explanation_hi: "नमकीन और क्षारीय मिट्टी को रेह, कल्लर या उसर भी कहते हैं।",
+    question_en: "भारत में पहला सूचना प्रौद्योगिकी अधिनियम किस वर्ष पारित हुआ?",
+    question_hi: "भारत में पहला सूचना प्रौद्योगिकी अधिनियम किस वर्ष पारित हुआ?",
+    options_en: [
+      "2000 में",
+      "2002 में",
+      "2005 में",
+      "2006 में"
+    ],
+    options_hi: [
+      "2000 में",
+      "2002 में",
+      "2005 में",
+      "2006 में"
+    ],
+    correct_option_index: 0,
+    explanation_en: "भारत में सूचना प्रौद्योगिकी अधिनियम (Information Technology Act) वर्ष 2000 में पारित हुआ था।",
+    explanation_hi: "भारत में सूचना प्रौद्योगिकी अधिनियम (Information Technology Act) वर्ष 2000 में पारित हुआ था।"
   },
   {
-    question_en: "What is the average annual rainfall in Tropical Evergreen Forests?",
-    question_hi: "उष्णकटिबंधीय सदाबहार वन (Tropical Evergreen Forest) में औसत वार्षिक वर्षा कितनी होती है?",
-    options_en: ["100-150 cm", "70-100 cm", "150-200 cm", "More than 250 cm"],
-    options_hi: ["100-150 सेमी", "70-100 सेमी", "150-200 सेमी", "250 सेमी से अधिक"],
-    correct_option_index: 3,
-    explanation_en: "Tropical Evergreen Forests are found in areas where rainfall is more than 250 cm.",
-    explanation_hi: "उष्णकटिबंधीय सदाबहार वन उन क्षेत्रों में पाए जाते हैं जहाँ 250 सेमी से अधिक वर्षा होती है।",
-  },
-  {
-    question_en: "Sandalwood is mainly found in the tropical deciduous forests of which Indian state?",
-    question_hi: "चंदन की लकड़ी (Sandalwood) मुख्य रूप से भारत के किस राज्य के उष्णकटिबंधीय पर्णपाती वनों में पाई जाती है?",
-    options_en: ["Madhya Pradesh", "Maharashtra", "Andhra Pradesh", "Karnataka"],
-    options_hi: ["मध्य प्रदेश", "महाराष्ट्र", "आंध्र प्रदेश", "कर्नाटक"],
-    correct_option_index: 3,
-    explanation_en: "Sandalwood is mainly found in the tropical deciduous forests of Karnataka.",
-    explanation_hi: "चंदन की लकड़ी कर्नाटक के उष्णकटिबंधीय पर्णपाती वनों में पाई जाती है।",
-  },
-  {
-    question_en: "In which month is 'Van Mahotsav' celebrated?",
-    question_hi: "'वन महोत्सव' (Van Mahotsav) किस माह में मनाया जाता है?",
-    options_en: ["First week of January", "First week of October", "First week of July", "Last week of March"],
-    options_hi: ["जनवरी का पहला सप्ताह", "अक्टूबर का पहला सप्ताह", "जुलाई का पहला सप्ताह", "मार्च का अंतिम सप्ताह"],
+    question_en: "भारत में निम्नलिखित में से किस दिवस को प्रौद्योगिक दिवस के रूप में मनाया जाता है?",
+    question_hi: "भारत में निम्नलिखित में से किस दिवस को प्रौद्योगिक दिवस के रूप में मनाया जाता है?",
+    options_en: [
+      "10 फरवरी",
+      "15 मार्च",
+      "11 मई",
+      "11 जुलाई"
+    ],
+    options_hi: [
+      "10 फरवरी",
+      "15 मार्च",
+      "11 मई",
+      "11 जुलाई"
+    ],
     correct_option_index: 2,
-    explanation_en: "Van Mahotsav is celebrated in the first week of July (July 1 to July 7).",
-    explanation_hi: "वन महोत्सव जुलाई के पहले सप्ताह (1 जुलाई से 7 जुलाई) में मनाया जाता है।",
+    explanation_en: "भारत में प्रत्येक वर्ष 11 मई को राष्ट्रीय प्रौद्योगिकी दिवस (National Technology Day) के रूप में मनाया जाता है, जो 1998 के पोखरण परमाणु परीक्षणों की सफलता का प्रतीक है।",
+    explanation_hi: "भारत में प्रत्येक वर्ष 11 मई को राष्ट्रीय प्रौद्योगिकी दिवस (National Technology Day) के रूप में मनाया जाता है, जो 1998 के पोखरण परमाणु परीक्षणों की सफलता का प्रतीक है।"
   },
   {
-    question_en: "Wild donkeys, Babool, and Khair trees are found in which type of forests?",
-    question_hi: "जंगली गधे, बबूल (Babool), और खैर (Khair) के पेड़ किस प्रकार के वनों में पाए जाते हैं?",
-    options_en: ["Evergreen Forests", "Deltaic Forests", "Mountain Forests", "Arid Forests"],
-    options_hi: ["सदाबहार वन", "डेल्टाई वन", "पर्वतीय वन", "मरुस्थलीय वन (Arid Forests)"],
-    correct_option_index: 3,
-    explanation_en: "Trees like Babool and Khair are found in Arid Forests (areas with less than 70 cm rainfall).",
-    explanation_hi: "बबूल और खैर जैसे पेड़ मरुस्थलीय वन (70 सेमी से कम वर्षा वाले क्षेत्र) में पाए जाते हैं।",
+    question_en: "'दि थ्योरी ऑफ लेज़र क्लास' के लेखक कौन हैं?",
+    question_hi: "'दि थ्योरी ऑफ लेज़र क्लास' के लेखक कौन हैं?",
+    options_en: [
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन",
+      "मैक्स वेबर"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन",
+      "मैक्स वेबर"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'दि थ्योरी ऑफ लेज़र क्लास' (The Theory of the Leisure Class) पुस्तक के लेखक थॉर्स्टीन वेब्लेन (Thorstein Veblen) हैं, जिन्होंने उपभोक्तावाद और सामाजिक स्तरीकरण पर महत्वपूर्ण विचार प्रस्तुत किए।",
+    explanation_hi: "'दि थ्योरी ऑफ लेज़र क्लास' (The Theory of the Leisure Class) पुस्तक के लेखक थॉर्स्टीन वेब्लेन (Thorstein Veblen) हैं, जिन्होंने उपभोक्तावाद और सामाजिक स्तरीकरण पर महत्वपूर्ण विचार प्रस्तुत किए।"
   },
   {
-    question_en: "What is the meaning of 'Reforestation'?",
-    question_hi: "'पूर्वनिरोपण' (Reforestation) का क्या अर्थ है?",
-    options_en: ["Planting new forests", "Planting new trees on destroyed forests", "The process of cutting trees", "Destroying natural vegetation"],
-    options_hi: ["नए वन लगाना", "नष्ट हुए वनों पर नए पेड़ लगाना", "पेड़ काटने की प्रक्रिया", "प्राकृतिक वनस्पति को नष्ट करना"],
+    question_en: "'ए हैण्डबुक ऑफ सोशियोलॉजी' के लेखक कौन हैं?",
+    question_hi: "'ए हैण्डबुक ऑफ सोशियोलॉजी' के लेखक कौन हैं?",
+    options_en: [
+      "ऑगबर्न व निम्कॉफ",
+      "फिलिप्स",
+      "कूले",
+      "दुर्खीम"
+    ],
+    options_hi: [
+      "ऑगबर्न व निम्कॉफ",
+      "फिलिप्स",
+      "कूले",
+      "दुर्खीम"
+    ],
+    correct_option_index: 0,
+    explanation_en: "'ए हैण्डबुक ऑफ सोशियोलॉजी' (A Handbook of Sociology) पुस्तक के लेखक विलियम एफ. ऑगबर्न (William F. Ogburn) और मेयर एफ. निम्कॉफ (Meyer F. Nimkoff) हैं।",
+    explanation_hi: "'ए हैण्डबुक ऑफ सोशियोलॉजी' (A Handbook of Sociology) पुस्तक के लेखक विलियम एफ. ऑगबर्न (William F. Ogburn) और मेयर एफ. निम्कॉफ (Meyer F. Nimkoff) हैं।"
+  },
+  {
+    question_en: "प्रौद्योगिकी के पारिवारिक जीवन पर पड़ने वाला प्रभाव है -",
+    question_hi: "प्रौद्योगिकी के पारिवारिक जीवन पर पड़ने वाला प्रभाव है -",
+    options_en: [
+      "भौतिकवाद एवं व्यक्तिवाद की उत्पत्ति",
+      "संयुक्त परिवारों का विघटन एवं एकाकी परिवारों का उदय",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "भौतिकवाद एवं व्यक्तिवाद की उत्पत्ति",
+      "संयुक्त परिवारों का विघटन एवं एकाकी परिवारों का उदय",
+      "(a) और (b) दोनों",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रौद्योगिकी के विकास ने पारिवारिक जीवन पर गहरा प्रभाव डाला है, जिससे भौतिकवाद और व्यक्तिवाद को बढ़ावा मिला है, साथ ही संयुक्त परिवारों का विघटन और एकाकी परिवारों का उदय हुआ है।",
+    explanation_hi: "प्रौद्योगिकी के विकास ने पारिवारिक जीवन पर गहरा प्रभाव डाला है, जिससे भौतिकवाद और व्यक्तिवाद को बढ़ावा मिला है, साथ ही संयुक्त परिवारों का विघटन और एकाकी परिवारों का उदय हुआ है।"
+  },
+  {
+    question_en: "प्रौद्योगिकी के कारण आधुनिक समुदायों में पायी जा रही है -",
+    question_hi: "प्रौद्योगिकी के कारण आधुनिक समुदायों में पायी जा रही है -",
+    options_en: [
+      "यांत्रिक एकता",
+      "सावयवी एकता",
+      "पारिणामिक एकता",
+      "मानवीय एकता"
+    ],
+    options_hi: [
+      "यांत्रिक एकता",
+      "सावयवी एकता",
+      "पारिणामिक एकता",
+      "मानवीय एकता"
+    ],
     correct_option_index: 1,
-    explanation_en: "Reforestation means planting new trees on destroyed forests.",
-    explanation_hi: "पूर्वनिरोपण का अर्थ है नष्ट हुए वनों पर नए पेड़ लगाना।",
+    explanation_en: "दुर्खीम (Durkheim) के अनुसार, आधुनिक समाजों में श्रम विभाजन और विशेषीकरण के कारण सावयवी एकता (organic solidarity) पाई जाती है, जो प्रौद्योगिकी के विकास से जुड़ी है।",
+    explanation_hi: "दुर्खीम (Durkheim) के अनुसार, आधुनिक समाजों में श्रम विभाजन और विशेषीकरण के कारण सावयवी एकता (organic solidarity) पाई जाती है, जो प्रौद्योगिकी के विकास से जुड़ी है।"
   },
   {
-    question_en: "What is the technique of growing plants in the air called?",
-    question_hi: "हवा में पौधों को उगाने की तकनीक (Growing plants in the air) को क्या कहा जाता है?",
-    options_en: ["Hydroponics", "Sericulture", "Apiculture", "Aeroponics"],
-    options_hi: ["हाइड्रोपोनिक्स", "सेरीकल्चर", "एपिकल्चर", "एरोपोनिक्स (Aeroponics)"],
+    question_en: "प्रौद्योगिकी के विकास ने धार्मिक विश्वास को समाज में कम कर दी है -",
+    question_hi: "प्रौद्योगिकी के विकास ने धार्मिक विश्वास को समाज में कम कर दी है -",
+    options_en: [
+      "धार्मिक पकड़",
+      "कर्मकाण्ड",
+      "धार्मिक रूढ़िवादिता",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "धार्मिक पकड़",
+      "कर्मकाण्ड",
+      "धार्मिक रूढ़िवादिता",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The technique of growing plants in the air is called Aeroponics.",
-    explanation_hi: "हवा में पौधों को उगाने की तकनीक को एरोपोनिक्स कहते हैं।",
+    explanation_en: "प्रौद्योगिकी और वैज्ञानिक सोच के विकास ने समाज में धार्मिक पकड़, कर्मकाण्डों के महत्व और धार्मिक रूढ़िवादिता को कम किया है, जिससे धर्मनिरपेक्षीकरण की प्रक्रिया को बढ़ावा मिला है।",
+    explanation_hi: "प्रौद्योगिकी और वैज्ञानिक सोच के विकास ने समाज में धार्मिक पकड़, कर्मकाण्डों के महत्व और धार्मिक रूढ़िवादिता को कम किया है, जिससे धर्मनिरपेक्षीकरण की प्रक्रिया को बढ़ावा मिला है।"
   },
   {
-    question_en: "What type of climate does India have?",
-    question_hi: "भारत की जलवायु (Climate) किस प्रकार की है?",
-    options_en: ["Temperate", "Equatorial", "Tropical Monsoon", "Mediterranean"],
-    options_hi: ["शीतोष्ण कटिबंधीय", "भूमध्यरेखीय", "उष्णकटिबंधीय मानसूनी", "भूमध्यसागरीय"],
+    question_en: "प्रौद्योगिकी के कारण समाज में बढ़ावा मिला है -",
+    question_hi: "प्रौद्योगिकी के कारण समाज में बढ़ावा मिला है -",
+    options_en: [
+      "आर्थिक विसंगति को",
+      "सांस्कृतिक अलगाव को",
+      "आर्थिक विषमता को",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "आर्थिक विसंगति को",
+      "सांस्कृतिक अलगाव को",
+      "आर्थिक विषमता को",
+      "उपर्युक्त सभी"
+    ],
+    correct_option_index: 3,
+    explanation_en: "प्रौद्योगिकी के विकास ने समाज में कई जटिल प्रभाव डाले हैं, जिनमें आर्थिक विसंगति, सांस्कृतिक अलगाव और आर्थिक विषमता में वृद्धि शामिल है।",
+    explanation_hi: "प्रौद्योगिकी के विकास ने समाज में कई जटिल प्रभाव डाले हैं, जिनमें आर्थिक विसंगति, सांस्कृतिक अलगाव और आर्थिक विषमता में वृद्धि शामिल है।"
+  },
+  {
+    question_en: "प्रौद्योगिक प्रक्रिया के किसी परस्पर भाग में उत्पन्न होने वाले असंतुलन को कहा जाता है -",
+    question_hi: "प्रौद्योगिक प्रक्रिया के किसी परस्पर भाग में उत्पन्न होने वाले असंतुलन को कहा जाता है -",
+    options_en: [
+      "प्रौद्योगिक ह्रास",
+      "प्रौद्योगिक प्रतिरोध",
+      "प्रौद्योगिक विलम्बना",
+      "प्रौद्योगिक तनाव"
+    ],
+    options_hi: [
+      "प्रौद्योगिक ह्रास",
+      "प्रौद्योगिक प्रतिरोध",
+      "प्रौद्योगिक विलम्बना",
+      "प्रौद्योगिक तनाव"
+    ],
     correct_option_index: 2,
-    explanation_en: "India's climate is Tropical Monsoon climate.",
-    explanation_hi: "भारत की जलवायु उष्णकटिबंधीय मानसूनी जलवायु है।",
+    explanation_en: "प्रौद्योगिक विलम्बना (Technological Lag) की अवधारणा ऑगबर्न के सांस्कृतिक विलम्बना से मिलती-जुलती है, जहाँ प्रौद्योगिकी के एक हिस्से में तेजी से बदलाव होता है जबकि दूसरा हिस्सा पीछे रह जाता है, जिससे असंतुलन पैदा होता है।",
+    explanation_hi: "प्रौद्योगिक विलम्बना (Technological Lag) की अवधारणा ऑगबर्न के सांस्कृतिक विलम्बना से मिलती-जुलती है, जहाँ प्रौद्योगिकी के एक हिस्से में तेजी से बदलाव होता है जबकि दूसरा हिस्सा पीछे रह जाता है, जिससे असंतुलन पैदा होता है।"
   },
   {
-    question_en: "The word 'Monsoon' originated from the word 'Mausam' of which language?",
-    question_hi: "मानसून शब्द की उत्पत्ति किस भाषा के शब्द 'मौसम' से हुई है?",
-    options_en: ["Greek", "Latin", "Arabic", "Hindi"],
-    options_hi: ["ग्रीक", "लैटिन", "अरबी", "हिंदी"],
+    question_en: "प्रौद्योगिक विलम्बना, प्रौद्योगिक प्रतिरोध, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता की अवधारणाएँ निम्न में से किसकी देन है?",
+    question_hi: "प्रौद्योगिक विलम्बना, प्रौद्योगिक प्रतिरोध, सांस्कृतिक संघर्ष और सांस्कृतिक विसंगतता की अवधारणाएँ निम्न में से किसकी देन है?",
+    options_en: [
+      "आर. एम. मैकाइवर की",
+      "थॉर्स्टीन वेब्लेन की",
+      "टॉलकॉट पारसन्स की",
+      "कार्ल मार्क्स की"
+    ],
+    options_hi: [
+      "आर. एम. मैकाइवर की",
+      "थॉर्स्टीन वेब्लेन की",
+      "टॉलकॉट पारसन्स की",
+      "कार्ल मार्क्स की"
+    ],
+    correct_option_index: 0,
+    explanation_en: "आर. एम. मैकाइवर (R. M. MacIver) ने सामाजिक परिवर्तन के संदर्भ में इन अवधारणाओं का प्रयोग किया है, विशेषकर सांस्कृतिक विलम्बना और संघर्ष के विभिन्न रूपों को समझाने के लिए।",
+    explanation_hi: "आर. एम. मैकाइवर (R. M. MacIver) ने सामाजिक परिवर्तन के संदर्भ में इन अवधारणाओं का प्रयोग किया है, विशेषकर सांस्कृतिक विलम्बना और संघर्ष के विभिन्न रूपों को समझाने के लिए।"
+  },
+  {
+    question_en: "निम्न में कौन-सा समाजशास्त्री 'प्रौद्योगिक निर्धारणवाद' से सम्बन्धित है?",
+    question_hi: "निम्न में कौन-सा समाजशास्त्री 'प्रौद्योगिक निर्धारणवाद' से सम्बन्धित है?",
+    options_en: [
+      "वेबर",
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन"
+    ],
+    options_hi: [
+      "वेबर",
+      "वेब्लेन",
+      "मार्क्स",
+      "सोरोकिन"
+    ],
+    correct_option_index: 1,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के प्रमुख प्रतिपादकों में से एक माना जाता है, जो मानते थे कि प्रौद्योगिकी सामाजिक संरचना और संस्कृति को निर्धारित करती है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के प्रमुख प्रतिपादकों में से एक माना जाता है, जो मानते थे कि प्रौद्योगिकी सामाजिक संरचना और संस्कृति को निर्धारित करती है।"
+  },
+  {
+    question_en: "प्रौद्योगिकी के कारण उत्पन्न श्रम विभाजन और विशेषीकरण ने समाज में जन्म दिया है -",
+    question_hi: "प्रौद्योगिकी के कारण उत्पन्न श्रम विभाजन और विशेषीकरण ने समाज में जन्म दिया है -",
+    options_en: [
+      "पारस्परिक प्रतिस्पर्धा को",
+      "पारस्परिक संघर्ष को",
+      "पारस्परिक अधिकतमता को",
+      "पारस्परिक अलगाव को"
+    ],
+    options_hi: [
+      "पारस्परिक प्रतिस्पर्धा को",
+      "पारस्परिक संघर्ष को",
+      "पारस्परिक अधिकतमता को",
+      "पारस्परिक अलगाव को"
+    ],
     correct_option_index: 2,
-    explanation_en: "The word Monsoon originated from the Arabic word 'Mausam'.",
-    explanation_hi: "मानसून शब्द की उत्पत्ति अरबी भाषा के शब्द 'मौसम' से हुई है।",
+    explanation_en: "प्रौद्योगिकी के कारण श्रम विभाजन और विशेषीकरण ने दक्षता और उत्पादन में वृद्धि की है, जिससे 'पारस्परिक अधिकतमता' (mutual maximization) या अधिकतम सहयोग और उत्पादकता की स्थिति उत्पन्न हुई है।",
+    explanation_hi: "प्रौद्योगिकी के कारण श्रम विभाजन और विशेषीकरण ने दक्षता और उत्पादन में वृद्धि की है, जिससे 'पारस्परिक अधिकतमता' (mutual maximization) या अधिकतम सहयोग और उत्पादकता की स्थिति उत्पन्न हुई है।"
   },
   {
-    question_en: "'Kaal Baisakhi' blows in which Indian state?",
-    question_hi: "'काल बैसाखी' (Kaal Baisakhi) किस भारतीय राज्य में चलती है?",
-    options_en: ["Maharashtra", "Gujarat", "Kerala", "West Bengal, Assam, Odisha"],
-    options_hi: ["महाराष्ट्र", "गुजरात", "केरल", "पश्चिम बंगाल, असम, ओडिशा"],
+    question_en: "प्रौद्योगिकी के विकास ने आर्थिक क्षेत्र में बढ़ावा दिया है -",
+    question_hi: "प्रौद्योगिकी के विकास ने आर्थिक क्षेत्र में बढ़ावा दिया है -",
+    options_en: [
+      "आर्थिक विषमता को",
+      "आर्थिक प्रतियोगिता को",
+      "स्थलांतरण एवं विशेषीकरण को",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "आर्थिक विषमता को",
+      "आर्थिक प्रतियोगिता को",
+      "स्थलांतरण एवं विशेषीकरण को",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "Kaal Baisakhi are winds that blow in West Bengal, Assam, and Odisha during the summer season (April to May).",
-    explanation_hi: "काल बैसाखी ग्रीष्म ऋतु (अप्रैल से मई) के दौरान पश्चिम बंगाल, असम और ओडिशा में चलने वाली पवनें हैं।",
+    explanation_en: "प्रौद्योगिकी के विकास ने आर्थिक क्षेत्र में कई बदलाव लाए हैं, जिनमें आर्थिक विषमता, प्रतियोगिता, स्थलांतरण (migration) और विशेषीकरण (specialization) में वृद्धि शामिल हैं।",
+    explanation_hi: "प्रौद्योगिकी के विकास ने आर्थिक क्षेत्र में कई बदलाव लाए हैं, जिनमें आर्थिक विषमता, प्रतियोगिता, स्थलांतरण (migration) और विशेषीकरण (specialization) में वृद्धि शामिल हैं।"
   },
   {
-    question_en: "'Western Disturbance' is a temperate cyclone originating from which sea?",
-    question_hi: "'पश्चिमी विक्षोभ' (Western Disturbance) किस सागर से उत्पन्न होने वाला शीतोष्ण चक्रवात है?",
-    options_en: ["Red Sea", "Black Sea", "Mediterranean Sea", "Arabian Sea"],
-    options_hi: ["लाल सागर", "काला सागर", "भूमध्य सागर (Mediterranean Sea)", "अरब सागर"],
+    question_en: "निम्नलिखित में से कौन-सी दशा परिवर्तन प्रौद्योगिकी से प्रभावित नहीं है?",
+    question_hi: "निम्नलिखित में से कौन-सी दशा परिवर्तन प्रौद्योगिकी से प्रभावित नहीं है?",
+    options_en: [
+      "श्रम दशाओं में परिवर्तन",
+      "केन्द्रीय परिवारों में वृद्धि",
+      "सामाजिक सम्बन्धों में परिवर्तन",
+      "साम्प्रदायिकता में वृद्धि"
+    ],
+    options_hi: [
+      "श्रम दशाओं में परिवर्तन",
+      "केन्द्रीय परिवारों में वृद्धि",
+      "सामाजिक सम्बन्धों में परिवर्तन",
+      "साम्प्रदायिकता में वृद्धि"
+    ],
+    correct_option_index: 3,
+    explanation_en: "प्रौद्योगिकी परिवर्तन सीधे तौर पर साम्प्रदायिकता (communalism) में वृद्धि को प्रभावित नहीं करता है। जबकि श्रम दशाएं, परिवार संरचना और सामाजिक संबंध प्रौद्योगिकी से सीधे प्रभावित होते हैं।",
+    explanation_hi: "प्रौद्योगिकी परिवर्तन सीधे तौर पर साम्प्रदायिकता (communalism) में वृद्धि को प्रभावित नहीं करता है। जबकि श्रम दशाएं, परिवार संरचना और सामाजिक संबंध प्रौद्योगिकी से सीधे प्रभावित होते हैं।"
+  },
+  {
+    question_en: "निम्नलिखित में से कौन-सा औद्योगिकीकरण का परिणाम नहीं है?",
+    question_hi: "निम्नलिखित में से कौन-सा औद्योगिकीकरण का परिणाम नहीं है?",
+    options_en: [
+      "बड़े पैमाने पर उत्पादन",
+      "आर्थिक अस्थिरता",
+      "केन्द्रीय परिवारों का विघटन",
+      "बेरोज़गारी में वृद्धि"
+    ],
+    options_hi: [
+      "बड़े पैमाने पर उत्पादन",
+      "आर्थिक अस्थिरता",
+      "केन्द्रीय परिवारों का विघटन",
+      "बेरोज़गारी में वृद्धि"
+    ],
+    correct_option_index: 3,
+    explanation_en: "औद्योगिकीकरण से बड़े पैमाने पर उत्पादन, आर्थिक अस्थिरता और संयुक्त परिवारों का विघटन होता है। हालांकि, औद्योगिकीकरण से नए रोजगार के अवसर भी पैदा होते हैं, इसलिए बेरोजगारी में वृद्धि हमेशा इसका सीधा या एकमात्र परिणाम नहीं होती, बल्कि यह आर्थिक नीतियों और अन्य कारकों पर निर्भर करती है।",
+    explanation_hi: "औद्योगिकीकरण से बड़े पैमाने पर उत्पादन, आर्थिक अस्थिरता और संयुक्त परिवारों का विघटन होता है। हालांकि, औद्योगिकीकरण से नए रोजगार के अवसर भी पैदा होते हैं, इसलिए बेरोजगारी में वृद्धि हमेशा इसका सीधा या एकमात्र परिणाम नहीं होती, बल्कि यह आर्थिक नीतियों और अन्य कारकों पर निर्भर करती है।"
+  },
+  {
+    question_en: "निम्नलिखित में से कौन-सी दशा आर्थिक प्रतिस्पर्धा का परिणाम है?",
+    question_hi: "निम्नलिखित में से कौन-सी दशा आर्थिक प्रतिस्पर्धा का परिणाम है?",
+    options_en: [
+      "परिवार नियोजन में वृद्धि",
+      "सामाजिक सम्बन्धों में अनौपचारिकता",
+      "अविष्कार में वृद्धि",
+      "प्रति व्यक्ति आय में कमी"
+    ],
+    options_hi: [
+      "परिवार नियोजन में वृद्धि",
+      "सामाजिक सम्बन्धों में अनौपचारिकता",
+      "अविष्कार में वृद्धि",
+      "प्रति व्यक्ति आय में कमी"
+    ],
     correct_option_index: 2,
-    explanation_en: "Western Disturbances originate from the Mediterranean Sea.",
-    explanation_hi: "पश्चिमी विक्षोभ भूमध्य सागर से उत्पन्न होते हैं।",
+    explanation_en: "आर्थिक प्रतिस्पर्धा अक्सर नवाचार और आविष्कार (innovation) को बढ़ावा देती है, क्योंकि कंपनियां और व्यक्ति बाजार में आगे रहने के लिए नए उत्पादों, सेवाओं और प्रक्रियाओं को विकसित करने का प्रयास करते हैं।",
+    explanation_hi: "आर्थिक प्रतिस्पर्धा अक्सर नवाचार और आविष्कार (innovation) को बढ़ावा देती है, क्योंकि कंपनियां और व्यक्ति बाजार में आगे रहने के लिए नए उत्पादों, सेवाओं और प्रक्रियाओं को विकसित करने का प्रयास करते हैं।"
   },
   {
-    question_en: "'Retreating Monsoon' causes rainfall on the coast of which state?",
-    question_hi: "'मानसून का लौटना' (Retreating Monsoon) किस राज्य के तट पर वर्षा का कारण बनता है?",
-    options_en: ["Kerala", "Maharashtra", "Odisha", "Tamil Nadu (Coromandel Coast)"],
-    options_hi: ["केरल", "महाराष्ट्र", "ओडिशा", "तमिलनाडु (कोरोमंडल तट)"],
+    question_en: "प्रौद्योगिकी के कारण भारतीय समाज पर क्या प्रभाव पड़े हैं?",
+    question_hi: "प्रौद्योगिकी के कारण भारतीय समाज पर क्या प्रभाव पड़े हैं?",
+    options_en: [
+      "सामाजिक सम्बन्ध औपचारिक, प्रकार्यात्मक एवं द्वितीय पर हो गये हैं",
+      "भौतिकवाद सामाजिक जीवन का संचालन करने लगा है",
+      "सांस्कृतिक मूल्यों में परिवर्तन हो रहे हैं",
+      "(a) एवं (b) दोनों ही प्रभाव पड़े हैं"
+    ],
+    options_hi: [
+      "सामाजिक सम्बन्ध औपचारिक, प्रकार्यात्मक एवं द्वितीय पर हो गये हैं",
+      "भौतिकवाद सामाजिक जीवन का संचालन करने लगा है",
+      "सांस्कृतिक मूल्यों में परिवर्तन हो रहे हैं",
+      "(a) एवं (b) दोनों ही प्रभाव पड़े हैं"
+    ],
     correct_option_index: 3,
-    explanation_en: "The North-East Monsoon or Retreating Monsoon causes rainfall on the Coromandel coast of Tamil Nadu during winter.",
-    explanation_hi: "सर्दियों में उत्तर-पूर्वी मानसून या लौटते हुए मानसून से तमिलनाडु के कोरोमंडल तट पर वर्षा होती है।",
+    explanation_en: "प्रौद्योगिकी के कारण भारतीय समाज में सामाजिक संबंध अधिक औपचारिक और प्रकार्यात्मक हो गए हैं, भौतिकवाद बढ़ा है, और सांस्कृतिक मूल्यों में भी महत्वपूर्ण परिवर्तन आए हैं।",
+    explanation_hi: "प्रौद्योगिकी के कारण भारतीय समाज में सामाजिक संबंध अधिक औपचारिक और प्रकार्यात्मक हो गए हैं, भौतिकवाद बढ़ा है, और सांस्कृतिक मूल्यों में भी महत्वपूर्ण परिवर्तन आए हैं।"
   },
   {
-    question_en: "Mawsynram, the place receiving the highest rainfall, is situated on which hill?",
-    question_hi: "सर्वाधिक वर्षा प्राप्त करने वाला स्थान मासिनराम (Mawsynram) किस पहाड़ी पर स्थित है?",
-    options_en: ["Garo Hill", "Jaintia Hill", "Khasi Hill", "Patkoi Hill"],
-    options_hi: ["गारो पहाड़ी", "जयंतिया पहाड़ी", "खासी पहाड़ी", "पटकोई पहाड़ी"],
+    question_en: "औद्योगिक परिवर्तन के किस सिद्धान्त में प्रौद्योगिकी को ही प्रत्यक्ष और प्राथमिक कारण माना गया है, उसके प्रतिपादक हैं -",
+    question_hi: "औद्योगिक परिवर्तन के किस सिद्धान्त में प्रौद्योगिकी को ही प्रत्यक्ष और प्राथमिक कारण माना गया है, उसके प्रतिपादक हैं -",
+    options_en: [
+      "मार्क्स",
+      "पेरेटो",
+      "वेब्लेन",
+      "स्पेन्सलर"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "पेरेटो",
+      "वेब्लेन",
+      "स्पेन्सलर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Mawsynram, the place with the highest rainfall, is located on the Khasi Hill in Meghalaya.",
-    explanation_hi: "सर्वाधिक वर्षा वाला स्थान मासिनराम मेघालय की खासी पहाड़ी पर स्थित है।",
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के सिद्धांत के लिए जाना जाता है, जिसमें प्रौद्योगिकी को सामाजिक और औद्योगिक परिवर्तन का प्रत्यक्ष और प्राथमिक कारण माना जाता है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) को प्रौद्योगिक निर्धारणवाद (technological determinism) के सिद्धांत के लिए जाना जाता है, जिसमें प्रौद्योगिकी को सामाजिक और औद्योगिक परिवर्तन का प्रत्यक्ष और प्राथमिक कारण माना जाता है।"
   },
   {
-    question_en: "Manikaran, famous for Geothermal Energy, is located in which state?",
-    question_hi: "भू-तापीय ऊर्जा (Geothermal Energy) के लिए प्रसिद्ध 'मणिकरण' (Manikaran) किस राज्य में स्थित है?",
-    options_en: ["Ladakh", "Uttarakhand", "Himachal Pradesh", "Jharkhand"],
-    options_hi: ["लद्दाख", "उत्तराखंड", "हिमाचल प्रदेश", "झारखंड"],
+    question_en: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा किसकी है?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा किसकी है?",
+    options_en: [
+      "प्रो. सरन",
+      "लेपियर",
+      "कार्ल मार्क्स",
+      "ऑगबर्न"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "लेपियर",
+      "कार्ल मार्क्स",
+      "ऑगबर्न"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को लक्ष्यों की पूर्ति के लिए अप्रत्यक्ष और उन्नत साधनों की व्यवस्था के रूप में परिभाषित करते हैं।",
+    explanation_hi: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को लक्ष्यों की पूर्ति के लिए अप्रत्यक्ष और उन्नत साधनों की व्यवस्था के रूप में परिभाषित करते हैं।"
+  },
+  {
+    question_en: "किस समाजशास्त्री ने कहा है कि \"प्रौद्योगिकी का अर्थ उन विधियों, ज्ञानों तथा दक्षताओं से है जिनकी सहायता से मनुष्य भौतिक और जैविकीय तत्वों को नियन्त्रित करता है और उपयोग में लाता है?\"",
+    question_hi: "किस समाजशास्त्री ने कहा है कि \"प्रौद्योगिकी का अर्थ उन विधियों, ज्ञानों तथा दक्षताओं से है जिनकी सहायता से मनुष्य भौतिक और जैविकीय तत्वों को नियन्त्रित करता है और उपयोग में लाता है?\"",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "लेपियर",
+      "स्पेन्सर"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "लेपियर",
+      "स्पेन्सर"
+    ],
     correct_option_index: 2,
-    explanation_en: "Manikaran is located in Himachal Pradesh.",
-    explanation_hi: "मणिकरण हिमाचल प्रदेश में स्थित है।",
+    explanation_en: "यह परिभाषा लेपियर (LaPiere) द्वारा दी गई है, जो प्रौद्योगिकी को मानव द्वारा भौतिक और जैविकीय तत्वों को नियंत्रित करने और उपयोग करने के लिए उपयोग की जाने वाली विधियों, ज्ञान और दक्षताओं के रूप में परिभाषित करते हैं।",
+    explanation_hi: "यह परिभाषा लेपियर (LaPiere) द्वारा दी गई है, जो प्रौद्योगिकी को मानव द्वारा भौतिक और जैविकीय तत्वों को नियंत्रित करने और उपयोग करने के लिए उपयोग की जाने वाली विधियों, ज्ञान और दक्षताओं के रूप में परिभाषित करते हैं।"
   },
   {
-    question_en: "In which state are the Geothermal Energy sources 'Taptapani' located?",
-    question_hi: "किस राज्य में भू-तापीय ऊर्जा के स्रोत 'तापतानी' (Taptapani) स्थित हैं?",
-    options_en: ["Chhattisgarh", "Madhya Pradesh", "Jharkhand", "Odisha"],
-    options_hi: ["छत्तीसगढ़", "मध्य प्रदेश", "झारखंड", "ओडिशा"],
-    correct_option_index: 3,
-    explanation_en: "Taptapani, a source of geothermal energy, is located in Odisha.",
-    explanation_hi: "तापतानी भू-तापीय ऊर्जा का स्रोत ओडिशा में स्थित है।",
-  },
-  {
-    question_en: "Which energy source is Non-Renewable Energy?",
-    question_hi: "कौन सा ऊर्जा स्रोत गैर-नवीकरणीय (Non-Renewable Energy) है?",
-    options_en: ["Solar Energy", "Wind Energy", "Geothermal Energy", "Petroleum"],
-    options_hi: ["सौर ऊर्जा", "पवन ऊर्जा", "भू-तापीय ऊर्जा", "पेट्रोलियम (Petroleum)"],
-    correct_option_index: 3,
-    explanation_en: "Petroleum, coal, and natural gas are non-renewable energy sources.",
-    explanation_hi: "पेट्रोलियम, कोयला और प्राकृतिक गैस अनवीकरणीय/गैर-नवीकरणीय ऊर्जा स्रोत हैं।",
-  },
-  {
-    question_en: "HINDALCO (Renukoot, UP) in the Aluminum industry was established in collaboration with which country?",
-    question_hi: "अल्युमीनियम उद्योग में HINDALCO (रेनुकूट, UP) किस देश के सहयोग से स्थापित किया गया था?",
-    options_en: ["Russia", "France", "Germany", "USA (America)"],
-    options_hi: ["रूस", "फ्रांस", "जर्मनी", "USA (अमेरिका)"],
-    correct_option_index: 3,
-    explanation_en: "HINDALCO was established in collaboration with the USA.",
-    explanation_hi: "HINDALCO USA के सहयोग से स्थापित किया गया।",
-  },
-  {
-    question_en: "NALCO (National Aluminum Company Limited), Damanjodi (Odisha) was established in collaboration with which country?",
-    question_hi: "NALCO (नेशनल एल्युमीनियम कंपनी लिमिटेड), दामनजोड़ी (ओडिशा) किस देश के सहयोग से स्थापित की गई थी?",
-    options_en: ["USA", "Russia", "Germany", "France"],
-    options_hi: ["अमेरिका", "रूस", "जर्मनी", "फ्रांस"],
-    correct_option_index: 3,
-    explanation_en: "NALCO was established in collaboration with France.",
-    explanation_hi: "NALCO फ्रांस के सहयोग से स्थापित की गई थी।",
-  },
-  {
-    question_en: "Where is the factory of IISCO (Indian Iron and Steel Company) located?",
-    question_hi: "II SCO (इंडियन आयरन एंड स्टील कंपनी) का कारखाना कहाँ स्थित है?",
-    options_en: ["Rourkela", "Jamshedpur", "Burnpur (West Bengal)", "Bhilai"],
-    options_hi: ["राउरकेला", "जमशेदपुर", "बर्नपुर (पश्चिम बंगाल)", "भिलाई"],
+    question_en: "निम्नलिखित में से सूचना प्रौद्योगिकी किससे सम्बन्धित है?",
+    question_hi: "निम्नलिखित में से सूचना प्रौद्योगिकी किससे सम्बन्धित है?",
+    options_en: [
+      "औद्योगिकीकरण",
+      "सामाजिक नियोजन",
+      "जनसंख्या",
+      "सामाजिक व्यवस्था"
+    ],
+    options_hi: [
+      "औद्योगिकीकरण",
+      "सामाजिक नियोजन",
+      "जनसंख्या",
+      "सामाजिक व्यवस्था"
+    ],
     correct_option_index: 2,
-    explanation_en: "IISCO was established in 1918 and is located in Burnpur, West Bengal.",
-    explanation_hi: "IISCO की स्थापना 1918 में हुई और यह पश्चिम बंगाल के बर्नपुर में स्थित है।",
+    explanation_en: "सूचना प्रौद्योगिकी का संबंध जनसंख्या से भी है, विशेषकर जनसंख्या डेटा के संग्रह, विश्लेषण और प्रबंधन में, जो जनसांख्यिकीय अध्ययन और नीतियों के निर्माण के लिए महत्वपूर्ण है।",
+    explanation_hi: "सूचना प्रौद्योगिकी का संबंध जनसंख्या से भी है, विशेषकर जनसंख्या डेटा के संग्रह, विश्लेषण और प्रबंधन में, जो जनसांख्यिकीय अध्ययन और नीतियों के निर्माण के लिए महत्वपूर्ण है।"
   },
   {
-    question_en: "The Durgapur (West Bengal) plant, established after independence in the Iron and Steel Industry, was set up in collaboration with which country?",
-    question_hi: "लौह-इस्पात उद्योग में स्वतंत्रता के बाद स्थापित दुर्गापुर (पश्चिम बंगाल) संयंत्र को किस देश के सहयोग से स्थापित किया गया था?",
-    options_en: ["Germany", "Soviet Union", "Britain", "USA"],
-    options_hi: ["जर्मनी", "सोवियत संघ", "ब्रिटेन", "अमेरिका"],
+    question_en: "भारतवर्ष में पहला पोस्ट ऑफिस अधिनियम कब पारित हुआ?",
+    question_hi: "भारतवर्ष में पहला पोस्ट ऑफिस अधिनियम कब पारित हुआ?",
+    options_en: [
+      "1844 में",
+      "1854 में",
+      "1868 में",
+      "1881 में"
+    ],
+    options_hi: [
+      "1844 में",
+      "1854 में",
+      "1868 में",
+      "1881 में"
+    ],
+    correct_option_index: 1,
+    explanation_en: "भारत में पहला पोस्ट ऑफिस अधिनियम (Post Office Act) 1854 में पारित हुआ था, जिसने भारतीय डाक व्यवस्था को संगठित किया।",
+    explanation_hi: "भारत में पहला पोस्ट ऑफिस अधिनियम (Post Office Act) 1854 में पारित हुआ था, जिसने भारतीय डाक व्यवस्था को संगठित किया।"
+  },
+  {
+    question_en: "सूचना प्रौद्योगिकी के विकास के लिए 1 अक्टूबर, 2000 को किस संस्था का गठन किया गया?",
+    question_hi: "सूचना प्रौद्योगिकी के विकास के लिए 1 अक्टूबर, 2000 को किस संस्था का गठन किया गया?",
+    options_en: [
+      "प्रेस सूचना ब्यूरो",
+      "भारतीय पोस्ट ऑफिस विकास प्राधिकरण",
+      "भारत संचार निगम लिमिटेड",
+      "भारत दूर संचार निगम"
+    ],
+    options_hi: [
+      "प्रेस सूचना ब्यूरो",
+      "भारतीय पोस्ट ऑफिस विकास प्राधिकरण",
+      "भारत संचार निगम लिमिटेड",
+      "भारत दूर संचार निगम"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Durgapur plant was established in collaboration with Britain during the Second Five-Year Plan.",
-    explanation_hi: "दुर्गापुर संयंत्र ब्रिटेन के सहयोग से द्वितीय पंचवर्षीय योजना में स्थापित हुआ था।",
+    explanation_en: "1 अक्टूबर, 2000 को भारत संचार निगम लिमिटेड (Bharat Sanchar Nigam Limited - BSNL) का गठन किया गया था, जिसका उद्देश्य देश में दूरसंचार सेवाओं का विकास और विस्तार करना था।",
+    explanation_hi: "1 अक्टूबर, 2000 को भारत संचार निगम लिमिटेड (Bharat Sanchar Nigam Limited - BSNL) का गठन किया गया था, जिसका उद्देश्य देश में दूरसंचार सेवाओं का विकास और विस्तार करना था।"
   },
   {
-    question_en: "Where is India's longest platform, 'Shri Siddharoodha Swamiji Hubballi Station', located?",
-    question_hi: "भारत का सबसे लंबा प्लेटफॉर्म 'श्री सिद्धारूढ़ स्वामी जी हुबली स्टेशन' कहाँ स्थित है?",
-    options_en: ["West Bengal", "Uttar Pradesh", "Karnataka", "Kerala"],
-    options_hi: ["पश्चिम बंगाल", "उत्तर प्रदेश", "कर्नाटक", "केरल"],
+    question_en: "'The Faith of Modern Intellectual' पुस्तक किसने लिखी है?",
+    question_hi: "'The Faith of Modern Intellectual' पुस्तक किसने लिखी है?",
+    options_en: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मैकाइवर एवं पेज",
+      "ऑगस्त कॉम्ट",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
     correct_option_index: 2,
-    explanation_en: "This railway station is located in Karnataka.",
-    explanation_hi: "यह रेलवे स्टेशन कर्नाटक में स्थित है।",
+    explanation_en: "'The Faith of Modern Intellectual' पुस्तक के लेखक प्रो. सरन (Prof. Saran) हैं।",
+    explanation_hi: "'The Faith of Modern Intellectual' पुस्तक के लेखक प्रो. सरन (Prof. Saran) हैं।"
   },
   {
-    question_en: "The '49th Parallel' (49° North Latitude) demarcates the border between which two countries?",
-    question_hi: "'चालीसवीं समानांतर रेखा' (49° North Latitude) किन दो देशों की सीमा निर्धारित करती है?",
-    options_en: ["Mexico and USA", "Russia and Finland", "China and India", "Canada and USA"],
-    options_hi: ["मेक्सिको और USA", "रूस और फिनलैंड", "चीन और भारत", "कनाडा और USA"],
+    question_en: "औद्योगिकीकरण एवं पूंजीवादी व्यवस्था के कारण निम्नलिखित में से कौन-सी घटना घटित होती है?",
+    question_hi: "औद्योगिकीकरण एवं पूंजीवादी व्यवस्था के कारण निम्नलिखित में से कौन-सी घटना घटित होती है?",
+    options_en: [
+      "ग्रामीण समुदाय में परिवर्तन",
+      "नगरों में गन्दी बस्तियों का निर्माण",
+      "यन्त्रवत् जीवन",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "ग्रामीण समुदाय में परिवर्तन",
+      "नगरों में गन्दी बस्तियों का निर्माण",
+      "यन्त्रवत् जीवन",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The 49° North Latitude line demarcates the border between Canada and the USA.",
-    explanation_hi: "49° उत्तरी अक्षांश रेखा कनाडा और USA की सीमा निर्धारित करती है।",
+    explanation_en: "औद्योगिकीकरण और पूंजीवाद के कारण ग्रामीण समुदायों में परिवर्तन, शहरीकरण के साथ गंदी बस्तियों का निर्माण और आधुनिक जीवन में यन्त्रवत् (mechanical) या अलगावपूर्ण जीवन शैली जैसी कई घटनाएं घटित होती हैं।",
+    explanation_hi: "औद्योगिकीकरण और पूंजीवाद के कारण ग्रामीण समुदायों में परिवर्तन, शहरीकरण के साथ गंदी बस्तियों का निर्माण और आधुनिक जीवन में यन्त्रवत् (mechanical) या अलगावपूर्ण जीवन शैली जैसी कई घटनाएं घटित होती हैं।"
   },
   {
-    question_en: "The 'Great Dividing Range' is located on which continent?",
-    question_hi: "'ग्रेट डिवाइडिंग रेंज' (Great Dividing Range) किस महाद्वीप में स्थित है?",
-    options_en: ["North America", "South America", "Africa", "Australia"],
-    options_hi: ["उत्तरी अमेरिका", "दक्षिण अमेरिका", "अफ्रीका", "ऑस्ट्रेलिया"],
+    question_en: "निम्नलिखित में से कौन प्रौद्योगिकी परिवर्तन के प्रत्यक्ष प्रभाव हैं? 1. श्रम विभाजन एवं विशेषीकरण, 2. नगरीकरण, 3. गतिशीलता का बढ़ना, 4. सामाजिक सम्बन्धों में परिवार",
+    question_hi: "निम्नलिखित में से कौन प्रौद्योगिकी परिवर्तन के प्रत्यक्ष प्रभाव हैं? 1. श्रम विभाजन एवं विशेषीकरण, 2. नगरीकरण, 3. गतिशीलता का बढ़ना, 4. सामाजिक सम्बन्धों में परिवार",
+    options_en: [
+      "1, 2 और 3",
+      "2, 3 और 4",
+      "1, 2 और 3",
+      "1, 3 और 4"
+    ],
+    options_hi: [
+      "1, 2 और 3",
+      "2, 3 और 4",
+      "1, 2 और 3",
+      "1, 3 और 4"
+    ],
+    correct_option_index: 0,
+    explanation_en: "प्रौद्योगिकी परिवर्तन के प्रत्यक्ष प्रभावों में श्रम विभाजन एवं विशेषीकरण, नगरीकरण और सामाजिक गतिशीलता का बढ़ना प्रमुख हैं।",
+    explanation_hi: "प्रौद्योगिकी परिवर्तन के प्रत्यक्ष प्रभावों में श्रम विभाजन एवं विशेषीकरण, नगरीकरण और सामाजिक गतिशीलता का बढ़ना प्रमुख हैं।"
+  },
+  {
+    question_en: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था को ही हम प्रौद्योगिकी कहते हैं।\" यह परिभाषा किसकी है?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष तथा उच्च श्रेणी के साधनों की व्यवस्था को ही हम प्रौद्योगिकी कहते हैं।\" यह परिभाषा किसकी है?",
+    options_en: [
+      "प्रो. सरन",
+      "लेपियर",
+      "कार्ल मार्क्स",
+      "ऑगबर्न"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "लेपियर",
+      "कार्ल मार्क्स",
+      "ऑगबर्न"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को लक्ष्यों की पूर्ति के लिए अप्रत्यक्ष और उन्नत साधनों की व्यवस्था के रूप में परिभाषित करते हैं।",
+    explanation_hi: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है, जो प्रौद्योगिकी को लक्ष्यों की पूर्ति के लिए अप्रत्यक्ष और उन्नत साधनों की व्यवस्था के रूप में परिभाषित करते हैं।"
+  },
+  {
+    question_en: "\"प्रौद्योगिकी का अर्थ किसी भी प्रविधि से है।\" यह कथन किसका है?",
+    question_hi: "\"प्रौद्योगिकी का अर्थ किसी भी प्रविधि से है।\" यह कथन किसका है?",
+    options_en: [
+      "वेब्लेन",
+      "ऑगबर्न",
+      "सोरोकिन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "ऑगबर्न",
+      "सोरोकिन",
+      "मैकाइवर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह कथन ऑगबर्न (Ogburn) का है, जो प्रौद्योगिकी को व्यापक अर्थों में किसी भी प्रविधि या तकनीक के रूप में देखते हैं।",
+    explanation_hi: "यह कथन ऑगबर्न (Ogburn) का है, जो प्रौद्योगिकी को व्यापक अर्थों में किसी भी प्रविधि या तकनीक के रूप में देखते हैं।"
+  },
+  {
+    question_en: "निम्नलिखित में से कौन प्रौद्योगिकी संस्कृति की विशेषता है?",
+    question_hi: "निम्नलिखित में से कौन प्रौद्योगिकी संस्कृति की विशेषता है?",
+    options_en: [
+      "मशीन",
+      "भवन निर्माण की कला",
+      "रंगमंच",
+      "उपर्युक्त सभी"
+    ],
+    options_hi: [
+      "मशीन",
+      "भवन निर्माण की कला",
+      "रंगमंच",
+      "उपर्युक्त सभी"
+    ],
     correct_option_index: 3,
-    explanation_en: "The Great Dividing Range is located in the eastern part of Australia.",
-    explanation_hi: "ग्रेट डिवाइडिंग रेंज ऑस्ट्रेलिया के पूर्वी भाग में स्थित है।",
+    explanation_en: "प्रौद्योगिकी संस्कृति में मशीनें, भवन निर्माण की कला (वास्तुकला), और रंगमंच (तकनीकी पहलुओं के साथ) जैसे विभिन्न तत्व शामिल होते हैं, जो मानव निर्मित और तकनीकी रूप से उन्नत पहलुओं को दर्शाते हैं।",
+    explanation_hi: "प्रौद्योगिकी संस्कृति में मशीनें, भवन निर्माण की कला (वास्तुकला), और रंगमंच (तकनीकी पहलुओं के साथ) जैसे विभिन्न तत्व शामिल होते हैं, जो मानव निर्मित और तकनीकी रूप से उन्नत पहलुओं को दर्शाते हैं।"
   },
   {
-    question_en: "'Pampas' grasslands are found on which continent?",
-    question_hi: "'पम्पास' (Pampas) घास के मैदान किस महाद्वीप में पाए जाते हैं?",
-    options_en: ["North America", "Africa", "Asia", "South America (Argentina)"],
-    options_hi: ["उत्तरी अमेरिका", "अफ्रीका", "एशिया", "दक्षिण अमेरिका (अर्जेंटीना)"],
+    question_en: "सूची-I (पुस्तक) को सूची-II (लेखक) से सुमेलित कीजिए- A. थ्योरी ऑफ लेज़र क्लास, B. सोशल चेन्ज, C. दि फेथ ऑफ मॉडर्न इंटेलेक्चुअल, D. दि मैनक्युपेशन",
+    question_hi: "सूची-I (पुस्तक) को सूची-II (लेखक) से सुमेलित कीजिए- A. थ्योरी ऑफ लेज़र क्लास, B. सोशल चेन्ज, C. दि फेथ ऑफ मॉडर्न इंटेलेक्चुअल, D. दि मैनक्युपेशन",
+    options_en: [
+      "(A) 4, (B) 2, (C) 3, (D) 1",
+      "(B) 4, (C) 3, (D) 2, (A) 1",
+      "(C) 4, (D) 3, (B) 2, (A) 1",
+      "(A) 3, (B) 2, (C) 4, (D) 1"
+    ],
+    options_hi: [
+      "(A) 4, (B) 2, (C) 3, (D) 1",
+      "(B) 4, (C) 3, (D) 2, (A) 1",
+      "(C) 4, (D) 3, (B) 2, (A) 1",
+      "(A) 3, (B) 2, (C) 4, (D) 1"
+    ],
+    correct_option_index: 0,
+    explanation_en: "सही सुमेलन इस प्रकार है: A. थ्योरी ऑफ लेज़र क्लास - वेब्लेन, B. सोशल चेन्ज - ऑगबर्न, C. दि फेथ ऑफ मॉडर्न इंटेलेक्चुअल - प्रो. सरन। विकल्प (a) इन सुमेलनों को दर्शाता है।",
+    explanation_hi: "सही सुमेलन इस प्रकार है: A. थ्योरी ऑफ लेज़र क्लास - वेब्लेन, B. सोशल चेन्ज - ऑगबर्न, C. दि फेथ ऑफ मॉडर्न इंटेलेक्चुअल - प्रो. सरन। विकल्प (a) इन सुमेलनों को दर्शाता है।"
+  },
+  {
+    question_en: "नियोजन (Planning) सर्वप्रथम किस देश में लागू किया गया?",
+    question_hi: "नियोजन (Planning) सर्वप्रथम किस देश में लागू किया गया?",
+    options_en: [
+      "चीन",
+      "रूस",
+      "इंग्लैण्ड",
+      "फ्रांस"
+    ],
+    options_hi: [
+      "चीन",
+      "रूस",
+      "इंग्लैण्ड",
+      "फ्रांस"
+    ],
+    correct_option_index: 1,
+    explanation_en: "नियोजन (Planning), विशेषकर केंद्रीकृत आर्थिक नियोजन, सर्वप्रथम रूस (तत्कालीन सोवियत संघ) में लागू किया गया था।",
+    explanation_hi: "नियोजन (Planning), विशेषकर केंद्रीकृत आर्थिक नियोजन, सर्वप्रथम रूस (तत्कालीन सोवियत संघ) में लागू किया गया था।"
+  },
+  {
+    question_en: "औद्योगिक क्रान्ति किस शताब्दी में हुई?",
+    question_hi: "औद्योगिक क्रान्ति किस शताब्दी में हुई?",
+    options_en: [
+      "16वीं",
+      "18वीं",
+      "17वीं",
+      "20वीं"
+    ],
+    options_hi: [
+      "16वीं",
+      "18वीं",
+      "17वीं",
+      "20वीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "औद्योगिक क्रांति (Industrial Revolution) मुख्य रूप से 18वीं शताब्दी के उत्तरार्ध में इंग्लैण्ड में शुरू हुई थी।",
+    explanation_hi: "औद्योगिक क्रांति (Industrial Revolution) मुख्य रूप से 18वीं शताब्दी के उत्तरार्ध में इंग्लैण्ड में शुरू हुई थी।"
+  },
+  {
+    question_en: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष व उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा निम्न में किसकी है?",
+    question_hi: "\"किसी उद्देश्य या उद्देश्यों की पूर्ति हेतु अप्रत्यक्ष व उच्च श्रेणी के साधनों की व्यवस्था प्रौद्योगिकी है।\" यह परिभाषा निम्न में किसकी है?",
+    options_en: [
+      "लेपियर",
+      "प्रो. सरन",
+      "मैकाइवर",
+      "कार्ल मार्क्स"
+    ],
+    options_hi: [
+      "लेपियर",
+      "प्रो. सरन",
+      "मैकाइवर",
+      "कार्ल मार्क्स"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है।",
+    explanation_hi: "यह परिभाषा प्रो. सरन (Prof. Saran) द्वारा दी गई है।"
+  },
+  {
+    question_en: "प्रौद्योगिकी का आशय उन विधियों, ज्ञानों तथा दक्षताओं से होता है, जिनके सहयोग से मनुष्य प्राकृतिक तथा जैविक तत्वों को नियन्त्रित करके उपयोग में लाता है। यह परिभाषा किस विद्वान ने दी है?",
+    question_hi: "प्रौद्योगिकी का आशय उन विधियों, ज्ञानों तथा दक्षताओं से होता है, जिनके सहयोग से मनुष्य प्राकृतिक तथा जैविक तत्वों को नियन्त्रित करके उपयोग में लाता है। यह परिभाषा किस विद्वान ने दी है?",
+    options_en: [
+      "मार्क्स",
+      "ऑगबर्न",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "ऑगबर्न",
+      "प्रो. सरन",
+      "लेपियर"
+    ],
     correct_option_index: 3,
-    explanation_en: "Pampas grasslands are found in Argentina (South America).",
-    explanation_hi: "पंपास घास के मैदान अर्जेंटीना (दक्षिण अमेरिका) में पाए जाते हैं।",
+    explanation_en: "यह परिभाषा लेपियर (LaPiere) द्वारा दी गई है, जो प्रौद्योगिकी को मानव द्वारा भौतिक और जैविकीय तत्वों को नियंत्रित करने और उपयोग करने के लिए उपयोग की जाने वाली विधियों, ज्ञान और दक्षताओं के रूप में परिभाषित करते हैं।",
+    explanation_hi: "यह परिभाषा लेपियर (LaPiere) द्वारा दी गई है, जो प्रौद्योगिकी को मानव द्वारा भौतिक और जैविकीय तत्वों को नियंत्रित करने और उपयोग करने के लिए उपयोग की जाने वाली विधियों, ज्ञान और दक्षताओं के रूप में परिभाषित करते हैं।"
   },
   {
-    question_en: "Where are 'Downs' grasslands found?",
-    question_hi: "'डाउंस' (Downs) घास के मैदान कहाँ पाए जाते हैं?",
-    options_en: ["Russia", "New Zealand", "Argentina", "Australia"],
-    options_hi: ["रूस", "न्यूजीलैंड", "अर्जेंटीना", "ऑस्ट्रेलिया"],
-    correct_option_index: 3,
-    explanation_en: "Downs grasslands are found in Australia.",
-    explanation_hi: "डाउंस घास के मैदान ऑस्ट्रेलिया में पाए जाते हैं।",
-  },
-  {
-    question_en: "Where is the 'Telegraphic Plateau' located?",
-    question_hi: "'टेलीग्राफिक पठार' (Telegraphic Plateau) कहाँ स्थित है?",
-    options_en: ["Indian Ocean", "Pacific Ocean", "North Atlantic Ocean", "Arctic Ocean"],
-    options_hi: ["हिंद महासागर", "प्रशांत महासागर", "उत्तरी अटलांटिक महासागर", "आर्कटिक महासागर"],
+    question_en: "\"प्रौद्योगिकी का सम्बन्ध सभी तरह के उपकरणों तथा मानवीय ज्ञान से है। इस परिपेक्ष्य में प्रौद्योगिकी की धारणा बहुत ही व्यापक है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    question_hi: "\"प्रौद्योगिकी का सम्बन्ध सभी तरह के उपकरणों तथा मानवीय ज्ञान से है। इस परिपेक्ष्य में प्रौद्योगिकी की धारणा बहुत ही व्यापक है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "मैकाइवर",
+      "ऑगबर्न",
+      "लेपियर",
+      "डी. सरन"
+    ],
+    options_hi: [
+      "मैकाइवर",
+      "ऑगबर्न",
+      "लेपियर",
+      "डी. सरन"
+    ],
     correct_option_index: 2,
-    explanation_en: "The Telegraphic Plateau is located in the North Atlantic Ocean.",
-    explanation_hi: "टेलीग्राफिक पठार उत्तरी अटलांटिक महासागर में स्थित है।",
+    explanation_en: "यह विचार लेपियर (LaPiere) के हैं, जो प्रौद्योगिकी को उपकरणों और मानवीय ज्ञान के व्यापक संदर्भ में देखते हैं।",
+    explanation_hi: "यह विचार लेपियर (LaPiere) के हैं, जो प्रौद्योगिकी को उपकरणों और मानवीय ज्ञान के व्यापक संदर्भ में देखते हैं।"
   },
   {
-    question_en: "The 'Dr. Shyama Prasad Mukherjee Tunnel' is located in which pass?",
-    question_hi: "किस दर्रे में 'डॉ. श्यामा प्रसाद मुखर्जी सुरंग' स्थित है?",
-    options_en: ["Rohtang Pass", "Zojila Pass", "Khardungla Pass", "Banihal Pass"],
-    options_hi: ["रोहतांग दर्रा", "जोजिला दर्रा", "खारदुंगला दर्रा", "बनिहाल दर्रा (BanihaI Pass)"],
-    correct_option_index: 3,
-    explanation_en: "The Jawahar Tunnel, now also called Dr. Shyama Prasad Mukherjee Tunnel (referring to the Chenani-Nashri Tunnel, though the source links it to the Banihal Pass area), is located in the Banihal Pass area. (Note: The Dr. Shyama Prasad Mukherjee Tunnel is the Chenani-Nashri Tunnel, but the source explicitly states it's in Banihal Pass. Following the source).",
-    explanation_hi: "जवाहर सुरंग, जिसे अब डॉ. श्यामा प्रसाद मुखर्जी सुरंग भी कहा जाता है, बनिहाल दर्रे में स्थित है।",
+    question_en: "\"आज के युग की सबसे महत्त्वपूर्ण घटना पूंजीवाद नहीं बल्कि यन्त्रीकरण है, जिसका औद्योगिकीकरण हमारे जीवन के तरीके को नया रूप उत्पादित है। अब हमें अनुभव हो रहा है कि यन्त्रीकरण हमारे जीवन के तरीकों को प्रभावित कर रहा है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    question_hi: "\"आज के युग की सबसे महत्त्वपूर्ण घटना पूंजीवाद नहीं बल्कि यन्त्रीकरण है, जिसका औद्योगिकीकरण हमारे जीवन के तरीके को नया रूप उत्पादित है। अब हमें अनुभव हो रहा है कि यन्त्रीकरण हमारे जीवन के तरीकों को प्रभावित कर रहा है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "मैकाइवर",
+      "वेब्लेन",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    options_hi: [
+      "मैकाइवर",
+      "वेब्लेन",
+      "ऑगबर्न",
+      "लेपियर"
+    ],
+    correct_option_index: 1,
+    explanation_en: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जिन्होंने यंत्रीकरण और प्रौद्योगिकी के सामाजिक जीवन पर पड़ने वाले गहरे प्रभावों पर जोर दिया।",
+    explanation_hi: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जिन्होंने यंत्रीकरण और प्रौद्योगिकी के सामाजिक जीवन पर पड़ने वाले गहरे प्रभावों पर जोर दिया।"
   },
+  {
+    question_en: "\"मानव जीवन तथा सामाजिक संरचना हेतु विकास का निर्धारण जिन शक्तियों के द्वारा होता है, शक्ति हमारे भौतिक पर्यावरण से ही सम्बन्धित होती है।\" यह विचार किस विद्वान के हैं?",
+    question_hi: "\"मानव जीवन तथा सामाजिक संरचना हेतु विकास का निर्धारण जिन शक्तियों के द्वारा होता है, शक्ति हमारे भौतिक पर्यावरण से ही सम्बन्धित होती है।\" यह विचार किस विद्वान के हैं?",
+    options_en: [
+      "प्रो. सरन",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "प्रो. सरन",
+      "ऑगबर्न",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जो भौतिक पर्यावरण और प्रौद्योगिकी को सामाजिक विकास और संरचना के प्रमुख निर्धारक मानते हैं।",
+    explanation_hi: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जो भौतिक पर्यावरण और प्रौद्योगिकी को सामाजिक विकास और संरचना के प्रमुख निर्धारक मानते हैं।"
+  },
+  {
+    question_en: "निम्न में से किस विद्वान ने औद्योगिकी को प्रमुख कारक स्वीकार किया है?",
+    question_hi: "निम्न में से किस विद्वान ने औद्योगिकी को प्रमुख कारक स्वीकार किया है?",
+    options_en: [
+      "ऑगबर्न",
+      "मार्क्स",
+      "वेब्लेन",
+      "डार्विन"
+    ],
+    options_hi: [
+      "ऑगबर्न",
+      "मार्क्स",
+      "वेब्लेन",
+      "डार्विन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने औद्योगिकी (technology) को सामाजिक परिवर्तन और विकास का एक प्रमुख कारक माना है, जिसे प्रौद्योगिक निर्धारणवाद के रूप में जाना जाता है।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) ने औद्योगिकी (technology) को सामाजिक परिवर्तन और विकास का एक प्रमुख कारक माना है, जिसे प्रौद्योगिक निर्धारणवाद के रूप में जाना जाता है।"
+  },
+  {
+    question_en: "\"उत्पादन की शक्तियाँ सदैव गति से बदलती हैं, किन्तु सोचने-विचारने की आदतें पिछड़ जाती हैं। कार्य की गति में सामंजस्य न होने के कारण तनाव पनपता है।\" यह उद्विकास के आर्थिक संघर्षों को ही कार्यशील करती है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    question_hi: "\"उत्पादन की शक्तियाँ सदैव गति से बदलती हैं, किन्तु सोचने-विचारने की आदतें पिछड़ जाती हैं। कार्य की गति में सामंजस्य न होने के कारण तनाव पनपता है।\" यह उद्विकास के आर्थिक संघर्षों को ही कार्यशील करती है।\" यह विचार निम्न में से किस विद्वान के हैं?",
+    options_en: [
+      "सोरोकिन",
+      "मार्क्स",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "मार्क्स",
+      "वेब्लेन",
+      "मैकाइवर"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जो सांस्कृतिक विलम्बना के समान एक अवधारणा को दर्शाते हैं, जहाँ प्रौद्योगिकी (उत्पादन की शक्तियाँ) तेजी से बदलती है जबकि सामाजिक आदतें (सोचने-विचारने की आदतें) पीछे रह जाती हैं, जिससे तनाव उत्पन्न होता है।",
+    explanation_hi: "यह विचार थॉर्स्टीन वेब्लेन (Thorstein Veblen) के हैं, जो सांस्कृतिक विलम्बना के समान एक अवधारणा को दर्शाते हैं, जहाँ प्रौद्योगिकी (उत्पादन की शक्तियाँ) तेजी से बदलती है जबकि सामाजिक आदतें (सोचने-विचारने की आदतें) पीछे रह जाती हैं, जिससे तनाव उत्पन्न होता है।"
+  },
+  {
+    question_en: "कार्ल मार्क्स ने सामाजिक परिवर्तन की व्याख्या निम्न में से किस आधार पर की है?",
+    question_hi: "कार्ल मार्क्स ने सामाजिक परिवर्तन की व्याख्या निम्न में से किस आधार पर की है?",
+    options_en: [
+      "आर्थिक",
+      "सामाजिक",
+      "सांस्कृतिक",
+      "मनोवैज्ञानिक"
+    ],
+    options_hi: [
+      "आर्थिक",
+      "सामाजिक",
+      "सांस्कृतिक",
+      "मनोवैज्ञानिक"
+    ],
+    correct_option_index: 0,
+    explanation_en: "कार्ल मार्क्स (Karl Marx) ने सामाजिक परिवर्तन की व्याख्या मुख्य रूप से आर्थिक आधार पर की है, जिसमें उत्पादन के साधन और उत्पादन संबंध केंद्रीय भूमिका निभाते हैं।",
+    explanation_hi: "कार्ल मार्क्स (Karl Marx) ने सामाजिक परिवर्तन की व्याख्या मुख्य रूप से आर्थिक आधार पर की है, जिसमें उत्पादन के साधन और उत्पादन संबंध केंद्रीय भूमिका निभाते हैं।"
+  },
+  {
+    question_en: "सामाजिक परिवर्तन के आर्थिक निर्धारणवाद सिद्धान्त को निम्न में से किस विद्वान ने दिया?",
+    question_hi: "सामाजिक परिवर्तन के आर्थिक निर्धारणवाद सिद्धान्त को निम्न में से किस विद्वान ने दिया?",
+    options_en: [
+      "मार्क्स",
+      "सोरोकिन",
+      "वेब्लेन",
+      "अन्य"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "सोरोकिन",
+      "वेब्लेन",
+      "अन्य"
+    ],
+    correct_option_index: 0,
+    explanation_en: "कार्ल मार्क्स (Karl Marx) सामाजिक परिवर्तन के आर्थिक निर्धारणवाद (economic determinism) सिद्धांत के प्रमुख प्रतिपादक हैं, जो मानते थे कि आर्थिक संरचनाएं सामाजिक परिवर्तन को निर्धारित करती हैं।",
+    explanation_hi: "कार्ल मार्क्स (Karl Marx) सामाजिक परिवर्तन के आर्थिक निर्धारणवाद (economic determinism) सिद्धांत के प्रमुख प्रतिपादक हैं, जो मानते थे कि आर्थिक संरचनाएं सामाजिक परिवर्तन को निर्धारित करती हैं।"
+  },
+  {
+    question_en: "अभौतिक परिवर्तन के लिए हार्वर्ड स्पेन्सर ने निम्न में से किस विद्वान का आवश्यक माना है?",
+    question_hi: "अभौतिक परिवर्तन के लिए हार्वर्ड स्पेन्सर ने निम्न में से किस विद्वान का आवश्यक माना है?",
+    options_en: [
+      "वेब्लेन",
+      "सोरोकिन",
+      "मार्क्स",
+      "पेरेटो"
+    ],
+    options_hi: [
+      "वेब्लेन",
+      "सोरोकिन",
+      "मार्क्स",
+      "पेरेटो"
+    ],
+    correct_option_index: 2,
+    explanation_en: "प्रश्न की अस्पष्टता के बावजूद, यदि कार्ल मार्क्स (Karl Marx) को अभौतिक परिवर्तन के लिए आवश्यक माना गया है, तो यह एक विशिष्ट व्याख्या हो सकती है जो मानती है कि अभौतिक परिवर्तन भी अंततः भौतिक या आर्थिक आधारों से प्रभावित होते हैं, जैसा कि मार्क्स के विचारों में निहित है।",
+    explanation_hi: "प्रश्न की अस्पष्टता के बावजूद, यदि कार्ल मार्क्स (Karl Marx) को अभौतिक परिवर्तन के लिए आवश्यक माना गया है, तो यह एक विशिष्ट व्याख्या हो सकती है जो मानती है कि अभौतिक परिवर्तन भी अंततः भौतिक या आर्थिक आधारों से प्रभावित होते हैं, जैसा कि मार्क्स के विचारों में निहित है।"
+  },
+  {
+    question_en: "'उत्पादन के साधनों व उत्पादन की शक्तियों में परिवर्तन उत्पादन सम्बन्धों में भी परिवर्तन उत्पन्न करता है।' यह विचार किस विद्वान के हैं?",
+    question_hi: "'उत्पादन के साधनों व उत्पादन की शक्तियों में परिवर्तन उत्पादन सम्बन्धों में भी परिवर्तन उत्पन्न करता है।' यह विचार किस विद्वान के हैं?",
+    options_en: [
+      "सोरोकिन",
+      "पेरेटो",
+      "मार्क्स",
+      "वेब्लेन"
+    ],
+    options_hi: [
+      "सोरोकिन",
+      "पेरेटो",
+      "मार्क्स",
+      "वेब्लेन"
+    ],
+    correct_option_index: 2,
+    explanation_en: "यह विचार कार्ल मार्क्स (Karl Marx) के ऐतिहासिक भौतिकवाद के सिद्धांत का केंद्रीय तत्व है, जो बताता है कि उत्पादन के साधनों और शक्तियों में परिवर्तन सामाजिक संबंधों और संरचनाओं में परिवर्तन लाता है।",
+    explanation_hi: "यह विचार कार्ल मार्क्स (Karl Marx) के ऐतिहासिक भौतिकवाद के सिद्धांत का केंद्रीय तत्व है, जो बताता है कि उत्पादन के साधनों और शक्तियों में परिवर्तन सामाजिक संबंधों और संरचनाओं में परिवर्तन लाता है।"
+  },
+  {
+    question_en: "कार्ल मार्क्स के सामाजिक परिवर्तन के सम्पूर्ण विचारों का केन्द्रीय बिन्दु निम्न में से कौन-सा है?",
+    question_hi: "कार्ल मार्क्स के सामाजिक परिवर्तन के सम्पूर्ण विचारों का केन्द्रीय बिन्दु निम्न में से कौन-सा है?",
+    options_en: [
+      "उत्पादन प्रणाली",
+      "उत्पादन के साधनों",
+      "उत्पादन की शक्तियों",
+      "वर्ग-संघर्ष"
+    ],
+    options_hi: [
+      "उत्पादन प्रणाली",
+      "उत्पादन के साधनों",
+      "उत्पादन की शक्तियों",
+      "वर्ग-संघर्ष"
+    ],
+    correct_option_index: 3,
+    explanation_en: "कार्ल मार्क्स (Karl Marx) के सामाजिक परिवर्तन के विचारों का केंद्रीय बिंदु वर्ग-संघर्ष (class struggle) है, जिसे वह इतिहास का प्रेरक बल मानते थे। उत्पादन प्रणाली, साधन और शक्तियां वर्ग-संघर्ष के आधार हैं।",
+    explanation_hi: "कार्ल मार्क्स (Karl Marx) के सामाजिक परिवर्तन के विचारों का केंद्रीय बिंदु वर्ग-संघर्ष (class struggle) है, जिसे वह इतिहास का प्रेरक बल मानते थे। उत्पादन प्रणाली, साधन और शक्तियां वर्ग-संघर्ष के आधार हैं।"
+  },
+  {
+    question_en: "बड़े पैमाने पर उत्पादन की वजह से निम्न में से किस प्रकार की सामाजिक गतिशीलता का विकास होता है?",
+    question_hi: "बड़े पैमाने पर उत्पादन की वजह से निम्न में से किस प्रकार की सामाजिक गतिशीलता का विकास होता है?",
+    options_en: [
+      "स्थिर सामाजिक गतिशीलता का",
+      "अस्थिर सामाजिक गतिशीलता का",
+      "अधिक सामाजिक गतिशीलता का",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "स्थिर सामाजिक गतिशीलता का",
+      "अस्थिर सामाजिक गतिशीलता का",
+      "अधिक सामाजिक गतिशीलता का",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 2,
+    explanation_en: "बड़े पैमाने पर उत्पादन और औद्योगिकीकरण अक्सर श्रम बाजार में बदलाव, शहरीकरण और शिक्षा के अवसरों में वृद्धि के माध्यम से अधिक सामाजिक गतिशीलता (social mobility) को बढ़ावा देते हैं।",
+    explanation_hi: "बड़े पैमाने पर उत्पादन और औद्योगिकीकरण अक्सर श्रम बाजार में बदलाव, शहरीकरण और शिक्षा के अवसरों में वृद्धि के माध्यम से अधिक सामाजिक गतिशीलता (social mobility) को बढ़ावा देते हैं।"
+  },
+  {
+    question_en: "प्रौद्योगिकी परिवर्तन निम्नलिखित में से किस से सम्बन्धित है?",
+    question_hi: "प्रौद्योगिकी परिवर्तन निम्नलिखित में से किस से सम्बन्धित है?",
+    options_en: [
+      "चक्रीय परिवर्तन",
+      "रेखीय परिवर्तन",
+      "उतार-चढ़ाव वाला परिवर्तन",
+      "इनमें से कोई नहीं"
+    ],
+    options_hi: [
+      "चक्रीय परिवर्तन",
+      "रेखीय परिवर्तन",
+      "उतार-चढ़ाव वाला परिवर्तन",
+      "इनमें से कोई नहीं"
+    ],
+    correct_option_index: 1,
+    explanation_en: "प्रौद्योगिकी परिवर्तन को अक्सर रेखीय परिवर्तन (linear change) के रूप में देखा जाता है, जिसमें समय के साथ प्रौद्योगिकी में लगातार प्रगति और विकास होता है, हालांकि इसकी गति भिन्न हो सकती है।",
+    explanation_hi: "प्रौद्योगिकी परिवर्तन को अक्सर रेखीय परिवर्तन (linear change) के रूप में देखा जाता है, जिसमें समय के साथ प्रौद्योगिकी में लगातार प्रगति और विकास होता है, हालांकि इसकी गति भिन्न हो सकती है।"
+  },
+  {
+    question_en: "वेब्लेन के अनुसार सामाजिक परिवर्तन का प्रमुख निर्धारक है -",
+    question_hi: "वेब्लेन के अनुसार सामाजिक परिवर्तन का प्रमुख निर्धारक है -",
+    options_en: [
+      "प्रौद्योगिकी सहयोग",
+      "सामाजिक सहयोग",
+      "अनुकूलन",
+      "अभौतिक"
+    ],
+    options_hi: [
+      "प्रौद्योगिकी सहयोग",
+      "सामाजिक सहयोग",
+      "अनुकूलन",
+      "अभौतिक"
+    ],
+    correct_option_index: 0,
+    explanation_en: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) के अनुसार, प्रौद्योगिकी सहयोग (technological cooperation) और प्रौद्योगिकी स्वयं सामाजिक परिवर्तन के प्रमुख निर्धारक हैं।",
+    explanation_hi: "थॉर्स्टीन वेब्लेन (Thorstein Veblen) के अनुसार, प्रौद्योगिकी सहयोग (technological cooperation) और प्रौद्योगिकी स्वयं सामाजिक परिवर्तन के प्रमुख निर्धारक हैं।"
+  },
+  {
+    question_en: "'सोशियोलॉजी ऑफ डेवलेप्ड सोशियलिज्म' पुस्तक के लेखक कौन हैं?",
+    question_hi: "'सोशियोलॉजी ऑफ डेवलेप्ड सोशियलिज्म' पुस्तक के लेखक कौन हैं?",
+    options_en: [
+      "किम्बल यंग",
+      "गोल्ड",
+      "सोरोकिन",
+      "डेविस"
+    ],
+    options_hi: [
+      "किम्बल यंग",
+      "गोल्ड",
+      "सोरोकिन",
+      "डेविस"
+    ],
+    correct_option_index: 3,
+    explanation_en: "'सोशियोलॉजी ऑफ डेवलेप्ड सोशियलिज्म' (Sociology of Developed Socialism) पुस्तक के लेखक किंग्सले डेविस (Kingsley Davis) हैं।",
+    explanation_hi: "'सोशियोलॉजी ऑफ डेवलेप्ड सोशियलिज्म' (Sociology of Developed Socialism) पुस्तक के लेखक किंग्सले डेविस (Kingsley Davis) हैं।"
+  },
+  {
+    question_en: "किस काल को 'सामुदायिक निर्धारणवाद' के रूप में जाना जा सकता है?",
+    question_hi: "किस काल को 'सामुदायिक निर्धारणवाद' के रूप में जाना जा सकता है?",
+    options_en: [
+      "मार्क्स",
+      "कौलर",
+      "बोटोमोर",
+      "वेब्लेन"
+    ],
+    options_hi: [
+      "मार्क्स",
+      "कौलर",
+      "बोटोमोर",
+      "वेब्लेन"
+    ],
+    correct_option_index: 0,
+    explanation_en: "यदि कार्ल मार्क्स (Karl Marx) को 'सामुदायिक निर्धारणवाद' से जोड़ा गया है, तो यह उनके आर्थिक निर्धारणवाद के सिद्धांत की एक विशिष्ट व्याख्या हो सकती है, जो उत्पादन के सामुदायिक संबंधों के माध्यम से सामाजिक संरचना के निर्धारण पर जोर देती है।",
+    explanation_hi: "यदि कार्ल मार्क्स (Karl Marx) को 'सामुदायिक निर्धारणवाद' से जोड़ा गया है, तो यह उनके आर्थिक निर्धारणवाद के सिद्धांत की एक विशिष्ट व्याख्या हो सकती है, जो उत्पादन के सामुदायिक संबंधों के माध्यम से सामाजिक संरचना के निर्धारण पर जोर देती है।"
+  },
+ 
 ];
 
 
