@@ -24,7 +24,8 @@ export const AchievementsScreen: React.FC<AchievementsScreenProps> = ({ language
     });
 
     return (
-        <div className="w-full h-full p-4 pt-20 flex flex-col overflow-y-auto custom-scrollbar relative">
+        // FIX: Added 'pb-32' (bottom padding) and 'overscroll-contain'
+        <div className="w-full h-full p-4 pt-20 pb-32 flex flex-col overflow-y-auto overscroll-contain custom-scrollbar relative">
 
             <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">
                 {commonLabels['en'].achievements}
@@ -38,9 +39,9 @@ export const AchievementsScreen: React.FC<AchievementsScreenProps> = ({ language
                             key={achievement.id}
                             className={`flex flex-col items-center p-4 rounded-2xl shadow-lg transition-all duration-300 
                                         ${achievement.unlocked
-                                    ? 'bg-gradient-to-br from-primary-500/20 to-yellow-500/10 border border-primary-400/30 dark:border-yellow-300/20'
-                                    : 'bg-gray-200/10 dark:bg-black/10 border border-gray-300/20 dark:border-gray-700/20 grayscale opacity-60'
-                                }
+                                        ? 'bg-gradient-to-br from-primary-500/20 to-yellow-500/10 border border-primary-400/30 dark:border-yellow-300/20'
+                                        : 'bg-gray-200/10 dark:bg-black/10 border border-gray-300/20 dark:border-gray-700/20 grayscale opacity-60'
+                                    }
                                         hover:scale-105`}
                             role="status"
                             aria-label={al[achievement.id]?.name}
@@ -82,7 +83,8 @@ export const AchievementsScreen: React.FC<AchievementsScreenProps> = ({ language
                     );
                 })}
             </div>
-            <div className="flex-grow min-h-[2rem]"></div>
+            {/* यह Extra Space नीचे के कंटेंट को दिखने में मदद करेगा */}
+            <div className="flex-grow min-h-[4rem]"></div>
         </div>
     );
 };
