@@ -1,10 +1,7 @@
-
-
 import React, { useState, useEffect, useCallback } from 'react';
 import type { QuizQuestion, Language, QuizMode } from '../types';
 import { CheckCircleIcon, XCircleIcon, CheckmarkIcon, HistoryIcon, BookmarkIcon, XIcon } from './icons';
 import { quizCardLabels as labels } from '../services/labels';
-
 
 interface QuizCardProps {
     question: QuizQuestion;
@@ -30,6 +27,14 @@ const triggerHapticFeedback = (type: 'correct' | 'incorrect' | 'select' | 'bookm
         else if (type === 'incorrect') navigator.vibrate(200);
         else if (type === 'select' || type === 'bookmark') navigator.vibrate(5);
     }
+};
+
+// CSS optimization object to force GPU acceleration
+const gpuAccelerate: React.CSSProperties = {
+    transform: 'translateZ(0)',
+    willChange: 'transform, opacity',
+    backfaceVisibility: 'hidden',
+    WebkitFontSmoothing: 'antialiased'
 };
 
 export const QuizCard: React.FC<QuizCardProps> = React.memo((
@@ -160,7 +165,12 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
     const showTimer = !isReviewMode && !isAnswered && timer !== undefined;
 
     return (
-        <div id={id} className="w-full h-full bg-white/20 dark:bg-black/20 backdrop-blur-lg border border-white/30 dark:border-white/10 rounded-2xl shadow-lg p-6 flex flex-col text-gray-800 dark:text-gray-200 overflow-y-auto">
+        <div 
+            id={id} 
+            // HERE IS THE FIX: Applying GPU acceleration styles
+            style={gpuAccelerate}
+            className="w-full h-full bg-white/20 dark:bg-black/20 backdrop-blur-lg border border-white/30 dark:border-white/10 rounded-2xl shadow-lg p-6 flex flex-col text-gray-800 dark:text-gray-200 overflow-y-auto"
+        >
             {showIncorrectFeedback && (
                 <div
                     key={showIncorrectFeedback.key}
@@ -203,8 +213,9 @@ export const QuizCard: React.FC<QuizCardProps> = React.memo((
                         key={index}
                         onClick={() => handleOptionClick(index)}
                         disabled={showFeedback || isReviewMode}
+                        // Added GPU acceleration to options as well
+                        style={{ animationDelay: `${index * 100}ms`, transform: 'translateZ(0)' }}
                         className={`w-full text-left p-3 rounded-2xl border-2 transition-all duration-300 flex items-center space-x-4 animate-stagger-in relative hover:scale-[1.01] ${getOptionClass(index)}`}
-                        style={{ animationDelay: `${index * 100}ms` }}
                     >
                         <span className="font-bold text-primary-600 dark:text-primary-400">{optionLabels[index]}</span>
                         <span className={`leading-normal ${isHindi ? 'font-sans' : ''}`}>{option}</span>
