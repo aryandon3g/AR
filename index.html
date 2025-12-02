@@ -210,28 +210,26 @@
 }
 </script>
 <style>
-  /* 1. Body को पूरी तरह लॉक करें (Nuclear Option) */
+  /* 1. Body को पूरी तरह लॉक करें ताकि पूरा पेज न हिले */
   html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;         /* बॉडी का स्क्रॉल बंद */
-    position: fixed;          /* यह सबसे जरूरी है: स्क्रीन को हिलने ही नहीं देगा */
+    overflow: hidden;          /* बॉडी का स्क्रॉल बंद */
+    position: fixed;           /* यह स्क्रीन को हिलने से रोकेगा (सबसे जरूरी) */
     overscroll-behavior: none; /* बाउंस इफेक्ट बंद */
   }
 
-  /* 2. स्क्रॉल सिर्फ #root (App) के अंदर होगा */
+  /* 2. स्क्रॉल सिर्फ #root (App) के अंदर होगा और बाउंस नहीं होगा */
   #root {
     width: 100%;
     height: 100%;
-    overflow-y: auto;         /* सिर्फ ऊपर-नीचे स्क्रॉल (Vertical) */
-    overflow-x: hidden;       /* साइड स्क्रॉल पूरी तरह बंद */
+    overflow-y: auto;          /* कंटेंट को स्क्रॉल करने दें */
     -webkit-overflow-scrolling: touch; /* स्मूथ स्क्रॉलिंग */
     
-    /* 3. ये कमांड्स स्वाइप जेस्चर को कंट्रोल करेंगी */
-    overscroll-behavior: none;   /* ऐप के अंदर भी बाउंस नहीं होगा */
-    touch-action: pan-y;         /* सिर्फ वर्टिकल स्क्रॉल काम करेगा, साइड स्वाइप इग्नोर होगा */
+    /* यह लाइन सबसे महत्वपूर्ण है जो Pull-to-Refresh और बाउंस को रोकेगी */
+    overscroll-behavior: none; 
   }
 </style>
 </head>
