@@ -294,18 +294,24 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   }
 
   return (
-    // CHANGE 1: relative added to container to allow absolute positioning of buttons
-    <div className="w-full h-full p-4 **relative** flex flex-col overflow-hidden">
+    // FIX 1: Main container height set to 100dvh (dynamic viewport height)
+    <div className="w-full h-[100dvh] relative flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
+      
+      {/* Insult Overlay (Fixed Position) */}
       {insult && (
-        <div key={insult.key} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 backdrop-blur-sm text-white text-base font-bold px-4 py-2 rounded-lg shadow-xl z-30 animate-insult-in-out border border-red-400">
+        <div key={insult.key} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 backdrop-blur-sm text-white text-base font-bold px-4 py-2 rounded-lg shadow-xl z-50 animate-insult-in-out border border-red-400">
             {insult.text}
         </div>
       )}
+
+      {/* FIX 2: Scrollable Content Area 
+          - flex-1: Fills available space
+          - overflow-y-auto: Allows scrolling for long questions
+          - pb-32: Bottom padding prevents content from hiding behind buttons
+      */}
       <div 
         ref={cardRef}
-        // CHANGE 2: Added 'pb-24' (Padding Bottom) and 'overflow-y-auto'. 
-        // This creates space at the bottom so text scrolls ABOVE the buttons and doesn't get hidden.
-        className={`flex-grow min-h-0 **pb-24 overflow-y-auto no-scrollbar** ${animationClass}`}
+        className={`flex-1 w-full overflow-y-auto p-4 pb-32 ${animationClass}`}
         onTouchStart={handleDragStart}
         onTouchMove={handleDragMove}
         onTouchEnd={handleDragEnd}
@@ -338,31 +344,39 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         />
       </div>
 
-      {/* CHANGE 3: Fixed Position (absolute bottom-4), Visible (removed opacity-0), and Z-Index (z-20) */}
-      <div className="**absolute bottom-4 left-4 right-4 z-20** flex items-center justify-between">
-        <button
-          onClick={goToPrevious}
-          disabled={currentQuestionIndex === 0}
-          className="p-3 rounded-full bg-white/60 dark:bg-black/40 backdrop-blur-sm border border-white/30 dark:border-white/10 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-transform hover:scale-105 shadow-lg"
-          aria-label="Previous question"
-        >
-          <ArrowLeftIcon className="w-6 h-6" />
-        </button>
-        <button 
-            onClick={onLanguageChange}
-            className="p-3 rounded-full bg-white/60 dark:bg-black/40 backdrop-blur-sm border border-white/30 dark:border-white/10 text-gray-800 dark:text-gray-200 transition-transform hover:scale-105 shadow-lg"
-            aria-label="Toggle language"
-        >
-            <TranslateIcon className="w-6 h-6" />
-        </button>
-        <button
-          onClick={goToNext}
-          disabled={isNextButtonDisabled}
-          className="p-3 rounded-full bg-white/60 dark:bg-black/40 backdrop-blur-sm border border-white/30 dark:border-white/10 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-transform hover:scale-105 shadow-lg"
-          aria-label="Next question"
-        >
-          <ArrowRightIcon className="w-6 h-6" />
-        </button>
+      {/* FIX 3: Fixed Navigation Bar
+          - absolute bottom-0: Sticks to the bottom
+          - z-40: Stays on top of content
+          - bg-white/80: Slight background to make buttons visible over text
+      */}
+      <div className="absolute bottom-0 left-0 right-0 z-40 w-full px-4 py-4 bg-white/80 dark:bg-black/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+        <div className="flex items-center justify-between max-w-xl mx-auto">
+            <button
+            onClick={goToPrevious}
+            disabled={currentQuestionIndex === 0}
+            className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform"
+            aria-label="Previous question"
+            >
+            <ArrowLeftIcon className="w-6 h-6" />
+            </button>
+
+            <button 
+                onClick={onLanguageChange}
+                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 active:scale-95 transition-transform"
+                aria-label="Toggle language"
+            >
+                <TranslateIcon className="w-6 h-6" />
+            </button>
+
+            <button
+            onClick={goToNext}
+            disabled={isNextButtonDisabled}
+            className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform"
+            aria-label="Next question"
+            >
+            <ArrowRightIcon className="w-6 h-6" />
+            </button>
+        </div>
       </div>
     </div>
   );
