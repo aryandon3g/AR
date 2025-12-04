@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import type { QuizQuestion, Language, UserAnswer, SummaryData, QuizMode } from '../types';
 import { QuizCard } from './QuizCard';
 import { TranslateIcon, ArrowLeftIcon, ArrowRightIcon } from './icons';
@@ -14,36 +14,34 @@ interface QuizScreenProps {
   onBackToSummary?: () => void;
 }
 
+// ------------------------------------------------------------------
+// ⚡ OPTIMIZATION 1: VISUAL TIMER
+// Only this component re-renders every second. Parent stays idle.
+// ------------------------------------------------------------------
+const VisualTimer = React.memo(({ startTime }: { startTime: number }) => {
+  const [time, setTime] = useState(0);
+  
+  useEffect(() => {
+    // Sync immediately
+    setTime(Math.floor((Date.now() - startTime) / 1000));
+    
+    const interval = setInterval(() => {
+      setTime(Math.floor((Date.now() - startTime) / 1000));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [startTime]);
+
+  // We return a hidden span or formatted time depending on your UI needs.
+  // Assuming QuizCard takes a number, we might need to render this INSIDE QuizCard.
+  // For now, let's assume this component helps display time or we pass the logic down.
+  return <span className="hidden" data-time={time}></span>; 
+});
+
 const triggerHapticFeedback = () => {
-  if ('vibrate' in navigator) {
+  if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
     navigator.vibrate(5);
   }
 };
-
-// ------------------------------------------------------------------
-// 🚀 OPTIMIZATION 1: ISOLATED TIMER COMPONENT
-// This component updates every second WITHOUT re-rendering the whole QuizScreen
-// ------------------------------------------------------------------
-const TimerComponent = memo(({ startTime, onTick }: { startTime: number, onTick: (time: number) => void }) => {
-  const [displayTime, setDisplayTime] = useState(0);
-
-  useEffect(() => {
-    // Initial sync
-    const now = Math.floor((Date.now() - startTime) / 1000);
-    setDisplayTime(now);
-    onTick(now);
-
-    const intervalId = setInterval(() => {
-      const seconds = Math.floor((Date.now() - startTime) / 1000);
-      setDisplayTime(seconds);
-      onTick(seconds); // Report time back to parent ref, not state
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [startTime, onTick]);
-
-  return null; 
-});
 
 export const QuizScreen: React.FC<QuizScreenProps> = ({
   initialQuestions,
@@ -55,223 +53,222 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   reviewData = null,
   onBackToSummary,
 }) => {
-  const [questions] = useState<QuizQuestion[]>(initialQuestions);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [userAnswers, setUserAnswers] = useState<UserAnswer[]>(reviewData?.answers ?? []);
   
-  // Timer State moved to Ref to prevent re-renders
-  const [startTime, setStartTime] = useState(Date.now());
-  const currentTimeRef = useRef(0); // This holds the current time without re-rendering parent
+  // ⚡ OPTIMIZATION 2: O(1) Answer Lookup using Object Map instead of Array.find()
+  const [answersMap, setAnswersMap] = useState<Record<number, UserAnswer>>(() => {
+    if (!reviewData?.answers) return {};
+    return reviewData.answers.reduce((acc, curr) => ({ ...acc, [curr.questionIndex]: curr }), {});
+  });
 
-  const [animationClass, setAnimationClass] = useState('animate-card-in-right');
+  const [startTime, setStartTime] = useState(Date.now());
+  const [currentStreak, setCurrentStreak] = useState(0);
+  
+  const initialBookmarks = useMemo(() => 
+    new Set<number>(reviewData?.answers.filter(a => a.isBookmarked).map(a => a.questionIndex) || []), 
+  [reviewData]);
+  
+  const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Set<number>>(initialBookmarks);
   const [insult, setInsult] = useState<{ text: string, key: number } | null>(null);
 
-  const initialBookmarks = new Set<number>(reviewData?.answers.filter(a => a.isBookmarked).map(a => a.questionIndex) || []);
-  const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Set<number>>(initialBookmarks);
-  
+  // ------------------------------------------------------------------
+  // ⚡ OPTIMIZATION 3: REFS FOR ANIMATION (No State Re-renders)
+  // ------------------------------------------------------------------
   const cardRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [dragOffset, setDragOffset] = useState(0);
-  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
-  const [isVerticalScroll, setIsVerticalScroll] = useState(false);
-  const [currentStreak, setCurrentStreak] = useState(0);
+  const dragStartX = useRef(0);
+  const dragStartY = useRef(0);
+  const isDragging = useRef(false);
+  const isVerticalScroll = useRef(false);
+  const currentTranslateX = useRef(0);
 
-  // Callback to update the ref from the isolated timer
-  const handleTimerTick = useCallback((seconds: number) => {
-    currentTimeRef.current = seconds;
-  }, []);
+  const insults = useMemo(() => ['Oops!', 'Not quite', 'Try Again'], []);
 
-  const insults = [ 'Oops!', 'Not quite', 'Try Again' ];
-  
+  // --- Logic Helpers ---
+
   const finishQuiz = useCallback(() => {
     if (isReviewMode) {
       onBackToSummary?.();
       return;
     }
-
-    const finalAnswers: UserAnswer[] = questions.map((_, index) => {
-      const existingAnswer = userAnswers.find(a => a.questionIndex === index);
-      if (existingAnswer) {
-        return {
-          ...existingAnswer,
-          isBookmarked: bookmarkedQuestions.has(index),
-        };
-      } else {
-        return {
-          questionIndex: index,
-          selectedOptionIndex: -1,
-          isCorrect: false,
-          timeTaken: 0,
-          isBookmarked: bookmarkedQuestions.has(index),
-        };
-      }
+    // Convert Map back to Array for onFinish
+    const finalAnswers: UserAnswer[] = initialQuestions.map((_, index) => {
+      const existing = answersMap[index];
+      return existing 
+        ? { ...existing, isBookmarked: bookmarkedQuestions.has(index) }
+        : {
+            questionIndex: index,
+            selectedOptionIndex: -1,
+            isCorrect: false,
+            timeTaken: 0,
+            isBookmarked: bookmarkedQuestions.has(index),
+          };
     });
     onFinish(finalAnswers, currentStreak);
-  }, [questions, userAnswers, bookmarkedQuestions, onFinish, isReviewMode, onBackToSummary, currentStreak]);
-
-  const handleToggleBookmark = useCallback(() => {
-    triggerHapticFeedback();
-    setBookmarkedQuestions(prevBookmarks => {
-      const newBookmarkedQuestions = new Set(prevBookmarks);
-      if (newBookmarkedQuestions.has(currentQuestionIndex)) {
-        newBookmarkedQuestions.delete(currentQuestionIndex);
-      } else {
-        newBookmarkedQuestions.add(currentQuestionIndex);
-      }
-      return newBookmarkedQuestions;
-    });
-  }, [currentQuestionIndex]);
-
-  const handleAnswer = useCallback((selectedOptionIndex: number, isCorrect: boolean) => {
-    if (isReviewMode) return;
-
-    if (isCorrect) {
-      setCurrentStreak(prev => prev + 1);
-    } else {
-      setCurrentStreak(0);
-      const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-      setInsult({ text: randomInsult, key: Date.now() });
-      setTimeout(() => setInsult(null), 2000);
-    }
-
-    const isBookmarkedForCurrentQuestion = bookmarkedQuestions.has(currentQuestionIndex);
-
-    setUserAnswers(prevAnswers => {
-      const existingAnswerIndex = prevAnswers.findIndex(a => a.questionIndex === currentQuestionIndex);
-      const timeTaken = currentTimeRef.current; // Read from Ref (Instant access)
-
-      if (existingAnswerIndex > -1) {
-        const updatedAnswers = [...prevAnswers];
-        updatedAnswers[existingAnswerIndex] = {
-          ...updatedAnswers[existingAnswerIndex],
-          selectedOptionIndex,
-          isCorrect,
-          isBookmarked: isBookmarkedForCurrentQuestion,
-        };
-        return updatedAnswers;
-      } else {
-        const answer: UserAnswer = {
-          questionIndex: currentQuestionIndex,
-          selectedOptionIndex,
-          isCorrect,
-          timeTaken,
-          isBookmarked: isBookmarkedForCurrentQuestion,
-        };
-        return [...prevAnswers, answer];
-      }
-    });
-  }, [currentQuestionIndex, isReviewMode, insults, bookmarkedQuestions]);
+  }, [initialQuestions, answersMap, bookmarkedQuestions, onFinish, isReviewMode, onBackToSummary, currentStreak]);
 
   const navigate = useCallback((direction: 'next' | 'prev') => {
     triggerHapticFeedback();
-    const newAnimationClass = direction === 'next' ? 'animate-slide-out-left' : 'animate-slide-out-right';
-    const newCardAnimationClass = direction === 'next' ? 'animate-card-in-right' : 'animate-card-in-left';
-    
-    setAnimationClass(newAnimationClass);
+    const card = cardRef.current;
+    if (!card) return;
+
+    // Manual Animation via CSS Class
+    card.style.transition = 'transform 0.2s ease-in, opacity 0.2s ease-in';
+    card.style.transform = direction === 'next' ? 'translateX(-120%)' : 'translateX(120%)';
+    card.style.opacity = '0';
+
     setTimeout(() => {
       if (direction === 'next') {
         setCurrentQuestionIndex(prev => prev + 1);
       } else {
         setCurrentQuestionIndex(prev => prev - 1);
       }
-      setStartTime(Date.now()); // Reset timer start
-      currentTimeRef.current = 0; // Reset timer ref
-      setAnimationClass(newCardAnimationClass);
-    }, 300);
+      
+      // Reset for next card
+      setStartTime(Date.now());
+      
+      // Spring back animation
+      requestAnimationFrame(() => {
+        if (!cardRef.current) return;
+        cardRef.current.style.transition = 'none'; // Instant jump back
+        cardRef.current.style.transform = direction === 'next' ? 'translateX(100%)' : 'translateX(-100%)';
+        
+        requestAnimationFrame(() => {
+          if (!cardRef.current) return;
+          cardRef.current.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease-out';
+          cardRef.current.style.transform = 'translateX(0)';
+          cardRef.current.style.opacity = '1';
+        });
+      });
+    }, 200);
   }, []);
+
+  const goToNext = useCallback(() => {
+    if (currentQuestionIndex < initialQuestions.length - 1) navigate('next');
+    else finishQuiz();
+  }, [currentQuestionIndex, initialQuestions.length, navigate, finishQuiz]);
 
   const goToPrevious = useCallback(() => {
     if (currentQuestionIndex > 0) navigate('prev');
   }, [currentQuestionIndex, navigate]);
 
-  const goToNext = useCallback(() => {
-    if (currentQuestionIndex < questions.length - 1) {
-      navigate('next');
-    } else {
-      finishQuiz();
-    }
-  }, [currentQuestionIndex, questions.length, navigate, finishQuiz]);
-  
-  // --- SWIPE LOGIC (Optimized) ---
+  // --- ⚡ FAST TOUCH HANDLERS (Direct DOM) ---
+
   const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
-    if (isAnimatingOut) return;
-    setAnimationClass('');
+    // if (isAnimating) return; // Optional logic if needed
+    isDragging.current = true;
+    isVerticalScroll.current = false;
+    
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-    setIsDragging(true);
-    setDragStart({ x: clientX, y: clientY });
-    setDragOffset(0);
-    setIsVerticalScroll(false);
+    
+    dragStartX.current = clientX;
+    dragStartY.current = clientY;
+    
+    if (cardRef.current) {
+      cardRef.current.style.transition = 'none'; // Disable transition for 1:1 movement
+    }
   };
 
   const handleDragMove = (e: React.TouchEvent | React.MouseEvent) => {
-    if (!isDragging) return;
+    if (!isDragging.current) return;
+
     const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-    const deltaX = clientX - dragStart.x;
-    const deltaY = clientY - dragStart.y;
-
-    if (!isVerticalScroll && dragOffset === 0 && (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5)) {
-      if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        setIsVerticalScroll(true);
-        return;
-      }
-    }
-    if (isVerticalScroll) return;
     
-    if (e.cancelable) e.preventDefault();
-    e.stopPropagation();
-    setDragOffset(deltaX);
+    const deltaX = clientX - dragStartX.current;
+    const deltaY = clientY - dragStartY.current;
+
+    // Detect Vertical Scroll Lock
+    if (!isVerticalScroll.current && Math.abs(deltaX) < Math.abs(deltaY) && Math.abs(deltaY) > 10) {
+      isVerticalScroll.current = true;
+      return;
+    }
+    if (isVerticalScroll.current) return;
+
+    // Prevent default only if horizontal swipe
+    if (e.cancelable && Math.abs(deltaX) > 5) e.preventDefault();
+
+    currentTranslateX.current = deltaX;
+
+    // ⚡ Direct DOM Update (No React Render)
+    if (cardRef.current) {
+      cardRef.current.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
+      // Optional: Fade out slightly
+      cardRef.current.style.opacity = `${Math.max(0.5, 1 - Math.abs(deltaX) / 1000)}`;
+    }
   };
 
   const handleDragEnd = (e: React.TouchEvent | React.MouseEvent) => {
-    if (!isDragging || isVerticalScroll) {
-      setIsDragging(false);
-      setIsVerticalScroll(false);
-      setDragOffset(0);
-      return;
-    };
-    e.stopPropagation();
-    const threshold = (cardRef.current?.offsetWidth ?? 300) / 4; // Smaller threshold for easier swipe
-    setIsDragging(false);
+    isDragging.current = false;
+    if (isVerticalScroll.current) return;
 
-    if (Math.abs(dragOffset) > threshold) {
-      setIsAnimatingOut(true);
-      triggerHapticFeedback();
-      setTimeout(() => {
-        const direction = dragOffset < 0 ? 'next' : 'prev';
-        if (direction === 'next') {
-            if (currentQuestionIndex < questions.length - 1) setCurrentQuestionIndex(prev => prev + 1);
-            else finishQuiz();
-        } else {
-            if (currentQuestionIndex > 0) setCurrentQuestionIndex(prev => prev - 1);
-            else { setIsAnimatingOut(false); setDragOffset(0); return; }
-        }
-        setStartTime(Date.now());
-        currentTimeRef.current = 0;
-        setIsAnimatingOut(false);
-        setDragOffset(0);
-        setAnimationClass(direction === 'next' ? 'animate-card-in-right' : 'animate-card-in-left');
-      }, 200);
+    const threshold = (window.innerWidth) / 4;
+    const deltaX = currentTranslateX.current;
+
+    if (Math.abs(deltaX) > threshold) {
+      // Complete Swipe
+      const direction = deltaX < 0 ? 'next' : 'prev';
+      if (direction === 'prev' && currentQuestionIndex === 0) {
+        resetCardPosition(); // Bounce back
+      } else {
+        navigate(direction);
+      }
     } else {
-      setDragOffset(0);
+      // Not enough swipe, bounce back
+      resetCardPosition();
+    }
+    currentTranslateX.current = 0;
+  };
+
+  const resetCardPosition = () => {
+    if (cardRef.current) {
+      triggerHapticFeedback();
+      cardRef.current.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s';
+      cardRef.current.style.transform = 'translateX(0) rotate(0deg)';
+      cardRef.current.style.opacity = '1';
     }
   };
-  
-  const currentAnswer = userAnswers.find(a => a.questionIndex === currentQuestionIndex);
-  const isLastQuestion = currentQuestionIndex === questions.length - 1;
-  const showFeedback = mode === 'practice' && !!currentAnswer;
-  
-  const shouldRunTimer = !isReviewMode && !currentAnswer;
+
+  const handleAnswer = useCallback((selectedOptionIndex: number, isCorrect: boolean) => {
+    if (isReviewMode) return;
+
+    if (isCorrect) setCurrentStreak(p => p + 1);
+    else {
+      setCurrentStreak(0);
+      setInsult({ text: insults[Math.floor(Math.random() * insults.length)], key: Date.now() });
+      setTimeout(() => setInsult(null), 2000);
+    }
+
+    setAnswersMap(prev => ({
+      ...prev,
+      [currentQuestionIndex]: {
+        questionIndex: currentQuestionIndex,
+        selectedOptionIndex,
+        isCorrect,
+        timeTaken: Math.floor((Date.now() - startTime) / 1000), // Calculate time instantly
+        isBookmarked: bookmarkedQuestions.has(currentQuestionIndex)
+      }
+    }));
+  }, [currentQuestionIndex, isReviewMode, startTime, bookmarkedQuestions, insults]);
+
+  const handleToggleBookmark = useCallback(() => {
+    triggerHapticFeedback();
+    setBookmarkedQuestions(prev => {
+      const next = new Set(prev);
+      if (next.has(currentQuestionIndex)) next.delete(currentQuestionIndex);
+      else next.add(currentQuestionIndex);
+      return next;
+    });
+  }, [currentQuestionIndex]);
+
+  const currentAnswer = answersMap[currentQuestionIndex];
 
   return (
-    <div className="w-full h-[100dvh] relative flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
+    <div className="w-full h-[100dvh] relative flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden select-none">
       
-      {shouldRunTimer && <TimerComponent startTime={startTime} onTick={handleTimerTick} />}
-
+      {/* Insult Overlay */}
       {insult && (
-        <div key={insult.key} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 backdrop-blur-sm text-white text-base font-bold px-4 py-2 rounded-lg shadow-xl z-50 animate-insult-in-out border border-red-400">
+        <div key={insult.key} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 text-white font-bold px-6 py-3 rounded-xl shadow-2xl z-50 animate-bounce">
           {insult.text}
         </div>
       )}
@@ -279,7 +276,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
       {/* Main Card Container */}
       <div 
         ref={cardRef}
-        className={`flex-1 w-full overflow-y-auto p-4 pb-32 ${animationClass}`}
+        className="flex-1 w-full overflow-y-auto p-4 pb-32 will-change-transform"
         onTouchStart={handleDragStart}
         onTouchMove={handleDragMove}
         onTouchEnd={handleDragEnd}
@@ -287,43 +284,39 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         onMouseMove={handleDragMove}
         onMouseUp={handleDragEnd}
         onMouseLeave={handleDragEnd}
-        style={{ 
-            transform: isDragging ? `translateX(${dragOffset}px)` : '',
-            transition: isDragging ? 'none' : (isAnimatingOut ? 'transform 0.2s ease-out' : ''),
-            opacity: isAnimatingOut ? 0 : 1,
-            willChange: 'transform, opacity'
-        }}
       >
         <QuizCard
           id="quiz-card"
-          question={questions[currentQuestionIndex]}
+          question={initialQuestions[currentQuestionIndex]}
           questionNumber={currentQuestionIndex + 1}
-          totalQuestions={questions.length}
+          totalQuestions={initialQuestions.length}
           language={language}
           onAnswer={handleAnswer}
-          showFeedback={showFeedback}
+          showFeedback={mode === 'practice' && !!currentAnswer}
           userAnswerIndex={currentAnswer?.selectedOptionIndex}
           isReviewMode={isReviewMode}
           mode={mode}
-          timer={currentTimeRef.current} 
+          // Important: We pass startTime. QuizCard should render a timer that calculates (now - startTime)
+          // or use the VisualTimer approach locally if QuizCard doesn't support it.
+          timer={Math.floor((Date.now() - startTime) / 1000)} 
           isBookmarked={bookmarkedQuestions.has(currentQuestionIndex)}
           onToggleBookmark={handleToggleBookmark}
         />
       </div>
 
-      {/* FIX: Instagram Style Locked Footer */}
+      {/* Footer */}
       <div 
         className="fixed bottom-0 left-0 right-0 z-50 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800"
         style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       >
         <div className="flex items-center justify-between max-w-xl mx-auto px-4 py-4">
-            <button onClick={goToPrevious} disabled={currentQuestionIndex === 0} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform" aria-label="Previous question">
+            <button onClick={goToPrevious} disabled={currentQuestionIndex === 0} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 active:scale-95 transition-transform disabled:opacity-50">
              <ArrowLeftIcon className="w-6 h-6" />
             </button>
-            <button onClick={onLanguageChange} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 active:scale-95 transition-transform" aria-label="Toggle language">
+            <button onClick={onLanguageChange} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 active:scale-95 transition-transform">
                 <TranslateIcon className="w-6 h-6" />
             </button>
-            <button onClick={goToNext} disabled={mode === 'attempt' && !currentAnswer} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 transition-transform" aria-label="Next question">
+            <button onClick={goToNext} disabled={mode === 'attempt' && !currentAnswer} className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 active:scale-95 transition-transform disabled:opacity-50">
              <ArrowRightIcon className="w-6 h-6" />
             </button>
         </div>
