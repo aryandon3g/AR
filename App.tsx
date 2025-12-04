@@ -1,13 +1,11 @@
-
 import React, { useState, useEffect, useCallback, Suspense, lazy, useMemo } from 'react';
 import { Header } from './components/Header';
 import { Loader } from './components/Loader';
 import { Sidebar } from './components/Sidebar';
 import { ConfirmModal } from './components/ConfirmModal';
 import { getHistory, saveToHistory, clearHistory, getCustomQuizzes, saveCustomQuizzes, getXpData, saveXpData, getAchievements, saveAchievements, getProgressData, saveProgressData, clearProgressData, getStreakData, saveStreakData } from './services/storageService';
-import type { Language, AppScreen, QuizQuestion, Difficulty, UserAnswer, SummaryData, QuizMode, SidebarView, XpData, Achievement, ProgressDataPoint, StreakData } from './types';
-import { QuizSubject } from './types';
-import { commonLabels, achievementLabels, homeScreenLabels, sidebarLabels, quizCardLabels, modeSelectionLabels, summaryScreenLabels } from './services/labels';
+import type { Language, AppScreen, QuizQuestion, Difficulty, UserAnswer, SummaryData, QuizMode, SidebarView, XpData, Achievement, ProgressDataPoint, StreakData, QuizSubject } from './types';
+import { commonLabels, achievementLabels } from './services/labels';
 import { clearQuestionCache } from './services/quizDataService';
 import { AchievementUnlockedNotification } from './components/AchievementUnlockedNotification';
 import { LevelUpAnimation } from './components/LevelUpAnimation';
@@ -42,7 +40,7 @@ const getDefaultAchievements = (language: Language): Achievement[] => [
     { id: 'theAce', name_en: achievementLabels.en.theAce.name, name_hi: achievementLabels.hi.theAce.name, description_en: achievementLabels.en.theAce.description, description_hi: achievementLabels.hi.theAce.description, icon: 'TrophyIcon', criteria: 'total_xp >= 1500 && overall_accuracy >= 85', unlocked: false, currentProgress: 0, targetValue: 85 },
     { id: 'theGambler', name_en: achievementLabels.en.theGambler.name, name_hi: achievementLabels.hi.theGambler.name, description_en: achievementLabels.en.theGambler.description, description_hi: achievementLabels.hi.theGambler.description, icon: 'BadgeIcon', criteria: 'attempt_mode_correct_answers >= 200', unlocked: false, currentProgress: 0, targetValue: 200 },
     { id: 'worldConqueror', name_en: achievementLabels.en.worldConqueror.name, name_hi: achievementLabels.hi.worldConqueror.name, description_en: achievementLabels.en.worldConqueror.description, description_hi: achievementLabels.hi.worldConqueror.description, icon: 'TrophyIcon', criteria: 'total_quizzes_completed >= 200', unlocked: false, currentProgress: 0, targetValue: 200 },
-    { id: 'theEmperor', name_en: achievementLabels.en.theEmperor.name, name_hi: achievementLabels.hi.theEmperor.name, description_en: achievementLabels.hi.theEmperor.description, description_hi: achievementLabels.hi.theEmperor.description, icon: 'TrophyIcon', criteria: 'total_xp >= 10000', unlocked: false, currentProgress: 0, targetValue: 10000 },
+    { id: 'theEmperor', name_en: achievementLabels.en.theEmperor.name, name_hi: achievementLabels.hi.theEmperor.name, description_en: achievementLabels.en.theEmperor.description, description_hi: achievementLabels.hi.theEmperor.description, icon: 'TrophyIcon', criteria: 'total_xp >= 10000', unlocked: false, currentProgress: 0, targetValue: 10000 },
 ];
 
 
@@ -52,9 +50,6 @@ const App: React.FC = () => {
     const [screen, setScreen] = useState<AppScreen>('home');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     
-    const [difficulty] = useState<Difficulty>('Medium');
-    const [numQuestions] = useState(10); 
-
     const [questions, setQuestions] = useState<QuizQuestion[]>([]);
     const [summaryData, setSummaryData] = useState<SummaryData | null>(null);
     const [apiError, setApiError] = useState<string | null>(null);
@@ -63,8 +58,7 @@ const App: React.FC = () => {
     const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
     
     const [quizMode, setQuizMode] = useState<QuizMode | null>(null);
-    const [customQuizzes, setCustomQuizzes] = useState<QuizSubject[]>([]
-    );
+    const [customQuizzes, setCustomQuizzes] = useState<QuizSubject[]>([]);
     const [sidebarStartView, setSidebarStartView] = useState<SidebarView>('main');
 
     const [xpData, setXpData] = useState<XpData>({ totalXp: 0, level: 1 });
@@ -77,9 +71,6 @@ const App: React.FC = () => {
     const [unlockedAchievement, setUnlockedAchievement] = useState<Achievement | null>(null);
     const [showLevelUp, setShowLevelUp] = useState(false);
     const [newLevelForAnimation, setNewLevelForAnimation] = useState(0);
-
-
-    const l = commonLabels[language];
 
     const defaultAchievementsMemo = useMemo(() => getDefaultAchievements(language), [language]);
 
@@ -148,7 +139,7 @@ const App: React.FC = () => {
             let isUnlocked = ach.unlocked;
             let currentProgress = ach.currentProgress || 0;
 
-            if (isUnlocked) return ach; // Already unlocked, no need to re-check
+            if (isUnlocked) return ach; 
 
             const totalQuizzesCompleted = allHistoryData.length;
             const totalCorrectAnswers = allHistoryData.reduce((sum, s) => sum + s.score, 0);
@@ -295,19 +286,10 @@ const App: React.FC = () => {
           ? (correctAnswers * 1) - (incorrectAnswers * 0.25) 
           : correctAnswers;
 
-      let streakBonus = 0;
-      if (streak >= 10) {
-        streakBonus = 10;
-      } else if (streak >= 5) {
-        streakBonus = 5;
-      } else if (streak >= 3) {
-        streakBonus = 2;
-      }
+      // ✅ XP Logic: Sum up the individual XP earned from each answer (+3 or -1)
+      const xpEarned = answers.reduce((total, ans) => total + (ans.xpEarned || 0), 0);
       
-      const accuracyBonus = Math.round(questions.length > 0 ? (correctAnswers / questions.length) * 10 : 0);
-      const xpEarned = (correctAnswers * 10) + streakBonus + accuracyBonus;
-      
-      // --- Streak Logic ---
+      // Streak Logic (Tracking only, not affecting XP)
       const today = new Date();
       const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
@@ -331,7 +313,6 @@ const App: React.FC = () => {
       setStreakData(newStreakData);
       
       const updatedXpData = await updateXp(xpEarned);
-      // End Streak Logic
 
       const newSummaryData: SummaryData = {
           id: `${Date.now()}-${summaryData?.topic || 'quiz'}`,
@@ -347,7 +328,7 @@ const App: React.FC = () => {
           netScore: netScore,
           topic: summaryData?.topic,
           skipped: skippedAnswers,
-          xpEarned: xpEarned,
+          xpEarned: Math.max(0, xpEarned), // Display only non-negative total on summary if preferred
       };
       setSummaryData(newSummaryData);
       await saveToHistory(newSummaryData);
@@ -359,7 +340,7 @@ const App: React.FC = () => {
         topic: newSummaryData.topic || 'Untitled',
         accuracy: newSummaryData.accuracy,
         avgTimePerQuestion: newSummaryData.avgTimePerQuestion,
-        xpEarned: xpEarned,
+        xpEarned: Math.max(0, xpEarned),
       };
       await saveProgressData(newProgressDataPoint);
       setProgressHistory(await getProgressData());

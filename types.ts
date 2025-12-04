@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 
 export type Language = 'en' | 'hi';
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
@@ -32,6 +30,9 @@ export interface UserAnswer {
   isCorrect: boolean;
   timeTaken: number;
   isBookmarked?: boolean;
+  
+  // ✅ FIX: Added xpEarned here to solve the Red Dot Error
+  xpEarned?: number; 
 }
 
 export interface SummaryData {
@@ -93,7 +94,6 @@ export interface XpData {
   totalXp: number;
   level: number;
 }
-
 
 // New type for Daily Streak
 export interface StreakData {
