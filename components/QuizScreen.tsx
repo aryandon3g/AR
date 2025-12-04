@@ -31,9 +31,6 @@ const VisualTimer = React.memo(({ startTime }: { startTime: number }) => {
     return () => clearInterval(interval);
   }, [startTime]);
 
-  // We return a hidden span or formatted time depending on your UI needs.
-  // Assuming QuizCard takes a number, we might need to render this INSIDE QuizCard.
-  // For now, let's assume this component helps display time or we pass the logic down.
   return <span className="hidden" data-time={time}></span>; 
 });
 
@@ -55,7 +52,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   
-  // ⚡ OPTIMIZATION 2: O(1) Answer Lookup using Object Map instead of Array.find()
+  // ⚡ OPTIMIZATION 2: O(1) Answer Lookup
   const [answersMap, setAnswersMap] = useState<Record<number, UserAnswer>>(() => {
     if (!reviewData?.answers) return {};
     return reviewData.answers.reduce((acc, curr) => ({ ...acc, [curr.questionIndex]: curr }), {});
@@ -71,9 +68,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Set<number>>(initialBookmarks);
   const [insult, setInsult] = useState<{ text: string, key: number } | null>(null);
 
-  // ------------------------------------------------------------------
-  // ⚡ OPTIMIZATION 3: REFS FOR ANIMATION (No State Re-renders)
-  // ------------------------------------------------------------------
+  // ⚡ OPTIMIZATION 3: REFS FOR ANIMATION
   const cardRef = useRef<HTMLDivElement>(null);
   const dragStartX = useRef(0);
   const dragStartY = useRef(0);
@@ -90,7 +85,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
       onBackToSummary?.();
       return;
     }
-    // Convert Map back to Array for onFinish
     const finalAnswers: UserAnswer[] = initialQuestions.map((_, index) => {
       const existing = answersMap[index];
       return existing 
@@ -111,7 +105,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     const card = cardRef.current;
     if (!card) return;
 
-    // Manual Animation via CSS Class
     card.style.transition = 'transform 0.2s ease-in, opacity 0.2s ease-in';
     card.style.transform = direction === 'next' ? 'translateX(-120%)' : 'translateX(120%)';
     card.style.opacity = '0';
@@ -123,13 +116,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         setCurrentQuestionIndex(prev => prev - 1);
       }
       
-      // Reset for next card
       setStartTime(Date.now());
       
-      // Spring back animation
       requestAnimationFrame(() => {
         if (!cardRef.current) return;
-        cardRef.current.style.transition = 'none'; // Instant jump back
+        cardRef.current.style.transition = 'none';
         cardRef.current.style.transform = direction === 'next' ? 'translateX(100%)' : 'translateX(-100%)';
         
         requestAnimationFrame(() => {
@@ -151,10 +142,9 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     if (currentQuestionIndex > 0) navigate('prev');
   }, [currentQuestionIndex, navigate]);
 
-  // --- ⚡ FAST TOUCH HANDLERS (Direct DOM) ---
+  // --- ⚡ FAST TOUCH HANDLERS ---
 
   const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
-    // if (isAnimating) return; // Optional logic if needed
     isDragging.current = true;
     isVerticalScroll.current = false;
     
@@ -165,7 +155,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     dragStartY.current = clientY;
     
     if (cardRef.current) {
-      cardRef.current.style.transition = 'none'; // Disable transition for 1:1 movement
+      cardRef.current.style.transition = 'none';
     }
   };
 
@@ -178,26 +168,23 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     const deltaX = clientX - dragStartX.current;
     const deltaY = clientY - dragStartY.current;
 
-    // Detect Vertical Scroll Lock
     if (!isVerticalScroll.current && Math.abs(deltaX) < Math.abs(deltaY) && Math.abs(deltaY) > 10) {
       isVerticalScroll.current = true;
       return;
     }
     if (isVerticalScroll.current) return;
 
-    // Prevent default only if horizontal swipe
     if (e.cancelable && Math.abs(deltaX) > 5) e.preventDefault();
 
     currentTranslateX.current = deltaX;
 
-    // ⚡ Direct DOM Update (No React Render)
     if (cardRef.current) {
       cardRef.current.style.transform = `translateX(${deltaX}px) rotate(${deltaX * 0.05}deg)`;
-      // Optional: Fade out slightly
       cardRef.current.style.opacity = `${Math.max(0.5, 1 - Math.abs(deltaX) / 1000)}`;
     }
   };
 
+  // 🚨 THIS IS THE FIX: Logic to handle last question swipe
   const handleDragEnd = (e: React.TouchEvent | React.MouseEvent) => {
     isDragging.current = false;
     if (isVerticalScroll.current) return;
@@ -206,15 +193,28 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     const deltaX = currentTranslateX.current;
 
     if (Math.abs(deltaX) > threshold) {
-      // Complete Swipe
+      // Swipe Complete
       const direction = deltaX < 0 ? 'next' : 'prev';
-      if (direction === 'prev' && currentQuestionIndex === 0) {
-        resetCardPosition(); // Bounce back
+      
+      if (direction === 'next') {
+        // BUG FIX: Check if it is the LAST question
+        if (currentQuestionIndex < initialQuestions.length - 1) {
+             navigate('next');
+        } else {
+             // If last question, FINISH instead of navigate
+             finishQuiz();
+             resetCardPosition(); // Optional cleanup
+        }
       } else {
-        navigate(direction);
+        // Previous logic
+        if (currentQuestionIndex > 0) {
+            navigate('prev');
+        } else {
+            resetCardPosition();
+        }
       }
     } else {
-      // Not enough swipe, bounce back
+      // Not enough swipe
       resetCardPosition();
     }
     currentTranslateX.current = 0;
@@ -245,7 +245,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         questionIndex: currentQuestionIndex,
         selectedOptionIndex,
         isCorrect,
-        timeTaken: Math.floor((Date.now() - startTime) / 1000), // Calculate time instantly
+        timeTaken: Math.floor((Date.now() - startTime) / 1000),
         isBookmarked: bookmarkedQuestions.has(currentQuestionIndex)
       }
     }));
@@ -296,8 +296,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
           userAnswerIndex={currentAnswer?.selectedOptionIndex}
           isReviewMode={isReviewMode}
           mode={mode}
-          // Important: We pass startTime. QuizCard should render a timer that calculates (now - startTime)
-          // or use the VisualTimer approach locally if QuizCard doesn't support it.
           timer={Math.floor((Date.now() - startTime) / 1000)} 
           isBookmarked={bookmarkedQuestions.has(currentQuestionIndex)}
           onToggleBookmark={handleToggleBookmark}
