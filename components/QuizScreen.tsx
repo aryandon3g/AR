@@ -15,16 +15,13 @@ interface QuizScreenProps {
 }
 
 // ------------------------------------------------------------------
-// ⚡ OPTIMIZATION 1: VISUAL TIMER
-// Only this component re-renders every second. Parent stays idle.
+// ⚡ VISUAL TIMER
 // ------------------------------------------------------------------
 const VisualTimer = React.memo(({ startTime }: { startTime: number }) => {
   const [time, setTime] = useState(0);
   
   useEffect(() => {
-    // Sync immediately
     setTime(Math.floor((Date.now() - startTime) / 1000));
-    
     const interval = setInterval(() => {
       setTime(Math.floor((Date.now() - startTime) / 1000));
     }, 1000);
@@ -52,14 +49,15 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   
-  // ⚡ OPTIMIZATION 2: O(1) Answer Lookup
+  // ⚡ Answer Map
   const [answersMap, setAnswersMap] = useState<Record<number, UserAnswer>>(() => {
     if (!reviewData?.answers) return {};
     return reviewData.answers.reduce((acc, curr) => ({ ...acc, [curr.questionIndex]: curr }), {});
   });
 
   const [startTime, setStartTime] = useState(Date.now());
-  const [currentStreak, setCurrentStreak] = useState(0);
+  
+  // ❌ REMOVED: Streak state removed completely
   
   const initialBookmarks = useMemo(() => 
     new Set<number>(reviewData?.answers.filter(a => a.isBookmarked).map(a => a.questionIndex) || []), 
@@ -68,7 +66,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Set<number>>(initialBookmarks);
   const [insult, setInsult] = useState<{ text: string, key: number } | null>(null);
 
-  // ⚡ OPTIMIZATION 3: REFS FOR ANIMATION
+  // ⚡ Refs for Animation
   const cardRef = useRef<HTMLDivElement>(null);
   const dragStartX = useRef(0);
   const dragStartY = useRef(0);
@@ -95,10 +93,12 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
             isCorrect: false,
             timeTaken: 0,
             isBookmarked: bookmarkedQuestions.has(index),
+            xpEarned: 0 // Default
           };
     });
-    onFinish(finalAnswers, currentStreak);
-  }, [initialQuestions, answersMap, bookmarkedQuestions, onFinish, isReviewMode, onBackToSummary, currentStreak]);
+    // Passing 0 as streak since concept is removed
+    onFinish(finalAnswers, 0); 
+  }, [initialQuestions, answersMap, bookmarkedQuestions, onFinish, isReviewMode, onBackToSummary]);
 
   const navigate = useCallback((direction: 'next' | 'prev') => {
     triggerHapticFeedback();
@@ -184,7 +184,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
     }
   };
 
-  // 🚨 THIS IS THE FIX: Logic to handle last question swipe
   const handleDragEnd = (e: React.TouchEvent | React.MouseEvent) => {
     isDragging.current = false;
     if (isVerticalScroll.current) return;
@@ -197,16 +196,13 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
       const direction = deltaX < 0 ? 'next' : 'prev';
       
       if (direction === 'next') {
-        // BUG FIX: Check if it is the LAST question
         if (currentQuestionIndex < initialQuestions.length - 1) {
              navigate('next');
         } else {
-             // If last question, FINISH instead of navigate
              finishQuiz();
-             resetCardPosition(); // Optional cleanup
+             resetCardPosition();
         }
       } else {
-        // Previous logic
         if (currentQuestionIndex > 0) {
             navigate('prev');
         } else {
@@ -214,7 +210,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         }
       }
     } else {
-      // Not enough swipe
       resetCardPosition();
     }
     currentTranslateX.current = 0;
@@ -232,9 +227,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const handleAnswer = useCallback((selectedOptionIndex: number, isCorrect: boolean) => {
     if (isReviewMode) return;
 
-    if (isCorrect) setCurrentStreak(p => p + 1);
-    else {
-      setCurrentStreak(0);
+    // --- 🎮 XP CALCULATION (Modified) ---
+    // +3 for Correct, -1 for Incorrect. No Streak.
+    const xpChange = isCorrect ? 3 : -1;
+
+    if (!isCorrect) {
       setInsult({ text: insults[Math.floor(Math.random() * insults.length)], key: Date.now() });
       setTimeout(() => setInsult(null), 2000);
     }
@@ -246,7 +243,8 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         selectedOptionIndex,
         isCorrect,
         timeTaken: Math.floor((Date.now() - startTime) / 1000),
-        isBookmarked: bookmarkedQuestions.has(currentQuestionIndex)
+        isBookmarked: bookmarkedQuestions.has(currentQuestionIndex),
+        xpEarned: xpChange // ✅ Saving XP (+3 or -1)
       }
     }));
   }, [currentQuestionIndex, isReviewMode, startTime, bookmarkedQuestions, insults]);
@@ -266,7 +264,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   return (
     <div className="w-full h-[100dvh] relative flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden select-none">
       
-      {/* Insult Overlay */}
       {insult && (
         <div key={insult.key} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 text-white font-bold px-6 py-3 rounded-xl shadow-2xl z-50 animate-bounce">
           {insult.text}
