@@ -13,9 +13,10 @@ export const Header: React.FC<HeaderProps> = memo(({
     onBackClick 
 }) => {
   return (
-    // FIX 1: 'absolute' ko hatakar 'sticky' kar diya.
-    // FIX 2: 'bg-white/5' ya transparent ki jagah thoda solid color diya taaki scroll karne par mix na ho.
-    <header className="sticky top-0 left-0 right-0 p-4 flex justify-between items-center z-[50] backdrop-blur-md bg-white/70 dark:bg-black/50 transition-all duration-300">
+    // FIX 1: 'bg-transparent' kar diya taaki color exactly match kare.
+    // FIX 2: 'backdrop-blur' hata diya (agar aapko glass effect nahi chahiye).
+    // FIX 3: 'sticky' rakha hai taaki text iske peeche na chupe.
+    <header className="sticky top-0 left-0 right-0 p-4 flex justify-between items-center z-[50] bg-transparent transition-all duration-300">
       
       <div className="w-12 flex justify-start">
         {showBackButton && onBackClick ? (
