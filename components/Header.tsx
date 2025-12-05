@@ -5,27 +5,27 @@ interface HeaderProps {
   onSettingsClick: () => void;
   showBackButton?: boolean;
   onBackClick?: () => void;
-  transparent?: boolean; // New Prop add kiya hai
+  floating?: boolean; // 'transparent' ki jagah 'floating' shabd use karte hain clarity ke liye
 }
 
 export const Header: React.FC<HeaderProps> = memo(({ 
     onSettingsClick, 
     showBackButton = false, 
     onBackClick,
-    transparent = false // Default value false (Solid) rahegi Quiz screen ke liye
+    floating = false // Default: false (Matlab apni jagah lega, par transparent rahega)
 }) => {
   
-  // Dynamic Class Logic
-  // Agar transparent hai (Home) -> Absolute + Transparent
-  // Agar solid hai (Quiz) -> Relative + Background Color + Shadow
-  const containerClasses = transparent
-    ? "absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-[50] bg-transparent"
-    : "relative w-full p-4 flex justify-between items-center z-[50] bg-white dark:bg-gray-900 shadow-sm dark:border-b dark:border-white/10";
+  // Logic:
+  // Floating (Home Screen): Absolute (Hawa me) + Z-index high
+  // Not Floating (Quiz Screen): Relative (Jagah lega) + Transparent (Color match karega)
+  const positionClasses = floating
+    ? "absolute top-0 left-0 right-0 z-[50]" 
+    : "relative w-full z-[50]";
 
   return (
-    <header className={containerClasses}>
+    // 'bg-transparent' humesha rahega taaki koi 'patti' na dikhe
+    <header className={`${positionClasses} p-4 flex justify-between items-center bg-transparent transition-all duration-300`}>
       
-      {/* Left Section */}
       <div className="w-12 flex justify-start">
         {showBackButton && onBackClick ? (
           <button
@@ -41,10 +41,8 @@ export const Header: React.FC<HeaderProps> = memo(({
         )}
       </div>
       
-      {/* Center Spacer */}
       <div className="flex-1"></div>
 
-      {/* Right Section */}
       <div className="w-12 flex justify-end">
         <button
           onClick={onSettingsClick}
