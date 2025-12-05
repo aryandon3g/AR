@@ -5,19 +5,27 @@ interface HeaderProps {
   onSettingsClick: () => void;
   showBackButton?: boolean;
   onBackClick?: () => void;
+  transparent?: boolean; // New Prop add kiya hai
 }
 
 export const Header: React.FC<HeaderProps> = memo(({ 
     onSettingsClick, 
     showBackButton = false, 
-    onBackClick 
+    onBackClick,
+    transparent = false // Default value false (Solid) rahegi Quiz screen ke liye
 }) => {
+  
+  // Dynamic Class Logic
+  // Agar transparent hai (Home) -> Absolute + Transparent
+  // Agar solid hai (Quiz) -> Relative + Background Color + Shadow
+  const containerClasses = transparent
+    ? "absolute top-0 left-0 right-0 p-4 flex justify-between items-center z-[50] bg-transparent"
+    : "relative w-full p-4 flex justify-between items-center z-[50] bg-white dark:bg-gray-900 shadow-sm dark:border-b dark:border-white/10";
+
   return (
-    // FIX 1: 'bg-transparent' kar diya taaki color exactly match kare.
-    // FIX 2: 'backdrop-blur' hata diya (agar aapko glass effect nahi chahiye).
-    // FIX 3: 'sticky' rakha hai taaki text iske peeche na chupe.
-    <header className="sticky top-0 left-0 right-0 p-4 flex justify-between items-center z-[50] bg-transparent transition-all duration-300">
+    <header className={containerClasses}>
       
+      {/* Left Section */}
       <div className="w-12 flex justify-start">
         {showBackButton && onBackClick ? (
           <button
@@ -33,8 +41,10 @@ export const Header: React.FC<HeaderProps> = memo(({
         )}
       </div>
       
+      {/* Center Spacer */}
       <div className="flex-1"></div>
 
+      {/* Right Section */}
       <div className="w-12 flex justify-end">
         <button
           onClick={onSettingsClick}
