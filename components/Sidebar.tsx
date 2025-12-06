@@ -183,38 +183,41 @@ export const Sidebar: React.FC<SidebarProps> = ({
             }
 
             return (
-                <div className="py-2">
+                <div className="space-y-3 p-4">
                     {allSubjectsForDisplay.map(subject => (
                         <button
                             key={subject.name_en}
                             onClick={() => handleSelectSubject(subject)}
                             disabled={subject.name_en !== labels['en'].mixedQuiz && !subject.isCustom && subject.topics.length === 0}
-                            className="w-full flex items-center px-6 py-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors disabled:opacity-50 text-left"
+                            className="w-full flex items-center justify-between p-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/5 backdrop-blur-sm transition-all duration-300 group active:scale-[0.98]"
                         >
-                            <span className="w-8 text-xl flex justify-center">{subject.iconEmoji || "•"}</span>
-                            <span className="flex-1 ml-4 text-base font-medium text-gray-800 dark:text-gray-100">
+                            <span className="flex items-center text-white font-semibold tracking-wide">
+                                {subject.iconEmoji && <span className="mr-3 text-lg opacity-90">{subject.iconEmoji}</span>}
                                 {language === 'en' ? subject.name_en : subject.name_hi}
                             </span>
+                            <div className="bg-white/10 rounded-full p-1.5 group-hover:bg-white group-hover:text-indigo-600 transition-colors">
+                                <ArrowRightIcon className="w-4 h-4" />
+                            </div>
                         </button>
                     ))}
                 </div>
             );
         case 'topics':
             return (
-                <div className="py-2">
+                <div className="space-y-3 p-4">
                     {selectedSubject?.topics.map(topic => (
-                         <div key={topic.name_en} className="flex w-full items-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors px-6">
+                         <div key={topic.name_en} className="flex w-full items-center gap-2">
                             <button
                                 onClick={() => handleSelectTopic(topic)}
-                                className="flex-grow flex items-center py-4 text-left"
+                                className="flex-grow flex items-center justify-between p-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/5 backdrop-blur-sm transition-all duration-300 active:scale-[0.98]"
                             >
-                                <div className="w-2 h-2 rounded-full bg-indigo-500 mr-4"></div>
-                                <span className="text-base font-medium text-gray-800 dark:text-gray-100">{language === 'en' ? topic.name_en : topic.name_hi}</span>
+                                <span className="text-white font-medium">{language === 'en' ? topic.name_en : topic.name_hi}</span>
+                                <ArrowRightIcon className="w-4 h-4 text-white/60" />
                             </button>
                             {selectedSubject?.isCustom && (
                                 <button 
                                     onClick={(e) => { e.stopPropagation(); onDeleteCustomQuiz(selectedSubject.name_en); clearQuestionCache(); }} 
-                                    className="p-2 text-gray-400 hover:text-red-500 transition-colors"
+                                    className="p-4 rounded-2xl bg-red-500/20 text-red-200 hover:bg-red-500 hover:text-white border border-red-500/30 transition-all"
                                 >
                                     <TrashIcon className="w-5 h-5"/>
                                 </button>
@@ -229,17 +232,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
             const isDisabled = isLoadingTopicQuestions || currentMaxQuestions === 0;
 
             return (
-                <div className="p-6">
+                <div className="p-6 text-white space-y-8">
                     {isLoadingTopicQuestions ? (
-                        <div className="flex justify-center py-10">
-                            <div className="w-8 h-8 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
+                        <div className="flex flex-col items-center justify-center py-12">
+                            <div className="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
+                            <p className="mt-4 text-xs font-bold uppercase tracking-widest opacity-70">{common_l.loading}</p>
                         </div>
                     ) : (
-                        <div className="space-y-8">
-                             <div>
-                                <div className="flex justify-between items-center mb-4">
-                                    <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{labels['en'].numQuestions}</label>
-                                    <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{numTopicQuestions}</span>
+                        <div className="animate-fade-in">
+                            <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md">
+                                <div className="flex justify-between items-end mb-6">
+                                    <label className="text-sm font-bold opacity-80 uppercase tracking-wider">{labels['en'].numQuestions}</label>
+                                    <span className="text-4xl font-black">{numTopicQuestions}</span>
                                 </div>
                                 
                                 <input 
@@ -248,10 +252,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                                     max={currentMaxQuestions}
                                     value={numTopicQuestions} 
                                     onChange={(e) => setNumTopicQuestions(parseInt(e.target.value))} 
-                                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-indigo-600 focus:outline-none"
+                                    className="w-full h-2 bg-white/20 rounded-full appearance-none cursor-pointer accent-white focus:outline-none"
                                     disabled={isDisabled}
                                 />
-                                <div className="flex justify-between mt-2 text-xs text-gray-500">
+                                <div className="flex justify-between mt-2 text-xs opacity-60 font-medium">
                                     <span>Min: 1</span>
                                     <span>Max: {currentMaxQuestions}</span>
                                 </div>
@@ -259,10 +263,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                             
                             <button 
                                 onClick={handleStartTopicQuiz}
-                                className="w-full py-4 rounded-full bg-indigo-600 text-white font-semibold text-base shadow-lg hover:bg-indigo-700 active:scale-95 transition-all flex justify-center items-center gap-2 disabled:opacity-50 disabled:shadow-none"
+                                className="w-full mt-6 py-4 rounded-2xl bg-white text-indigo-900 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex justify-center items-center gap-2 disabled:opacity-50 disabled:transform-none"
                                 disabled={isLoadingQuiz || isDisabled || numTopicQuestions === 0}
                             >
-                                {isLoadingQuiz && <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>}
+                                {isLoadingQuiz && <div className="w-5 h-5 border-2 border-indigo-900/30 border-t-indigo-900 rounded-full animate-spin"></div>}
                                 <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                             </button>
                         </div>
@@ -272,11 +276,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
         }
         case 'mixedQuizConfig':
             return (
-                <div className="p-6 space-y-8">
-                    <div>
-                        <div className="flex justify-between items-center mb-4">
-                            <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{labels['en'].numQuestions}</label>
-                            <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{numMixedQuestions}</span>
+                <div className="p-6 text-white space-y-8">
+                    <div className="bg-white/10 p-6 rounded-3xl border border-white/10 backdrop-blur-md">
+                        <div className="flex justify-between items-end mb-6">
+                            <label className="text-sm font-bold opacity-80 uppercase tracking-wider">{labels['en'].numQuestions}</label>
+                            <span className="text-4xl font-black">{numMixedQuestions}</span>
                         </div>
                         
                         <input 
@@ -285,9 +289,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
                             max="100" 
                             value={numMixedQuestions} 
                             onChange={(e) => setNumMixedQuestions(parseInt(e.target.value))} 
-                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-indigo-600 focus:outline-none" 
+                            className="w-full h-2 bg-white/20 rounded-full appearance-none cursor-pointer accent-white focus:outline-none" 
                         />
-                         <div className="flex justify-between mt-2 text-xs text-gray-500">
+                         <div className="flex justify-between mt-2 text-xs opacity-60 font-medium">
                             <span>10</span>
                             <span>100</span>
                         </div>
@@ -295,10 +299,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
                     <button 
                         onClick={handleStartMixedQuiz}
-                        className="w-full py-4 rounded-full bg-indigo-600 text-white font-semibold text-base shadow-lg hover:bg-indigo-700 active:scale-95 transition-all flex justify-center items-center gap-2 disabled:opacity-50 disabled:shadow-none"
+                        className="w-full py-4 rounded-2xl bg-white text-indigo-900 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex justify-center items-center gap-2 disabled:opacity-50 disabled:transform-none"
                         disabled={isLoadingQuiz}
                     >
-                        {isLoadingQuiz && <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>}
+                        {isLoadingQuiz && <div className="w-5 h-5 border-2 border-indigo-900/30 border-t-indigo-900 rounded-full animate-spin"></div>}
                         <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                     </button>
                 </div>
@@ -306,97 +310,84 @@ export const Sidebar: React.FC<SidebarProps> = ({
         case 'main':
         default:
             return (
-                <div className="pb-6">
-                    {/* Header Image/Gradient Area */}
-                    <div className="h-40 bg-gradient-to-br from-indigo-600 to-purple-700 relative flex items-end p-6">
-                        <button onClick={onClose} className="absolute top-4 right-4 p-2 bg-black/20 hover:bg-black/30 text-white rounded-full transition-colors">
-                            <XIcon className="w-5 h-5" />
-                        </button>
+                <div className="flex flex-col h-full text-white">
+                    {/* User Profile Area */}
+                    <div className="px-6 pt-6 pb-8 text-center">
+                        <div className="relative inline-block">
+                             <div className="w-20 h-20 mx-auto rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border-2 border-white/30 shadow-inner">
+                                <XPIcon className="w-10 h-10 text-white" />
+                            </div>
+                            <div className="absolute bottom-0 right-0 bg-white text-indigo-900 text-xs font-bold px-2 py-0.5 rounded-full shadow-md">
+                                Lvl {xpData.level}
+                            </div>
+                        </div>
+                        <h3 className="mt-3 text-2xl font-bold tracking-tight">Keep Learning!</h3>
+                        <p className="text-white/60 text-sm">{xpData.totalXp} XP Earned</p>
                         
-                        <div className="flex items-center gap-4 text-white w-full">
-                            <div className="w-16 h-16 rounded-full bg-white border-4 border-indigo-500 shadow-md flex items-center justify-center text-indigo-600">
-                                <XPIcon className="w-8 h-8" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <h3 className="text-xl font-bold truncate">Level {xpData.level}</h3>
-                                <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                                    <div className="flex-1 h-1.5 bg-black/20 rounded-full overflow-hidden">
-                                        <div className="h-full bg-white rounded-full" style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }} />
-                                    </div>
-                                    <span>{xpData.totalXp} XP</span>
-                                </div>
-                            </div>
+                        <div className="mt-4 w-full h-2 bg-black/20 rounded-full overflow-hidden">
+                             <div className="h-full bg-white/90 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)]" style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }} />
                         </div>
                     </div>
 
-                    {/* Stats Row */}
-                    <div className="flex border-b border-gray-200 dark:border-gray-800">
-                        <button onClick={onViewProgress} className="flex-1 py-4 flex flex-col items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-r border-gray-200 dark:border-gray-800">
-                            <ChartIcon className="w-6 h-6 text-gray-500 mb-1" />
-                            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">Analytics</span>
+                    {/* Quick Stats */}
+                    <div className="grid grid-cols-2 gap-4 px-6 mb-6">
+                        <button onClick={onViewProgress} className="bg-white/10 hover:bg-white/20 p-4 rounded-2xl backdrop-blur-sm transition-all border border-white/5 flex flex-col items-center gap-2">
+                            <ChartIcon className="w-6 h-6 text-cyan-300" />
+                            <span className="text-xs font-bold uppercase tracking-wider">Stats</span>
                         </button>
-                        <button onClick={onViewAchievements} className="flex-1 py-4 flex flex-col items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                            <TrophyIcon className="w-6 h-6 text-gray-500 mb-1" />
-                            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">Awards</span>
+                        <button onClick={onViewAchievements} className="bg-white/10 hover:bg-white/20 p-4 rounded-2xl backdrop-blur-sm transition-all border border-white/5 flex flex-col items-center gap-2">
+                            <TrophyIcon className="w-6 h-6 text-yellow-300" />
+                            <span className="text-xs font-bold uppercase tracking-wider">Awards</span>
                         </button>
                     </div>
 
-                    {/* Menu Items */}
-                    <div className="pt-2">
-                        <div className="px-6 py-3">
-                            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Settings</p>
+                    {/* Settings Toggles */}
+                    <div className="px-6 space-y-4">
+                        <div className="bg-black/20 p-1.5 rounded-xl flex backdrop-blur-sm">
+                            <button onClick={() => theme !== 'light' && onThemeChange()} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${theme === 'light' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/60 hover:text-white'}`}>
+                                <SunIcon className="w-4 h-4" /> Light
+                            </button>
+                            <button onClick={() => theme !== 'dark' && onThemeChange()} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${theme === 'dark' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/60 hover:text-white'}`}>
+                                <MoonIcon className="w-4 h-4" /> Dark
+                            </button>
+                        </div>
+                        <div className="bg-black/20 p-1.5 rounded-xl flex backdrop-blur-sm">
+                            <button onClick={() => onLanguageChange('en')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'en' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/60 hover:text-white'}`}>
+                                English
+                            </button>
+                            <button onClick={() => onLanguageChange('hi')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'hi' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/60 hover:text-white'}`}>
+                                हिंदी
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* History List */}
+                    <div className="flex-1 px-6 mt-6 pb-4 overflow-hidden flex flex-col">
+                        <div className="flex justify-between items-center mb-2">
+                            <p className="text-xs font-bold text-white/50 uppercase tracking-widest">History</p>
+                            {history.length > 0 && (
+                                <button onClick={handleClearHistory} className="text-xs font-bold text-red-300 hover:text-red-100 transition-colors">CLEAR</button>
+                            )}
                         </div>
                         
-                        <div className="flex items-center justify-between px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer" onClick={() => theme !== 'light' ? onThemeChange() : null}>
-                            <div className="flex items-center gap-4">
-                                <SunIcon className="w-5 h-5 text-gray-500" />
-                                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Dark Mode</span>
-                            </div>
-                            {/* Simple iOS Toggle Switch Visual */}
-                            <div 
-                                className={`w-11 h-6 rounded-full p-1 cursor-pointer transition-colors ${theme === 'dark' ? 'bg-indigo-500' : 'bg-gray-300'}`}
-                                onClick={(e) => { e.stopPropagation(); onThemeChange(); }}
-                            >
-                                <div className={`w-4 h-4 bg-white rounded-full shadow-sm transform transition-transform ${theme === 'dark' ? 'translate-x-5' : 'translate-x-0'}`} />
-                            </div>
-                        </div>
-
-                        <div className="flex items-center justify-between px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-800">
-                            <div className="flex items-center gap-4">
-                                <div className="w-5 h-5 flex items-center justify-center font-bold text-gray-500 text-xs border border-gray-400 rounded">A</div>
-                                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">Language</span>
-                            </div>
-                            <div className="flex bg-gray-200 dark:bg-gray-700 rounded p-0.5">
-                                <button onClick={() => onLanguageChange('en')} className={`px-3 py-1 text-xs rounded transition-all ${language === 'en' ? 'bg-white shadow text-black' : 'text-gray-500'}`}>EN</button>
-                                <button onClick={() => onLanguageChange('hi')} className={`px-3 py-1 text-xs rounded transition-all ${language === 'hi' ? 'bg-white shadow text-black' : 'text-gray-500'}`}>HI</button>
-                            </div>
-                        </div>
-
-                         <div className="px-6 py-3 mt-4">
-                            <div className="flex justify-between items-end mb-2">
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">History</p>
-                                {history.length > 0 && (
-                                    <button onClick={handleClearHistory} className="text-xs font-bold text-indigo-500 hover:text-indigo-600">CLEAR</button>
-                                )}
-                            </div>
-                        </div>
-
-                        <div className="overflow-y-auto max-h-60">
-                             {history.length > 0 ? (
+                        <div className="overflow-y-auto custom-scrollbar flex-1 space-y-2 pr-1">
+                            {history.length > 0 ? (
                                 history.map(item => (
-                                    <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className="w-full flex items-center justify-between px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-l-4 border-transparent hover:border-indigo-500">
-                                        <div className="truncate pr-4 text-left">
-                                            <p className="text-sm font-medium text-gray-800 dark:text-gray-200 truncate">{item.topic || labels['en'].untitledQuiz}</p>
-                                            <p className="text-xs text-gray-400 mt-0.5">{new Date(item.timestamp).toLocaleDateString()}</p>
+                                    <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className="w-full text-left p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors flex justify-between items-center group">
+                                        <div className="truncate pr-2">
+                                            <p className="text-sm font-semibold text-white/90 truncate">{item.topic || labels['en'].untitledQuiz}</p>
+                                            <p className="text-[10px] text-white/50">{new Date(item.timestamp).toLocaleDateString()}</p>
                                         </div>
-                                        <span className={`text-xs font-bold ${item.accuracy >= 70 ? 'text-green-600' : 'text-red-500'}`}>
+                                        <span className={`text-xs font-bold px-2 py-1 rounded-md ${item.accuracy >= 70 ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
                                             {item.accuracy.toFixed(0)}%
                                         </span>
                                     </button>
                                 ))
-                             ) : (
-                                 <p className="px-6 py-2 text-xs text-gray-400 italic">No games played yet.</p>
-                             )}
+                            ) : (
+                                <div className="text-center py-6 border border-dashed border-white/10 rounded-xl">
+                                    <p className="text-xs text-white/40">No games played yet</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -406,31 +397,41 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   const containerClass = isOpen ? 'pointer-events-auto' : 'pointer-events-none delay-300';
   const backdropClass = isOpen ? 'opacity-100' : 'opacity-0';
-  const panelClass = isOpen ? 'translate-x-0' : '-translate-x-full'; // Slides from Left typically for Android/Material style, but sticking to Right for props consistence or easy change to 'translate-x-full' if preferred right side.
-
-  // NOTE: Changed to Slide from RIGHT (standard sidebar) based on `justify-end` in container.
-  const slideDirection = 'translate-x-full'; 
+  const panelClass = isOpen ? 'translate-x-0' : 'translate-x-full';
 
   return (
     <div className={`fixed inset-0 z-50 flex justify-end ${containerClass}`}>
         <div 
-            className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${backdropClass}`}
+            className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ease-out ${backdropClass}`}
             onClick={onClose}
             aria-hidden="true"
         />
 
-        <div className={`relative w-[300px] h-full bg-white dark:bg-[#121212] shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : slideDirection}`}>
+        {/* Sidebar Panel - The Gradient is APPLIED HERE */}
+        <div className={`relative w-[320px] h-full bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 shadow-2xl flex flex-col transform transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${panelClass}`}>
             
-            {/* Conditional Header for Inner Pages */}
+            {/* Header for Inner Pages */}
             {(view === 'topics' || view === 'mixedQuizConfig' || view === 'topicQuizConfig') && (
-                <div className="flex items-center gap-2 px-4 py-4 border-b border-gray-100 dark:border-gray-800">
-                    <button onClick={handleBackNavigation} className="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                        <BackArrowIcon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-                    </button>
-                    <h2 className="text-lg font-bold text-gray-900 dark:text-white truncate">{getHeader}</h2>
+                <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
+                    <h2 className="text-lg font-bold text-white tracking-wide truncate pr-4">{getHeader}</h2>
+                    <div className="flex gap-2">
+                         <button onClick={handleBackNavigation} className="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+                            <BackArrowIcon className="w-5 h-5" />
+                        </button>
+                        <button onClick={onClose} className="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+                            <XIcon className="w-5 h-5" />
+                        </button>
+                    </div>
                 </div>
             )}
             
+            {/* Close button for Main View */}
+            {view === 'main' && (
+                 <button onClick={onClose} className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/20 hover:bg-black/30 text-white transition-colors">
+                    <XIcon className="w-5 h-5" />
+                </button>
+            )}
+
             <div className="flex-1 overflow-y-auto custom-scrollbar">
                 {renderContent()}
             </div>
