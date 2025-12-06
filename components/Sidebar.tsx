@@ -24,6 +24,9 @@ interface SidebarProps {
   xpData: XpData;
 }
 
+// Helper for the "Bubbly" button style
+const bubblyButtonClass = "relative border-[3px] border-b-[5px] rounded-2xl transition-all active:border-b-[3px] active:translate-y-[2px]";
+
 export const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   onClose,
@@ -54,7 +57,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const l = labels[language];
   const common_l = commonLabels[language];
 
-  // ⚡ OPTIMIZATION: Reset state only after animation finishes
   useEffect(() => {
     if (isOpen) {
         setView(startView);
@@ -82,7 +84,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
         return;
     }
     
-    // Check for Custom Quizzes category
     if (subject.name_en === (labels['en'].customQuizzesCategoryName || "Custom Quizzes")) {
         setSelectedSubject({
             name_en: labels['en'].customQuizzesCategoryName || "Custom Quizzes",
@@ -187,43 +188,41 @@ export const Sidebar: React.FC<SidebarProps> = ({
             }
 
             return (
-                <div className="space-y-2 p-1">
+                <div className="space-y-3 p-2">
                     {allSubjectsForDisplay.map(subject => (
                         <button
                             key={subject.name_en}
                             onClick={() => handleSelectSubject(subject)}
                             disabled={subject.name_en !== labels['en'].mixedQuiz && !subject.isCustom && subject.topics.length === 0}
-                            className="w-full flex items-center justify-between p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 shadow-sm hover:shadow-md transition-all duration-200 group active:scale-[0.99]"
+                            className={`w-full flex items-center justify-between p-4 ${bubblyButtonClass} bg-white border-gray-200 border-b-gray-300 hover:bg-gray-50 text-gray-800 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-white dark:hover:bg-gray-700 disabled:opacity-50 disabled:active:translate-y-0 disabled:active:border-b-[5px]`}
                         >
-                            <span className="flex items-center text-gray-700 dark:text-gray-200 font-semibold text-sm">
-                                {subject.iconEmoji && <span className="mr-3 opacity-80 group-hover:scale-110 transition-transform">{subject.iconEmoji}</span>}
+                            <span className="flex items-center font-bold text-lg">
+                                {subject.iconEmoji && <span className="mr-3 text-2xl">{subject.iconEmoji}</span>}
                                 {language === 'en' ? subject.name_en : subject.name_hi}
                             </span>
-                            <div className="bg-gray-200 dark:bg-gray-700 rounded-full p-1 group-hover:bg-primary-500 group-hover:text-white transition-colors">
-                                <ArrowRightIcon className="w-3 h-3" />
-                            </div>
+                            <ArrowRightIcon className="w-6 h-6 text-gray-400" />
                         </button>
                     ))}
                 </div>
             );
         case 'topics':
             return (
-                <div className="space-y-2 p-1">
+                <div className="space-y-3 p-2">
                     {selectedSubject?.topics.map(topic => (
-                         <div key={topic.name_en} className="flex items-center gap-2 w-full group">
+                         <div key={topic.name_en} className="flex items-center gap-3 w-full">
                             <button
                                 onClick={() => handleSelectTopic(topic)}
-                                className="flex-grow flex items-center justify-between p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 border border-transparent hover:border-gray-200 dark:hover:border-gray-700 shadow-sm hover:shadow-md transition-all duration-200 active:scale-[0.99]"
+                                className={`flex-grow flex items-center justify-between p-4 ${bubblyButtonClass} bg-white border-gray-200 border-b-gray-300 hover:bg-gray-50 text-gray-800 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-white dark:hover:bg-gray-700`}
                             >
-                                <span className="text-gray-700 dark:text-gray-200 font-semibold text-sm">{language === 'en' ? topic.name_en : topic.name_hi}</span>
-                                <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-primary-500 transition-colors" />
+                                <span className="font-bold text-base">{language === 'en' ? topic.name_en : topic.name_hi}</span>
+                                <ArrowRightIcon className="w-5 h-5 text-gray-400" />
                             </button>
                             {selectedSubject?.isCustom && (
                                 <button 
                                     onClick={(e) => { e.stopPropagation(); onDeleteCustomQuiz(selectedSubject.name_en); clearQuestionCache(); }} 
-                                    className="p-4 rounded-xl bg-red-50 dark:bg-red-900/10 text-red-500 hover:bg-red-500 hover:text-white transition-colors shadow-sm"
+                                    className={`p-4 ${bubblyButtonClass} bg-red-100 border-red-300 border-b-red-400 text-red-600 hover:bg-red-200 dark:bg-red-900 dark:border-red-950 dark:border-b-black dark:text-red-300`}
                                 >
-                                    <TrashIcon className="w-4 h-4"/>
+                                    <TrashIcon className="w-5 h-5"/>
                                 </button>
                             )}
                         </div>
@@ -237,17 +236,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
             const isDisabled = isLoadingTopicQuestions || currentMaxQuestions === 0;
 
             return (
-                <div className="space-y-6 mt-4">
+                <div className="space-y-8 mt-6 px-2">
                     {isLoadingTopicQuestions ? (
-                        <div className="flex flex-col items-center justify-center py-10 space-y-3">
-                            <div className="w-8 h-8 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-                            <p className="text-xs font-medium text-gray-400 uppercase tracking-widest">{common_l.loading}</p>
+                        <div className="flex flex-col items-center justify-center py-10 space-y-4">
+                             <div className="w-12 h-12 border-[6px] border-gray-200 border-t-primary-500 rounded-full animate-spin"></div>
+                             <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">{common_l.loading}</p>
                         </div>
                     ) : (
-                        <div className="animate-fade-in-up bg-white dark:bg-gray-800/50 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <div className={`bg-white dark:bg-gray-800 p-6 ${bubblyButtonClass} border-gray-200 border-b-gray-300 dark:border-gray-700 dark:border-b-gray-900 active:translate-y-0 active:border-b-[5px] cursor-default`}>
                             <div className="flex justify-between items-end mb-6">
-                                <label className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{labels['en'].numQuestions}</label>
-                                <span className="text-2xl font-black text-primary-600 dark:text-primary-400">{numTopicQuestions}</span>
+                                <label className="text-lg font-black text-gray-700 dark:text-gray-300 uppercase tracking-wider">{labels['en'].numQuestions}</label>
+                                <span className="text-4xl font-black text-primary-600 dark:text-primary-400">{numTopicQuestions}</span>
                             </div>
                             
                             <input 
@@ -256,27 +255,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
                                 max={currentMaxQuestions}
                                 value={numTopicQuestions} 
                                 onChange={(e) => setNumTopicQuestions(parseInt(e.target.value))} 
-                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-primary-600 focus:outline-none"
+                                className="w-full h-4 bg-gray-200 rounded-full appearance-none cursor-pointer dark:bg-gray-700 accent-primary-600 focus:outline-none border-2 border-gray-300 dark:border-gray-600"
                                 disabled={isDisabled}
                             />
                             
-                            <div className="flex justify-between text-[10px] font-bold text-gray-400 mt-2 uppercase">
-                                <span>{minQuestionsForSlider}</span>
-                                <span>MAX ({currentMaxQuestions})</span>
+                            <div className="flex justify-between text-xs font-black text-gray-400 mt-3 uppercase">
+                                <span>Min: {minQuestionsForSlider}</span>
+                                <span>Max: {currentMaxQuestions}</span>
                             </div>
                         </div>
                     )}
                     
                     <button 
                         onClick={handleStartTopicQuiz}
-                        className="w-full py-4 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-sm shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 disabled:transform-none flex justify-center items-center gap-3"
+                        className={`w-full py-5 ${bubblyButtonClass} bg-primary-500 border-primary-600 border-b-primary-800 text-white font-black text-xl hover:bg-primary-400 disabled:opacity-50 disabled:active:translate-y-0 disabled:active:border-b-[5px] flex justify-center items-center gap-3`}
                         disabled={isLoadingQuiz || isDisabled || numTopicQuestions === 0}
                     >
                         {isLoadingQuiz ? (
-                            <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
-                        ) : (
-                            <ArrowRightIcon className="w-5 h-5" />
-                        )}
+                            <div className="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        ) : null}
                         <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                     </button>
                 </div>
@@ -284,11 +281,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
         }
         case 'mixedQuizConfig':
             return (
-                <div className="space-y-6 mt-4">
-                     <div className="animate-fade-in-up bg-white dark:bg-gray-800/50 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <div className="space-y-8 mt-6 px-2">
+                     <div className={`bg-white dark:bg-gray-800 p-6 ${bubblyButtonClass} border-gray-200 border-b-gray-300 dark:border-gray-700 dark:border-b-gray-900 active:translate-y-0 active:border-b-[5px] cursor-default`}>
                         <div className="flex justify-between items-end mb-6">
-                            <label className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{labels['en'].numQuestions}</label>
-                            <span className="text-2xl font-black text-primary-600 dark:text-primary-400">{numMixedQuestions}</span>
+                            <label className="text-lg font-black text-gray-700 dark:text-gray-300 uppercase tracking-wider">{labels['en'].numQuestions}</label>
+                            <span className="text-4xl font-black text-primary-600 dark:text-primary-400">{numMixedQuestions}</span>
                         </div>
                         
                         <input 
@@ -297,24 +294,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
                             max="100" 
                             value={numMixedQuestions} 
                             onChange={(e) => setNumMixedQuestions(parseInt(e.target.value))} 
-                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-primary-600 focus:outline-none" 
+                            className="w-full h-4 bg-gray-200 rounded-full appearance-none cursor-pointer dark:bg-gray-700 accent-primary-600 focus:outline-none border-2 border-gray-300 dark:border-gray-600"
                         />
-                         <div className="flex justify-between text-[10px] font-bold text-gray-400 mt-2 uppercase">
-                            <span>10</span>
-                            <span>100</span>
+                         <div className="flex justify-between text-xs font-black text-gray-400 mt-3 uppercase">
+                            <span>Min: 10</span>
+                            <span>Max: 100</span>
                         </div>
                     </div>
 
                     <button 
                         onClick={handleStartMixedQuiz}
-                        className="w-full py-4 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-sm shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 disabled:transform-none flex justify-center items-center gap-3"
+                        className={`w-full py-5 ${bubblyButtonClass} bg-primary-500 border-primary-600 border-b-primary-800 text-white font-black text-xl hover:bg-primary-400 disabled:opacity-50 disabled:active:translate-y-0 disabled:active:border-b-[5px] flex justify-center items-center gap-3`}
                         disabled={isLoadingQuiz}
                     >
                         {isLoadingQuiz ? (
-                            <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
-                        ) : (
-                            <ArrowRightIcon className="w-5 h-5" />
-                        )}
+                            <div className="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        ) : null}
                         <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                     </button>
                 </div>
@@ -322,101 +317,99 @@ export const Sidebar: React.FC<SidebarProps> = ({
         case 'main':
         default:
             return (
-                <div className="space-y-6 pb-6">
-                    {/* User Status Card */}
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-5 shadow-lg shadow-indigo-500/20">
-                         <div className="absolute -right-4 -top-4 text-white/10 rotate-12">
-                            <XPIcon className="w-28 h-28" />
+                <div className="space-y-8 pb-8 px-2">
+                    {/* Gamified XP Banner */}
+                    <div className={`relative overflow-hidden ${bubblyButtonClass} bg-gradient-to-r from-violet-500 to-indigo-600 border-violet-700 border-b-violet-900 text-white p-6 active:translate-y-0 active:border-b-[5px] cursor-default`}>
+                        
+                        <div className="relative z-10 flex justify-between items-center">
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider opacity-80 mb-1">Player Level</h3>
+                                <div className="flex items-baseline gap-2">
+                                    <span className="text-5xl font-black">{xpData.level}</span>
+                                    <span className="text-lg font-bold text-violet-200">{xpData.totalXp} XP</span>
+                                </div>
+                            </div>
+                             <XPIcon className="w-20 h-20 text-white/30 transform rotate-12" />
                         </div>
-                        <div className="relative z-10">
-                            <div className="flex justify-between items-start mb-2">
-                                <span className="text-xs font-bold bg-white/20 backdrop-blur-md px-2 py-1 rounded text-white border border-white/10">LEVEL {xpData.level}</span>
-                                <span className="text-xs font-medium text-indigo-100">{xpData.totalXp} XP</span>
-                            </div>
-                            <h3 className="text-lg font-bold leading-tight mb-3">Keep going!</h3>
-                            <div className="w-full bg-black/20 rounded-full h-1.5 overflow-hidden">
-                                <div 
-                                    className="bg-white h-full rounded-full shadow-[0_0_10px_rgba(255,255,255,0.5)]" 
-                                    style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }}
-                                />
-                            </div>
+                        <div className="mt-4 w-full bg-black/30 rounded-full h-3 border-2 border-white/20 overflow-hidden">
+                            <div 
+                                className="bg-yellow-400 h-full rounded-full" 
+                                style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }}
+                            />
                         </div>
                     </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-2 gap-3">
-                        <button onClick={onViewProgress} className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:border-blue-300 dark:hover:border-blue-700 transition-colors group">
-                            <ChartIcon className="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform" />
-                            <span className="text-xs font-bold text-gray-600 dark:text-gray-300">Stats</span>
+                    {/* Chunky Stats Buttons */}
+                    <div className="grid grid-cols-2 gap-4">
+                        <button onClick={onViewProgress} className={`p-4 ${bubblyButtonClass} bg-blue-100 border-blue-300 border-b-blue-400 hover:bg-blue-200 dark:bg-blue-900 dark:border-blue-800 dark:border-b-black flex flex-col items-center justify-center gap-2 group`}>
+                            <ChartIcon className="w-8 h-8 text-blue-600 dark:text-blue-300 group-hover:scale-110 transition-transform" />
+                            <span className="text-sm font-black text-blue-700 dark:text-blue-300 uppercase">{commonLabels['en'].progress}</span>
                         </button>
-                        <button onClick={onViewAchievements} className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:border-yellow-300 dark:hover:border-yellow-700 transition-colors group">
-                            <TrophyIcon className="w-6 h-6 text-yellow-500 group-hover:scale-110 transition-transform" />
-                            <span className="text-xs font-bold text-gray-600 dark:text-gray-300">Awards</span>
+                        <button onClick={onViewAchievements} className={`p-4 ${bubblyButtonClass} bg-yellow-100 border-yellow-300 border-b-yellow-400 hover:bg-yellow-200 dark:bg-yellow-900 dark:border-yellow-800 dark:border-b-black flex flex-col items-center justify-center gap-2 group`}>
+                            <TrophyIcon className="w-8 h-8 text-yellow-600 dark:text-yellow-300 group-hover:scale-110 transition-transform" />
+                            <span className="text-sm font-black text-yellow-700 dark:text-yellow-300 uppercase">Awards</span>
                         </button>
                     </div>
 
-                    {/* Settings Segmented Controls */}
+                    {/* Big Toggles */}
                     <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest pl-1">Appearance</span>
-                        </div>
-                        <div className="bg-gray-100 dark:bg-black/40 p-1 rounded-xl flex relative">
-                            <button onClick={() => theme !== 'light' && onThemeChange()} className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${theme === 'light' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400'}`}>
-                                <SunIcon className="w-4 h-4" /> Light
+                        <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest ml-2">Settings</h4>
+                        <div className="grid grid-cols-2 gap-4">
+                            <button onClick={() => theme !== 'light' && onThemeChange()} className={`p-3 flex items-center justify-center gap-2 text-sm font-bold ${bubblyButtonClass} ${theme === 'light' ? 'bg-indigo-100 border-indigo-300 border-b-indigo-400 text-indigo-700' : 'bg-white border-gray-200 border-b-gray-300 text-gray-500 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-gray-400'}`}>
+                                <SunIcon className="w-5 h-5" /> Light
                             </button>
-                            <button onClick={() => theme !== 'dark' && onThemeChange()} className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all ${theme === 'dark' ? 'bg-gray-700 shadow-sm text-white' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400'}`}>
-                                <MoonIcon className="w-4 h-4" /> Dark
+                            <button onClick={() => theme !== 'dark' && onThemeChange()} className={`p-3 flex items-center justify-center gap-2 text-sm font-bold ${bubblyButtonClass} ${theme === 'dark' ? 'bg-indigo-600 border-indigo-800 border-b-black text-white' : 'bg-white border-gray-200 border-b-gray-300 text-gray-500 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-gray-400'}`}>
+                                <MoonIcon className="w-5 h-5" /> Dark
                             </button>
                         </div>
-
-                        <div className="bg-gray-100 dark:bg-black/40 p-1 rounded-xl flex relative">
-                            <button onClick={() => onLanguageChange('en')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'en' ? 'bg-white dark:bg-gray-700 shadow-sm text-primary-600 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                        <div className="grid grid-cols-2 gap-4">
+                             <button onClick={() => onLanguageChange('en')} className={`p-3 text-sm font-bold ${bubblyButtonClass} ${language === 'en' ? 'bg-indigo-100 border-indigo-300 border-b-indigo-400 text-indigo-700 dark:bg-indigo-600 dark:border-indigo-800 dark:border-b-black dark:text-white' : 'bg-white border-gray-200 border-b-gray-300 text-gray-500 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-gray-400'}`}>
                                 English
                             </button>
-                            <button onClick={() => onLanguageChange('hi')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'hi' ? 'bg-white dark:bg-gray-700 shadow-sm text-primary-600 dark:text-white' : 'text-gray-500 dark:text-gray-400'}`}>
+                            <button onClick={() => onLanguageChange('hi')} className={`p-3 text-sm font-bold ${bubblyButtonClass} ${language === 'hi' ? 'bg-indigo-100 border-indigo-300 border-b-indigo-400 text-indigo-700 dark:bg-indigo-600 dark:border-indigo-800 dark:border-b-black dark:text-white' : 'bg-white border-gray-200 border-b-gray-300 text-gray-500 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 dark:text-gray-400'}`}>
                                 हिंदी
                             </button>
                         </div>
                     </div>
 
-                    {/* History List */}
-                    <div className="pt-2">
-                        <div className="flex items-center justify-between mb-2 px-1">
-                            <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{labels['en'].history}</span>
+                    {/* History Tickets */}
+                    <div className="pt-4">
+                        <div className="flex items-center justify-between mb-3 px-2">
+                            <h3 className="text-sm font-black text-gray-700 dark:text-gray-300 flex items-center gap-2 uppercase tracking-wider">
+                                <HistoryIcon className="w-5 h-5" />
+                                {labels['en'].history}
+                            </h3>
                             {history.length > 0 && (
-                                <button onClick={handleClearHistory} className="text-[10px] font-bold text-red-500 hover:text-red-600 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded hover:bg-red-100 transition-colors">
-                                    CLEAR
+                                <button onClick={handleClearHistory} className={`text-xs font-bold text-white bg-red-500 px-3 py-1 rounded-full hover:bg-red-600 transition-colors ${bubblyButtonClass} border-red-600 border-b-red-800 py-2`}>
+                                    CLEAR ALL
                                 </button>
                             )}
                         </div>
                         
-                        <div className="space-y-2 max-h-48 overflow-y-auto pr-1 custom-scrollbar">
+                        <div className="space-y-3 max-h-64 overflow-y-auto px-1 custom-scrollbar">
                             {history.length > 0 ? (
                                 history.map(item => {
                                     const isPass = item.accuracy >= 70;
                                     return (
-                                        <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className="w-full text-left p-3 rounded-xl bg-white dark:bg-gray-800/40 border border-gray-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-500/30 transition-all group active:scale-[0.98]">
-                                            <div className="flex justify-between items-center mb-1">
-                                                <div className="flex items-center gap-2 overflow-hidden">
-                                                    <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${isPass ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                                                    <p className="font-semibold text-xs text-gray-700 dark:text-gray-200 truncate group-hover:text-primary-600 transition-colors">
-                                                        {item.topic || labels['en'].untitledQuiz}
-                                                    </p>
-                                                </div>
-                                                <span className={`text-[10px] font-bold ${isPass ? 'text-green-600 dark:text-green-400' : 'text-red-500'}`}>
+                                        <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className={`w-full text-left p-4 ${bubblyButtonClass} ${isPass ? 'bg-green-50 border-green-200 border-b-green-300 dark:bg-green-900/30 dark:border-green-800 dark:border-b-green-950' : 'bg-red-50 border-red-200 border-b-red-300 dark:bg-red-900/30 dark:border-red-800 dark:border-b-red-950'} group`}>
+                                            <div className="flex justify-between items-center mb-2">
+                                                <h4 className="font-black text-sm text-gray-800 dark:text-gray-100 truncate pr-2">
+                                                    {item.topic || labels['en'].untitledQuiz}
+                                                </h4>
+                                                <span className={`text-sm font-black px-2 py-1 rounded-lg ${isPass ? 'bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-100' : 'bg-red-200 text-red-800 dark:bg-red-800 dark:text-red-100'}`}>
                                                     {item.accuracy.toFixed(0)}%
                                                 </span>
                                             </div>
-                                            <div className="flex justify-between pl-3.5">
-                                                <span className="text-[10px] text-gray-400">{new Date(item.timestamp).toLocaleDateString()}</span>
-                                                <span className="text-[10px] text-gray-400">{item.score}/{item.totalQuestions}</span>
+                                            <div className="flex justify-between text-xs font-bold text-gray-500 dark:text-gray-400">
+                                                <span>{new Date(item.timestamp).toLocaleDateString()}</span>
+                                                <span>Score: {item.score}/{item.totalQuestions}</span>
                                             </div>
                                         </button>
                                     );
                                 })
                             ) : (
-                                <div className="text-center py-8 bg-gray-50 dark:bg-gray-800/30 rounded-xl border border-dashed border-gray-200 dark:border-gray-700">
-                                    <p className="text-xs text-gray-400">No recent activity</p>
+                                <div className={`text-center py-8 ${bubblyButtonClass} bg-gray-50 border-gray-200 border-b-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:border-b-gray-900 cursor-default active:translate-y-0 active:border-b-[5px]`}>
+                                    <p className="text-sm font-bold text-gray-400">No games played yet!</p>
                                 </div>
                             )}
                         </div>
@@ -434,43 +427,37 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <div className={`fixed inset-0 z-50 flex justify-end ${containerClass}`}>
         {/* Backdrop */}
         <div 
-            className={`absolute inset-0 bg-gray-900/20 dark:bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 ease-out will-change-opacity ${backdropClass}`}
+            className={`absolute inset-0 bg-indigo-900/40 backdrop-blur-sm transition-opacity duration-300 ease-out will-change-opacity ${backdropClass}`}
             onClick={onClose}
             aria-hidden="true"
         />
 
         {/* Sidebar Panel */}
-        <div className={`relative w-[85%] max-w-[320px] h-full bg-white/80 dark:bg-gray-900/90 backdrop-blur-2xl shadow-2xl border-l border-white/20 dark:border-gray-700/50 flex flex-col transform transition-transform duration-300 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-transform ${panelClass}`}>
+        <div className={`relative w-[90%] max-w-[340px] h-full bg-indigo-50 dark:bg-gray-900 border-l-[3px] border-indigo-200 dark:border-gray-800 shadow-2xl flex flex-col transform transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform ${panelClass}`}>
             
-            {/* Sticky Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100/50 dark:border-gray-800/50 flex-shrink-0">
-                <h2 className="text-xl font-black text-gray-800 dark:text-white tracking-tight truncate pr-4">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-6 bg-white dark:bg-gray-800 border-b-[3px] border-indigo-100 dark:border-gray-700">
+                <h2 className="text-2xl font-black text-indigo-900 dark:text-white tracking-tight truncate pr-4">
                     {getHeader}
                 </h2>
                 
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                     {(view === 'topics' || view === 'mixedQuizConfig' || view === 'topicQuizConfig') && (
-                        <button onClick={handleBackNavigation} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500 dark:text-gray-400 transition-colors">
-                            <BackArrowIcon className="w-5 h-5" />
+                        <button onClick={handleBackNavigation} className={`p-2 ${bubblyButtonClass} bg-white border-gray-200 border-b-gray-300 text-gray-500 hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:border-b-gray-800 dark:text-gray-300`}>
+                            <BackArrowIcon className="w-6 h-6" />
                         </button>
                     )}
-                    <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-500 dark:text-gray-400 transition-colors">
-                        <XIcon className="w-5 h-5" />
+                    <button onClick={onClose} className={`p-2 ${bubblyButtonClass} bg-white border-gray-200 border-b-gray-300 text-gray-500 hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:border-b-gray-800 dark:text-gray-300`}>
+                        <XIcon className="w-6 h-6" />
                     </button>
                 </div>
             </div>
             
-            {/* Scrollable Content */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar px-5 py-4">
+            {/* Content */}
+            <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
                 {renderContent()}
             </div>
 
-            {/* Subtle Footer */}
-            <div className="p-4 text-center border-t border-gray-100/50 dark:border-gray-800/50 flex-shrink-0">
-                <p className="text-[10px] font-bold tracking-widest text-gray-300 dark:text-gray-600 uppercase">
-                    v2.0 • Zen Mode
-                </p>
-            </div>
         </div>
     </div>
   );
