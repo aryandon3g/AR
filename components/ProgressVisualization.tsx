@@ -1,180 +1,294 @@
-
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { Language, ProgressDataPoint } from '../types';
 import { commonLabels, summaryScreenLabels } from '../services/labels';
-import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+  ReferenceLine
+} from 'recharts';
 
 interface ProgressVisualizationProps {
-    language: Language;
-    progressData: ProgressDataPoint[];
+  language: Language;
+  progressData: ProgressDataPoint[];
 }
 
-const COLORS = ['#0ea5e9', '#f97316', '#22c55e', '#f472b6', '#a78bfa', '#facc15'];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }: any) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  if (percent * 100 < 5) return null; // Hide small labels to prevent clutter
-
-  return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" className="font-bold text-xs">
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
+// Colors for the charts
+const COLORS = {
+  primary: '#0ea5e9', // Sky blue
+  success: '#22c55e', // Green
+  warning: '#f59e0b', // Amber
+  danger: '#ef4444',  // Red
+  purple: '#8b5cf6',  // Violet
 };
 
 export const ProgressVisualization: React.FC<ProgressVisualizationProps> = ({ language, progressData }) => {
-    const l = commonLabels[language];
-    const s_l = summaryScreenLabels['en'];
-    const [filter, setFilter] = useState<'accuracy' | 'avgTime' | 'xp' | 'count'>('accuracy');
-    const isDarkMode = document.documentElement.classList.contains('dark');
+  const l = commonLabels[language];
+  const s_l = summaryScreenLabels['en']; // Fallback to en for specific labels if needed
+  
+  // State to toggle between Trend View (Line) and Topic View (Bar)
+  const [viewMode, setViewMode] = useState<'trend' | 'topics'>('trend');
+  const isDarkMode = document.documentElement.classList.contains('dark');
 
-    const getFilterLabel = (key: 'accuracy' | 'avgTime' | 'xp' | 'count') => {
-        switch (key) {
-            case 'accuracy': return s_l.accuracy;
-            case 'avgTime': return s_l.avgTime;
-            case 'xp': return commonLabels['en'].xp;
-            case 'count': return l.quizzesCompleted;
-            default: return '';
-        }
+  // --- 1. Calculate Summary Statistics ---
+  const stats = useMemo(() => {
+    if (progressData.length === 0) {
+      return { totalQuizzes: 0, avgAccuracy: 0, totalXP: 0, bestScore: 0 };
+    }
+
+    const totalQuizzes = progressData.length;
+    const totalXP = progressData.reduce((acc, curr) => acc + curr.xpEarned, 0);
+    const avgAccuracy = progressData.reduce((acc, curr) => acc + curr.accuracy, 0) / totalQuizzes;
+    const bestScore = Math.max(...progressData.map(p => p.accuracy));
+
+    return {
+      totalQuizzes,
+      avgAccuracy: Math.round(avgAccuracy),
+      totalXP,
+      bestScore: Math.round(bestScore),
     };
+  }, [progressData]);
 
-    const getChartData = () => {
-        switch (filter) {
-            case 'accuracy':
-                const accuracyBuckets = {
-                    'Excellent (> 90%)': 0,
-                    'Good (70-90%)': 0,
-                    'Average (50-69%)': 0,
-                    'Needs Improvement (< 50%)': 0,
-                };
-                progressData.forEach(d => {
-                    if (d.accuracy > 90) accuracyBuckets['Excellent (> 90%)']++;
-                    else if (d.accuracy >= 70) accuracyBuckets['Good (70-90%)']++;
-                    else if (d.accuracy >= 50) accuracyBuckets['Average (50-69%)']++;
-                    else accuracyBuckets['Needs Improvement (< 50%)']++;
-                });
-                return Object.entries(accuracyBuckets).map(([name, value]) => ({ name, value })).filter(d => d.value > 0);
-            
-            case 'avgTime':
-                const timeBuckets = {
-                    'Fast (< 15s)': 0,
-                    'Medium (15-30s)': 0,
-                    'Slow (> 30s)': 0,
-                };
-                progressData.forEach(d => {
-                    if (d.avgTimePerQuestion < 15) timeBuckets['Fast (< 15s)']++;
-                    else if (d.avgTimePerQuestion <= 30) timeBuckets['Medium (15-30s)']++;
-                    else timeBuckets['Slow (> 30s)']++;
-                });
-                return Object.entries(timeBuckets).map(([name, value]) => ({ name, value })).filter(d => d.value > 0);
-            
-            case 'xp':
-                // FIX: Explicitly type the accumulator for `xpByTopic` to resolve arithmetic operation types.
-                const xpByTopic = progressData.reduce((acc: { [key: string]: number }, d) => {
-                    const topicName = d.topic || 'Untitled';
-                    acc[topicName] = (acc[topicName] || 0) + d.xpEarned;
-                    return acc;
-                }, {});
-                return Object.entries(xpByTopic).map(([name, value]) => ({ name, value })).sort((a,b) => b.value - a.value);
+  // --- 2. Prepare Trend Data (Last 10 Quizzes) ---
+  const trendData = useMemo(() => {
+    // Take the last 10 items to avoid overcrowding the chart
+    return progressData.slice(-10).map((d, index) => ({
+      name: `Q${index + 1}`, // Q1, Q2, etc.
+      accuracy: d.accuracy,
+      xp: d.xpEarned,
+      fullDate: new Date(d.date).toLocaleDateString(),
+    }));
+  }, [progressData]);
 
-            case 'count':
-                // FIX: Explicitly type the accumulator for `countByTopic` to resolve arithmetic operation types.
-                const countByTopic = progressData.reduce((acc: { [key: string]: number }, d) => {
-                    const topicName = d.topic || 'Untitled';
-                    acc[topicName] = (acc[topicName] || 0) + 1;
-                    return acc;
-                }, {});
-                return Object.entries(countByTopic).map(([name, value]) => ({ name, value })).sort((a,b) => b.value - a.value);
+  // --- 3. Prepare Topic Performance Data ---
+  const topicData = useMemo(() => {
+    const topicMap: { [key: string]: { totalAcc: number; count: number } } = {};
 
-            default:
-                return [];
-        }
-    };
+    progressData.forEach((d) => {
+      const topic = d.topic || 'General';
+      if (!topicMap[topic]) {
+        topicMap[topic] = { totalAcc: 0, count: 0 };
+      }
+      topicMap[topic].totalAcc += d.accuracy;
+      topicMap[topic].count += 1;
+    });
 
-    const chartData = getChartData();
+    return Object.entries(topicMap)
+      .map(([name, data]) => ({
+        name: name.length > 10 ? name.substring(0, 10) + '...' : name, // Truncate long names
+        avgAccuracy: Math.round(data.totalAcc / data.count),
+        count: data.count
+      }))
+      .sort((a, b) => b.avgAccuracy - a.avgAccuracy); // Sort best topics first
+  }, [progressData]);
 
+  // --- Helper: Custom Tooltip for Charts ---
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg">
+          <p className="font-bold text-gray-700 dark:text-gray-200">{label}</p>
+          <p className="text-primary-600 dark:text-primary-400">
+            {viewMode === 'trend' ? `${s_l.accuracy}: ${payload[0].value}%` : `Avg Score: ${payload[0].value}%`}
+          </p>
+          {viewMode === 'trend' && (
+             <p className="text-xs text-gray-500 mt-1">{payload[0].payload.fullDate}</p>
+          )}
+        </div>
+      );
+    }
+    return null;
+  };
+
+  // --- Empty State ---
+  if (progressData.length === 0) {
     return (
-        <div className="w-full h-full p-4 pt-20 flex flex-col overflow-y-auto custom-scrollbar relative">
-            <div className="absolute inset-0 z-0 opacity-10">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-300 rounded-full blur-xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute bottom-1/3 right-1/4 w-40 h-40 bg-yellow-300 rounded-full blur-xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-green-300 rounded-full blur-xl animate-pulse-slow" style={{ animationDelay: '3s' }}></div>
+      <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center">
+        <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4">
+          <span className="text-4xl">📊</span>
+        </div>
+        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{l.noHistory}</h3>
+        <p className="text-gray-500 dark:text-gray-400">Complete your first quiz to see analytics here!</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full h-full p-4 pt-20 flex flex-col overflow-y-auto custom-scrollbar relative bg-gray-50 dark:bg-[#0f172a]">
+      {/* Background Decorative Blobs */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+         <div className="absolute top-0 left-0 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl"></div>
+         <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto w-full">
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white flex items-center gap-2">
+           <span>📈</span> {commonLabels['en'].myProgress}
+        </h2>
+
+        {/* 1. Summary Cards (Grid) */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <StatCard 
+            label={l.quizzesCompleted} 
+            value={stats.totalQuizzes} 
+            icon="📝" 
+            color="bg-blue-500" 
+          />
+          <StatCard 
+            label="Avg. Accuracy" 
+            value={`${stats.avgAccuracy}%`} 
+            icon="🎯" 
+            color={stats.avgAccuracy >= 70 ? 'bg-green-500' : stats.avgAccuracy >= 50 ? 'bg-yellow-500' : 'bg-red-500'} 
+          />
+          <StatCard 
+            label={commonLabels['en'].xp} 
+            value={stats.totalXP} 
+            icon="⚡" 
+            color="bg-purple-500" 
+          />
+          <StatCard 
+            label="Best Score" 
+            value={`${stats.bestScore}%`} 
+            icon="🏆" 
+            color="bg-orange-500" 
+          />
+        </div>
+
+        {/* 2. Main Chart Section */}
+        <div className="bg-white dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 mb-6">
+          <div className="flex flex-row justify-between items-center mb-6">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+              {viewMode === 'trend' ? 'Recent Performance Trend' : 'Topic Strength Analysis'}
+            </h3>
+            
+            {/* Toggle Switch */}
+            <div className="bg-gray-100 dark:bg-gray-700 p-1 rounded-lg flex text-sm">
+              <button
+                onClick={() => setViewMode('trend')}
+                className={`px-3 py-1.5 rounded-md transition-all ${
+                  viewMode === 'trend' 
+                  ? 'bg-white dark:bg-gray-600 shadow-sm text-primary-600 dark:text-white font-medium' 
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700'
+                }`}
+              >
+                Trend
+              </button>
+              <button
+                onClick={() => setViewMode('topics')}
+                className={`px-3 py-1.5 rounded-md transition-all ${
+                  viewMode === 'topics' 
+                  ? 'bg-white dark:bg-gray-600 shadow-sm text-primary-600 dark:text-white font-medium' 
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700'
+                }`}
+              >
+                Topics
+              </button>
             </div>
+          </div>
 
-            <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white relative z-10">
-                {commonLabels['en'].myProgress}
-            </h2>
-
-            <div className="flex justify-center mb-6 relative z-10">
-                <div className="inline-flex rounded-md shadow-sm bg-white/20 dark:bg-black/20 border border-white/30 dark:border-white/10">
-                    <button
-                        onClick={() => setFilter('accuracy')}
-                        className={`px-4 py-2 text-sm font-medium rounded-l-md transition-colors ${filter === 'accuracy' ? 'bg-primary-600 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-black/30'}`}
-                        aria-pressed={filter === 'accuracy'}
-                    >
-                        {s_l.accuracy}
-                    </button>
-                    <button
-                        onClick={() => setFilter('avgTime')}
-                        className={`px-4 py-2 text-sm font-medium transition-colors ${filter === 'avgTime' ? 'bg-primary-600 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-black/30'}`}
-                        aria-pressed={filter === 'avgTime'}
-                    >
-                        {s_l.avgTime}
-                    </button>
-                    <button
-                        onClick={() => setFilter('xp')}
-                        className={`px-4 py-2 text-sm font-medium transition-colors ${filter === 'xp' ? 'bg-primary-600 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-black/30'}`}
-                        aria-pressed={filter === 'xp'}
-                    >
-                        {commonLabels['en'].xp}
-                    </button>
-                    <button
-                        onClick={() => setFilter('count')}
-                        className={`px-4 py-2 text-sm font-medium rounded-r-md transition-colors ${filter === 'count' ? 'bg-primary-600 text-white' : 'text-gray-700 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-black/30'}`}
-                        aria-pressed={filter === 'count'}
-                    >
-                        {l.quizzesCompleted}
-                    </button>
-                </div>
-            </div>
-
-            {progressData.length === 0 ? (
-                <div className="text-center py-10 relative z-10">
-                    <p className="text-gray-600 dark:text-gray-300 text-lg">{l.noHistory}</p>
-                </div>
-            ) : (
-                <div className="w-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl shadow-xl p-4 overflow-x-auto relative z-10">
-                    <h3 className="text-xl font-semibold mb-4 text-center text-gray-800 dark:text-white">Distribution by {getFilterLabel(filter)}</h3>
-                    <div className="h-80 w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <PieChart>
-                                <Pie
-                                    data={chartData}
-                                    cx="50%"
-                                    cy="50%"
-                                    labelLine={false}
-                                    label={renderCustomizedLabel}
-                                    outerRadius={100}
-                                    fill="#8884d8"
-                                    dataKey="value"
-                                    nameKey="name"
-                                >
-                                    {chartData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                    ))}
-                                </Pie>
-                                <Tooltip contentStyle={{ backgroundColor: 'rgba(0,0,0,0.7)', border: 'none', borderRadius: '8px' }} itemStyle={{ color: isDarkMode ? '#e0f2fe' : '#374151' }} />
-                                <Legend layout="horizontal" verticalAlign="bottom" align="center" wrapperStyle={{ color: isDarkMode ? '#e0f2fe' : '#374151', fontSize: '12px' }}/>
-                            </PieChart>
-                        </ResponsiveContainer>
+          <div className="h-64 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              {viewMode === 'trend' ? (
+                // --- Area Chart for Trends ---
+                <AreaChart data={trendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="colorAccuracy" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor={COLORS.primary} stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor={COLORS.primary} stopOpacity={0}/>
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={isDarkMode ? '#374151' : '#e5e7eb'} />
+                  <XAxis 
+                    dataKey="name" 
+                    axisLine={false} 
+                    tickLine={false} 
+                    tick={{ fill: isDarkMode ? '#9ca3af' : '#6b7280', fontSize: 12 }} 
+                    dy={10}
+                  />
+                  <YAxis 
+                    axisLine={false} 
+                    tickLine={false} 
+                    tick={{ fill: isDarkMode ? '#9ca3af' : '#6b7280', fontSize: 12 }} 
+                  />
+                  <Tooltip content={<CustomTooltip />} cursor={{ stroke: COLORS.primary, strokeWidth: 1, strokeDasharray: '4 4' }} />
+                  <ReferenceLine y={70} stroke={COLORS.success} strokeDasharray="3 3" strokeOpacity={0.5} />
+                  <Area 
+                    type="monotone" 
+                    dataKey="accuracy" 
+                    stroke={COLORS.primary} 
+                    strokeWidth={3}
+                    fillOpacity={1} 
+                    fill="url(#colorAccuracy)" 
+                    activeDot={{ r: 6, strokeWidth: 0 }}
+                  />
+                </AreaChart>
+              ) : (
+                // --- Bar Chart for Topics ---
+                <BarChart data={topicData} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke={isDarkMode ? '#374151' : '#e5e7eb'} />
+                  <XAxis type="number" domain={[0, 100]} hide />
+                  <YAxis 
+                    dataKey="name" 
+                    type="category" 
+                    width={80} 
+                    tick={{ fill: isDarkMode ? '#9ca3af' : '#6b7280', fontSize: 11 }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <Tooltip content={<CustomTooltip />} cursor={{fill: 'transparent'}} />
+                  <Bar dataKey="avgAccuracy" radius={[0, 4, 4, 0]} barSize={20}>
+                    {topicData.map((entry, index) => (
+                      <Cell 
+                        key={`cell-${index}`} 
+                        fill={entry.avgAccuracy >= 80 ? COLORS.success : entry.avgAccuracy >= 50 ? COLORS.warning : COLORS.danger} 
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              )}
+            </ResponsiveContainer>
+          </div>
+        </div>
+        
+        {/* 3. Recent Activity List (Mini) */}
+        <div className="space-y-3">
+             <h3 className="text-md font-semibold text-gray-600 dark:text-gray-300 ml-1">Recent History</h3>
+             {progressData.slice().reverse().slice(0, 5).map((item, idx) => (
+                <div key={idx} className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <div className="flex items-center gap-3">
+                        <div className={`w-2 h-10 rounded-full ${item.accuracy >= 70 ? 'bg-green-500' : item.accuracy >= 40 ? 'bg-yellow-500' : 'bg-red-500'}`}></div>
+                        <div>
+                            <p className="text-sm font-medium text-gray-800 dark:text-white">{item.topic || 'General Quiz'}</p>
+                            <p className="text-xs text-gray-500">{new Date(item.date).toLocaleDateString()}</p>
+                        </div>
+                    </div>
+                    <div className="text-right">
+                        <span className="block text-sm font-bold text-gray-800 dark:text-white">{Math.round(item.accuracy)}%</span>
+                        <span className="text-xs text-primary-500">+{item.xpEarned} XP</span>
                     </div>
                 </div>
-            )}
-            <div className="flex-grow min-h-[2rem]"></div>
+             ))}
         </div>
-    );
+
+        <div className="h-10"></div>
+      </div>
+    </div>
+  );
 };
+
+// --- Helper Component for Stats ---
+const StatCard = ({ label, value, icon, color }: { label: string, value: string | number, icon: string, color: string }) => (
+  <div className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+    <div className={`absolute top-0 left-0 w-full h-1 ${color}`}></div>
+    <span className="text-2xl mb-1 group-hover:scale-110 transition-transform duration-200">{icon}</span>
+    <span className="text-lg font-bold text-gray-800 dark:text-white">{value}</span>
+    <span className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider">{label}</span>
+  </div>
+);
