@@ -28,6 +28,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 }) => {
   const l = labels[language];
 
+  // Logic
   const xpForCurrentLevel = (xpData.level - 1) * XP_PER_LEVEL;
   const xpForNextLevel = xpData.level * XP_PER_LEVEL;
   const xpProgress = xpData.totalXp - xpForCurrentLevel;
@@ -35,131 +36,156 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   const xpProgressPercentage = Math.min((xpProgress / xpToNext) * 100, 100);
 
   return (
-    <div className="w-full h-full bg-gray-100 dark:bg-black p-4 pt-16 overflow-y-auto custom-scrollbar">
+    <div className="w-full h-full bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans overflow-y-auto custom-scrollbar relative selection:bg-indigo-500 selection:text-white">
       
-      {/* Header with Greeting */}
-      <div className="mb-6 flex items-center justify-between">
-        <div>
-           <h1 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight">
-             {l.title}
-           </h1>
-           <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">Ready to learn?</p>
-        </div>
-        {/* Profile/Avatar Placeholder (Optional) */}
-        <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center border-2 border-white dark:border-gray-800 shadow-sm">
-            <span className="text-indigo-600 dark:text-indigo-300 font-bold">L{xpData.level}</span>
-        </div>
+      {/* Abstract Background Blobs for Premium Feel */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+          <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-indigo-200/20 dark:bg-indigo-900/10 blur-[80px]" />
+          <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-blue-200/20 dark:bg-blue-900/10 blur-[80px]" />
       </div>
 
-      {/* BENTO GRID LAYOUT */}
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      <div className="relative z-10 p-6 max-w-md mx-auto flex flex-col gap-6">
         
-        {/* 1. MAIN ACTION CARD (Large - Spans 2 columns) */}
-        <button
-          onClick={onTakeQuizClick}
-          className="col-span-2 relative h-32 bg-indigo-600 rounded-3xl p-5 text-left text-white overflow-hidden shadow-lg shadow-indigo-500/20 hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200 group"
-        >
-          <div className="relative z-10 flex flex-col h-full justify-between">
-            <div className="p-2 bg-white/20 w-fit rounded-xl backdrop-blur-md">
-                <BookOpenIcon className="w-6 h-6 text-white" />
-            </div>
+        {/* --- HEADER --- */}
+        <header className="flex justify-between items-center pt-8">
             <div>
-                <h3 className="text-xl font-bold">Start Quiz</h3>
-                <p className="text-indigo-200 text-xs">Tap to begin challenge</p>
+                <h6 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Dashboard</h6>
+                <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    {l.title}
+                </h1>
             </div>
-          </div>
-          {/* Decorative shapes */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-2xl -mr-10 -mt-10 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-          <div className="absolute bottom-0 right-10 w-16 h-16 bg-pink-500 rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            {/* Level Badge */}
+            <div className="flex flex-col items-center justify-center w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                <span className="text-[10px] text-slate-400 font-semibold uppercase">Lvl</span>
+                <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400 leading-none">{xpData.level}</span>
+            </div>
+        </header>
+
+        {/* --- MAIN HERO CARD (Quiz) --- */}
+        <button 
+            onClick={onTakeQuizClick}
+            className="group relative w-full h-40 rounded-[2rem] overflow-hidden shadow-2xl shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1"
+        >
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 to-violet-700 dark:from-indigo-800 dark:to-violet-900"></div>
+            
+            {/* Geometric Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+            
+            <div className="absolute inset-0 p-6 flex flex-col justify-between z-10">
+                <div className="flex justify-between items-start">
+                    <div className="p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 text-white">
+                        <BookOpenIcon className="w-6 h-6" />
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                         <span className="text-xs font-medium text-white tracking-wide">Daily Challenge</span>
+                    </div>
+                </div>
+                
+                <div className="text-left">
+                    <h2 className="text-2xl font-bold text-white mb-1">Start Quiz</h2>
+                    <div className="flex items-center text-indigo-100 text-sm">
+                        <span>Test your skills</span>
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </div>
+                </div>
+            </div>
         </button>
 
-        {/* 2. STREAK CARD */}
-        <div className="bg-orange-50 dark:bg-gray-900 border border-orange-100 dark:border-gray-800 rounded-3xl p-4 flex flex-col justify-between items-start shadow-sm relative overflow-hidden">
-             <div className="flex justify-between w-full items-start z-10">
-                 <div className="p-2 bg-orange-100 dark:bg-orange-900/30 rounded-full text-orange-500">
-                     <FireIcon className="w-5 h-5" />
-                 </div>
-                 <span className="text-xs font-bold text-orange-400 uppercase tracking-wider">Streak</span>
-             </div>
-             <div className="z-10 mt-2">
-                 <span className="text-2xl font-black text-gray-800 dark:text-white">{streakData.currentStreak}</span>
-                 <span className="text-xs text-gray-500 dark:text-gray-400 ml-1">days</span>
-             </div>
+        {/* --- STATS ROW (Glass Cards) --- */}
+        <div className="grid grid-cols-2 gap-4">
+            
+            {/* Streak Card */}
+            <div className="p-5 rounded-3xl bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-sm flex flex-col justify-between h-32">
+                <div className="flex items-center space-x-2 text-orange-500 mb-2">
+                    <FireIcon className="w-5 h-5" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Streak</span>
+                </div>
+                <div>
+                    <span className="text-3xl font-bold text-slate-800 dark:text-slate-100">{streakData.currentStreak}</span>
+                    <span className="text-sm text-slate-400 ml-1">Days</span>
+                </div>
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div className="h-full bg-orange-500 rounded-full" style={{ width: '100%' }}></div>
+                </div>
+            </div>
+
+            {/* XP Progress Card */}
+            <div className="p-5 rounded-3xl bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border border-white/40 dark:border-slate-700/50 shadow-sm flex flex-col justify-between h-32">
+                 <div className="flex items-center space-x-2 text-blue-500 mb-2">
+                    <TrophyIcon className="w-5 h-5" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">XP Earned</span>
+                </div>
+                <div>
+                    <span className="text-3xl font-bold text-slate-800 dark:text-slate-100">{xpProgress}</span>
+                    <span className="text-xs text-slate-400">/{xpToNext}</span>
+                </div>
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div className="h-full bg-blue-500 rounded-full transition-all duration-500" style={{ width: `${xpProgressPercentage}%` }}></div>
+                </div>
+            </div>
         </div>
 
-        {/* 3. LEVEL/XP CARD */}
-        <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-3xl p-4 flex flex-col justify-between shadow-sm">
-             <div className="flex justify-between w-full items-start">
-                 <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-full text-green-600 dark:text-green-400">
-                     <TrophyIcon className="w-5 h-5" />
-                 </div>
-                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Lvl {xpData.level}</span>
-             </div>
-             
-             <div className="mt-3 w-full">
-                <div className="flex justify-between text-[10px] font-bold text-gray-400 mb-1">
-                    <span>XP</span>
-                    <span>{xpProgress}/{xpToNext}</span>
-                </div>
-                <div className="h-2 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-green-500 rounded-full" style={{ width: `${xpProgressPercentage}%` }}></div>
-                </div>
-             </div>
+        {/* --- SECONDARY ACTIONS --- */}
+        <div className="grid grid-cols-2 gap-4">
+            <button 
+                onClick={onViewProgress} 
+                className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            >
+                <ChartIcon className="w-5 h-5 text-indigo-500" />
+                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{l.viewProgress}</span>
+            </button>
+            <button 
+                onClick={onViewAchievements} 
+                className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            >
+                <TrophyIcon className="w-5 h-5 text-yellow-500" />
+                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{l.viewAchievements}</span>
+            </button>
         </div>
 
-        {/* 4. STATS BUTTONS (Small Horizontal Grid) */}
-        <button onClick={onViewProgress} className="bg-blue-50 dark:bg-gray-800 rounded-2xl p-3 flex flex-col items-center justify-center hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors">
-            <ChartIcon className="w-6 h-6 text-blue-500 mb-1" />
-            <span className="text-[10px] font-bold text-blue-700 dark:text-blue-300">{l.viewProgress}</span>
-        </button>
+        {/* --- HISTORY SECTION (Minimal List) --- */}
+        <div className="pt-2">
+            <div className="flex justify-between items-end mb-4 px-1">
+                <h3 className="text-lg font-bold text-slate-800 dark:text-white">Recent Activity</h3>
+                <button className="text-xs font-semibold text-indigo-500 hover:text-indigo-600 transition-colors">See All</button>
+            </div>
 
-        <button onClick={onViewAchievements} className="bg-purple-50 dark:bg-gray-800 rounded-2xl p-3 flex flex-col items-center justify-center hover:bg-purple-100 dark:hover:bg-gray-700 transition-colors">
-            <TrophyIcon className="w-6 h-6 text-purple-500 mb-1" />
-            <span className="text-[10px] font-bold text-purple-700 dark:text-purple-300">Awards</span>
-        </button>
-
-      </div>
-
-      {/* RECENT ACTIVITY SECTION */}
-      <div className="mt-6">
-        <h2 className="text-lg font-bold text-gray-800 dark:text-white mb-3 flex items-center">
-            <HistoryIcon className="w-5 h-5 mr-2 text-gray-400"/>
-            Recent Activity
-        </h2>
-        
-        <div className="bg-white dark:bg-gray-900 rounded-3xl p-2 shadow-sm border border-gray-100 dark:border-gray-800">
-            {history.length > 0 ? (
-                <div className="divide-y divide-gray-100 dark:divide-gray-800">
-                    {history.slice(0, 3).map(item => {
+            <div className="space-y-3">
+                {history.length > 0 ? (
+                    history.slice(0, 3).map((item) => {
                         const isPassed = item.accuracy >= 70;
                         return (
-                            <button 
-                                key={item.id}
+                            <div 
+                                key={item.id} 
                                 onClick={() => onViewHistoryItem(item.id)}
-                                className="w-full flex items-center justify-between p-3 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl transition-colors"
+                                className="group cursor-pointer flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-600 shadow-sm hover:shadow-md transition-all duration-200"
                             >
-                                <div className="flex items-center space-x-3 overflow-hidden">
-                                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${isPassed ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                                    <div className="text-left overflow-hidden">
-                                        <p className="text-sm font-semibold text-gray-700 dark:text-gray-200 truncate">{item.topic || l.untitledQuiz}</p>
-                                        <p className="text-[10px] text-gray-400">{new Date(item.timestamp).toLocaleDateString()}</p>
+                                <div className="flex items-center gap-4">
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isPassed ? 'bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20' : 'bg-rose-50 text-rose-600 dark:bg-rose-900/20'}`}>
+                                        {isPassed ? <CheckCircleIcon className="w-5 h-5" /> : <XCircleIcon className="w-5 h-5" />}
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-sm font-semibold text-slate-800 dark:text-slate-200 line-clamp-1">{item.topic || l.untitledQuiz}</span>
+                                        <span className="text-xs text-slate-400">{new Date(item.timestamp).toLocaleDateString()}</span>
                                     </div>
                                 </div>
-                                <div className="font-mono text-sm font-bold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded-lg">
+                                
+                                <div className={`px-3 py-1 rounded-full text-xs font-bold ${isPassed ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400' : 'bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-400'}`}>
                                     {item.accuracy.toFixed(0)}%
                                 </div>
-                            </button>
-                        )
-                    })}
-                </div>
-            ) : (
-                <div className="text-center py-8">
-                    <p className="text-gray-400 text-sm">{l.noHistory}</p>
-                </div>
-            )}
+                            </div>
+                        );
+                    })
+                ) : (
+                    <div className="text-center py-10 rounded-3xl bg-slate-100/50 dark:bg-slate-800/50 border border-dashed border-slate-300 dark:border-slate-700">
+                        <p className="text-sm text-slate-500 font-medium">{l.noHistory}</p>
+                    </div>
+                )}
+            </div>
         </div>
+        
+        <div className="h-4"></div> {/* Bottom Spacing */}
       </div>
-
     </div>
   );
 };
