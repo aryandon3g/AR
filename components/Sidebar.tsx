@@ -183,39 +183,45 @@ export const Sidebar: React.FC<SidebarProps> = ({
             }
 
             return (
-                <div className="flex flex-col divide-y divide-gray-100 dark:divide-gray-800 border-t border-b border-gray-100 dark:border-gray-800">
+                <div className="flex flex-col gap-2 p-2">
                     {allSubjectsForDisplay.map(subject => (
                         <button
                             key={subject.name_en}
                             onClick={() => handleSelectSubject(subject)}
                             disabled={subject.name_en !== labels['en'].mixedQuiz && !subject.isCustom && subject.topics.length === 0}
-                            className="w-full flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed group text-left"
+                            className="group relative w-full flex items-center justify-between p-4 rounded-xl bg-[#1e293b]/50 dark:bg-white/5 border border-white/5 hover:border-cyan-500/50 hover:bg-[#1e293b] dark:hover:bg-white/10 transition-all duration-300 overflow-hidden"
                         >
-                            <span className="flex items-center text-sm font-medium text-gray-900 dark:text-gray-100">
-                                {subject.iconEmoji && <span className="mr-3 text-lg opacity-80">{subject.iconEmoji}</span>}
+                            {/* Hover Glow Effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            
+                            <span className="relative flex items-center text-sm font-bold text-slate-200 dark:text-gray-100">
+                                {subject.iconEmoji && <span className="mr-3 text-lg opacity-80 filter drop-shadow-lg">{subject.iconEmoji}</span>}
                                 {language === 'en' ? subject.name_en : subject.name_hi}
                             </span>
-                            <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300" />
+                            <div className="relative p-1.5 rounded-lg bg-black/20 group-hover:bg-cyan-500 group-hover:text-white transition-colors text-gray-500">
+                                <ArrowRightIcon className="w-4 h-4" />
+                            </div>
                         </button>
                     ))}
                 </div>
             );
         case 'topics':
             return (
-                <div className="flex flex-col divide-y divide-gray-100 dark:divide-gray-800 border-t border-b border-gray-100 dark:border-gray-800">
+                <div className="flex flex-col gap-2 p-2">
                     {selectedSubject?.topics.map(topic => (
-                         <div key={topic.name_en} className="flex items-center w-full bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                         <div key={topic.name_en} className="flex items-center w-full gap-2">
                             <button
                                 onClick={() => handleSelectTopic(topic)}
-                                className="flex-grow flex items-center justify-between px-6 py-4 text-left"
+                                className="group relative flex-grow flex items-center justify-between p-4 rounded-xl bg-[#1e293b]/50 dark:bg-white/5 border border-white/5 hover:border-cyan-500/50 hover:bg-[#1e293b] dark:hover:bg-white/10 transition-all duration-300"
                             >
-                                <span className="text-sm font-medium text-gray-900 dark:text-gray-100">{language === 'en' ? topic.name_en : topic.name_hi}</span>
-                                <ArrowRightIcon className="w-4 h-4 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+                                <span className="relative text-sm font-medium text-slate-200 dark:text-gray-100">{language === 'en' ? topic.name_en : topic.name_hi}</span>
+                                <ArrowRightIcon className="relative w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                             </button>
                             {selectedSubject?.isCustom && (
                                 <button 
                                     onClick={(e) => { e.stopPropagation(); onDeleteCustomQuiz(selectedSubject.name_en); clearQuestionCache(); }} 
-                                    className="px-4 py-4 text-gray-400 hover:text-red-600 transition-colors"
+                                    className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-500 hover:bg-red-500 hover:text-white transition-all"
                                 >
                                     <TrashIcon className="w-4 h-4"/>
                                 </button>
@@ -230,17 +236,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
             const isDisabled = isLoadingTopicQuestions || currentMaxQuestions === 0;
 
             return (
-                <div className="px-6 py-4 space-y-8">
+                <div className="p-4 space-y-8 mt-4">
                     {isLoadingTopicQuestions ? (
                         <div className="flex flex-col items-center justify-center py-8">
-                            <div className="w-6 h-6 border-2 border-gray-900 border-t-transparent rounded-full animate-spin dark:border-white dark:border-t-transparent"></div>
-                            <p className="mt-3 text-xs font-medium text-gray-500 uppercase tracking-widest">{common_l.loading}</p>
+                            <div className="relative w-10 h-10">
+                                <div className="absolute inset-0 border-2 border-cyan-500/20 rounded-full"></div>
+                                <div className="absolute inset-0 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
+                            </div>
+                            <p className="mt-4 text-[10px] font-bold text-cyan-500 uppercase tracking-[0.2em] animate-pulse">{common_l.loading}</p>
                         </div>
                     ) : (
-                        <div>
-                            <div className="flex justify-between items-center mb-4">
-                                <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{labels['en'].numQuestions}</label>
-                                <span className="text-sm font-bold text-gray-900 dark:text-white">{numTopicQuestions} / {currentMaxQuestions}</span>
+                        <div className="bg-[#1e293b]/50 dark:bg-white/5 p-6 rounded-2xl border border-white/5">
+                            <div className="flex justify-between items-end mb-6">
+                                <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">{labels['en'].numQuestions}</label>
+                                <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{numTopicQuestions}</span>
                             </div>
                             
                             <input 
@@ -249,30 +258,37 @@ export const Sidebar: React.FC<SidebarProps> = ({
                                 max={currentMaxQuestions}
                                 value={numTopicQuestions} 
                                 onChange={(e) => setNumTopicQuestions(parseInt(e.target.value))} 
-                                className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-black dark:accent-white focus:outline-none"
+                                className="w-full h-2 bg-black/40 rounded-full appearance-none cursor-pointer accent-cyan-500 hover:accent-cyan-400"
                                 disabled={isDisabled}
                             />
+                             <div className="flex justify-between text-[10px] font-medium text-gray-500 mt-2">
+                                <span>1</span>
+                                <span>{currentMaxQuestions}</span>
+                            </div>
                         </div>
                     )}
                     
                     <button 
                         onClick={handleStartTopicQuiz}
-                        className="w-full py-3 px-4 rounded-md bg-black dark:bg-white text-white dark:text-black font-medium text-sm shadow-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                        className="group w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-sm shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all transform hover:-translate-y-1 disabled:opacity-50 disabled:shadow-none disabled:transform-none flex justify-center items-center gap-3 overflow-hidden relative"
                         disabled={isLoadingQuiz || isDisabled || numTopicQuestions === 0}
                     >
-                        {isLoadingQuiz && <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin dark:border-black/30 dark:border-t-black"></div>}
-                        <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
+                         {/* Shine Effect */}
+                        <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
+                        
+                        {isLoadingQuiz && <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>}
+                        <span className="relative z-10">{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                     </button>
                 </div>
             );
         }
         case 'mixedQuizConfig':
             return (
-                <div className="px-6 py-4 space-y-8">
-                    <div>
-                        <div className="flex justify-between items-center mb-4">
-                            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{labels['en'].numQuestions}</label>
-                            <span className="text-sm font-bold text-gray-900 dark:text-white">{numMixedQuestions}</span>
+                <div className="p-4 space-y-8 mt-4">
+                    <div className="bg-[#1e293b]/50 dark:bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <div className="flex justify-between items-end mb-6">
+                            <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">{labels['en'].numQuestions}</label>
+                            <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{numMixedQuestions}</span>
                         </div>
                         
                         <input 
@@ -281,107 +297,112 @@ export const Sidebar: React.FC<SidebarProps> = ({
                             max="100" 
                             value={numMixedQuestions} 
                             onChange={(e) => setNumMixedQuestions(parseInt(e.target.value))} 
-                            className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-black dark:accent-white focus:outline-none" 
+                            className="w-full h-2 bg-black/40 rounded-full appearance-none cursor-pointer accent-cyan-500 hover:accent-cyan-400" 
                         />
+                         <div className="flex justify-between text-[10px] font-medium text-gray-500 mt-2">
+                            <span>10</span>
+                            <span>100</span>
+                        </div>
                     </div>
 
                     <button 
                         onClick={handleStartMixedQuiz}
-                        className="w-full py-3 px-4 rounded-md bg-black dark:bg-white text-white dark:text-black font-medium text-sm shadow-sm hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                        className="group w-full py-4 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-sm shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all transform hover:-translate-y-1 disabled:opacity-50 disabled:shadow-none disabled:transform-none flex justify-center items-center gap-3 overflow-hidden relative"
                         disabled={isLoadingQuiz}
                     >
-                        {isLoadingQuiz && <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin dark:border-black/30 dark:border-t-black"></div>}
-                        <span>{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
+                        <div className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
+                        {isLoadingQuiz && <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>}
+                        <span className="relative z-10">{isLoadingQuiz ? common_l.loading : commonLabels['en'].startQuiz}</span>
                     </button>
                 </div>
             );
         case 'main':
         default:
             return (
-                <div className="flex flex-col h-full">
-                    {/* Minimal Profile */}
-                    <div className="px-6 py-6 border-b border-gray-100 dark:border-gray-800">
-                        <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                                <XPIcon className="w-5 h-5" />
+                <div className="flex flex-col h-full gap-6">
+                    {/* Futuristic Profile Card */}
+                    <div className="mx-4 mt-6 p-5 rounded-2xl bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-white/5 shadow-2xl relative overflow-hidden group">
+                        {/* Glowing Background Orb */}
+                        <div className="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-[50px] group-hover:bg-cyan-500/30 transition-colors duration-500"></div>
+                        
+                        <div className="relative z-10 flex items-center gap-4">
+                            <div className="w-14 h-14 rounded-full bg-black border-2 border-cyan-500/50 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                                <XPIcon className="w-7 h-7 text-cyan-400" />
                             </div>
-                            <div className="flex-1">
-                                <div className="flex justify-between items-center mb-1">
-                                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Level {xpData.level}</h3>
-                                    <span className="text-xs text-gray-500">{xpData.totalXp} XP</span>
-                                </div>
-                                <div className="w-full h-1 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                                    <div className="h-full bg-black dark:bg-white rounded-full" style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }} />
-                                </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white tracking-tight">Level {xpData.level}</h3>
+                                <p className="text-xs text-cyan-400 font-medium">{xpData.totalXp} Total XP</p>
                             </div>
                         </div>
-                        
-                        <div className="grid grid-cols-2 gap-3 mt-6">
-                            <button onClick={onViewProgress} className="flex items-center justify-center gap-2 py-2 px-3 rounded-md bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                <ChartIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                                <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Analytics</span>
+                        <div className="mt-4">
+                             <div className="flex justify-between text-[10px] text-gray-500 mb-1 uppercase tracking-wider font-bold">
+                                <span>Progress</span>
+                                <span>{Math.min((xpData.totalXp % 100), 100)}%</span>
+                            </div>
+                            <div className="w-full h-1.5 bg-black/50 rounded-full overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]" style={{ width: `${Math.min((xpData.totalXp % 100), 100)}%` }} />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Quick Stats Grid */}
+                    <div className="grid grid-cols-2 gap-3 mx-4">
+                        <button onClick={onViewProgress} className="p-4 rounded-xl bg-[#1e293b]/50 dark:bg-white/5 border border-white/5 hover:bg-[#1e293b] hover:border-cyan-500/30 transition-all group flex flex-col items-center gap-2">
+                            <ChartIcon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                            <span className="text-xs font-bold text-gray-300 group-hover:text-white">Stats</span>
+                        </button>
+                        <button onClick={onViewAchievements} className="p-4 rounded-xl bg-[#1e293b]/50 dark:bg-white/5 border border-white/5 hover:bg-[#1e293b] hover:border-yellow-500/30 transition-all group flex flex-col items-center gap-2">
+                            <TrophyIcon className="w-5 h-5 text-gray-400 group-hover:text-yellow-400 transition-colors" />
+                            <span className="text-xs font-bold text-gray-300 group-hover:text-white">Awards</span>
+                        </button>
+                    </div>
+
+                    {/* Settings Toggles */}
+                    <div className="mx-4 space-y-4">
+                        <div className="flex bg-black/40 p-1 rounded-xl border border-white/5">
+                             <button onClick={() => theme !== 'light' && onThemeChange()} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${theme === 'light' ? 'bg-[#1e293b] text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>
+                                <SunIcon className="w-3 h-3" /> Light
                             </button>
-                            <button onClick={onViewAchievements} className="flex items-center justify-center gap-2 py-2 px-3 rounded-md bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                                <TrophyIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                                <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Awards</span>
+                            <button onClick={() => theme !== 'dark' && onThemeChange()} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${theme === 'dark' ? 'bg-[#1e293b] text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>
+                                <MoonIcon className="w-3 h-3" /> Dark
+                            </button>
+                        </div>
+                        <div className="flex bg-black/40 p-1 rounded-xl border border-white/5">
+                             <button onClick={() => onLanguageChange('en')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'en' ? 'bg-[#1e293b] text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>
+                                English
+                            </button>
+                            <button onClick={() => onLanguageChange('hi')} className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${language === 'hi' ? 'bg-[#1e293b] text-white shadow-lg' : 'text-gray-500 hover:text-gray-300'}`}>
+                                हिंदी
                             </button>
                         </div>
                     </div>
 
-                    {/* Settings Lists */}
-                    <div className="px-6 py-6 space-y-6">
-                        <div>
-                            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Preferences</h4>
-                            <div className="space-y-1">
-                                <div className="flex items-center justify-between py-2">
-                                    <span className="text-sm text-gray-700 dark:text-gray-300">Appearance</span>
-                                    <div className="flex bg-gray-100 dark:bg-gray-800 p-0.5 rounded-lg">
-                                        <button onClick={() => theme !== 'light' && onThemeChange()} className={`p-1.5 rounded-md transition-all ${theme === 'light' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-400 hover:text-gray-600'}`}>
-                                            <SunIcon className="w-4 h-4" />
-                                        </button>
-                                        <button onClick={() => theme !== 'dark' && onThemeChange()} className={`p-1.5 rounded-md transition-all ${theme === 'dark' ? 'bg-gray-600 shadow-sm text-white' : 'text-gray-400 hover:text-gray-600'}`}>
-                                            <MoonIcon className="w-4 h-4" />
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="flex items-center justify-between py-2">
-                                    <span className="text-sm text-gray-700 dark:text-gray-300">Language</span>
-                                    <div className="flex bg-gray-100 dark:bg-gray-800 p-0.5 rounded-lg">
-                                        <button onClick={() => onLanguageChange('en')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'en' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>EN</button>
-                                        <button onClick={() => onLanguageChange('hi')} className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'hi' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>HI</button>
-                                    </div>
-                                </div>
-                            </div>
+                    {/* Compact History */}
+                    <div className="flex-1 mx-4 mt-2">
+                         <div className="flex items-center justify-between mb-3">
+                            <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Recent Activity</h4>
+                            {history.length > 0 && (
+                                <button onClick={handleClearHistory} className="text-[10px] font-bold text-red-500 hover:text-red-400 transition-colors">CLEAR</button>
+                            )}
                         </div>
-
-                        {/* History */}
-                        <div className="flex-1">
-                            <div className="flex items-center justify-between mb-3">
-                                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Recent Activity</h4>
-                                {history.length > 0 && (
-                                    <button onClick={handleClearHistory} className="text-xs text-gray-400 hover:text-red-600 transition-colors">Clear</button>
-                                )}
-                            </div>
-                            
-                            <div className="space-y-0 divide-y divide-gray-100 dark:divide-gray-800 border-t border-b border-gray-100 dark:border-gray-800 max-h-60 overflow-y-auto custom-scrollbar">
-                                {history.length > 0 ? (
-                                    history.map(item => (
-                                        <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className="w-full text-left py-3 px-1 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors flex items-center justify-between group">
-                                            <div className="truncate pr-4">
-                                                <p className="text-sm font-medium text-gray-700 dark:text-gray-200 truncate">{item.topic || labels['en'].untitledQuiz}</p>
-                                                <p className="text-xs text-gray-400 mt-0.5">{new Date(item.timestamp).toLocaleDateString()}</p>
-                                            </div>
-                                            <div className={`text-xs font-bold px-2 py-1 rounded-md ${item.accuracy >= 70 ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' : 'bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400'}`}>
-                                                {item.accuracy.toFixed(0)}%
-                                            </div>
-                                        </button>
-                                    ))
-                                ) : (
-                                    <div className="py-8 text-center">
-                                        <p className="text-xs text-gray-400">No recent activity found.</p>
-                                    </div>
-                                )}
-                            </div>
+                        <div className="space-y-2 overflow-y-auto max-h-48 custom-scrollbar pr-1">
+                            {history.length > 0 ? (
+                                history.map(item => (
+                                    <button key={item.id} onClick={() => onViewHistoryItem(item.id)} className="w-full flex justify-between items-center p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10 transition-all group">
+                                        <div className="flex flex-col items-start truncate pr-2">
+                                            <span className="text-sm font-semibold text-gray-300 group-hover:text-white truncate w-full text-left">{item.topic || labels['en'].untitledQuiz}</span>
+                                            <span className="text-[10px] text-gray-500">{new Date(item.timestamp).toLocaleDateString()}</span>
+                                        </div>
+                                        <span className={`text-xs font-bold px-2 py-1 rounded ${item.accuracy >= 70 ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+                                            {item.accuracy.toFixed(0)}%
+                                        </span>
+                                    </button>
+                                ))
+                            ) : (
+                                <div className="text-center py-6">
+                                    <p className="text-xs text-gray-600">No data available.</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -389,44 +410,47 @@ export const Sidebar: React.FC<SidebarProps> = ({
     }
   };
 
-  const containerClass = isOpen ? 'pointer-events-auto' : 'pointer-events-none delay-200';
+  const containerClass = isOpen ? 'pointer-events-auto' : 'pointer-events-none delay-300';
   const backdropClass = isOpen ? 'opacity-100' : 'opacity-0';
   const panelClass = isOpen ? 'translate-x-0' : 'translate-x-full';
 
   return (
     <div className={`fixed inset-0 z-50 flex justify-end ${containerClass}`}>
         <div 
-            className={`absolute inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-300 ease-in-out ${backdropClass}`}
+            className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ease-in-out ${backdropClass}`}
             onClick={onClose}
             aria-hidden="true"
         />
 
-        <div className={`relative w-full max-w-[300px] h-full bg-white dark:bg-gray-900 shadow-2xl flex flex-col transform transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${panelClass}`}>
+        {/* Panel Container */}
+        <div className={`relative w-[85%] max-w-[320px] h-full bg-[#0f172a] dark:bg-black border-l border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col transform transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${panelClass}`}>
             
-            {/* Minimal Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-800">
-                <h2 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-6 border-b border-white/5">
+                <h2 className="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 uppercase tracking-tight">
                     {getHeader}
                 </h2>
                 
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-2">
                     {(view === 'topics' || view === 'mixedQuizConfig' || view === 'topicQuizConfig') && (
-                        <button onClick={handleBackNavigation} className="p-1.5 text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        <button onClick={handleBackNavigation} className="p-2 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-colors">
                             <BackArrowIcon className="w-5 h-5" />
                         </button>
                     )}
-                    <button onClick={onClose} className="p-1.5 text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                    <button onClick={onClose} className="p-2 rounded-full hover:bg-white/10 text-gray-400 hover:text-white transition-colors">
                         <XIcon className="w-5 h-5" />
                     </button>
                 </div>
             </div>
             
-            <div className="flex-1 overflow-y-auto custom-scrollbar bg-white dark:bg-gray-900">
+            {/* Scrollable Area */}
+            <div className="flex-1 overflow-y-auto custom-scrollbar">
                 {renderContent()}
             </div>
             
-            <div className="p-4 border-t border-gray-100 dark:border-gray-800 text-center">
-                 <p className="text-[10px] text-gray-400">v2.0.1 • Professional Build</p>
+             {/* Footer Info */}
+             <div className="p-4 border-t border-white/5 text-center">
+                 <p className="text-[9px] font-bold text-gray-600 uppercase tracking-[0.2em]">System Active</p>
             </div>
         </div>
     </div>
