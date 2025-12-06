@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Language, SummaryData, StreakData, XpData } from '../types';
-import { HistoryIcon, BookOpenIcon, ChartIcon, TrophyIcon, CheckCircleIcon, XCircleIcon, FireIcon, XPIcon } from './icons';
+import { HistoryIcon, BookOpenIcon, ChartIcon, TrophyIcon, CheckCircleIcon, XCircleIcon, FireIcon } from './icons';
 import { homeScreenLabels as labels, commonLabels } from '../services/labels';
 
 interface HomeScreenProps {
@@ -27,112 +27,175 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   streakData
 }) => {
   const l = labels[language];
-  const common_l = commonLabels[language];
 
+  // XP Calculations
   const xpForCurrentLevel = (xpData.level - 1) * XP_PER_LEVEL;
   const xpForNextLevel = xpData.level * XP_PER_LEVEL;
   const xpProgress = xpData.totalXp - xpForCurrentLevel;
   const xpToNext = xpForNextLevel - xpForCurrentLevel;
-  const xpProgressPercentage = (xpProgress / xpToNext) * 100;
+  const xpProgressPercentage = Math.min((xpProgress / xpToNext) * 100, 100);
 
   return (
-    <div className="w-full h-full p-4 pt-24 flex flex-col overflow-y-auto custom-scrollbar">
-      <div className="text-center mb-6">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-300 bg-200% animate-gradient-pan">
-          {l.title}
-        </h1>
-        <div className="mt-4 flex flex-col items-center justify-center space-y-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
-            <div className="flex items-center space-x-4">
-                <span className="text-xl font-bold text-primary-600 dark:text-primary-300">Level {xpData.level}</span>
-                 {streakData.currentStreak > 0 && (
-                    <div className="flex items-center justify-center space-x-1 text-orange-500 dark:text-orange-400 font-bold text-base animate-fade-in-up" title={`${streakData.currentStreak}-Day Streak`}>
-                        <span>{streakData.currentStreak}</span>
-                        <FireIcon className="w-5 h-5" />
+    <div className="w-full h-full flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 relative overflow-hidden">
+      
+      {/* Background Ambience (Optional decoration) */}
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary-500/10 to-transparent pointer-events-none" />
+
+      {/* Main Scrollable Content */}
+      <div className="flex-grow overflow-y-auto custom-scrollbar p-5 pt-12 space-y-6 z-10 pb-24">
+        
+        {/* --- HEADER SECTION: Title & Streak --- */}
+        <div className="flex justify-between items-end">
+          <div>
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Welcome back</p>
+            <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400">
+              {l.title}
+            </h1>
+          </div>
+          
+          {/* Streak Badge */}
+          <div className={`flex items-center space-x-2 px-3 py-1.5 rounded-full border border-orange-200 dark:border-orange-900/50 bg-orange-50 dark:bg-orange-900/20 shadow-sm ${streakData.currentStreak > 0 ? 'animate-pulse-slow' : 'opacity-50'}`}>
+             <FireIcon className="w-5 h-5 text-orange-500" />
+             <span className="font-bold text-orange-600 dark:text-orange-400">{streakData.currentStreak} Days</span>
+          </div>
+        </div>
+
+        {/* --- HERO CARD: Level & XP Stats --- */}
+        <div className="relative p-5 rounded-3xl bg-white dark:bg-gray-800 shadow-xl shadow-primary-500/5 border border-gray-100 dark:border-gray-700 overflow-hidden">
+            {/* Decoration Circle */}
+            <div className="absolute -right-6 -top-6 w-24 h-24 bg-primary-500/10 rounded-full blur-xl"></div>
+
+            <div className="flex justify-between items-center mb-3">
+                <div className="flex flex-col">
+                    <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Current Level</span>
+                    <span className="text-4xl font-black text-gray-800 dark:text-white">{xpData.level}</span>
+                </div>
+                <div className="text-right">
+                    <span className="text-sm font-medium text-primary-600 dark:text-primary-400">{xpProgress} / {xpToNext} XP</span>
+                </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="relative w-full h-3 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div 
+                    className="h-full bg-gradient-to-r from-primary-400 to-primary-600 rounded-full shadow-[0_0_10px_rgba(var(--primary-500),0.5)] transition-all duration-700 ease-out"
+                    style={{ width: `${xpProgressPercentage}%` }}
+                >
+                    {/* Shimmer Effect on Bar */}
+                    <div className="absolute top-0 left-0 w-full h-full bg-white/20 animate-shimmer" />
+                </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2 text-center">Keep learning to reach Level {xpData.level + 1}!</p>
+        </div>
+
+        {/* --- ACTION GRID --- */}
+        <div className="grid grid-cols-1 gap-4">
+            {/* Primary Action: Take Quiz */}
+            <button
+                onClick={onTakeQuizClick}
+                className="group relative w-full p-4 h-20 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-between px-6 overflow-hidden"
+            >
+                <div className="flex items-center space-x-4 z-10">
+                    <div className="p-2 bg-white/20 rounded-xl backdrop-blur-sm">
+                        <BookOpenIcon className="w-6 h-6 text-white" />
                     </div>
-                )}
-            </div>
-            <div className="w-48 bg-gray-200/50 dark:bg-black/30 rounded-full h-2.5">
-                <div className="bg-gradient-to-r from-green-400 to-primary-500 h-2.5 rounded-full animate-xp-glow" style={{ width: `${xpProgressPercentage}%` }}></div>
-            </div>
-            <span className="text-sm text-gray-500 dark:text-gray-400">{xpProgress} / {xpToNext} XP</span>
-        </div>
-      </div>
-
-      <div className="flex-grow flex flex-col justify-start items-center space-y-8">
-        <button
-          onClick={onTakeQuizClick}
-          className="w-52 py-3 px-6 rounded-2xl bg-primary-600 text-white font-bold shadow-lg hover:shadow-primary-500/40 hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 animate-button-glow flex flex-row items-center justify-center text-center"
-        >
-          <BookOpenIcon className="w-6 h-6 mr-3" />
-          <span className="text-lg">MCQ</span>
-        </button>
-
-        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-            <button
-                onClick={onViewProgress}
-                className="flex flex-col items-center p-4 rounded-2xl bg-white/10 dark:bg-black/20 hover:bg-white/20 dark:hover:bg-black/30 border border-white/20 dark:border-white/10 transition-colors transform hover:scale-105 animate-slide-in"
-                style={{ animationDelay: '100ms' }}
-                aria-label={l.viewProgress}
-            >
-                <ChartIcon className="w-8 h-8 text-primary-500" />
-                <span className="mt-2 text-sm font-semibold text-gray-800 dark:text-gray-200">{l.viewProgress}</span>
+                    <div className="text-left">
+                        <h3 className="text-lg font-bold leading-tight">Start New Quiz</h3>
+                        <p className="text-xs text-primary-100 opacity-90">Test your knowledge now</p>
+                    </div>
+                </div>
+                {/* Arrow Icon */}
+                <div className="z-10 bg-white/10 rounded-full p-1 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </div>
+                
+                {/* Background Pattern */}
+                <div className="absolute right-0 top-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10 blur-2xl group-hover:bg-white/10 transition-colors" />
             </button>
-            <button
-                onClick={onViewAchievements}
-                className="flex flex-col items-center p-4 rounded-2xl bg-white/10 dark:bg-black/20 hover:bg-white/20 dark:hover:bg-black/30 border border-white/20 dark:border-white/10 transition-colors transform hover:scale-105 animate-slide-in"
-                style={{ animationDelay: '200ms' }}
-                aria-label={l.viewAchievements}
-            >
-                <TrophyIcon className="w-8 h-8 text-primary-500" />
-                <span className="mt-2 text-sm font-semibold text-gray-800 dark:text-gray-200">{l.viewAchievements}</span>
-            </button>
+
+            {/* Secondary Actions Row */}
+            <div className="grid grid-cols-2 gap-4">
+                <button
+                    onClick={onViewProgress}
+                    className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 dark:hover:border-primary-800 transition-all active:scale-95"
+                >
+                    <ChartIcon className="w-8 h-8 text-blue-500 mb-2" />
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{l.viewProgress}</span>
+                </button>
+
+                <button
+                    onClick={onViewAchievements}
+                    className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-yellow-200 dark:hover:border-yellow-800 transition-all active:scale-95"
+                >
+                    <TrophyIcon className="w-8 h-8 text-yellow-500 mb-2" />
+                    <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{l.viewAchievements}</span>
+                </button>
+            </div>
         </div>
 
+        {/* --- HISTORY SECTION --- */}
+        <div className="pt-2">
+            <div className="flex items-center justify-between mb-4 px-1">
+                <h2 className="text-lg font-bold text-gray-800 dark:text-white flex items-center">
+                    <HistoryIcon className="w-5 h-5 mr-2 text-primary-500"/>
+                    {l.recentQuizzes}
+                </h2>
+                {history.length > 0 && <span className="text-xs text-primary-500 font-medium cursor-pointer hover:underline">View All</span>}
+            </div>
 
-        <div className="space-y-2 w-full max-w-sm">
-            <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300 flex items-center mb-3"><HistoryIcon className="w-5 h-5 mr-2"/>{l.recentQuizzes}</h2>
-            {history.length > 0 ? (
-                <div className="space-y-2">
-                    {history.slice(0, 3).map(item => {
-                        const isPassed = item.accuracy > 70; // Define 'pass' threshold
-                        const borderColorClass = isPassed ? 'border-green-400/50' : 'border-red-400/50';
-                        const bgColorClass = isPassed ? 'bg-green-500/10 dark:bg-green-900/10' : 'bg-red-500/10 dark:bg-red-900/10';
-                        const iconColorClass = isPassed ? 'text-green-500' : 'text-red-500';
-
+            <div className="space-y-3">
+                {history.length > 0 ? (
+                    history.slice(0, 3).map((item, index) => {
+                        const isPassed = item.accuracy >= 70;
                         return (
                             <button 
                                 key={item.id} 
-                                onClick={() => onViewHistoryItem(item.id)} 
-                                className={`w-full text-left p-3 rounded-xl border-2 transition-colors animate-slide-in flex items-center space-x-3 ${bgColorClass} ${borderColorClass} hover:bg-white/20 dark:hover:bg-black/30`}
+                                onClick={() => onViewHistoryItem(item.id)}
+                                className="w-full group bg-white dark:bg-gray-800 rounded-2xl p-4 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-200 flex items-center justify-between"
+                                style={{ animationDelay: `${index * 100}ms` }}
                             >
-                                {isPassed ? (
-                                    <CheckCircleIcon className={`w-5 h-5 ${iconColorClass}`} />
-                                ) : (
-                                    <XCircleIcon className={`w-5 h-5 ${iconColorClass}`} />
-                                )}
-                                <div>
-                                    <p className="font-semibold truncate text-sm text-gray-800 dark:text-gray-200">{item.topic || (l.untitledQuiz)}</p>
-                                    <div className="text-xs text-gray-500 dark:text-gray-400 flex justify-between mt-1">
-                                        <span>{item.score}/{item.totalQuestions} ({item.accuracy.toFixed(0)}%)</span>
-                                        <span>{new Date(item.timestamp).toLocaleDateString()}</span>
+                                <div className="flex items-center space-x-4">
+                                    <div className={`p-2 rounded-xl flex-shrink-0 ${isPassed ? 'bg-green-100 dark:bg-green-900/30 text-green-600' : 'bg-red-100 dark:bg-red-900/30 text-red-600'}`}>
+                                        {isPassed ? <CheckCircleIcon className="w-5 h-5" /> : <XCircleIcon className="w-5 h-5" />}
                                     </div>
+                                    <div className="text-left">
+                                        <p className="font-bold text-sm text-gray-800 dark:text-gray-200 line-clamp-1">
+                                            {item.topic || l.untitledQuiz}
+                                        </p>
+                                        <p className="text-xs text-gray-400 mt-0.5">
+                                            {new Date(item.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div className="text-right">
+                                    <span className={`block font-bold text-sm ${isPassed ? 'text-green-600 dark:text-green-400' : 'text-red-500'}`}>
+                                        {item.accuracy.toFixed(0)}%
+                                    </span>
+                                    <span className="text-xs text-gray-400">Score</span>
                                 </div>
                             </button>
                         );
-                    })}
-                </div>
-            ) : (
-                <div className="text-center py-6 px-3 rounded-2xl bg-white/10 dark:bg-black/20 border border-dashed border-white/20 dark:border-white/10">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{l.noHistory}</p>
-                </div>
-            )}
+                    })
+                ) : (
+                    <div className="flex flex-col items-center justify-center py-8 rounded-2xl border-2 border-dashed border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50">
+                        <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mb-2 opacity-50">
+                            <BookOpenIcon className="w-6 h-6 text-gray-400" />
+                        </div>
+                        <p className="text-sm text-gray-500 font-medium">{l.noHistory}</p>
+                        <p className="text-xs text-gray-400">Play a game to see stats here</p>
+                    </div>
+                )}
+            </div>
         </div>
-      </div>
-      
-      <div className="w-full text-center py-2 flex-shrink-0">
-          <p className="text-xs text-gray-500 dark:text-gray-400 opacity-75 tracking-wider font-light">
-              {l.designedBy}
-          </p>
+
+        {/* Footer Credit */}
+        <div className="py-4 text-center">
+            <p className="text-[10px] uppercase tracking-widest text-gray-400 font-medium opacity-60">
+                {l.designedBy}
+            </p>
+        </div>
+
       </div>
     </div>
   );
