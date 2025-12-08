@@ -1,4 +1,3 @@
-
 import type { QuizQuestion, QuizSubject, QuizTopic } from '../types';
 
 // Cache for dynamically loaded questions
@@ -12,7 +11,7 @@ let allCachedQuestions: QuizQuestion[] | null = null;
  * @returns A Promise that resolves to an array of QuizQuestion.
  */
 export const loadQuestionsForTopic = async (topic: QuizTopic): Promise<QuizQuestion[]> => {
-    const cacheKey = topic.name_en; // Use English name as a unique key
+    const cacheKey = topic.name_en; 
 
     if (questionsCache.has(cacheKey)) {
         return questionsCache.get(cacheKey)!;
@@ -24,7 +23,7 @@ export const loadQuestionsForTopic = async (topic: QuizTopic): Promise<QuizQuest
 
     const promise = topic.questionsLoader().then(questions => {
         questionsCache.set(cacheKey, questions);
-        loadingPromises.delete(cacheKey); // Clear from promises after resolution
+        loadingPromises.delete(cacheKey); 
         return questions;
     });
 
@@ -33,32 +32,34 @@ export const loadQuestionsForTopic = async (topic: QuizTopic): Promise<QuizQuest
 };
 
 /**
- * Loads all questions from all subjects and topics, caches them, and returns a shuffled subset.
- * This function handles the asynchronous loading of all question data.
- * @param allSubjects An array of all QuizSubject objects.
- * @param count The number of questions to return.
- * @returns A Promise that resolves to a shuffled array of QuizQuestion.
+ * Loads all questions and returns them STRICTLY in sequence (No Random Shuffle).
  */
 export const getMixedQuizQuestions = async (allSubjects: QuizSubject[], count: number): Promise<QuizQuestion[]> => {
+    
+    // [FIX] अगर Cache में डेटा है, तो उसे चेक करें कहीं वो पुराना शफल वाला तो नहीं?
+    // सुरक्षा के लिए, हम यहाँ मान रहे हैं कि 'allCachedQuestions' में डेटा सीधे लोड हुआ है।
+    
     if (allCachedQuestions === null) {
         // Collect all questionsLoader promises
+        // flatMap keeps the order: Subject 1 -> Topic 1, Topic 2... Subject 2...
         const allQuestionLoaders = allSubjects.flatMap(subject => 
             subject.topics.map(topic => loadQuestionsForTopic(topic))
         );
 
-        // Await all promises to get all questions
+        // Await all promises. This preserves the order of the array.
         const loadedQuestionsArrays = await Promise.all(allQuestionLoaders);
+        
+        // Flatten strictly in order.
         allCachedQuestions = loadedQuestionsArrays.flat();
     }
     
-    // Fisher-Yates shuffle from all available questions
-    const shuffled = [...allCachedQuestions!].sort(() => 0.5 - Math.random());
-
-    return shuffled.slice(0, count);
+    // [IMPORTANT FIX] Removed .sort() and Math.random() completely.
+    // Now it returns the first 'count' questions exactly as they appear in your files.
+    return allCachedQuestions!.slice(0, count);
 };
 
 /**
- * Clears the question cache. Useful if custom quizzes are added/removed.
+ * Clears the question cache.
  */
 export const clearQuestionCache = () => {
     questionsCache.clear();
