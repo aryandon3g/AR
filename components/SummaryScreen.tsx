@@ -25,15 +25,21 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   const correctCount = summary.answers.filter(a => a.isCorrect).length;
   const incorrectCount = summary.answers.filter(a => !a.isCorrect && a.selectedOptionIndex !== -1).length;
   
+  // 1. Battle Score (Base)
   const battleScore = correctCount * 5;
+  
+  // 2. Rank Deduction (Damage)
   const rankDeduction = incorrectCount * 2;
   
+  // 3. Survival Bonus Logic
   let survivalBonus = 0;
   if (summary.accuracy >= 80) survivalBonus = 20;
   else if (summary.accuracy >= 50) survivalBonus = 10;
 
+  // 4. Final Real Earned (Re-calculated to be sure)
   const finalEarnedRP = Math.max(0, battleScore + survivalBonus - rankDeduction);
 
+  // --- RANK LOGIC ---
   const safeTotalRP = currentTotalRP > 0 ? currentTotalRP : finalEarnedRP;
   const startRP = Math.max(0, safeTotalRP - finalEarnedRP); 
 
@@ -42,11 +48,11 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 
   const isHindi = language === 'hi';
 
-  // 🔊 AUDIO CONTEXT REF (To prevent crashing mobile)
+  // 🔊 FIXED AUDIO LOGIC (Prevents Mobile Crash) 🔊
   const audioCtxRef = useRef<AudioContext | null>(null);
 
   useEffect(() => {
-      // Initialize Audio Context once
+      // 1. Init AudioContext ONLY ONCE when component mounts
       try {
           const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
           if (AudioContextClass) {
@@ -57,7 +63,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
       }
 
       return () => {
-          // Cleanup
+          // 2. Cleanup when leaving screen
           if (audioCtxRef.current) {
               audioCtxRef.current.close().catch(() => {});
           }
@@ -67,9 +73,11 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   const playSound = (type: 'tick' | 'rankup') => {
     try {
       const audioContext = audioCtxRef.current;
+      // If audio system failed or not supported, just exit
       if (!audioContext) return;
       
-      // Resume if suspended (browser policy) - usually needs user gesture, might fail here but won't crash
+      // On mobile, audio might be suspended until user interaction. 
+      // We try to resume, but don't force it to avoid errors.
       if (audioContext.state === 'suspended') {
           audioContext.resume().catch(() => {});
       }
@@ -82,7 +90,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
       if (type === 'tick') {
         oscillator.type = 'sine';
         oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-        gainNode.gain.setValueAtTime(0.02, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.02, audioContext.currentTime); // Low volume
         oscillator.start();
         oscillator.stop(audioContext.currentTime + 0.05);
       } else if (type === 'rankup') {
@@ -94,7 +102,10 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
         oscillator.start();
         oscillator.stop(audioContext.currentTime + 1.5);
       }
-    } catch (e) { console.error(e); }
+    } catch (e) { 
+        // Silent catch to prevent white screen
+        console.error("Sound play error", e); 
+    }
   };
 
   useEffect(() => {
@@ -108,7 +119,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
       const currentVal = Math.floor(progress * (finalEarnedRP) + startRP);
       setDisplayedRP(currentVal);
 
-      // Play tick less frequently to save resources
+      // Play tick sound (Reduced frequency for mobile performance)
       if (progress < 1 && Math.random() > 0.85) playSound('tick');
 
       if (progress < 1) {
@@ -136,6 +147,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   }
 
   return (
+    // Added z-[100] to ensure it sits on top
     <div className="fixed inset-0 z-[100] flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white overflow-y-auto custom-scrollbar transition-colors duration-300">
       
       {/* --- HEADER --- */}
@@ -175,6 +187,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
                   </div>
               </div>
 
+              {/* Glowing Bar */}
               <div className="relative w-full mt-2">
                   <div className="absolute -inset-1 bg-yellow-500/40 blur-md rounded-sm animate-pulse"></div>
                   <div className="h-6 w-full bg-gray-900/80 rounded-sm border border-yellow-600/50 relative overflow-hidden skew-x-[-15deg] shadow-[0_0_10px_rgba(234,179,8,0.5)]">
