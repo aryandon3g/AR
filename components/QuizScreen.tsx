@@ -1,9 +1,8 @@
-import React, { useState, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import type { QuizQuestion, Language, UserAnswer, SummaryData, QuizMode } from '../types';
 import { QuizCard } from './QuizCard';
 import { TranslateIcon, ArrowLeftIcon, ArrowRightIcon } from './icons';
 import { Header } from './Header'; 
-// 👇 Import getXpData to know current rank for deduction logic
 import { updateUserRankPoints, getXpData } from '../services/storageService'; 
 import { getRankInfo } from '../services/rankSystem';
 
@@ -59,14 +58,70 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
 
   const insults = useMemo(() => ['Zone Damage!', 'Rank Drop!', 'Careful!', 'Low Accuracy!'], []);
 
-  // --- 🔥 NEW RANK DEDUCTION LOGIC 🔥 ---
+  // --- 🔊 SOUND LOGIC (Web Audio API) ---
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  useEffect(() => {
+    // Initialize AudioContext once on mount
+    try {
+        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+        if (AudioContextClass) {
+            audioCtxRef.current = new AudioContextClass();
+        }
+    } catch (e) { console.error("Audio init failed", e); }
+
+    return () => {
+        if (audioCtxRef.current) audioCtxRef.current.close().catch(() => {});
+    };
+  }, []);
+
+  const playFeedbackSound = useCallback((isCorrect: boolean) => {
+    try {
+        const ctx = audioCtxRef.current;
+        if (!ctx) return;
+        if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+
+        if (isCorrect) {
+            // ✅ Correct: "Ding" (High Pitch Sine Wave)
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(800, ctx.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.1);
+            
+            gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+            
+            oscillator.start(ctx.currentTime);
+            oscillator.stop(ctx.currentTime + 0.3);
+        } else {
+            // ❌ Wrong: "Buzz/Error" (Low Pitch Sawtooth)
+            oscillator.type = 'sawtooth';
+            oscillator.frequency.setValueAtTime(150, ctx.currentTime);
+            oscillator.frequency.linearRampToValueAtTime(100, ctx.currentTime + 0.2);
+
+            gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.2);
+
+            oscillator.start(ctx.currentTime);
+            oscillator.stop(ctx.currentTime + 0.2);
+        }
+    } catch (e) {
+        // Silent fail
+    }
+  }, []);
+  // --------------------------------------
+
   const finishQuiz = useCallback(async () => {
     if (isReviewMode) {
       onBackToSummary?.();
       return;
     }
 
-    // 1. Compile Answers
     const finalAnswers: UserAnswer[] = initialQuestions.map((_, index) => {
       const existing = answersMap[index];
       return existing 
@@ -81,102 +136,46 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
           };
     });
 
-    // 2. Fetch Current Rank to determine Penalty Bracket
     const currentData = await getXpData();
     const currentRankName = getRankInfo(currentData.totalXp || 0).name;
 
-    // 3. 🧮 CALCULATE POINTS 🧮
     const correctCount = finalAnswers.filter(a => a.isCorrect).length;
     const totalQuestions = initialQuestions.length;
     const accuracy = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0;
     
-    // A. Battle Score (Kill Score): +5 per correct
     const battleScore = correctCount * 5; 
 
-    // B. Survival Bonus (Booyah/Placement)
     let survivalBonus = 0;
-    if (accuracy >= 80) survivalBonus = 20; // High accuracy
-    else if (accuracy >= 50) survivalBonus = 10; // Medium accuracy
+    if (accuracy >= 80) survivalBonus = 20; 
+    else if (accuracy >= 50) survivalBonus = 10; 
 
-    // C. Rank Deduction Logic (Based on your Chart)
-    // We apply penalty ONLY if performance is poor (e.g., Accuracy < 40% means "Early Exit")
     let rankPenalty = 0;
     
-    // Threshold: If accuracy is low (like dying early in Free Fire), apply penalty based on Rank
     if (accuracy < 40) {
         switch (currentRankName) {
-            case 'Bronze':
-                rankPenalty = 5; // Low risk (-0 to -5)
-                break;
-            case 'Silver':
-                rankPenalty = 15; // (-5 to -15)
-                break;
-            case 'Gold':
-                rankPenalty = 25; // (-15 to -25)
-                break;
-            case 'Platinum':
-                rankPenalty = 40; // (-25 to -40) - Needs Top 8
-                break;
-            case 'Diamond':
-                rankPenalty = 55; // (-35 to -55) - High Risk
-                break;
-            case 'Heroic':
-                rankPenalty = 65; // (-40 to -65) - Very Strict
-                break;
+            case 'Bronze': rankPenalty = 5; break;
+            case 'Silver': rankPenalty = 15; break;
+            case 'Gold': rankPenalty = 25; break;
+            case 'Platinum': rankPenalty = 40; break;
+            case 'Diamond': rankPenalty = 55; break;
+            case 'Heroic': rankPenalty = 65; break;
             case 'Master':
-            case 'Grandmaster':
-                rankPenalty = 70; // (-50 to -70+) - Extreme
-                break;
-            default:
-                rankPenalty = 5;
+            case 'Grandmaster': rankPenalty = 70; break;
+            default: rankPenalty = 5;
         }
     } else if (accuracy < 50) {
-        // Minor penalty for mediocre performance (40-50%)
         rankPenalty = 10; 
     }
 
-    // D. Final Session Calculation
-    // Total = (Kills) + (Bonus) - (Rank Penalty)
-    // Example: Diamond Rank, 2 correct answers out of 10 (20% Acc).
-    // Battle: 10, Bonus: 0, Penalty: 55. Result: -45 RP.
     const totalSessionRP = (battleScore + survivalBonus) - rankPenalty;
     
-    // Update individual answers purely for history display (distribute score roughly)
-    const answersWithPoints = finalAnswers.map(a => ({
-        ...a,
-        xpEarned: a.isCorrect ? 5 : 0 
-    }));
-
-    // 4. Save to DB
-    // We use the new update function which handles positive AND negative values
-    const newTotalRP = await updateUserRankPoints(totalSessionRP);
-
-    // 5. Finish
-    // Pass 'xpEarned' as the calculated session total so SummaryScreen shows the net result (e.g. "-45")
-    // Note: We are hijacking the first answer's xpEarned to carry the total for simple passing, 
-    // or better, rely on the 3rd argument 'totalRankPoints' for the NEW TOTAL, 
-    // but we need to pass the *Session Change* to summary to show "+20" or "-40".
-    
-    // We will attach the session score to the summary via a property or just passing it through.
-    // Since onFinish interface takes answers, lets hack the summary data creation in App.tsx
-    // Actually, App.tsx recalculates xpEarned from answers. 
-    // To make this work perfectly without changing App.tsx too much, we need to ensure 
-    // App.tsx uses the value we calculated. 
-    
-    // Let's modify the answers array to sum up to exactly totalSessionRP.
-    // This is a bit tricky if negative.
-    // Instead, we will rely on the fact that we saved the correct data to DB.
-    // We will pass the totalSessionRP in the `answers` array by assigning it to a property 
-    // or handle it in the parent.
-    
-    // For now, let's inject the net score into the first answer's `xpEarned` 
-    // and set others to 0 so the sum is correct in App.tsx
     const adjustedAnswers = [...finalAnswers];
     if (adjustedAnswers.length > 0) {
         adjustedAnswers.forEach(a => a.xpEarned = 0);
-        adjustedAnswers[0].xpEarned = totalSessionRP; // The sum will now be the Net Score
+        adjustedAnswers[0].xpEarned = totalSessionRP; 
     }
 
+    const newTotalRP = await updateUserRankPoints(totalSessionRP);
     onFinish(adjustedAnswers, 0, newTotalRP); 
 
   }, [initialQuestions, answersMap, bookmarkedQuestions, onFinish, isReviewMode, onBackToSummary]);
@@ -285,6 +284,9 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const handleAnswer = useCallback((selectedOptionIndex: number, isCorrect: boolean) => {
     if (isReviewMode) return;
     
+    // 🔥 Play Sound Effect Here 🔥
+    playFeedbackSound(isCorrect);
+
     if (!isCorrect) {
       setInsult({ text: insults[Math.floor(Math.random() * insults.length)], key: Date.now() });
       setTimeout(() => setInsult(null), 1500);
@@ -298,10 +300,10 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         isCorrect,
         timeTaken: Math.floor((Date.now() - startTime) / 1000), 
         isBookmarked: bookmarkedQuestions.has(currentQuestionIndex),
-        xpEarned: 0 // We calculate final XP at the end now
+        xpEarned: 0 
       }
     }));
-  }, [currentQuestionIndex, isReviewMode, startTime, bookmarkedQuestions, insults]);
+  }, [currentQuestionIndex, isReviewMode, startTime, bookmarkedQuestions, insults, playFeedbackSound]);
 
   const handleToggleBookmark = useCallback(() => {
     triggerHapticFeedback();
