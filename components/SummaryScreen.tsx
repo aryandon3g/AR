@@ -7,7 +7,8 @@ interface SummaryScreenProps {
   language: Language;
   onRestart: () => void;
   onReview: () => void;
-  currentTotalRP?: number; // यह "नया" टोटल है (DB अपडेट होने के बाद)
+  onReattemptIncorrect: () => void;
+  currentTotalRP?: number; // यह DB में अपडेट हुआ नया टोटल है
 }
 
 export const SummaryScreen: React.FC<SummaryScreenProps> = ({ 
@@ -19,11 +20,11 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 }) => {
   const [isAnalysisVisible, setIsAnalysisVisible] = useState(false);
   
-  // --- 1. CALCULATE POINTS (Session Score) ---
+  // --- 1. CALCULATE EXACT POINTS CHANGE (LOGICAL MATH) ---
   const correctCount = summary.answers.filter(a => a.isCorrect).length;
   const incorrectCount = summary.answers.filter(a => !a.isCorrect && a.selectedOptionIndex !== -1).length;
   
-  // Scoring Rules
+  // Rules
   const battleScore = correctCount * 5;
   const rankDeduction = incorrectCount * 2;
   
@@ -31,100 +32,48 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   if (summary.accuracy >= 80) survivalBonus = 20;
   else if (summary.accuracy >= 50) survivalBonus = 10;
 
-  // Net Change (यह पॉजिटिव या नेगेटिव हो सकता है)
-  // उदाहरण: +25 या -10
+  // Net Change: इस क्विज़ में कितना मिला या गया?
   const netSessionChange = (battleScore + survivalBonus) - rankDeduction;
 
-  // --- 2. DETERMINE START & END POINTS ---
-  // End Point = जो अभी DB में है (currentTotalRP)
-  const endRP = currentTotalRP; 
-  // Start Point = End Point - जो अभी कमाया
-  // (अगर 1300 है और +20 मिला, तो start 1280 था)
-  // (अगर 1300 है और -10 हुआ, तो start 1310 था)
-  const startRP = currentTotalRP - netSessionChange;
+  // --- 2. DETERMINE START & END FOR ANIMATION ---
+  // End Point = जो अभी आपके अकाउंट में टोटल है (Props से आया)
+  const endRP = currentTotalRP;
+  
+  // Start Point = (अभी का टोटल) - (जो अभी मिला)
+  // Example: अगर Total 1200 है और अभी 20 मिला, तो Start 1180 था।
+  const startRP = endRP - netSessionChange;
 
   const [displayedRP, setDisplayedRP] = useState(startRP);
   const [showRankUp, setShowRankUp] = useState(false);
 
   const isHindi = language === 'hi';
 
-  // --- AUDIO SETUP ---
-  const audioCtxRef = useRef<AudioContext | null>(null);
-
-  useEffect(() => {
-      try {
-          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-          if (AudioContextClass) {
-              audioCtxRef.current = new AudioContextClass();
-          }
-      } catch (e) { console.error("Audio init failed", e); }
-
-      return () => {
-          if (audioCtxRef.current) audioCtxRef.current.close().catch(() => {});
-      };
-  }, []);
-
-  const playSound = (type: 'tick' | 'rankup') => {
-    try {
-      const ctx = audioCtxRef.current;
-      if (!ctx) return;
-      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
-
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      if (type === 'tick') {
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(800, ctx.currentTime);
-        gain.gain.setValueAtTime(0.02, ctx.currentTime);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.05);
-      } else if (type === 'rankup') {
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(200, ctx.currentTime);
-        osc.frequency.linearRampToValueAtTime(600, ctx.currentTime + 0.5);
-        gain.gain.setValueAtTime(0.1, ctx.currentTime);
-        gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.5);
-        osc.start();
-        osc.stop(ctx.currentTime + 1.5);
-      }
-    } catch (e) { /* ignore */ }
-  };
-
-  // --- 3. ANIMATION LOOP ---
+  // --- 3. ANIMATION LOGIC ---
   useEffect(() => {
     let startTimestamp: number;
-    const duration = 2000; // 2 seconds animation
+    const duration = 2000; 
     
     const step = (timestamp: number) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       
-      // Linear Interpolation: Start -> End
+      // Linear Interpolation: Start से End तक धीरे-धीरे जाना
       const currentVal = Math.floor(startRP + (progress * (endRP - startRP)));
       setDisplayedRP(currentVal);
-
-      // Play tick sound (only if score is changing)
-      if (progress < 1 && startRP !== endRP && Math.random() > 0.8) {
-          playSound('tick');
-      }
 
       if (progress < 1) {
         window.requestAnimationFrame(step);
       } else {
-        // Animation Complete: Check if rank actually changed from Start to End
+        // Animation खत्म होने पर चेक करें कि क्या Rank बढ़ी?
         const oldRank = getRankInfo(startRP);
         const newRank = getRankInfo(endRP);
         if (oldRank.name !== newRank.name && endRP > startRP) {
              setShowRankUp(true);
-             playSound('rankup');
         }
       }
     };
     
-    // Slight delay before starting animation so user sees the "Old" score first
+    // थोड़ा रुककर एनीमेशन शुरू करें ताकि यूजर को पुराना स्कोर दिखे
     const timer = setTimeout(() => {
         window.requestAnimationFrame(step);
     }, 500);
@@ -132,20 +81,26 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
     return () => clearTimeout(timer);
   }, [startRP, endRP]);
 
-  // --- 4. PROGRESS BAR LOGIC (Based on Displayed RP) ---
-  const currentRank = getRankInfo(displayedRP); // Animating Rank
+  // --- 4. PROGRESS BAR LOGIC (Current Rank के अंदर कितना भरा है) ---
+  const currentRank = getRankInfo(displayedRP); 
   const nextRank = getNextRank(currentRank.name);
   
   let progressPercent = 100;
+  let minRP = 0;
+  let maxRP = 100;
+
   if (nextRank) {
-      const totalRange = nextRank.minRP - currentRank.minRP;
-      const currentProgress = displayedRP - currentRank.minRP;
-      // Formula ensures bar fills up or drains down live
+      minRP = currentRank.minRP;
+      maxRP = nextRank.minRP;
+      const totalRange = maxRP - minRP;
+      const currentProgress = displayedRP - minRP;
+      // प्रतिशत निकालें (0 से 100 के बीच)
       progressPercent = Math.max(0, Math.min(100, (currentProgress / totalRange) * 100));
   }
 
-  // Display value for Net Score (Add + sign if positive)
-  const netSign = netSessionChange > 0 ? '+' : '';
+  // Display signs (+ or -)
+  const netSign = netSessionChange >= 0 ? '+' : '';
+  const netColor = netSessionChange >= 0 ? 'text-yellow-400' : 'text-red-500';
 
   return (
     <div className="absolute inset-0 z-[1000] w-full h-full min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white flex flex-col overflow-y-auto">
@@ -184,10 +139,9 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
               <div className="flex justify-between items-end mb-2 font-mono">
                   <span className="text-gray-600 dark:text-gray-400 text-sm font-bold">RANK SCORE</span>
                   <div className="text-3xl font-bold text-yellow-500 dark:text-yellow-400">
-                      {/* This number animates live */}
                       {displayedRP} 
-                      <span className="text-sm text-gray-400 ml-2 font-normal">
-                        / {nextRank ? nextRank.minRP : 'MAX'}
+                      <span className="text-sm text-gray-500 dark:text-gray-400 ml-2 font-normal">
+                        / {maxRP}
                       </span>
                   </div>
               </div>
@@ -196,10 +150,9 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
               <div className="relative w-full mt-2">
                   <div className="h-6 w-full bg-gray-300 dark:bg-gray-800 rounded-sm border border-gray-400 dark:border-gray-600 relative overflow-hidden skew-x-[-15deg] shadow-inner">
                       <div 
-                        className="h-full bg-gradient-to-r from-yellow-500 to-yellow-300 transition-all duration-75 ease-linear flex items-center justify-end pr-2"
+                        className="h-full bg-gradient-to-r from-yellow-500 to-yellow-300 transition-all duration-100 ease-linear flex items-center justify-end pr-2"
                         style={{ width: `${progressPercent}%` }}
                       >
-                         {/* Shine Effect */}
                          <div className="absolute top-0 -left-[100%] h-full w-full bg-gradient-to-r from-transparent via-white/50 to-transparent skew-x-[-20deg] animate-shimmer z-10"></div>
                       </div>
                   </div>
@@ -228,7 +181,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 
          <div className="flex justify-between items-center pt-3 border-t border-gray-200 dark:border-white/10 mt-2">
             <span className="text-gray-900 dark:text-white font-bold">TOTAL CHANGE</span>
-            <span className={`text-xl font-black ${netSessionChange >= 0 ? 'text-yellow-500' : 'text-red-500'}`}>
+            <span className={`text-xl font-black ${netColor}`}>
                 {netSign}{netSessionChange}
             </span>
          </div>
