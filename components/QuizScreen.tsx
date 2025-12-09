@@ -58,11 +58,10 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
 
   const insults = useMemo(() => ['Zone Damage!', 'Rank Drop!', 'Careful!', 'Low Accuracy!'], []);
 
-  // --- 🔊 SOUND LOGIC (Web Audio API) ---
+  // --- 🔊 PROFESSIONAL SOUND ENGINE ---
   const audioCtxRef = useRef<AudioContext | null>(null);
 
   useEffect(() => {
-    // Initialize AudioContext once on mount
     try {
         const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
         if (AudioContextClass) {
@@ -81,34 +80,54 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
         if (!ctx) return;
         if (ctx.state === 'suspended') ctx.resume().catch(() => {});
 
-        const oscillator = ctx.createOscillator();
-        const gainNode = ctx.createGain();
-
-        oscillator.connect(gainNode);
-        gainNode.connect(ctx.destination);
+        const now = ctx.currentTime;
 
         if (isCorrect) {
-            // ✅ Correct: "Ding" (High Pitch Sine Wave)
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(800, ctx.currentTime);
-            oscillator.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.1);
+            // ✅ SUCCESS: Play a fast C-Major Arpeggio (C6, E6, G6)
+            // This sounds like a "Victory" or "Level Up" ping.
+            const frequencies = [1046.50, 1318.51, 1567.98]; // High pitch notes
             
-            gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-            
-            oscillator.start(ctx.currentTime);
-            oscillator.stop(ctx.currentTime + 0.3);
+            frequencies.forEach((freq, i) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, now);
+                
+                // Stagger the notes slightly for a "bling" effect
+                const startTime = now + (i * 0.05);
+                
+                gain.gain.setValueAtTime(0, startTime);
+                gain.gain.linearRampToValueAtTime(0.1, startTime + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.4);
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                osc.start(startTime);
+                osc.stop(startTime + 0.4);
+            });
+
         } else {
-            // ❌ Wrong: "Buzz/Error" (Low Pitch Sawtooth)
-            oscillator.type = 'sawtooth';
-            oscillator.frequency.setValueAtTime(150, ctx.currentTime);
-            oscillator.frequency.linearRampToValueAtTime(100, ctx.currentTime + 0.2);
-
-            gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
-            gainNode.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.2);
-
-            oscillator.start(ctx.currentTime);
-            oscillator.stop(ctx.currentTime + 0.2);
+            // ❌ ERROR: Low Dissonant "Wobble"
+            // Two low sine waves slightly detuned creates a "wrong" feeling without being harsh
+            [150, 145].forEach((freq) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.type = 'triangle'; // Triangle is softer than sawtooth
+                osc.frequency.setValueAtTime(freq, now);
+                osc.frequency.exponentialRampToValueAtTime(50, now + 0.3); // Pitch Drop
+                
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                osc.start(now);
+                osc.stop(now + 0.3);
+            });
         }
     } catch (e) {
         // Silent fail
@@ -284,7 +303,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
   const handleAnswer = useCallback((selectedOptionIndex: number, isCorrect: boolean) => {
     if (isReviewMode) return;
     
-    // 🔥 Play Sound Effect Here 🔥
+    // Play the new professional sound
     playFeedbackSound(isCorrect);
 
     if (!isCorrect) {
