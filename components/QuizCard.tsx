@@ -1,230 +1,182 @@
-import React, { useState, useEffect, useCallback, memo } from 'react';
-import type { QuizQuestion, Language, QuizMode } from '../types';
-import { CheckCircleIcon, XCircleIcon, CheckmarkIcon, HistoryIcon, BookmarkIcon, XIcon } from './icons';
-import { quizCardLabels as labels } from '../services/labels';
+import React from 'react';
 
-interface QuizCardProps {
-    question: QuizQuestion;
-    questionNumber: number;
-    totalQuestions: number;
-    language: Language;
-    onAnswer: (selectedOptionIndex: number, isCorrect: boolean) => void;
-    showFeedback: boolean;
-    userAnswerIndex?: number;
-    id: string;
-    isReviewMode?: boolean;
-    mode: QuizMode;
-    timer?: number;
-    isBookmarked: boolean;
-    onToggleBookmark: () => void;
+// --- 1. LOCAL TYPES (To fix Type Mismatch Errors) ---
+// हम Types यही बना रहे हैं ताकि 'types.ts' से कोई एरर न आए
+interface LocalQuizQuestion {
+  question_en: string;
+  question_hi: string;
+  options_en: string[];
+  options_hi: string[];
+  correctAnswerIndex: number;
+  [key: string]: any; // Extra properties allowed
 }
 
-const optionLabels = ['A', 'B', 'C', 'D'];
+type LocalLanguage = 'en' | 'hi';
+type LocalQuizMode = 'practice' | 'attempt' | string;
 
-// ------------------------------------------------------------------
-// ⚡ ISOLATED TIMER: Updates independently without re-rendering card
-// ------------------------------------------------------------------
-const TimerDisplay = memo(({ seconds }: { seconds: number }) => {
-    const formatTime = (s: number) => {
-        const mins = Math.floor(s / 60).toString().padStart(2, '0');
-        const secs = (s % 60).toString().padStart(2, '0');
-        return `${mins}:${secs}`;
-    };
-    return <span>{formatTime(seconds)}</span>;
-});
+// --- 2. INLINE ICONS (To fix Import Errors) ---
+const BookmarkIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clipRule="evenodd" />
+  </svg>
+);
 
-const triggerHapticFeedback = (type: 'correct' | 'incorrect' | 'select' | 'bookmark') => {
-    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
-        if (type === 'correct') navigator.vibrate([50, 50, 50]);
-        else if (type === 'incorrect') navigator.vibrate(200);
-        else navigator.vibrate(5);
+const CheckCircleIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+  </svg>
+);
+
+const XCircleIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clipRule="evenodd" />
+  </svg>
+);
+
+interface QuizCardProps {
+  id?: string;
+  question: any; // Using 'any' to force compatibility
+  questionNumber: number;
+  totalQuestions: number;
+  language: LocalLanguage;
+  onAnswer: (index: number, isCorrect: boolean) => void;
+  showFeedback: boolean;
+  userAnswerIndex?: number;
+  isReviewMode?: boolean;
+  mode: LocalQuizMode;
+  timer: number;
+  isBookmarked: boolean;
+  onToggleBookmark: () => void;
+}
+
+export const QuizCard: React.FC<QuizCardProps> = ({
+  id,
+  question,
+  questionNumber,
+  totalQuestions,
+  language,
+  onAnswer,
+  showFeedback,
+  userAnswerIndex,
+  isReviewMode,
+  mode,
+  timer,
+  isBookmarked,
+  onToggleBookmark,
+}) => {
+  // Safe access to properties
+  const q = question as LocalQuizQuestion;
+  const isHindi = language === 'hi';
+  
+  // Fallback if data is missing
+  const questionText = isHindi ? (q.question_hi || q.question_en) : q.question_en;
+  const options = isHindi ? (q.options_hi || q.options_en) : q.options_en;
+  const correctIdx = q.correctAnswerIndex;
+
+  const getOptionStyle = (index: number) => {
+    if (isReviewMode) {
+      if (index === correctIdx) return 'bg-green-100 dark:bg-green-900/30 border-green-500 dark:border-green-500 text-green-800 dark:text-green-200';
+      if (index === userAnswerIndex && userAnswerIndex !== correctIdx) return 'bg-red-100 dark:bg-red-900/30 border-red-500 dark:border-red-500 text-red-800 dark:text-red-200 opacity-60';
+      return 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 opacity-50';
     }
-};
 
-export const QuizCard: React.FC<QuizCardProps> = memo((props) => {
-    const {
-        question,
-        questionNumber,
-        totalQuestions,
-        language,
-        onAnswer,
-        showFeedback,
-        userAnswerIndex,
-        id,
-        isReviewMode = false,
-        mode,
-        timer = 0,
-        isBookmarked,
-        onToggleBookmark,
-    } = props;
+    if (showFeedback) {
+      if (index === correctIdx) return 'bg-green-100 dark:bg-green-900/30 border-green-500 dark:border-green-500 text-green-800 dark:text-green-200 shadow-[0_0_15px_rgba(34,197,94,0.4)] scale-[1.02]';
+      if (index === userAnswerIndex) return 'bg-red-100 dark:bg-red-900/30 border-red-500 dark:border-red-500 text-red-800 dark:text-red-200 shake';
+      return 'bg-white/50 dark:bg-gray-800/50 border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-500 blur-[1px]';
+    }
 
-    // --- FIX IS HERE ---
-    // Pehle hum sirf initialize kar rahe the, ab hum sync bhi karenge
-    const [selectedOption, setSelectedOption] = useState<number | null>(userAnswerIndex ?? null);
-    const [feedbackState, setFeedbackState] = useState<{ type: 'correct' | 'incorrect' | null }>({ type: null });
-    const [insultText, setInsultText] = useState<string | null>(null);
+    if (userAnswerIndex === index) {
+        return 'bg-blue-100 dark:bg-blue-900/30 border-blue-500 dark:border-blue-400 text-blue-800 dark:text-blue-200';
+    }
 
-    // ⚡ FIX: Reset state when Question changes
-    useEffect(() => {
-        setSelectedOption(userAnswerIndex ?? null);
-        setFeedbackState({ type: null });
-        setInsultText(null);
-    }, [question, userAnswerIndex]); // Jab question change ho, sab kuch reset kar do
+    return 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 shadow-sm active:scale-[0.98]';
+  };
 
-    const l = labels[language];
-    const isHindi = language === 'hi';
-    const q = isHindi ? question.question_hi : question.question_en;
-    const options = isHindi ? question.options_hi : question.options_en;
-    const explanation = isHindi ? question.explanation_hi : question.explanation_en;
-
-    const handleOptionClick = useCallback((index: number) => {
-        if (showFeedback || isReviewMode) return;
-        
-        setSelectedOption(index);
-        const isCorrect = index === question.correct_option_index;
-
-        if (mode === 'practice') {
-            triggerHapticFeedback(isCorrect ? 'correct' : 'incorrect');
-            setFeedbackState({ type: isCorrect ? 'correct' : 'incorrect' });
-            
-            if (!isCorrect) {
-                const insults = [l.oops, l.tryAgain, l.notQuite];
-                setInsultText(insults[Math.floor(Math.random() * insults.length)]);
-                setTimeout(() => setInsultText(null), 2000);
-            }
-        } else {
-            triggerHapticFeedback('select');
-        }
-
-        onAnswer(index, isCorrect);
-    }, [showFeedback, isReviewMode, mode, question.correct_option_index, onAnswer, l]);
-
-    const handleToggleBookmarkClick = useCallback((e: React.MouseEvent) => {
-        e.stopPropagation();
-        triggerHapticFeedback('bookmark');
-        onToggleBookmark();
-    }, [onToggleBookmark]);
-
-    const getOptionClass = (index: number) => {
-        const base = 'bg-white/60 dark:bg-gray-800/60 border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200';
-        
-        if (isReviewMode) {
-            if (index === question.correct_option_index) return 'bg-green-500 text-white border-green-600 font-bold';
-            if (index === userAnswerIndex) return 'bg-red-500 text-white border-red-600';
-            return `${base} opacity-60`;
-        }
-
-        const isSelected = index === selectedOption;
-        
-        // ⚡ Logic fix: Sirf tabhi highlight karo jab actually select kiya ho
-        if (!showFeedback) {
-            if (isSelected) return 'bg-primary-500 text-white ring-2 ring-primary-300 dark:ring-primary-700';
-            return `${base} hover:bg-gray-100 dark:hover:bg-gray-700`;
-        }
-
-        // Show Correct/Incorrect logic
-        if (index === question.correct_option_index) return 'bg-green-500 text-white border-green-500 animate-pulse-green';
-        if (isSelected) return 'bg-red-500 text-white border-red-500 animate-pulse-red';
-        
-        return `${base} opacity-50`;
-    };
-
-    const isAnswered = userAnswerIndex !== undefined && userAnswerIndex !== null;
-    const showTimer = !isReviewMode && !isAnswered;
-
-    return (
-        <div 
-            id={id} 
-            className="w-full h-full relative flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-sm overflow-y-auto contain-content"
-        >
-            {insultText && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none">
-                     <div className="bg-red-600 text-white px-6 py-3 rounded-xl shadow-2xl font-bold animate-bounce border-2 border-white/20">
-                        {insultText}
-                    </div>
-                </div>
-            )}
-
-            <div className="p-5 flex flex-col flex-grow">
-                {question.imageUrl && (
-                    <div className="w-full flex justify-center mb-5 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden min-h-[150px]">
-                        <img 
-                            src={question.imageUrl} 
-                            alt="Question" 
-                            loading="lazy"
-                            className="object-contain max-h-[250px] w-full"
-                        />
-                    </div>
+  return (
+    // ✨ RESPONSIVE CONTAINER: flex-col on mobile, flex-row on landscape ✨
+    <div id={id} className="w-full h-full max-w-6xl mx-auto flex flex-col landscape:flex-row gap-6 landscape:gap-10 p-1 landscape:p-6 transition-all duration-300">
+      
+      {/* --- LEFT SIDE: QUESTION AREA --- */}
+      <div className="flex-none landscape:flex-1 landscape:w-1/2 landscape:flex landscape:flex-col landscape:justify-center">
+          
+          {/* Meta Header (Q Number & Timer) */}
+          <div className="flex justify-between items-center mb-4">
+            <span className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-xs font-bold text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700">
+                Question {questionNumber} / {totalQuestions}
+            </span>
+            <div className="flex items-center gap-3">
+                {mode === 'attempt' && (
+                    <span className="font-mono text-sm font-bold text-blue-600 dark:text-blue-400 tabular-nums">
+                        {Math.floor(timer / 60)}:{(timer % 60).toString().padStart(2, '0')}
+                    </span>
                 )}
-
-                <div className="flex justify-between items-start mb-4">
-                    <div>
-                        <span className="text-xs font-bold tracking-wider text-primary-600 dark:text-primary-400 uppercase">
-                            {labels['en'].question} {questionNumber} / {totalQuestions}
-                        </span>
-                        <h2 className={`mt-2 text-xl font-bold text-gray-900 dark:text-white leading-snug ${isHindi ? 'font-sans' : ''}`}>
-                            {q}
-                        </h2>
-                    </div>
-
-                    <div className="flex flex-col items-end gap-2 ml-4">
-                        {showTimer && (
-                            <div className="flex items-center text-xs font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded border border-gray-200 dark:border-gray-700">
-                                <HistoryIcon className="w-3 h-3 mr-1 text-gray-500" />
-                                <TimerDisplay seconds={timer} />
-                            </div>
-                        )}
-                        <button 
-                            onClick={handleToggleBookmarkClick} 
-                            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                        >
-                            <BookmarkIcon className={`w-5 h-5 ${isBookmarked ? 'fill-primary-500 text-primary-500' : 'text-gray-400'}`} />
-                        </button>
-                    </div>
-                </div>
-
-                <div className="space-y-3 mt-auto mb-6">
-                    {options.map((option, index) => {
-                        const optionClass = getOptionClass(index);
-                        return (
-                            <button
-                                key={index}
-                                onClick={() => handleOptionClick(index)}
-                                disabled={showFeedback || isReviewMode}
-                                className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 relative active:scale-[0.98] ${optionClass}`}
-                            >
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 
-                                    ${optionClass.includes('text-white') ? 'bg-white/20' : 'bg-gray-200 dark:bg-gray-700'}`}>
-                                    {optionLabels[index]}
-                                </div>
-                                <span className={`text-base font-medium ${isHindi ? 'font-sans' : ''}`}>{option}</span>
-                                
-                                {(showFeedback || isReviewMode) && index === question.correct_option_index && (
-                                    <CheckmarkIcon className="w-5 h-5 ml-auto text-white" />
-                                )}
-                                {(showFeedback || isReviewMode) && index === userAnswerIndex && index !== question.correct_option_index && (
-                                    <XIcon className="w-5 h-5 ml-auto text-white" />
-                                )}
-                            </button>
-                        );
-                    })}
-                </div>
-
-                {(showFeedback || isReviewMode) && (mode === 'practice' || isReviewMode) && (
-                    <div className="mt-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 animate-slide-in">
-                        <div className="flex items-center gap-2 mb-2">
-                             {userAnswerIndex === question.correct_option_index 
-                                ? <CheckCircleIcon className="w-5 h-5 text-green-500" />
-                                : <XCircleIcon className="w-5 h-5 text-red-500" />
-                             }
-                            <h3 className="font-bold text-sm uppercase text-gray-700 dark:text-gray-300">{labels['en'].explanation}</h3>
-                        </div>
-                        <p className={`text-sm text-gray-600 dark:text-gray-400 leading-relaxed ${isHindi ? 'font-sans' : ''}`}>
-                            {explanation}
-                        </p>
-                    </div>
-                )}
+                <button 
+                    onClick={(e) => { e.stopPropagation(); onToggleBookmark(); }}
+                    className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors active:scale-90"
+                >
+                    <BookmarkIcon className={`w-5 h-5 ${isBookmarked ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} />
+                </button>
             </div>
-        </div>
-    );
-});
+          </div>
+
+          {/* Question Text */}
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-lg shadow-gray-200/50 dark:shadow-black/20 border border-white/50 dark:border-white/5 relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+              <h2 className="text-lg md:text-xl landscape:text-2xl font-bold text-gray-800 dark:text-gray-100 leading-relaxed">
+                  {questionText}
+              </h2>
+              {/* Subtle watermark */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-500/5 rounded-full blur-xl group-hover:bg-blue-500/10 transition-colors"></div>
+          </div>
+
+          {/* Hint / Tag (Optional - visible in landscape) */}
+          <div className="mt-6 hidden landscape:block opacity-60">
+             <span className="text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500 font-bold pl-2 flex items-center gap-2">
+                <span className="w-8 h-[1px] bg-gray-300 dark:bg-gray-700"></span> Select Answer
+             </span>
+          </div>
+      </div>
+
+      {/* --- RIGHT SIDE: OPTIONS AREA --- */}
+      <div className="flex-grow landscape:flex-1 landscape:w-1/2 landscape:h-full landscape:overflow-y-auto custom-scrollbar landscape:pr-2">
+          <div className="flex flex-col gap-3 h-full justify-center">
+            {options && options.map((option, index) => (
+                <button
+                    key={index}
+                    onClick={() => !showFeedback && !isReviewMode && onAnswer(index, index === correctIdx)}
+                    disabled={showFeedback || isReviewMode}
+                    className={`
+                        relative w-full p-4 rounded-2xl text-left border-2 transition-all duration-200 
+                        group flex items-center gap-4
+                        ${getOptionStyle(index)}
+                    `}
+                >
+                    {/* Option Letter Circle (A, B, C, D) */}
+                    <div className={`
+                        flex-none w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold border transition-colors
+                        ${(userAnswerIndex === index || (isReviewMode && index === correctIdx)) 
+                            ? 'border-transparent bg-white/20 text-current' 
+                            : 'border-gray-200 dark:border-gray-600 text-gray-400 dark:text-gray-500 group-hover:border-blue-300 dark:group-hover:border-blue-500 group-hover:text-blue-500'}
+                    `}>
+                        {String.fromCharCode(65 + index)}
+                    </div>
+
+                    {/* Option Text */}
+                    <span className="text-sm landscape:text-base font-medium flex-grow">{option}</span>
+
+                    {/* Feedback Icon (Check/Cross) */}
+                    {(showFeedback || isReviewMode) && (
+                        <div className="flex-none animate-check-pop">
+                            {index === correctIdx && <CheckCircleIcon className="w-6 h-6 text-green-600 dark:text-green-400" />}
+                            {index === userAnswerIndex && index !== correctIdx && <XCircleIcon className="w-6 h-6 text-red-500" />}
+                        </div>
+                    )}
+                </button>
+            ))}
+          </div>
+      </div>
+
+    </div>
+  );
+};
