@@ -500,6 +500,8 @@ const App: React.FC = () => {
                     onRestart={restartApp}
                     onReview={() => setScreen('review')}
                     onReattemptIncorrect={handleReattemptIncorrect}
+                    // ✅ FIXED: Passing current total RP to SummaryScreen so logic works correctly
+                    currentTotalRP={xpData.totalXp} 
                 />;
             case 'progress':
                 return <LazyProgressVisualization language={language} progressData={progressHistory} />;
