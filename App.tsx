@@ -7,7 +7,8 @@ import { getHistory, saveToHistory, clearHistory, getCustomQuizzes, saveCustomQu
 import type { Language, AppScreen, QuizQuestion, Difficulty, UserAnswer, SummaryData, QuizMode, SidebarView, XpData, Achievement, ProgressDataPoint, StreakData, QuizSubject } from './types';
 import { commonLabels, achievementLabels } from './services/labels';
 import { clearQuestionCache } from './services/quizDataService';
-import { AchievementUnlockedNotification } from './components/AchievementUnlockedNotification';
+// ✅ REMOVED: AchievementNotification import is no longer needed
+// import { AchievementUnlockedNotification } from './components/AchievementUnlockedNotification';
 import { LevelUpAnimation } from './components/LevelUpAnimation';
 
 // Lazy load main screens for faster initial load
@@ -67,8 +68,10 @@ const App: React.FC = () => {
     const [progressHistory, setProgressHistory] = useState<ProgressDataPoint[]>([]);
     const [quizLanguageSwitches, setQuizLanguageSwitches] = useState(0);
 
-    const [showAchievementNotification, setShowAchievementNotification] = useState(false);
-    const [unlockedAchievement, setUnlockedAchievement] = useState<Achievement | null>(null);
+    // ✅ REMOVED: These states are no longer needed for the popup
+    // const [showAchievementNotification, setShowAchievementNotification] = useState(false);
+    // const [unlockedAchievement, setUnlockedAchievement] = useState<Achievement | null>(null);
+    
     const [showLevelUp, setShowLevelUp] = useState(false);
     const [newLevelForAnimation, setNewLevelForAnimation] = useState(0);
 
@@ -122,7 +125,7 @@ const App: React.FC = () => {
 
         if (newLevel > oldLevel) {
             setNewLevelForAnimation(newLevel);
-            setShowLevelUp(true);
+            // setShowLevelUp(true); // ✅ Removed Level Up Popup as well
         }
         
         const updatedXpData = { totalXp: newTotalXp, level: newLevel };
@@ -227,8 +230,8 @@ const App: React.FC = () => {
                     break;
             }
             if (isUnlocked && !ach.unlocked) {
-                setUnlockedAchievement({ ...ach, unlocked: true, unlockedAt: Date.now() });
-                setShowAchievementNotification(true);
+                // ✅ UPDATE: Removed setShowAchievementNotification(true)
+                // Achievements will still unlock silently in the background
                 return { ...ach, unlocked: true, unlockedAt: Date.now(), currentProgress: ach.targetValue || currentProgress };
             }
             return { ...ach, currentProgress: currentProgress };
@@ -286,10 +289,9 @@ const App: React.FC = () => {
           ? (correctAnswers * 1) - (incorrectAnswers * 0.25) 
           : correctAnswers;
 
-      // ✅ XP Logic: Sum up the individual XP earned from each answer (+3 or -1)
       const xpEarned = answers.reduce((total, ans) => total + (ans.xpEarned || 0), 0);
       
-      // Streak Logic (Tracking only, not affecting XP)
+      // Streak Logic
       const today = new Date();
       const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
@@ -328,7 +330,7 @@ const App: React.FC = () => {
           netScore: netScore,
           topic: summaryData?.topic,
           skipped: skippedAnswers,
-          xpEarned: Math.max(0, xpEarned), // Display only non-negative total on summary if preferred
+          xpEarned: Math.max(0, xpEarned), 
       };
       setSummaryData(newSummaryData);
       await saveToHistory(newSummaryData);
@@ -347,6 +349,8 @@ const App: React.FC = () => {
 
       const updatedCustomQuizzes = await getCustomQuizzes();
       await checkAchievements(newSummaryData, updatedXpData, updatedCustomQuizzes, quizLanguageSwitches);
+      
+      // ✅ IMMEDIATELY SHOW SUMMARY (Rank Screen)
       setScreen('summary');
 
     }, [questions, summaryData, quizMode, updateXp, quizLanguageSwitches, checkAchievements, getCustomQuizzes, streakData]);
@@ -572,12 +576,7 @@ const App: React.FC = () => {
                     onCancel={handleCancelQuit}
                     language={language}
                 />
-                <AchievementUnlockedNotification
-                    isActive={showAchievementNotification}
-                    onComplete={() => setShowAchievementNotification(false)}
-                    achievement={unlockedAchievement}
-                    language={language}
-                />
+                {/* ✅ REMOVED: AchievementUnlockedNotification component */}
                  <LevelUpAnimation
                     isActive={showLevelUp}
                     onComplete={() => setShowLevelUp(false)}

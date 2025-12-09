@@ -1,11 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import type { SummaryData, Language, GamificationTitle, QuizMode } from '../types';
-import { ReviewIcon, RedoIcon, AnalyticsIcon, ChevronDownIcon, CheckCircleIcon, XCircleIcon, BookmarkIcon, HistoryIcon, XPIcon } from './icons';
-import { summaryScreenLabels as labels, gamificationTitles, commonLabels } from '../services/labels';
-import { SummaryChart } from './SummaryChart';
-import { ConfettiEffect } from './ConfettiEffect';
-
+import type { SummaryData, Language } from '../types';
+import { summaryScreenLabels as labels } from '../services/labels';
+import { getRankInfo, getNextRank } from '../services/rankSystem'; 
 
 interface SummaryScreenProps {
   summary: SummaryData;
@@ -13,165 +9,254 @@ interface SummaryScreenProps {
   onRestart: () => void;
   onReview: () => void;
   onReattemptIncorrect: () => void;
+  currentTotalRP?: number; 
 }
 
-const getGamificationTitle = (accuracy: number): GamificationTitle => {
-    if (accuracy <= 40) return 'Novice';
-    if (accuracy <= 70) return 'Explorer';
-    if (accuracy <= 90) return 'Virtuoso';
-    return 'Master';
-};
-
-
-export const SummaryScreen: React.FC<SummaryScreenProps> = ({ summary, language, onRestart, onReview, onReattemptIncorrect }) => {
+export const SummaryScreen: React.FC<SummaryScreenProps> = ({ 
+  summary, 
+  language, 
+  onRestart, 
+  onReview, 
+  currentTotalRP = 0 
+}) => {
   const [isAnalysisVisible, setIsAnalysisVisible] = useState(false);
-  const [showConfetti, setShowConfetti] = useState(false);
-  const l = labels[language];
-  const common_l = commonLabels[language];
+  
+  // --- CALCULATE BREAKDOWN FOR DISPLAY ---
+  const correctCount = summary.answers.filter(a => a.isCorrect).length;
+  const incorrectCount = summary.answers.filter(a => !a.isCorrect && a.selectedOptionIndex !== -1).length;
+  
+  // 1. Battle Score (Base)
+  const battleScore = correctCount * 5;
+  
+  // 2. Rank Deduction (Damage)
+  const rankDeduction = incorrectCount * 2;
+  
+  // 3. Survival Bonus Logic
+  let survivalBonus = 0;
+  if (summary.accuracy >= 80) survivalBonus = 20;
+  else if (summary.accuracy >= 50) survivalBonus = 10;
+
+  // 4. Final Real Earned (Re-calculated to be sure)
+  const finalEarnedRP = Math.max(0, battleScore + survivalBonus - rankDeduction);
+
+  // --- RANK LOGIC ---
+  const safeTotalRP = currentTotalRP > 0 ? currentTotalRP : finalEarnedRP;
+  const startRP = Math.max(0, safeTotalRP - finalEarnedRP); 
+
+  const [displayedRP, setDisplayedRP] = useState(startRP);
+  const [showRankUp, setShowRankUp] = useState(false);
+
   const isHindi = language === 'hi';
-  const incorrectCount = summary.answers.filter(a => a.selectedOptionIndex !== -1 && !a.isCorrect).length;
-  
-  useEffect(() => {
-    if (summary.accuracy >= 90) { // Trigger confetti for high accuracy
-        setShowConfetti(true);
-    }
-    // Play a sound if the score is less than 30%
-    if (summary.accuracy < 30) {
-      try {
-        const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-        if (audioContext) {
-          const oscillator = audioContext.createOscillator();
-          const gainNode = audioContext.createGain();
 
-          oscillator.connect(gainNode);
-          gainNode.connect(audioContext.destination);
+  const playSound = (type: 'tick' | 'rankup') => {
+    try {
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      if (!AudioContextClass) return;
+      const audioContext = new AudioContextClass();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
 
-          oscillator.type = 'triangle';
-          
-          const now = audioContext.currentTime;
-          gainNode.gain.setValueAtTime(0.3, now);
-          oscillator.frequency.setValueAtTime(300, now);
-          oscillator.frequency.exponentialRampToValueAtTime(150, now + 0.7);
-          gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.7);
-
-          oscillator.start(now);
-          oscillator.stop(now + 0.7);
-        }
-      } catch (e) {
-        console.error("Could not play audio:", e);
+      if (type === 'tick') {
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+        oscillator.start();
+        oscillator.stop(audioContext.currentTime + 0.05);
+      } else if (type === 'rankup') {
+        oscillator.type = 'sawtooth';
+        oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+        oscillator.frequency.linearRampToValueAtTime(600, audioContext.currentTime + 0.5);
+        gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 1.5);
+        oscillator.start();
+        oscillator.stop(audioContext.currentTime + 1.5);
       }
-    }
-  }, [summary.accuracy]);
+    } catch (e) { console.error(e); }
+  };
+
+  useEffect(() => {
+    let startTimestamp: number;
+    const duration = 2000; 
+    
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      const currentVal = Math.floor(progress * (finalEarnedRP) + startRP);
+      setDisplayedRP(currentVal);
+
+      if (progress < 1 && Math.random() > 0.8) playSound('tick');
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        const oldRank = getRankInfo(startRP);
+        const newRank = getRankInfo(safeTotalRP);
+        if (oldRank.name !== newRank.name) {
+             setShowRankUp(true);
+             playSound('rankup');
+        }
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [finalEarnedRP, startRP, safeTotalRP]);
+
+  const currentRank = getRankInfo(displayedRP);
+  const nextRank = getNextRank(currentRank.name);
   
-  const titleKey = getGamificationTitle(summary.accuracy);
-  const performanceTitle = gamificationTitles[titleKey][language];
-  const performanceEmoji = gamificationTitles[titleKey].emoji;
+  let progressPercent = 100;
+  if (nextRank) {
+      const totalRange = nextRank.minRP - currentRank.minRP;
+      const currentProgress = displayedRP - currentRank.minRP;
+      progressPercent = (currentProgress / totalRange) * 100;
+  }
 
   return (
-    <div className="w-full h-full p-4 pt-20 flex flex-col overflow-y-auto relative custom-scrollbar">
-      <ConfettiEffect isActive={showConfetti} onComplete={() => setShowConfetti(false)} />
-
-      <div className="text-center mb-6 z-10">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white flex items-center justify-center">
-            <span className="text-4xl mr-2">{performanceEmoji}</span> {performanceTitle}
-        </h2>
-        {summary.mode === 'attempt' && summary.netScore !== undefined && (
-            <p className="mt-2 text-lg font-semibold text-primary-600 dark:text-primary-300 bg-primary-100/50 dark:bg-primary-900/50 px-3 py-1 rounded-full inline-block">
-                {l.netScore}: {summary.netScore.toFixed(2)}
-            </p>
-        )}
-        {summary.xpEarned !== undefined && (
-            <p className="mt-2 text-lg font-semibold text-green-600 dark:text-green-400 bg-green-100/50 dark:bg-green-900/50 px-3 py-1 rounded-full inline-flex items-center space-x-1">
-                <XPIcon className="w-5 h-5" />
-                <span>+{summary.xpEarned} {common_l.xp}</span>
-            </p>
-        )}
-      </div>
-
-      <div className="z-10 mb-6">
-        <SummaryChart summary={summary} language={language} />
-      </div>
-
-      <div className="w-full max-w-sm mx-auto space-y-3 z-10">
-        <button
-          onClick={onReview}
-          className="w-full py-3 px-4 rounded-xl bg-primary-600 text-white font-bold shadow-lg hover:shadow-primary-500/40 hover:bg-primary-700 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-2"
-        >
-          <ReviewIcon className="w-5 h-5" />
-          <span>{labels['en'].review}</span>
-        </button>
-        <div className="flex space-x-3">
-            <button
-              onClick={onRestart}
-              className="w-full py-3 px-4 rounded-xl bg-white/60 dark:bg-black/40 backdrop-blur-sm border border-white/30 dark:border-white/10 text-gray-800 dark:text-gray-200 font-semibold hover:bg-white/80 dark:hover:bg-black/50 transition-colors flex items-center justify-center space-x-2"
-            >
-              <RedoIcon className="w-5 h-5" />
-              <span>{l.playAgain}</span>
-            </button>
-             {incorrectCount > 0 && (
-                <button
-                onClick={onReattemptIncorrect}
-                className="w-full py-3 px-4 rounded-xl bg-white/60 dark:bg-black/40 backdrop-blur-sm border border-white/30 dark:border-white/10 text-gray-800 dark:text-gray-200 font-semibold hover:bg-white/80 dark:hover:bg-black/50 transition-colors flex items-center justify-center space-x-2"
-                >
-                <AnalyticsIcon className="w-5 h-5" />
-                <span>{l.reattemptIncorrect} ({incorrectCount})</span>
-                </button>
-            )}
-        </div>
-      </div>
+    <div className="fixed inset-0 z-50 flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white overflow-y-auto custom-scrollbar transition-colors duration-300">
       
-      {/* Detailed Analysis Section */}
-      <div className="w-full max-w-sm mx-auto mt-8 z-10">
-        <button onClick={() => setIsAnalysisVisible(!isAnalysisVisible)} className="w-full flex justify-between items-center p-3 rounded-lg bg-white/10 dark:bg-black/20 hover:bg-white/20 dark:hover:bg-black/30 transition-colors">
-            <span className="font-semibold text-gray-800 dark:text-gray-200">{l.detailedAnalysis}</span>
-            <ChevronDownIcon className={`w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform ${isAnalysisVisible ? 'rotate-180' : ''}`} />
-        </button>
-
-        {isAnalysisVisible && (
-            <div className="w-full max-w-sm mt-4 animate-slide-in space-y-4">
-                 {summary.questions.map((q, index) => {
-                    const answer = summary.answers.find(a => a.questionIndex === index);
-                    if (!answer) return null;
-
-                    const isSkipped = answer.selectedOptionIndex === -1;
-                    const isAnsweredCorrectly = answer.isCorrect;
-                    const questionText = isHindi ? q.question_hi : q.question_en;
-                    const options = isHindi ? q.options_hi : q.options_en;
-                    const explanation = isHindi ? q.explanation_hi : q.explanation_en;
-                    const correctAnswerText = options[q.correct_option_index];
-                    const userAnswerText = !isSkipped ? options[answer.selectedOptionIndex] : labels['en'].skipped;
-
-                    return (
-                        <div key={index} className="p-4 rounded-xl bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10">
-                            <p className="font-bold text-gray-800 dark:text-gray-200 mb-2">{index + 1}. {questionText}</p>
-                            
-                            <div className="space-y-2 text-sm">
-                                <div>
-                                    <div className="text-xs text-gray-600 dark:text-gray-400 font-semibold mb-1">{labels['en'].yourAnswer}</div>
-                                    {isSkipped ? (
-                                        <p className="p-2 rounded-md bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-300 border border-yellow-300 dark:border-yellow-700">{userAnswerText}</p>
-                                    ) : (
-                                        <p className={`p-2 rounded-md ${isAnsweredCorrectly ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 border border-green-300 dark:border-green-700' : 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300 border border-red-300 dark:border-red-700'}`}>
-                                            {userAnswerText}
-                                        </p>
-                                    )}
-                                </div>
-
-                                {!isAnsweredCorrectly && !isSkipped && (
-                                     <div>
-                                        <div className="text-xs text-gray-600 dark:text-gray-400 font-semibold mb-1 flex items-center"><CheckCircleIcon className="w-4 h-4 mr-1 text-green-500"/>{labels['en'].correctAnswer}</div>
-                                        <p className="p-2 rounded-md bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-300 border border-green-300 dark:border-green-700">{correctAnswerText}</p>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                    );
-                 })}
-            </div>
-        )}
+      {/* --- HEADER --- */}
+      <div className="flex-none p-4 text-center border-b border-gray-200 dark:border-white/10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-10">
+          <h1 className="text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-600 uppercase italic">
+              MATCH RESULT
+          </h1>
       </div>
 
-       <div className="flex-grow min-h-[2rem]"></div>
+      {/* --- MAIN RANK AREA --- */}
+      <div className="flex-grow flex flex-col items-center justify-center py-8 relative">
+          
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-500/10 dark:bg-yellow-500/20 rounded-full blur-[60px] animate-pulse"></div>
+
+          <div className={`relative z-10 mb-4 w-40 h-40 flex items-center justify-center transition-all duration-500 ${showRankUp ? 'scale-125 drop-shadow-[0_0_25px_rgba(255,215,0,0.8)]' : 'scale-100'}`}>
+              {currentRank.icon}
+          </div>
+
+          <h2 className="text-4xl font-black uppercase tracking-wider text-gray-900 dark:text-white mb-1" style={{ textShadow: `0 0 20px ${currentRank.color}40` }}>
+              {currentRank.name}
+          </h2>
+          
+          <div className="h-8">
+            {showRankUp && (
+                <span className="text-yellow-600 dark:text-yellow-400 font-bold text-lg animate-bounce inline-block px-4 py-1 rounded border border-yellow-400/50 bg-yellow-100 dark:bg-yellow-900/40">
+                    RANK UP!
+                </span>
+            )}
+          </div>
+
+          {/* --- SCORE & PROGRESS BAR --- */}
+          <div className="w-full max-w-md px-6 mt-8">
+              <div className="flex justify-between items-end mb-2 font-mono">
+                  <span className="text-gray-600 dark:text-gray-400 text-sm font-bold">RANK SCORE</span>
+                  <div className="text-3xl font-bold text-yellow-500 dark:text-yellow-400">
+                      {displayedRP} <span className="text-sm text-gray-600 dark:text-white">/ {nextRank ? nextRank.minRP : 'MAX'}</span>
+                  </div>
+              </div>
+
+              {/* The Free Fire Style Yellow Bar with GLOWING Animation */}
+              <div className="relative w-full mt-2">
+                  
+                  {/* 1. Background Blur Glow */}
+                  <div className="absolute -inset-1 bg-yellow-500/40 blur-md rounded-sm animate-pulse"></div>
+
+                  {/* 2. Main Bar Container */}
+                  <div className="h-6 w-full bg-gray-900/80 rounded-sm border border-yellow-600/50 relative overflow-hidden skew-x-[-15deg] shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+                      
+                      {/* The Filled Part */}
+                      <div 
+                        className="h-full bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-300 transition-all duration-1000 ease-out relative overflow-hidden flex items-center justify-end pr-2"
+                        style={{ width: `${progressPercent}%` }}
+                      >
+                         {/* ✨ Moving Shine Effect */}
+                         <div className="absolute top-0 -left-[100%] h-full w-full bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[-20deg] animate-shimmer z-10"></div>
+
+                         {/* Subtle Inner Glow */}
+                         <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent opacity-50"></div>
+                      </div>
+
+                      {/* Stripes Pattern (Overlay) */}
+                      <div className="absolute inset-0 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqgOx4Wy4BH5DGAUSRwA2HhTRWo+5YAAAAABJRU5ErkJggg==')] opacity-20 pointer-events-none"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      {/* --- STATS CARD (UPDATED WITH MINUS POINTS) --- */}
+      <div className="mx-4 mb-6 bg-white/60 dark:bg-gray-800/60 border border-gray-200 dark:border-white/10 rounded-xl p-4 backdrop-blur-sm max-w-md md:mx-auto w-full shadow-sm dark:shadow-none space-y-2">
+         <h3 className="text-gray-500 dark:text-gray-400 text-xs font-bold uppercase mb-3 tracking-widest border-b border-gray-200 dark:border-white/10 pb-2">Battle Stats</h3>
+         
+         {/* Battle Score */}
+         <div className="flex justify-between items-center">
+            <span className="text-gray-700 dark:text-gray-300 text-sm">Battle Score (Correct)</span>
+            <span className="text-green-500 dark:text-green-400 font-mono font-bold">+{battleScore}</span>
+         </div>
+
+         {/* Rank Deduction */}
+         <div className="flex justify-between items-center">
+            <span className="text-gray-700 dark:text-gray-300 text-sm">Rank Deduction</span>
+            <span className="text-red-500 dark:text-red-400 font-mono font-bold">-{rankDeduction}</span>
+         </div>
+
+         {/* Survival Bonus */}
+         <div className="flex justify-between items-center">
+            <span className="text-gray-700 dark:text-gray-300 text-sm">Survival Bonus</span>
+            <span className="text-yellow-500 dark:text-yellow-400 font-mono font-bold">+{survivalBonus}</span>
+         </div>
+
+         {/* Total */}
+         <div className="flex justify-between items-center pt-3 border-t border-gray-200 dark:border-white/10 mt-2">
+            <span className="text-gray-900 dark:text-white font-bold">TOTAL EARNED</span>
+            <span className="text-yellow-500 dark:text-yellow-400 text-xl font-black">
+                {finalEarnedRP > 0 ? '+' : ''}{finalEarnedRP}
+            </span>
+         </div>
+      </div>
+
+      {/* --- BUTTONS FOOTER --- */}
+      <div className="bg-white/80 dark:bg-black/80 p-4 border-t border-gray-200 dark:border-white/10 backdrop-blur-lg safe-area-bottom">
+          <div className="max-w-md mx-auto flex gap-3">
+            <button 
+                onClick={onReview}
+                className="flex-1 py-3 rounded bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white font-bold uppercase tracking-wide hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors border border-gray-300 dark:border-gray-500"
+            >
+                Review
+            </button>
+            <button 
+                onClick={onRestart}
+                className="flex-[2] py-3 rounded bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-black uppercase tracking-wide hover:from-yellow-500 hover:to-yellow-600 transition-all shadow-lg shadow-yellow-400/30 dark:shadow-yellow-400/20"
+            >
+                Play Again
+            </button>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <button onClick={() => setIsAnalysisVisible(!isAnalysisVisible)} className="text-gray-500 dark:text-gray-400 text-xs underline decoration-dotted">
+                {isAnalysisVisible ? "Hide Details" : "View Detailed Analysis"}
+            </button>
+          </div>
+      </div>
+
+      {/* --- DETAILED ANALYSIS --- */}
+      {isAnalysisVisible && (
+        <div className="p-4 pb-20 max-w-md mx-auto w-full animate-slide-in">
+             {summary.questions.map((q, index) => {
+                const answer = summary.answers.find(a => a.questionIndex === index);
+                if (!answer) return null;
+                const isCorrect = answer.isCorrect;
+                const questionText = isHindi ? q.question_hi : q.question_en;
+
+                return (
+                    <div key={index} className="mb-3 p-3 rounded bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 border-l-4 shadow-sm" style={{ borderLeftColor: isCorrect ? '#22c55e' : '#ef4444' }}>
+                        <p className="text-sm text-gray-800 dark:text-gray-200">{index + 1}. {questionText}</p>
+                        <div className="text-xs mt-1 text-right font-mono">
+                            {isCorrect ? <span className="text-green-500">+5 RP</span> : <span className="text-red-500">-2 RP</span>}
+                        </div>
+                    </div>
+                );
+             })}
+        </div>
+      )}
+
     </div>
   );
 };

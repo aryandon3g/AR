@@ -1,5 +1,3 @@
-
-
 import type { SummaryData, XpData, Achievement, ProgressDataPoint, StreakData } from '../types';
 import type { QuizSubject } from '../types'; // Corrected import path
 
@@ -161,7 +159,7 @@ export const clearCustomQuizzes = async (): Promise<void> => {
     }
 };
 
-// --- XP and Level Storage ---
+// --- XP and Level Storage (Modified for Rank System) ---
 
 export const getXpData = async (): Promise<XpData> => {
     try {
@@ -182,6 +180,31 @@ export const saveXpData = async (xpData: XpData): Promise<void> => {
     }
 };
 
+// 🔥 NEW FUNCTION: यह फंक्शन Free Fire जैसा Rank Points सिस्टम हैंडल करेगा
+export const updateUserRankPoints = async (earnedPoints: number): Promise<number> => {
+    try {
+        // 1. पुराना डेटा लाओ
+        const currentData = await getXpData();
+        
+        // 2. पुराने पॉइंट्स में नए पॉइंट्स जोड़ो (Continuous Addition)
+        // 100 XP लिमिट हट गई है, अब यह हमेशा जुड़ता रहेगा।
+        const newTotalPoints = (currentData.totalXp || 0) + earnedPoints;
+
+        // 3. डेटा तैयार करो
+        const newData: XpData = {
+            totalXp: newTotalPoints,
+            level: currentData.level || 1 
+        };
+
+        // 4. सेव करो
+        await saveData(XP_DATA_KEY, newData);
+        
+        return newTotalPoints;
+    } catch (error) {
+        console.error("Failed to update Rank Points:", error);
+        return 0;
+    }
+};
 
 // --- Streak Data Storage ---
 export const getStreakData = async (): Promise<StreakData> => {

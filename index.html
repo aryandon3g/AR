@@ -18,6 +18,11 @@
               primary: { "50": "#f0f9ff", "100": "#e0f2fe", "200": "#bae6fd", "300": "#7dd3fc", "400": "#38bdf8", "500": "#0ea5e9", "600": "#0284c7", "700": "#0369a1", "800": "#075985", "900": "#0c4a6e", "950": "#082f49" }
             },
             keyframes: {
+              /* 🔥 NEW: Shimmer Animation Added Here 🔥 */
+              shimmer: {
+                '0%': { transform: 'translateX(-150%)' },
+                '100%': { transform: 'translateX(150%)' }
+              },
               'mesh-gradient': { '0%': { transform: 'translate(0%, 0%) scale(1)' }, '25%': { transform: 'translate(20%, -20%) scale(1.2)' }, '50%': { transform: 'translate(-20%, 20%) scale(0.8)' }, '75%': { transform: 'translate(10%, -10%) scale(1.1)' }, '100%': { transform: 'translate(0%, 0%) scale(1)' } },
               'slide-in': { '0%': { opacity: '0', transform: 'translateY(20px) scale(0.98)' }, '100%': { opacity: '1', transform: 'translateY(0) scale(1)' } },
               'slide-out-left': { '0%': { opacity: '1', transform: 'translateX(0)' }, '100%': { opacity: '0', transform: 'translateX(-50px)' } },
@@ -37,6 +42,8 @@
               'check-pop': { '0%': { opacity: '0', transform: 'scale(0.5)' }, '50%': { opacity: '1', transform: 'scale(1.2)' }, '100%': { opacity: '0', transform: 'scale(0.8)' } },
             },
             animation: {
+              /* 🔥 NEW: Animation Registered Here 🔥 */
+              shimmer: 'shimmer 2s infinite linear',
               'mesh-gradient': 'mesh-gradient 15s ease-in-out infinite',
               'slide-in': 'slide-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
               'slide-out-left': 'slide-out-left 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards',
@@ -75,88 +82,34 @@
     </script>
 
     <style>
-      /* --- 1. PERFORMANCE ENGINE (GPU ACCELERATION) --- */
-      /* यह कोड आपके ऐप को "Gaming Mode" में डाल देगा */
+      /* --- 1. PERFORMANCE ENGINE --- */
       * {
-        -webkit-font-smoothing: antialiased; /* टेक्स्ट शार्प दिखेगा */
+        -webkit-font-smoothing: antialiased; 
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
-        
-        /* 🚀 The Magic Line: Force GPU Rendering */
         transform: translateZ(0); 
         box-sizing: border-box;
-        
-        /* स्क्रॉलबार हर जगह से हटाना */
         -ms-overflow-style: none;
         scrollbar-width: none;
-        -webkit-tap-highlight-color: transparent; /* क्लिक करने पर नीला डिब्बा नहीं आएगा */
+        -webkit-tap-highlight-color: transparent; 
       }
 
-      /* बटन्स और लिंक्स पर क्लिक में होने वाली देरी (Delay) हटाना */
-      button, a, input, div {
-        touch-action: manipulation;
-      }
-
-      /* इमेज और SVG को हैवी रेंडरिंग से बचाना */
-      img, svg {
-        backface-visibility: hidden;
-        will-change: transform;
-      }
+      button, a, input, div { touch-action: manipulation; }
+      img, svg { backface-visibility: hidden; will-change: transform; }
 
       /* --- 2. SCROLLBAR REMOVER --- */
-      ::-webkit-scrollbar {
-        display: none;
-        width: 0px;
-        background: transparent;
-      }
+      ::-webkit-scrollbar { display: none; width: 0px; background: transparent; }
 
-      /* --- 3. LAYOUT LOCK (RUBBER BAND FIX) --- */
-      html {
-        height: 100dvh; /* Dynamic Viewport Height */
-        width: 100%;
-        overflow: hidden; /* HTML को हिलने से रोकेगा */
-        overscroll-behavior: none;
-      }
-
-      body {
-        position: fixed; /* बॉडी को स्क्रीन पर चिपका देगा */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100dvh;
-        overflow: hidden; /* बॉडी स्क्रॉल बंद */
-        margin: 0;
-        padding: 0;
-        overscroll-behavior: none;
-        touch-action: none; /* बॉडी पर टच काम नहीं करेगा */
-        background-color: #0f172a; /* Dark Blue Theme */
-      }
+      /* --- 3. LAYOUT LOCK --- */
+      html { height: 100dvh; width: 100%; overflow: hidden; overscroll-behavior: none; }
+      body { position: fixed; top: 0; left: 0; width: 100%; height: 100dvh; overflow: hidden; margin: 0; padding: 0; overscroll-behavior: none; touch-action: none; background-color: #0f172a; }
 
       /* --- 4. APP CONTENT SCROLL --- */
-      #root {
-        width: 100%;
-        height: 100%;
-        overflow-y: auto; /* सिर्फ अंदर का कंटेंट स्क्रॉल होगा */
-        overflow-x: hidden;
-        overscroll-behavior-y: contain; /* इलास्टिक इफेक्ट रोकेगा */
-        -webkit-overflow-scrolling: touch; /* iPhone पर मक्खन जैसा स्क्रॉल */
-        touch-action: pan-y;
-      }
+      #root { width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; overscroll-behavior-y: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 
-      /* --- 5. SPINNER CSS (Optional but kept) --- */
-      .spinner {
-        width: 44px;
-        height: 44px;
-        animation: spinner-y0fdc1 2s infinite ease;
-        transform-style: preserve-3d;
-      }
-      .spinner > div {
-        background-color: rgba(0,77,255,0.2);
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        border: 2px solid #004dff;
-      }
+      /* --- 5. SPINNER CSS --- */
+      .spinner { width: 44px; height: 44px; animation: spinner-y0fdc1 2s infinite ease; transform-style: preserve-3d; }
+      .spinner > div { background-color: rgba(0,77,255,0.2); height: 100%; position: absolute; width: 100%; border: 2px solid #004dff; }
       .spinner div:nth-of-type(1) { transform: translateZ(-22px) rotateY(180deg); }
       .spinner div:nth-of-type(2) { transform: rotateY(-270deg) translateX(50%); transform-origin: top right; }
       .spinner div:nth-of-type(3) { transform: rotateY(270deg) translateX(-50%); transform-origin: center left; }
