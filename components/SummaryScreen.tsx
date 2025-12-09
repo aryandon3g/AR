@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import type { SummaryData, Language } from '../types';
 import { summaryScreenLabels as labels } from '../services/labels';
 import { getRankInfo, getNextRank } from '../services/rankSystem'; 
@@ -25,21 +25,15 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   const correctCount = summary.answers.filter(a => a.isCorrect).length;
   const incorrectCount = summary.answers.filter(a => !a.isCorrect && a.selectedOptionIndex !== -1).length;
   
-  // 1. Battle Score (Base)
   const battleScore = correctCount * 5;
-  
-  // 2. Rank Deduction (Damage)
   const rankDeduction = incorrectCount * 2;
   
-  // 3. Survival Bonus Logic
   let survivalBonus = 0;
   if (summary.accuracy >= 80) survivalBonus = 20;
   else if (summary.accuracy >= 50) survivalBonus = 10;
 
-  // 4. Final Real Earned (Re-calculated to be sure)
   const finalEarnedRP = Math.max(0, battleScore + survivalBonus - rankDeduction);
 
-  // --- RANK LOGIC ---
   const safeTotalRP = currentTotalRP > 0 ? currentTotalRP : finalEarnedRP;
   const startRP = Math.max(0, safeTotalRP - finalEarnedRP); 
 
@@ -48,11 +42,38 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 
   const isHindi = language === 'hi';
 
+  // 🔊 AUDIO CONTEXT REF (To prevent crashing mobile)
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  useEffect(() => {
+      // Initialize Audio Context once
+      try {
+          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+          if (AudioContextClass) {
+              audioCtxRef.current = new AudioContextClass();
+          }
+      } catch (e) {
+          console.error("Audio init failed", e);
+      }
+
+      return () => {
+          // Cleanup
+          if (audioCtxRef.current) {
+              audioCtxRef.current.close().catch(() => {});
+          }
+      };
+  }, []);
+
   const playSound = (type: 'tick' | 'rankup') => {
     try {
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      if (!AudioContextClass) return;
-      const audioContext = new AudioContextClass();
+      const audioContext = audioCtxRef.current;
+      if (!audioContext) return;
+      
+      // Resume if suspended (browser policy) - usually needs user gesture, might fail here but won't crash
+      if (audioContext.state === 'suspended') {
+          audioContext.resume().catch(() => {});
+      }
+
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
       oscillator.connect(gainNode);
@@ -61,14 +82,14 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
       if (type === 'tick') {
         oscillator.type = 'sine';
         oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-        gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.02, audioContext.currentTime);
         oscillator.start();
         oscillator.stop(audioContext.currentTime + 0.05);
       } else if (type === 'rankup') {
         oscillator.type = 'sawtooth';
         oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
         oscillator.frequency.linearRampToValueAtTime(600, audioContext.currentTime + 0.5);
-        gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
         gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 1.5);
         oscillator.start();
         oscillator.stop(audioContext.currentTime + 1.5);
@@ -87,7 +108,8 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
       const currentVal = Math.floor(progress * (finalEarnedRP) + startRP);
       setDisplayedRP(currentVal);
 
-      if (progress < 1 && Math.random() > 0.8) playSound('tick');
+      // Play tick less frequently to save resources
+      if (progress < 1 && Math.random() > 0.85) playSound('tick');
 
       if (progress < 1) {
         window.requestAnimationFrame(step);
@@ -114,7 +136,7 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white overflow-y-auto custom-scrollbar transition-colors duration-300">
+    <div className="fixed inset-0 z-[100] flex flex-col bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white overflow-y-auto custom-scrollbar transition-colors duration-300">
       
       {/* --- HEADER --- */}
       <div className="flex-none p-4 text-center border-b border-gray-200 dark:border-white/10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-10">
@@ -153,57 +175,41 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
                   </div>
               </div>
 
-              {/* The Free Fire Style Yellow Bar with GLOWING Animation */}
               <div className="relative w-full mt-2">
-                  
-                  {/* 1. Background Blur Glow */}
                   <div className="absolute -inset-1 bg-yellow-500/40 blur-md rounded-sm animate-pulse"></div>
-
-                  {/* 2. Main Bar Container */}
                   <div className="h-6 w-full bg-gray-900/80 rounded-sm border border-yellow-600/50 relative overflow-hidden skew-x-[-15deg] shadow-[0_0_10px_rgba(234,179,8,0.5)]">
-                      
-                      {/* The Filled Part */}
                       <div 
                         className="h-full bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-300 transition-all duration-1000 ease-out relative overflow-hidden flex items-center justify-end pr-2"
                         style={{ width: `${progressPercent}%` }}
                       >
-                         {/* ✨ Moving Shine Effect */}
                          <div className="absolute top-0 -left-[100%] h-full w-full bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[-20deg] animate-shimmer z-10"></div>
-
-                         {/* Subtle Inner Glow */}
                          <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent opacity-50"></div>
                       </div>
-
-                      {/* Stripes Pattern (Overlay) */}
                       <div className="absolute inset-0 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqgOx4Wy4BH5DGAUSRwA2HhTRWo+5YAAAAABJRU5ErkJggg==')] opacity-20 pointer-events-none"></div>
                   </div>
               </div>
           </div>
       </div>
 
-      {/* --- STATS CARD (UPDATED WITH MINUS POINTS) --- */}
+      {/* --- STATS CARD --- */}
       <div className="mx-4 mb-6 bg-white/60 dark:bg-gray-800/60 border border-gray-200 dark:border-white/10 rounded-xl p-4 backdrop-blur-sm max-w-md md:mx-auto w-full shadow-sm dark:shadow-none space-y-2">
          <h3 className="text-gray-500 dark:text-gray-400 text-xs font-bold uppercase mb-3 tracking-widest border-b border-gray-200 dark:border-white/10 pb-2">Battle Stats</h3>
          
-         {/* Battle Score */}
          <div className="flex justify-between items-center">
             <span className="text-gray-700 dark:text-gray-300 text-sm">Battle Score (Correct)</span>
             <span className="text-green-500 dark:text-green-400 font-mono font-bold">+{battleScore}</span>
          </div>
 
-         {/* Rank Deduction */}
          <div className="flex justify-between items-center">
             <span className="text-gray-700 dark:text-gray-300 text-sm">Rank Deduction</span>
             <span className="text-red-500 dark:text-red-400 font-mono font-bold">-{rankDeduction}</span>
          </div>
 
-         {/* Survival Bonus */}
          <div className="flex justify-between items-center">
             <span className="text-gray-700 dark:text-gray-300 text-sm">Survival Bonus</span>
             <span className="text-yellow-500 dark:text-yellow-400 font-mono font-bold">+{survivalBonus}</span>
          </div>
 
-         {/* Total */}
          <div className="flex justify-between items-center pt-3 border-t border-gray-200 dark:border-white/10 mt-2">
             <span className="text-gray-900 dark:text-white font-bold">TOTAL EARNED</span>
             <span className="text-yellow-500 dark:text-yellow-400 text-xl font-black">
